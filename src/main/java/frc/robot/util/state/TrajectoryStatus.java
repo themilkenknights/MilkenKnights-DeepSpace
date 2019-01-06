@@ -6,7 +6,7 @@ public class TrajectoryStatus {
 
     public static TrajectoryStatus NEUTRAL = new TrajectoryStatus(
             new Trajectory.Segment(0, 0, 0, 0, 0, 0, 0, 0), 0, 0, 0, 0, 0);
-
+            
     private double output;
     private Trajectory.Segment seg;
     private double posError;
