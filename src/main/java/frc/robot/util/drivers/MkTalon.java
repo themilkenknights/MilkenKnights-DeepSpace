@@ -5,9 +5,7 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
-import frc.robot.Constants.ARM;
 import frc.robot.Constants.DRIVE;
-import frc.robot.util.math.MkMath;
 
 public class MkTalon {
 
@@ -44,40 +42,25 @@ public class MkTalon {
         masterTalon.config_kD(Constants.kPIDLoopIdx, DRIVE.DRIVE_D, Constants.kTimeoutMs);
     }
 
-    public void setSoftLimit(double forwardLimit, double reverseLimit) {
-        masterTalon.configForwardSoftLimitThreshold((int) MkMath.angleToNativeUnits(forwardLimit),
-                Constants.kTimeoutMs);
-        masterTalon.configReverseSoftLimitThreshold((int) MkMath.angleToNativeUnits(reverseLimit),
-                Constants.kTimeoutMs);
-    }
-
     public void setLimitEnabled(boolean enabled) {
         masterTalon.configForwardSoftLimitEnable(enabled, Constants.kTimeoutMs);
         masterTalon.configReverseSoftLimitEnable(enabled, Constants.kTimeoutMs);
     }
 
     public void configMotionMagic() {
-        if (side == TalonPosition.Arm) {
-            masterTalon.config_kF(Constants.kPIDLoopIdx, ARM.ARM_F, Constants.kTimeoutMs);
-            masterTalon.config_kP(Constants.kPIDLoopIdx, ARM.ARM_P, Constants.kTimeoutMs);
-            masterTalon.config_kI(Constants.kPIDLoopIdx, ARM.ARM_I, Constants.kTimeoutMs);
-            masterTalon.config_kD(Constants.kPIDLoopIdx, ARM.ARM_D, Constants.kTimeoutMs);
-            masterTalon.configMotionCruiseVelocity((int) ARM.MOTION_MAGIC_CRUISE_VEL, Constants.kTimeoutMs);
-            masterTalon.configMotionAcceleration((int) ARM.MOTION_MAGIC_ACCEL, Constants.kTimeoutMs);
-            zeroAbsolute();
+
+        if (side == TalonPosition.Left) {
+            masterTalon.config_kF(Constants.kPIDLoopIdx, DRIVE.LEFT_DRIVE_F, Constants.kTimeoutMs);
         } else {
-            if (side == TalonPosition.Left) {
-                masterTalon.config_kF(Constants.kPIDLoopIdx, DRIVE.LEFT_DRIVE_F, Constants.kTimeoutMs);
-            } else {
-                masterTalon.config_kF(Constants.kPIDLoopIdx, DRIVE.RIGHT_DRIVE_F, Constants.kTimeoutMs);
-            }
-            masterTalon.config_kP(Constants.kPIDLoopIdx, DRIVE.DRIVE_P, Constants.kTimeoutMs);
-            masterTalon.config_kI(Constants.kPIDLoopIdx, DRIVE.DRIVE_I, Constants.kTimeoutMs);
-            masterTalon.config_kD(Constants.kPIDLoopIdx, DRIVE.DRIVE_D, Constants.kTimeoutMs);
-            masterTalon
-                    .configMotionCruiseVelocity((int) DRIVE.MOTION_MAGIC_CRUISE_VEL, Constants.kTimeoutMs);
-            masterTalon.configMotionAcceleration((int) DRIVE.MOTION_MAGIC_ACCEL, Constants.kTimeoutMs);
+            masterTalon.config_kF(Constants.kPIDLoopIdx, DRIVE.RIGHT_DRIVE_F, Constants.kTimeoutMs);
         }
+        masterTalon.config_kP(Constants.kPIDLoopIdx, DRIVE.DRIVE_P, Constants.kTimeoutMs);
+        masterTalon.config_kI(Constants.kPIDLoopIdx, DRIVE.DRIVE_I, Constants.kTimeoutMs);
+        masterTalon.config_kD(Constants.kPIDLoopIdx, DRIVE.DRIVE_D, Constants.kTimeoutMs);
+        masterTalon
+                .configMotionCruiseVelocity((int) DRIVE.MOTION_MAGIC_CRUISE_VEL, Constants.kTimeoutMs);
+        masterTalon.configMotionAcceleration((int) DRIVE.MOTION_MAGIC_ACCEL, Constants.kTimeoutMs);
+
     }
 
     public void configTeleopVelocity() {
@@ -135,9 +118,6 @@ public class MkTalon {
     }
 
     public double getError() {
-        if (side == TalonPosition.Arm) {
-            return nativeUnitsToDegrees(masterTalon.getClosedLoopError(Constants.kPIDLoopIdx));
-        }
         return nativeUnitsPer100MstoInchesPerSec(masterTalon.getClosedLoopError(Constants.kPIDLoopIdx));
     }
 
@@ -154,39 +134,23 @@ public class MkTalon {
     }
 
     public synchronized double getPosition() {
-        if (side == TalonPosition.Arm) {
-            return nativeUnitsToDegrees(masterTalon.getSelectedSensorPosition(Constants.kPIDLoopIdx));
-        }
+
         return nativeUnitsToInches(masterTalon.getSelectedSensorPosition(Constants.kPIDLoopIdx));
     }
 
     public synchronized double getSpeed() {
-        if (side == TalonPosition.Arm) {
-            return nativeUnitsPer100MstoDegreesPerSec(
-                    masterTalon.getSelectedSensorVelocity(Constants.kPIDLoopIdx));
-        }
+
         return nativeUnitsPer100MstoInchesPerSec(
                 masterTalon.getSelectedSensorVelocity(Constants.kPIDLoopIdx));
     }
 
     public double getRPM() {
-        if (side == TalonPosition.Arm) {
-            return ((masterTalon.getSelectedSensorVelocity(0) * 60.0 * 10.0) / Constants.CODES_PER_REV)
-                    * ARM.GEAR_RATIO;
-        }
+
         return (masterTalon.getSelectedSensorVelocity(0) * 60.0 * 10.0) / Constants.CODES_PER_REV;
     }
 
     public double getRaw() {
         return masterTalon.getSelectedSensorPosition(Constants.kPIDLoopIdx);
-    }
-
-    public double nativeUnitsPer100MstoDegreesPerSec(double vel) {
-        return nativeUnitsToDegrees(vel) * 10;
-    }
-
-    public double nativeUnitsToDegrees(double raw) {
-        return ((raw / 4096.0) * 360.0) * ARM.GEAR_RATIO;
     }
 
     private double nativeUnitsPer100MstoInchesPerSec(double vel) {
@@ -251,31 +215,6 @@ public class MkTalon {
         SmartDashboard.putNumber(side.toString() + " RPM", maxRPM);
     }
 
-    public double getAbsolutePosition() {
-        return masterTalon.getSensorCollection().getPulseWidthPosition();
-    }
-
-    public void zeroAbsolute() {
-        int pulseWidth = masterTalon.getSensorCollection().getPulseWidthPosition();
-        if (pulseWidth > 0) {
-            pulseWidth = pulseWidth & 0xFFF;
-        } else {
-            pulseWidth += (-Math.round(((double) pulseWidth / 4096) - 0.50)) * 4096;
-        }
-        masterTalon.setSelectedSensorPosition(pulseWidth + (-ARM.kBookEnd_0), Constants.kPIDLoopIdx,
-                Constants.kTimeoutMs);
-    }
-
-    public int getZer() {
-        int pulseWidth = masterTalon.getSensorCollection().getPulseWidthPosition();
-        if (pulseWidth > 0) {
-            pulseWidth = pulseWidth & 0xFFF;
-        } else {
-            pulseWidth += (-Math.round(((double) pulseWidth / 4096) - 0.50)) * 4096;
-        }
-        return pulseWidth + (-ARM.kBookEnd_0);
-    }
-
     public double getPercentOutput() {
         return masterTalon.getMotorOutputPercent();
     }
@@ -302,7 +241,7 @@ public class MkTalon {
     }
 
     public enum TalonPosition {
-        Left, Right, Arm
+        Left, Right
     }
 
 }

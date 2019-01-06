@@ -2,30 +2,19 @@ package frc.robot.util.state;
 
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.DriverStation.Alliance;
-import frc.robot.AutoChooser;
-import frc.robot.AutoChooser.AutoPosition;
 
 public class MatchData {
 
     public static MatchData defaultMatch = new MatchData(DriverStation.MatchType.None, 0,
-            Alliance.Blue, AutoChooser.GameObjectPosition.LEFT, AutoChooser.GameObjectPosition.LEFT,
-            AutoPosition.CENTER);
+            Alliance.Blue);
     public DriverStation.MatchType matchType;
     public int matchNumber;
     public DriverStation.Alliance alliance;
-    public AutoChooser.GameObjectPosition switchPosition;
-    public AutoChooser.GameObjectPosition scalePosition;
-    public AutoChooser.AutoPosition robotPosition;
 
     public MatchData(DriverStation.MatchType matchType, int matchNumber,
-                     DriverStation.Alliance alliance, AutoChooser.GameObjectPosition switchPosition,
-                     AutoChooser.GameObjectPosition
-                             scalePosition, AutoChooser.AutoPosition robotPosition) {
+                     DriverStation.Alliance alliance) {
         this.matchType = matchType;
         this.matchNumber = matchNumber;
         this.alliance = alliance;
-        this.switchPosition = switchPosition;
-        this.scalePosition = scalePosition;
-        this.robotPosition = robotPosition;
     }
 }

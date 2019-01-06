@@ -1,8 +1,6 @@
 package frc.robot.auto.actions;
 
-import edu.wpi.first.wpilibj.DriverStation.Alliance;
 import frc.robot.AutoChooser;
-import frc.robot.AutoChooser.GameObjectPosition;
 import frc.robot.Constants.DRIVE;
 import frc.robot.RobotState;
 import frc.robot.subsystems.Drive;
@@ -29,9 +27,7 @@ public class DrivePathAction implements Action {
 
     public DrivePathAction(int pathNum, boolean dir, boolean brakeMode) {
         this(AutoChooser.autoPaths.get(
-                "CS-" + Integer.toString(pathNum) + ((RobotState.matchData.switchPosition
-                        == GameObjectPosition.LEFT) ? "L" : "R") + ((RobotState.matchData.alliance
-                        == Alliance.Blue) ? "B" : "R")), dir, false, brakeMode);
+                "CS-"), dir, false, brakeMode);
     }
 
     @Override

@@ -1,7 +1,6 @@
 package frc.robot.util.math;
 
 import frc.robot.Constants;
-import frc.robot.Constants.ARM;
 import frc.robot.Constants.DRIVE;
 
 public class MkMath {
@@ -32,10 +31,6 @@ public class MkMath {
 
     public static double RPMToInchesPerSec(double vel) {
         return (vel / 60.0) * DRIVE.CIRCUMFERENCE;
-    }
-
-    public static double angleToNativeUnits(double ang) {
-        return ((ang / 360.0) / ARM.GEAR_RATIO) * 4096.0;
     }
 
     public static double sin(double deg) {
