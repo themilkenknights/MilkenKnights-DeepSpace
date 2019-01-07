@@ -1,42 +1,32 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
+
+import edu.wpi.first.networktables.NetworkTable;
+import edu.wpi.first.networktables.NetworkTableEntry;
+import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.Constants.DRIVE;
-import frc.robot.Constants.LOGGING;
 import frc.robot.RobotState;
 import frc.robot.RobotState.DriveControlState;
 import frc.robot.util.drivers.MkGyro;
 import frc.robot.util.drivers.MkTalon;
 import frc.robot.util.drivers.MkTalon.TalonPosition;
 import frc.robot.util.logging.Log;
-import frc.robot.util.logging.ReflectingCSVWriter;
-import frc.robot.util.math.*;
+import frc.robot.util.math.InterpolatingDouble;
 import frc.robot.util.state.DriveSignal;
 import frc.robot.util.structure.Subsystem;
 import frc.robot.util.structure.loops.Loop;
 import frc.robot.util.structure.loops.Looper;
-import jaci.pathfinder.Pathfinder;
-import jaci.pathfinder.Trajectory;
-import edu.wpi.first.networktables.NetworkTable;
-import edu.wpi.first.networktables.NetworkTableEntry;
-import edu.wpi.first.networktables.NetworkTableInstance;
 
 public class Drive extends Subsystem {
 
-    private final ReflectingCSVWriter<DriveDebugOutput> mCSVWriter;
     private final MkTalon leftDrive, rightDrive;
     private final MkGyro navX;
-    private DriveDebugOutput mDebug = new DriveDebugOutput();
-    private PathFollower pathFollower = null;
-    private TrajectoryStatus leftStatus;
-    private TrajectoryStatus rightStatus;
     private DriveSignal currentSetpoint;
-    private double lastAngle = 0;
-    private boolean brakePath = true;
     NetworkTable table = NetworkTableInstance.getDefault().getTable("limelight");
     NetworkTableEntry tx = table.getEntry("tx");
     NetworkTableEntry ty = table.getEntry("ty");
@@ -57,10 +47,7 @@ public class Drive extends Subsystem {
         rightDrive.invertMaster(DRIVE.RIGHT_MASTER_INVERT);
         rightDrive.invertSlave(DRIVE.RIGHT_SLAVE_INVERT);
         rightDrive.setSensorPhase(DRIVE.RIGHT_INVERT_SENSOR);
-
-        mCSVWriter = new ReflectingCSVWriter<DriveDebugOutput>(LOGGING.DRIVE_LOG_PATH, DriveDebugOutput.class);
         currentSetpoint = DriveSignal.BRAKE;
-
     }
 
     public static Drive getInstance() {
@@ -108,11 +95,7 @@ public class Drive extends Subsystem {
 
     @Override
     public void slowUpdate(double timestamp) {
-        if (RobotState.mMatchState != RobotState.MatchState.DISABLED) {
-            updateDebugOutput(timestamp);
-            mCSVWriter.add(mDebug);
-            mCSVWriter.write();
-        }
+
     }
 
     @Override
@@ -246,7 +229,7 @@ public class Drive extends Subsystem {
             @Override
             public void onStop(double timestamp) {
                 setOpenLoop(DriveSignal.BRAKE);
-                mCSVWriter.flush();
+
             }
         };
         enabledLooper.register(mLoop);
@@ -257,9 +240,7 @@ public class Drive extends Subsystem {
     }
 
     public void updateVision() {
-        // InterpolatingDouble result = Constants.kHoodAutoAimMap.getInterpolated(new
-        // InterpolatingDouble(1.0));
-
+        InterpolatingDouble result = Constants.visionDistMap.getInterpolated(new InterpolatingDouble(1.0));
         double x = tx.getDouble(0);
         double y = ty.getDouble(0);
         double steering_adjust = 0.08 * x;
@@ -286,81 +267,6 @@ public class Drive extends Subsystem {
 
     public boolean isEncodersConnected() {
         return leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected();
-    }
-
-    private void updateDebugOutput(double timestamp) {
-
-        mDebug.timestamp = timestamp;
-        mDebug.controlMode = RobotState.mDriveControlState.toString();
-        mDebug.leftOutput = leftDrive.getMotorVoltage();
-        mDebug.rightOutput = rightDrive.getMotorVoltage();
-        mDebug.rightPosition = leftDrive.getPosition();
-        mDebug.leftPosition = rightDrive.getPosition();
-        mDebug.leftVelocity = leftDrive.getSpeed();
-        mDebug.rightVelocity = rightDrive.getSpeed();
-        mDebug.heading = navX.getYaw();
-        mDebug.leftSetpoint = currentSetpoint.getLeft();
-        mDebug.rightSetpoint = currentSetpoint.getRight();
-        mDebug.leftCurrent = leftDrive.getCurrentOutput();
-        mDebug.rightCurrent = rightDrive.getCurrentOutput();
-
-        if (RobotState.mDriveControlState == DriveControlState.PATH_FOLLOWING) {
-            mDebug.leftDesiredPos = leftStatus.getSeg().position;
-            mDebug.leftDesiredVel = leftStatus.getSeg().velocity;
-            mDebug.rightDesiredPos = rightStatus.getSeg().position;
-            mDebug.rightDesiredVel = rightStatus.getSeg().velocity;
-            mDebug.desiredHeading = leftStatus.getSeg().heading;
-            mDebug.headingError = leftStatus.getAngError();
-            mDebug.leftVelError = leftStatus.getVelError();
-            mDebug.leftPosError = leftStatus.getPosError();
-            mDebug.rightVelError = rightStatus.getVelError();
-            mDebug.rightPosError = rightStatus.getPosError();
-            mDebug.desiredX = (leftStatus.getSeg().x + rightStatus.getSeg().x) / 2;
-            mDebug.desiredY = (leftStatus.getSeg().y + rightStatus.getSeg().y) / 2;
-        } else {
-            mDebug.leftDesiredPos = 0;
-            mDebug.leftDesiredVel = 0;
-            mDebug.rightDesiredPos = 0;
-            mDebug.rightDesiredVel = 0;
-            mDebug.desiredHeading = 0;
-            mDebug.headingError = 0;
-            mDebug.leftVelError = 0;
-            mDebug.leftPosError = 0;
-            mDebug.rightVelError = 0;
-            mDebug.rightPosError = 0;
-            mDebug.desiredX = 0;
-            mDebug.desiredY = 0;
-        }
-
-    }
-
-    public static class DriveDebugOutput {
-
-        public double timestamp;
-        public String controlMode;
-        public double leftOutput;
-        public double rightOutput;
-        public double leftSetpoint;
-        public double rightSetpoint;
-        public double leftPosition;
-        public double rightPosition;
-        public double leftVelocity;
-        public double rightVelocity;
-        public double heading;
-        public double desiredHeading;
-        public double headingError;
-        public double leftDesiredVel;
-        public double leftDesiredPos;
-        public double leftPosError;
-        public double leftVelError;
-        public double rightDesiredVel;
-        public double rightDesiredPos;
-        public double rightPosError;
-        public double rightVelError;
-        public double desiredX;
-        public double desiredY;
-        public double leftCurrent;
-        public double rightCurrent;
     }
 
     private static class InstanceHolder {
