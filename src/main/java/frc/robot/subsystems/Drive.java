@@ -1,7 +1,6 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
-
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
@@ -71,10 +70,15 @@ public class Drive extends Subsystem {
      *               sec)
      */
 
-    public synchronized void setVelocitySetpoint(DriveSignal signal, double leftFeed, double rightFeed) {
+    public synchronized void setVelocitySetpoint(DriveSignal signal, double leftFeed,
+        double rightFeed) {
         if (RobotState.mDriveControlState == DriveControlState.PATH_FOLLOWING) {
-            leftDrive.set(ControlMode.Velocity, signal.getLeftNativeVelTraj(), signal.getBrakeMode(), leftFeed);
-            rightDrive.set(ControlMode.Velocity, signal.getRightNativeVelTraj(), signal.getBrakeMode(), rightFeed);
+            leftDrive
+                .set(ControlMode.Velocity, signal.getLeftNativeVelTraj(), signal.getBrakeMode(),
+                    leftFeed);
+            rightDrive
+                .set(ControlMode.Velocity, signal.getRightNativeVelTraj(), signal.getBrakeMode(),
+                    rightFeed);
         } else {
             RobotState.mDriveControlState = DriveControlState.VELOCITY_SETPOINT;
             leftDrive.set(ControlMode.Velocity, signal.getLeftNativeVel(), signal.getBrakeMode());
@@ -83,23 +87,21 @@ public class Drive extends Subsystem {
         currentSetpoint = signal;
     }
 
-    @Override
-    public void outputToSmartDashboard() {
+    @Override public void outputToSmartDashboard() {
         leftDrive.updateSmartDash();
         rightDrive.updateSmartDash();
         SmartDashboard.putString("Drive State", RobotState.mDriveControlState.toString());
         SmartDashboard.putBoolean("Drivetrain Status",
-                leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected());
-        SmartDashboard.putNumber("Current Difference", leftDrive.getCurrentOutput() - rightDrive.getCurrentOutput());
+            leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected());
+        SmartDashboard.putNumber("Current Difference",
+            leftDrive.getCurrentOutput() - rightDrive.getCurrentOutput());
     }
 
-    @Override
-    public void slowUpdate(double timestamp) {
+    @Override public void slowUpdate(double timestamp) {
 
     }
 
-    @Override
-    public void checkSystem() {
+    @Override public void checkSystem() {
         boolean check = true;
         leftDrive.resetEncoder();
         leftDrive.setCoastMode();
@@ -107,14 +109,14 @@ public class Drive extends Subsystem {
         leftDrive.setMasterTalon(ControlMode.PercentOutput, 1);
         Timer.delay(2.0);
         if (leftDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS
-                || leftDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
+            || leftDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
             Log.verbose("FAILED - LEFT MASTER DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
             Log.marker("Left Master Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: "
-                    + leftDrive.getPosition());
+                + leftDrive.getPosition());
             check = false;
         } else {
-            Log.marker(
-                    "Left Master Position: " + leftDrive.getPosition() + " Left Master Speed: " + leftDrive.getSpeed());
+            Log.marker("Left Master Position: " + leftDrive.getPosition() + " Left Master Speed: "
+                + leftDrive.getSpeed());
         }
 
         leftDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
@@ -126,14 +128,15 @@ public class Drive extends Subsystem {
         leftDrive.setSlaveTalon(ControlMode.PercentOutput, 1);
         Timer.delay(2.0);
         if (leftDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS
-                || leftDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
+            || leftDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
             Log.verbose("FAILED - LEFT SLAVE DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
             Log.marker(
-                    "Left Slave Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: " + leftDrive.getPosition());
+                "Left Slave Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: " + leftDrive
+                    .getPosition());
             check = false;
         } else {
-            Log.marker(
-                    "Left Slave Position: " + leftDrive.getPosition() + " Left Slave Speed: " + leftDrive.getSpeed());
+            Log.marker("Left Slave Position: " + leftDrive.getPosition() + " Left Slave Speed: "
+                + leftDrive.getSpeed());
         }
         leftDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
         leftDrive.setMasterTalon(ControlMode.PercentOutput, 0);
@@ -145,12 +148,15 @@ public class Drive extends Subsystem {
         rightDrive.setMasterTalon(ControlMode.PercentOutput, 1);
         Timer.delay(2.0);
         if (rightDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS
-                || rightDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
+            || rightDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
             Log.verbose("FAILED - RIGHT MASTER DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
-            Log.marker("Right Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: " + leftDrive.getPosition());
+            Log.marker(
+                "Right Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: " + leftDrive
+                    .getPosition());
             check = false;
         } else {
-            Log.marker("Right Master Position: " + rightDrive.getPosition() + " Right Master Speed: "
+            Log.marker(
+                "Right Master Position: " + rightDrive.getPosition() + " Right Master Speed: "
                     + rightDrive.getSpeed());
         }
 
@@ -163,13 +169,15 @@ public class Drive extends Subsystem {
         rightDrive.setSlaveTalon(ControlMode.PercentOutput, 1);
         Timer.delay(2.0);
         if (rightDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS
-                || rightDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
+            || rightDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
             Log.verbose("FAILED - RIGHT SLAVE DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
-            Log.marker("Right Drive Test Failed - Vel: " + rightDrive.getSpeed() + " Pos: " + rightDrive.getPosition());
+            Log.marker(
+                "Right Drive Test Failed - Vel: " + rightDrive.getSpeed() + " Pos: " + rightDrive
+                    .getPosition());
             check = false;
         } else {
             Log.marker("Right Slave Position: " + rightDrive.getPosition() + " Right Slave Speed: "
-                    + rightDrive.getSpeed());
+                + rightDrive.getSpeed());
         }
         rightDrive.setMasterTalon(ControlMode.PercentOutput, 0);
         rightDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
@@ -187,12 +195,10 @@ public class Drive extends Subsystem {
         rightDrive.resetConfig();
     }
 
-    @Override
-    public void registerEnabledLoops(Looper enabledLooper) {
+    @Override public void registerEnabledLoops(Looper enabledLooper) {
         Loop mLoop = new Loop() {
 
-            @Override
-            public void onStart(double timestamp) {
+            @Override public void onStart(double timestamp) {
                 synchronized (Drive.this) {
                     leftDrive.resetEncoder();
                     rightDrive.resetEncoder();
@@ -203,31 +209,30 @@ public class Drive extends Subsystem {
             /**
              * Updated from mEnabledLoop in Robot.java Controls drivetrain during Path
              * Following and Turn In Place and logs Drivetrain data in all modes
-             * 
+             *
              * @param timestamp In Seconds Since Code Start
              */
-            @Override
-            public void onLoop(double timestamp) {
+            @Override public void onLoop(double timestamp) {
                 synchronized (Drive.this) {
                     switch (RobotState.mDriveControlState) {
-                    case OPEN_LOOP:
-                        return;
-                    case VELOCITY_SETPOINT:
-                        return;
-                    case PATH_FOLLOWING:
-                        return;
-                    case VISION_TRACKING:
-                        updateVision();
-                        return;
-                    default:
-                        Log.marker("Unexpected drive control state: " + RobotState.mDriveControlState);
-                        break;
+                        case OPEN_LOOP:
+                            return;
+                        case VELOCITY_SETPOINT:
+                            return;
+                        case PATH_FOLLOWING:
+                            return;
+                        case VISION_TRACKING:
+                            updateVision();
+                            return;
+                        default:
+                            Log.marker(
+                                "Unexpected drive control state: " + RobotState.mDriveControlState);
+                            break;
                     }
                 }
             }
 
-            @Override
-            public void onStop(double timestamp) {
+            @Override public void onStop(double timestamp) {
                 setOpenLoop(DriveSignal.BRAKE);
 
             }
@@ -240,7 +245,8 @@ public class Drive extends Subsystem {
     }
 
     public void updateVision() {
-        InterpolatingDouble result = Constants.visionDistMap.getInterpolated(new InterpolatingDouble(1.0));
+        InterpolatingDouble result =
+            Constants.visionDistMap.getInterpolated(new InterpolatingDouble(1.0));
         double x = tx.getDouble(0);
         double y = ty.getDouble(0);
         double steering_adjust = 0.08 * x;

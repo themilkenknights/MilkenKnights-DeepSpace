@@ -16,23 +16,19 @@ public class WaitAction implements Action {
         mTimeToWait = timeToWait;
     }
 
-    @Override
-    public boolean isFinished() {
+    @Override public boolean isFinished() {
         return Timer.getFPGATimestamp() - mStartTime >= mTimeToWait;
     }
 
-    @Override
-    public void update() {
+    @Override public void update() {
 
     }
 
-    @Override
-    public void done() {
+    @Override public void done() {
 
     }
 
-    @Override
-    public void start() {
+    @Override public void start() {
         mStartTime = Timer.getFPGATimestamp();
     }
 }

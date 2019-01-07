@@ -47,7 +47,8 @@ public class AutoChooser {
         RobotState.matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
         RobotState.matchData.matchType = DriverStation.getInstance().getMatchType();
         Log.verbose("Alliance: " + RobotState.matchData.alliance.toString() + " Match Number: "
-                + RobotState.matchData.matchNumber + " Match Type: " + RobotState.matchData.matchType.toString());
+            + RobotState.matchData.matchNumber + " Match Type: " + RobotState.matchData.matchType
+            .toString());
     }
 
 }

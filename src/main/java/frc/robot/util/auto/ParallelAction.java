@@ -20,8 +20,7 @@ public class ParallelAction implements Action {
         }
     }
 
-    @Override
-    public boolean isFinished() {
+    @Override public boolean isFinished() {
         boolean all_finished = true;
         for (Action action : mActions) {
             if (!action.isFinished()) {
@@ -31,22 +30,19 @@ public class ParallelAction implements Action {
         return all_finished;
     }
 
-    @Override
-    public void update() {
+    @Override public void update() {
         for (Action action : mActions) {
             action.update();
         }
     }
 
-    @Override
-    public void done() {
+    @Override public void done() {
         for (Action action : mActions) {
             action.done();
         }
     }
 
-    @Override
-    public void start() {
+    @Override public void start() {
         for (Action action : mActions) {
             action.start();
         }

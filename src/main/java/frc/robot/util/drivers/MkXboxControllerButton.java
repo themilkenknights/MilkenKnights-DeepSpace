@@ -10,7 +10,8 @@ public class MkXboxControllerButton {
     private final String buttonName;
     private boolean lastState;
 
-    public MkXboxControllerButton(final MkXboxController joystick, final int rawButton, final String buttonName) {
+    public MkXboxControllerButton(final MkXboxController joystick, final int rawButton,
+        final String buttonName) {
         this.joystick = joystick;
         this.rawButton = rawButton;
         this.buttonName = buttonName;
@@ -24,8 +25,9 @@ public class MkXboxControllerButton {
         final boolean isPressed = !lastState && joystick.getRawButton(rawButton);
         update();
         if (isPressed) {
-            Log.verbose("[Joystick] " + joystick.getPort() + "\t[Button]" + rawButton + "\t Pressed ( " + buttonName
-                    + " )");
+            Log.verbose(
+                "[Joystick] " + joystick.getPort() + "\t[Button]" + rawButton + "\t Pressed ( "
+                    + buttonName + " )");
         }
         return isPressed;
     }

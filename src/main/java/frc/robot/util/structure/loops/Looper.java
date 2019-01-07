@@ -25,8 +25,7 @@ public class Looper {
     private double dt_ = 0;
 
     private final CrashTrackingRunnable runnable_ = new CrashTrackingRunnable() {
-        @Override
-        public void runCrashTracked() {
+        @Override public void runCrashTracked() {
             synchronized (taskRunningLock_) {
                 if (running_) {
                     double now = Timer.getFPGATimestamp();

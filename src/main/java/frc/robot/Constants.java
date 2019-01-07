@@ -1,6 +1,7 @@
 package frc.robot;
 
-import frc.robot.util.math.*;
+import frc.robot.util.math.InterpolatingDouble;
+import frc.robot.util.math.InterpolatingTreeMap;
 
 /**
  * UNLESS OTHERWISE NOTED BY RAW/NATIVE/RPM, ALL POSITION UNITS ARE IN INCHES
@@ -16,6 +17,7 @@ public final class Constants {
     public static final double kLooperDt = 0.005;
     public static final double PI = 3.14159265359;
     public static final double CODES_PER_REV = 4096.0;
+
 
     public static class DRIVE {
 
@@ -44,43 +46,51 @@ public final class Constants {
         public static final double DRIVE_FOLLOWER_A = 0.00125;
         public static final double DRIVE_FOLLOWER_ANG = -1.25;
 
-        public static final double LEFT_RPM_MAX = 490.0;// 488.0; //Observed Max Speed for Drivetrain in RPM
-        public static final double RIGHT_RPM_MAX = 530.0; // 502//Observed Max Speed for Drivetrain in RPM
+        public static final double LEFT_RPM_MAX = 490.0;
+            // 488.0; //Observed Max Speed for Drivetrain in RPM
+        public static final double RIGHT_RPM_MAX = 530.0;
+            // 502//Observed Max Speed for Drivetrain in RPM
 
-        public static final double MAX_VEL = (LEFT_RPM_MAX / 60) * (CIRCUMFERENCE); // Max Speed in Inches per second
+        public static final double MAX_VEL = (LEFT_RPM_MAX / 60) * (CIRCUMFERENCE);
+            // Max Speed in Inches per second
         public static final double DRIVE_P = 7 * (0.1 * 1023.0) / (700); // 300
         public static final double DRIVE_I = 0;
         public static final double DRIVE_D = 3 * DRIVE_P;
-        public static final double LEFT_DRIVE_F = (1023.0 / ((LEFT_RPM_MAX / 60.0 / 10.0) * 4096.0)); // Feedforwrd Term
-                                                                                                      // for Drivetrain
-                                                                                                      // using MAX Motor
-                                                                                                      // Units / Max
-                                                                                                      // Speed in Native
-                                                                                                      // Units Per 100ms
-        public static final double RIGHT_DRIVE_F = (1023.0 / ((RIGHT_RPM_MAX / 60.0 / 10.0) * 4096.0)); // Feedforwrd
-                                                                                                        // Term for
-                                                                                                        // Drivetrain
-                                                                                                        // using MAX
-                                                                                                        // Motor Units /
-                                                                                                        // Max Speed in
-                                                                                                        // Native Units
-                                                                                                        // Per 100ms
+        public static final double LEFT_DRIVE_F =
+            (1023.0 / ((LEFT_RPM_MAX / 60.0 / 10.0) * 4096.0)); // Feedforwrd Term
+        // for Drivetrain
+        // using MAX Motor
+        // Units / Max
+        // Speed in Native
+        // Units Per 100ms
+        public static final double RIGHT_DRIVE_F =
+            (1023.0 / ((RIGHT_RPM_MAX / 60.0 / 10.0) * 4096.0)); // Feedforwrd
+        // Term for
+        // Drivetrain
+        // using MAX
+        // Motor Units /
+        // Max Speed in
+        // Native Units
+        // Per 100ms
         public static final double MIN_TEST_POS = 200;
         public static final double MIN_TEST_VEL = 140;
 
         public static final double mPangFollower = -0.075;
-        public static final double MOTION_MAGIC_CRUISE_VEL = ((MAX_VEL / 10.0) / CIRCUMFERENCE) * CODES_PER_REV;
+        public static final double MOTION_MAGIC_CRUISE_VEL =
+            ((MAX_VEL / 10.0) / CIRCUMFERENCE) * CODES_PER_REV;
         public static final double MOTION_MAGIC_ACCEL = MOTION_MAGIC_CRUISE_VEL * 5;
         public static final double TELEOP_DRIVE_P = 2 * (0.1 * 1023.0) / (700);
         public static final double TELEOP_DRIVE_I = 0;
         public static final double TELEOP_DRIVE_D = 1 * DRIVE_P;
     }
 
+
     public static class LOGGING {
 
         public static final String DRIVE_LOG_PATH = "DRIVE-LOGS";
         public static final String ARM_LOG_PATH = "ARM-LOGS";
     }
+
 
     public static class INPUT {
 
@@ -89,12 +99,15 @@ public final class Constants {
         public static final double kWheelDeadband = 0.0045;
     }
 
+
     public static class AUTO {
 
         public static final String pathPath = "/home/lvuser/paths/";
-        public static final String[] autoNames = { "CS-1", "CS-2", "CS-3", "CS-4", "CS-5", "CS-6", "CS-7", "CS-8",
-                "CS-9", "FS-1", "DriveStraight" };
+        public static final String[] autoNames =
+            {"CS-1", "CS-2", "CS-3", "CS-4", "CS-5", "CS-6", "CS-7", "CS-8", "CS-9", "FS-1",
+                "DriveStraight"};
     }
+
 
     public static class SUPERSTRUCTURE {
 
@@ -102,7 +115,9 @@ public final class Constants {
         public static double CONNECTION_TIMEOUT = 1.0;
     }
 
-    public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> visionDistMap = new InterpolatingTreeMap<>();
+
+    public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> visionDistMap =
+        new InterpolatingTreeMap<>();
 
     static {
         visionDistMap.put(new InterpolatingDouble(60.0), new InterpolatingDouble(42.5));

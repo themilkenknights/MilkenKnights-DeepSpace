@@ -21,6 +21,7 @@ public class RobotState {
         AUTO, TELEOP, DISABLED, TEST
     }
 
+
     public enum DriveControlState {
         OPEN_LOOP, // Open Loop PercentVBus Control
         VELOCITY_SETPOINT, // Closed-loop velocity pidf on talons - Only used as a backup
@@ -28,11 +29,13 @@ public class RobotState {
         VISION_TRACKING
     }
 
+
     public enum ArmControlState {
         MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all
-                      // circumstances
+        // circumstances
         OPEN_LOOP // Direct PercentVBus control of the arm as a failsafe
     }
+
 
     public enum ArmState {
         ENABLE(0), // State directly after robot is enabled (not mapped to a specific angle)

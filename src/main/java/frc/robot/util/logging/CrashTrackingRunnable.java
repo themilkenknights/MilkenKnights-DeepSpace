@@ -5,8 +5,7 @@ package frc.robot.util.logging;
  */
 public abstract class CrashTrackingRunnable implements Runnable {
 
-    @Override
-    public final void run() {
+    @Override public final void run() {
         try {
             runCrashTracked();
         } catch (Throwable t) {

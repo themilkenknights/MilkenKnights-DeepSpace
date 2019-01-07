@@ -34,41 +34,34 @@ public class Superstructure extends Subsystem {
         return InstanceHolder.mInstance;
     }
 
-    @Override
-    public void outputToSmartDashboard() {
+    @Override public void outputToSmartDashboard() {
         SmartDashboard.putString("Robot State", RobotState.mMatchState.toString());
     }
 
-    @Override
-    public void slowUpdate(double timestamp) {
+    @Override public void slowUpdate(double timestamp) {
         Superstructure.getInstance().setLastPacketTime(timestamp);
         Superstructure.getInstance().updateLEDStrip(timestamp);
     }
 
-    @Override
-    public void checkSystem() {
+    @Override public void checkSystem() {
 
     }
 
-    @Override
-    public void registerEnabledLoops(Looper enabledLooper) {
+    @Override public void registerEnabledLoops(Looper enabledLooper) {
         Loop mLoop = new Loop() {
 
-            @Override
-            public void onStart(double timestamp) {
+            @Override public void onStart(double timestamp) {
                 synchronized (Superstructure.this) {
                     mLastPacketTime = timestamp;
                 }
             }
 
-            @Override
-            public void onLoop(double timestamp) {
+            @Override public void onLoop(double timestamp) {
                 synchronized (Superstructure.this) {
                 }
             }
 
-            @Override
-            public void onStop(double timestamp) {
+            @Override public void onStop(double timestamp) {
 
             }
         };
@@ -87,12 +80,12 @@ public class Superstructure extends Subsystem {
         if (turnOffLED) {
             mkLED.set_rgb(LEDColors.OFF);
         } else if (timestamp - mLastPacketTime > SUPERSTRUCTURE.CONNECTION_TIMEOUT
-                || RobotState.mArmControlState == ArmControlState.OPEN_LOOP) {
+            || RobotState.mArmControlState == ArmControlState.OPEN_LOOP) {
             mkLED.setPulse(LEDColors.RED, LEDColors.OFF, 0.25);
         } else if (hPSignal) {
             mkLED.set_rgb(LEDColors.GREEN);
         } else if (RobotState.mDriveControlState == DriveControlState.VELOCITY_SETPOINT
-                && RobotState.mMatchState != MatchState.AUTO) {
+            && RobotState.mMatchState != MatchState.AUTO) {
             mkLED.setPulse(LEDColors.PURPLE, LEDColors.OFF, 0.25);
         } else if (RobotState.mMatchState == MatchState.DISABLED) {
             _hue += 0.75;

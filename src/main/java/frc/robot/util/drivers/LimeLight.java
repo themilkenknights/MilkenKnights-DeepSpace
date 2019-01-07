@@ -17,6 +17,7 @@ public class LimeLight {
     private Boolean isConnected = false;
     private double _hearBeatPeriod = 0.1;
 
+
     class PeriodicRunnable implements java.lang.Runnable {
         public void run() {
             resetPilelineLatency();
@@ -32,6 +33,7 @@ public class LimeLight {
             }
         }
     }
+
 
     Notifier _hearBeat = new Notifier(new PeriodicRunnable());
 
@@ -69,7 +71,7 @@ public class LimeLight {
 
     /**
      * tv Whether the limelight has any valid targets (0 or 1)
-     * 
+     *
      * @return
      */
     public boolean getIsTargetFound() {
@@ -84,7 +86,7 @@ public class LimeLight {
 
     /**
      * tx Horizontal Offset From Crosshair To Target (-27 degrees to 27 degrees)
-     * 
+     *
      * @return
      */
     public double getdegRotationToTarget() {
@@ -95,7 +97,7 @@ public class LimeLight {
 
     /**
      * ty Vertical Offset From Crosshair To Target (-20.5 degrees to 20.5 degrees)
-     * 
+     *
      * @return
      */
     public double getdegVerticalToTarget() {
@@ -106,7 +108,7 @@ public class LimeLight {
 
     /**
      * ta Target Area (0% of image to 100% of image)
-     * 
+     *
      * @return
      */
     public double getTargetArea() {
@@ -117,7 +119,7 @@ public class LimeLight {
 
     /**
      * ts Skew or rotation (-90 degrees to 0 degrees)
-     * 
+     *
      * @return
      */
     public double getSkew_Rotation() {
@@ -129,7 +131,7 @@ public class LimeLight {
     /**
      * tl The pipeline’s latency contribution (ms) Add at least 11ms for image
      * capture latency.
-     * 
+     *
      * @return
      */
     public double getPipelineLatency() {
@@ -145,9 +147,9 @@ public class LimeLight {
 
     /**
      * LedMode Sets limelight’s LED state
-     * 
+     * <p>
      * kon koff kblink
-     * 
+     *
      * @param ledMode
      */
     public void setLEDMode(LedMode ledMode) {
@@ -156,7 +158,7 @@ public class LimeLight {
 
     /**
      * Returns current LED mode of the Lime Light
-     * 
+     *
      * @return LedMode
      */
     public LedMode getLEDMode() {
@@ -168,9 +170,9 @@ public class LimeLight {
 
     /**
      * camMode Sets limelight’s operation mode
-     * 
+     * <p>
      * kvision kdriver (Increases exposure, disables vision processing)
-     * 
+     *
      * @param camMode
      */
 
@@ -180,7 +182,7 @@ public class LimeLight {
 
     /**
      * Returns current Cam mode of the Lime Light
-     * 
+     *
      * @return CamMode
      */
     public CamMode getCamMode() {
@@ -192,9 +194,9 @@ public class LimeLight {
 
     /**
      * pipeline Sets limelight’s current pipeline
-     * 
+     *
      * 0 . 9 Select pipeline 0.9
-     * 
+     *
      * @param pipeline
      */
     /*
@@ -207,9 +209,9 @@ public class LimeLight {
 
     /**
      * pipeline Sets limelight’s current pipeline
-     * 
+     * <p>
      * 0 . 9 Select pipeline 0.9
-     * 
+     *
      * @param pipeline
      */
     public void setPipeline(Integer pipeline) {
@@ -225,7 +227,7 @@ public class LimeLight {
 
     /**
      * Returns current Pipeling of the Lime Light
-     * 
+     *
      * @return Pipelinge
      */
     public double getPipeline() {
@@ -236,7 +238,7 @@ public class LimeLight {
 
     /**
      * Returns current Pipeling of the Lime Light
-     * 
+     *
      * @return Pipelinge
      */
     public Integer getPipelineInt() {
@@ -247,12 +249,12 @@ public class LimeLight {
 
     /**
      * stream Sets limelight’s streaming mode
-     * 
+     * <p>
      * kStandard - Side-by-side streams if a webcam is attached to Limelight
      * kPiPMain - The secondary camera stream is placed in the lower-right corner of
      * the primary camera stream kPiPSecondary - The primary camera stream is placed
      * in the lower-right corner of the secondary camera stream
-     * 
+     *
      * @param stream
      */
     public void setStream(StreamType stream) {
@@ -268,9 +270,9 @@ public class LimeLight {
 
     /**
      * snapshot Allows users to take snapshots during a match
-     * 
+     * <p>
      * kon - Stop taking snapshots koff - Take two snapshots per second
-     * 
+     *
      * @param snapshot
      */
     public void setSnapshot(Snapshot snapshot) {

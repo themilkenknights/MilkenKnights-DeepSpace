@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
-*
-*/
+ *
+ */
 public class LimeLightControlMode {
 
     public enum LedMode {
@@ -42,6 +42,7 @@ public class LimeLightControlMode {
 
     }
 
+
     public enum CamMode {
         kvision(0), kdriver(1);
 
@@ -71,6 +72,7 @@ public class LimeLightControlMode {
             return name();
         }
     }
+
 
     public enum StreamType {
         kStandard(0), kPiPMain(1), kPiPSecondary(2);
@@ -102,6 +104,7 @@ public class LimeLightControlMode {
         }
 
     }
+
 
     public enum Snapshot {
 
@@ -135,11 +138,13 @@ public class LimeLightControlMode {
 
     }
 
+
     public enum Advanced_Target {
 
         kone(0), ktwo(1), kthree(2);
 
-        private static final Map<Integer, Advanced_Target> MY_MAP = new HashMap<Integer, Advanced_Target>();
+        private static final Map<Integer, Advanced_Target> MY_MAP =
+            new HashMap<Integer, Advanced_Target>();
 
         static {
             for (Advanced_Target Advanced_Target : values()) {
@@ -167,11 +172,13 @@ public class LimeLightControlMode {
 
     }
 
+
     public enum Advanced_Crosshair {
 
         kone(0), ktwo(1);
 
-        private static final Map<Integer, Advanced_Crosshair> MY_MAP = new HashMap<Integer, Advanced_Crosshair>();
+        private static final Map<Integer, Advanced_Crosshair> MY_MAP =
+            new HashMap<Integer, Advanced_Crosshair>();
 
         static {
             for (Advanced_Crosshair Advanced_Crosshair : values()) {

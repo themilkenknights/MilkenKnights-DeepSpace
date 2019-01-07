@@ -28,8 +28,7 @@ public class CurveOpenLoopAction implements Action {
      *
      * @return boolean
      */
-    @Override
-    public boolean isFinished() {
+    @Override public boolean isFinished() {
         return timer.get() >= time;
     }
 
@@ -37,8 +36,7 @@ public class CurveOpenLoopAction implements Action {
      * Called by runAction in AutoModeBase iteratively until isFinished returns
      * true. Iterative logic lives in this method
      */
-    @Override
-    public void update() {
+    @Override public void update() {
         double power = (timer.get() / time) * speed;
         power = power * power;
 
@@ -49,8 +47,7 @@ public class CurveOpenLoopAction implements Action {
     /**
      * Run code once when the action finishes, usually for clean up
      */
-    @Override
-    public void done() {
+    @Override public void done() {
         if (stop) {
             Drive.getInstance().setOpenLoop(DriveSignal.BRAKE);
         }
@@ -60,8 +57,7 @@ public class CurveOpenLoopAction implements Action {
     /**
      * Run code once when the action is started, for set up
      */
-    @Override
-    public void start() {
+    @Override public void start() {
         timer.start();
         RobotState.mDriveControlState = DriveControlState.OPEN_LOOP;
     }

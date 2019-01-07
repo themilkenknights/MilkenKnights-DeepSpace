@@ -56,7 +56,8 @@ public class MkTalon {
         masterTalon.config_kP(Constants.kPIDLoopIdx, DRIVE.DRIVE_P, Constants.kTimeoutMs);
         masterTalon.config_kI(Constants.kPIDLoopIdx, DRIVE.DRIVE_I, Constants.kTimeoutMs);
         masterTalon.config_kD(Constants.kPIDLoopIdx, DRIVE.DRIVE_D, Constants.kTimeoutMs);
-        masterTalon.configMotionCruiseVelocity((int) DRIVE.MOTION_MAGIC_CRUISE_VEL, Constants.kTimeoutMs);
+        masterTalon
+            .configMotionCruiseVelocity((int) DRIVE.MOTION_MAGIC_CRUISE_VEL, Constants.kTimeoutMs);
         masterTalon.configMotionAcceleration((int) DRIVE.MOTION_MAGIC_ACCEL, Constants.kTimeoutMs);
     }
 
@@ -73,19 +74,24 @@ public class MkTalon {
 
     public void resetConfig() {
         masterTalon.selectProfileSlot(Constants.kSlotIdx, Constants.kPIDLoopIdx);
-        masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 20, Constants.kTimeoutMs);
-        masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 3, Constants.kTimeoutMs);
+        masterTalon
+            .setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 20, Constants.kTimeoutMs);
+        masterTalon
+            .setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 3, Constants.kTimeoutMs);
         masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 20);
-        masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 3, Constants.kTimeoutMs);
-        masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 3, Constants.kTimeoutMs);
-        masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 20, Constants.kTimeoutMs);
+        masterTalon
+            .setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 3, Constants.kTimeoutMs);
+        masterTalon
+            .setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 3, Constants.kTimeoutMs);
+        masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 20,
+            Constants.kTimeoutMs);
         masterTalon.configNominalOutputForward(0, Constants.kTimeoutMs);
         masterTalon.configNominalOutputReverse(0, Constants.kTimeoutMs);
         masterTalon.configPeakOutputForward(1, Constants.kTimeoutMs);
         masterTalon.configPeakOutputReverse(-1, Constants.kTimeoutMs);
 
-        masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, Constants.kPIDLoopIdx,
-                Constants.kTimeoutMs);
+        masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative,
+            Constants.kPIDLoopIdx, Constants.kTimeoutMs);
 
         masterTalon.setNeutralMode(NeutralMode.Brake);
 
@@ -104,12 +110,14 @@ public class MkTalon {
         slaveTalon.enableVoltageCompensation(true);
         slaveTalon.configVoltageMeasurementFilter(32, Constants.kTimeoutMs);
 
-        masterTalon.configVelocityMeasurementPeriod(VelocityMeasPeriod.Period_100Ms, Constants.kTimeoutMs);
+        masterTalon
+            .configVelocityMeasurementPeriod(VelocityMeasPeriod.Period_100Ms, Constants.kTimeoutMs);
         masterTalon.configVelocityMeasurementWindow(64, Constants.kTimeoutMs);
     }
 
     public double getError() {
-        return nativeUnitsPer100MstoInchesPerSec(masterTalon.getClosedLoopError(Constants.kPIDLoopIdx));
+        return nativeUnitsPer100MstoInchesPerSec(
+            masterTalon.getClosedLoopError(Constants.kPIDLoopIdx));
     }
 
     public boolean isEncoderConnected() {
@@ -131,7 +139,8 @@ public class MkTalon {
 
     public synchronized double getSpeed() {
 
-        return nativeUnitsPer100MstoInchesPerSec(masterTalon.getSelectedSensorVelocity(Constants.kPIDLoopIdx));
+        return nativeUnitsPer100MstoInchesPerSec(
+            masterTalon.getSelectedSensorVelocity(Constants.kPIDLoopIdx));
     }
 
     public double getRPM() {
@@ -193,8 +202,10 @@ public class MkTalon {
     public void updateSmartDash() {
         SmartDashboard.putNumber(side.toString() + " Velocity", getSpeed());
         SmartDashboard.putNumber(side.toString() + " Error", getError());
-        SmartDashboard.putNumber(side.toString() + " Master Output", masterTalon.getMotorOutputPercent());
-        SmartDashboard.putNumber(side.toString() + " Slave Output", slaveTalon.getMotorOutputPercent());
+        SmartDashboard
+            .putNumber(side.toString() + " Master Output", masterTalon.getMotorOutputPercent());
+        SmartDashboard
+            .putNumber(side.toString() + " Slave Output", slaveTalon.getMotorOutputPercent());
 
         SmartDashboard.putNumber(side.toString() + " Current", masterTalon.getOutputCurrent());
         SmartDashboard.putNumber(side.toString() + " Position", getPosition());

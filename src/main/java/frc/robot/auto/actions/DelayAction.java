@@ -16,8 +16,7 @@ public class DelayAction implements Action {
         start = false;
     }
 
-    @Override
-    public boolean isFinished() {
+    @Override public boolean isFinished() {
         return start && mAction.isFinished();
     }
 
@@ -25,8 +24,7 @@ public class DelayAction implements Action {
      * Called by runAction in AutoModeBase iteratively until isFinished returns
      * true. Iterative logic lives in this method
      */
-    @Override
-    public void update() {
+    @Override public void update() {
         if (Timer.getFPGATimestamp() - mStartTime >= mTimeToWait && !start) {
             start = true;
             mAction.start();
@@ -38,16 +36,14 @@ public class DelayAction implements Action {
     /**
      * Run code once when the action finishes, usually for clean up
      */
-    @Override
-    public void done() {
+    @Override public void done() {
         mAction.done();
     }
 
     /**
      * Run code once when the action is started, for set up
      */
-    @Override
-    public void start() {
+    @Override public void start() {
         mStartTime = Timer.getFPGATimestamp();
     }
 }

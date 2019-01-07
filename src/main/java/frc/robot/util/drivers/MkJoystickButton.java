@@ -10,7 +10,8 @@ public class MkJoystickButton {
     private final String buttonName;
     private boolean lastState;
 
-    public MkJoystickButton(final MkJoystick joystick, final int rawButton, final String buttonName) {
+    public MkJoystickButton(final MkJoystick joystick, final int rawButton,
+        final String buttonName) {
         this.joystick = joystick;
         this.rawButton = rawButton;
         this.buttonName = buttonName;
@@ -24,8 +25,9 @@ public class MkJoystickButton {
         final boolean isPressed = !lastState && joystick.getRawButton(rawButton);
         update();
         if (isPressed) {
-            Log.verbose("[Joystick] " + joystick.getPort() + "\t[Button]" + rawButton + "\t Pressed ( " + buttonName
-                    + " )");
+            Log.verbose(
+                "[Joystick] " + joystick.getPort() + "\t[Button]" + rawButton + "\t Pressed ( "
+                    + buttonName + " )");
         }
         return isPressed;
     }

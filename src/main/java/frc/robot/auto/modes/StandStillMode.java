@@ -10,8 +10,7 @@ import frc.robot.util.logging.Log;
  */
 public class StandStillMode extends AutoModeBase {
 
-    @Override
-    protected void routine() throws AutoModeEndedException {
+    @Override protected void routine() throws AutoModeEndedException {
         Log.marker("Starting Stand Still Mode... Done!");
     }
 }
