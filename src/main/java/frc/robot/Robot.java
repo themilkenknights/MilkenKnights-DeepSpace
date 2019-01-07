@@ -13,7 +13,6 @@ import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.Input;
 import frc.robot.subsystems.Superstructure;
 import frc.robot.util.logging.Log;
-import frc.robot.util.structure.SubsystemManager;
 import frc.robot.util.structure.loops.Looper;
 import java.util.Arrays;
 

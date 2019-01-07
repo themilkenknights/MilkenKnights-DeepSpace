@@ -3,12 +3,10 @@ package frc.robot;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.auto.modes.DriveStraightMode;
 import frc.robot.auto.modes.DriveStraightOpenLoopMode;
 import frc.robot.subsystems.Drive;
 import frc.robot.util.auto.AutoModeBase;
 import frc.robot.util.auto.AutoModeExecuter;
-import frc.robot.util.auto.trajectory.Path;
 import frc.robot.util.logging.Log;
 
 import java.util.HashMap;
@@ -16,7 +14,6 @@ import java.util.Map;
 
 public class AutoChooser {
 
-    public static final Map<String, Path> autoPaths = new HashMap<>();
     private static AutoModeExecuter mAutoModeExecuter = null;
 
     /*
@@ -35,11 +32,7 @@ public class AutoChooser {
     }
 
     private static AutoModeBase getStraightMode() {
-        if (Drive.getInstance().isEncodersConnected() && Drive.getInstance().gyroConnected()) {
-            return new DriveStraightMode();
-        } else {
-            return new DriveStraightOpenLoopMode();
-        }
+        return new DriveStraightOpenLoopMode();
     }
 
 

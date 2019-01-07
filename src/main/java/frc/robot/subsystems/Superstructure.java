@@ -1,10 +1,8 @@
 package frc.robot.subsystems;
 
-import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
-import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -26,7 +24,6 @@ public class Superstructure extends Subsystem {
     private boolean hPSignal;
     private boolean turnOffLED;
     private double mLastPacketTime;
-    private UsbCamera cameraServer;
     private float _hue;
     private PowerDistributionPanel pdp;
     double x,y, area, rate = 0;
@@ -38,8 +35,6 @@ public class Superstructure extends Subsystem {
         turnOffLED = false;
         mLastPacketTime = 0.0;
         _hue = 0;
-        cameraServer = CameraServer.getInstance().startAutomaticCapture();
-        cameraServer.setResolution(640, 480);
     }
 
     public static Superstructure getInstance() {

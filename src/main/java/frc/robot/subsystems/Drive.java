@@ -9,8 +9,6 @@ import frc.robot.Constants.DRIVE;
 import frc.robot.Constants.LOGGING;
 import frc.robot.RobotState;
 import frc.robot.RobotState.DriveControlState;
-import frc.robot.util.auto.trajectory.Path;
-import frc.robot.util.auto.trajectory.PathFollower;
 import frc.robot.util.drivers.MkGyro;
 import frc.robot.util.drivers.MkTalon;
 import frc.robot.util.drivers.MkTalon.TalonPosition;
@@ -18,7 +16,6 @@ import frc.robot.util.logging.Log;
 import frc.robot.util.logging.ReflectingCSVWriter;
 import frc.robot.util.math.MkMath;
 import frc.robot.util.state.DriveSignal;
-import frc.robot.util.state.TrajectoryStatus;
 import frc.robot.util.structure.Subsystem;
 import frc.robot.util.structure.loops.Loop;
 import frc.robot.util.structure.loops.Looper;
@@ -55,10 +52,7 @@ public class Drive extends Subsystem {
         rightDrive.invertSlave(DRIVE.RIGHT_SLAVE_INVERT);
         rightDrive.setSensorPhase(DRIVE.RIGHT_INVERT_SENSOR);
 
-        mCSVWriter = new ReflectingCSVWriter<DriveDebugOutput>(LOGGING.DRIVE_LOG_PATH,
-                DriveDebugOutput.class);
-        leftStatus = TrajectoryStatus.NEUTRAL;
-        rightStatus = TrajectoryStatus.NEUTRAL;
+        mCSVWriter = new ReflectingCSVWriter<DriveDebugOutput>(LOGGING.DRIVE_LOG_PATH, DriveDebugOutput.class);
         currentSetpoint = DriveSignal.BRAKE;
     }
 
@@ -76,87 +70,23 @@ public class Drive extends Subsystem {
     }
 
     /**
-     * Controls Drivetrain in Closed-loop velocity Mode Method sets Talons in Native Units per 100ms
+     * Controls Drivetrain in Closed-loop velocity Mode Method sets Talons in Native
+     * Units per 100ms
      *
-     * @param signal An object that contains left and right velocities (inches per sec)
+     * @param signal An object that contains left and right velocities (inches per
+     *               sec)
      */
 
-    public synchronized void setVelocitySetpoint(DriveSignal signal, double leftFeed,
-                                                 double rightFeed) {
+    public synchronized void setVelocitySetpoint(DriveSignal signal, double leftFeed, double rightFeed) {
         if (RobotState.mDriveControlState == DriveControlState.PATH_FOLLOWING) {
-            leftDrive.set(ControlMode.Velocity, signal.getLeftNativeVelTraj(), signal.getBrakeMode(),
-                    leftFeed);
-            rightDrive.set(ControlMode.Velocity, signal.getRightNativeVelTraj(), signal.getBrakeMode(),
-                    rightFeed);
+            leftDrive.set(ControlMode.Velocity, signal.getLeftNativeVelTraj(), signal.getBrakeMode(), leftFeed);
+            rightDrive.set(ControlMode.Velocity, signal.getRightNativeVelTraj(), signal.getBrakeMode(), rightFeed);
         } else {
             RobotState.mDriveControlState = DriveControlState.VELOCITY_SETPOINT;
             leftDrive.set(ControlMode.Velocity, signal.getLeftNativeVel(), signal.getBrakeMode());
             rightDrive.set(ControlMode.Velocity, signal.getRightNativeVel(), signal.getBrakeMode());
         }
         currentSetpoint = signal;
-    }
-
-    /**
-     * @param path     Robot Path
-     * @param dist_tol Position Tolerance for Path Follower
-     * @param ang_tol  Robot Angle Tolerance for Path Follower (Degrees)
-     */
-    public synchronized void setDrivePath(Path path, double dist_tol, double ang_tol,
-                                          boolean brakeMode) {
-        Log.marker("Began Path: " + path.getName());
-        brakePath = brakeMode;
-        double offset = lastAngle - Pathfinder
-                .boundHalfDegrees(Pathfinder.r2d(path.getLeftWheelTrajectory().get(0).heading));
-        for (Trajectory.Segment segment : path.getLeftWheelTrajectory().segments) {
-            segment.heading = Pathfinder.boundHalfDegrees(Pathfinder.r2d(segment.heading) + offset);
-        }
-        for (Trajectory.Segment segment : path.getRightWheelTrajectory().segments) {
-            segment.heading = Pathfinder.boundHalfDegrees(Pathfinder.r2d(segment.heading) + offset);
-        }
-        leftDrive.resetEncoder();
-        rightDrive.resetEncoder();
-        pathFollower = new PathFollower(path, dist_tol, ang_tol);
-        RobotState.mDriveControlState = RobotState.DriveControlState.PATH_FOLLOWING;
-    }
-
-    /*
-    Called from Auto Action to check when the path finishes. Saves the last angle to use with the next path and resets the Trajectory Status
-     */
-    public synchronized boolean isPathFinished() {
-        if (pathFollower.getFinished()) {
-            lastAngle = pathFollower.getEndHeading();
-            RobotState.mDriveControlState = DriveControlState.OPEN_LOOP;
-            pathFollower = null;
-            leftStatus = TrajectoryStatus.NEUTRAL;
-            rightStatus = TrajectoryStatus.NEUTRAL;
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Called from Looper during Path Following Gets a TrajectoryStatus containing output velocity and Desired Trajectory Information for logging Inputs Position, Speed and Angle to Trajectory Follower
-     * Creates a new Drive Signal that is then set as a velocity setpoint
-     */
-    private synchronized void updatePathFollower() {
-        TrajectoryStatus leftUpdate = pathFollower
-                .getLeftVelocity(leftDrive.getPosition(), leftDrive.getSpeed(), -navX.getYaw());
-        TrajectoryStatus rightUpdate = pathFollower
-                .getRightVelocity(rightDrive.getPosition(), rightDrive.getSpeed(), -navX.getYaw());
-        leftStatus = leftUpdate;
-        rightStatus = rightUpdate;
-        if (isEncodersConnected()) {
-            setVelocitySetpoint(
-                    new DriveSignal(leftUpdate.getOutput(), rightUpdate.getOutput(), brakePath),
-                    leftUpdate.getArbFeed(), rightUpdate.getArbFeed());
-        } else {
-            leftDrive.set(ControlMode.PercentOutput,
-                    ((1.0 / MkMath.RPMToInchesPerSec(DRIVE.RIGHT_RPM_MAX)) * leftUpdate.getOutput()), false,
-                    leftUpdate.getArbFeed());
-            rightDrive.set(ControlMode.PercentOutput,
-                    ((1.0 / MkMath.RPMToInchesPerSec(DRIVE.LEFT_RPM_MAX)) * rightUpdate.getOutput()), false,
-                    rightUpdate.getArbFeed());
-        }
     }
 
     @Override
@@ -166,26 +96,8 @@ public class Drive extends Subsystem {
         SmartDashboard.putString("Drive State", RobotState.mDriveControlState.toString());
         SmartDashboard.putBoolean("Drivetrain Status",
                 leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected());
-        SmartDashboard.putNumber("Current Difference",
-                leftDrive.getCurrentOutput() - rightDrive.getCurrentOutput());
-        /*if (RobotState.mDriveControlState == DriveControlState.PATH_FOLLOWING
-                && leftStatus != TrajectoryStatus.NEUTRAL) {
-            SmartDashboard.putNumber("NavX Yaw", navX.getYaw());
-            SmartDashboard.putNumber("Left Desired Velocity", currentSetpoint.getLeft());
-            SmartDashboard.putNumber("Right Desired Velocity", currentSetpoint.getRight());
-            SmartDashboard.putNumber("Desired Heading", leftStatus.getSeg().heading);
-            SmartDashboard.putNumber("Heading Error", leftStatus.getAngError());
-            SmartDashboard.putNumber("Left Desired Position", leftStatus.getSeg().position);
-            SmartDashboard.putNumber("Left Theoretical Vel", leftStatus.getSeg().velocity);
-            SmartDashboard.putNumber("Left Position Error", leftStatus.getPosError());
-            SmartDashboard.putNumber("Left Desired Velocity Error", leftStatus.getVelError());
-            SmartDashboard.putNumber("Right Desired Position", leftStatus.getSeg().position);
-            SmartDashboard.putNumber("Right Position Error", leftStatus.getPosError());
-            SmartDashboard.putNumber("Right Theoretical Vel", rightStatus.getSeg().velocity);
-            SmartDashboard.putNumber("Right Desired Velocity Error", leftStatus.getVelError());
-            SmartDashboard.putNumber("Left Arb Feed", leftStatus.getArbFeed());
-            SmartDashboard.putNumber("Right Arb Feed", rightStatus.getArbFeed());
-        } */
+        SmartDashboard.putNumber("Current Difference", leftDrive.getCurrentOutput() - rightDrive.getCurrentOutput());
+
     }
 
     @Override
@@ -205,12 +117,15 @@ public class Drive extends Subsystem {
         leftDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
         leftDrive.setMasterTalon(ControlMode.PercentOutput, 1);
         Timer.delay(2.0);
-        if (leftDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS || leftDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
+        if (leftDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS
+                || leftDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
             Log.verbose("FAILED - LEFT MASTER DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
-            Log.marker("Left Master Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: " + leftDrive.getPosition());
+            Log.marker("Left Master Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: "
+                    + leftDrive.getPosition());
             check = false;
         } else {
-            Log.marker("Left Master Position: " + leftDrive.getPosition() + " Left Master Speed: " + leftDrive.getSpeed());
+            Log.marker(
+                    "Left Master Position: " + leftDrive.getPosition() + " Left Master Speed: " + leftDrive.getSpeed());
         }
 
         leftDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
@@ -221,12 +136,15 @@ public class Drive extends Subsystem {
         leftDrive.setMasterTalon(ControlMode.PercentOutput, 0);
         leftDrive.setSlaveTalon(ControlMode.PercentOutput, 1);
         Timer.delay(2.0);
-        if (leftDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS || leftDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
+        if (leftDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS
+                || leftDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
             Log.verbose("FAILED - LEFT SLAVE DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
-            Log.marker("Left Slave Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: " + leftDrive.getPosition());
+            Log.marker(
+                    "Left Slave Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: " + leftDrive.getPosition());
             check = false;
         } else {
-            Log.marker("Left Slave Position: " + leftDrive.getPosition() + " Left Slave Speed: " + leftDrive.getSpeed());
+            Log.marker(
+                    "Left Slave Position: " + leftDrive.getPosition() + " Left Slave Speed: " + leftDrive.getSpeed());
         }
         leftDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
         leftDrive.setMasterTalon(ControlMode.PercentOutput, 0);
@@ -237,12 +155,14 @@ public class Drive extends Subsystem {
         rightDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
         rightDrive.setMasterTalon(ControlMode.PercentOutput, 1);
         Timer.delay(2.0);
-        if (rightDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS || rightDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
+        if (rightDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS
+                || rightDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
             Log.verbose("FAILED - RIGHT MASTER DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
             Log.marker("Right Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: " + leftDrive.getPosition());
             check = false;
         } else {
-            Log.marker("Right Master Position: " + rightDrive.getPosition() + " Right Master Speed: " + rightDrive.getSpeed());
+            Log.marker("Right Master Position: " + rightDrive.getPosition() + " Right Master Speed: "
+                    + rightDrive.getSpeed());
         }
 
         rightDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
@@ -253,12 +173,14 @@ public class Drive extends Subsystem {
         rightDrive.setMasterTalon(ControlMode.PercentOutput, 0);
         rightDrive.setSlaveTalon(ControlMode.PercentOutput, 1);
         Timer.delay(2.0);
-        if (rightDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS || rightDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
+        if (rightDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS
+                || rightDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
             Log.verbose("FAILED - RIGHT SLAVE DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
             Log.marker("Right Drive Test Failed - Vel: " + rightDrive.getSpeed() + " Pos: " + rightDrive.getPosition());
             check = false;
         } else {
-            Log.marker("Right Slave Position: " + rightDrive.getPosition() + " Right Slave Speed: " + rightDrive.getSpeed());
+            Log.marker("Right Slave Position: " + rightDrive.getPosition() + " Right Slave Speed: "
+                    + rightDrive.getSpeed());
         }
         rightDrive.setMasterTalon(ControlMode.PercentOutput, 0);
         rightDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
@@ -290,27 +212,27 @@ public class Drive extends Subsystem {
             }
 
             /**
-             * Updated from mEnabledLoop in Robot.java
-             * Controls drivetrain during Path Following and Turn In Place and logs
-             * Drivetrain data in all modes
+             * Updated from mEnabledLoop in Robot.java Controls drivetrain during Path
+             * Following and Turn In Place and logs Drivetrain data in all modes
+             * 
              * @param timestamp In Seconds Since Code Start
              */
             @Override
             public void onLoop(double timestamp) {
                 synchronized (Drive.this) {
                     switch (RobotState.mDriveControlState) {
-                        case OPEN_LOOP:
-                            return;
-                        case VELOCITY_SETPOINT:
-                            return;
-                        case PATH_FOLLOWING:
-                            if (pathFollower != null) {
-                                updatePathFollower();
-                            }
-                            return;
-                        default:
-                            Log.marker("Unexpected drive control state: " + RobotState.mDriveControlState);
-                            break;
+                    case OPEN_LOOP:
+                        return;
+                    case VELOCITY_SETPOINT:
+                        return;
+                    case PATH_FOLLOWING:
+                        if (pathFollower != null) {
+                            updatePathFollower();
+                        }
+                        return;
+                    default:
+                        Log.marker("Unexpected drive control state: " + RobotState.mDriveControlState);
+                        break;
                     }
                 }
             }
@@ -329,7 +251,7 @@ public class Drive extends Subsystem {
     }
 
     /*
-    Change Talon PID Constants to reduce oscillation during teleop driving
+     * Change Talon PID Constants to reduce oscillation during teleop driving
      */
     public void configVelocityControl() {
         leftDrive.configTeleopVelocity();
