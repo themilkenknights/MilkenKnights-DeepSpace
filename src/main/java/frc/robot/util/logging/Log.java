@@ -9,7 +9,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Tracks start-up and caught crash events, logging them to a file which dosn't roll over
+ * Tracks start-up and caught crash events, logging them to a file which dosn't
+ * roll over
  */
 public class Log {
 

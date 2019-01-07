@@ -17,7 +17,7 @@ public class AutoChooser {
     private static AutoModeExecuter mAutoModeExecuter = null;
 
     /*
-    Initialize Smart Dashboard Choosers and Serialize all paths into memory
+     * Initialize Smart Dashboard Choosers and Serialize all paths into memory
      */
     public static void loadAutos() {
 
@@ -34,7 +34,6 @@ public class AutoChooser {
     private static AutoModeBase getStraightMode() {
         return new DriveStraightOpenLoopMode();
     }
-
 
     public static void startAuto() {
         updateGameData();
@@ -59,8 +58,7 @@ public class AutoChooser {
         RobotState.matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
         RobotState.matchData.matchType = DriverStation.getInstance().getMatchType();
         Log.verbose("Alliance: " + RobotState.matchData.alliance.toString() + " Match Number: "
-                + RobotState.matchData.matchNumber + " Match Type: " + RobotState.matchData.matchType
-                .toString());
+                + RobotState.matchData.matchNumber + " Match Type: " + RobotState.matchData.matchType.toString());
     }
 
 }

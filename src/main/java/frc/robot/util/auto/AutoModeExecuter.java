@@ -3,7 +3,8 @@ package frc.robot.util.auto;
 import frc.robot.util.logging.CrashTrackingRunnable;
 
 /**
- * This class selects, runs, and stops (if necessary) a specified autonomous mode.
+ * This class selects, runs, and stops (if necessary) a specified autonomous
+ * mode.
  */
 public class AutoModeExecuter {
 

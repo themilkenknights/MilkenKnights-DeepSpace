@@ -4,8 +4,8 @@ import edu.wpi.first.wpilibj.Timer;
 import frc.robot.util.auto.Action;
 
 /**
- * Action to wait for a given amount of time To use this Action, call runAction(new
- * WaitAction(your_time))
+ * Action to wait for a given amount of time To use this Action, call
+ * runAction(new WaitAction(your_time))
  */
 public class WaitAction implements Action {
 

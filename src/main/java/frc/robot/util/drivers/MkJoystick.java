@@ -18,7 +18,8 @@ public class MkJoystick extends Joystick {
     }
 
     /**
-     * Gets a button of the joystick. Creates a new Button object if one did not already exist.
+     * Gets a button of the joystick. Creates a new Button object if one did not
+     * already exist.
      *
      * @param button The raw button number of the button to get
      * @return The button

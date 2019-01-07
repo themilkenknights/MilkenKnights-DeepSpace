@@ -18,14 +18,14 @@ import frc.robot.util.structure.loops.Looper;
 import java.util.Arrays;
 
 public class Robot extends TimedRobot {
-  private final SubsystemManager mSubsystemManager = new SubsystemManager(Arrays
-          .asList(Drive.getInstance(), Superstructure.getInstance(),
-                  Input.getInstance()));
+  private final SubsystemManager mSubsystemManager = new SubsystemManager(
+      Arrays.asList(Drive.getInstance(), Superstructure.getInstance(), Input.getInstance()));
   private Looper mEnabledLooper = new Looper();
 
   public Robot() {
     Log.logRobotStartup();
   }
+
   @Override
   public void robotInit() {
     try {

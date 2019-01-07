@@ -16,8 +16,8 @@ public class OpenLoopFollowHeading implements Action {
     private double endAngle;
     private double otherAngle;
 
-    public OpenLoopFollowHeading(double start_power, double time_full_on, double end_power,
-                                 double time_to_decel, double endAngle, double otherAngle) {
+    public OpenLoopFollowHeading(double start_power, double time_full_on, double end_power, double time_to_decel,
+            double endAngle, double otherAngle) {
         m_t1 = time_full_on;
         m_t2 = m_t1 + time_to_decel;
         m_start_power = start_power;
@@ -28,8 +28,9 @@ public class OpenLoopFollowHeading implements Action {
     }
 
     /**
-     * Returns whether or not the code has finished execution. When implementing this interface, this
-     * method is used by the runAction method every cycle to know when to stop running the action
+     * Returns whether or not the code has finished execution. When implementing
+     * this interface, this method is used by the runAction method every cycle to
+     * know when to stop running the action
      *
      * @return boolean
      */
@@ -39,8 +40,8 @@ public class OpenLoopFollowHeading implements Action {
     }
 
     /**
-     * Called by runAction in AutoModeBase iteratively until isFinished returns true. Iterative logic
-     * lives in this method
+     * Called by runAction in AutoModeBase iteratively until isFinished returns
+     * true. Iterative logic lives in this method
      */
     @Override
     public void update() {

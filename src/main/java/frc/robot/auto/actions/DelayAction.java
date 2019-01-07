@@ -22,8 +22,8 @@ public class DelayAction implements Action {
     }
 
     /**
-     * Called by runAction in AutoModeBase iteratively until isFinished returns true. Iterative logic
-     * lives in this method
+     * Called by runAction in AutoModeBase iteratively until isFinished returns
+     * true. Iterative logic lives in this method
      */
     @Override
     public void update() {

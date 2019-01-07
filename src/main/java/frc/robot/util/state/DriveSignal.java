@@ -4,8 +4,8 @@ import frc.robot.Constants;
 import frc.robot.util.math.MkMath;
 
 /**
- * A drivetrain command consisting of the left, right motor settings and whether the brake mode is
- * enabled.
+ * A drivetrain command consisting of the left, right motor settings and whether
+ * the brake mode is enabled.
  */
 public class DriveSignal {
 
