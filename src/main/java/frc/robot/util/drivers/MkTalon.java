@@ -48,7 +48,6 @@ public class MkTalon {
     }
 
     public void configMotionMagic() {
-
         if (side == TalonPosition.Left) {
             masterTalon.config_kF(Constants.kPIDLoopIdx, DRIVE.LEFT_DRIVE_F, Constants.kTimeoutMs);
         } else {
@@ -57,10 +56,8 @@ public class MkTalon {
         masterTalon.config_kP(Constants.kPIDLoopIdx, DRIVE.DRIVE_P, Constants.kTimeoutMs);
         masterTalon.config_kI(Constants.kPIDLoopIdx, DRIVE.DRIVE_I, Constants.kTimeoutMs);
         masterTalon.config_kD(Constants.kPIDLoopIdx, DRIVE.DRIVE_D, Constants.kTimeoutMs);
-        masterTalon
-                .configMotionCruiseVelocity((int) DRIVE.MOTION_MAGIC_CRUISE_VEL, Constants.kTimeoutMs);
+        masterTalon.configMotionCruiseVelocity((int) DRIVE.MOTION_MAGIC_CRUISE_VEL, Constants.kTimeoutMs);
         masterTalon.configMotionAcceleration((int) DRIVE.MOTION_MAGIC_ACCEL, Constants.kTimeoutMs);
-
     }
 
     public void configTeleopVelocity() {
@@ -183,7 +180,7 @@ public class MkTalon {
             masterTalon.setNeutralMode(nMode ? NeutralMode.Brake : NeutralMode.Coast);
             slaveTalon.setNeutralMode(nMode ? NeutralMode.Brake : NeutralMode.Coast);
         }
-        masterTalon.set(mode, value, arbFeed);
+        masterTalon.set(mode, value, DemandType.ArbitraryFeedForward, arbFeed);
         talonMode = nMode ? NeutralMode.Brake : NeutralMode.Coast;
     }
 

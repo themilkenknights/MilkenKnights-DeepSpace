@@ -28,12 +28,12 @@ public class Superstructure extends Subsystem {
     private double mLastPacketTime;
     private UsbCamera cameraServer;
     private float _hue;
-    private PowerDistributionPanel pdp;
+    //private PowerDistributionPanel pdp;
     double x,y, area, rate = 0;
 
     public Superstructure() {
         mkLED = new MkLED(Constants.SUPERSTRUCTURE.CANIFIER_ID);
-        pdp = new PowerDistributionPanel();
+        //pdp = new PowerDistributionPanel();
         hPSignal = false;
         turnOffLED = false;
         mLastPacketTime = 0.0;
@@ -49,7 +49,8 @@ public class Superstructure extends Subsystem {
     @Override
     public void outputToSmartDashboard() {
         SmartDashboard.putString("Robot State", RobotState.mMatchState.toString());
-        SmartDashboard.putNumber("Total Current Output", pdp.getTotalCurrent());
+        //SmartDashboard.putNumber("Total Current Output", pdp.getTotalCurrent());
+        updateLimelight();
         SmartDashboard.putNumber("X", x);
         SmartDashboard.putNumber("Y", y);
         SmartDashboard.putNumber("Latency", rate);
@@ -127,15 +128,27 @@ public class Superstructure extends Subsystem {
     }
 
     public synchronized void updateLimelight(){
-        NetworkTable table = NetworkTableInstance.getDefault().getTable("limelight");
-        NetworkTableEntry tx = table.getEntry("tx");
-        NetworkTableEntry ty = table.getEntry("ty");
-        NetworkTableEntry ta = table.getEntry("ta");
-        NetworkTableEntry tl = table.getEntry("tl");
-        x = tx.getDouble(0);
-        y = ty.getDouble(0);
-        area = ta.getDouble(0);
-        rate = tl.getDouble(0);
+        //NetworkTable table = NetworkTableInstance.getDefault().getTable("limelight");
+        //NetworkTableEntry tx = table.getEntry("tx");
+        //NetworkTableEntry ty = table.getEntry("ty");
+       // NetworkTableEntry ta = table.getEntry("ta");
+        //NetworkTableEntry tl = table.getEntry("tl");
+        //x = tx.getDouble(0);
+        //y = ty.getDouble(0);
+        //area = ta.getDouble(0);
+        //rate = tl.getDouble(0);
+    }
+
+    public double getX(){
+        return x;
+    }
+
+    public double getY(){
+        return y;
+    }
+
+    public double getA(){
+        return area;
     }
 
     public synchronized void setLastPacketTime(double timestamp) {

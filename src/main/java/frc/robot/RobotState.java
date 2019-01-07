@@ -25,6 +25,7 @@ public class RobotState {
         OPEN_LOOP, // Open Loop PercentVBus Control
         VELOCITY_SETPOINT, // Closed-loop velocity pidf on talons - Only used as a backup
         PATH_FOLLOWING, // Used in autonomous to follow a pregenerated path
+        VISION_TRACKING
     }
 
     public enum ArmControlState {
