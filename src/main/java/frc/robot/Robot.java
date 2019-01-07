@@ -9,6 +9,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import frc.robot.util.structure.SubsystemManager;
+import frc.robot.RobotState.DriveControlState;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.Input;
 import frc.robot.subsystems.Superstructure;
@@ -54,7 +55,7 @@ public class Robot extends TimedRobot {
   public void autonomousInit() {
     try {
       Log.logAutoInit();
-      AutoChooser.startAuto();
+      RobotState.mDriveControlState = DriveControlState.VISION_TRACKING;
       mEnabledLooper.start();
     } catch (Throwable t) {
       Log.logThrowableCrash(t);

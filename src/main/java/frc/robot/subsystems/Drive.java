@@ -14,13 +14,16 @@ import frc.robot.util.drivers.MkTalon;
 import frc.robot.util.drivers.MkTalon.TalonPosition;
 import frc.robot.util.logging.Log;
 import frc.robot.util.logging.ReflectingCSVWriter;
-import frc.robot.util.math.MkMath;
+import frc.robot.util.math.*;
 import frc.robot.util.state.DriveSignal;
 import frc.robot.util.structure.Subsystem;
 import frc.robot.util.structure.loops.Loop;
 import frc.robot.util.structure.loops.Looper;
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
+import edu.wpi.first.networktables.NetworkTable;
+import edu.wpi.first.networktables.NetworkTableEntry;
+import edu.wpi.first.networktables.NetworkTableInstance;
 
 public class Drive extends Subsystem {
 
@@ -34,6 +37,9 @@ public class Drive extends Subsystem {
     private DriveSignal currentSetpoint;
     private double lastAngle = 0;
     private boolean brakePath = true;
+    NetworkTable table = NetworkTableInstance.getDefault().getTable("limelight");
+    NetworkTableEntry tx = table.getEntry("tx");
+    NetworkTableEntry ty = table.getEntry("ty");
 
     private Drive() {
         leftDrive = new MkTalon(DRIVE.LEFT_MASTER_ID, DRIVE.LEFT_SLAVE_ID, TalonPosition.Left);
@@ -54,6 +60,7 @@ public class Drive extends Subsystem {
 
         mCSVWriter = new ReflectingCSVWriter<DriveDebugOutput>(LOGGING.DRIVE_LOG_PATH, DriveDebugOutput.class);
         currentSetpoint = DriveSignal.BRAKE;
+
     }
 
     public static Drive getInstance() {
@@ -97,7 +104,6 @@ public class Drive extends Subsystem {
         SmartDashboard.putBoolean("Drivetrain Status",
                 leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected());
         SmartDashboard.putNumber("Current Difference", leftDrive.getCurrentOutput() - rightDrive.getCurrentOutput());
-
     }
 
     @Override
@@ -226,9 +232,9 @@ public class Drive extends Subsystem {
                     case VELOCITY_SETPOINT:
                         return;
                     case PATH_FOLLOWING:
-                        if (pathFollower != null) {
-                            updatePathFollower();
-                        }
+                        return;
+                    case VISION_TRACKING:
+                        updateVision();
                         return;
                     default:
                         Log.marker("Unexpected drive control state: " + RobotState.mDriveControlState);
@@ -248,6 +254,22 @@ public class Drive extends Subsystem {
 
     public double getYaw() {
         return navX.getYaw();
+    }
+
+    public void updateVision() {
+        // InterpolatingDouble result = Constants.kHoodAutoAimMap.getInterpolated(new
+        // InterpolatingDouble(1.0));
+
+        double x = tx.getDouble(0);
+        double y = ty.getDouble(0);
+        double steering_adjust = 0.08 * x;
+        double distance_adjust = 0.0 * y;
+        double left_command = -steering_adjust;
+        double right_command = steering_adjust;
+        setOpenLoop(new DriveSignal(left_command, right_command));
+
+        // leftDrive.set(ControlMode.MotionMagic, 1, true, 0);
+        // rightDrive.set(ControlMode.MotionMagic, 1, true, 0);
     }
 
     /*
