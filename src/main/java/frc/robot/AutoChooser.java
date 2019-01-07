@@ -4,24 +4,13 @@ import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.auto.modes.DriveStraightOpenLoopMode;
-import frc.robot.subsystems.Drive;
 import frc.robot.util.auto.AutoModeBase;
 import frc.robot.util.auto.AutoModeExecuter;
 import frc.robot.util.logging.Log;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class AutoChooser {
 
     private static AutoModeExecuter mAutoModeExecuter = null;
-
-    /*
-     * Initialize Smart Dashboard Choosers and Serialize all paths into memory
-     */
-    public static void loadAutos() {
-
-    }
 
     public static AutoModeBase getAutoMode() {
         double delay = SmartDashboard.getNumber("Auto Delay", 0.0);

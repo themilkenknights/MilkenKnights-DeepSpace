@@ -31,7 +31,6 @@ public class Robot extends TimedRobot {
     try {
       Log.logRobotInit();
       mSubsystemManager.registerEnabledLoops(mEnabledLooper);
-      AutoChooser.loadAutos();
     } catch (Throwable t) {
       Log.logThrowableCrash(t);
       throw t;
