@@ -15,5 +15,5 @@ public interface InverseInterpolable<T> {
 	 *
 	 * @return The interpolation parameter on [0, 1] representing how far between this point and the upper point the query point lies.
 	 */
-  double inverseInterpolate(T upper, T query);
+	double inverseInterpolate(T upper, T query);
 }

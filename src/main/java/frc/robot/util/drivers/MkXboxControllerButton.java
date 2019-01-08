@@ -1,7 +1,7 @@
 package frc.robot.util.drivers;
 
 import edu.wpi.first.wpilibj.XboxController;
-import frc.robot.util.logging.Log;
+import frc.robot.util.logging.CrashTracker;
 
 public class MkXboxControllerButton {
 
@@ -23,7 +23,7 @@ public class MkXboxControllerButton {
 		final boolean isPressed = !lastState && joystick.getRawButton(rawButton);
 		update();
 		if (isPressed) {
-			Log.verbose("[Joystick] " + joystick.getPort() + "\t[Button]" + rawButton + "\t Pressed ( " + buttonName + " )");
+			CrashTracker.logMarker("[Joystick] " + joystick.getPort() + "\t[Button]" + rawButton + "\t Pressed ( " + buttonName + " )");
 		}
 		return isPressed;
 	}

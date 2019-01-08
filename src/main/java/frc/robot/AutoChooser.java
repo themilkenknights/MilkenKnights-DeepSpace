@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.auto.modes.DriveStraightOpenLoopMode;
 import frc.robot.util.auto.AutoModeBase;
 import frc.robot.util.auto.AutoModeExecuter;
-import frc.robot.util.logging.Log;
+import frc.robot.util.logging.CrashTracker;
 
 public class AutoChooser {
 
@@ -46,7 +46,7 @@ public class AutoChooser {
 		RobotState.matchData.alliance = DriverStation.getInstance().getAlliance();
 		RobotState.matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
 		RobotState.matchData.matchType = DriverStation.getInstance().getMatchType();
-		Log.verbose(
+		CrashTracker.logMarker(
 				"Alliance: " + RobotState.matchData.alliance.toString() + " Match Number: " + RobotState.matchData.matchNumber + " Match Type: "
 						+ RobotState.matchData.matchType.toString());
 	}

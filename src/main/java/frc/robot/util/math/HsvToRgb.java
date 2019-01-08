@@ -2,10 +2,10 @@ package frc.robot.util.math;
 
 public class HsvToRgb {
 
-  /**
-   * Convert hue/saturation/and value into RGB values
-   */
-  static float[] RGB = new float[3];
+	/**
+	 * Convert hue/saturation/and value into RGB values
+	 */
+	static float[] RGB = new float[3];
 
 	public static float[] convert(double hDegrees, double S, double V) {
 		double R, G, B;

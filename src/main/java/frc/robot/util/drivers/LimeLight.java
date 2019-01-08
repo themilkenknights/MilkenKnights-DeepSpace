@@ -61,7 +61,7 @@ public class LimeLight {
 	public boolean getIsTargetFound() {
 		NetworkTableEntry tv = m_table.getEntry("tv");
 		double v = tv.getDouble(0);
-    return v != 0.0f;
+		return v != 0.0f;
 	}
 
 	/**
@@ -307,7 +307,7 @@ public class LimeLight {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-      isConnected = getPipelineLatency() != 0.0;
+			isConnected = getPipelineLatency() != 0.0;
 		}
 	}
 }
