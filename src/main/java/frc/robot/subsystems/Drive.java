@@ -40,19 +40,27 @@ public class Drive extends Subsystem {
 		rightDrive.resetEncoder();
 		navX = new MkGyro(Port.kMXP);
 
-		leftDrive.invertMaster(DRIVE.LEFT_MASTER_INVERT);
-		leftDrive.invertSlave(DRIVE.LEFT_SLAVE_INVERT);
-		leftDrive.setSensorPhase(DRIVE.LEFT_INVERT_SENSOR);
+		leftDrive.masterTalon.setInverted(DRIVE.LEFT_MASTER_INVERT);
+		leftDrive.slaveTalon.setInverted(DRIVE.LEFT_SLAVE_INVERT);
+		leftDrive.masterTalon.setSensorPhase(DRIVE.LEFT_INVERT_SENSOR);
 
-		rightDrive.invertMaster(DRIVE.RIGHT_MASTER_INVERT);
-		rightDrive.invertSlave(DRIVE.RIGHT_SLAVE_INVERT);
-		rightDrive.setSensorPhase(DRIVE.RIGHT_INVERT_SENSOR);
+		rightDrive.masterTalon.setInverted(DRIVE.RIGHT_MASTER_INVERT);
+		rightDrive.slaveTalon.setInverted(DRIVE.RIGHT_SLAVE_INVERT);
+		rightDrive.masterTalon.setSensorPhase(DRIVE.RIGHT_INVERT_SENSOR);
 		currentSetpoint = DriveSignal.BRAKE;
 		limeLight = new LimeLight();
 	}
 
 	public static Drive getInstance() {
 		return InstanceHolder.mInstance;
+	}
+
+	@Override
+	public void outputToSmartDashboard() {
+		leftDrive.updateSmartDash();
+		rightDrive.updateSmartDash();
+		SmartDashboard.putString("Drive State", RobotState.mDriveControlState.toString());
+		SmartDashboard.putBoolean("Drivetrain Status", leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected());
 	}
 
 	/* Controls Drivetrain in PercentOutput Mode (without closed loop control) */
@@ -79,14 +87,6 @@ public class Drive extends Subsystem {
 	}
 
 	@Override
-	public void outputToSmartDashboard() {
-		leftDrive.updateSmartDash();
-		rightDrive.updateSmartDash();
-		SmartDashboard.putString("Drive State", RobotState.mDriveControlState.toString());
-		SmartDashboard.putBoolean("Drivetrain Status", leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected());
-	}
-
-	@Override
 	public void slowUpdate(double timestamp) {
 		if (mCSVWriter != null && RobotState.mMatchState != MatchState.DISABLED) {
 			mDebug.leftOutput = currentSetpoint.getLeft();
@@ -101,8 +101,8 @@ public class Drive extends Subsystem {
 		boolean check = true;
 		leftDrive.resetEncoder();
 		leftDrive.setCoastMode();
-		leftDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
-		leftDrive.setMasterTalon(ControlMode.PercentOutput, 1);
+		leftDrive.slaveTalon.set(ControlMode.PercentOutput, 0);
+		leftDrive.masterTalon.set(ControlMode.PercentOutput, 1);
 		Timer.delay(2.0);
 		if (leftDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS || leftDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
 			CrashTracker.logMarker("FAILED - LEFT MASTER DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
@@ -112,13 +112,13 @@ public class Drive extends Subsystem {
 			CrashTracker.logMarker("Left Master Position: " + leftDrive.getPosition() + " Left Master Speed: " + leftDrive.getSpeed());
 		}
 
-		leftDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
-		leftDrive.setMasterTalon(ControlMode.PercentOutput, 0);
+		leftDrive.slaveTalon.set(ControlMode.PercentOutput, 0);
+		leftDrive.masterTalon.set(ControlMode.PercentOutput, 0);
 		leftDrive.resetEncoder();
 		Timer.delay(1.0);
 
-		leftDrive.setMasterTalon(ControlMode.PercentOutput, 0);
-		leftDrive.setSlaveTalon(ControlMode.PercentOutput, 1);
+		leftDrive.masterTalon.set(ControlMode.PercentOutput, 0);
+		leftDrive.slaveTalon.set(ControlMode.PercentOutput, 1);
 		Timer.delay(2.0);
 		if (leftDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS || leftDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
 			CrashTracker.logMarker("FAILED - LEFT SLAVE DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
@@ -127,14 +127,14 @@ public class Drive extends Subsystem {
 		} else {
 			CrashTracker.logMarker("Left Slave Position: " + leftDrive.getPosition() + " Left Slave Speed: " + leftDrive.getSpeed());
 		}
-		leftDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
-		leftDrive.setMasterTalon(ControlMode.PercentOutput, 0);
+		leftDrive.slaveTalon.set(ControlMode.PercentOutput, 0);
+		leftDrive.masterTalon.set(ControlMode.PercentOutput, 0);
 		leftDrive.resetEncoder();
 		Timer.delay(1.0);
 
 		rightDrive.setCoastMode();
-		rightDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
-		rightDrive.setMasterTalon(ControlMode.PercentOutput, 1);
+		rightDrive.slaveTalon.set(ControlMode.PercentOutput, 0);
+		rightDrive.masterTalon.set(ControlMode.PercentOutput, 1);
 		Timer.delay(2.0);
 		if (rightDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS || rightDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
 			CrashTracker.logMarker("FAILED - RIGHT MASTER DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
@@ -144,13 +144,13 @@ public class Drive extends Subsystem {
 			CrashTracker.logMarker("Right Master Position: " + rightDrive.getPosition() + " Right Master Speed: " + rightDrive.getSpeed());
 		}
 
-		rightDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
-		rightDrive.setMasterTalon(ControlMode.PercentOutput, 0);
+		rightDrive.slaveTalon.set(ControlMode.PercentOutput, 0);
+		rightDrive.masterTalon.set(ControlMode.PercentOutput, 0);
 		rightDrive.resetEncoder();
 		Timer.delay(1.0);
 
-		rightDrive.setMasterTalon(ControlMode.PercentOutput, 0);
-		rightDrive.setSlaveTalon(ControlMode.PercentOutput, 1);
+		rightDrive.masterTalon.set(ControlMode.PercentOutput, 0);
+		rightDrive.slaveTalon.set(ControlMode.PercentOutput, 1);
 		Timer.delay(2.0);
 		if (rightDrive.getPosition() < Constants.DRIVE.MIN_TEST_POS || rightDrive.getSpeed() < Constants.DRIVE.MIN_TEST_VEL) {
 			CrashTracker.logMarker("FAILED - RIGHT SLAVE DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
@@ -159,8 +159,8 @@ public class Drive extends Subsystem {
 		} else {
 			CrashTracker.logMarker("Right Slave Position: " + rightDrive.getPosition() + " Right Slave Speed: " + rightDrive.getSpeed());
 		}
-		rightDrive.setMasterTalon(ControlMode.PercentOutput, 0);
-		rightDrive.setSlaveTalon(ControlMode.PercentOutput, 0);
+		rightDrive.masterTalon.set(ControlMode.PercentOutput, 0);
+		rightDrive.slaveTalon.set(ControlMode.PercentOutput, 0);
 
 		if (!navX.isConnected()) {
 			System.out.println("FAILED - NAVX DISCONNECTED");

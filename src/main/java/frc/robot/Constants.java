@@ -44,7 +44,6 @@ public final class Constants {
 		public static final double WHEEL_DIAMETER = 5.95;
 		public static final double CIRCUMFERENCE = WHEEL_DIAMETER * PI;
 		public static final double TURN_IN_PLACE_CIRCUMFERENCE = 104.1;
-		public static final double PATH_WHEELBASE = 33.75;
 
 		public static final double LEFT_RPM_MAX = 510.0;
 		public static final double RIGHT_RPM_MAX = 510.0;

@@ -16,8 +16,8 @@ import frc.robot.Constants.DRIVE;
 
 public class MkTalon {
 
-	private final TalonSRX masterTalon;
-	private final VictorSPX slaveTalon;
+	public final TalonSRX masterTalon;
+	public final VictorSPX slaveTalon;
 	private TalonPosition side;
 	private double maxRPM = 0;
 	private NeutralMode talonMode;
@@ -49,12 +49,7 @@ public class MkTalon {
 		masterTalon.config_kD(Constants.kPIDLoopIdx, DRIVE.DRIVE_D);
 	}
 
-	public void setLimitEnabled(boolean enabled) {
-		masterTalon.configForwardSoftLimitEnable(enabled);
-		masterTalon.configReverseSoftLimitEnable(enabled);
-	}
-
-	public void configMotionMagic() {
+	private void configMotionMagic() {
 		if (side == TalonPosition.Left) {
 			masterTalon.config_kF(Constants.kPIDLoopIdx, DRIVE.LEFT_DRIVE_F);
 		} else {
@@ -79,6 +74,7 @@ public class MkTalon {
 	}
 
 	public void resetConfig() {
+		masterTalon.configFactoryDefault();
 		masterTalon.configAllSettings(new TalonSRXConfiguration());
 		masterTalon.selectProfileSlot(Constants.kSlotIdx, Constants.kPIDLoopIdx);
 		masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5);
@@ -98,6 +94,7 @@ public class MkTalon {
 		masterTalon.configNominalOutputReverse(0);
 		masterTalon.configPeakOutputForward(1);
 		masterTalon.configPeakOutputReverse(-1);
+
 		slaveTalon.configNominalOutputForward(0);
 		slaveTalon.configNominalOutputReverse(0);
 		slaveTalon.configPeakOutputForward(1);
@@ -106,6 +103,7 @@ public class MkTalon {
 		masterTalon.configVoltageCompSaturation(12);
 		masterTalon.enableVoltageCompensation(true);
 		masterTalon.configVoltageMeasurementFilter(32);
+
 		slaveTalon.configVoltageCompSaturation(12);
 		slaveTalon.enableVoltageCompensation(true);
 		slaveTalon.configVoltageMeasurementFilter(32);
@@ -116,39 +114,20 @@ public class MkTalon {
 		slaveTalon.follow(masterTalon);
 	}
 
-	public double getError() {
-		return nativeUnitsPer100MstoInchesPerSec(masterTalon.getClosedLoopError(Constants.kPIDLoopIdx));
-	}
-
 	public boolean isEncoderConnected() {
 		return masterTalon.getSensorCollection().getPulseWidthRiseToRiseUs() > 100;
 	}
 
-	public void setMasterTalon(ControlMode mode, double out) {
-		masterTalon.set(mode, out);
-	}
-
-	public void setSlaveTalon(ControlMode mode, double out) {
-		slaveTalon.set(mode, out);
-	}
-
 	public synchronized double getPosition() {
-
 		return nativeUnitsToInches(masterTalon.getSelectedSensorPosition(Constants.kPIDLoopIdx));
 	}
 
 	public synchronized double getSpeed() {
-
 		return nativeUnitsPer100MstoInchesPerSec(masterTalon.getSelectedSensorVelocity(Constants.kPIDLoopIdx));
 	}
 
-	public double getRPM() {
-
-		return (masterTalon.getSelectedSensorVelocity(0) * 60.0 * 10.0) / Constants.CODES_PER_REV;
-	}
-
-	public double getRaw() {
-		return masterTalon.getSelectedSensorPosition(Constants.kPIDLoopIdx);
+	private double getError() {
+		return nativeUnitsPer100MstoInchesPerSec(masterTalon.getClosedLoopError(Constants.kPIDLoopIdx));
 	}
 
 	private double nativeUnitsPer100MstoInchesPerSec(double vel) {
@@ -168,12 +147,7 @@ public class MkTalon {
 	}
 
 	public void set(ControlMode mode, double value, boolean nMode) {
-		if (talonMode != (nMode ? NeutralMode.Brake : NeutralMode.Coast)) {
-			masterTalon.setNeutralMode(nMode ? NeutralMode.Brake : NeutralMode.Coast);
-			slaveTalon.setNeutralMode(nMode ? NeutralMode.Brake : NeutralMode.Coast);
-		}
-		masterTalon.set(mode, value);
-		talonMode = nMode ? NeutralMode.Brake : NeutralMode.Coast;
+		set(mode, value, nMode, 0);
 	}
 
 	public void set(ControlMode mode, double value, boolean nMode, double arbFeed) {
@@ -194,40 +168,11 @@ public class MkTalon {
 		slaveTalon.setNeutralMode(NeutralMode.Coast);
 	}
 
-	public void setSensorPhase(boolean dir) {
-		masterTalon.setSensorPhase(dir);
-	}
-
 	public void updateSmartDash() {
 		SmartDashboard.putNumber(side.toString() + " Velocity", getSpeed());
 		SmartDashboard.putNumber(side.toString() + " Error", getError());
 		SmartDashboard.putNumber(side.toString() + " Master Output", masterTalon.getMotorOutputPercent());
 		SmartDashboard.putNumber(side.toString() + " Position", getPosition());
-	}
-
-	public double getPercentOutput() {
-		return masterTalon.getMotorOutputPercent();
-	}
-
-	public void invert(boolean direction) {
-		masterTalon.setInverted(direction);
-		slaveTalon.setInverted(direction);
-	}
-
-	public double getMotorVoltage() {
-		return masterTalon.getMotorOutputVoltage();
-	}
-
-	public void invertMaster(boolean direction) {
-		masterTalon.setInverted(direction);
-	}
-
-	public void invertSlave(boolean direction) {
-		slaveTalon.setInverted(direction);
-	}
-
-	public double getCurrentOutput() {
-		return masterTalon.getOutputCurrent();
 	}
 
 	public enum TalonPosition {
