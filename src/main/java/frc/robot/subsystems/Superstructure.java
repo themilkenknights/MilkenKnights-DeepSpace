@@ -2,9 +2,8 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.ControlState;
-import frc.robot.lib.structure.Subsystem;
-import frc.robot.lib.structure.loops.Loop;
-import frc.robot.lib.structure.loops.Looper;
+import frc.robot.lib.structure.Loop;
+import frc.robot.lib.structure.Looper;
 
 public class Superstructure extends Subsystem {
 
@@ -17,21 +16,22 @@ public class Superstructure extends Subsystem {
 	}
 
 	@Override
-	public void outputToSmartDashboard() {
+	public void outputTelemetry() {
 		SmartDashboard.putString("Robot State", ControlState.mMatchState.toString());
 	}
 
-	@Override
-	public void slowUpdate(double timestamp) {
-
-	}
 
 	@Override
 	public void checkSystem() {
 
 	}
 
+
 	@Override
+	public void stop() {
+
+	}
+
 	public void registerEnabledLoops(Looper enabledLooper) {
 		Loop mLoop = new Loop() {
 

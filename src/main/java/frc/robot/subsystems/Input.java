@@ -4,8 +4,8 @@ import frc.robot.ControlState;
 import frc.robot.lib.drivers.MkJoystick;
 import frc.robot.lib.drivers.MkJoystickButton;
 import frc.robot.lib.math.DriveHelper;
-import frc.robot.lib.structure.loops.ILooper;
-import frc.robot.lib.structure.loops.Loop;
+import frc.robot.lib.structure.ILooper;
+import frc.robot.lib.structure.Loop;
 
 public class Input extends Subsystem {
 

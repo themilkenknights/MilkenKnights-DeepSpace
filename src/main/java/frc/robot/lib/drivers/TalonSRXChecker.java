@@ -2,131 +2,129 @@ package frc.robot.lib.drivers;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
-import com.team254.frc2018.subsystems.Subsystem;
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.lib.util.Util;
+import frc.robot.subsystems.Subsystem;
 import java.util.ArrayList;
 import java.util.function.DoubleSupplier;
 
 public class TalonSRXChecker {
-    public static class CheckerConfig {
-        public double mCurrentFloor = 5;
-        public double mRPMFloor = 2000;
 
-        public double mCurrentEpsilon = 5.0;
-        public double mRPMEpsilon = 500;
-        public DoubleSupplier mRPMSupplier = null;
+	public static boolean CheckTalons(Subsystem subsystem, ArrayList<TalonSRXConfig> talonsToCheck, CheckerConfig checkerConfig) {
+		boolean failure = false;
+		System.out.println("////////////////////////////////////////////////");
+		System.out.println("Checking subsystem " + subsystem.getClass() + " for " + talonsToCheck.size() + " talons.");
 
-        public double mRunTimeSec = 4.0;
-        public double mWaitTimeSec = 2.0;
-        public double mRunOutputPercentage = 0.5;
-    }
+		ArrayList<Double> currents = new ArrayList<>();
+		ArrayList<Double> rpms = new ArrayList<>();
+		ArrayList<StoredTalonSRXConfiguration> storedConfigurations = new ArrayList<>();
 
-    public static class TalonSRXConfig {
-        public String mName;
-        public TalonSRX mTalon;
+		// Record previous configuration for all talons.
+		for (TalonSRXConfig config : talonsToCheck) {
+			LazyTalonSRX talon = (LazyTalonSRX) config.mTalon;
 
-        public TalonSRXConfig(String name, TalonSRX talon) {
-            mName = name;
-            mTalon = talon;
-        }
-    }
+			StoredTalonSRXConfiguration configuration = new StoredTalonSRXConfiguration();
+			configuration.mMode = talon.getControlMode();
+			configuration.mSetValue = talon.getLastSet();
 
-    private static class StoredTalonSRXConfiguration {
-        public ControlMode mMode;
-        public double mSetValue;
-    }
+			storedConfigurations.add(configuration);
 
-    public static boolean CheckTalons(Subsystem subsystem,
-                                      ArrayList<TalonSRXConfig> talonsToCheck,
-                                      CheckerConfig checkerConfig) {
-        boolean failure = false;
-        System.out.println("////////////////////////////////////////////////");
-        System.out.println("Checking subsystem " + subsystem.getClass()
-                + " for " + talonsToCheck.size() + " talons.");
+			// Now set to disabled.
+			talon.set(ControlMode.PercentOutput, 0.0);
+		}
 
-        ArrayList<Double> currents = new ArrayList<>();
-        ArrayList<Double> rpms = new ArrayList<>();
-        ArrayList<StoredTalonSRXConfiguration> storedConfigurations = new ArrayList<>();
+		for (TalonSRXConfig config : talonsToCheck) {
+			System.out.println("Checking: " + config.mName);
 
-        // Record previous configuration for all talons.
-        for (TalonSRXConfig config : talonsToCheck) {
-            LazyTalonSRX talon = LazyTalonSRX.class.cast(config.mTalon);
+			config.mTalon.set(ControlMode.PercentOutput, checkerConfig.mRunOutputPercentage);
+			Timer.delay(checkerConfig.mRunTimeSec);
 
-            StoredTalonSRXConfiguration configuration = new StoredTalonSRXConfiguration();
-            configuration.mMode = talon.getControlMode();
-            configuration.mSetValue = talon.getLastSet();
+			// Now poll the interesting information.
+			double current = config.mTalon.getOutputCurrent();
+			currents.add(current);
+			System.out.print("Current: " + current);
 
-            storedConfigurations.add(configuration);
+			double rpm = Double.NaN;
+			if (checkerConfig.mRPMSupplier != null) {
+				rpm = checkerConfig.mRPMSupplier.getAsDouble();
+				rpms.add(rpm);
+				System.out.print(" RPM: " + rpm);
+			}
+			System.out.print('\n');
 
-            // Now set to disabled.
-            talon.set(ControlMode.PercentOutput, 0.0);
-        }
+			config.mTalon.set(ControlMode.PercentOutput, 0.0);
 
-        for (TalonSRXConfig config : talonsToCheck) {
-            System.out.println("Checking: " + config.mName);
+			// And perform checks.
+			if (current < checkerConfig.mCurrentFloor) {
+				System.out.println(config.mName + " has failed current floor check vs " + checkerConfig.mCurrentFloor + "!!");
+				failure = true;
+			}
+			if (checkerConfig.mRPMSupplier != null) {
+				if (rpm < checkerConfig.mRPMFloor) {
+					System.out.println(config.mName + " has failed rpm floor check vs " + checkerConfig.mRPMFloor + "!!");
+					failure = true;
+				}
+			}
 
-            config.mTalon.set(ControlMode.PercentOutput, checkerConfig.mRunOutputPercentage);
-            Timer.delay(checkerConfig.mRunTimeSec);
+			Timer.delay(checkerConfig.mWaitTimeSec);
+		}
 
-            // Now poll the interesting information.
-            double current = config.mTalon.getOutputCurrent();
-            currents.add(current);
-            System.out.print("Current: " + current);
+		// Now run aggregate checks.
 
-            double rpm = Double.NaN;
-            if (checkerConfig.mRPMSupplier != null) {
-                rpm = checkerConfig.mRPMSupplier.getAsDouble();
-                rpms.add(rpm);
-                System.out.print(" RPM: " + rpm);
-            }
-            System.out.print('\n');
+		if (currents.size() > 0) {
+			Double average = currents.stream().mapToDouble(val -> val).average().getAsDouble();
 
-            config.mTalon.set(ControlMode.PercentOutput, 0.0);
+			if (!Util.allCloseTo(currents, average, checkerConfig.mCurrentEpsilon)) {
+				System.out.println("Currents varied!!!!!!!!!!!");
+				failure = true;
+			}
+		}
 
-            // And perform checks.
-            if (current < checkerConfig.mCurrentFloor) {
-                System.out.println(config.mName + " has failed current floor check vs " +
-                        checkerConfig.mCurrentFloor + "!!");
-                failure = true;
-            }
-            if (checkerConfig.mRPMSupplier != null) {
-                if (rpm < checkerConfig.mRPMFloor) {
-                    System.out.println(config.mName + " has failed rpm floor check vs " +
-                            checkerConfig.mRPMFloor + "!!");
-                    failure = true;
-                }
-            }
+		if (rpms.size() > 0) {
+			Double average = rpms.stream().mapToDouble(val -> val).average().getAsDouble();
 
-            Timer.delay(checkerConfig.mWaitTimeSec);
-        }
+			if (!Util.allCloseTo(rpms, average, checkerConfig.mRPMEpsilon)) {
+				System.out.println("RPMs varied!!!!!!!!");
+				failure = true;
+			}
+		}
 
-        // Now run aggregate checks.
+		// Restore Talon configurations
+		for (int i = 0; i < talonsToCheck.size(); ++i) {
+			talonsToCheck.get(i).mTalon.set(storedConfigurations.get(i).mMode, storedConfigurations.get(i).mSetValue);
+		}
 
-        if (currents.size() > 0) {
-            Double average = currents.stream().mapToDouble(val -> val).average().getAsDouble();
+		return !failure;
+	}
 
-            if (!Util.allCloseTo(currents, average, checkerConfig.mCurrentEpsilon)) {
-                System.out.println("Currents varied!!!!!!!!!!!");
-                failure = true;
-            }
-        }
+	public static class CheckerConfig {
 
-        if (rpms.size() > 0) {
-            Double average = rpms.stream().mapToDouble(val -> val).average().getAsDouble();
+		public double mCurrentFloor = 5;
+		public double mRPMFloor = 2000;
 
-            if (!Util.allCloseTo(rpms, average, checkerConfig.mRPMEpsilon)) {
-                System.out.println("RPMs varied!!!!!!!!");
-                failure = true;
-            }
-        }
+		public double mCurrentEpsilon = 5.0;
+		public double mRPMEpsilon = 500;
+		public DoubleSupplier mRPMSupplier = null;
 
-        // Restore Talon configurations
-        for (int i = 0; i < talonsToCheck.size(); ++i) {
-            talonsToCheck.get(i).mTalon.set(storedConfigurations.get(i).mMode,
-                    storedConfigurations.get(i).mSetValue);
-        }
+		public double mRunTimeSec = 4.0;
+		public double mWaitTimeSec = 2.0;
+		public double mRunOutputPercentage = 0.5;
+	}
 
-        return !failure;
-    }
+	public static class TalonSRXConfig {
+
+		public String mName;
+		public TalonSRX mTalon;
+
+		public TalonSRXConfig(String name, TalonSRX talon) {
+			mName = name;
+			mTalon = talon;
+		}
+	}
+
+	private static class StoredTalonSRXConfiguration {
+
+		public ControlMode mMode;
+		public double mSetValue;
+	}
 }

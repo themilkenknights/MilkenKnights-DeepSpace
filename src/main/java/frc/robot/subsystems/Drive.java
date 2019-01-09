@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.Constants.DRIVE;
 import frc.robot.ControlState;
+import frc.robot.MkMath;
 import frc.robot.RobotState;
 import frc.robot.lib.drivers.LimeLight;
 import frc.robot.lib.drivers.MkGyro;
@@ -16,8 +17,8 @@ import frc.robot.lib.drivers.MkTalon.TalonPosition;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Pose2dWithCurvature;
 import frc.robot.lib.geometry.Rotation2d;
-import frc.robot.lib.structure.loops.Loop;
-import frc.robot.lib.structure.loops.Looper;
+import frc.robot.lib.structure.Loop;
+import frc.robot.lib.structure.Looper;
 import frc.robot.lib.trajectory.TrajectoryIterator;
 import frc.robot.lib.trajectory.timing.TimedState;
 import frc.robot.lib.util.CrashTracker;
@@ -85,6 +86,10 @@ public class Drive extends Subsystem {
 		rightDrive.updateSmartDash();
 		SmartDashboard.putString("Drive State", ControlState.mDriveControlState.toString());
 		SmartDashboard.putBoolean("Drivetrain Status", leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected());
+
+		if (mCSVWriter != null) {
+			mCSVWriter.write();
+		}
 	}
 
 	public synchronized void setHeading(Rotation2d heading) {
@@ -138,12 +143,12 @@ public class Drive extends Subsystem {
 			mPeriodicIO.path_setpoint = mMotionPlanner.setpoint();
 
 			if (!mOverrideTrajectory) {
-				setVelocity(
-						new DriveSignal(radiansPerSecondToTicksPer100ms(output.left_velocity), radiansPerSecondToTicksPer100ms(output.right_velocity)),
+				setVelocity(new DriveSignal(MkMath.radiansPerSecondToTicksPer100ms(output.left_velocity),
+								MkMath.radiansPerSecondToTicksPer100ms(output.right_velocity)),
 						new DriveSignal(output.left_feedforward_voltage / 12.0, output.right_feedforward_voltage / 12.0));
 
-				mPeriodicIO.left_accel = radiansPerSecondToTicksPer100ms(output.left_accel) / 1000.0;
-				mPeriodicIO.right_accel = radiansPerSecondToTicksPer100ms(output.right_accel) / 1000.0;
+				mPeriodicIO.left_accel = MkMath.radiansPerSecondToTicksPer100ms(output.left_accel) / 1000.0;
+				mPeriodicIO.right_accel = MkMath.radiansPerSecondToTicksPer100ms(output.right_accel) / 1000.0;
 			} else {
 				setVelocity(DriveSignal.BRAKE, DriveSignal.BRAKE);
 				mPeriodicIO.left_accel = mPeriodicIO.right_accel = 0.0;
@@ -162,6 +167,19 @@ public class Drive extends Subsystem {
 		mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(navX.getFusedHeading()).rotateBy(mGyroOffset);
 		if (mCSVWriter != null) {
 			mCSVWriter.add(mPeriodicIO);
+		}
+	}
+
+	@Override
+	public synchronized void writePeriodicOutputs() {
+		if (mDriveControlState == DriveControlState.OPEN_LOOP) {
+			leftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, true);
+			leftDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, true);
+		} else {
+			leftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand, true,
+					mPeriodicIO.left_feedforward + Constants.kDriveLowGearVelocityKd * mPeriodicIO.left_accel / 1023.0);
+			rightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, true,
+					mPeriodicIO.right_feedforward + Constants.kDriveLowGearVelocityKd * mPeriodicIO.right_accel / 1023.0);
 		}
 	}
 
@@ -259,7 +277,6 @@ public class Drive extends Subsystem {
 					leftDrive.resetEncoder();
 					rightDrive.resetEncoder();
 					navX.zeroYaw();
-					startLogging();
 				}
 			}
 
@@ -288,7 +305,6 @@ public class Drive extends Subsystem {
 			@Override
 			public void onStop(double timestamp) {
 				setOpenLoop(DriveSignal.BRAKE);
-				stopLogging();
 			}
 		};
 		enabledLooper.register(mLoop);
@@ -305,44 +321,23 @@ public class Drive extends Subsystem {
 		rightDrive.set(ControlMode.MotionMagic, dist.value, true, -steering_adjust);
 	}
 
-	/*
-	 * Change Talon PID Constants to reduce oscillation during teleop driving
-	 */
-	public void configVelocityControl() {
-		leftDrive.configTeleopVelocity();
-		rightDrive.configTeleopVelocity();
+	public double getLeftVelocityNativeUnits() {
+		return MkMath.InchesPerSecToUnitsPer100Ms(mPeriodicIO.leftVel);
 	}
 
-	public boolean gyroConnected() {
-		return navX.isConnected();
-	}
-
-	public boolean isEncodersConnected() {
-		return leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected();
-	}
-
-	public synchronized void startLogging() {
-		if (mCSVWriter == null) {
-			mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
-		}
-	}
-
-	public synchronized void stopLogging() {
-		if (mCSVWriter != null) {
-			mCSVWriter.flush();
-			mCSVWriter = null;
-		}
-	}
-
-	private static class InstanceHolder {
-
-		private static final Drive mInstance = new Drive();
+	public double getRightVelocityNativeUnits() {
+		return MkMath.InchesPerSecToUnitsPer100Ms(mPeriodicIO.rightVel);
 	}
 
 	public enum DriveControlState {
 		OPEN_LOOP, // open loop voltage control
 		PATH_FOLLOWING, // velocity PID control
 		VISION_TRACKING
+	}
+
+	private static class InstanceHolder {
+
+		private static final Drive mInstance = new Drive();
 	}
 
 	public static class PeriodicIO {
@@ -364,31 +359,5 @@ public class Drive extends Subsystem {
 		public double right_feedforward;
 		public TimedState<Pose2dWithCurvature> path_setpoint = new TimedState<Pose2dWithCurvature>(Pose2dWithCurvature.identity());
 	}
-
-	private static double rotationsToInches(double rotations) {
-		return rotations * (Constants.kDriveWheelDiameterInches * Math.PI);
-	}
-
-	private static double rpmToInchesPerSecond(double rpm) {
-		return rotationsToInches(rpm) / 60;
-	}
-
-	private static double inchesToRotations(double inches) {
-		return inches / (Constants.kDriveWheelDiameterInches * Math.PI);
-	}
-
-	private static double inchesPerSecondToRpm(double inches_per_second) {
-		return inchesToRotations(inches_per_second) * 60;
-	}
-
-	private static double radiansPerSecondToTicksPer100ms(double rad_s) {
-		return rad_s / (Math.PI * 2.0) * 4096.0 / 10.0;
-	}
-
-	public double getLeftEncoderRotations() {
-		return ((mPeriodicIO.leftPos) / (DRIVE.CIRCUMFERENCE)) * 4096.0;
-	}
-
-	public double getRightEncoderRotations(){ return ((mPeriodicIO.rightPos) / (DRIVE.CIRCUMFERENCE)) * 4096.0; }
 
 }

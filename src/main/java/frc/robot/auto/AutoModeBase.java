@@ -4,63 +4,64 @@ import edu.wpi.first.wpilibj.DriverStation;
 import frc.robot.auto.actions.Action;
 
 /**
- * An abstract class that is the basis of the robot's autonomous routines. This is implemented in auto modes (which are
- * routines that do actions).
+ * An abstract class that is the basis of the robot's autonomous routines. This is implemented in auto modes (which are routines that do
+ * actions).
  */
 public abstract class AutoModeBase {
-    protected double mUpdateRate = 1.0 / 50.0;
-    protected boolean mActive = false;
 
-    protected abstract void routine() throws AutoModeEndedException;
+	protected double mUpdateRate = 1.0 / 50.0;
+	protected boolean mActive = false;
 
-    public void run() {
-        mActive = true;
+	protected abstract void routine() throws AutoModeEndedException;
 
-        try {
-            routine();
-        } catch (AutoModeEndedException e) {
-            DriverStation.reportError("AUTO MODE DONE!!!! ENDED EARLY!!!!", false);
-            return;
-        }
+	public void run() {
+		mActive = true;
 
-        done();
-    }
+		try {
+			routine();
+		} catch (AutoModeEndedException e) {
+			DriverStation.reportError("AUTO MODE DONE!!!! ENDED EARLY!!!!", false);
+			return;
+		}
 
-    public void done() {
-        System.out.println("Auto mode done");
-    }
+		done();
+	}
 
-    public void stop() {
-        mActive = false;
-    }
+	public void done() {
+		System.out.println("Auto mode done");
+	}
 
-    public boolean isActive() {
-        return mActive;
-    }
+	public void stop() {
+		mActive = false;
+	}
 
-    public boolean isActiveWithThrow() throws AutoModeEndedException {
-        if (!isActive()) {
-            throw new AutoModeEndedException();
-        }
+	public boolean isActive() {
+		return mActive;
+	}
 
-        return isActive();
-    }
+	public boolean isActiveWithThrow() throws AutoModeEndedException {
+		if (!isActive()) {
+			throw new AutoModeEndedException();
+		}
 
-    public void runAction(Action action) throws AutoModeEndedException {
-        isActiveWithThrow();
-        action.start();
+		return isActive();
+	}
 
-        while (isActiveWithThrow() && !action.isFinished()) {
-            action.update();
-            long waitTime = (long) (mUpdateRate * 1000.0);
+	public void runAction(Action action) throws AutoModeEndedException {
+		isActiveWithThrow();
+		action.start();
 
-            try {
-                Thread.sleep(waitTime);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+		while (isActiveWithThrow() && !action.isFinished()) {
+			action.update();
+			long waitTime = (long) (mUpdateRate * 1000.0);
 
-        action.done();
-    }
+			try {
+				Thread.sleep(waitTime);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+
+		action.done();
+	}
 }

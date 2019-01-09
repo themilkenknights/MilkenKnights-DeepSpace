@@ -8,13 +8,12 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
-import frc.robot.ControlState.DriveControlState;
+import frc.robot.lib.structure.Looper;
+import frc.robot.lib.util.CrashTracker;
 import frc.robot.subsystems.Drive;
+import frc.robot.subsystems.Drive.DriveControlState;
 import frc.robot.subsystems.Input;
 import frc.robot.subsystems.Superstructure;
-import frc.robot.util.logging.CrashTracker;
-import frc.robot.lib.structure.SubsystemManager;
-import frc.robot.lib.structure.loops.Looper;
 import java.util.Arrays;
 
 public class Robot extends TimedRobot {
@@ -71,7 +70,6 @@ public class Robot extends TimedRobot {
 	public void teleopInit() {
 		try {
 			CrashTracker.logTeleopInit();
-			mSubsystemManager.setTimeOffset();
 			mEnabledLooper.start();
 		} catch (Throwable t) {
 			CrashTracker.logThrowableCrash(t);
@@ -87,7 +85,9 @@ public class Robot extends TimedRobot {
 	public void testInit() {
 		try {
 			mEnabledLooper.start();
-			mSubsystemManager.checkSystem();
+			System.out.println("Starting check systems.");
+			mEnabledLooper.stop();
+			Drive.getInstance().checkSystem();
 		} catch (Throwable t) {
 			CrashTracker.logThrowableCrash(t);
 			throw t;
@@ -101,7 +101,6 @@ public class Robot extends TimedRobot {
 	@Override
 	public void robotPeriodic() {
 		try {
-			mSubsystemManager.slowUpdate();
 			mSubsystemManager.outputToSmartDashboard();
 			mEnabledLooper.outputToSmartDashboard();
 		} catch (Throwable t) {

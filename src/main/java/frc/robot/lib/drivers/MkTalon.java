@@ -13,6 +13,7 @@ import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.Constants.DRIVE;
+import frc.robot.MkMath;
 
 public class MkTalon {
 
@@ -119,31 +120,19 @@ public class MkTalon {
 	}
 
 	public synchronized double getPosition() {
-		return nativeUnitsToInches(masterTalon.getSelectedSensorPosition(Constants.kPIDLoopIdx));
+		return MkMath.nativeUnitsToInches(masterTalon.getSelectedSensorPosition(Constants.kPIDLoopIdx));
 	}
 
 	public synchronized double getSpeed() {
-		return nativeUnitsPer100MstoInchesPerSec(masterTalon.getSelectedSensorVelocity(Constants.kPIDLoopIdx));
+		return MkMath.nativeUnitsPer100MstoInchesPerSec(masterTalon.getSelectedSensorVelocity(Constants.kPIDLoopIdx));
 	}
 
 	private double getError() {
-		return nativeUnitsPer100MstoInchesPerSec(masterTalon.getClosedLoopError(Constants.kPIDLoopIdx));
-	}
-
-	private double nativeUnitsPer100MstoInchesPerSec(double vel) {
-		return 10 * nativeUnitsToInches(vel);
-	}
-
-	private double nativeUnitsToInches(double units) {
-		return (units / Constants.CODES_PER_REV) * (Constants.DRIVE.CIRCUMFERENCE);
+		return MkMath.nativeUnitsPer100MstoInchesPerSec(masterTalon.getClosedLoopError(Constants.kPIDLoopIdx));
 	}
 
 	private double InchesPerSecToUnitsPer100Ms(double vel) {
-		return InchesToNativeUnits(vel) / 10;
-	}
-
-	private double InchesToNativeUnits(double in) {
-		return (Constants.CODES_PER_REV) * (in / Constants.DRIVE.CIRCUMFERENCE);
+		return MkMath.InchesToNativeUnits(vel) / 10;
 	}
 
 	public void set(ControlMode mode, double value, boolean nMode) {
@@ -152,11 +141,11 @@ public class MkTalon {
 
 	public void set(ControlMode mode, double value, boolean nMode, double arbFeed) {
 		if (talonMode != (nMode ? NeutralMode.Brake : NeutralMode.Coast)) {
+			talonMode = nMode ? NeutralMode.Brake : NeutralMode.Coast;
 			masterTalon.setNeutralMode(nMode ? NeutralMode.Brake : NeutralMode.Coast);
 			slaveTalon.setNeutralMode(nMode ? NeutralMode.Brake : NeutralMode.Coast);
 		}
 		masterTalon.set(mode, value, DemandType.ArbitraryFeedForward, arbFeed);
-		talonMode = nMode ? NeutralMode.Brake : NeutralMode.Coast;
 	}
 
 	public void resetEncoder() {
@@ -164,11 +153,13 @@ public class MkTalon {
 	}
 
 	public void setCoastMode() {
+		talonMode = NeutralMode.Coast;
 		masterTalon.setNeutralMode(NeutralMode.Coast);
 		slaveTalon.setNeutralMode(NeutralMode.Coast);
 	}
 
 	public void setBrakeMode() {
+		talonMode = NeutralMode.Brake;
 		masterTalon.setNeutralMode(NeutralMode.Brake);
 		slaveTalon.setNeutralMode(NeutralMode.Brake);
 	}

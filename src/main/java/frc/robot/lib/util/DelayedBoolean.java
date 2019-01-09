@@ -4,29 +4,30 @@ package frc.robot.lib.util;
  * An iterative boolean latch that delays the transition from false to true.
  */
 public class DelayedBoolean {
-    private boolean mLastValue;
-    private double mTransitionTimestamp;
-    private double mDelay;
 
-    public DelayedBoolean(double timestamp, double delay) {
-        mTransitionTimestamp = timestamp;
-        mLastValue = false;
-        mDelay = delay;
-    }
+	private boolean mLastValue;
+	private double mTransitionTimestamp;
+	private double mDelay;
 
-    public boolean update(double timestamp, boolean value) {
-        boolean result = false;
+	public DelayedBoolean(double timestamp, double delay) {
+		mTransitionTimestamp = timestamp;
+		mLastValue = false;
+		mDelay = delay;
+	}
 
-        if (value && !mLastValue) {
-            mTransitionTimestamp = timestamp;
-        }
+	public boolean update(double timestamp, boolean value) {
+		boolean result = false;
 
-        // If we are still true and we have transitioned.
-        if (value && (timestamp - mTransitionTimestamp > mDelay)) {
-            result = true;
-        }
+		if (value && !mLastValue) {
+			mTransitionTimestamp = timestamp;
+		}
 
-        mLastValue = value;
-        return result;
-    }
+		// If we are still true and we have transitioned.
+		if (value && (timestamp - mTransitionTimestamp > mDelay)) {
+			result = true;
+		}
+
+		mLastValue = value;
+		return result;
+	}
 }

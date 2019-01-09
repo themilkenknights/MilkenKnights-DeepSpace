@@ -3,11 +3,12 @@ package frc.robot.lib.trajectory;
 import frc.robot.lib.geometry.State;
 
 public interface TrajectoryView<S extends State<S>> {
-    public TrajectorySamplePoint<S> sample(final double interpolant);
 
-    public double first_interpolant();
+	TrajectorySamplePoint<S> sample(final double interpolant);
 
-    public double last_interpolant();
+	double first_interpolant();
 
-    public Trajectory<S> trajectory();
+	double last_interpolant();
+
+	Trajectory<S> trajectory();
 }

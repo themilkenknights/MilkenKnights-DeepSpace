@@ -32,6 +32,12 @@ public final class Constants {
 	public static final double kDriveKv = 0.135;  // V per rad/s
 	public static final double kDriveKa = 0.012;  // V per rad/s^2
 
+	// PID gains for drive velocity loop (LOW GEAR)
+	// Units: setpoint, error, and output are in ticks per second.
+	public static final double kDriveLowGearVelocityKp = 0.9;
+	public static final double kDriveLowGearVelocityKi = 0.0;
+	public static final double kDriveLowGearVelocityKd = 10.0;
+
 	public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> visionDistMap = new InterpolatingTreeMap<>();
 
 	static {
