@@ -3,6 +3,8 @@ package frc.robot.lib.util;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.lang.reflect.Field;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
 /**
@@ -17,7 +19,9 @@ public class ReflectingCSVWriter<T> {
 	public ReflectingCSVWriter(String fileName, Class<T> typeClass) {
 		mFields = typeClass.getFields();
 		try {
-			mOutput = new PrintWriter(fileName);
+			String dateStamp = new SimpleDateFormat("hh-mm-ssaaa").format(new Date());
+			String fileName1 = "/u/" + fileName + dateStamp + ".csv";
+			mOutput = new PrintWriter(fileName1);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

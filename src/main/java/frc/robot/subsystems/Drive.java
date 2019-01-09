@@ -92,7 +92,7 @@ public class Drive extends Subsystem {
 
 	public synchronized void startLogging() {
 		if (mCSVWriter == null) {
-			mCSVWriter = new ReflectingCSVWriter<>("/home/lvuser/DRIVE-LOGS.csv", PeriodicIO.class);
+			mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
 		}
 	}
 
