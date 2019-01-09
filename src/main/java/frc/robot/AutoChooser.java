@@ -3,14 +3,14 @@ package frc.robot;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.auto.modes.DriveStraightOpenLoopMode;
-import frc.robot.util.auto.AutoModeBase;
-import frc.robot.util.auto.AutoModeExecuter;
-import frc.robot.util.logging.CrashTracker;
+import frc.robot.auto.AutoModeBase;
+import frc.robot.auto.modes.CrossAutoLineMode;
+import frc.robot.lib.util.CrashTracker;
+import frc.robot.auto.AutoModeExecutor;
 
 public class AutoChooser {
 
-	private static AutoModeExecuter mAutoModeExecuter = null;
+	private static AutoModeExecutor mAutoModeExecuter = null;
 
 	public static AutoModeBase getAutoMode() {
 		double delay = SmartDashboard.getNumber("Auto Delay", 0.0);
@@ -21,7 +21,7 @@ public class AutoChooser {
 	}
 
 	private static AutoModeBase getStraightMode() {
-		return new DriveStraightOpenLoopMode();
+		return new CrossAutoLineMode();
 	}
 
 	public static void startAuto() {
@@ -30,7 +30,7 @@ public class AutoChooser {
 			mAutoModeExecuter.stop();
 		}
 		mAutoModeExecuter = null;
-		mAutoModeExecuter = new AutoModeExecuter();
+		mAutoModeExecuter = new AutoModeExecutor();
 		mAutoModeExecuter.setAutoMode(getAutoMode());
 		mAutoModeExecuter.start();
 	}
@@ -43,12 +43,12 @@ public class AutoChooser {
 	}
 
 	private static void updateGameData() {
-		RobotState.matchData.alliance = DriverStation.getInstance().getAlliance();
-		RobotState.matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
-		RobotState.matchData.matchType = DriverStation.getInstance().getMatchType();
+		ControlState.matchData.alliance = DriverStation.getInstance().getAlliance();
+		ControlState.matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
+		ControlState.matchData.matchType = DriverStation.getInstance().getMatchType();
 		CrashTracker.logMarker(
-				"Alliance: " + RobotState.matchData.alliance.toString() + " Match Number: " + RobotState.matchData.matchNumber + " Match Type: "
-						+ RobotState.matchData.matchType.toString());
+				"Alliance: " + ControlState.matchData.alliance.toString() + " Match Number: " + ControlState.matchData.matchNumber + " Match Type: "
+						+ ControlState.matchData.matchType.toString());
 	}
 
 }

@@ -1,10 +1,10 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.RobotState;
-import frc.robot.util.structure.Subsystem;
-import frc.robot.util.structure.loops.Loop;
-import frc.robot.util.structure.loops.Looper;
+import frc.robot.ControlState;
+import frc.robot.lib.structure.Subsystem;
+import frc.robot.lib.structure.loops.Loop;
+import frc.robot.lib.structure.loops.Looper;
 
 public class Superstructure extends Subsystem {
 
@@ -18,7 +18,7 @@ public class Superstructure extends Subsystem {
 
 	@Override
 	public void outputToSmartDashboard() {
-		SmartDashboard.putString("Robot State", RobotState.mMatchState.toString());
+		SmartDashboard.putString("Robot State", ControlState.mMatchState.toString());
 	}
 
 	@Override

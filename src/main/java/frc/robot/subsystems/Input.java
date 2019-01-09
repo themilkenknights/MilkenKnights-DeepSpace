@@ -1,14 +1,11 @@
 package frc.robot.subsystems;
 
-import frc.robot.RobotState;
-import frc.robot.RobotState.DriveControlState;
-import frc.robot.util.drivers.MkJoystick;
-import frc.robot.util.drivers.MkJoystickButton;
-import frc.robot.util.math.DriveHelper;
-import frc.robot.util.state.DriveSignal;
-import frc.robot.util.structure.Subsystem;
-import frc.robot.util.structure.loops.Loop;
-import frc.robot.util.structure.loops.Looper;
+import frc.robot.ControlState;
+import frc.robot.lib.drivers.MkJoystick;
+import frc.robot.lib.drivers.MkJoystickButton;
+import frc.robot.lib.math.DriveHelper;
+import frc.robot.lib.structure.loops.ILooper;
+import frc.robot.lib.structure.loops.Loop;
 
 public class Input extends Subsystem {
 
@@ -24,17 +21,22 @@ public class Input extends Subsystem {
 	}
 
 	@Override
-	public void outputToSmartDashboard() {
-
-	}
-
-	@Override
 	public void checkSystem() {
 
 	}
 
 	@Override
-	public void registerEnabledLoops(Looper enabledLooper) {
+	public void outputTelemetry() {
+
+	}
+
+	@Override
+	public void stop() {
+
+	}
+
+	@Override
+	public void registerEnabledLoops(ILooper enabledLooper) {
 		Loop mLoop = new Loop() {
 
 			@Override
@@ -47,7 +49,7 @@ public class Input extends Subsystem {
 			@Override
 			public void onLoop(double timestamp) {
 				synchronized (Input.this) {
-					if (RobotState.mMatchState.equals(RobotState.MatchState.TELEOP)) {
+					if (ControlState.mMatchState.equals(ControlState.MatchState.TELEOP)) {
 						updateDriveInput();
 					}
 				}
@@ -61,21 +63,9 @@ public class Input extends Subsystem {
 	}
 
 	private void updateDriveInput() {
-		if (changeDriveMode.isPressed()) {
-			Drive.getInstance().configVelocityControl();
-			RobotState.mDriveControlState =
-					RobotState.mDriveControlState.equals(DriveControlState.OPEN_LOOP) ? DriveControlState.VELOCITY_SETPOINT
-							: DriveControlState.OPEN_LOOP;
-		}
 		double forward = (-driverJoystick.getRawAxis(2) + driverJoystick.getRawAxis(3));
 		double turn = (-driverJoystick.getRawAxis(0));
-		DriveSignal sig = DriveHelper.cheesyDrive(forward, turn, true);
-		if (RobotState.mDriveControlState == DriveControlState.VELOCITY_SETPOINT) {
-			Drive.getInstance().setVelocitySetpoint(sig, 0, 0);
-		} else if (RobotState.mDriveControlState == DriveControlState.OPEN_LOOP) {
-			Drive.getInstance().setOpenLoop(sig);
-		}
-
+		Drive.getInstance().setOpenLoop(DriveHelper.cheesyDrive(forward, turn, true));
 	}
 
 	private static class InstanceHolder {

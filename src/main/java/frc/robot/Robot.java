@@ -8,13 +8,13 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
-import frc.robot.RobotState.DriveControlState;
+import frc.robot.ControlState.DriveControlState;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.Input;
 import frc.robot.subsystems.Superstructure;
 import frc.robot.util.logging.CrashTracker;
-import frc.robot.util.structure.SubsystemManager;
-import frc.robot.util.structure.loops.Looper;
+import frc.robot.lib.structure.SubsystemManager;
+import frc.robot.lib.structure.loops.Looper;
 import java.util.Arrays;
 
 public class Robot extends TimedRobot {
@@ -44,7 +44,7 @@ public class Robot extends TimedRobot {
 			CrashTracker.logDisabledInit();
 			mEnabledLooper.stop();
 			AutoChooser.disableAuto();
-			RobotState.resetDefaultState();
+			ControlState.resetDefaultState();
 		} catch (Throwable t) {
 			CrashTracker.logThrowableCrash(t);
 			throw t;
@@ -55,7 +55,7 @@ public class Robot extends TimedRobot {
 	public void autonomousInit() {
 		try {
 			CrashTracker.logAutoInit();
-			RobotState.mDriveControlState = DriveControlState.VISION_TRACKING;
+			ControlState.mDriveControlState = DriveControlState.VISION_TRACKING;
 			mEnabledLooper.start();
 		} catch (Throwable t) {
 			CrashTracker.logThrowableCrash(t);
