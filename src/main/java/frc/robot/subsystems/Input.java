@@ -1,6 +1,5 @@
 package frc.robot.subsystems;
 
-import frc.robot.ControlState;
 import frc.robot.Robot;
 import frc.robot.lib.drivers.MkJoystick;
 import frc.robot.lib.drivers.MkJoystickButton;

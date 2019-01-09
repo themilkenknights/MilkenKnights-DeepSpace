@@ -27,9 +27,9 @@ public class PurePursuitControllerTest {
 		final int kMaxIter = 100;
 		int i = 0;
 		for (; i < kMaxIter; ++i) {
-        if (controller.isDone()) {
-            break;
-        }
+			if (controller.isDone()) {
+				break;
+			}
 			Twist2d steering_command = controller.steer(robot_pose);
 			steering_command = steering_command.scaled(1.0 / Math.max(1.0, steering_command.norm()));
 			System.out.println("Iter: " + i + ", Pose: " + robot_pose + ", Steering Command: " + steering_command);

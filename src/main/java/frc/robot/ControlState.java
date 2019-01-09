@@ -1,7 +1,6 @@
 package frc.robot;
 
 import frc.robot.lib.util.MatchData;
-import frc.robot.subsystems.Drive.DriveControlState;
 
 public class ControlState {
 
@@ -11,7 +10,6 @@ public class ControlState {
 
 		ControlState.matchData = MatchData.defaultMatch;
 	}
-
 
 
 }
