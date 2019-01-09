@@ -43,7 +43,7 @@ public class DriveMotionPlanner implements CSVWritable {
 				Units.inches_to_meters(Constants.kDriveWheelRadiusInches) * Units.inches_to_meters(Constants.kDriveWheelRadiusInches)
 						* Constants.kRobotLinearInertia / (2.0 * Constants.kDriveKa), Constants.kDriveVIntercept);
 		mModel = new DifferentialDrive(Constants.kRobotLinearInertia, Constants.kRobotAngularInertia, Constants.kRobotAngularDrag,
-				Units.inches_to_meters(Constants.kDriveWheelDiameterInches / 2.0),
+				Units.inches_to_meters(Constants.WHEEL_DIAMETER / 2.0),
 				Units.inches_to_meters(Constants.kDriveWheelTrackWidthInches / 2.0 * Constants.kTrackScrubFactor), transmission, transmission);
 	}
 

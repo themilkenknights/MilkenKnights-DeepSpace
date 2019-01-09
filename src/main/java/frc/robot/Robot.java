@@ -11,25 +11,26 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import frc.robot.lib.structure.Looper;
 import frc.robot.lib.util.CrashTracker;
 import frc.robot.subsystems.Drive;
-import frc.robot.subsystems.Drive.DriveControlState;
 import frc.robot.subsystems.Input;
 import frc.robot.subsystems.Superstructure;
 import java.util.Arrays;
 
 public class Robot extends TimedRobot {
 
+	public static MatchState mMatchState = MatchState.DISABLED;
 	private final SubsystemManager mSubsystemManager = new SubsystemManager(
 			Arrays.asList(Drive.getInstance(), Superstructure.getInstance(), Input.getInstance()));
 	private Looper mEnabledLooper = new Looper();
 
 	public Robot() {
-		CrashTracker.logRobotStartup();
+		CrashTracker.logRobotConstruction();
 	}
 
 	@Override
 	public void robotInit() {
 		try {
 			CrashTracker.logRobotInit();
+			mMatchState = MatchState.DISABLED;
 			mSubsystemManager.registerEnabledLoops(mEnabledLooper);
 		} catch (Throwable t) {
 			CrashTracker.logThrowableCrash(t);
@@ -41,6 +42,7 @@ public class Robot extends TimedRobot {
 	public void disabledInit() {
 		try {
 			CrashTracker.logDisabledInit();
+			mMatchState = MatchState.DISABLED;
 			mEnabledLooper.stop();
 			AutoChooser.disableAuto();
 			ControlState.resetDefaultState();
@@ -54,7 +56,7 @@ public class Robot extends TimedRobot {
 	public void autonomousInit() {
 		try {
 			CrashTracker.logAutoInit();
-			ControlState.mDriveControlState = DriveControlState.VISION_TRACKING;
+			mMatchState = MatchState.AUTO;
 			mEnabledLooper.start();
 		} catch (Throwable t) {
 			CrashTracker.logThrowableCrash(t);
@@ -70,6 +72,7 @@ public class Robot extends TimedRobot {
 	public void teleopInit() {
 		try {
 			CrashTracker.logTeleopInit();
+			mMatchState = MatchState.TELEOP;
 			mEnabledLooper.start();
 		} catch (Throwable t) {
 			CrashTracker.logThrowableCrash(t);
@@ -84,6 +87,7 @@ public class Robot extends TimedRobot {
 	@Override
 	public void testInit() {
 		try {
+			mMatchState = MatchState.TEST;
 			mEnabledLooper.start();
 			System.out.println("Starting check systems.");
 			mEnabledLooper.stop();
@@ -107,6 +111,10 @@ public class Robot extends TimedRobot {
 			CrashTracker.logThrowableCrash(t);
 			throw t;
 		}
+	}
+
+	public enum MatchState {
+		AUTO, TELEOP, DISABLED, TEST
 	}
 
 }

@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeExecutor;
-import frc.robot.auto.modes.CrossAutoLineMode;
+import frc.robot.auto.modes.NearScaleOnlyMode;
 import frc.robot.lib.util.CrashTracker;
 
 public class AutoChooser {
@@ -21,7 +21,7 @@ public class AutoChooser {
 	}
 
 	private static AutoModeBase getStraightMode() {
-		return new CrossAutoLineMode();
+		return new NearScaleOnlyMode(true);
 	}
 
 	public static void startAuto() {

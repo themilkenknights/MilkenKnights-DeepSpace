@@ -29,8 +29,6 @@ public abstract class Subsystem {
 
 	public abstract void outputTelemetry();
 
-	public abstract void stop();
-
 	public void zeroSensors() {
 	}
 

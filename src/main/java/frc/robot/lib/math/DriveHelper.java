@@ -1,12 +1,12 @@
 package frc.robot.lib.math;
 
-import frc.robot.Constants.INPUT;
+import frc.robot.Constants;
 import frc.robot.lib.util.DriveSignal;
 
 public class DriveHelper {
 
-	private static final double kThrottleDeadband = INPUT.kThrottleDeadband;
-	private static final double kWheelDeadband = INPUT.kWheelDeadband;
+	private static final double kThrottleDeadband = Constants.kThrottleDeadband;
+	private static final double kWheelDeadband = Constants.kWheelDeadband;
 
 	public static DriveSignal cheesyDrive(double throttle, double wheel, boolean cubeInputs) {
 

@@ -1,6 +1,7 @@
 package frc.robot.subsystems;
 
 import frc.robot.ControlState;
+import frc.robot.Robot;
 import frc.robot.lib.drivers.MkJoystick;
 import frc.robot.lib.drivers.MkJoystickButton;
 import frc.robot.lib.math.DriveHelper;
@@ -31,14 +32,8 @@ public class Input extends Subsystem {
 	}
 
 	@Override
-	public void stop() {
-
-	}
-
-	@Override
 	public void registerEnabledLoops(ILooper enabledLooper) {
-		Loop mLoop = new Loop() {
-
+		enabledLooper.register(new Loop() {
 			@Override
 			public void onStart(double timestamp) {
 				synchronized (Input.this) {
@@ -49,7 +44,7 @@ public class Input extends Subsystem {
 			@Override
 			public void onLoop(double timestamp) {
 				synchronized (Input.this) {
-					if (ControlState.mMatchState.equals(ControlState.MatchState.TELEOP)) {
+					if (Robot.mMatchState.equals(Robot.MatchState.TELEOP)) {
 						updateDriveInput();
 					}
 				}
@@ -58,8 +53,7 @@ public class Input extends Subsystem {
 			@Override
 			public void onStop(double timestamp) {
 			}
-		};
-		enabledLooper.register(mLoop);
+		});
 	}
 
 	private void updateDriveInput() {

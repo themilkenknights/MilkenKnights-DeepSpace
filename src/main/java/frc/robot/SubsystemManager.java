@@ -24,14 +24,6 @@ public class SubsystemManager implements ILooper {
 		mAllSubsystems.forEach((s) -> s.outputTelemetry());
 	}
 
-	public void writeToLog() {
-		mAllSubsystems.forEach((s) -> s.writeToLog());
-	}
-
-	public void stop() {
-		mAllSubsystems.forEach((s) -> s.stop());
-	}
-
 	public void registerEnabledLoops(Looper enabledLooper) {
 		mAllSubsystems.forEach((s) -> s.registerEnabledLoops(this));
 		enabledLooper.register(new EnabledLoop());

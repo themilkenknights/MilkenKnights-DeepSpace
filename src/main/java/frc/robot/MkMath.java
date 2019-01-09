@@ -1,7 +1,5 @@
 package frc.robot;
 
-import frc.robot.Constants.DRIVE;
-
 public class MkMath {
 
 	public static double nativeUnitsPer100MstoInchesPerSec(double vel) {
@@ -9,7 +7,7 @@ public class MkMath {
 	}
 
 	public static double nativeUnitsToInches(double units) {
-		return (units / Constants.CODES_PER_REV) * (Constants.DRIVE.CIRCUMFERENCE);
+		return (units / Constants.CODES_PER_REV) * (Constants.CIRCUMFERENCE);
 	}
 
 	public static double InchesPerSecToUnitsPer100Ms(double vel) {
@@ -17,11 +15,11 @@ public class MkMath {
 	}
 
 	public static double InchesToNativeUnits(double in) {
-		return (Constants.CODES_PER_REV) * (in / Constants.DRIVE.CIRCUMFERENCE);
+		return (Constants.CODES_PER_REV) * (in / Constants.CIRCUMFERENCE);
 	}
 
 	public static double AngleToVel(double angle) {
-		return (angle / 360) * DRIVE.TURN_IN_PLACE_CIRCUMFERENCE;
+		return (angle / 360) * Constants.TURN_IN_PLACE_CIRCUMFERENCE;
 	}
 
 	public static double handleDeadband(double val, double deadband) {
@@ -29,15 +27,15 @@ public class MkMath {
 	}
 
 	public static double RPMToInchesPerSec(double vel) {
-		return (vel / 60.0) * DRIVE.CIRCUMFERENCE;
+		return (vel / 60.0) * Constants.CIRCUMFERENCE;
 	}
 
 	public static double rotationsToInches(double rotations) {
-		return rotations * (Constants.kDriveWheelDiameterInches * Math.PI);
+		return rotations * (Constants.WHEEL_DIAMETER * Math.PI);
 	}
 
 	public static double inchesToRotations(double inches) {
-		return inches / (Constants.kDriveWheelDiameterInches * Math.PI);
+		return inches / (Constants.WHEEL_DIAMETER * Math.PI);
 	}
 
 	public static double rpmToInchesPerSecond(double rpm) {

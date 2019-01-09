@@ -27,8 +27,8 @@ public class DriveMotionPlannerTest {
 		Pose2d pose = motion_planner.setpoint().state().getPose().transformBy(initial_error);
 		while (!motion_planner.isDone()) {
 			DriveMotionPlanner.Output output = motion_planner.update(t, pose);
-			Twist2d delta = Kinematics.forwardKinematics(output.left_velocity * dt * Constants.kDriveWheelDiameterInches / 2.0,
-					output.right_velocity * dt * Constants.kDriveWheelDiameterInches / 2.0);
+			Twist2d delta = Kinematics.forwardKinematics(output.left_velocity * dt * Constants.WHEEL_DIAMETER / 2.0,
+					output.right_velocity * dt * Constants.WHEEL_DIAMETER / 2.0);
 			// Add some systemic error.
 			delta = new Twist2d(delta.dx * 1.0, delta.dy * 1.0, delta.dtheta * 1.05);
 			pose = pose.transformBy(Pose2d.exp(delta));

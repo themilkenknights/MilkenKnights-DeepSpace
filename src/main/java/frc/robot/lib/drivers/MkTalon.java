@@ -12,7 +12,6 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
-import frc.robot.Constants.DRIVE;
 import frc.robot.MkMath;
 
 public class MkTalon {
@@ -40,38 +39,38 @@ public class MkTalon {
 
 	public void setPIDF() {
 		if (side.equals(TalonPosition.Left)) {
-			masterTalon.config_kF(Constants.kPIDLoopIdx, DRIVE.LEFT_DRIVE_F);
+			masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.LEFT_DRIVE_F);
 		} else if (side.equals(TalonPosition.Right)) {
-			masterTalon.config_kF(Constants.kPIDLoopIdx, DRIVE.RIGHT_DRIVE_F);
+			masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.RIGHT_DRIVE_F);
 		}
 
-		masterTalon.config_kP(Constants.kPIDLoopIdx, DRIVE.DRIVE_P);
-		masterTalon.config_kI(Constants.kPIDLoopIdx, DRIVE.DRIVE_I);
-		masterTalon.config_kD(Constants.kPIDLoopIdx, DRIVE.DRIVE_D);
+		masterTalon.config_kP(Constants.kPIDLoopIdx, Constants.DRIVE_P);
+		masterTalon.config_kI(Constants.kPIDLoopIdx, Constants.DRIVE_I);
+		masterTalon.config_kD(Constants.kPIDLoopIdx, Constants.DRIVE_D);
 	}
 
 	private void configMotionMagic() {
 		if (side == TalonPosition.Left) {
-			masterTalon.config_kF(Constants.kPIDLoopIdx, DRIVE.LEFT_DRIVE_F);
+			masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.LEFT_DRIVE_F);
 		} else {
-			masterTalon.config_kF(Constants.kPIDLoopIdx, DRIVE.RIGHT_DRIVE_F);
+			masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.RIGHT_DRIVE_F);
 		}
-		masterTalon.config_kP(Constants.kPIDLoopIdx, DRIVE.DRIVE_P);
-		masterTalon.config_kI(Constants.kPIDLoopIdx, DRIVE.DRIVE_I);
-		masterTalon.config_kD(Constants.kPIDLoopIdx, DRIVE.DRIVE_D);
-		masterTalon.configMotionCruiseVelocity((int) DRIVE.MOTION_MAGIC_CRUISE_VEL);
-		masterTalon.configMotionAcceleration((int) DRIVE.MOTION_MAGIC_ACCEL);
+		masterTalon.config_kP(Constants.kPIDLoopIdx, Constants.DRIVE_P);
+		masterTalon.config_kI(Constants.kPIDLoopIdx, Constants.DRIVE_I);
+		masterTalon.config_kD(Constants.kPIDLoopIdx, Constants.DRIVE_D);
+		masterTalon.configMotionCruiseVelocity((int) Constants.MOTION_MAGIC_CRUISE_VEL);
+		masterTalon.configMotionAcceleration((int) Constants.MOTION_MAGIC_ACCEL);
 	}
 
 	public void configTeleopVelocity() {
 		if (side.equals(TalonPosition.Left)) {
-			masterTalon.config_kF(Constants.kPIDLoopIdx, DRIVE.LEFT_DRIVE_F);
+			masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.LEFT_DRIVE_F);
 		} else if (side.equals(TalonPosition.Right)) {
-			masterTalon.config_kF(Constants.kPIDLoopIdx, DRIVE.RIGHT_DRIVE_F);
+			masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.RIGHT_DRIVE_F);
 		}
-		masterTalon.config_kP(Constants.kPIDLoopIdx, DRIVE.TELEOP_DRIVE_P);
-		masterTalon.config_kI(Constants.kPIDLoopIdx, DRIVE.TELEOP_DRIVE_I);
-		masterTalon.config_kD(Constants.kPIDLoopIdx, DRIVE.TELEOP_DRIVE_D);
+		masterTalon.config_kP(Constants.kPIDLoopIdx, Constants.TELEOP_DRIVE_P);
+		masterTalon.config_kI(Constants.kPIDLoopIdx, Constants.TELEOP_DRIVE_I);
+		masterTalon.config_kD(Constants.kPIDLoopIdx, Constants.TELEOP_DRIVE_D);
 	}
 
 	public void resetConfig() {
