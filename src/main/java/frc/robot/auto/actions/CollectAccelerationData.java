@@ -1,6 +1,7 @@
 package frc.robot.auto.actions;
 
 import edu.wpi.first.wpilibj.Timer;
+import frc.robot.lib.math.MkMath;
 import frc.robot.lib.physics.DriveCharacterization;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.ReflectingCSVWriter;
@@ -47,8 +48,8 @@ public class CollectAccelerationData implements Action {
 
 	@Override
 	public void update() {
-		double currentVelocity =
-				(Math.abs(mDrive.getLeftVelocityNativeUnits()) + Math.abs(mDrive.getRightVelocityNativeUnits())) / 4096.0 * Math.PI * 10;
+		double currentVelocity = (Math.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.leftVel)) + Math
+				.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.leftVel))) / 4096.0 * Math.PI * 10;
 		double currentTime = Timer.getFPGATimestamp();
 
 		//don't calculate acceleration until we've populated prevTime and prevVelocity

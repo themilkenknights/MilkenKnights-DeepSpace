@@ -48,7 +48,6 @@ public final class Constants {
 	public static final double CIRCUMFERENCE = WHEEL_DIAMETER * PI;
 	public static final double TURN_IN_PLACE_CIRCUMFERENCE = 104.1;
 
-
 	public static final double LEFT_RPM_MAX = 510.0;
 	public static final double RIGHT_RPM_MAX = 510.0;
 
@@ -66,10 +65,6 @@ public final class Constants {
 
 	public static final double MIN_TEST_POS = 200;
 	public static final double MIN_TEST_VEL = 140;
-
-	public static final double TELEOP_DRIVE_P = 2 * (0.1 * 1023.0) / (700);
-	public static final double TELEOP_DRIVE_I = 0;
-	public static final double TELEOP_DRIVE_D = 1 * DRIVE_P;
 
 	public static final double OPERATOR_DEADBAND = 0.1;
 	public static final double kThrottleDeadband = 0.0;

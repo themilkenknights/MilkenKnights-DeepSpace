@@ -7,24 +7,24 @@
 
 package frc.robot;
 
-import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.IterativeRobot;
 import frc.robot.lib.structure.Looper;
 import frc.robot.lib.util.CrashTracker;
+import frc.robot.paths.RobotState;
 import frc.robot.paths.TrajectoryGenerator;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.Input;
-import frc.robot.subsystems.RobotStateEstimator;
+import frc.robot.subsystems.SubsystemManager;
 import frc.robot.subsystems.Superstructure;
 import java.util.Arrays;
 
-public class Robot extends TimedRobot {
+@SuppressWarnings("deprecation")
+public class Robot extends IterativeRobot {
 
 	public static MatchState mMatchState = MatchState.DISABLED;
 	private final SubsystemManager mSubsystemManager = new SubsystemManager(
-			Arrays.asList(Drive.getInstance(), RobotStateEstimator.getInstance(), Superstructure.getInstance(), Input.getInstance()));
+			Arrays.asList(Drive.getInstance(), Superstructure.getInstance(), Input.getInstance()));
 	private Looper mEnabledLooper = new Looper();
-	private double dt = 0;
 
 	public Robot() {
 		CrashTracker.logRobotConstruction();
@@ -50,7 +50,6 @@ public class Robot extends TimedRobot {
 			mMatchState = MatchState.DISABLED;
 			mEnabledLooper.stop();
 			AutoChooser.disableAuto();
-			ControlState.resetDefaultState();
 		} catch (Throwable t) {
 			CrashTracker.logThrowableCrash(t);
 			throw t;
@@ -110,8 +109,6 @@ public class Robot extends TimedRobot {
 
 	@Override
 	public void robotPeriodic() {
-		//System.out.println(Timer.getFPGATimestamp() - dt);
-		//dt = Timer.getFPGATimestamp();
 		try {
 			mSubsystemManager.outputToSmartDashboard();
 			mEnabledLooper.outputToSmartDashboard();

@@ -1,4 +1,6 @@
-package frc.robot;
+package frc.robot.lib.math;
+
+import frc.robot.Constants;
 
 public class MkMath {
 

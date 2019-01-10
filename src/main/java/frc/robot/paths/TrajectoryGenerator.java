@@ -9,7 +9,6 @@ import frc.robot.lib.trajectory.TrajectoryUtil;
 import frc.robot.lib.trajectory.timing.CentripetalAccelerationConstraint;
 import frc.robot.lib.trajectory.timing.TimedState;
 import frc.robot.lib.trajectory.timing.TimingConstraint;
-import frc.robot.planners.DriveMotionPlanner;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,7 +21,6 @@ public class TrajectoryGenerator {
 	// +y is to the left.
 	// ALL POSES DEFINED FOR THE CASE THAT ROBOT STARTS ON RIGHT! (mirrored about +x axis for LEFT)
 	public static final Pose2d kSideStartPose = new Pose2d(0.0, 0.0, Rotation2d.fromDegrees(180.0));
-	public static final Pose2d kNearScaleEmptyPose = new Pose2d(new Translation2d(253.0, 28.0), Rotation2d.fromDegrees(10 + 180.0));
 	private static final double kMaxCentripetalAccel = 110.0;
 	private static final double kMaxVoltage = 9.0;
 	private static final double kMaxAccel = 130.0;
@@ -78,8 +76,7 @@ public class TrajectoryGenerator {
 		private Trajectory<TimedState<Pose2dWithCurvature>> getSideStartToNearScale() {
 			List<Pose2d> waypoints = new ArrayList<>();
 			waypoints.add(kSideStartPose);
-			waypoints.add(kSideStartPose.transformBy(new Pose2d(new Translation2d(-40.0, -20), Rotation2d.fromDegrees(50 + 180.0))));
-			//waypoints.add(kNearScaleEmptyPose);
+			waypoints.add(kSideStartPose.transformBy(new Pose2d(new Translation2d(100.0, -60), Rotation2d.fromDegrees(180.0))));
 			return generateTrajectory(true, waypoints, Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel,
 					kMaxAccel, kMaxVoltage);
 		}

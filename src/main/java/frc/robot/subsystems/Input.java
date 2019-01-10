@@ -21,11 +21,6 @@ public class Input extends Subsystem {
 	}
 
 	@Override
-	public void checkSystem() {
-
-	}
-
-	@Override
 	public void outputTelemetry() {
 
 	}

@@ -2,7 +2,7 @@ package frc.robot.auto.actions;
 
 
 import edu.wpi.first.wpilibj.Timer;
-import frc.robot.RobotState;
+import frc.robot.paths.RobotState;
 import frc.robot.lib.physics.DriveCharacterization;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.ReflectingCSVWriter;

@@ -1,13 +1,15 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
-import frc.robot.MkMath;
-import frc.robot.RobotState;
+import frc.robot.paths.Kinematics;
+import frc.robot.lib.math.MkMath;
+import frc.robot.paths.RobotState;
 import frc.robot.lib.drivers.LimeLight;
 import frc.robot.lib.drivers.MkGyro;
 import frc.robot.lib.drivers.MkTalon;
@@ -15,6 +17,7 @@ import frc.robot.lib.drivers.MkTalon.TalonPosition;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Pose2dWithCurvature;
 import frc.robot.lib.geometry.Rotation2d;
+import frc.robot.lib.geometry.Twist2d;
 import frc.robot.lib.structure.ILooper;
 import frc.robot.lib.structure.Loop;
 import frc.robot.lib.trajectory.TrajectoryIterator;
@@ -23,19 +26,21 @@ import frc.robot.lib.util.CrashTracker;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.ReflectingCSVWriter;
-import frc.robot.planners.DriveMotionPlanner;
+import frc.robot.paths.DriveMotionPlanner;
 
 public class Drive extends Subsystem {
 
 	private final MkTalon leftDrive, rightDrive;
 	private final MkGyro navX;
+	public PeriodicIO mPeriodicIO;
 	private DriveMotionPlanner mMotionPlanner;
 	private Rotation2d mGyroOffset = Rotation2d.identity();
 	private boolean mOverrideTrajectory = false;
-	private PeriodicIO mPeriodicIO;
 	private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
 	private DriveControlState mDriveControlState;
 	private LimeLight limeLight;
+	private double left_encoder_prev_distance_ = 0.0;
+	private double right_encoder_prev_distance_ = 0.0;
 
 	private Drive() {
 		mDriveControlState = DriveControlState.OPEN_LOOP;
@@ -43,8 +48,6 @@ public class Drive extends Subsystem {
 
 		leftDrive = new MkTalon(Constants.LEFT_MASTER_ID, Constants.LEFT_SLAVE_ID, TalonPosition.Left);
 		rightDrive = new MkTalon(Constants.RIGHT_MASTER_ID, Constants.RIGHT_SLAVE_ID, TalonPosition.Right);
-		leftDrive.setPIDF();
-		rightDrive.setPIDF();
 		leftDrive.resetEncoder();
 		rightDrive.resetEncoder();
 		navX = new MkGyro(Port.kMXP);
@@ -80,7 +83,6 @@ public class Drive extends Subsystem {
 		}
 		return mMotionPlanner.isDone() || mOverrideTrajectory;
 	}
-
 
 	public void outputTelemetry() {
 		leftDrive.updateSmartDash();
@@ -134,7 +136,6 @@ public class Drive extends Subsystem {
 	 *
 	 * @param signal An object that contains left and right velocities (inches per sec)
 	 */
-
 	public synchronized void setVelocity(DriveSignal signal, DriveSignal feedforward) {
 		if (mDriveControlState != DriveControlState.PATH_FOLLOWING) {
 			leftDrive.setBrakeMode();
@@ -185,17 +186,16 @@ public class Drive extends Subsystem {
 	@Override
 	public synchronized void writePeriodicOutputs() {
 		if (mDriveControlState == DriveControlState.OPEN_LOOP) {
-			leftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, true);
-			rightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, true);
+			leftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, NeutralMode.Brake);
+			rightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, NeutralMode.Brake);
 		} else {
-			leftDrive.set(ControlMode.Velocity, -mPeriodicIO.left_demand, true,
+			leftDrive.set(ControlMode.Velocity, -mPeriodicIO.left_demand, NeutralMode.Brake,
 					mPeriodicIO.left_feedforward + Constants.DRIVE_D * mPeriodicIO.left_accel / 1023.0);
-			rightDrive.set(ControlMode.Velocity, -mPeriodicIO.right_demand, true,
+			rightDrive.set(ControlMode.Velocity, -mPeriodicIO.right_demand, NeutralMode.Brake,
 					mPeriodicIO.right_feedforward + Constants.DRIVE_D * mPeriodicIO.right_accel / 1023.0);
 		}
 	}
 
-	@Override
 	public void checkSystem() {
 		boolean check = true;
 		leftDrive.resetEncoder();
@@ -284,6 +284,8 @@ public class Drive extends Subsystem {
 					leftDrive.resetEncoder();
 					rightDrive.resetEncoder();
 					navX.zeroYaw();
+					left_encoder_prev_distance_ = mPeriodicIO.leftPos;
+					right_encoder_prev_distance_ = mPeriodicIO.rightPos;
 					startLogging();
 				}
 			}
@@ -297,11 +299,15 @@ public class Drive extends Subsystem {
 			@Override
 			public void onLoop(double timestamp) {
 				synchronized (Drive.this) {
+					stateEstimator(timestamp);
 					switch (mDriveControlState) {
 						case OPEN_LOOP:
 							break;
 						case PATH_FOLLOWING:
 							updatePathFollower();
+							break;
+						case VISION_TRACKING:
+							updateVision();
 							break;
 						default:
 							System.out.println("Unexpected drive control state: " + mDriveControlState);
@@ -319,40 +325,24 @@ public class Drive extends Subsystem {
 		});
 	}
 
+	public synchronized void stateEstimator(double timestamp) {
+		final double left_distance = mPeriodicIO.leftPos;
+		final double right_distance = mPeriodicIO.rightPos;
+		final double delta_left = left_distance - left_encoder_prev_distance_;
+		final double delta_right = right_distance - right_encoder_prev_distance_;
+		final Rotation2d gyro_angle = mPeriodicIO.gyro_heading;
+		final Twist2d odometry_velocity = RobotState.getInstance().generateOdometryFromSensors(delta_left, delta_right, gyro_angle);
+		final Twist2d predicted_velocity = Kinematics.forwardKinematics(mPeriodicIO.leftVel, mPeriodicIO.leftVel);
+		RobotState.getInstance().addObservations(timestamp, odometry_velocity, predicted_velocity);
+		left_encoder_prev_distance_ = left_distance;
+		right_encoder_prev_distance_ = right_distance;
+	}
+
 	public void updateVision() {
 		InterpolatingDouble dist = Constants.visionDistMap.getInterpolated(new InterpolatingDouble(limeLight.getTargetArea()));
 		double steering_adjust = 0.08 * limeLight.getX();
-		leftDrive.set(ControlMode.MotionMagic, dist.value, true, steering_adjust);
-		rightDrive.set(ControlMode.MotionMagic, dist.value, true, -steering_adjust);
-	}
-
-	public double getLeftVelocityNativeUnits() {
-		return MkMath.InchesPerSecToUnitsPer100Ms(mPeriodicIO.leftVel);
-	}
-
-	public double getRightVelocityNativeUnits() {
-		return MkMath.InchesPerSecToUnitsPer100Ms(mPeriodicIO.rightVel);
-	}
-
-
-	public double getLeftVel() {
-		return mPeriodicIO.leftVel;
-	}
-
-	public double getRightVel() {
-		return mPeriodicIO.rightVel;
-	}
-
-	public double getLeftDist() {
-		return mPeriodicIO.leftPos;
-	}
-
-	public synchronized Rotation2d getHeading(){
-		return mPeriodicIO.gyro_heading;
-	}
-
-	public double getRightDist() {
-		return mPeriodicIO.rightPos;
+		leftDrive.set(ControlMode.MotionMagic, dist.value, NeutralMode.Brake, steering_adjust);
+		rightDrive.set(ControlMode.MotionMagic, dist.value, NeutralMode.Brake, -steering_adjust);
 	}
 
 	public enum DriveControlState {

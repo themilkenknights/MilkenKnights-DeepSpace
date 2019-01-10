@@ -1,6 +1,7 @@
 package frc.robot.auto.actions;
 
 import edu.wpi.first.wpilibj.Timer;
+import frc.robot.lib.math.MkMath;
 import frc.robot.lib.physics.DriveCharacterization;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.ReflectingCSVWriter;
@@ -53,7 +54,8 @@ public class CollectVelocityData implements Action {
 		mDrive.setOpenLoop(
 				new DriveSignal((mReverse ? -1.0 : 1.0) * percentPower, (mReverse ? -1.0 : 1.0) * (mTurn ? -1.0 : 1.0) * percentPower));
 		mVelocityData.add(new DriveCharacterization.VelocityDataPoint(
-				(Math.abs(mDrive.getLeftVelocityNativeUnits()) + Math.abs(mDrive.getRightVelocityNativeUnits())) / 4096.0 * Math.PI * 10,
+				(Math.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.leftVel)) + Math
+						.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.leftVel))) / 4096.0 * Math.PI * 10,
 				//convert velocity to radians per second
 				percentPower * 12.0 //convert to volts
 		));

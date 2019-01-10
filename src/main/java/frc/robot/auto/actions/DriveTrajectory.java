@@ -1,7 +1,7 @@
 package frc.robot.auto.actions;
 
 import edu.wpi.first.wpilibj.Timer;
-import frc.robot.RobotState;
+import frc.robot.paths.RobotState;
 import frc.robot.lib.geometry.Pose2dWithCurvature;
 import frc.robot.lib.trajectory.TimedView;
 import frc.robot.lib.trajectory.Trajectory;
@@ -31,7 +31,7 @@ public class DriveTrajectory implements Action {
 	@Override
 	public boolean isFinished() {
 		if (mDrive.isDoneWithTrajectory()) {
-			Drive.getInstance().setOpenLoop(new DriveSignal(0,0));
+			Drive.getInstance().setOpenLoop(new DriveSignal(0, 0));
 			System.out.println("Trajectory finished");
 			return true;
 		}

@@ -1,4 +1,4 @@
-package frc.robot.planners;
+package frc.robot.paths;
 
 import frc.robot.Constants;
 import frc.robot.lib.geometry.Pose2d;

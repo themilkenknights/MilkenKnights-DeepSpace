@@ -2,14 +2,10 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Robot;
+import frc.robot.lib.structure.ILooper;
 import frc.robot.lib.structure.Loop;
-import frc.robot.lib.structure.Looper;
 
 public class Superstructure extends Subsystem {
-
-	public Superstructure() {
-
-	}
 
 	public static Superstructure getInstance() {
 		return InstanceHolder.mInstance;
@@ -21,12 +17,7 @@ public class Superstructure extends Subsystem {
 	}
 
 
-	@Override
-	public void checkSystem() {
-
-	}
-
-	public void registerEnabledLoops(Looper enabledLooper) {
+	public void registerEnabledLoops(ILooper enabledLooper) {
 		enabledLooper.register(new Loop() {
 
 			@Override
@@ -46,7 +37,6 @@ public class Superstructure extends Subsystem {
 
 			}
 		});
-
 	}
 
 	private static class InstanceHolder {

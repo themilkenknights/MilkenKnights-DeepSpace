@@ -10,17 +10,19 @@ import com.ctre.phoenix.motorcontrol.VelocityMeasPeriod;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
+import com.ctre.phoenix.motorcontrol.can.VictorSPXConfiguration;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
-import frc.robot.MkMath;
+import frc.robot.lib.math.MkMath;
 
 public class MkTalon {
 
 	public final TalonSRX masterTalon;
 	public final VictorSPX slaveTalon;
 	private TalonPosition side;
-	private double maxRPM = 0;
-	private NeutralMode talonMode;
+	private ControlMode lastControlMode = null;
+	private double lastOutput = Double.NaN;
+	private NeutralMode lastNeutralMode = null;
 
 	/**
 	 * @param master Talon with Encoder CAN ID
@@ -31,17 +33,16 @@ public class MkTalon {
 		slaveTalon = new VictorSPX(slave);
 
 		this.side = side;
+		resetConfig();
+	}
+
+	public void resetConfig() {
 		masterTalon.configFactoryDefault();
 		masterTalon.configAllSettings(new TalonSRXConfiguration());
 
 		slaveTalon.configFactoryDefault();
+		slaveTalon.configAllSettings(new VictorSPXConfiguration());
 
-		resetConfig();
-		configMotionMagic();
-		talonMode = NeutralMode.Brake;
-	}
-
-	public void setPIDF() {
 		if (side.equals(TalonPosition.Left)) {
 			masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.LEFT_DRIVE_F);
 		} else if (side.equals(TalonPosition.Right)) {
@@ -51,33 +52,10 @@ public class MkTalon {
 		masterTalon.config_kP(Constants.kPIDLoopIdx, Constants.DRIVE_P);
 		masterTalon.config_kI(Constants.kPIDLoopIdx, Constants.DRIVE_I);
 		masterTalon.config_kD(Constants.kPIDLoopIdx, Constants.DRIVE_D);
-	}
 
-	private void configMotionMagic() {
-		if (side == TalonPosition.Left) {
-			masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.LEFT_DRIVE_F);
-		} else {
-			masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.RIGHT_DRIVE_F);
-		}
-		masterTalon.config_kP(Constants.kPIDLoopIdx, Constants.DRIVE_P);
-		masterTalon.config_kI(Constants.kPIDLoopIdx, Constants.DRIVE_I);
-		masterTalon.config_kD(Constants.kPIDLoopIdx, Constants.DRIVE_D);
 		masterTalon.configMotionCruiseVelocity((int) Constants.MOTION_MAGIC_CRUISE_VEL);
 		masterTalon.configMotionAcceleration((int) Constants.MOTION_MAGIC_ACCEL);
-	}
 
-	public void configTeleopVelocity() {
-		if (side.equals(TalonPosition.Left)) {
-			masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.LEFT_DRIVE_F);
-		} else if (side.equals(TalonPosition.Right)) {
-			masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.RIGHT_DRIVE_F);
-		}
-		masterTalon.config_kP(Constants.kPIDLoopIdx, Constants.TELEOP_DRIVE_P);
-		masterTalon.config_kI(Constants.kPIDLoopIdx, Constants.TELEOP_DRIVE_I);
-		masterTalon.config_kD(Constants.kPIDLoopIdx, Constants.TELEOP_DRIVE_D);
-	}
-
-	public void resetConfig() {
 		masterTalon.selectProfileSlot(Constants.kSlotIdx, Constants.kPIDLoopIdx);
 		masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5);
 		masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5);
@@ -113,6 +91,10 @@ public class MkTalon {
 		masterTalon.configVelocityMeasurementPeriod(VelocityMeasPeriod.Period_100Ms);
 		masterTalon.configVelocityMeasurementWindow(64);
 
+		lastControlMode = ControlMode.PercentOutput;
+		lastNeutralMode = NeutralMode.Brake;
+		lastOutput = Double.NaN;
+
 		slaveTalon.follow(masterTalon);
 	}
 
@@ -131,20 +113,16 @@ public class MkTalon {
 	private double getError() {
 		return MkMath.nativeUnitsPer100MstoInchesPerSec(masterTalon.getClosedLoopError(Constants.kPIDLoopIdx));
 	}
-
-	private double InchesPerSecToUnitsPer100Ms(double vel) {
-		return MkMath.InchesToNativeUnits(vel) / 10;
-	}
-
-	public void set(ControlMode mode, double value, boolean nMode) {
+	
+	public void set(ControlMode mode, double value, NeutralMode nMode) {
 		set(mode, value, nMode, 0);
 	}
 
-	public void set(ControlMode mode, double value, boolean nMode, double arbFeed) {
-		if (talonMode != (nMode ? NeutralMode.Brake : NeutralMode.Coast)) {
-			talonMode = nMode ? NeutralMode.Brake : NeutralMode.Coast;
-			masterTalon.setNeutralMode(nMode ? NeutralMode.Brake : NeutralMode.Coast);
-			slaveTalon.setNeutralMode(nMode ? NeutralMode.Brake : NeutralMode.Coast);
+	public void set(ControlMode mode, double value, NeutralMode nMode, double arbFeed) {
+		if (lastOutput != value || lastControlMode != mode || lastNeutralMode != nMode) {
+			lastNeutralMode = nMode;
+			masterTalon.setNeutralMode(nMode);
+			slaveTalon.setNeutralMode(nMode);
 		}
 		masterTalon.set(mode, value, DemandType.ArbitraryFeedForward, arbFeed);
 	}
@@ -154,13 +132,13 @@ public class MkTalon {
 	}
 
 	public void setCoastMode() {
-		talonMode = NeutralMode.Coast;
+		lastNeutralMode = NeutralMode.Coast;
 		masterTalon.setNeutralMode(NeutralMode.Coast);
 		slaveTalon.setNeutralMode(NeutralMode.Coast);
 	}
 
 	public void setBrakeMode() {
-		talonMode = NeutralMode.Brake;
+		lastNeutralMode = NeutralMode.Brake;
 		masterTalon.setNeutralMode(NeutralMode.Brake);
 		slaveTalon.setNeutralMode(NeutralMode.Brake);
 	}

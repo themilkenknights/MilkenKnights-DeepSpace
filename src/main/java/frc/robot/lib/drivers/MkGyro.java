@@ -9,9 +9,9 @@ public class MkGyro extends AHRS {
 		super(spi_port_id);
 	}
 
-	public double getSwerd(){
+	public double getSwerd() {
 		double a = getYaw();
-		if(a < 0){
+		if (a < 0) {
 			a = 180 + -a;
 		}
 		return a;

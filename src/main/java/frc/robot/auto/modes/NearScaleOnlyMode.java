@@ -3,11 +3,7 @@ package frc.robot.auto.modes;
 import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeEndedException;
 import frc.robot.auto.actions.DriveTrajectory;
-import frc.robot.lib.geometry.Pose2dWithCurvature;
-import frc.robot.lib.trajectory.Trajectory;
-import frc.robot.lib.trajectory.timing.TimedState;
 import frc.robot.paths.TrajectoryGenerator;
-import frc.robot.paths.TrajectoryGenerator.TrajectorySet;
 import frc.robot.paths.TrajectoryGenerator.TrajectorySet.MirroredTrajectory;
 
 public class NearScaleOnlyMode extends AutoModeBase {

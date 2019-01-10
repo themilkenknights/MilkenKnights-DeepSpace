@@ -1,6 +1,7 @@
-package frc.robot;
+package frc.robot.paths;
 
 
+import frc.robot.Constants;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Rotation2d;
 import frc.robot.lib.geometry.Twist2d;
