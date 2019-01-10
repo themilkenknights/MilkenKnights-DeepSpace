@@ -38,6 +38,7 @@ public class Drive extends Subsystem {
 	private LimeLight limeLight;
 
 	private Drive() {
+		mDriveControlState = DriveControlState.OPEN_LOOP;
 		mPeriodicIO = new PeriodicIO();
 
 		leftDrive = new MkTalon(Constants.LEFT_MASTER_ID, Constants.LEFT_SLAVE_ID, TalonPosition.Left);
@@ -56,6 +57,8 @@ public class Drive extends Subsystem {
 		rightDrive.slaveTalon.setInverted(Constants.RIGHT_SLAVE_INVERT);
 		rightDrive.masterTalon.setSensorPhase(Constants.RIGHT_INVERT_SENSOR);
 		limeLight = new LimeLight();
+
+		mMotionPlanner = new DriveMotionPlanner();
 	}
 
 	public static Drive getInstance() {
@@ -84,7 +87,6 @@ public class Drive extends Subsystem {
 		rightDrive.updateSmartDash();
 		SmartDashboard.putString("Drive State", mDriveControlState.toString());
 		SmartDashboard.putBoolean("Drivetrain Status", leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected());
-
 		if (mCSVWriter != null) {
 			mCSVWriter.write();
 		}
@@ -106,7 +108,7 @@ public class Drive extends Subsystem {
 	public synchronized void setHeading(Rotation2d heading) {
 		System.out.println("SET HEADING: " + heading.getDegrees());
 
-		mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(navX.getFusedHeading()).inverse());
+		mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(navX.getSwerd()).inverse());
 		System.out.println("Gyro offset: " + mGyroOffset.getDegrees());
 
 		mPeriodicIO.gyro_heading = heading;
@@ -174,7 +176,7 @@ public class Drive extends Subsystem {
 		mPeriodicIO.rightPos = rightDrive.getPosition();
 		mPeriodicIO.leftVel = leftDrive.getSpeed();
 		mPeriodicIO.rightVel = rightDrive.getSpeed();
-		mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(navX.getFusedHeading()).rotateBy(mGyroOffset);
+		mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(navX.getSwerd()).rotateBy(mGyroOffset);
 		if (mCSVWriter != null) {
 			mCSVWriter.add(mPeriodicIO);
 		}
@@ -184,11 +186,11 @@ public class Drive extends Subsystem {
 	public synchronized void writePeriodicOutputs() {
 		if (mDriveControlState == DriveControlState.OPEN_LOOP) {
 			leftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, true);
-			leftDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, true);
+			rightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, true);
 		} else {
-			leftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand, true,
+			leftDrive.set(ControlMode.Velocity, -mPeriodicIO.left_demand, true,
 					mPeriodicIO.left_feedforward + Constants.DRIVE_D * mPeriodicIO.left_accel / 1023.0);
-			rightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, true,
+			rightDrive.set(ControlMode.Velocity, -mPeriodicIO.right_demand, true,
 					mPeriodicIO.right_feedforward + Constants.DRIVE_D * mPeriodicIO.right_accel / 1023.0);
 		}
 	}
@@ -330,6 +332,27 @@ public class Drive extends Subsystem {
 
 	public double getRightVelocityNativeUnits() {
 		return MkMath.InchesPerSecToUnitsPer100Ms(mPeriodicIO.rightVel);
+	}
+
+
+	public double getLeftVel() {
+		return mPeriodicIO.leftVel;
+	}
+
+	public double getRightVel() {
+		return mPeriodicIO.rightVel;
+	}
+
+	public double getLeftDist() {
+		return mPeriodicIO.leftPos;
+	}
+
+	public synchronized Rotation2d getHeading(){
+		return mPeriodicIO.gyro_heading;
+	}
+
+	public double getRightDist() {
+		return mPeriodicIO.rightPos;
 	}
 
 	public enum DriveControlState {

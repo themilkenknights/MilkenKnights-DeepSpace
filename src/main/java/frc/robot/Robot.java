@@ -8,10 +8,13 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.Timer;
 import frc.robot.lib.structure.Looper;
 import frc.robot.lib.util.CrashTracker;
+import frc.robot.paths.TrajectoryGenerator;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.Input;
+import frc.robot.subsystems.RobotStateEstimator;
 import frc.robot.subsystems.Superstructure;
 import java.util.Arrays;
 
@@ -19,8 +22,9 @@ public class Robot extends TimedRobot {
 
 	public static MatchState mMatchState = MatchState.DISABLED;
 	private final SubsystemManager mSubsystemManager = new SubsystemManager(
-			Arrays.asList(Drive.getInstance(), Superstructure.getInstance(), Input.getInstance()));
+			Arrays.asList(Drive.getInstance(), RobotStateEstimator.getInstance(), Superstructure.getInstance(), Input.getInstance()));
 	private Looper mEnabledLooper = new Looper();
+	private double dt = 0;
 
 	public Robot() {
 		CrashTracker.logRobotConstruction();
@@ -32,6 +36,7 @@ public class Robot extends TimedRobot {
 			CrashTracker.logRobotInit();
 			mMatchState = MatchState.DISABLED;
 			mSubsystemManager.registerEnabledLoops(mEnabledLooper);
+			TrajectoryGenerator.getInstance().generateTrajectories();
 		} catch (Throwable t) {
 			CrashTracker.logThrowableCrash(t);
 			throw t;
@@ -58,6 +63,7 @@ public class Robot extends TimedRobot {
 			CrashTracker.logAutoInit();
 			mMatchState = MatchState.AUTO;
 			mEnabledLooper.start();
+			AutoChooser.startAuto();
 		} catch (Throwable t) {
 			CrashTracker.logThrowableCrash(t);
 			throw t;
@@ -104,9 +110,12 @@ public class Robot extends TimedRobot {
 
 	@Override
 	public void robotPeriodic() {
+		//System.out.println(Timer.getFPGATimestamp() - dt);
+		//dt = Timer.getFPGATimestamp();
 		try {
 			mSubsystemManager.outputToSmartDashboard();
 			mEnabledLooper.outputToSmartDashboard();
+			RobotState.getInstance().outputToSmartDashboard();
 		} catch (Throwable t) {
 			CrashTracker.logThrowableCrash(t);
 			throw t;

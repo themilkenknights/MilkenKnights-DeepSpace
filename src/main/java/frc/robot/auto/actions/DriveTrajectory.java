@@ -7,6 +7,7 @@ import frc.robot.lib.trajectory.TimedView;
 import frc.robot.lib.trajectory.Trajectory;
 import frc.robot.lib.trajectory.TrajectoryIterator;
 import frc.robot.lib.trajectory.timing.TimedState;
+import frc.robot.lib.util.DriveSignal;
 import frc.robot.subsystems.Drive;
 
 public class DriveTrajectory implements Action {
@@ -30,6 +31,7 @@ public class DriveTrajectory implements Action {
 	@Override
 	public boolean isFinished() {
 		if (mDrive.isDoneWithTrajectory()) {
+			Drive.getInstance().setOpenLoop(new DriveSignal(0,0));
 			System.out.println("Trajectory finished");
 			return true;
 		}

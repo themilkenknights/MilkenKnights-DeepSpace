@@ -31,6 +31,10 @@ public class MkTalon {
 		slaveTalon = new VictorSPX(slave);
 
 		this.side = side;
+		masterTalon.configFactoryDefault();
+		masterTalon.configAllSettings(new TalonSRXConfiguration());
+
+		slaveTalon.configFactoryDefault();
 
 		resetConfig();
 		configMotionMagic();
@@ -74,8 +78,6 @@ public class MkTalon {
 	}
 
 	public void resetConfig() {
-		masterTalon.configFactoryDefault();
-		masterTalon.configAllSettings(new TalonSRXConfiguration());
 		masterTalon.selectProfileSlot(Constants.kSlotIdx, Constants.kPIDLoopIdx);
 		masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5);
 		masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5);
@@ -92,13 +94,13 @@ public class MkTalon {
 
 		masterTalon.configNominalOutputForward(0);
 		masterTalon.configNominalOutputReverse(0);
-		masterTalon.configPeakOutputForward(1);
-		masterTalon.configPeakOutputReverse(-1);
+		masterTalon.configPeakOutputForward(0.5);
+		masterTalon.configPeakOutputReverse(-0.5);
 
 		slaveTalon.configNominalOutputForward(0);
 		slaveTalon.configNominalOutputReverse(0);
-		slaveTalon.configPeakOutputForward(1);
-		slaveTalon.configPeakOutputReverse(-1);
+		slaveTalon.configPeakOutputForward(0.5);
+		slaveTalon.configPeakOutputReverse(-0.5);
 
 		masterTalon.configVoltageCompSaturation(12);
 		masterTalon.enableVoltageCompensation(true);
