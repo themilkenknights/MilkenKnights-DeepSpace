@@ -18,6 +18,7 @@ public class Superstructure extends Subsystem {
 	Port port = Port.kOnboardCS0;
 	String print;
 	public HashMap<Integer, ArrayList<PixyPacket>> packets = new HashMap<Integer, ArrayList<PixyPacket>>();
+	public int w = 0;
 
 	public void Superstructure(){
 		pixy1 = new PixySPI(new SPI(port), packets, new PixyException(print));
@@ -46,6 +47,13 @@ public class Superstructure extends Subsystem {
 			@Override
 			public void onLoop(double timestamp) {
 				synchronized (Superstructure.this) {
+					if(w == 500){
+						testPixy1();
+						w = 0;
+					}
+					else{
+						w++;
+					}
 				}
 			}
 
