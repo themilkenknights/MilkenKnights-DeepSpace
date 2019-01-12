@@ -1,5 +1,6 @@
 package frc.robot.paths;
 
+import edu.wpi.first.wpilibj.Timer;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Pose2dWithCurvature;
 import frc.robot.lib.geometry.Rotation2d;
@@ -28,6 +29,8 @@ public class TrajectoryGenerator {
 	private static TrajectoryGenerator mInstance = new TrajectoryGenerator();
 	private final DriveMotionPlanner mMotionPlanner;
 	private TrajectorySet mTrajectorySet = null;
+	private VisionTrajectorySet mVisionTrajectorySet = null;
+
 
 	private TrajectoryGenerator() {
 		mMotionPlanner = new DriveMotionPlanner();
@@ -94,6 +97,36 @@ public class TrajectoryGenerator {
 			public Trajectory<TimedState<Pose2dWithCurvature>> get(boolean left) {
 				return left ? this.left : this.right;
 			}
+		}
+
+	}
+
+	public void generateVisionTrajectories(Pose2d endPose) {
+		if (mVisionTrajectorySet == null) {
+			System.out.println("Generating trajectories...");
+			mVisionTrajectorySet = new VisionTrajectorySet(endPose);
+			System.out.println("Finished trajectory generation");
+		}
+	}
+
+	public VisionTrajectorySet getVisionTrajectorySet() {
+		return mVisionTrajectorySet;
+	}
+
+	public class VisionTrajectorySet {
+
+		public final Trajectory<TimedState<Pose2dWithCurvature>> visionTraj;
+
+		private VisionTrajectorySet(Pose2d endPose) {
+			visionTraj = getTraj(endPose);
+		}
+
+		private Trajectory<TimedState<Pose2dWithCurvature>> getTraj(Pose2d endPose) {
+			List<Pose2d> waypoints = new ArrayList<>();
+			waypoints.add(RobotState.getInstance().getPredictedFieldToVehicle(Timer.getFPGATimestamp() + 0.02));
+			waypoints.add(kStartPose.transformBy(endPose));
+			return generateTrajectory(true, waypoints, Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel,
+					kMaxAccel, kMaxVoltage);
 		}
 
 	}

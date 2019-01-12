@@ -4,6 +4,8 @@ import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Robot;
+import frc.robot.lib.vision.LimeLight;
+import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.lib.structure.ILooper;
 import frc.robot.lib.structure.Loop;
 import frc.robot.lib.vision.PixyException;
@@ -14,13 +16,17 @@ import java.util.HashMap;
 
 public class Superstructure extends Subsystem {
 
+	private LimeLight limeLight;
+	private LimelightTarget target;
 	public PixySPI pixy1;
 	Port port = Port.kOnboardCS0;
 	String print;
 	public HashMap<Integer, ArrayList<PixyPacket>> packets = new HashMap<Integer, ArrayList<PixyPacket>>();
 	public int w = 0;
 
-	public void Superstructure(){
+	public void Superstructure() {
+		limeLight = new LimeLight();
+		target = LimelightTarget.EMPTY;
 		pixy1 = new PixySPI(new SPI(port), packets, new PixyException(print));
 
 	}
@@ -47,13 +53,8 @@ public class Superstructure extends Subsystem {
 			@Override
 			public void onLoop(double timestamp) {
 				synchronized (Superstructure.this) {
-					if(w == 500){
-						testPixy1();
-						w = 0;
-					}
-					else{
-						w++;
-					}
+					updateLimelight();
+					testPixy();
 				}
 			}
 
@@ -70,7 +71,21 @@ public class Superstructure extends Subsystem {
 
 	}
 
-	public void testPixy1(){
+	private synchronized void updateLimelight() {
+		target = limeLight.returnTarget();
+	}
+
+	public synchronized LimelightTarget getTarget(){
+		return target;
+	}
+
+	private synchronized void testPixy() {
+		if (w == 500) {
+			w = 0;
+		} else {
+			w++;
+			return;
+		}
 		int ret = -1;
 		// Get the packets from the pixy.
 		try {
@@ -82,13 +97,13 @@ public class Superstructure extends Subsystem {
 
 		SmartDashboard.putNumber("Pixy Vision: packets size: ", packets.size());
 
-		for(int i = 1; i <= PixySPI.PIXY_SIG_COUNT ; i++) {
+		for (int i = 1; i <= PixySPI.PIXY_SIG_COUNT; i++) {
 			SmartDashboard.putString("Pixy Vision: Signature: ", Integer.toString(i));
 
 			SmartDashboard.putNumber("Pixy Vision: packet: " + Integer.toString(i) + ": size: ", packets.get(i).size());
 
 			// Loop through the packets for this signature.
-			for(int j=0; j < packets.get(i).size(); j++) {
+			for (int j = 0; j < packets.get(i).size(); j++) {
 				SmartDashboard.putNumber("Pixy Vision: " + Integer.toString(i) + ": X: ", packets.get(i).get(j).X);
 				SmartDashboard.putNumber("Pixy Vision: " + Integer.toString(i) + ": Y: ", packets.get(i).get(j).Y);
 				SmartDashboard.putNumber("Pixy Vision: " + Integer.toString(i) + ": Width: ", packets.get(i).get(j).Width);

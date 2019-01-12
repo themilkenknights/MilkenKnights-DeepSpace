@@ -6,11 +6,14 @@ import frc.robot.lib.drivers.MkJoystickButton;
 import frc.robot.lib.math.DriveHelper;
 import frc.robot.lib.structure.ILooper;
 import frc.robot.lib.structure.Loop;
+import frc.robot.paths.RobotState;
+import frc.robot.subsystems.Drive.DriveControlState;
 
 public class Input extends Subsystem {
 
 	private final MkJoystick driverJoystick = new MkJoystick(0);
 	private final MkJoystickButton changeDriveMode = driverJoystick.getButton(1, "Change Drive Mode");
+
 
 	public Input() {
 
@@ -51,9 +54,14 @@ public class Input extends Subsystem {
 	}
 
 	private void updateDriveInput() {
-		double forward = (-driverJoystick.getRawAxis(2) + driverJoystick.getRawAxis(3));
-		double turn = (-driverJoystick.getRawAxis(0));
-		Drive.getInstance().setOpenLoop(DriveHelper.cheesyDrive(forward, turn, true));
+		if (changeDriveMode.isPressed()) {
+			Drive.getInstance().targetPos();
+		}
+		if(Drive.getInstance().mDriveControlState != DriveControlState.PATH_FOLLOWING){
+			double forward = (-driverJoystick.getRawAxis(2) + driverJoystick.getRawAxis(3));
+			double turn = (-driverJoystick.getRawAxis(0));
+			Drive.getInstance().setOpenLoop(DriveHelper.cheesyDrive(forward, turn, true));
+		}
 	}
 
 	private static class InstanceHolder {

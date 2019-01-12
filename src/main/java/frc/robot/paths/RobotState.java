@@ -1,8 +1,10 @@
 package frc.robot.paths;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.Constants;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Rotation2d;
+import frc.robot.lib.geometry.Translation2d;
 import frc.robot.lib.geometry.Twist2d;
 import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.InterpolatingTreeMap;
@@ -14,6 +16,8 @@ public class RobotState {
 	private static final int kObservationBufferSize = 100;
 	private static RobotState instance_ = new RobotState();
 	// FPGATimestamp -> RigidTransform2d or Rotation2d
+	private static final Pose2d kVehicleToCamera = new Pose2d(new Translation2d(Constants.kCameraXOffset, Constants.kCameraYOffset),
+			new Rotation2d());
 	private InterpolatingTreeMap<InterpolatingDouble, Pose2d> field_to_vehicle_;
 	private Twist2d vehicle_velocity_predicted_;
 	private Twist2d vehicle_velocity_measured_;
@@ -21,6 +25,7 @@ public class RobotState {
 
 	private RobotState() {
 		reset(0, new Pose2d());
+
 	}
 
 	public static RobotState getInstance() {
@@ -60,6 +65,10 @@ public class RobotState {
 
 	public synchronized void addFieldToVehicleObservation(double timestamp, Pose2d observation) {
 		field_to_vehicle_.put(new InterpolatingDouble(timestamp), observation);
+	}
+
+	public synchronized Pose2d getFieldToCamera(double timestamp) {
+		return getFieldToVehicle(timestamp).transformBy(kVehicleToCamera);
 	}
 
 	public synchronized void addObservations(double timestamp, Twist2d measured_velocity, Twist2d predicted_velocity) {

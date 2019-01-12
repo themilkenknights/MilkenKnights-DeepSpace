@@ -30,6 +30,10 @@ public final class Constants {
 	public static final double kDriveKv = 0.135;  // V per rad/s
 	public static final double kDriveKa = 0.012;  // V per rad/s^2
 
+	// Pose of the camera frame w.r.t. the robot frame
+	public static double kCameraXOffset = 0.0;
+	public static double kCameraYOffset = 0.0;
+
 	public static final int LEFT_MASTER_ID = 10;
 	public static final int LEFT_SLAVE_ID = 8;
 	public static final int RIGHT_MASTER_ID = 5;

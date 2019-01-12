@@ -1,15 +1,16 @@
-package frc.robot.lib.drivers;
+package frc.robot.lib.vision;
 
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Notifier;
-import frc.robot.lib.drivers.LimeLightControlMode.Advanced_Crosshair;
-import frc.robot.lib.drivers.LimeLightControlMode.Advanced_Target;
-import frc.robot.lib.drivers.LimeLightControlMode.CamMode;
-import frc.robot.lib.drivers.LimeLightControlMode.LedMode;
-import frc.robot.lib.drivers.LimeLightControlMode.Snapshot;
-import frc.robot.lib.drivers.LimeLightControlMode.StreamType;
+import edu.wpi.first.wpilibj.Timer;
+import frc.robot.lib.vision.LimeLightControlMode.Advanced_Crosshair;
+import frc.robot.lib.vision.LimeLightControlMode.Advanced_Target;
+import frc.robot.lib.vision.LimeLightControlMode.CamMode;
+import frc.robot.lib.vision.LimeLightControlMode.LedMode;
+import frc.robot.lib.vision.LimeLightControlMode.Snapshot;
+import frc.robot.lib.vision.LimeLightControlMode.StreamType;
 
 /**
  * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you Enjoy the Lime Light Camera.
@@ -21,6 +22,19 @@ public class LimeLight {
 	private String m_tableName;
 	private Boolean isConnected = false;
 	private double _hearBeatPeriod = 0.1;
+	NetworkTableEntry tv = m_table.getEntry("tv");
+	NetworkTableEntry tx = m_table.getEntry("tx");
+	NetworkTableEntry ty = m_table.getEntry("ty");
+	NetworkTableEntry ta = m_table.getEntry("ta");
+	NetworkTableEntry ts = m_table.getEntry("ts");
+	NetworkTableEntry tl = m_table.getEntry("tl");
+	NetworkTableEntry thoriz = m_table.getEntry("thoriz");
+	NetworkTableEntry tvert = m_table.getEntry("tvert");
+	NetworkTableEntry ledMode = m_table.getEntry("ledMode");
+	NetworkTableEntry camMode = m_table.getEntry("camMode");
+	NetworkTableEntry pipeline = m_table.getEntry("pipeline");
+	NetworkTableEntry stream = m_table.getEntry("stream");
+	NetworkTableEntry snapshot = m_table.getEntry("snapshot");
 
 
 	/**
@@ -59,16 +73,18 @@ public class LimeLight {
 	 * tv Whether the limelight has any valid targets (0 or 1)
 	 */
 	public boolean getIsTargetFound() {
-		NetworkTableEntry tv = m_table.getEntry("tv");
 		double v = tv.getDouble(0);
 		return v != 0.0f;
+	}
+
+	public LimelightTarget returnTarget(){
+		return new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(),getVertLength(), getCaptureTime());
 	}
 
 	/**
 	 * tx Horizontal Offset From Crosshair To Target (-27 degrees to 27 degrees)
 	 */
 	public double getX() {
-		NetworkTableEntry tx = m_table.getEntry("tx");
 		double x = tx.getDouble(0.0);
 		return x;
 	}
@@ -77,7 +93,6 @@ public class LimeLight {
 	 * ty Vertical Offset From Crosshair To Target (-20.5 degrees to 20.5 degrees)
 	 */
 	public double getY() {
-		NetworkTableEntry ty = m_table.getEntry("ty");
 		double y = ty.getDouble(0.0);
 		return y;
 	}
@@ -86,7 +101,6 @@ public class LimeLight {
 	 * ta Target Area (0% of image to 100% of image)
 	 */
 	public double getTargetArea() {
-		NetworkTableEntry ta = m_table.getEntry("ta");
 		double a = ta.getDouble(0.0);
 		return a;
 	}
@@ -95,7 +109,6 @@ public class LimeLight {
 	 * ts Skew or rotation (-90 degrees to 0 degrees)
 	 */
 	public double getSkew_Rotation() {
-		NetworkTableEntry ts = m_table.getEntry("ts");
 		double s = ts.getDouble(0.0);
 		return s;
 	}
@@ -104,9 +117,23 @@ public class LimeLight {
 	 * tl The pipeline’s latency contribution (ms) Add at least 11ms for image capture latency.
 	 */
 	public double getPipelineLatency() {
-		NetworkTableEntry tl = m_table.getEntry("tl");
 		double l = tl.getDouble(0.0);
 		return l;
+	}
+
+	public double getCaptureTime() {
+		double l = Timer.getFPGATimestamp() - (tl.getDouble(0.0) * 1e-3);
+		return l;
+	}
+
+	public double getHorizLength(){
+		double h = thoriz.getDouble(0.0);
+		return h;
+	}
+
+	public double getVertLength(){
+		double v = tvert.getDouble(0.0);
+		return v;
 	}
 
 	private void resetPilelineLatency() {
@@ -119,7 +146,6 @@ public class LimeLight {
 	 * @return LedMode
 	 */
 	public LedMode getLEDMode() {
-		NetworkTableEntry ledMode = m_table.getEntry("ledMode");
 		double led = ledMode.getDouble(0.0);
 		LedMode mode = LedMode.getByValue(led);
 		return mode;
@@ -141,7 +167,6 @@ public class LimeLight {
 	 * @return CamMode
 	 */
 	public CamMode getCamMode() {
-		NetworkTableEntry camMode = m_table.getEntry("camMode");
 		double cam = camMode.getDouble(0.0);
 		CamMode mode = CamMode.getByValue(cam);
 		return mode;
@@ -163,7 +188,6 @@ public class LimeLight {
 	 * @return Pipelinge
 	 */
 	public double getPipeline() {
-		NetworkTableEntry pipeline = m_table.getEntry("pipeline");
 		double pipe = pipeline.getDouble(0.0);
 		return pipe;
 	}
@@ -205,13 +229,11 @@ public class LimeLight {
 	 * @return Pipelinge
 	 */
 	public Integer getPipelineInt() {
-		NetworkTableEntry pipeline = m_table.getEntry("pipeline");
 		Integer pipe = (int) pipeline.getDouble(0.0);
 		return pipe;
 	}
 
 	public StreamType getStream() {
-		NetworkTableEntry stream = m_table.getEntry("stream");
 		double st = stream.getDouble(0.0);
 		StreamType mode = StreamType.getByValue(st);
 		return mode;
@@ -229,7 +251,6 @@ public class LimeLight {
 	}
 
 	public Snapshot getSnapshot() {
-		NetworkTableEntry snapshot = m_table.getEntry("snapshot");
 		double snshot = snapshot.getDouble(0.0);
 		Snapshot mode = Snapshot.getByValue(snshot);
 		return mode;

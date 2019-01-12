@@ -19,7 +19,6 @@ public class CollectAccelerationData implements Action {
 	private final List<DriveCharacterization.AccelerationDataPoint> mAccelerationData;
 	private final boolean mTurn;
 	private final boolean mReverse;
-	private final boolean mHighGear;
 
 	private double mStartTime = 0.0;
 	private double mPrevVelocity = 0.0;
@@ -27,16 +26,14 @@ public class CollectAccelerationData implements Action {
 
 	/**
 	 * @param data reference to the list where data points should be stored
-	 * @param highGear use high gear or low
 	 * @param reverse if true drive in reverse, if false drive normally
 	 * @param turn if true turn, if false drive straight
 	 */
-	public CollectAccelerationData(List<DriveCharacterization.AccelerationDataPoint> data, boolean highGear, boolean reverse, boolean turn) {
+	public CollectAccelerationData(List<DriveCharacterization.AccelerationDataPoint> data, boolean reverse, boolean turn) {
 		mAccelerationData = data;
-		mHighGear = highGear;
 		mReverse = reverse;
 		mTurn = turn;
-		mCSVWriter = new ReflectingCSVWriter<>("/home/lvuser/ACCEL_DATA.csv", DriveCharacterization.AccelerationDataPoint.class);
+		mCSVWriter = new ReflectingCSVWriter<>("ACCEL_DATA.csv", DriveCharacterization.AccelerationDataPoint.class);
 	}
 
 	@Override
@@ -48,8 +45,9 @@ public class CollectAccelerationData implements Action {
 
 	@Override
 	public void update() {
+		//Rad/s
 		double currentVelocity = (Math.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.leftVel)) + Math
-				.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.leftVel))) / 4096.0 * Math.PI * 10;
+				.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.rightVel))) / 4096.0 * Math.PI * 10;
 		double currentTime = Timer.getFPGATimestamp();
 
 		//don't calculate acceleration until we've populated prevTime and prevVelocity

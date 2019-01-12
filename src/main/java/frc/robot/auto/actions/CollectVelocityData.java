@@ -18,7 +18,6 @@ public class CollectVelocityData implements Action {
 	private final List<DriveCharacterization.VelocityDataPoint> mVelocityData;
 	private final boolean mTurn;
 	private final boolean mReverse;
-	private final boolean mHighGear;
 
 	private boolean isFinished = false;
 	private double mStartTime = 0.0;
@@ -30,12 +29,11 @@ public class CollectVelocityData implements Action {
 	 * @param turn if true turn, if false drive straight
 	 */
 
-	public CollectVelocityData(List<DriveCharacterization.VelocityDataPoint> data, boolean highGear, boolean reverse, boolean turn) {
+	public CollectVelocityData(List<DriveCharacterization.VelocityDataPoint> data, boolean reverse, boolean turn) {
 		mVelocityData = data;
-		mHighGear = highGear;
 		mReverse = reverse;
 		mTurn = turn;
-		mCSVWriter = new ReflectingCSVWriter<>("/home/lvuser/VELOCITY_DATA.csv", DriveCharacterization.VelocityDataPoint.class);
+		mCSVWriter = new ReflectingCSVWriter<>("VELOCITY_DATA.csv", DriveCharacterization.VelocityDataPoint.class);
 
 	}
 
@@ -55,7 +53,7 @@ public class CollectVelocityData implements Action {
 				new DriveSignal((mReverse ? -1.0 : 1.0) * percentPower, (mReverse ? -1.0 : 1.0) * (mTurn ? -1.0 : 1.0) * percentPower));
 		mVelocityData.add(new DriveCharacterization.VelocityDataPoint(
 				(Math.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.leftVel)) + Math
-						.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.leftVel))) / 4096.0 * Math.PI * 10,
+						.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.rightVel))) / 4096.0 * Math.PI * 10,
 				//convert velocity to radians per second
 				percentPower * 12.0 //convert to volts
 		));

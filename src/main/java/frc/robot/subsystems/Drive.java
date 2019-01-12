@@ -7,17 +7,17 @@ import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
-import frc.robot.paths.Kinematics;
-import frc.robot.lib.math.MkMath;
-import frc.robot.paths.RobotState;
-import frc.robot.lib.drivers.LimeLight;
+import frc.robot.auto.AutoModeExecutor;
+import frc.robot.auto.modes.TrackTarget;
 import frc.robot.lib.drivers.MkGyro;
 import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonPosition;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Pose2dWithCurvature;
 import frc.robot.lib.geometry.Rotation2d;
+import frc.robot.lib.geometry.Translation2d;
 import frc.robot.lib.geometry.Twist2d;
+import frc.robot.lib.math.MkMath;
 import frc.robot.lib.structure.ILooper;
 import frc.robot.lib.structure.Loop;
 import frc.robot.lib.trajectory.TrajectoryIterator;
@@ -26,7 +26,10 @@ import frc.robot.lib.util.CrashTracker;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.ReflectingCSVWriter;
+import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.paths.DriveMotionPlanner;
+import frc.robot.paths.Kinematics;
+import frc.robot.paths.RobotState;
 
 public class Drive extends Subsystem {
 
@@ -37,8 +40,9 @@ public class Drive extends Subsystem {
 	private Rotation2d mGyroOffset = Rotation2d.identity();
 	private boolean mOverrideTrajectory = false;
 	private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
-	private DriveControlState mDriveControlState;
-	private LimeLight limeLight;
+	public DriveControlState mDriveControlState;
+	private static AutoModeExecutor mAutoModeExecuter = null;
+
 	private double left_encoder_prev_distance_ = 0.0;
 	private double right_encoder_prev_distance_ = 0.0;
 
@@ -59,7 +63,6 @@ public class Drive extends Subsystem {
 		rightDrive.masterTalon.setInverted(Constants.RIGHT_MASTER_INVERT);
 		rightDrive.slaveTalon.setInverted(Constants.RIGHT_SLAVE_INVERT);
 		rightDrive.masterTalon.setSensorPhase(Constants.RIGHT_INVERT_SENSOR);
-		limeLight = new LimeLight();
 
 		mMotionPlanner = new DriveMotionPlanner();
 	}
@@ -339,10 +342,27 @@ public class Drive extends Subsystem {
 	}
 
 	public void updateVision() {
-		InterpolatingDouble dist = Constants.visionDistMap.getInterpolated(new InterpolatingDouble(limeLight.getTargetArea()));
-		double steering_adjust = 0.08 * limeLight.getX();
+		LimelightTarget target = Superstructure.getInstance().getTarget();
+		InterpolatingDouble dist = Constants.visionDistMap.getInterpolated(new InterpolatingDouble(target.getArea()));
+		double steering_adjust = 0.08 * target.getXOffset();
 		leftDrive.set(ControlMode.MotionMagic, dist.value, NeutralMode.Brake, steering_adjust);
 		rightDrive.set(ControlMode.MotionMagic, dist.value, NeutralMode.Brake, -steering_adjust);
+	}
+
+	public void targetPos() {
+		LimelightTarget target = Superstructure.getInstance().getTarget();
+		if (target.isValidTarget()) {
+			if (mAutoModeExecuter != null) {
+				mAutoModeExecuter.stop();
+			}
+			mAutoModeExecuter = null;
+			mAutoModeExecuter = new AutoModeExecutor();
+			double dist = Constants.visionDistMap.getInterpolated(new InterpolatingDouble(target.getArea())).value;
+			double angle = target.getXOffset();
+			mAutoModeExecuter.setAutoMode(new TrackTarget(new Pose2d(new Translation2d(dist, 0.0), Rotation2d.fromDegrees(angle))));
+			mAutoModeExecuter.start();
+		}
+
 	}
 
 	public enum DriveControlState {
