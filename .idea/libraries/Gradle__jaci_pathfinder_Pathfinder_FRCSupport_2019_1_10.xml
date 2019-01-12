@@ -2,10 +2,12 @@
   <library name="Gradle: jaci.pathfinder:Pathfinder-FRCSupport:2019.1.10">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/jaci.pathfinder/Pathfinder-FRCSupport/2019.1.10/28939dc51f2696c5909f1b121fb17833acbbca7d/Pathfinder-FRCSupport-2019.1.10.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/jaci.pathfinder/Pathfinder-FRCSupport/2019.1.10/122f75287836412da627baab8b45b4c6e9f2a57f/Pathfinder-FRCSupport-2019.1.10.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/jaci.pathfinder/Pathfinder-FRCSupport/2019.1.10/ff81bb1ac60e9a4e17cf05e5762338b65597f0ac/Pathfinder-FRCSupport-2019.1.10-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/jaci.pathfinder/Pathfinder-FRCSupport/2019.1.10/13f2daa2e1d9386f1f3d68239e59c553a03fe88b/Pathfinder-FRCSupport-2019.1.10-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
