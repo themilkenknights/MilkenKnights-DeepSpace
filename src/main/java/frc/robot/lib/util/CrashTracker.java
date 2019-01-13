@@ -1,5 +1,7 @@
 package frc.robot.lib.util;
 
+import edu.wpi.first.wpilibj.shuffleboard.EventImportance;
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -47,15 +49,18 @@ public class CrashTracker {
 		}
 
 		public static void logTeleopInit() {
-				logMarker("teleop init");
+			logMarker("teleop init");
+			Shuffleboard.addEventMarker("Teleop Init", EventImportance.kHigh);
 		}
 
 		public static void logAutoInit() {
-				logMarker("auto init");
+			logMarker("auto init");
+			Shuffleboard.addEventMarker("Auto Init", EventImportance.kHigh);
 		}
 
 		public static void logDisabledInit() {
-				logMarker("disabled init");
+			logMarker("disabled init");
+			Shuffleboard.addEventMarker("Disabled Init", EventImportance.kHigh);
 		}
 
 		public static void logThrowableCrash(Throwable throwable) {

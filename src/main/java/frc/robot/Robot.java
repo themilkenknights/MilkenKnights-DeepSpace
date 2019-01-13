@@ -8,6 +8,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.structure.Looper;
 import frc.robot.lib.util.CrashTracker;
@@ -56,6 +57,7 @@ public class Robot extends TimedRobot {
 	@Override
 	public void autonomousInit() {
 		try {
+			Shuffleboard.startRecording();
 			CrashTracker.logAutoInit();
 			mMatchState = MatchState.AUTO;
 			mEnabledLooper.start();
@@ -70,6 +72,7 @@ public class Robot extends TimedRobot {
 	@Override
 	public void teleopInit() {
 		try {
+			Shuffleboard.startRecording();
 			CrashTracker.logTeleopInit();
 			mMatchState = MatchState.TELEOP;
 			Drive.getInstance().mDriveControlState = DriveControlState.OPEN_LOOP;
