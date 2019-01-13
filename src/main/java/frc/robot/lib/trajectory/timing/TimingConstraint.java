@@ -25,16 +25,16 @@ public interface TimingConstraint<S extends State<S>> {
 			max_acceleration_ = max_acceleration;
 		}
 
+		public boolean valid() {
+			return min_acceleration() <= max_acceleration();
+		}
+
 		public double min_acceleration() {
 			return min_acceleration_;
 		}
 
 		public double max_acceleration() {
 			return max_acceleration_;
-		}
-
-		public boolean valid() {
-			return min_acceleration() <= max_acceleration();
 		}
 	}
 }

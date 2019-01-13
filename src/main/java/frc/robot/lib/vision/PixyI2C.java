@@ -4,7 +4,6 @@ import edu.wpi.first.wpilibj.I2C;
 import edu.wpi.first.wpilibj.I2C.Port;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-
 public class PixyI2C {
 
 	PixyPacket values;
@@ -26,11 +25,6 @@ public class PixyI2C {
 		packets = argPixyPacket;
 		pExc = argPixyException;
 		values = argValues;
-	}
-
-	//This method parses raw data from the pixy into readable integers
-	public int cvt(byte upper, byte lower) {
-		return (((int) upper & 0xff) << 8) | ((int) lower & 0xff);
 	}
 
 	/*
@@ -88,6 +82,11 @@ public class PixyI2C {
 		return pkt;
 	}
 
+	//This method parses raw data from the pixy into readable integers
+	public int cvt(byte upper, byte lower) {
+		return (((int) upper & 0xff) << 8) | ((int) lower & 0xff);
+	}
+
 	public int getX() {
 		return values.X;
 	}
@@ -96,16 +95,16 @@ public class PixyI2C {
 		return values.Y;
 	}
 
+	public int getArea() {
+		return getWidth() * getHeight();
+	}
+
 	public int getWidth() {
 		return values.Width;
 	}
 
 	public int getHeight() {
 		return values.Height;
-	}
-
-	public int getArea() {
-		return getWidth() * getHeight();
 	}
 
 }

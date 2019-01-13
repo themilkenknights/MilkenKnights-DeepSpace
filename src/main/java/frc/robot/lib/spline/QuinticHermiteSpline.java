@@ -3,6 +3,7 @@ package frc.robot.lib.spline;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Rotation2d;
 import frc.robot.lib.geometry.Translation2d;
+
 import java.util.List;
 
 public class QuinticHermiteSpline extends Spline {
@@ -39,10 +40,29 @@ public class QuinticHermiteSpline extends Spline {
 	}
 
 	/**
+	 * Re-arranges the spline into an at^5 + bt^4 + ... + f form for simpler computations
+	 */
+	private void computeCoefficients() {
+		ax = -6 * x0 - 3 * dx0 - 0.5 * ddx0 + 0.5 * ddx1 - 3 * dx1 + 6 * x1;
+		bx = 15 * x0 + 8 * dx0 + 1.5 * ddx0 - ddx1 + 7 * dx1 - 15 * x1;
+		cx = -10 * x0 - 6 * dx0 - 1.5 * ddx0 + 0.5 * ddx1 - 4 * dx1 + 10 * x1;
+		dx = 0.5 * ddx0;
+		ex = dx0;
+		fx = x0;
+
+		ay = -6 * y0 - 3 * dy0 - 0.5 * ddy0 + 0.5 * ddy1 - 3 * dy1 + 6 * y1;
+		by = 15 * y0 + 8 * dy0 + 1.5 * ddy0 - ddy1 + 7 * dy1 - 15 * y1;
+		cy = -10 * y0 - 6 * dy0 - 1.5 * ddy0 + 0.5 * ddy1 - 4 * dy1 + 10 * y1;
+		dy = 0.5 * ddy0;
+		ey = dy0;
+		fy = y0;
+	}
+
+	/**
 	 * Used by the curvature optimization function
 	 */
 	private QuinticHermiteSpline(double x0, double x1, double dx0, double dx1, double ddx0, double ddx1, double y0, double y1, double dy0,
-			double dy1, double ddy0, double ddy1) {
+	                             double dy1, double ddy0, double ddy1) {
 		this.x0 = x0;
 		this.x1 = x1;
 		this.dx0 = dx0;
@@ -219,31 +239,45 @@ public class QuinticHermiteSpline extends Spline {
 		return -B / (2 * A);
 	}
 
-	/**
-	 * Re-arranges the spline into an at^5 + bt^4 + ... + f form for simpler computations
-	 */
-	private void computeCoefficients() {
-		ax = -6 * x0 - 3 * dx0 - 0.5 * ddx0 + 0.5 * ddx1 - 3 * dx1 + 6 * x1;
-		bx = 15 * x0 + 8 * dx0 + 1.5 * ddx0 - ddx1 + 7 * dx1 - 15 * x1;
-		cx = -10 * x0 - 6 * dx0 - 1.5 * ddx0 + 0.5 * ddx1 - 4 * dx1 + 10 * x1;
-		dx = 0.5 * ddx0;
-		ex = dx0;
-		fx = x0;
-
-		ay = -6 * y0 - 3 * dy0 - 0.5 * ddy0 + 0.5 * ddy1 - 3 * dy1 + 6 * y1;
-		by = 15 * y0 + 8 * dy0 + 1.5 * ddy0 - ddy1 + 7 * dy1 - 15 * y1;
-		cy = -10 * y0 - 6 * dy0 - 1.5 * ddy0 + 0.5 * ddy1 - 4 * dy1 + 10 * y1;
-		dy = 0.5 * ddy0;
-		ey = dy0;
-		fy = y0;
-	}
-
 	public Pose2d getStartPose() {
 		return new Pose2d(new Translation2d(x0, y0), new Rotation2d(dx0, dy0, true));
 	}
 
 	public Pose2d getEndPose() {
 		return new Pose2d(new Translation2d(x1, y1), new Rotation2d(dx1, dy1, true));
+	}
+
+	@Override
+	public double getCurvature(double t) {
+		return (dx(t) * ddy(t) - ddx(t) * dy(t)) / ((dx(t) * dx(t) + dy(t) * dy(t)) * Math.sqrt((dx(t) * dx(t) + dy(t) * dy(t))));
+	}
+
+	private double ddy(double t) {
+		return 20 * ay * t * t * t + 12 * by * t * t + 6 * cy * t + 2 * dy;
+	}
+
+	private double ddx(double t) {
+		return 20 * ax * t * t * t + 12 * bx * t * t + 6 * cx * t + 2 * dx;
+	}
+
+	@Override
+	public double getDCurvature(double t) {
+		double dx2dy2 = (dx(t) * dx(t) + dy(t) * dy(t));
+		double num = (dx(t) * dddy(t) - dddx(t) * dy(t)) * dx2dy2 - 3 * (dx(t) * ddy(t) - ddx(t) * dy(t)) * (dx(t) * ddx(t) + dy(t) * ddy(t));
+		return num / (dx2dy2 * dx2dy2 * Math.sqrt(dx2dy2));
+	}
+
+	private double dddy(double t) {
+		return 60 * ay * t * t + 24 * by * t + 6 * cy;
+	}
+
+	private double dddx(double t) {
+		return 60 * ax * t * t + 24 * bx * t + 6 * cx;
+	}
+
+	@Override
+	public double getVelocity(double t) {
+		return Math.hypot(dx(t), dy(t));
 	}
 
 	/**
@@ -257,6 +291,11 @@ public class QuinticHermiteSpline extends Spline {
 		return new Translation2d(x, y);
 	}
 
+	@Override
+	public Rotation2d getHeading(double t) {
+		return new Rotation2d(dx(t), dy(t), true);
+	}
+
 	private double dx(double t) {
 		return 5 * ax * t * t * t * t + 4 * bx * t * t * t + 3 * cx * t * t + 2 * dx * t + ex;
 	}
@@ -265,48 +304,10 @@ public class QuinticHermiteSpline extends Spline {
 		return 5 * ay * t * t * t * t + 4 * by * t * t * t + 3 * cy * t * t + 2 * dy * t + ey;
 	}
 
-	private double ddx(double t) {
-		return 20 * ax * t * t * t + 12 * bx * t * t + 6 * cx * t + 2 * dx;
-	}
-
-	private double ddy(double t) {
-		return 20 * ay * t * t * t + 12 * by * t * t + 6 * cy * t + 2 * dy;
-	}
-
-	private double dddx(double t) {
-		return 60 * ax * t * t + 24 * bx * t + 6 * cx;
-	}
-
-	private double dddy(double t) {
-		return 60 * ay * t * t + 24 * by * t + 6 * cy;
-	}
-
-	@Override
-	public double getVelocity(double t) {
-		return Math.hypot(dx(t), dy(t));
-	}
-
-	@Override
-	public double getCurvature(double t) {
-		return (dx(t) * ddy(t) - ddx(t) * dy(t)) / ((dx(t) * dx(t) + dy(t) * dy(t)) * Math.sqrt((dx(t) * dx(t) + dy(t) * dy(t))));
-	}
-
-	@Override
-	public double getDCurvature(double t) {
-		double dx2dy2 = (dx(t) * dx(t) + dy(t) * dy(t));
-		double num = (dx(t) * dddy(t) - dddx(t) * dy(t)) * dx2dy2 - 3 * (dx(t) * ddy(t) - ddx(t) * dy(t)) * (dx(t) * ddx(t) + dy(t) * ddy(t));
-		return num / (dx2dy2 * dx2dy2 * Math.sqrt(dx2dy2));
-	}
-
 	private double dCurvature2(double t) {
 		double dx2dy2 = (dx(t) * dx(t) + dy(t) * dy(t));
 		double num = (dx(t) * dddy(t) - dddx(t) * dy(t)) * dx2dy2 - 3 * (dx(t) * ddy(t) - ddx(t) * dy(t)) * (dx(t) * ddx(t) + dy(t) * ddy(t));
 		return num * num / (dx2dy2 * dx2dy2 * dx2dy2 * dx2dy2 * dx2dy2);
-	}
-
-	@Override
-	public Rotation2d getHeading(double t) {
-		return new Rotation2d(dx(t), dy(t), true);
 	}
 
 	/**

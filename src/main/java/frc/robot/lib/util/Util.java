@@ -42,12 +42,12 @@ public class Util {
 		return sb.toString();
 	}
 
-	public static boolean epsilonEquals(double a, double b, double epsilon) {
-		return (a - epsilon <= b) && (a + epsilon >= b);
-	}
-
 	public static boolean epsilonEquals(double a, double b) {
 		return epsilonEquals(a, b, kEpsilon);
+	}
+
+	public static boolean epsilonEquals(double a, double b, double epsilon) {
+		return (a - epsilon <= b) && (a + epsilon >= b);
 	}
 
 	public static boolean epsilonEquals(int a, int b, int epsilon) {

@@ -1,10 +1,7 @@
 package frc.robot.lib.spline;
 
-import frc.robot.lib.geometry.Pose2d;
-import frc.robot.lib.geometry.Pose2dWithCurvature;
-import frc.robot.lib.geometry.Rotation2d;
-import frc.robot.lib.geometry.Translation2d;
-import frc.robot.lib.geometry.Twist2d;
+import frc.robot.lib.geometry.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +15,7 @@ public class SplineGenerator {
 	/**
 	 * Converts a spline into a list of Twist2d's.
 	 *
-	 * @param s the spline to parametrize
+	 * @param s  the spline to parametrize
 	 * @param t0 starting percentage of spline to parametrize
 	 * @param t1 ending percentage of spline to parametrize
 	 * @return list of Pose2dWithCurvature that approximates the original spline
@@ -49,7 +46,7 @@ public class SplineGenerator {
 	}
 
 	public static List<Pose2dWithCurvature> parameterizeSplines(List<? extends Spline> splines, double maxDx, double maxDy,
-			double maxDTheta) {
+	                                                            double maxDTheta) {
 		List<Pose2dWithCurvature> rv = new ArrayList<>();
 		if (splines.isEmpty()) {
 			return rv;
@@ -64,7 +61,7 @@ public class SplineGenerator {
 	}
 
 	private static void getSegmentArc(Spline s, List<Pose2dWithCurvature> rv, double t0, double t1, double maxDx, double maxDy,
-			double maxDTheta) {
+	                                  double maxDTheta) {
 		Translation2d p0 = s.getPoint(t0);
 		Translation2d p1 = s.getPoint(t1);
 		Rotation2d r0 = s.getHeading(t0);

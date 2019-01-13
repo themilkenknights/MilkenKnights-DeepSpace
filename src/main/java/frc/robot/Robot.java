@@ -19,6 +19,7 @@ import frc.robot.subsystems.Drive.DriveControlState;
 import frc.robot.subsystems.Input;
 import frc.robot.subsystems.SubsystemManager;
 import frc.robot.subsystems.Superstructure;
+
 import java.util.Arrays;
 
 public class Robot extends TimedRobot {
@@ -73,10 +74,6 @@ public class Robot extends TimedRobot {
 	}
 
 	@Override
-	public void autonomousPeriodic() {
-	}
-
-	@Override
 	public void teleopInit() {
 		try {
 			CrashTracker.logTeleopInit();
@@ -87,10 +84,6 @@ public class Robot extends TimedRobot {
 			CrashTracker.logThrowableCrash(t);
 			throw t;
 		}
-	}
-
-	@Override
-	public void teleopPeriodic() {
 	}
 
 	@Override
@@ -108,10 +101,6 @@ public class Robot extends TimedRobot {
 	}
 
 	@Override
-	public void testPeriodic() {
-	}
-
-	@Override
 	public void robotPeriodic() {
 		try {
 			mSubsystemManager.outputToSmartDashboard();
@@ -121,6 +110,18 @@ public class Robot extends TimedRobot {
 			CrashTracker.logThrowableCrash(t);
 			throw t;
 		}
+	}
+
+	@Override
+	public void autonomousPeriodic() {
+	}
+
+	@Override
+	public void teleopPeriodic() {
+	}
+
+	@Override
+	public void testPeriodic() {
 	}
 
 	public enum MatchState {

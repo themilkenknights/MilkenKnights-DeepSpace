@@ -1,6 +1,5 @@
 package frc.robot.lib.physics;
 
-
 import frc.robot.lib.util.Util;
 
 public class PhysicsTest {

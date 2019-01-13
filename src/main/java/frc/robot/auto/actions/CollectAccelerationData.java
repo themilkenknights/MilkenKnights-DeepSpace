@@ -7,6 +7,7 @@ import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.ReflectingCSVWriter;
 import frc.robot.lib.util.Util;
 import frc.robot.subsystems.Drive;
+
 import java.util.List;
 
 public class CollectAccelerationData implements Action {
@@ -25,9 +26,9 @@ public class CollectAccelerationData implements Action {
 	private double mPrevTime = 0.0;
 
 	/**
-	 * @param data reference to the list where data points should be stored
+	 * @param data    reference to the list where data points should be stored
 	 * @param reverse if true drive in reverse, if false drive normally
-	 * @param turn if true turn, if false drive straight
+	 * @param turn    if true turn, if false drive straight
 	 */
 	public CollectAccelerationData(List<DriveCharacterization.AccelerationDataPoint> data, boolean reverse, boolean turn) {
 		mAccelerationData = data;
@@ -37,10 +38,8 @@ public class CollectAccelerationData implements Action {
 	}
 
 	@Override
-	public void start() {
-		mDrive.setOpenLoop(new DriveSignal((mReverse ? -1.0 : 1.0) * kPower, (mReverse ? -1.0 : 1.0) * (mTurn ? -1.0 : 1.0) * kPower));
-		mStartTime = Timer.getFPGATimestamp();
-		mPrevTime = mStartTime;
+	public boolean isFinished() {
+		return Timer.getFPGATimestamp() - mStartTime > kTotalTime;
 	}
 
 	@Override
@@ -77,14 +76,16 @@ public class CollectAccelerationData implements Action {
 	}
 
 	@Override
-	public boolean isFinished() {
-		return Timer.getFPGATimestamp() - mStartTime > kTotalTime;
-	}
-
-	@Override
 	public void done() {
 		mDrive.setOpenLoop(DriveSignal.BRAKE);
 		mCSVWriter.flush();
+	}
+
+	@Override
+	public void start() {
+		mDrive.setOpenLoop(new DriveSignal((mReverse ? -1.0 : 1.0) * kPower, (mReverse ? -1.0 : 1.0) * (mTurn ? -1.0 : 1.0) * kPower));
+		mStartTime = Timer.getFPGATimestamp();
+		mPrevTime = mStartTime;
 	}
 
 }

@@ -20,18 +20,6 @@ public class DCMotorTransmission {
 		friction_voltage_ = friction_voltage;
 	}
 
-	public double speed_per_volt() {
-		return speed_per_volt_;
-	}
-
-	public double torque_per_volt() {
-		return torque_per_volt_;
-	}
-
-	public double friction_voltage() {
-		return friction_voltage_;
-	}
-
 	public double free_speed_at_voltage(final double voltage) {
 		if (voltage > Util.kEpsilon) {
 			return Math.max(0.0, voltage - friction_voltage()) * speed_per_volt();
@@ -40,6 +28,14 @@ public class DCMotorTransmission {
 		} else {
 			return 0.0;
 		}
+	}
+
+	public double friction_voltage() {
+		return friction_voltage_;
+	}
+
+	public double speed_per_volt() {
+		return speed_per_volt_;
 	}
 
 	public double getTorqueForVoltage(final double output_speed, final double voltage) {
@@ -61,6 +57,10 @@ public class DCMotorTransmission {
 			return 0.0;
 		}
 		return torque_per_volt() * (-output_speed / speed_per_volt() + effective_voltage);
+	}
+
+	public double torque_per_volt() {
+		return torque_per_volt_;
 	}
 
 	public double getVoltageForTorque(final double output_speed, final double torque) {

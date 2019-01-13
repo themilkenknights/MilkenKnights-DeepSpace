@@ -20,20 +20,20 @@ public class TrajectoryIterator<S extends State<S>> {
 		return getRemainingProgress() == 0.0;
 	}
 
-	public double getProgress() {
-		return progress_;
-	}
-
 	public double getRemainingProgress() {
 		return Math.max(0.0, view_.last_interpolant() - progress_);
 	}
 
-	public TrajectorySamplePoint<S> getSample() {
-		return current_sample_;
+	public double getProgress() {
+		return progress_;
 	}
 
 	public S getState() {
 		return getSample().state();
+	}
+
+	public TrajectorySamplePoint<S> getSample() {
+		return current_sample_;
 	}
 
 	public TrajectorySamplePoint<S> advance(double additional_progress) {

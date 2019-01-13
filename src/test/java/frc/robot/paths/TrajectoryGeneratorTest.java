@@ -1,8 +1,5 @@
 package frc.robot.paths;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Pose2dWithCurvature;
 import frc.robot.lib.geometry.Twist2d;
@@ -12,9 +9,18 @@ import frc.robot.lib.trajectory.timing.TimedState;
 import frc.robot.lib.util.Util;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class TrajectoryGeneratorTest {
 
 	public static final double kTestEpsilon = 1e-5;
+
+	@Test
+	public void test() {
+		TrajectoryGenerator.getInstance().generateTrajectories();
+		verifyMirroredTrajectories(TrajectoryGenerator.getInstance().getTrajectorySet().sideStartToNearScale, true);
+	}
 
 	public void verifyMirroredTrajectories(final TrajectoryGenerator.TrajectorySet.MirroredTrajectory mirrored, boolean shouldBeReversed) {
 		assertEquals(mirrored.left.length(), mirrored.right.length());
@@ -79,11 +85,5 @@ public class TrajectoryGeneratorTest {
 			prev_right = right_state;
 		}
 		assertTrue(left_iterator.isDone() && right_iterator.isDone());
-	}
-
-	@Test
-	public void test() {
-		TrajectoryGenerator.getInstance().generateTrajectories();
-		verifyMirroredTrajectories(TrajectoryGenerator.getInstance().getTrajectorySet().sideStartToNearScale, true);
 	}
 }

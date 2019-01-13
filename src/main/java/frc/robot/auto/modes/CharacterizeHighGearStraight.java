@@ -6,6 +6,7 @@ import frc.robot.auto.actions.CollectAccelerationData;
 import frc.robot.auto.actions.CollectVelocityData;
 import frc.robot.auto.actions.WaitAction;
 import frc.robot.lib.physics.DriveCharacterization;
+
 import java.util.ArrayList;
 import java.util.List;
 

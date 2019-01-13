@@ -1,15 +1,12 @@
 package frc.robot.lib.trajectory;
 
-import frc.robot.lib.geometry.IPose2d;
-import frc.robot.lib.geometry.Pose2d;
-import frc.robot.lib.geometry.Pose2dWithCurvature;
-import frc.robot.lib.geometry.State;
-import frc.robot.lib.geometry.Twist2d;
+import frc.robot.lib.geometry.*;
 import frc.robot.lib.spline.QuinticHermiteSpline;
 import frc.robot.lib.spline.Spline;
 import frc.robot.lib.spline.SplineGenerator;
 import frc.robot.lib.trajectory.timing.TimedState;
 import frc.robot.lib.util.Util;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,7 +54,7 @@ public class TrajectoryUtil {
 	}
 
 	public static Trajectory<Pose2dWithCurvature> trajectoryFromPathFollower(IPathFollower path_follower, Pose2dWithCurvature start_state,
-			double step_size, double dcurvature_limit) {
+	                                                                         double step_size, double dcurvature_limit) {
 		List<Pose2dWithCurvature> samples = new ArrayList<Pose2dWithCurvature>();
 		samples.add(start_state);
 		Pose2dWithCurvature current_state = start_state;
@@ -99,7 +96,7 @@ public class TrajectoryUtil {
 	}
 
 	public static Trajectory<Pose2dWithCurvature> trajectoryFromSplineWaypoints(final List<Pose2d> waypoints, double maxDx, double maxDy,
-			double maxDTheta) {
+	                                                                            double maxDTheta) {
 		List<QuinticHermiteSpline> splines = new ArrayList<>(waypoints.size() - 1);
 		for (int i = 1; i < waypoints.size(); ++i) {
 			splines.add(new QuinticHermiteSpline(waypoints.get(i - 1), waypoints.get(i)));
@@ -109,7 +106,7 @@ public class TrajectoryUtil {
 	}
 
 	public static Trajectory<Pose2dWithCurvature> trajectoryFromSplines(final List<? extends Spline> splines, double maxDx, double maxDy,
-			double maxDTheta) {
+	                                                                    double maxDTheta) {
 		return new Trajectory<>(SplineGenerator.parameterizeSplines(splines, maxDx, maxDy, maxDTheta));
 	}
 

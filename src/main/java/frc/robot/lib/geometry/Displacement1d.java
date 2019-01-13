@@ -1,6 +1,7 @@
 package frc.robot.lib.geometry;
 
 import frc.robot.lib.util.Util;
+
 import java.text.DecimalFormat;
 
 public class Displacement1d implements State<Displacement1d> {
@@ -15,10 +16,6 @@ public class Displacement1d implements State<Displacement1d> {
 		displacement_ = displacement;
 	}
 
-	public double x() {
-		return displacement_;
-	}
-
 	@Override
 	public Displacement1d interpolate(final Displacement1d other, double x) {
 		return new Displacement1d(Util.interpolate(displacement_, other.displacement_, x));
@@ -27,6 +24,16 @@ public class Displacement1d implements State<Displacement1d> {
 	@Override
 	public double distance(final Displacement1d other) {
 		return Math.abs(x() - other.x());
+	}
+
+	public double x() {
+		return displacement_;
+	}
+
+	@Override
+	public String toCSV() {
+		final DecimalFormat fmt = new DecimalFormat("#0.000");
+		return fmt.format(x());
 	}
 
 	@Override
@@ -41,11 +48,5 @@ public class Displacement1d implements State<Displacement1d> {
 	public String toString() {
 		final DecimalFormat fmt = new DecimalFormat("#0.000");
 		return fmt.format("(" + x() + ")");
-	}
-
-	@Override
-	public String toCSV() {
-		final DecimalFormat fmt = new DecimalFormat("#0.000");
-		return fmt.format(x());
 	}
 }

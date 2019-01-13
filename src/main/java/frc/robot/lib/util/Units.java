@@ -10,20 +10,20 @@ public class Units {
 		return rads_per_sec * 60.0 / (2.0 * Math.PI);
 	}
 
-	public static double inches_to_meters(double inches) {
-		return inches * 0.0254;
-	}
-
-	public static double meters_to_inches(double meters) {
-		return meters / 0.0254;
-	}
-
 	public static double feet_to_meters(double feet) {
 		return inches_to_meters(feet * 12.0);
 	}
 
+	public static double inches_to_meters(double inches) {
+		return inches * 0.0254;
+	}
+
 	public static double meters_to_feet(double meters) {
 		return meters_to_inches(meters) / 12.0;
+	}
+
+	public static double meters_to_inches(double meters) {
+		return meters / 0.0254;
 	}
 
 	public static double degrees_to_radians(double degrees) {

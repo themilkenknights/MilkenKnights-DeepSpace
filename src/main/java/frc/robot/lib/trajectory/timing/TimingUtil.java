@@ -3,14 +3,15 @@ package frc.robot.lib.trajectory.timing;
 import frc.robot.lib.geometry.State;
 import frc.robot.lib.trajectory.DistanceView;
 import frc.robot.lib.trajectory.Trajectory;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class TimingUtil {
 
 	public static <S extends State<S>> Trajectory<TimedState<S>> timeParameterizeTrajectory(boolean reverse,
-			final DistanceView<S> distance_view, double step_size, final List<TimingConstraint<S>> constraints, double start_velocity,
-			double end_velocity, double max_velocity, double max_abs_acceleration) {
+	                                                                                        final DistanceView<S> distance_view, double step_size, final List<TimingConstraint<S>> constraints, double start_velocity,
+	                                                                                        double end_velocity, double max_velocity, double max_abs_acceleration) {
 		final int num_states = (int) Math.ceil(distance_view.last_interpolant() / step_size + 1);
 		List<S> states = new ArrayList<>(num_states);
 		for (int i = 0; i < num_states; ++i) {
@@ -20,8 +21,8 @@ public class TimingUtil {
 	}
 
 	public static <S extends State<S>> Trajectory<TimedState<S>> timeParameterizeTrajectory(boolean reverse, final List<S> states,
-			final List<TimingConstraint<S>> constraints, double start_velocity, double end_velocity, double max_velocity,
-			double max_abs_acceleration) {
+	                                                                                        final List<TimingConstraint<S>> constraints, double start_velocity, double end_velocity, double max_velocity,
+	                                                                                        double max_abs_acceleration) {
 		List<ConstrainedState<S>> constraint_states = new ArrayList<>(states.size());
 		final double kEpsilon = 1e-6;
 

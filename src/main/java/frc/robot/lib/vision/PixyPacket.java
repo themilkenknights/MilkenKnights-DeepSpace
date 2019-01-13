@@ -1,6 +1,5 @@
 package frc.robot.lib.vision;
 
-
 /**
  *
  */

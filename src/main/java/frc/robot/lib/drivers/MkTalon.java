@@ -1,12 +1,6 @@
 package frc.robot.lib.drivers;
 
-import com.ctre.phoenix.motorcontrol.ControlFrame;
-import com.ctre.phoenix.motorcontrol.ControlMode;
-import com.ctre.phoenix.motorcontrol.DemandType;
-import com.ctre.phoenix.motorcontrol.FeedbackDevice;
-import com.ctre.phoenix.motorcontrol.NeutralMode;
-import com.ctre.phoenix.motorcontrol.StatusFrameEnhanced;
-import com.ctre.phoenix.motorcontrol.VelocityMeasPeriod;
+import com.ctre.phoenix.motorcontrol.*;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
@@ -26,7 +20,7 @@ public class MkTalon {
 
 	/**
 	 * @param master Talon with Encoder CAN ID
-	 * @param slave Follower Talon CAN ID
+	 * @param slave  Follower Talon CAN ID
 	 */
 	public MkTalon(int master, int slave, TalonPosition side) {
 		masterTalon = new TalonSRX(master);
@@ -102,18 +96,6 @@ public class MkTalon {
 		return masterTalon.getSensorCollection().getPulseWidthRiseToRiseUs() > 100;
 	}
 
-	public synchronized double getPosition() {
-		return MkMath.nativeUnitsToInches(masterTalon.getSelectedSensorPosition(Constants.kPIDLoopIdx));
-	}
-
-	public synchronized double getSpeed() {
-		return MkMath.nativeUnitsPer100MstoInchesPerSec(masterTalon.getSelectedSensorVelocity(Constants.kPIDLoopIdx));
-	}
-
-	private double getError() {
-		return MkMath.nativeUnitsPer100MstoInchesPerSec(masterTalon.getClosedLoopError(Constants.kPIDLoopIdx));
-	}
-
 	public void set(ControlMode mode, double value, NeutralMode nMode) {
 		set(mode, value, nMode, 0);
 	}
@@ -148,6 +130,18 @@ public class MkTalon {
 		SmartDashboard.putNumber(side.toString() + " Error", getError());
 		SmartDashboard.putNumber(side.toString() + " Master Output", masterTalon.getMotorOutputPercent());
 		SmartDashboard.putNumber(side.toString() + " Position", getPosition());
+	}
+
+	public synchronized double getSpeed() {
+		return MkMath.nativeUnitsPer100MstoInchesPerSec(masterTalon.getSelectedSensorVelocity(Constants.kPIDLoopIdx));
+	}
+
+	private double getError() {
+		return MkMath.nativeUnitsPer100MstoInchesPerSec(masterTalon.getClosedLoopError(Constants.kPIDLoopIdx));
+	}
+
+	public synchronized double getPosition() {
+		return MkMath.nativeUnitsToInches(masterTalon.getSelectedSensorPosition(Constants.kPIDLoopIdx));
 	}
 
 	public enum TalonPosition {

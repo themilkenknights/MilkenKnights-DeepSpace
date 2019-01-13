@@ -1,9 +1,9 @@
 package frc.robot.subsystems;
 
-
 import frc.robot.lib.structure.ILooper;
 import frc.robot.lib.structure.Loop;
 import frc.robot.lib.structure.Looper;
+
 import java.util.ArrayList;
 import java.util.List;
 

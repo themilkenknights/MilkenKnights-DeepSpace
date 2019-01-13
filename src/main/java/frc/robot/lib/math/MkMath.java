@@ -32,20 +32,20 @@ public class MkMath {
 		return (vel / 60.0) * Constants.CIRCUMFERENCE;
 	}
 
-	public static double rotationsToInches(double rotations) {
-		return rotations * (Constants.WHEEL_DIAMETER * Math.PI);
-	}
-
-	public static double inchesToRotations(double inches) {
-		return inches / (Constants.WHEEL_DIAMETER * Math.PI);
-	}
-
 	public static double rpmToInchesPerSecond(double rpm) {
 		return rotationsToInches(rpm) / 60;
 	}
 
+	public static double rotationsToInches(double rotations) {
+		return rotations * (Constants.WHEEL_DIAMETER * Math.PI);
+	}
+
 	public static double inchesPerSecondToRpm(double inches_per_second) {
 		return inchesToRotations(inches_per_second) * 60;
+	}
+
+	public static double inchesToRotations(double inches) {
+		return inches / (Constants.WHEEL_DIAMETER * Math.PI);
 	}
 
 	public static double radiansPerSecondToTicksPer100ms(double rad_s) {

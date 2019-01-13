@@ -17,30 +17,6 @@ public class CrashTracker {
 		logMarker("robot startup");
 	}
 
-	public static void logRobotConstruction() {
-		logMarker("robot startup");
-	}
-
-	public static void logRobotInit() {
-		logMarker("robot init");
-	}
-
-	public static void logTeleopInit() {
-		logMarker("teleop init");
-	}
-
-	public static void logAutoInit() {
-		logMarker("auto init");
-	}
-
-	public static void logDisabledInit() {
-		logMarker("disabled init");
-	}
-
-	public static void logThrowableCrash(Throwable throwable) {
-		logMarker("Exception", throwable);
-	}
-
 	public static void logMarker(String mark) {
 		logMarker(mark, null);
 		System.out.println(mark);
@@ -64,5 +40,29 @@ public class CrashTracker {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public static void logRobotConstruction() {
+		logMarker("robot startup");
+	}
+
+	public static void logRobotInit() {
+		logMarker("robot init");
+	}
+
+	public static void logTeleopInit() {
+		logMarker("teleop init");
+	}
+
+	public static void logAutoInit() {
+		logMarker("auto init");
+	}
+
+	public static void logDisabledInit() {
+		logMarker("disabled init");
+	}
+
+	public static void logThrowableCrash(Throwable throwable) {
+		logMarker("Exception", throwable);
 	}
 }

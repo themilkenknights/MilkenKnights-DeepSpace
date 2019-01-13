@@ -13,6 +13,18 @@ public class MkLED extends CANifier {
 		super(id);
 	}
 
+	public void setPulse(LEDColors color1, LEDColors color2, double period) {
+		if (!(currentColors[0] == color1 && currentColors[1] == color2)) {
+			startTime = edu.wpi.first.wpilibj.Timer.getFPGATimestamp();
+			currentColors = new LEDColors[]{color1, color2};
+		}
+		if (((int) ((edu.wpi.first.wpilibj.Timer.getFPGATimestamp() - startTime) / period)) % 2 == 0) {
+			set_rgb(color1);
+		} else {
+			set_rgb(color2);
+		}
+	}
+
 	public void set_rgb(LEDColors color) {
 		double r = color.value[0];
 		double g = color.value[1];
@@ -25,18 +37,6 @@ public class MkLED extends CANifier {
 		setLEDOutput(_rgb[0], CANifier.LEDChannel.LEDChannelA);
 		setLEDOutput(_rgb[1], CANifier.LEDChannel.LEDChannelB);
 		setLEDOutput(_rgb[2], CANifier.LEDChannel.LEDChannelC);
-	}
-
-	public void setPulse(LEDColors color1, LEDColors color2, double period) {
-		if (!(currentColors[0] == color1 && currentColors[1] == color2)) {
-			startTime = edu.wpi.first.wpilibj.Timer.getFPGATimestamp();
-			currentColors = new LEDColors[]{color1, color2};
-		}
-		if (((int) ((edu.wpi.first.wpilibj.Timer.getFPGATimestamp() - startTime) / period)) % 2 == 0) {
-			set_rgb(color1);
-		} else {
-			set_rgb(color2);
-		}
 	}
 
 	public void setHSV(float Hue, float Saturation, float Value) {

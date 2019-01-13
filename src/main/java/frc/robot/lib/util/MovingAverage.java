@@ -31,12 +31,12 @@ public class MovingAverage {
 		return total / numbers.size();
 	}
 
-	public int getSize() {
-		return numbers.size();
-	}
-
 	public boolean isUnderMaxSize() {
 		return getSize() < maxSize;
+	}
+
+	public int getSize() {
+		return numbers.size();
 	}
 
 	public void clear() {

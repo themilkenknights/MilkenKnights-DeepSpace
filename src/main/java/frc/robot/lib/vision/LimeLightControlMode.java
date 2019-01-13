@@ -42,7 +42,6 @@ public class LimeLightControlMode {
 
 	}
 
-
 	public enum CamMode {
 		kvision(0), kdriver(1);
 
@@ -72,7 +71,6 @@ public class LimeLightControlMode {
 			return name();
 		}
 	}
-
 
 	public enum StreamType {
 		kStandard(0), kPiPMain(1), kPiPSecondary(2);
@@ -104,7 +102,6 @@ public class LimeLightControlMode {
 		}
 
 	}
-
 
 	public enum Snapshot {
 
@@ -138,7 +135,6 @@ public class LimeLightControlMode {
 
 	}
 
-
 	public enum Advanced_Target {
 
 		kone(0), ktwo(1), kthree(2);
@@ -170,7 +166,6 @@ public class LimeLightControlMode {
 		}
 
 	}
-
 
 	public enum Advanced_Crosshair {
 

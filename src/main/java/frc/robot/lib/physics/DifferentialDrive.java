@@ -2,6 +2,7 @@ package frc.robot.lib.physics;
 
 import frc.robot.lib.util.CSVWritable;
 import frc.robot.lib.util.Util;
+
 import java.text.DecimalFormat;
 import java.util.Arrays;
 
@@ -41,7 +42,7 @@ public class DifferentialDrive {
 	protected final DCMotorTransmission right_transmission_;
 
 	public DifferentialDrive(final double mass, final double moi, final double angular_drag, final double wheel_radius,
-			final double effective_wheelbase_radius, final DCMotorTransmission left_transmission, final DCMotorTransmission right_transmission) {
+	                         final double effective_wheelbase_radius, final DCMotorTransmission left_transmission, final DCMotorTransmission right_transmission) {
 		mass_ = mass;
 		moi_ = moi;
 		angular_drag_ = angular_drag;
@@ -75,22 +76,6 @@ public class DifferentialDrive {
 		return right_transmission_;
 	}
 
-	// Input/demand could be either velocity or acceleration...the math is the same.
-	public ChassisState solveForwardKinematics(final WheelState wheel_motion) {
-		ChassisState chassis_motion = new ChassisState();
-		chassis_motion.linear = wheel_radius_ * (wheel_motion.right + wheel_motion.left) / 2.0;
-		chassis_motion.angular = wheel_radius_ * (wheel_motion.right - wheel_motion.left) / (2.0 * effective_wheelbase_radius_);
-		return chassis_motion;
-	}
-
-	// Input/output could be either velocity or acceleration...the math is the same.
-	public WheelState solveInverseKinematics(final ChassisState chassis_motion) {
-		WheelState wheel_motion = new WheelState();
-		wheel_motion.left = (chassis_motion.linear - effective_wheelbase_radius_ * chassis_motion.angular) / wheel_radius_;
-		wheel_motion.right = (chassis_motion.linear + effective_wheelbase_radius_ * chassis_motion.angular) / wheel_radius_;
-		return wheel_motion;
-	}
-
 	// Solve for torques and accelerations.
 	public DriveDynamics solveForwardDynamics(final ChassisState chassis_velocity, final WheelState voltage) {
 		DriveDynamics dynamics = new DriveDynamics();
@@ -105,17 +90,12 @@ public class DifferentialDrive {
 		return dynamics;
 	}
 
-	public DriveDynamics solveForwardDynamics(final WheelState wheel_velocity, final WheelState voltage) {
-		DriveDynamics dynamics = new DriveDynamics();
-		dynamics.wheel_velocity = wheel_velocity;
-		dynamics.chassis_velocity = solveForwardKinematics(wheel_velocity);
-		dynamics.curvature = dynamics.chassis_velocity.angular / dynamics.chassis_velocity.linear;
-		if (Double.isNaN(dynamics.curvature)) {
-			dynamics.curvature = 0.0;
-		}
-		dynamics.voltage = voltage;
-		solveForwardDynamics(dynamics);
-		return dynamics;
+	// Input/output could be either velocity or acceleration...the math is the same.
+	public WheelState solveInverseKinematics(final ChassisState chassis_motion) {
+		WheelState wheel_motion = new WheelState();
+		wheel_motion.left = (chassis_motion.linear - effective_wheelbase_radius_ * chassis_motion.angular) / wheel_radius_;
+		wheel_motion.right = (chassis_motion.linear + effective_wheelbase_radius_ * chassis_motion.angular) / wheel_radius_;
+		return wheel_motion;
 	}
 
 	// Assumptions about dynamics: velocities and voltages provided.
@@ -159,6 +139,27 @@ public class DifferentialDrive {
 				dynamics.chassis_acceleration.linear + dynamics.chassis_acceleration.angular * effective_wheelbase_radius_;
 	}
 
+	public DriveDynamics solveForwardDynamics(final WheelState wheel_velocity, final WheelState voltage) {
+		DriveDynamics dynamics = new DriveDynamics();
+		dynamics.wheel_velocity = wheel_velocity;
+		dynamics.chassis_velocity = solveForwardKinematics(wheel_velocity);
+		dynamics.curvature = dynamics.chassis_velocity.angular / dynamics.chassis_velocity.linear;
+		if (Double.isNaN(dynamics.curvature)) {
+			dynamics.curvature = 0.0;
+		}
+		dynamics.voltage = voltage;
+		solveForwardDynamics(dynamics);
+		return dynamics;
+	}
+
+	// Input/demand could be either velocity or acceleration...the math is the same.
+	public ChassisState solveForwardKinematics(final WheelState wheel_motion) {
+		ChassisState chassis_motion = new ChassisState();
+		chassis_motion.linear = wheel_radius_ * (wheel_motion.right + wheel_motion.left) / 2.0;
+		chassis_motion.angular = wheel_radius_ * (wheel_motion.right - wheel_motion.left) / (2.0 * effective_wheelbase_radius_);
+		return chassis_motion;
+	}
+
 	// Solve for torques and voltages.
 	public DriveDynamics solveInverseDynamics(final ChassisState chassis_velocity, final ChassisState chassis_acceleration) {
 		DriveDynamics dynamics = new DriveDynamics();
@@ -179,6 +180,21 @@ public class DifferentialDrive {
 		return dynamics;
 	}
 
+	// Assumptions about dynamics: velocities and accelerations provided, curvature and dcurvature computed.
+	public void solveInverseDynamics(DriveDynamics dynamics) {
+		// Determine the necessary torques on the left and right wheels to produce the desired wheel accelerations.
+		dynamics.wheel_torque.left = wheel_radius_ / 2.0 * (dynamics.chassis_acceleration.linear * mass_
+				- dynamics.chassis_acceleration.angular * moi_ / effective_wheelbase_radius_
+				- dynamics.chassis_velocity.angular * angular_drag_ / effective_wheelbase_radius_);
+		dynamics.wheel_torque.right = wheel_radius_ / 2.0 * (dynamics.chassis_acceleration.linear * mass_
+				+ dynamics.chassis_acceleration.angular * moi_ / effective_wheelbase_radius_
+				+ dynamics.chassis_velocity.angular * angular_drag_ / effective_wheelbase_radius_);
+
+		// Solve for input voltages.
+		dynamics.voltage.left = left_transmission_.getVoltageForTorque(dynamics.wheel_velocity.left, dynamics.wheel_torque.left);
+		dynamics.voltage.right = right_transmission_.getVoltageForTorque(dynamics.wheel_velocity.right, dynamics.wheel_torque.right);
+	}
+
 	public DriveDynamics solveInverseDynamics(final WheelState wheel_velocity, final WheelState wheel_acceleration) {
 		DriveDynamics dynamics = new DriveDynamics();
 		dynamics.chassis_velocity = solveForwardKinematics(wheel_velocity);
@@ -196,21 +212,6 @@ public class DifferentialDrive {
 		dynamics.wheel_acceleration = wheel_acceleration;
 		solveInverseDynamics(dynamics);
 		return dynamics;
-	}
-
-	// Assumptions about dynamics: velocities and accelerations provided, curvature and dcurvature computed.
-	public void solveInverseDynamics(DriveDynamics dynamics) {
-		// Determine the necessary torques on the left and right wheels to produce the desired wheel accelerations.
-		dynamics.wheel_torque.left = wheel_radius_ / 2.0 * (dynamics.chassis_acceleration.linear * mass_
-				- dynamics.chassis_acceleration.angular * moi_ / effective_wheelbase_radius_
-				- dynamics.chassis_velocity.angular * angular_drag_ / effective_wheelbase_radius_);
-		dynamics.wheel_torque.right = wheel_radius_ / 2.0 * (dynamics.chassis_acceleration.linear * mass_
-				+ dynamics.chassis_acceleration.angular * moi_ / effective_wheelbase_radius_
-				+ dynamics.chassis_velocity.angular * angular_drag_ / effective_wheelbase_radius_);
-
-		// Solve for input voltages.
-		dynamics.voltage.left = left_transmission_.getVoltageForTorque(dynamics.wheel_velocity.left, dynamics.wheel_torque.left);
-		dynamics.voltage.right = right_transmission_.getVoltageForTorque(dynamics.wheel_velocity.right, dynamics.wheel_torque.right);
 	}
 
 	public double getMaxAbsVelocity(double curvature, /*double dcurvature, */double max_abs_voltage) {
@@ -256,7 +257,7 @@ public class DifferentialDrive {
 	// Curvature is redundant here in the case that chassis_velocity is not purely angular.  It is the responsibility of
 	// the caller to ensure that curvature = angular vel / linear vel in these cases.
 	public MinMax getMinMaxAcceleration(final ChassisState chassis_velocity, double curvature, /*double dcurvature,*/
-			double max_abs_voltage) {
+	                                    double max_abs_voltage) {
 		MinMax result = new MinMax();
 		final WheelState wheel_velocities = solveInverseKinematics(chassis_velocity);
 		result.min = Double.POSITIVE_INFINITY;

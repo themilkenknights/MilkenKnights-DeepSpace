@@ -9,8 +9,9 @@ import frc.robot.lib.trajectory.TimedView;
 import frc.robot.lib.trajectory.TrajectoryIterator;
 import frc.robot.paths.DriveMotionPlanner;
 import frc.robot.paths.Kinematics;
-import java.util.Arrays;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
 
 public class DriveMotionPlannerTest {
 

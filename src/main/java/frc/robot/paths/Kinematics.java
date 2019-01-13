@@ -1,6 +1,5 @@
 package frc.robot.paths;
 
-
 import frc.robot.Constants;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Rotation2d;
@@ -29,7 +28,7 @@ public class Kinematics {
 	}
 
 	public static Twist2d forwardKinematics(Rotation2d prev_heading, double left_wheel_delta, double right_wheel_delta,
-			Rotation2d current_heading) {
+	                                        Rotation2d current_heading) {
 		final double dx = (left_wheel_delta + right_wheel_delta) / 2.0;
 		final double dy = 0.0;
 		return new Twist2d(dx, dy, prev_heading.inverse().rotateBy(current_heading).getRadians());

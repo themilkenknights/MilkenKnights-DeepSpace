@@ -16,18 +16,23 @@ public class InterpolatingTreeMap<K extends InverseInterpolable<K> & Comparable<
 
 	int max_;
 
+	public InterpolatingTreeMap() {
+		this(0);
+	}
+
 	public InterpolatingTreeMap(int maximumSize) {
 		max_ = maximumSize;
 	}
 
-	public InterpolatingTreeMap() {
-		this(0);
+	@Override
+	public void putAll(Map<? extends K, ? extends V> map) {
+		System.out.println("Unimplemented Method");
 	}
 
 	/**
 	 * Inserts a key value pair, and trims the tree if a max size is specified
 	 *
-	 * @param key Key for inserted data
+	 * @param key   Key for inserted data
 	 * @param value Value for inserted data
 	 * @return the value
 	 */
@@ -42,11 +47,6 @@ public class InterpolatingTreeMap<K extends InverseInterpolable<K> & Comparable<
 		super.put(key, value);
 
 		return value;
-	}
-
-	@Override
-	public void putAll(Map<? extends K, ? extends V> map) {
-		System.out.println("Unimplemented Method");
 	}
 
 	/**

@@ -2,6 +2,7 @@ package frc.robot.lib.trajectory.timing;
 
 import frc.robot.lib.geometry.State;
 import frc.robot.lib.util.Util;
+
 import java.text.DecimalFormat;
 
 public class TimedState<S extends State<S>> implements State<TimedState<S>> {
@@ -22,44 +23,16 @@ public class TimedState<S extends State<S>> implements State<TimedState<S>> {
 		acceleration_ = acceleration;
 	}
 
-	public S state() {
-		return state_;
-	}
-
 	public void set_t(double t) {
 		t_ = t;
-	}
-
-	public double t() {
-		return t_;
 	}
 
 	public void set_velocity(double velocity) {
 		velocity_ = velocity;
 	}
 
-	public double velocity() {
-		return velocity_;
-	}
-
 	public void set_acceleration(double acceleration) {
 		acceleration_ = acceleration;
-	}
-
-	public double acceleration() {
-		return acceleration_;
-	}
-
-	@Override
-	public String toString() {
-		final DecimalFormat fmt = new DecimalFormat("#0.000");
-		return state().toString() + ", t: " + fmt.format(t()) + ", v: " + fmt.format(velocity()) + ", a: " + fmt.format(acceleration());
-	}
-
-	@Override
-	public String toCSV() {
-		final DecimalFormat fmt = new DecimalFormat("#0.000");
-		return state().toCSV() + "," + fmt.format(t()) + "," + fmt.format(velocity()) + "," + fmt.format(acceleration());
 	}
 
 	@Override
@@ -83,11 +56,39 @@ public class TimedState<S extends State<S>> implements State<TimedState<S>> {
 	}
 
 	@Override
+	public String toCSV() {
+		final DecimalFormat fmt = new DecimalFormat("#0.000");
+		return state().toCSV() + "," + fmt.format(t()) + "," + fmt.format(velocity()) + "," + fmt.format(acceleration());
+	}
+
+	@Override
 	public boolean equals(final Object other) {
 		if (other == null || !(other instanceof TimedState<?>)) {
 			return false;
 		}
 		TimedState<?> ts = (TimedState<?>) other;
 		return state().equals(ts.state()) && Util.epsilonEquals(t(), ts.t());
+	}
+
+	@Override
+	public String toString() {
+		final DecimalFormat fmt = new DecimalFormat("#0.000");
+		return state().toString() + ", t: " + fmt.format(t()) + ", v: " + fmt.format(velocity()) + ", a: " + fmt.format(acceleration());
+	}
+
+	public S state() {
+		return state_;
+	}
+
+	public double t() {
+		return t_;
+	}
+
+	public double velocity() {
+		return velocity_;
+	}
+
+	public double acceleration() {
+		return acceleration_;
 	}
 }

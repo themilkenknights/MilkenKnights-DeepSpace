@@ -1,6 +1,7 @@
 package frc.robot.lib.geometry;
 
 import frc.robot.lib.util.Util;
+
 import java.text.DecimalFormat;
 
 /**
@@ -36,10 +37,6 @@ public class Translation2d implements ITranslation2d<Translation2d> {
 		return kIdentity;
 	}
 
-	public static double dot(final Translation2d a, final Translation2d b) {
-		return a.x_ * b.x_ + a.y_ * b.y_;
-	}
-
 	public static Rotation2d getAngle(final Translation2d a, final Translation2d b) {
 		double cos_angle = dot(a, b) / (a.norm() * b.norm());
 		if (Double.isNaN(cos_angle)) {
@@ -48,8 +45,8 @@ public class Translation2d implements ITranslation2d<Translation2d> {
 		return Rotation2d.fromRadians(Math.acos(Math.min(1.0, Math.max(cos_angle, -1.0))));
 	}
 
-	public static double cross(final Translation2d a, final Translation2d b) {
-		return a.x_ * b.y_ - a.y_ * b.x_;
+	public static double dot(final Translation2d a, final Translation2d b) {
+		return a.x_ * b.x_ + a.y_ * b.y_;
 	}
 
 	/**
@@ -61,26 +58,12 @@ public class Translation2d implements ITranslation2d<Translation2d> {
 		return Math.hypot(x_, y_);
 	}
 
+	public static double cross(final Translation2d a, final Translation2d b) {
+		return a.x_ * b.y_ - a.y_ * b.x_;
+	}
+
 	public double norm2() {
 		return x_ * x_ + y_ * y_;
-	}
-
-	public double x() {
-		return x_;
-	}
-
-	public double y() {
-		return y_;
-	}
-
-	/**
-	 * We can compose Translation2d's by adding together the x and y shifts.
-	 *
-	 * @param other The other translation to add.
-	 * @return The combined effect of translating by this object and the other.
-	 */
-	public Translation2d translateBy(final Translation2d other) {
-		return new Translation2d(x_ + other.x_, y_ + other.y_);
 	}
 
 	/**
@@ -95,15 +78,6 @@ public class Translation2d implements ITranslation2d<Translation2d> {
 
 	public Rotation2d direction() {
 		return new Rotation2d(x_, y_, true);
-	}
-
-	/**
-	 * The inverse simply means a Translation2d that "undoes" this object.
-	 *
-	 * @return Translation by -x and -y.
-	 */
-	public Translation2d inverse() {
-		return new Translation2d(-x_, -y_);
 	}
 
 	@Override
@@ -128,21 +102,12 @@ public class Translation2d implements ITranslation2d<Translation2d> {
 		return Util.epsilonEquals(x(), other.x(), epsilon) && Util.epsilonEquals(y(), other.y(), epsilon);
 	}
 
-	@Override
-	public String toString() {
-		final DecimalFormat fmt = new DecimalFormat("#0.000");
-		return "(" + fmt.format(x_) + "," + fmt.format(y_) + ")";
+	public double x() {
+		return x_;
 	}
 
-	@Override
-	public String toCSV() {
-		final DecimalFormat fmt = new DecimalFormat("#0.000");
-		return fmt.format(x_) + "," + fmt.format(y_);
-	}
-
-	@Override
-	public double distance(final Translation2d other) {
-		return inverse().translateBy(other).norm();
+	public double y() {
+		return y_;
 	}
 
 	@Override
@@ -151,6 +116,42 @@ public class Translation2d implements ITranslation2d<Translation2d> {
 			return false;
 		}
 		return distance((Translation2d) other) < Util.kEpsilon;
+	}
+
+	@Override
+	public String toString() {
+		final DecimalFormat fmt = new DecimalFormat("#0.000");
+		return "(" + fmt.format(x_) + "," + fmt.format(y_) + ")";
+	}
+
+	@Override
+	public double distance(final Translation2d other) {
+		return inverse().translateBy(other).norm();
+	}
+
+	/**
+	 * We can compose Translation2d's by adding together the x and y shifts.
+	 *
+	 * @param other The other translation to add.
+	 * @return The combined effect of translating by this object and the other.
+	 */
+	public Translation2d translateBy(final Translation2d other) {
+		return new Translation2d(x_ + other.x_, y_ + other.y_);
+	}
+
+	/**
+	 * The inverse simply means a Translation2d that "undoes" this object.
+	 *
+	 * @return Translation by -x and -y.
+	 */
+	public Translation2d inverse() {
+		return new Translation2d(-x_, -y_);
+	}
+
+	@Override
+	public String toCSV() {
+		final DecimalFormat fmt = new DecimalFormat("#0.000");
+		return fmt.format(x_) + "," + fmt.format(y_);
 	}
 
 	@Override

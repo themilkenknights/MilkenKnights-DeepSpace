@@ -13,7 +13,6 @@ public class Input extends Subsystem {
 	private final MkJoystick driverJoystick = new MkJoystick(0);
 	private final MkJoystickButton changeDriveMode = driverJoystick.getButton(1, "Change Drive Mode");
 
-
 	public Input() {
 
 	}

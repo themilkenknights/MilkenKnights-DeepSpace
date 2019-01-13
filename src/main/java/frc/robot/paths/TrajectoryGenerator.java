@@ -10,6 +10,7 @@ import frc.robot.lib.trajectory.TrajectoryUtil;
 import frc.robot.lib.trajectory.timing.CentripetalAccelerationConstraint;
 import frc.robot.lib.trajectory.timing.TimedState;
 import frc.robot.lib.trajectory.timing.TimingConstraint;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -30,7 +31,6 @@ public class TrajectoryGenerator {
 	private final DriveMotionPlanner mMotionPlanner;
 	private TrajectorySet mTrajectorySet = null;
 	private VisionTrajectorySet mVisionTrajectorySet = null;
-
 
 	private TrajectoryGenerator() {
 		mMotionPlanner = new DriveMotionPlanner();
@@ -53,18 +53,18 @@ public class TrajectoryGenerator {
 	}
 
 	public Trajectory<TimedState<Pose2dWithCurvature>> generateTrajectory(boolean reversed, final List<Pose2d> waypoints,
-			final List<TimingConstraint<Pose2dWithCurvature>> constraints, double max_vel,  // inches/s
-			double max_accel,  // inches/s^2
-			double max_voltage) {
+	                                                                      final List<TimingConstraint<Pose2dWithCurvature>> constraints, double max_vel,  // inches/s
+	                                                                      double max_accel,  // inches/s^2
+	                                                                      double max_voltage) {
 		return mMotionPlanner.generateTrajectory(reversed, waypoints, constraints, max_vel, max_accel, max_voltage);
 	}
 
 	public Trajectory<TimedState<Pose2dWithCurvature>> generateTrajectory(boolean reversed, final List<Pose2d> waypoints,
-			final List<TimingConstraint<Pose2dWithCurvature>> constraints, double start_vel,  // inches/s
-			double end_vel,  // inches/s
-			double max_vel,  // inches/s
-			double max_accel,  // inches/s^2
-			double max_voltage) {
+	                                                                      final List<TimingConstraint<Pose2dWithCurvature>> constraints, double start_vel,  // inches/s
+	                                                                      double end_vel,  // inches/s
+	                                                                      double max_vel,  // inches/s
+	                                                                      double max_accel,  // inches/s^2
+	                                                                      double max_voltage) {
 		return mMotionPlanner.generateTrajectory(reversed, waypoints, constraints, start_vel, end_vel, max_vel, max_accel, max_voltage);
 	}
 

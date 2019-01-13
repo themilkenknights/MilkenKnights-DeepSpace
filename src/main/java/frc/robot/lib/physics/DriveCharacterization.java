@@ -2,12 +2,13 @@ package frc.robot.lib.physics;
 
 import frc.robot.lib.util.PolynomialRegression;
 import frc.robot.lib.util.Util;
+
 import java.util.List;
 
 public class DriveCharacterization {
 
 	public static CharacterizationConstants characterizeDrive(List<VelocityDataPoint> velocityData,
-			List<AccelerationDataPoint> accelerationData) {
+	                                                          List<AccelerationDataPoint> accelerationData) {
 		CharacterizationConstants rv = getVelocityCharacterization(getVelocityData(velocityData));
 		getAccelerationCharacterization(getAccelerationData(accelerationData, rv), rv);
 		return rv;
@@ -23,18 +24,6 @@ public class DriveCharacterization {
 		constants.ks = p.beta(0);
 		constants.kv = p.beta(1);
 		return constants;
-	}
-
-	private static CharacterizationConstants getAccelerationCharacterization(double[][] points,
-			CharacterizationConstants velocityChacterization) {
-		if (points == null) {
-			return velocityChacterization;
-		}
-
-		PolynomialRegression p = new PolynomialRegression(points, 1);
-		System.out.println("r^2: " + p.R2());
-		velocityChacterization.ka = p.beta(1);
-		return velocityChacterization;
 	}
 
 	/**
@@ -54,6 +43,18 @@ public class DriveCharacterization {
 			}
 		}
 		return output;
+	}
+
+	private static CharacterizationConstants getAccelerationCharacterization(double[][] points,
+	                                                                         CharacterizationConstants velocityChacterization) {
+		if (points == null) {
+			return velocityChacterization;
+		}
+
+		PolynomialRegression p = new PolynomialRegression(points, 1);
+		System.out.println("r^2: " + p.R2());
+		velocityChacterization.ka = p.beta(1);
+		return velocityChacterization;
 	}
 
 	private static double[][] getAccelerationData(List<AccelerationDataPoint> input, CharacterizationConstants constants) {

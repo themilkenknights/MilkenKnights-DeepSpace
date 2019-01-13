@@ -1,12 +1,11 @@
 package frc.robot.lib.trajectory.timing;
 
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Translation2d;
 import frc.robot.lib.util.Util;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TimedStateTest {
 

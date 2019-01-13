@@ -22,10 +22,6 @@ public class SeriesAction implements Action {
 	}
 
 	@Override
-	public void start() {
-	}
-
-	@Override
 	public void update() {
 		if (mCurAction == null) {
 			if (mRemainingActions.isEmpty()) {
@@ -46,5 +42,9 @@ public class SeriesAction implements Action {
 
 	@Override
 	public void done() {
+	}
+
+	@Override
+	public void start() {
 	}
 }

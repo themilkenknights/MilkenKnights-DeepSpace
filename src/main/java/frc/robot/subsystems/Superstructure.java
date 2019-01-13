@@ -6,11 +6,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Robot;
 import frc.robot.lib.structure.ILooper;
 import frc.robot.lib.structure.Loop;
-import frc.robot.lib.vision.LimeLight;
-import frc.robot.lib.vision.LimelightTarget;
-import frc.robot.lib.vision.PixyException;
-import frc.robot.lib.vision.PixyPacket;
-import frc.robot.lib.vision.PixySPI;
+import frc.robot.lib.vision.*;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -40,7 +37,6 @@ public class Superstructure extends Subsystem {
 		SmartDashboard.putString("Robot State", Robot.mMatchState.toString());
 	}
 
-
 	public void registerEnabledLoops(ILooper enabledLooper) {
 		enabledLooper.register(new Loop() {
 
@@ -67,10 +63,6 @@ public class Superstructure extends Subsystem {
 
 	private synchronized void updateLimelight() {
 		target = limeLight.returnTarget();
-	}
-
-	public synchronized LimelightTarget getTarget() {
-		return target;
 	}
 
 	private synchronized void testPixy() {
@@ -104,6 +96,10 @@ public class Superstructure extends Subsystem {
 				SmartDashboard.putNumber("Pixy Vision: " + i + ": Height: ", packets.get(i).get(j).Height);
 			}
 		}
+	}
+
+	public synchronized LimelightTarget getTarget() {
+		return target;
 	}
 
 	private static class InstanceHolder {

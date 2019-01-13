@@ -41,13 +41,13 @@ public class DistanceView<S extends State<S>> implements TrajectoryView<S> {
 	}
 
 	@Override
-	public double last_interpolant() {
-		return distances_[distances_.length - 1];
+	public double first_interpolant() {
+		return 0.0;
 	}
 
 	@Override
-	public double first_interpolant() {
-		return 0.0;
+	public double last_interpolant() {
+		return distances_[distances_.length - 1];
 	}
 
 	@Override

@@ -1,9 +1,5 @@
 package frc.robot.lib.trajectory;
 
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Pose2dWithCurvature;
 import frc.robot.lib.geometry.Rotation2d;
@@ -14,9 +10,13 @@ import frc.robot.lib.trajectory.timing.DifferentialDriveDynamicsConstraint;
 import frc.robot.lib.trajectory.timing.TimedState;
 import frc.robot.lib.trajectory.timing.TimingUtil;
 import frc.robot.lib.util.Units;
+import org.junit.jupiter.api.Test;
+
 import java.util.Arrays;
 import java.util.List;
-import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class IntegrationTest {
 

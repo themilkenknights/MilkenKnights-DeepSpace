@@ -20,7 +20,6 @@ public class CircularBufferGeneric<E> {
 		mSum = 0.0;
 	}
 
-
 	public void clear() {
 		mSamples.clear();
 		mSum = 0.0;

@@ -33,26 +33,6 @@ public class CubicHermiteSpline extends Spline {
 	}
 
 	@Override
-	public Translation2d getPoint(double t) {
-		final double x = t * t * t * ax + t * t * bx + t * cx + dx;
-		final double y = t * t * t * ay + t * t * by + t * cy + dy;
-		return new Translation2d(x, y);
-	}
-
-	@Override
-	public Rotation2d getHeading(double t) {
-		final double dx = 3 * t * t * ax + 2 * t * bx + cx;
-		final double dy = 3 * t * t * ay + 2 * t * by + cy;
-		return new Rotation2d(dx, dy, true);
-	}
-
-	@Override
-	public double getVelocity(double t) {
-		// TODO implement this
-		return 1.0;
-	}
-
-	@Override
 	public double getCurvature(double t) {
 		final double dx = 3 * t * t * ax + 2 * t * bx + cx;
 		final double dy = 3 * t * t * ay + 2 * t * by + cy;
@@ -65,5 +45,25 @@ public class CubicHermiteSpline extends Spline {
 	public double getDCurvature(double t) {
 		// TODO implement this
 		return 0.0;
+	}
+
+	@Override
+	public double getVelocity(double t) {
+		// TODO implement this
+		return 1.0;
+	}
+
+	@Override
+	public Translation2d getPoint(double t) {
+		final double x = t * t * t * ax + t * t * bx + t * cx + dx;
+		final double y = t * t * t * ay + t * t * by + t * cy + dy;
+		return new Translation2d(x, y);
+	}
+
+	@Override
+	public Rotation2d getHeading(double t) {
+		final double dx = 3 * t * t * ax + 2 * t * bx + cx;
+		final double dy = 3 * t * t * ay + 2 * t * by + cy;
+		return new Rotation2d(dx, dy, true);
 	}
 }

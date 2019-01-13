@@ -1,15 +1,15 @@
 package frc.robot.lib.trajectory;
 
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Rotation2d;
 import frc.robot.lib.geometry.Translation2d;
 import frc.robot.lib.geometry.Twist2d;
+import org.junit.jupiter.api.Test;
+
 import java.util.Arrays;
 import java.util.List;
-import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PurePursuitControllerTest {
 

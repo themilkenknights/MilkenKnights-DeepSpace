@@ -1,6 +1,5 @@
 package frc.robot.lib.trajectory;
 
-
 import frc.robot.lib.geometry.State;
 
 public class TrajectorySamplePoint<S extends State<S>> {

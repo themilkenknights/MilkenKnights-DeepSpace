@@ -1,9 +1,10 @@
 package frc.robot.lib.geometry;
 
-import static frc.robot.lib.util.Util.kEpsilon;
-
 import frc.robot.lib.util.Util;
+
 import java.text.DecimalFormat;
+
+import static frc.robot.lib.util.Util.kEpsilon;
 
 /**
  * A rotation in a 2d coordinate frame represented a point on the unit circle (cosine and sine).
@@ -51,12 +52,12 @@ public class Rotation2d implements IRotation2d<Rotation2d> {
 		return kIdentity;
 	}
 
-	public static Rotation2d fromRadians(double angle_radians) {
-		return new Rotation2d(Math.cos(angle_radians), Math.sin(angle_radians), false);
-	}
-
 	public static Rotation2d fromDegrees(double angle_degrees) {
 		return fromRadians(Math.toRadians(angle_degrees));
+	}
+
+	public static Rotation2d fromRadians(double angle_radians) {
+		return new Rotation2d(Math.cos(angle_radians), Math.sin(angle_radians), false);
 	}
 
 	public double cos() {
@@ -78,36 +79,8 @@ public class Rotation2d implements IRotation2d<Rotation2d> {
 		return sin_angle_ / cos_angle_;
 	}
 
-	public double getRadians() {
-		return Math.atan2(sin_angle_, cos_angle_);
-	}
-
-	public double getDegrees() {
-		return Math.toDegrees(getRadians());
-	}
-
-	/**
-	 * We can rotate this Rotation2d by adding together the effects of it and another rotation.
-	 *
-	 * @param other The other rotation. See: https://en.wikipedia.org/wiki/Rotation_matrix
-	 * @return This rotation rotated by other.
-	 */
-	public Rotation2d rotateBy(final Rotation2d other) {
-		return new Rotation2d(cos_angle_ * other.cos_angle_ - sin_angle_ * other.sin_angle_,
-				cos_angle_ * other.sin_angle_ + sin_angle_ * other.cos_angle_, true);
-	}
-
 	public Rotation2d normal() {
 		return new Rotation2d(-sin_angle_, cos_angle_, false);
-	}
-
-	/**
-	 * The inverse of a Rotation2d "undoes" the effect of this rotation.
-	 *
-	 * @return The opposite of this rotation.
-	 */
-	public Rotation2d inverse() {
-		return new Rotation2d(cos_angle_, -sin_angle_, false);
 	}
 
 	public boolean isParallel(final Rotation2d other) {
@@ -129,21 +102,28 @@ public class Rotation2d implements IRotation2d<Rotation2d> {
 		return this.rotateBy(Rotation2d.fromRadians(angle_diff * x));
 	}
 
-	@Override
-	public String toString() {
-		final DecimalFormat fmt = new DecimalFormat("#0.000");
-		return "(" + fmt.format(getDegrees()) + " deg)";
+	public double getRadians() {
+		return Math.atan2(sin_angle_, cos_angle_);
 	}
 
-	@Override
-	public String toCSV() {
-		final DecimalFormat fmt = new DecimalFormat("#0.000");
-		return fmt.format(getDegrees());
+	/**
+	 * We can rotate this Rotation2d by adding together the effects of it and another rotation.
+	 *
+	 * @param other The other rotation. See: https://en.wikipedia.org/wiki/Rotation_matrix
+	 * @return This rotation rotated by other.
+	 */
+	public Rotation2d rotateBy(final Rotation2d other) {
+		return new Rotation2d(cos_angle_ * other.cos_angle_ - sin_angle_ * other.sin_angle_,
+				cos_angle_ * other.sin_angle_ + sin_angle_ * other.cos_angle_, true);
 	}
 
-	@Override
-	public double distance(final Rotation2d other) {
-		return inverse().rotateBy(other).getRadians();
+	/**
+	 * The inverse of a Rotation2d "undoes" the effect of this rotation.
+	 *
+	 * @return The opposite of this rotation.
+	 */
+	public Rotation2d inverse() {
+		return new Rotation2d(cos_angle_, -sin_angle_, false);
 	}
 
 	@Override
@@ -152,6 +132,27 @@ public class Rotation2d implements IRotation2d<Rotation2d> {
 			return false;
 		}
 		return distance((Rotation2d) other) < Util.kEpsilon;
+	}
+
+	@Override
+	public String toString() {
+		final DecimalFormat fmt = new DecimalFormat("#0.000");
+		return "(" + fmt.format(getDegrees()) + " deg)";
+	}
+
+	public double getDegrees() {
+		return Math.toDegrees(getRadians());
+	}
+
+	@Override
+	public double distance(final Rotation2d other) {
+		return inverse().rotateBy(other).getRadians();
+	}
+
+	@Override
+	public String toCSV() {
+		final DecimalFormat fmt = new DecimalFormat("#0.000");
+		return fmt.format(getDegrees());
 	}
 
 	@Override

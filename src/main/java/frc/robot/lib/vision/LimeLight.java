@@ -5,12 +5,7 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
-import frc.robot.lib.vision.LimeLightControlMode.Advanced_Crosshair;
-import frc.robot.lib.vision.LimeLightControlMode.Advanced_Target;
-import frc.robot.lib.vision.LimeLightControlMode.CamMode;
-import frc.robot.lib.vision.LimeLightControlMode.LedMode;
-import frc.robot.lib.vision.LimeLightControlMode.Snapshot;
-import frc.robot.lib.vision.LimeLightControlMode.StreamType;
+import frc.robot.lib.vision.LimeLightControlMode.*;
 
 /**
  * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you Enjoy the Lime Light Camera.
@@ -35,7 +30,6 @@ public class LimeLight {
 	private String m_tableName;
 	private Boolean isConnected = false;
 	private double _hearBeatPeriod = 0.1;
-
 
 	/**
 	 * Using the Default Lime Light NT table
@@ -69,16 +63,16 @@ public class LimeLight {
 		return isConnected;
 	}
 
+	public LimelightTarget returnTarget() {
+		return new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(), getVertLength(), getCaptureTime());
+	}
+
 	/**
 	 * tv Whether the limelight has any valid targets (0 or 1)
 	 */
 	public boolean getIsTargetFound() {
 		double v = tv.getDouble(0);
 		return v != 0.0f;
-	}
-
-	public LimelightTarget returnTarget() {
-		return new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(), getVertLength(), getCaptureTime());
 	}
 
 	/**
@@ -95,6 +89,21 @@ public class LimeLight {
 	public double getY() {
 		double y = ty.getDouble(0.0);
 		return y;
+	}
+
+	public double getHorizLength() {
+		double h = thoriz.getDouble(0.0);
+		return h;
+	}
+
+	public double getVertLength() {
+		double v = tvert.getDouble(0.0);
+		return v;
+	}
+
+	public double getCaptureTime() {
+		double l = Timer.getFPGATimestamp() - (tl.getDouble(0.0) * 1e-3);
+		return l;
 	}
 
 	/**
@@ -119,21 +128,6 @@ public class LimeLight {
 	public double getPipelineLatency() {
 		double l = tl.getDouble(0.0);
 		return l;
-	}
-
-	public double getCaptureTime() {
-		double l = Timer.getFPGATimestamp() - (tl.getDouble(0.0) * 1e-3);
-		return l;
-	}
-
-	public double getHorizLength() {
-		double h = thoriz.getDouble(0.0);
-		return h;
-	}
-
-	public double getVertLength() {
-		double v = tvert.getDouble(0.0);
-		return v;
 	}
 
 	private void resetPilelineLatency() {

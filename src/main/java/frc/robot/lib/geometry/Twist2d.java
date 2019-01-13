@@ -1,6 +1,7 @@
 package frc.robot.lib.geometry;
 
 import frc.robot.lib.util.Util;
+
 import java.text.DecimalFormat;
 
 /**
@@ -30,19 +31,19 @@ public class Twist2d {
 		return new Twist2d(dx * scale, dy * scale, dtheta * scale);
 	}
 
+	public double curvature() {
+		if (Math.abs(dtheta) < Util.kEpsilon && norm() < Util.kEpsilon) {
+			return 0.0;
+		}
+		return dtheta / norm();
+	}
+
 	public double norm() {
 		// Common case of dy == 0
 		if (dy == 0.0) {
 			return Math.abs(dx);
 		}
 		return Math.hypot(dx, dy);
-	}
-
-	public double curvature() {
-		if (Math.abs(dtheta) < Util.kEpsilon && norm() < Util.kEpsilon) {
-			return 0.0;
-		}
-		return dtheta / norm();
 	}
 
 	@Override

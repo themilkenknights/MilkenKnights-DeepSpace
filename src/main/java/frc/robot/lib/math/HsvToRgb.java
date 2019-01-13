@@ -1,6 +1,5 @@
 package frc.robot.lib.math;
 
-
 public class HsvToRgb {
 
 	/**

@@ -2,6 +2,7 @@ package frc.robot.lib.trajectory;
 
 import frc.robot.lib.geometry.State;
 import frc.robot.lib.util.CSVWritable;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,28 +30,24 @@ public class Trajectory<S extends State<S>> implements CSVWritable {
 		}
 	}
 
-	public boolean isEmpty() {
-		return points_.isEmpty();
-	}
-
-	public int length() {
-		return points_.size();
-	}
-
-	public TrajectoryPoint<S> getPoint(final int index) {
-		return points_.get(index);
+	public S getFirstState() {
+		return getState(0);
 	}
 
 	public S getState(final int index) {
 		return getPoint(index).state();
 	}
 
-	public S getFirstState() {
-		return getState(0);
+	public TrajectoryPoint<S> getPoint(final int index) {
+		return points_.get(index);
 	}
 
 	public S getLastState() {
 		return getState(length() - 1);
+	}
+
+	public int length() {
+		return points_.size();
 	}
 
 	public TrajectorySamplePoint<S> getInterpolated(final double index) {
@@ -70,6 +67,10 @@ public class Trajectory<S extends State<S>> implements CSVWritable {
 		} else {
 			return new TrajectorySamplePoint<>(getState(i).interpolate(getState(i + 1), frac), i, i + 1);
 		}
+	}
+
+	public boolean isEmpty() {
+		return points_.isEmpty();
 	}
 
 	public IndexView getIndexView() {
@@ -108,13 +109,13 @@ public class Trajectory<S extends State<S>> implements CSVWritable {
 		}
 
 		@Override
-		public double last_interpolant() {
-			return Math.max(0.0, Trajectory.this.length() - 1);
+		public double first_interpolant() {
+			return 0.0;
 		}
 
 		@Override
-		public double first_interpolant() {
-			return 0.0;
+		public double last_interpolant() {
+			return Math.max(0.0, Trajectory.this.length() - 1);
 		}
 
 		@Override

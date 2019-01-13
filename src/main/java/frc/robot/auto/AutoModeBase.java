@@ -12,8 +12,6 @@ public abstract class AutoModeBase {
 	protected double mUpdateRate = 1.0 / 50.0;
 	protected boolean mActive = false;
 
-	protected abstract void routine() throws AutoModeEndedException;
-
 	public void run() {
 		mActive = true;
 
@@ -27,24 +25,14 @@ public abstract class AutoModeBase {
 		done();
 	}
 
+	protected abstract void routine() throws AutoModeEndedException;
+
 	public void done() {
 		System.out.println("Auto mode done");
 	}
 
 	public void stop() {
 		mActive = false;
-	}
-
-	public boolean isActive() {
-		return mActive;
-	}
-
-	public boolean isActiveWithThrow() throws AutoModeEndedException {
-		if (!isActive()) {
-			throw new AutoModeEndedException();
-		}
-
-		return isActive();
 	}
 
 	public void runAction(Action action) throws AutoModeEndedException {
@@ -63,5 +51,17 @@ public abstract class AutoModeBase {
 		}
 
 		action.done();
+	}
+
+	public boolean isActiveWithThrow() throws AutoModeEndedException {
+		if (!isActive()) {
+			throw new AutoModeEndedException();
+		}
+
+		return isActive();
+	}
+
+	public boolean isActive() {
+		return mActive;
 	}
 }

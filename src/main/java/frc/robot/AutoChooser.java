@@ -14,6 +14,26 @@ public class AutoChooser {
 	public static MatchData matchData = MatchData.defaultMatch;
 	private static AutoModeExecutor mAutoModeExecuter = null;
 
+	public static void startAuto() {
+		updateGameData();
+		if (mAutoModeExecuter != null) {
+			mAutoModeExecuter.stop();
+		}
+		mAutoModeExecuter = null;
+		mAutoModeExecuter = new AutoModeExecutor();
+		mAutoModeExecuter.setAutoMode(getAutoMode());
+		mAutoModeExecuter.start();
+	}
+
+	private static void updateGameData() {
+		matchData.alliance = DriverStation.getInstance().getAlliance();
+		matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
+		matchData.matchType = DriverStation.getInstance().getMatchType();
+		CrashTracker.logMarker(
+				"Alliance: " + matchData.alliance.toString() + " Match Number: " + matchData.matchNumber + " Match Type: " + matchData.matchType
+						.toString());
+	}
+
 	public static AutoModeBase getAutoMode() {
 		double delay = SmartDashboard.getNumber("Auto Delay", 0.0);
 		if (delay > 0) {
@@ -26,31 +46,11 @@ public class AutoChooser {
 		return new NearScaleOnlyMode(true);
 	}
 
-	public static void startAuto() {
-		updateGameData();
-		if (mAutoModeExecuter != null) {
-			mAutoModeExecuter.stop();
-		}
-		mAutoModeExecuter = null;
-		mAutoModeExecuter = new AutoModeExecutor();
-		mAutoModeExecuter.setAutoMode(getAutoMode());
-		mAutoModeExecuter.start();
-	}
-
 	public static void disableAuto() {
 		if (mAutoModeExecuter != null) {
 			mAutoModeExecuter.stop();
 		}
 		mAutoModeExecuter = null;
-	}
-
-	private static void updateGameData() {
-		matchData.alliance = DriverStation.getInstance().getAlliance();
-		matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
-		matchData.matchType = DriverStation.getInstance().getMatchType();
-		CrashTracker.logMarker(
-				"Alliance: " + matchData.alliance.toString() + " Match Number: " + matchData.matchNumber + " Match Type: " + matchData.matchType
-						.toString());
 	}
 
 }

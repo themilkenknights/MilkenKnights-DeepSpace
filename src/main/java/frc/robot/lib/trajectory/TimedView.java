@@ -17,16 +17,6 @@ public class TimedView<S extends State<S>> implements TrajectoryView<TimedState<
 	}
 
 	@Override
-	public double first_interpolant() {
-		return start_t_;
-	}
-
-	@Override
-	public double last_interpolant() {
-		return end_t_;
-	}
-
-	@Override
 	public TrajectorySamplePoint<TimedState<S>> sample(double t) {
 		if (t >= end_t_) {
 			return new TrajectorySamplePoint<>(trajectory_.getPoint(trajectory_.length() - 1));
@@ -46,6 +36,16 @@ public class TimedView<S extends State<S>> implements TrajectoryView<TimedState<
 			}
 		}
 		throw new RuntimeException();
+	}
+
+	@Override
+	public double first_interpolant() {
+		return start_t_;
+	}
+
+	@Override
+	public double last_interpolant() {
+		return end_t_;
 	}
 
 	@Override

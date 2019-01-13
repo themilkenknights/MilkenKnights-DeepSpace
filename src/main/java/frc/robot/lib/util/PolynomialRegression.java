@@ -45,17 +45,6 @@ public class PolynomialRegression {
 		solve(x, y, degree);
 	}
 
-	/**
-	 * Performs a polynomial regression on the data points {@code (y[i], x[i])}.
-	 *
-	 * @param x the values of the predictor variable
-	 * @param y the corresponding values of the response variable
-	 * @param degree the degree of the polynomial to fit
-	 */
-	public PolynomialRegression(double[] x, double[] y, int degree) {
-		solve(x, y, degree);
-	}
-
 	private void solve(double[] x, double[] y, int degree) {
 		this.degree = degree;
 
@@ -110,17 +99,14 @@ public class PolynomialRegression {
 	}
 
 	/**
-	 * Returns the {@code j}th regression coefficient.
+	 * Performs a polynomial regression on the data points {@code (y[i], x[i])}.
 	 *
-	 * @param j the index
-	 * @return the {@code j}th regression coefficient
+	 * @param x      the values of the predictor variable
+	 * @param y      the corresponding values of the response variable
+	 * @param degree the degree of the polynomial to fit
 	 */
-	public double beta(int j) {
-		// to make -0.0 print as 0.0
-		if (Math.abs(beta.get(j, 0)) < 1E-4) {
-			return 0.0;
-		}
-		return beta.get(j, 0);
+	public PolynomialRegression(double[] x, double[] y, int degree) {
+		solve(x, y, degree);
 	}
 
 	/**
@@ -130,18 +116,6 @@ public class PolynomialRegression {
 	 */
 	public int degree() {
 		return degree;
-	}
-
-	/**
-	 * Returns the coefficient of determination <em>R</em><sup>2</sup>.
-	 *
-	 * @return the coefficient of determination <em>R</em><sup>2</sup>, which is a real number between 0 and 1
-	 */
-	public double R2() {
-		if (sst == 0.0) {
-			return 1.0; // constant function
-		}
-		return 1.0 - sse / sst;
 	}
 
 	/**
@@ -157,6 +131,20 @@ public class PolynomialRegression {
 			y = beta(j) + (x * y);
 		}
 		return y;
+	}
+
+	/**
+	 * Returns the {@code j}th regression coefficient.
+	 *
+	 * @param j the index
+	 * @return the {@code j}th regression coefficient
+	 */
+	public double beta(int j) {
+		// to make -0.0 print as 0.0
+		if (Math.abs(beta.get(j, 0)) < 1E-4) {
+			return 0.0;
+		}
+		return beta.get(j, 0);
 	}
 
 	@Override
@@ -182,5 +170,17 @@ public class PolynomialRegression {
 		}
 		s = s.append("  (R^2 = " + String.format("%.3f", R2()) + ")");
 		return s.toString();
+	}
+
+	/**
+	 * Returns the coefficient of determination <em>R</em><sup>2</sup>.
+	 *
+	 * @return the coefficient of determination <em>R</em><sup>2</sup>, which is a real number between 0 and 1
+	 */
+	public double R2() {
+		if (sst == 0.0) {
+			return 1.0; // constant function
+		}
+		return 1.0 - sse / sst;
 	}
 }

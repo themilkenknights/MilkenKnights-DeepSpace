@@ -1,9 +1,5 @@
 package frc.robot.lib.trajectory.timing;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import frc.robot.lib.geometry.ITranslation2d;
 import frc.robot.lib.geometry.State;
 import frc.robot.lib.geometry.Translation2d;
@@ -11,10 +7,13 @@ import frc.robot.lib.trajectory.DistanceView;
 import frc.robot.lib.trajectory.Trajectory;
 import frc.robot.lib.trajectory.timing.TimingConstraint.MinMaxAcceleration;
 import frc.robot.lib.util.Util;
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TimingUtilTest {
 
@@ -22,36 +21,6 @@ public class TimingUtilTest {
 
 	public static final List<Translation2d> kWaypoints = Arrays
 			.asList(new Translation2d(0.0, 0.0), new Translation2d(24.0, 0.0), new Translation2d(36.0, 12.0), new Translation2d(60.0, 12.0));
-
-	public <S extends State<S>> Trajectory<TimedState<S>> buildAndCheckTrajectory(final DistanceView<S> dist_view, double step_size,
-			List<TimingConstraint<S>> constraints, double start_vel, double end_vel, double max_vel, double max_acc) {
-		Trajectory<TimedState<S>> timed_traj = TimingUtil
-				.timeParameterizeTrajectory(false, dist_view, step_size, constraints, start_vel, end_vel, max_vel, max_acc);
-		checkTrajectory(timed_traj, constraints, start_vel, end_vel, max_vel, max_acc);
-		return timed_traj;
-	}
-
-	public <S extends State<S>> void checkTrajectory(final Trajectory<TimedState<S>> traj, List<TimingConstraint<S>> constraints,
-			double start_vel, double end_vel, double max_vel, double max_acc) {
-		assertFalse(traj.isEmpty());
-		assertEquals(traj.getState(0).velocity(), start_vel, kTestEpsilon);
-		assertEquals(traj.getState(traj.length() - 1).velocity(), end_vel, kTestEpsilon);
-
-		// Go state by state, verifying all constraints are satisfied and integration is correct.
-		for (int i = 0; i < traj.length(); ++i) {
-			final TimedState<S> state = traj.getState(i);
-			for (final TimingConstraint<S> constraint : constraints) {
-				assertTrue(state.velocity() - kTestEpsilon <= constraint.getMaxVelocity(state.state()));
-				final MinMaxAcceleration accel_limits = constraint.getMinMaxAcceleration(state.state(), state.velocity());
-				assertTrue(state.acceleration() - kTestEpsilon <= accel_limits.max_acceleration());
-				assertTrue(state.acceleration() + kTestEpsilon >= accel_limits.min_acceleration());
-			}
-			if (i > 0) {
-				final TimedState<S> prev_state = traj.getState(i - 1);
-				assertEquals(state.velocity(), prev_state.velocity() + (state.t() - prev_state.t()) * prev_state.acceleration(), kTestEpsilon);
-			}
-		}
-	}
 
 	@Test
 	public void testNoConstraints() {
@@ -70,6 +39,36 @@ public class TimingUtilTest {
 		// Trapezoidal profile with start and end velocities.
 		timed_traj = buildAndCheckTrajectory(dist_view, 1.0, new ArrayList<TimingConstraint<Translation2d>>(), 5.0, 2.0, 10.0, 5.0);
 		System.out.println(timed_traj.toCSV());
+	}
+
+	public <S extends State<S>> Trajectory<TimedState<S>> buildAndCheckTrajectory(final DistanceView<S> dist_view, double step_size,
+	                                                                              List<TimingConstraint<S>> constraints, double start_vel, double end_vel, double max_vel, double max_acc) {
+		Trajectory<TimedState<S>> timed_traj = TimingUtil
+				.timeParameterizeTrajectory(false, dist_view, step_size, constraints, start_vel, end_vel, max_vel, max_acc);
+		checkTrajectory(timed_traj, constraints, start_vel, end_vel, max_vel, max_acc);
+		return timed_traj;
+	}
+
+	public <S extends State<S>> void checkTrajectory(final Trajectory<TimedState<S>> traj, List<TimingConstraint<S>> constraints,
+	                                                 double start_vel, double end_vel, double max_vel, double max_acc) {
+		assertFalse(traj.isEmpty());
+		assertEquals(traj.getState(0).velocity(), start_vel, kTestEpsilon);
+		assertEquals(traj.getState(traj.length() - 1).velocity(), end_vel, kTestEpsilon);
+
+		// Go state by state, verifying all constraints are satisfied and integration is correct.
+		for (int i = 0; i < traj.length(); ++i) {
+			final TimedState<S> state = traj.getState(i);
+			for (final TimingConstraint<S> constraint : constraints) {
+				assertTrue(state.velocity() - kTestEpsilon <= constraint.getMaxVelocity(state.state()));
+				final MinMaxAcceleration accel_limits = constraint.getMinMaxAcceleration(state.state(), state.velocity());
+				assertTrue(state.acceleration() - kTestEpsilon <= accel_limits.max_acceleration());
+				assertTrue(state.acceleration() + kTestEpsilon >= accel_limits.min_acceleration());
+			}
+			if (i > 0) {
+				final TimedState<S> prev_state = traj.getState(i - 1);
+				assertEquals(state.velocity(), prev_state.velocity() + (state.t() - prev_state.t()) * prev_state.acceleration(), kTestEpsilon);
+			}
+		}
 	}
 
 	@Test

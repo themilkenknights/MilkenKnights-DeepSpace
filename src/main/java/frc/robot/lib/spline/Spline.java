@@ -7,9 +7,13 @@ import frc.robot.lib.geometry.Translation2d;
 
 public abstract class Spline {
 
-	public abstract Translation2d getPoint(double t);
+	public Pose2dWithCurvature getPose2dWithCurvature(double t) {
+		return new Pose2dWithCurvature(getPose2d(t), getCurvature(t), getDCurvature(t) / getVelocity(t));
+	}
 
-	public abstract Rotation2d getHeading(double t);
+	public Pose2d getPose2d(double t) {
+		return new Pose2d(getPoint(t), getHeading(t));
+	}
 
 	public abstract double getCurvature(double t);
 
@@ -19,13 +23,9 @@ public abstract class Spline {
 	// ds/dt
 	public abstract double getVelocity(double t);
 
-	public Pose2d getPose2d(double t) {
-		return new Pose2d(getPoint(t), getHeading(t));
-	}
+	public abstract Translation2d getPoint(double t);
 
-	public Pose2dWithCurvature getPose2dWithCurvature(double t) {
-		return new Pose2dWithCurvature(getPose2d(t), getCurvature(t), getDCurvature(t) / getVelocity(t));
-	}
+	public abstract Rotation2d getHeading(double t);
 
 	// TODO add toString
 	// public abstract String toString();

@@ -1,12 +1,12 @@
 package frc.robot.auto.actions;
 
-
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.lib.physics.DriveCharacterization;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.ReflectingCSVWriter;
 import frc.robot.paths.RobotState;
 import frc.robot.subsystems.Drive;
+
 import java.util.List;
 
 public class CollectCurvatureData implements Action {
@@ -27,9 +27,9 @@ public class CollectCurvatureData implements Action {
 	private double mStartTime = 0.0;
 
 	/**
-	 * @param data reference to the list where data points should be stored
+	 * @param data     reference to the list where data points should be stored
 	 * @param highGear use high gear or low
-	 * @param reverse if true drive in reverse, if false drive normally
+	 * @param reverse  if true drive in reverse, if false drive normally
 	 */
 
 	public CollectCurvatureData(List<DriveCharacterization.CurvatureDataPoint> data, boolean highGear, boolean reverse) {
@@ -41,9 +41,8 @@ public class CollectCurvatureData implements Action {
 	}
 
 	@Override
-	public void start() {
-		mDrive.setOpenLoop(new DriveSignal(kStartPower, kStartPower));
-		mStartTime = Timer.getFPGATimestamp();
+	public boolean isFinished() {
+		return isFinished;
 	}
 
 	@Override
@@ -65,13 +64,14 @@ public class CollectCurvatureData implements Action {
 	}
 
 	@Override
-	public boolean isFinished() {
-		return isFinished;
-	}
-
-	@Override
 	public void done() {
 		mDrive.setOpenLoop(DriveSignal.BRAKE);
 		mCSVWriter.flush();
+	}
+
+	@Override
+	public void start() {
+		mDrive.setOpenLoop(new DriveSignal(kStartPower, kStartPower));
+		mStartTime = Timer.getFPGATimestamp();
 	}
 }
