@@ -14,10 +14,10 @@ import java.util.Map;
 public class RobotState {
 
 	private static final int kObservationBufferSize = 100;
-	private static RobotState instance_ = new RobotState();
 	// FPGATimestamp -> RigidTransform2d or Rotation2d
 	private static final Pose2d kVehicleToCamera = new Pose2d(new Translation2d(Constants.kCameraXOffset, Constants.kCameraYOffset),
 			new Rotation2d());
+	private static RobotState instance_ = new RobotState();
 	private InterpolatingTreeMap<InterpolatingDouble, Pose2d> field_to_vehicle_;
 	private Twist2d vehicle_velocity_predicted_;
 	private Twist2d vehicle_velocity_measured_;

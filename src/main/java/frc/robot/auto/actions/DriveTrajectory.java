@@ -1,13 +1,13 @@
 package frc.robot.auto.actions;
 
 import edu.wpi.first.wpilibj.Timer;
-import frc.robot.paths.RobotState;
 import frc.robot.lib.geometry.Pose2dWithCurvature;
 import frc.robot.lib.trajectory.TimedView;
 import frc.robot.lib.trajectory.Trajectory;
 import frc.robot.lib.trajectory.TrajectoryIterator;
 import frc.robot.lib.trajectory.timing.TimedState;
 import frc.robot.lib.util.DriveSignal;
+import frc.robot.paths.RobotState;
 import frc.robot.subsystems.Drive;
 
 public class DriveTrajectory implements Action {

@@ -19,9 +19,6 @@ public class LimeLight {
 
 	Notifier _hearBeat = new Notifier(new PeriodicRunnable());
 	private NetworkTable m_table;
-	private String m_tableName;
-	private Boolean isConnected = false;
-	private double _hearBeatPeriod = 0.1;
 	NetworkTableEntry tv = m_table.getEntry("tv");
 	NetworkTableEntry tx = m_table.getEntry("tx");
 	NetworkTableEntry ty = m_table.getEntry("ty");
@@ -35,6 +32,9 @@ public class LimeLight {
 	NetworkTableEntry pipeline = m_table.getEntry("pipeline");
 	NetworkTableEntry stream = m_table.getEntry("stream");
 	NetworkTableEntry snapshot = m_table.getEntry("snapshot");
+	private String m_tableName;
+	private Boolean isConnected = false;
+	private double _hearBeatPeriod = 0.1;
 
 
 	/**
@@ -77,8 +77,8 @@ public class LimeLight {
 		return v != 0.0f;
 	}
 
-	public LimelightTarget returnTarget(){
-		return new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(),getVertLength(), getCaptureTime());
+	public LimelightTarget returnTarget() {
+		return new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(), getVertLength(), getCaptureTime());
 	}
 
 	/**
@@ -126,12 +126,12 @@ public class LimeLight {
 		return l;
 	}
 
-	public double getHorizLength(){
+	public double getHorizLength() {
 		double h = thoriz.getDouble(0.0);
 		return h;
 	}
 
-	public double getVertLength(){
+	public double getVertLength() {
 		double v = tvert.getDouble(0.0);
 		return v;
 	}

@@ -1,7 +1,7 @@
 package frc.robot.auto.actions;
 
-import frc.robot.paths.RobotState;
 import frc.robot.lib.geometry.Translation2d;
+import frc.robot.paths.RobotState;
 
 public class WaitUntilInsideRegion implements Action {
 

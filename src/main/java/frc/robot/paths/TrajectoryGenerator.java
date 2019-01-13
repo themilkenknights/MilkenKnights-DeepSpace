@@ -68,6 +68,18 @@ public class TrajectoryGenerator {
 		return mMotionPlanner.generateTrajectory(reversed, waypoints, constraints, start_vel, end_vel, max_vel, max_accel, max_voltage);
 	}
 
+	public void generateVisionTrajectories(Pose2d endPose) {
+		if (mVisionTrajectorySet == null) {
+			System.out.println("Generating trajectories...");
+			mVisionTrajectorySet = new VisionTrajectorySet(endPose);
+			System.out.println("Finished trajectory generation");
+		}
+	}
+
+	public VisionTrajectorySet getVisionTrajectorySet() {
+		return mVisionTrajectorySet;
+	}
+
 	public class TrajectorySet {
 
 		public final MirroredTrajectory sideStartToNearScale;
@@ -99,18 +111,6 @@ public class TrajectoryGenerator {
 			}
 		}
 
-	}
-
-	public void generateVisionTrajectories(Pose2d endPose) {
-		if (mVisionTrajectorySet == null) {
-			System.out.println("Generating trajectories...");
-			mVisionTrajectorySet = new VisionTrajectorySet(endPose);
-			System.out.println("Finished trajectory generation");
-		}
-	}
-
-	public VisionTrajectorySet getVisionTrajectorySet() {
-		return mVisionTrajectorySet;
 	}
 
 	public class VisionTrajectorySet {

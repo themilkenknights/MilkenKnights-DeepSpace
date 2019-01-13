@@ -1,15 +1,10 @@
 package frc.robot.lib.vision;
 
-import edu.wpi.first.wpilibj.command.Subsystem;
-
-import frc.robot.lib.vision.PixyException;
-import frc.robot.lib.vision.PixyPacket;
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.SPI.Port;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.command.Subsystem;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class Vision extends Subsystem {
@@ -20,11 +15,11 @@ public class Vision extends Subsystem {
 	// Copy the items below, change variable names as needed and especially change
 	// the SPI port used eg; Port.kOnboardCS[0-3] or Port.kMXP
 	public PixySPI pixy1;
+	public HashMap<Integer, ArrayList<PixyPacket>> packets = new HashMap<Integer, ArrayList<PixyPacket>>();
 	Port port = Port.kOnboardCS0;
 	String print;
-	public HashMap<Integer, ArrayList<PixyPacket>> packets = new HashMap<Integer, ArrayList<PixyPacket>>();
 
-	public Vision(){
+	public Vision() {
 		// Open a pipeline to a Pixy camera.
 		pixy1 = new PixySPI(new SPI(port), packets, new PixyException(print));
 	}

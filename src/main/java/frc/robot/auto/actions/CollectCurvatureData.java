@@ -2,10 +2,10 @@ package frc.robot.auto.actions;
 
 
 import edu.wpi.first.wpilibj.Timer;
-import frc.robot.paths.RobotState;
 import frc.robot.lib.physics.DriveCharacterization;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.ReflectingCSVWriter;
+import frc.robot.paths.RobotState;
 import frc.robot.subsystems.Drive;
 import java.util.List;
 

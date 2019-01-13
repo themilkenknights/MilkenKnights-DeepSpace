@@ -11,8 +11,8 @@ import frc.robot.lib.util.MatchData;
 
 public class AutoChooser {
 
-	private static AutoModeExecutor mAutoModeExecuter = null;
 	public static MatchData matchData = MatchData.defaultMatch;
+	private static AutoModeExecutor mAutoModeExecuter = null;
 
 	public static AutoModeBase getAutoMode() {
 		double delay = SmartDashboard.getNumber("Auto Delay", 0.0);

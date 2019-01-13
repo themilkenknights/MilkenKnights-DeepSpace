@@ -33,16 +33,15 @@ import frc.robot.paths.RobotState;
 
 public class Drive extends Subsystem {
 
+	private static AutoModeExecutor mAutoModeExecuter = null;
 	private final MkTalon leftDrive, rightDrive;
 	private final MkGyro navX;
 	public PeriodicIO mPeriodicIO;
+	public DriveControlState mDriveControlState;
 	private DriveMotionPlanner mMotionPlanner;
 	private Rotation2d mGyroOffset = Rotation2d.identity();
 	private boolean mOverrideTrajectory = false;
 	private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
-	public DriveControlState mDriveControlState;
-	private static AutoModeExecutor mAutoModeExecuter = null;
-
 	private double left_encoder_prev_distance_ = 0.0;
 	private double right_encoder_prev_distance_ = 0.0;
 

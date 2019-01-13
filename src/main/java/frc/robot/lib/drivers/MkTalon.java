@@ -113,7 +113,7 @@ public class MkTalon {
 	private double getError() {
 		return MkMath.nativeUnitsPer100MstoInchesPerSec(masterTalon.getClosedLoopError(Constants.kPIDLoopIdx));
 	}
-	
+
 	public void set(ControlMode mode, double value, NeutralMode nMode) {
 		set(mode, value, nMode, 0);
 	}
