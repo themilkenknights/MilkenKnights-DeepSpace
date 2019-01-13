@@ -7,19 +7,17 @@ import frc.robot.paths.TrajectoryGenerator;
 import frc.robot.paths.TrajectoryGenerator.TrajectorySet.MirroredTrajectory;
 
 public class NearScaleOnlyMode extends AutoModeBase {
+		private static final TrajectoryGenerator mTrajectoryGenerator = TrajectoryGenerator.getInstance();
+		private final boolean mStartedLeft;
+		private DriveTrajectory mSideStartToNearScale;
 
-	private static final TrajectoryGenerator mTrajectoryGenerator = TrajectoryGenerator.getInstance();
-	private final boolean mStartedLeft;
-	private DriveTrajectory mSideStartToNearScale;
+		public NearScaleOnlyMode(boolean robotStartedOnLeft) {
+				mStartedLeft = robotStartedOnLeft;
+				MirroredTrajectory a = mTrajectoryGenerator.getTrajectorySet().sideStartToNearScale;
+				mSideStartToNearScale = new DriveTrajectory(mTrajectoryGenerator.getTrajectorySet().sideStartToNearScale.get(mStartedLeft), true);
+		}
 
-	public NearScaleOnlyMode(boolean robotStartedOnLeft) {
-		mStartedLeft = robotStartedOnLeft;
-		MirroredTrajectory a = mTrajectoryGenerator.getTrajectorySet().sideStartToNearScale;
-		mSideStartToNearScale = new DriveTrajectory(mTrajectoryGenerator.getTrajectorySet().sideStartToNearScale.get(mStartedLeft), true);
-	}
-
-	@Override
-	protected void routine() throws AutoModeEndedException {
-		runAction(mSideStartToNearScale);
-	}
+		@Override protected void routine() throws AutoModeEndedException {
+				runAction(mSideStartToNearScale);
+		}
 }
