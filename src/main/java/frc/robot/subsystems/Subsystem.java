@@ -12,20 +12,19 @@ import frc.robot.lib.structure.ILooper;
  * match.
  */
 public abstract class Subsystem {
+		// Optional design pattern for caching periodic reads to avoid hammering the HAL/CAN.
+		public void readPeriodicInputs() {
+		}
 
-	// Optional design pattern for caching periodic reads to avoid hammering the HAL/CAN.
-	public void readPeriodicInputs() {
-	}
+		// Optional design pattern for caching periodic writes to avoid hammering the HAL/CAN.
+		public void writePeriodicOutputs() {
+		}
 
-	// Optional design pattern for caching periodic writes to avoid hammering the HAL/CAN.
-	public void writePeriodicOutputs() {
-	}
+		public abstract void outputTelemetry();
 
-	public abstract void outputTelemetry();
+		public void zeroSensors() {
+		}
 
-	public void zeroSensors() {
-	}
-
-	public void registerEnabledLoops(ILooper enabledLooper) {
-	}
+		public void registerEnabledLoops(ILooper enabledLooper) {
+		}
 }
