@@ -11,33 +11,35 @@ import frc.robot.lib.vision.LimeLightControlMode.*;
  * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you Enjoy the Lime Light Camera.
  */
 public class LimeLight {
-		Notifier _hearBeat = new Notifier(new PeriodicRunnable());
-		private NetworkTable m_table;
-		NetworkTableEntry tv = m_table.getEntry("tv");
-		NetworkTableEntry tx = m_table.getEntry("tx");
-		NetworkTableEntry ty = m_table.getEntry("ty");
-		NetworkTableEntry ta = m_table.getEntry("ta");
-		NetworkTableEntry ts = m_table.getEntry("ts");
-		NetworkTableEntry tl = m_table.getEntry("tl");
-		NetworkTableEntry thoriz = m_table.getEntry("thoriz");
-		NetworkTableEntry tvert = m_table.getEntry("tvert");
-		NetworkTableEntry ledMode = m_table.getEntry("ledMode");
-		NetworkTableEntry camMode = m_table.getEntry("camMode");
-		NetworkTableEntry pipeline = m_table.getEntry("pipeline");
-		NetworkTableEntry stream = m_table.getEntry("stream");
-		NetworkTableEntry snapshot = m_table.getEntry("snapshot");
-		private String m_tableName;
-		private Boolean isConnected = false;
-		private double _hearBeatPeriod = 0.1;
+	Notifier _hearBeat = new Notifier(new PeriodicRunnable());
+	private NetworkTable m_table;
+	NetworkTableEntry tv, tx, ty, ta, ts, tl, thoriz, tvert, ledMode, camMode, pipeline, stream, snapshot;
+	private String m_tableName;
+	private Boolean isConnected = false;
+	private double _hearBeatPeriod = 0.1;
 
-		/**
-		 * Using the Default Lime Light NT table
-		 */
-		public LimeLight() {
-				m_tableName = "limelight";
-				m_table = NetworkTableInstance.getDefault().getTable(m_tableName);
-				_hearBeat.startPeriodic(_hearBeatPeriod);
-		}
+	/**
+	 * Using the Default Lime Light NT table
+	 */
+	public LimeLight() {
+		m_tableName = "limelight";
+		m_table = NetworkTableInstance.getDefault().getTable(m_tableName);
+		_hearBeat.startPeriodic(_hearBeatPeriod);
+
+		tv = m_table.getEntry("tv");
+		tx = m_table.getEntry("tx");
+		ty = m_table.getEntry("ty");
+		ta = m_table.getEntry("ta");
+		ts = m_table.getEntry("ts");
+		tl = m_table.getEntry("tl");
+		thoriz = m_table.getEntry("thoriz");
+		tvert = m_table.getEntry("tvert");
+		ledMode = m_table.getEntry("ledMode");
+		camMode = m_table.getEntry("camMode");
+		pipeline = m_table.getEntry("pipeline");
+		stream = m_table.getEntry("stream");
+		snapshot = m_table.getEntry("snapshot");
+	}
 
 		/**
 		 * If you changed the name of your Lime Light tell Me the New Name

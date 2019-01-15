@@ -21,7 +21,11 @@ public class Superstructure extends Subsystem {
 
 	public static Superstructure getInstance() { return InstanceHolder.mInstance; }
 
-	public void Superstructure() { limeLight = new LimeLight(); target = LimelightTarget.EMPTY; pixy1 = new PixySPI(new SPI(port), packets, new PixyException(print)); }
+	public Superstructure() { limeLight = new LimeLight();
+	limeLight = new LimeLight();
+	target = LimelightTarget.EMPTY;
+	pixy1 = new PixySPI(new SPI(port), packets, new PixyException(print));
+	}
 
 	@Override
 	public void outputTelemetry() { SmartDashboard.putString("Robot State", Robot.mMatchState.toString()); }
@@ -47,12 +51,6 @@ public class Superstructure extends Subsystem {
 	private synchronized void updateLimelight() { target = limeLight.returnTarget(); }
 
 	private synchronized void testPixy() {
-		if (w == 500) {
-			w = 0;
-		} else {
-			w++;
-			return;
-		}
 		int ret = -1;
 		// Get the packets from the pixy.
 		try {
@@ -66,6 +64,7 @@ public class Superstructure extends Subsystem {
 			SmartDashboard.putNumber("Pixy Vision: packet: " + i + ": size: ", packets.get(i).size());
 			// Loop through the packets for this signature.
 			for (int j = 0; j < packets.get(i).size(); j++) {
+				System.out.println(packets.get(i).get(j).X);
 				SmartDashboard.putNumber("Pixy Vision: " + i + ": X: ", packets.get(i).get(j).X);
 				SmartDashboard.putNumber("Pixy Vision: " + i + ": Y: ", packets.get(i).get(j).Y);
 				SmartDashboard.putNumber("Pixy Vision: " + i + ": Width: ", packets.get(i).get(j).Width);

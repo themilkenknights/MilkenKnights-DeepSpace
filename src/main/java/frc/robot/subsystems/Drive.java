@@ -48,6 +48,7 @@ public class Drive extends Subsystem {
 				leftDrive.resetEncoder();
 				rightDrive.resetEncoder();
 				navX = new MkGyro(Port.kMXP);
+				navX.zeroYaw();
 				leftDrive.masterTalon.setInverted(Constants.LEFT_MASTER_INVERT);
 				leftDrive.slaveTalon.setInverted(Constants.LEFT_SLAVE_INVERT);
 				leftDrive.masterTalon.setSensorPhase(Constants.LEFT_INVERT_SENSOR);
@@ -79,7 +80,7 @@ public class Drive extends Subsystem {
 
 		public synchronized void setHeading(Rotation2d heading) {
 				System.out.println("SET HEADING: " + heading.getDegrees());
-				mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(navX.getSwerd()).inverse());
+				mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(navX.getFusedHeading()).inverse());
 				System.out.println("Gyro offset: " + mGyroOffset.getDegrees());
 				mPeriodicIO.gyro_heading = heading;
 		}
@@ -89,7 +90,7 @@ public class Drive extends Subsystem {
 				mPeriodicIO.rightPos = rightDrive.getPosition();
 				mPeriodicIO.leftVel = leftDrive.getSpeed();
 				mPeriodicIO.rightVel = rightDrive.getSpeed();
-				mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(navX.getSwerd()).rotateBy(mGyroOffset);
+				mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(navX.getFusedHeading()).rotateBy(mGyroOffset);
 				if (mCSVWriter != null) {
 						mCSVWriter.add(mPeriodicIO);
 				}
@@ -111,6 +112,7 @@ public class Drive extends Subsystem {
 				rightDrive.updateSmartDash();
 				SmartDashboard.putString("Drive State", mDriveControlState.toString());
 				SmartDashboard.putBoolean("Drivetrain Status", leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected());
+				SmartDashboard.putNumber("NavX Fused Heading", navX.getFusedHeading());
 				if (mCSVWriter != null) {
 						mCSVWriter.write();
 				}
@@ -120,9 +122,6 @@ public class Drive extends Subsystem {
 				enabledLooper.register(new Loop() {
 						@Override public void onStart(double timestamp) {
 								synchronized (Drive.this) {
-										leftDrive.resetEncoder();
-										rightDrive.resetEncoder();
-										navX.zeroYaw();
 										left_encoder_prev_distance_ = mPeriodicIO.leftPos;
 										right_encoder_prev_distance_ = mPeriodicIO.rightPos;
 										startLogging();
