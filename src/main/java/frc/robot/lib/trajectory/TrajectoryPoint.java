@@ -3,19 +3,19 @@ package frc.robot.lib.trajectory;
 import frc.robot.lib.geometry.State;
 
 public class TrajectoryPoint<S extends State<S>> {
-		protected final S state_;
-		protected final int index_;
+    protected final S state_;
+    protected final int index_;
 
-		public TrajectoryPoint(final S state, int index) {
-				state_ = state;
-				index_ = index;
-		}
+    public TrajectoryPoint(final S state, int index) {
+        state_ = state;
+        index_ = index;
+    }
 
-		public S state() {
-				return state_;
-		}
+    public S state() {
+        return state_;
+    }
 
-		public int index() {
-				return index_;
-		}
+    public int index() {
+        return index_;
+    }
 }

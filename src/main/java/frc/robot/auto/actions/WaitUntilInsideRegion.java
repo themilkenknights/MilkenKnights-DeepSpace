@@ -4,32 +4,36 @@ import frc.robot.lib.geometry.Translation2d;
 import frc.robot.paths.RobotState;
 
 public class WaitUntilInsideRegion implements Action {
-		private final static RobotState mRobotState = RobotState.getInstance();
-		private final Translation2d mBottomLeft;
-		private final Translation2d mTopRight;
+    private final static RobotState mRobotState = RobotState.getInstance();
+    private final Translation2d mBottomLeft;
+    private final Translation2d mTopRight;
 
-		//(100, 100) (200, 200)
-		public WaitUntilInsideRegion(Translation2d bottomLeft, Translation2d topRight, boolean isOnLeft) {
-				if (isOnLeft) {
-						mBottomLeft = new Translation2d(bottomLeft.x(), -topRight.y());
-						mTopRight = new Translation2d(topRight.x(), -bottomLeft.y());
-				} else {
-						mBottomLeft = bottomLeft;
-						mTopRight = topRight;
-				}
-		}
+    //(100, 100) (200, 200)
+    public WaitUntilInsideRegion(Translation2d bottomLeft, Translation2d topRight, boolean isOnLeft) {
+        if (isOnLeft) {
+            mBottomLeft = new Translation2d(bottomLeft.x(), -topRight.y());
+            mTopRight = new Translation2d(topRight.x(), -bottomLeft.y());
+        } else {
+            mBottomLeft = bottomLeft;
+            mTopRight = topRight;
+        }
+    }
 
-		@Override public boolean isFinished() {
-				Translation2d position = mRobotState.getLatestFieldToVehicle().getValue().getTranslation();
-				return position.x() > mBottomLeft.x() && position.x() < mTopRight.x() && position.y() > mBottomLeft.y() && position.y() < mTopRight.y();
-		}
+    @Override
+    public boolean isFinished() {
+        Translation2d position = mRobotState.getLatestFieldToVehicle().getValue().getTranslation();
+        return position.x() > mBottomLeft.x() && position.x() < mTopRight.x() && position.y() > mBottomLeft.y() && position.y() < mTopRight.y();
+    }
 
-		@Override public void update() {
-		}
+    @Override
+    public void update() {
+    }
 
-		@Override public void done() {
-		}
+    @Override
+    public void done() {
+    }
 
-		@Override public void start() {
-		}
+    @Override
+    public void start() {
+    }
 }

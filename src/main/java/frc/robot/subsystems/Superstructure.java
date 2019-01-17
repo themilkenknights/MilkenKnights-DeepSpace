@@ -1,61 +1,61 @@
 package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj.SPI;
-import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Robot;
 import frc.robot.lib.structure.ILooper;
 import frc.robot.lib.structure.Loop;
-import frc.robot.lib.vision.*;
-
-import java.util.ArrayList;
-import java.util.HashMap;
+import frc.robot.lib.vision.LimeLight;
+import frc.robot.lib.vision.LimelightTarget;
 
 public class Superstructure extends Subsystem {
-		/*public PixySPI pixy1;
-		public HashMap<Integer, ArrayList<PixyPacket>> packets = new HashMap<Integer, ArrayList<PixyPacket>>();
-		public int w = 0;
-		Port port = Port.kOnboardCS0;
-		String print;*/
-		private LimeLight limeLight;
-		private LimelightTarget target;
+    /*public PixySPI pixy1;
+    public HashMap<Integer, ArrayList<PixyPacket>> packets = new HashMap<Integer, ArrayList<PixyPacket>>();
+    public int w = 0;
+    Port port = Port.kOnboardCS0;
+    String print;*/
+    private LimeLight limeLight;
+    private LimelightTarget target;
 
-		public static Superstructure getInstance() {
-				return InstanceHolder.mInstance;
-		}
+    private Superstructure() {
+        limeLight = new LimeLight();
+        target = LimelightTarget.EMPTY;
+        //pixy1 = new PixySPI(new SPI(port), packets, new PixyException(print));
+    }
 
-		private Superstructure() {
-				limeLight = new LimeLight();
-				target = LimelightTarget.EMPTY;
-				//pixy1 = new PixySPI(new SPI(port), packets, new PixyException(print));
-		}
+    public static Superstructure getInstance() {
+        return InstanceHolder.mInstance;
+    }
 
-		@Override public void outputTelemetry() {
-				SmartDashboard.putString("Robot State", Robot.mMatchState.toString());
-		}
+    @Override
+    public void outputTelemetry() {
+        SmartDashboard.putString("Robot State", Robot.mMatchState.toString());
+    }
 
-		public void registerEnabledLoops(ILooper enabledLooper) {
-				enabledLooper.register(new Loop() {
-						@Override public void onStart(double timestamp) {
-								synchronized (Superstructure.this) {
-								}
-						}
+    public void registerEnabledLoops(ILooper enabledLooper) {
+        enabledLooper.register(new Loop() {
+            @Override
+            public void onStart(double timestamp) {
+                synchronized (Superstructure.this) {
+                }
+            }
 
-						@Override public void onLoop(double timestamp) {
-								synchronized (Superstructure.this) {
-										updateLimelight();
-										//testPixy();
-								}
-						}
+            @Override
+            public void onLoop(double timestamp) {
+                synchronized (Superstructure.this) {
+                    updateLimelight();
+                    //testPixy();
+                }
+            }
 
-						@Override public void onStop(double timestamp) {
-						}
-				});
-		}
+            @Override
+            public void onStop(double timestamp) {
+            }
+        });
+    }
 
-		private synchronized void updateLimelight() {
-				target = limeLight.returnTarget();
-		}
+    private synchronized void updateLimelight() {
+        target = limeLight.returnTarget();
+    }
 
 		/*private synchronized void testPixy() {
 				if (w == 500) {
@@ -86,11 +86,11 @@ public class Superstructure extends Subsystem {
 				}
 		}*/
 
-		public synchronized LimelightTarget getTarget() {
-				return target;
-		}
+    public synchronized LimelightTarget getTarget() {
+        return target;
+    }
 
-		private static class InstanceHolder {
-				private static final Superstructure mInstance = new Superstructure();
-		}
+    private static class InstanceHolder {
+        private static final Superstructure mInstance = new Superstructure();
+    }
 }

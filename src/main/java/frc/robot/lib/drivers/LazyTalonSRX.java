@@ -8,22 +8,23 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
  * commands. (By default the Talon flushes the Tx buffer on every set call).
  */
 public class LazyTalonSRX extends TalonSRX {
-		protected double mLastSet = Double.NaN;
-		protected ControlMode mLastControlMode = null;
+    protected double mLastSet = Double.NaN;
+    protected ControlMode mLastControlMode = null;
 
-		public LazyTalonSRX(int deviceNumber) {
-				super(deviceNumber);
-		}
+    public LazyTalonSRX(int deviceNumber) {
+        super(deviceNumber);
+    }
 
-		public double getLastSet() {
-				return mLastSet;
-		}
+    public double getLastSet() {
+        return mLastSet;
+    }
 
-		@Override public void set(ControlMode mode, double value) {
-				if (value != mLastSet || mode != mLastControlMode) {
-						mLastSet = value;
-						mLastControlMode = mode;
-						super.set(mode, value);
-				}
-		}
+    @Override
+    public void set(ControlMode mode, double value) {
+        if (value != mLastSet || mode != mLastControlMode) {
+            mLastSet = value;
+            mLastControlMode = mode;
+            super.set(mode, value);
+        }
+    }
 }
