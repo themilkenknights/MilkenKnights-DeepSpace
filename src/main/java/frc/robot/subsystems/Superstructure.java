@@ -24,7 +24,7 @@ public class Superstructure extends Subsystem {
 				return InstanceHolder.mInstance;
 		}
 
-		public void Superstructure() {
+		private Superstructure() {
 				limeLight = new LimeLight();
 				target = LimelightTarget.EMPTY;
 				//pixy1 = new PixySPI(new SPI(port), packets, new PixyException(print));

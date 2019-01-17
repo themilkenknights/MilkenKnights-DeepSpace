@@ -48,7 +48,6 @@ public class Drive extends Subsystem {
 				leftDrive.resetEncoder();
 				rightDrive.resetEncoder();
 				navX = new MkGyro(Port.kMXP);
-				navX.zeroYaw();
 				leftDrive.masterTalon.setInverted(Constants.LEFT_MASTER_INVERT);
 				leftDrive.slaveTalon.setInverted(Constants.LEFT_SLAVE_INVERT);
 				leftDrive.masterTalon.setSensorPhase(Constants.LEFT_INVERT_SENSOR);
@@ -56,6 +55,7 @@ public class Drive extends Subsystem {
 				rightDrive.slaveTalon.setInverted(Constants.RIGHT_SLAVE_INVERT);
 				rightDrive.masterTalon.setSensorPhase(Constants.RIGHT_INVERT_SENSOR);
 				mMotionPlanner = new DriveMotionPlanner();
+				navX.zeroYaw();
 		}
 
 		public static Drive getInstance() {

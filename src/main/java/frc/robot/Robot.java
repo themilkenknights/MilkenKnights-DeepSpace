@@ -59,9 +59,9 @@ public class Robot extends TimedRobot {
 		try {
 			Shuffleboard.startRecording();
 			CrashTracker.logAutoInit();
+			RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
 			mMatchState = MatchState.AUTO;
 			mEnabledLooper.start();
-			RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
 			AutoChooser.startAuto();
 		} catch (Throwable t) {
 			CrashTracker.logThrowableCrash(t);

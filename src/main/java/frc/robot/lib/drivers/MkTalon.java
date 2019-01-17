@@ -56,12 +56,12 @@ public class MkTalon {
 				slaveTalon.setNeutralMode(NeutralMode.Brake);
 				masterTalon.configNominalOutputForward(0);
 				masterTalon.configNominalOutputReverse(0);
-				masterTalon.configPeakOutputForward(0.5);
-				masterTalon.configPeakOutputReverse(-0.5);
+				masterTalon.configPeakOutputForward(1.0);
+				masterTalon.configPeakOutputReverse(-1.0);
 				slaveTalon.configNominalOutputForward(0);
 				slaveTalon.configNominalOutputReverse(0);
-				slaveTalon.configPeakOutputForward(0.5);
-				slaveTalon.configPeakOutputReverse(-0.5);
+				slaveTalon.configPeakOutputForward(1.0);
+				slaveTalon.configPeakOutputReverse(-1.0);
 				masterTalon.configVoltageCompSaturation(12);
 				masterTalon.enableVoltageCompensation(true);
 				masterTalon.configVoltageMeasurementFilter(32);
