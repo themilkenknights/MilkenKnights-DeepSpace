@@ -16,6 +16,7 @@ public class MkTalon {
     private ControlMode lastControlMode = null;
     private double lastOutput = Double.NaN;
     private NeutralMode lastNeutralMode = null;
+    private double maxRPM = 0;
 
     /**
      * @param master Talon with Encoder CAN ID
@@ -110,6 +111,9 @@ public class MkTalon {
     }
 
     public void updateSmartDash() {
+        double rp = (((masterTalon.getSelectedSensorVelocity(0)) / 4096.0) * 60 * 10);
+        maxRPM = maxRPM > rp? maxRPM: rp;
+        SmartDashboard.putNumber(side.toString() + " RPM", maxRPM);
         SmartDashboard.putNumber(side.toString() + " Velocity", getSpeed());
         SmartDashboard.putNumber(side.toString() + " Error", getError());
         SmartDashboard.putNumber(side.toString() + " Master Output", masterTalon.getMotorOutputPercent());
