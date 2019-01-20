@@ -62,14 +62,14 @@ public class MkTalon {
         slaveTalon.configNominalOutputReverse(0);
         slaveTalon.configPeakOutputForward(1.0);
         slaveTalon.configPeakOutputReverse(-1.0);
-        masterTalon.configVoltageCompSaturation(12);
+        masterTalon.configVoltageCompSaturation(12.0);
         masterTalon.enableVoltageCompensation(true);
         masterTalon.configVoltageMeasurementFilter(32);
-        slaveTalon.configVoltageCompSaturation(12);
+        slaveTalon.configVoltageCompSaturation(12.0);
         slaveTalon.enableVoltageCompensation(true);
         slaveTalon.configVoltageMeasurementFilter(32);
-        masterTalon.configVelocityMeasurementPeriod(VelocityMeasPeriod.Period_100Ms);
-        masterTalon.configVelocityMeasurementWindow(64);
+        masterTalon.configVelocityMeasurementPeriod(VelocityMeasPeriod.Period_50Ms);
+        masterTalon.configVelocityMeasurementWindow(32);
         lastControlMode = ControlMode.PercentOutput;
         lastNeutralMode = NeutralMode.Brake;
         lastOutput = Double.NaN;

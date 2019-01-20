@@ -16,9 +16,9 @@ public class CharacterizeHighGearStraight extends AutoModeBase {
         List<DriveCharacterization.VelocityDataPoint> velocityData = new ArrayList<>();
         List<DriveCharacterization.AccelerationDataPoint> accelerationData = new ArrayList<>();
         runAction(new WaitAction(1));
-        runAction(new CollectVelocityData(velocityData, false, true));
+        runAction(new CollectVelocityData(velocityData, false, false));
         runAction(new WaitAction(10));
-        runAction(new CollectAccelerationData(accelerationData, false, true));
+        runAction(new CollectAccelerationData(accelerationData, false, false));
         DriveCharacterization.CharacterizationConstants constants = DriveCharacterization.characterizeDrive(velocityData, accelerationData);
         System.out.println("ks: " + constants.ks);
         System.out.println("kv: " + constants.kv);
