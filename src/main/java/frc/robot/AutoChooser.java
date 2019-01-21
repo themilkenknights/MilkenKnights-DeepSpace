@@ -43,7 +43,7 @@ public class AutoChooser {
     }
 
     private static AutoModeBase getStraightMode() {
-        return new CharacterizeHighGearStraight();
+        return new NearScaleOnlyMode(true);
     }
 
     public static void disableAuto() {
