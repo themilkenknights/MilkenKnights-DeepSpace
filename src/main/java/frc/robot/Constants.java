@@ -22,7 +22,7 @@ public final class Constants {
     // Tuned dynamics
     public static final double kRobotLinearInertia = 26.30;  // kg TODO tune
     public static final double kRobotAngularInertia = 4.4;  // kg m^2 TODO tune
-    public static final double kRobotAngularDrag = 12.0;  // N*m / (rad/sec) TODO tune
+    public static final double kRobotAngularDrag = 6.0;  // N*m / (rad/sec) TODO tune
     public static final double kDriveVIntercept = 1.07832;  // V
     public static final double kDriveKv = 0.5858;  // V per rad/s
     public static final double kDriveKa = 0.012;  // V per rad/s^2
