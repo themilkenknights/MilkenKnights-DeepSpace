@@ -21,7 +21,7 @@ public class TrajectoryGenerator {
     // +x is towards the center of the field.
     // +y is to the left.
     // ALL POSES DEFINED FOR THE CASE THAT ROBOT STARTS ON RIGHT! (mirrored about +x axis for LEFT)
-    public static final Pose2d kStartPose = new Pose2d(0.0, 0.0, Rotation2d.fromDegrees(180.0));
+    public static final Pose2d kStartPose = new Pose2d(0.0, 0.0, Rotation2d.fromDegrees(0.0));
     private static final double kMaxCentripetalAccel = 110.0;
     private static final double kMaxVoltage = 12.0;
     private static final double kMaxAccel = 130.0;
@@ -89,7 +89,7 @@ public class TrajectoryGenerator {
         private Trajectory<TimedState<Pose2dWithCurvature>> getSideStartToNearScale() {
             List<Pose2d> waypoints = new ArrayList<>();
             waypoints.add(kStartPose);
-            waypoints.add(kStartPose.transformBy(new Pose2d(new Translation2d(10.0, 0.0), Rotation2d.fromDegrees(180.0))));
+            waypoints.add(kStartPose.transformBy(new Pose2d(new Translation2d(20.0, 0.0), Rotation2d.fromDegrees(0.0))));
             return generateTrajectory(true, waypoints, Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel, kMaxAccel, kMaxVoltage);
         }
 
