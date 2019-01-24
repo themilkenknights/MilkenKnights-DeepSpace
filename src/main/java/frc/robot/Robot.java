@@ -49,11 +49,11 @@ public class Robot extends TimedRobot {
     @Override
     public void disabledInit() {
         try {
-            AutoChooser.disableAuto();
-            mEnabledLooper.stop();
             CrashTracker.logDisabledInit();
-            mMatchState = MatchState.DISABLED;
+            mEnabledLooper.stop();
             AutoChooser.disableAuto();
+            RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
+            mMatchState = MatchState.DISABLED;
         } catch (Throwable t) {
             CrashTracker.logThrowableCrash(t);
             throw t;
