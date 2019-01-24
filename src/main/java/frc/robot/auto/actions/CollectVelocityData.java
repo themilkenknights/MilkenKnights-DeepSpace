@@ -22,7 +22,6 @@ public class CollectVelocityData implements Action {
 
     /**
      * @param data     reference to the list where data points should be stored
-     * @param highGear use high gear or low
      * @param reverse  if true drive in reverse, if false drive normally
      * @param turn     if true turn, if false drive straight
      */
