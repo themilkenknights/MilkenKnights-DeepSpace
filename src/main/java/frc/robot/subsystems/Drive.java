@@ -28,7 +28,7 @@ import frc.robot.paths.Kinematics;
 import frc.robot.paths.RobotState;
 
 public class Drive extends Subsystem {
-    private static AutoModeExecutor mAutoModeExecuter = null;
+    //private static AutoModeExecutor mAutoModeExecuter = null;
     private final MkTalon leftDrive, rightDrive;
     private final MkGyro navX;
     public PeriodicIO mPeriodicIO;
@@ -36,7 +36,7 @@ public class Drive extends Subsystem {
     private DriveMotionPlanner mMotionPlanner;
     private Rotation2d mGyroOffset = Rotation2d.identity();
     private boolean mOverrideTrajectory = false;
-    private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
+    //private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
     private double left_encoder_prev_distance_ = 0.0;
     private double right_encoder_prev_distance_ = 0.0;
 
@@ -92,9 +92,9 @@ public class Drive extends Subsystem {
         mPeriodicIO.leftVel = leftDrive.getSpeed();
         mPeriodicIO.rightVel = rightDrive.getSpeed();
         mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(navX.getFusedHeading()).rotateBy(mGyroOffset);
-        if (mCSVWriter != null) {
+        /*if (mCSVWriter != null) {
             mCSVWriter.add(mPeriodicIO);
-        }
+        }*/
     }
 
     @Override
@@ -114,9 +114,9 @@ public class Drive extends Subsystem {
         SmartDashboard.putString("Drive State", mDriveControlState.toString());
         SmartDashboard.putBoolean("Drivetrain Status", leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected());
         SmartDashboard.putNumber("NavX Fused Heading", navX.getFusedHeading());
-        if (mCSVWriter != null) {
+        /*if (mCSVWriter != null) {
             mCSVWriter.write();
-        }
+        }*/
     }
 
     @Override
@@ -127,7 +127,7 @@ public class Drive extends Subsystem {
                 synchronized (Drive.this) {
                     left_encoder_prev_distance_ = mPeriodicIO.leftPos;
                     right_encoder_prev_distance_ = mPeriodicIO.rightPos;
-                    startLogging();
+                    //startLogging();
                 }
             }
 
@@ -160,15 +160,15 @@ public class Drive extends Subsystem {
             @Override
             public void onStop(double timestamp) {
                 setOpenLoop(DriveSignal.BRAKE);
-                stopLogging();
+                //stopLogging();
             }
         });
     }
 
     public synchronized void startLogging() {
-        if (mCSVWriter == null) {
+        /*if (mCSVWriter == null) {
             mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
-        }
+        }*/
     }
 
     public synchronized void stateEstimator(double timestamp) {
@@ -227,10 +227,10 @@ public class Drive extends Subsystem {
     }
 
     public synchronized void stopLogging() {
-        if (mCSVWriter != null) {
+        /*if (mCSVWriter != null) {
             mCSVWriter.flush();
             mCSVWriter = null;
-        }
+        }*/
     }
 
     /**
@@ -321,9 +321,9 @@ public class Drive extends Subsystem {
     }
 
     public void targetPos() {
-        LimelightTarget target = Superstructure.getInstance().getTarget();
+     /*   LimelightTarget target = Superstructure.getInstance().getTarget();
         if (target.isValidTarget()) {
-            if (mAutoModeExecuter != null) {
+           if (mAutoModeExecuter != null) {
                 mAutoModeExecuter.stop();
             }
             mAutoModeExecuter = null;
@@ -332,7 +332,7 @@ public class Drive extends Subsystem {
             double angle = target.getXOffset();
             mAutoModeExecuter.setAutoMode(new TrackTarget(new Pose2d(new Translation2d(dist, 0.0), Rotation2d.fromDegrees(angle))));
             mAutoModeExecuter.start();
-        }
+        } */
     }
 
     public enum DriveControlState {

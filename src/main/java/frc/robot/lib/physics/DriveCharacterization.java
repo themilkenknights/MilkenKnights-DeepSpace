@@ -17,6 +17,7 @@ public class DriveCharacterization {
         if (points == null) {
             return constants;
         }
+        System.out.println(points[0][0]);
         PolynomialRegression p = new PolynomialRegression(points, 1);
         System.out.println("r^2: " + p.R2());
         constants.ks = p.beta(0);

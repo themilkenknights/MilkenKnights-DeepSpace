@@ -17,7 +17,7 @@ public class AutoChooser {
     private static AutoModeExecutor mAutoModeExecuter = null;
 
     public static void startAuto() {
-        updateGameData();
+        //updateGameData();
         if (mAutoModeExecuter != null) {
             mAutoModeExecuter.stop();
         }
@@ -28,10 +28,11 @@ public class AutoChooser {
     }
 
     private static void updateGameData() {
-        matchData.alliance = DriverStation.getInstance().getAlliance();
+        /*matchData.alliance = DriverStation.getInstance().getAlliance();
         matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
         matchData.matchType = DriverStation.getInstance().getMatchType();
         CrashTracker.logMarker("Alliance: " + matchData.alliance.toString() + " Match Number: " + matchData.matchNumber + " Match Type: " + matchData.matchType.toString());
+    */
     }
 
     public static AutoModeBase getAutoMode() {
@@ -43,7 +44,7 @@ public class AutoChooser {
     }
 
     private static AutoModeBase getStraightMode() {
-        return new CharacterizeHighGearStraight();
+        return new NearScaleOnlyMode(true);
     }
 
     public static void disableAuto() {
@@ -51,5 +52,6 @@ public class AutoChooser {
             mAutoModeExecuter.stop();
         }
         mAutoModeExecuter = null;
+        mAutoModeExecuter = new AutoModeExecutor();
     }
 }

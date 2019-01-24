@@ -35,5 +35,10 @@ public class LimelightTarget {
     public double getCaptureTime() {
         return captureTime;
     }
+
+    @Override
+    public String toString() {
+        return "X:" + xOffset + ", Y: " + yOffset + ", Area:" + area + ", Dt: " + captureTime;
+    }
 }
 

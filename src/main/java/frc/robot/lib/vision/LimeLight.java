@@ -32,7 +32,7 @@ public class LimeLight {
         ta = m_table.getEntry("ta");
         ts = m_table.getEntry("ts");
         tl = m_table.getEntry("tl");
-        thoriz = m_table.getEntry("thoriz");
+        thoriz = m_table.getEntry("thor");
         tvert = m_table.getEntry("tvert");
         ledMode = m_table.getEntry("ledMode");
         camMode = m_table.getEntry("camMode");

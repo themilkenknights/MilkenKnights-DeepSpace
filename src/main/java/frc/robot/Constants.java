@@ -21,10 +21,10 @@ public final class Constants {
 
     // Tuned dynamics
     public static final double kRobotLinearInertia = 26.30;  // kg TODO tune
-    public static final double kRobotAngularInertia = 10.0;  // kg m^2 TODO tune
-    public static final double kRobotAngularDrag = 12.0;  // N*m / (rad/sec) TODO tune
-    public static final double kDriveVIntercept = 1.055;  // V
-    public static final double kDriveKv = 0.135;  // V per rad/s
+    public static final double kRobotAngularInertia = 4.4;  // kg m^2 TODO tune
+    public static final double kRobotAngularDrag = 6.0;  // N*m / (rad/sec) TODO tune
+    public static final double kDriveVIntercept = 1.07832;  // V
+    public static final double kDriveKv = 0.5858;  // V per rad/s
     public static final double kDriveKa = 0.012;  // V per rad/s^2
 
     public static final int LEFT_MASTER_ID = 10;
@@ -66,10 +66,11 @@ public final class Constants {
     public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> visionDistMap = new InterpolatingTreeMap<>();
 
     static {
-        visionDistMap.put(new InterpolatingDouble(60.0), new InterpolatingDouble(42.5));
-        visionDistMap.put(new InterpolatingDouble(70.0), new InterpolatingDouble(44.5));
-        visionDistMap.put(new InterpolatingDouble(75.0), new InterpolatingDouble(46.8));
-        visionDistMap.put(new InterpolatingDouble(80.0), new InterpolatingDouble(48.0));
-        visionDistMap.put(new InterpolatingDouble(85.0), new InterpolatingDouble(49.0));
+        visionDistMap.put(new InterpolatingDouble(38440.0), new InterpolatingDouble(12.75));
+        visionDistMap.put(new InterpolatingDouble(1392.0), new InterpolatingDouble(23.0));
+        visionDistMap.put(new InterpolatingDouble(7208.0), new InterpolatingDouble(33.0));
+        visionDistMap.put(new InterpolatingDouble(3610.0), new InterpolatingDouble(46.75));
+        visionDistMap.put(new InterpolatingDouble(1742.0), new InterpolatingDouble(66.0));
+        visionDistMap.put(new InterpolatingDouble(782.0), new InterpolatingDouble(96.0));
     }
 }
