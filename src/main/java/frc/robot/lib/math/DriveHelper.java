@@ -35,7 +35,7 @@ public class DriveHelper {
                 rightMotorSpeed = -Math.max(-moveValue, -rotateValue);
             }
         }
-        return new DriveSignal(leftMotorSpeed * Constants.MOTION_MAGIC_CRUISE_VEL, rightMotorSpeed*Constants.MOTION_MAGIC_CRUISE_VEL);
+        return new DriveSignal(leftMotorSpeed, rightMotorSpeed);
     }
 
     protected static double limit(double num) {

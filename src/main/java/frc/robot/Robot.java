@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.structure.Looper;
 import frc.robot.lib.util.CrashTracker;
+import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.paths.RobotState;
 import frc.robot.paths.TrajectoryGenerator;
 import frc.robot.subsystems.Drive;
@@ -26,7 +27,7 @@ public class Robot extends TimedRobot {
     public static MatchState mMatchState = MatchState.DISABLED;
     private final SubsystemManager mSubsystemManager = new SubsystemManager(Arrays.asList(Drive.getInstance(), Superstructure.getInstance()));
     private Looper mEnabledLooper = new Looper();
-    private double dt = 0;
+    //private double dt = 0;
 
     public Robot() {
         CrashTracker.logRobotConstruction();
@@ -48,9 +49,10 @@ public class Robot extends TimedRobot {
     @Override
     public void disabledInit() {
         try {
+            AutoChooser.disableAuto();
+            mEnabledLooper.stop();
             CrashTracker.logDisabledInit();
             mMatchState = MatchState.DISABLED;
-            mEnabledLooper.stop();
             AutoChooser.disableAuto();
         } catch (Throwable t) {
             CrashTracker.logThrowableCrash(t);
@@ -76,10 +78,10 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopInit() {
         try {
+            AutoChooser.disableAuto();
+            mMatchState = MatchState.TELEOP;
             Shuffleboard.startRecording();
             CrashTracker.logTeleopInit();
-            mMatchState = MatchState.TELEOP;
-            Drive.getInstance().mDriveControlState = DriveControlState.OPEN_LOOP;
             mEnabledLooper.start();
         } catch (Throwable t) {
             CrashTracker.logThrowableCrash(t);
@@ -104,12 +106,13 @@ public class Robot extends TimedRobot {
     @Override
     public void robotPeriodic() {
         try {
-            Input.updateDriveInput();
             mSubsystemManager.outputToSmartDashboard();
             mEnabledLooper.outputToSmartDashboard();
             RobotState.getInstance().outputToSmartDashboard();
-            SmartDashboard.putNumber("Main loop Dt", (Timer.getFPGATimestamp() - dt) * 1e3);
-            dt = Timer.getFPGATimestamp();
+            //SmartDashboard.putNumber("Main loop Dt", (Timer.getFPGATimestamp() - dt) * 1e3);
+            //dt = Timer.getFPGATimestamp();
+            //double dist = Constants.visionDistMap.getInterpolated(new InterpolatingDouble(Superstructure.getInstance().getTarget().getArea())).value;
+            //System.out.println(dist);
         } catch (Throwable t) {
             CrashTracker.logThrowableCrash(t);
             throw t;
@@ -122,6 +125,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopPeriodic() {
+        Input.updateDriveInput();
     }
 
     @Override

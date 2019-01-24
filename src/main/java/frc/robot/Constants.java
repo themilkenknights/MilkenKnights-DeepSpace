@@ -66,10 +66,11 @@ public final class Constants {
     public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> visionDistMap = new InterpolatingTreeMap<>();
 
     static {
-        visionDistMap.put(new InterpolatingDouble(60.0), new InterpolatingDouble(42.5));
-        visionDistMap.put(new InterpolatingDouble(70.0), new InterpolatingDouble(44.5));
-        visionDistMap.put(new InterpolatingDouble(75.0), new InterpolatingDouble(46.8));
-        visionDistMap.put(new InterpolatingDouble(80.0), new InterpolatingDouble(48.0));
-        visionDistMap.put(new InterpolatingDouble(85.0), new InterpolatingDouble(49.0));
+        visionDistMap.put(new InterpolatingDouble(38440.0), new InterpolatingDouble(12.75));
+        visionDistMap.put(new InterpolatingDouble(1392.0), new InterpolatingDouble(23.0));
+        visionDistMap.put(new InterpolatingDouble(7208.0), new InterpolatingDouble(33.0));
+        visionDistMap.put(new InterpolatingDouble(3610.0), new InterpolatingDouble(46.75));
+        visionDistMap.put(new InterpolatingDouble(1742.0), new InterpolatingDouble(66.0));
+        visionDistMap.put(new InterpolatingDouble(782.0), new InterpolatingDouble(96.0));
     }
 }

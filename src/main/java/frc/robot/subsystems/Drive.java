@@ -28,7 +28,7 @@ import frc.robot.paths.Kinematics;
 import frc.robot.paths.RobotState;
 
 public class Drive extends Subsystem {
-    private static AutoModeExecutor mAutoModeExecuter = null;
+    //private static AutoModeExecutor mAutoModeExecuter = null;
     private final MkTalon leftDrive, rightDrive;
     private final MkGyro navX;
     public PeriodicIO mPeriodicIO;
@@ -321,9 +321,9 @@ public class Drive extends Subsystem {
     }
 
     public void targetPos() {
-        LimelightTarget target = Superstructure.getInstance().getTarget();
+     /*   LimelightTarget target = Superstructure.getInstance().getTarget();
         if (target.isValidTarget()) {
-            if (mAutoModeExecuter != null) {
+           if (mAutoModeExecuter != null) {
                 mAutoModeExecuter.stop();
             }
             mAutoModeExecuter = null;
@@ -332,7 +332,7 @@ public class Drive extends Subsystem {
             double angle = target.getXOffset();
             mAutoModeExecuter.setAutoMode(new TrackTarget(new Pose2d(new Translation2d(dist, 0.0), Rotation2d.fromDegrees(angle))));
             mAutoModeExecuter.start();
-        }
+        } */
     }
 
     public enum DriveControlState {

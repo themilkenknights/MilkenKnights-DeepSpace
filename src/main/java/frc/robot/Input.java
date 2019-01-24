@@ -22,7 +22,7 @@ public class Input {
         if (Drive.getInstance().mDriveControlState != DriveControlState.PATH_FOLLOWING) {
             double forward = (-driverJoystick.getRawAxis(2) + driverJoystick.getRawAxis(3));
             double turn = (-driverJoystick.getRawAxis(0));
-            Drive.getInstance().setVelocity(DriveHelper.cheesyDrive(forward, turn, true), new DriveSignal(0, 0));
+            Drive.getInstance().setOpenLoop(DriveHelper.cheesyDrive(forward, turn, true));
         }
     }
 
