@@ -9,6 +9,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.structure.Looper;
 import frc.robot.lib.util.CrashTracker;
