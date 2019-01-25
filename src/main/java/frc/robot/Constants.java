@@ -27,6 +27,10 @@ public final class Constants {
     public static final double kDriveKv = 0.5858;  // V per rad/s
     public static final double kDriveKa = 0.012;  // V per rad/s^2
 
+    public static final double kPathKX = 4.0;  // units/s per unit of error
+    public static final double kPathLookaheadTime = 0.4;  // seconds to look ahead along the path for steering
+    public static final double kPathMinLookaheadDistance = 24.0;  // inches
+
     public static final int LEFT_MASTER_ID = 10;
     public static final int LEFT_SLAVE_ID = 8;
     public static final int RIGHT_MASTER_ID = 5;

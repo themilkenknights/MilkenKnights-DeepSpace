@@ -2,6 +2,7 @@ plugins {
     id "java"
     id "edu.wpi.first.GradleRIO" version "2019.2.1"
     id 'idea'
+    id 'org.hidetake.ssh' version '2.9.0'
 }
 
 def ROBOT_MAIN_CLASS = "frc.robot.Main"
@@ -70,4 +71,40 @@ test {
 jar {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     manifest edu.wpi.first.gradlerio.GradleRIOPlugin.javaManifest(ROBOT_MAIN_CLASS)
+}
+
+remotes {
+    webServer {
+        host = '10.18.36.2'
+        user = 'admin'
+    }
+}
+
+ssh.settings {
+    knownHosts = allowAnyHosts
+}
+
+task swerdUpdate {
+    doLast {
+        FileTree myFileTree = fileTree(dir: 'paths')
+        def date = new Date()
+        String formattedDate = date.format("yyyy-MM-dd").toString() + '/'
+        def logBase = new File('logs')
+        logBase.mkdirs()
+        def logDir = new File(logBase.absolutePath + '/' + formattedDate)
+        logDir.mkdirs()
+        ssh.run {
+            session(remotes.webServer) {
+                get from: '/media/sda1/logs', into: 'logs/' + formattedDate, filter:{ it.name =~ /\.csv$/ }
+                get from: '/media/sda1', into: 'logs/', filter:{ it.name =~ /\.txt$/ }
+                remove '/media/sda1/logs'
+            }
+        }
+    }
+}
+
+task deployAll {
+    dependsOn 'swerdUpdate'
+    dependsOn 'deploy'
+    tasks.findByName('deploy').mustRunAfter 'swerdUpdate'
 }

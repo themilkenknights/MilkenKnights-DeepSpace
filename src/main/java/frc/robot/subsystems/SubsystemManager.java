@@ -13,6 +13,7 @@ import java.util.List;
 public class SubsystemManager implements ILooper {
     private final List<Subsystem> mAllSubsystems;
     private List<Loop> mLoops = new ArrayList<>();
+    private int dashCount = 0;
 
     public SubsystemManager(List<Subsystem> allSubsystems) {
         mAllSubsystems = allSubsystems;

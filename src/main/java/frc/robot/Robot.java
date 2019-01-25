@@ -9,15 +9,12 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.structure.Looper;
 import frc.robot.lib.util.CrashTracker;
-import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.paths.RobotState;
 import frc.robot.paths.TrajectoryGenerator;
 import frc.robot.subsystems.Drive;
-import frc.robot.subsystems.Drive.DriveControlState;
 import frc.robot.subsystems.SubsystemManager;
 import frc.robot.subsystems.Superstructure;
 
@@ -27,7 +24,7 @@ public class Robot extends TimedRobot {
     public static MatchState mMatchState = MatchState.DISABLED;
     private final SubsystemManager mSubsystemManager = new SubsystemManager(Arrays.asList(Drive.getInstance(), Superstructure.getInstance()));
     private Looper mEnabledLooper = new Looper();
-    //private double dt = 0;
+    private double dt = 0;
 
     public Robot() {
         CrashTracker.logRobotConstruction();
@@ -49,9 +46,10 @@ public class Robot extends TimedRobot {
     @Override
     public void disabledInit() {
         try {
+            Shuffleboard.stopRecording();
+            AutoChooser.disableAuto();
             CrashTracker.logDisabledInit();
             mEnabledLooper.stop();
-            AutoChooser.disableAuto();
             RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
             mMatchState = MatchState.DISABLED;
         } catch (Throwable t) {
@@ -77,10 +75,9 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopInit() {
-        try {
-            AutoChooser.disableAuto();
-            mMatchState = MatchState.TELEOP;
+        try {            
             Shuffleboard.startRecording();
+            mMatchState = MatchState.TELEOP;
             CrashTracker.logTeleopInit();
             mEnabledLooper.start();
         } catch (Throwable t) {
@@ -106,11 +103,11 @@ public class Robot extends TimedRobot {
     @Override
     public void robotPeriodic() {
         try {
-            mSubsystemManager.outputToSmartDashboard();
-            mEnabledLooper.outputToSmartDashboard();
-            RobotState.getInstance().outputToSmartDashboard();
-            //SmartDashboard.putNumber("Main loop Dt", (Timer.getFPGATimestamp() - dt) * 1e3);
-            //dt = Timer.getFPGATimestamp();
+            //mSubsystemManager.outputToSmartDashboard();
+            //mEnabledLooper.outputToSmartDashboard();
+            //RobotState.getInstance().outputToSmartDashboard();
+            SmartDashboard.putNumber("Main loop Dt", (Timer.getFPGATimestamp() - dt) * 1e3);
+            dt = Timer.getFPGATimestamp();
             //double dist = Constants.visionDistMap.getInterpolated(new InterpolatingDouble(Superstructure.getInstance().getTarget().getArea())).value;
             //System.out.println(dist);
         } catch (Throwable t) {
@@ -125,7 +122,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopPeriodic() {
-        Input.updateDriveInput();
+    Input.updateDriveInput();
     }
 
     @Override
