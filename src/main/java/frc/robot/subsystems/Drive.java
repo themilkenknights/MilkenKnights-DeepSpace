@@ -36,7 +36,7 @@ public class Drive extends Subsystem {
     private DriveMotionPlanner mMotionPlanner;
     private Rotation2d mGyroOffset = Rotation2d.identity();
     private boolean mOverrideTrajectory = false;
-    //private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
+    private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
     private double left_encoder_prev_distance_ = 0.0;
     private double right_encoder_prev_distance_ = 0.0;
 
@@ -93,9 +93,6 @@ public class Drive extends Subsystem {
         mPeriodicIO.leftVel = leftDrive.getSpeed();
         mPeriodicIO.rightVel = rightDrive.getSpeed();
         mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(navX.getFusedHeading()).rotateBy(mGyroOffset);
-        /*if (mCSVWriter != null) {
-            mCSVWriter.add(mPeriodicIO);
-        }*/
     }
 
     @Override
@@ -115,9 +112,10 @@ public class Drive extends Subsystem {
         SmartDashboard.putString("Drive State", mDriveControlState.toString());
         SmartDashboard.putBoolean("Drivetrain Status", leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected());
         SmartDashboard.putNumber("NavX Fused Heading", navX.getFusedHeading());
-        /*if (mCSVWriter != null) {
+        if (mCSVWriter != null) {
+            mCSVWriter.add(mPeriodicIO);
             mCSVWriter.write();
-        }*/
+        }
     }
 
     @Override
@@ -128,7 +126,7 @@ public class Drive extends Subsystem {
                 synchronized (Drive.this) {
                     left_encoder_prev_distance_ = mPeriodicIO.leftPos;
                     right_encoder_prev_distance_ = mPeriodicIO.rightPos;
-                    //startLogging();
+                    startLogging();
                 }
             }
 
@@ -161,15 +159,15 @@ public class Drive extends Subsystem {
             @Override
             public void onStop(double timestamp) {
                 setOpenLoop(DriveSignal.BRAKE);
-                //stopLogging();
+                stopLogging();
             }
         });
     }
 
     public synchronized void startLogging() {
-        /*if (mCSVWriter == null) {
+        if (mCSVWriter == null) {
             mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
-        }*/
+        }
     }
 
     public synchronized void stateEstimator(double timestamp) {
@@ -349,6 +347,7 @@ public class Drive extends Subsystem {
 
 
     public static class PeriodicIO {
+        public double timestamp;
         //Inputs
         public double leftPos;
         public double rightPos;

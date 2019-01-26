@@ -4,6 +4,7 @@ import frc.robot.Constants;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Pose2dWithCurvature;
 import frc.robot.lib.geometry.Rotation2d;
+import frc.robot.lib.geometry.Translation2d;
 import frc.robot.lib.physics.DCMotorTransmission;
 import frc.robot.lib.physics.DifferentialDrive;
 import frc.robot.lib.trajectory.*;
@@ -138,12 +139,57 @@ public class DriveMotionPlanner implements CSVWritable {
             final DifferentialDrive.DriveDynamics dynamics = mModel.solveInverseDynamics(new DifferentialDrive.ChassisState(velocity_m, velocity_m * curvature_m),
                     new DifferentialDrive.ChassisState(acceleration_m, acceleration_m * curvature_m + velocity_m * velocity_m * dcurvature_ds_m));
             mError = current_state.inverse().transformBy(mSetpoint.state().getPose());
-            mOutput = updateNonlinearFeedback(dynamics, current_state);
+            //mOutput = updateNonlinearFeedback(dynamics, current_state);
+            mOutput = updatePurePursuit(dynamics, current_state);
         } else {
             mOutput = new Output();
         }
         return mOutput;
     }
+
+
+    protected Output updatePurePursuit(DifferentialDrive.DriveDynamics dynamics, Pose2d current_state) {
+        double lookahead_time = Constants.kPathLookaheadTime;
+        final double kLookaheadSearchDt = 0.01;
+        TimedState<Pose2dWithCurvature> lookahead_state = mCurrentTrajectory.preview(lookahead_time).state();
+        double actual_lookahead_distance = mSetpoint.state().distance(lookahead_state.state());
+        while (actual_lookahead_distance < Constants.kPathMinLookaheadDistance &&
+                mCurrentTrajectory.getRemainingProgress() > lookahead_time) {
+            lookahead_time += kLookaheadSearchDt;
+            lookahead_state = mCurrentTrajectory.preview(lookahead_time).state();
+            actual_lookahead_distance = mSetpoint.state().distance(lookahead_state.state());
+        }
+        if (actual_lookahead_distance < Constants.kPathMinLookaheadDistance) {
+            lookahead_state = new TimedState<>(new Pose2dWithCurvature(lookahead_state.state()
+                    .getPose().transformBy(Pose2d.fromTranslation(new Translation2d(
+                            (mIsReversed ? -1.0 : 1.0) * (Constants.kPathMinLookaheadDistance -
+                                    actual_lookahead_distance), 0.0))), 0.0), lookahead_state.t()
+                    , lookahead_state.velocity(), lookahead_state.acceleration());
+        }
+
+        DifferentialDrive.ChassisState adjusted_velocity = new DifferentialDrive.ChassisState();
+        // Feedback on longitudinal error (distance).
+        adjusted_velocity.linear = dynamics.chassis_velocity.linear + Constants.kPathKX * Units.inches_to_meters
+                (mError.getTranslation().x());
+
+        // Use pure pursuit to peek ahead along the trajectory and generate a new curvature.
+        final PurePursuitController.Arc<Pose2dWithCurvature> arc = new PurePursuitController.Arc<>(current_state,
+                lookahead_state.state());
+
+        double curvature = 1.0 / Units.inches_to_meters(arc.radius);
+        if (Double.isInfinite(curvature)) {
+            adjusted_velocity.linear = 0.0;
+            adjusted_velocity.angular = dynamics.chassis_velocity.angular;
+        } else {
+            adjusted_velocity.angular = curvature * dynamics.chassis_velocity.linear;
+        }
+
+        dynamics.chassis_velocity = adjusted_velocity;
+        dynamics.wheel_velocity = mModel.solveInverseKinematics(adjusted_velocity);
+        return new Output(dynamics.wheel_velocity.left, dynamics.wheel_velocity.right, dynamics.wheel_acceleration
+                .left, dynamics.wheel_acceleration.right, dynamics.voltage.left, dynamics.voltage.right);
+    }
+
 
     protected Output updateNonlinearFeedback(DifferentialDrive.DriveDynamics dynamics, Pose2d current_state) {
         // Implements eqn. 5.12 from https://www.dis.uniroma1.it/~labrob/pub/papers/Ramsete01.pdf
@@ -183,7 +229,8 @@ public class DriveMotionPlanner implements CSVWritable {
     }
 
     public enum FollowerType {
-        NONLINEAR_FEEDBACK
+        NONLINEAR_FEEDBACK,
+        PURE_PURSUIT
     }
 
 
