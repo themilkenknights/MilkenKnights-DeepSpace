@@ -112,7 +112,7 @@ public class MkTalon {
 
     public void updateSmartDash() {
         double rp = (((masterTalon.getSelectedSensorVelocity(0)) / 4096.0) * 60 * 10);
-        maxRPM = maxRPM > rp? maxRPM: rp;
+        maxRPM = maxRPM > rp ? maxRPM : rp;
         SmartDashboard.putNumber(side.toString() + " RPM", maxRPM);
         SmartDashboard.putNumber(side.toString() + " Velocity", getSpeed());
         SmartDashboard.putNumber(side.toString() + " Error", getError());

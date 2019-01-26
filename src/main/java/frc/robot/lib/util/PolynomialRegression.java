@@ -9,7 +9,10 @@ package frc.robot.lib.util;
  *  0.01 n^3 + -1.64 n^2 + 168.92 n + -2113.73 (R^2 = 0.997)
  *
  ******************************************************************************/
-import Jama.*;
+
+import Jama.Matrix;
+import Jama.QRDecomposition;
+
 /**
  * The {@code PolynomialRegression} class performs a polynomial regression on an set of <em>N</em> data points (
  * <em>y<sub>i</sub></em>, <em>x<sub>i</sub></em>). That is, it fits a polynomial <em>y</em> = &beta;<sub>0</sub> +

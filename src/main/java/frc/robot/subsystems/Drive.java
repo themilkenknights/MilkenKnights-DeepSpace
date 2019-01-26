@@ -7,12 +7,13 @@ import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
-import frc.robot.auto.AutoModeExecutor;
-import frc.robot.auto.modes.TrackTarget;
 import frc.robot.lib.drivers.MkGyro;
 import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonPosition;
-import frc.robot.lib.geometry.*;
+import frc.robot.lib.geometry.Pose2d;
+import frc.robot.lib.geometry.Pose2dWithCurvature;
+import frc.robot.lib.geometry.Rotation2d;
+import frc.robot.lib.geometry.Twist2d;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.structure.ILooper;
 import frc.robot.lib.structure.Loop;
@@ -21,7 +22,6 @@ import frc.robot.lib.trajectory.timing.TimedState;
 import frc.robot.lib.util.CrashTracker;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.InterpolatingDouble;
-import frc.robot.lib.util.ReflectingCSVWriter;
 import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.paths.DriveMotionPlanner;
 import frc.robot.paths.Kinematics;
@@ -87,6 +87,7 @@ public class Drive extends Subsystem {
 
     @Override
     public synchronized void readPeriodicInputs() {
+        mPeriodicIO.timestamp = Timer.getFPGATimestamp();
         mPeriodicIO.leftPos = leftDrive.getPosition();
         mPeriodicIO.rightPos = rightDrive.getPosition();
         mPeriodicIO.leftVel = leftDrive.getSpeed();
@@ -363,5 +364,6 @@ public class Drive extends Subsystem {
         public double left_feedforward;
         public double right_feedforward;
         public TimedState<Pose2dWithCurvature> path_setpoint = new TimedState<Pose2dWithCurvature>(Pose2dWithCurvature.identity());
+        double timestamp;
     }
 }

@@ -1,10 +1,8 @@
 package frc.robot.paths;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.Constants;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Rotation2d;
-import frc.robot.lib.geometry.Translation2d;
 import frc.robot.lib.geometry.Twist2d;
 import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.InterpolatingTreeMap;
