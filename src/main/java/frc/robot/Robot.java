@@ -25,6 +25,7 @@ public class Robot extends TimedRobot {
     private final SubsystemManager mSubsystemManager = new SubsystemManager(Arrays.asList(Drive.getInstance(), Superstructure.getInstance()));
     private Looper mEnabledLooper = new Looper();
     private double dt = 0;
+    private int dashCount = 0;
 
     public Robot() {
         CrashTracker.logRobotConstruction();
@@ -103,9 +104,16 @@ public class Robot extends TimedRobot {
     @Override
     public void robotPeriodic() {
         try {
-            //mSubsystemManager.outputToSmartDashboard();
-            //mEnabledLooper.outputToSmartDashboard();
-            //RobotState.getInstance().outputToSmartDashboard();
+            if(dashCount == 2){
+            mSubsystemManager.outputToSmartDashboard();
+            mEnabledLooper.outputToSmartDashboard();
+            RobotState.getInstance().outputToSmartDashboard();
+            dashCount = 0;
+            }
+            else{
+                dashCount++;
+            }
+           
             SmartDashboard.putNumber("Main loop Dt", (Timer.getFPGATimestamp() - dt) * 1e3);
             dt = Timer.getFPGATimestamp();
             //double dist = Constants.visionDistMap.getInterpolated(new InterpolatingDouble(Superstructure.getInstance().getTarget().getArea())).value;
