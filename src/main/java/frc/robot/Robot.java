@@ -11,7 +11,6 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.lib.geometry.Pose2d;
-import frc.robot.lib.structure.Looper;
 import frc.robot.lib.util.CrashTracker;
 import frc.robot.paths.RobotState;
 import frc.robot.paths.TrajectoryGenerator;
@@ -24,7 +23,6 @@ import java.util.Arrays;
 public class Robot extends TimedRobot {
 		public static MatchState mMatchState = MatchState.DISABLED;
 		private final SubsystemManager mSubsystemManager = new SubsystemManager(Arrays.asList(Drive.getInstance(), Superstructure.getInstance()));
-		private Looper mEnabledLooper = new Looper();
 		private double dt = 0;
 		private int dashCount = 0;
 
@@ -37,7 +35,6 @@ public class Robot extends TimedRobot {
 				try {
 						CrashTracker.logRobotInit();
 						mMatchState = MatchState.DISABLED;
-						mSubsystemManager.registerEnabledLoops(mEnabledLooper);
 						TrajectoryGenerator.getInstance().generateTrajectories();
 				} catch (Throwable t) {
 						CrashTracker.logThrowableCrash(t);
@@ -50,7 +47,7 @@ public class Robot extends TimedRobot {
 						Shuffleboard.stopRecording();
 						AutoChooser.disableAuto();
 						CrashTracker.logDisabledInit();
-						mEnabledLooper.stop();
+						mSubsystemManager.stop();
 						RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
 						mMatchState = MatchState.DISABLED;
 				} catch (Throwable t) {
@@ -65,7 +62,7 @@ public class Robot extends TimedRobot {
 						CrashTracker.logAutoInit();
 						RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
 						mMatchState = MatchState.AUTO;
-						mEnabledLooper.start();
+						mSubsystemManager.start();
 						AutoChooser.startAuto();
 				} catch (Throwable t) {
 						CrashTracker.logThrowableCrash(t);
@@ -78,7 +75,7 @@ public class Robot extends TimedRobot {
 						Shuffleboard.startRecording();
 						mMatchState = MatchState.TELEOP;
 						CrashTracker.logTeleopInit();
-						mEnabledLooper.start();
+						mSubsystemManager.start();
 				} catch (Throwable t) {
 						CrashTracker.logThrowableCrash(t);
 						throw t;
@@ -88,9 +85,9 @@ public class Robot extends TimedRobot {
 		@Override public void testInit() {
 				try {
 						mMatchState = MatchState.TEST;
-						mEnabledLooper.start();
+						mSubsystemManager.start();
 						System.out.println("Starting check systems.");
-						mEnabledLooper.stop();
+						mSubsystemManager.stop();
 						Drive.getInstance().checkSystem();
 				} catch (Throwable t) {
 						CrashTracker.logThrowableCrash(t);
@@ -118,13 +115,16 @@ public class Robot extends TimedRobot {
 		}
 
 		@Override public void autonomousPeriodic() {
+				mSubsystemManager.onLoop();
 		}
 
 		@Override public void teleopPeriodic() {
+				mSubsystemManager.onLoop();
 				Input.updateDriveInput();
 		}
 
 		@Override public void testPeriodic() {
+				mSubsystemManager.onLoop();
 		}
 
 		public enum MatchState {

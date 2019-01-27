@@ -1,8 +1,8 @@
 package frc.robot.subsystems;
 
+import edu.wpi.first.wpilibj.Timer;
 import frc.robot.lib.structure.ILooper;
 import frc.robot.lib.structure.Loop;
-import frc.robot.lib.structure.Looper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,60 +22,31 @@ public class SubsystemManager implements ILooper {
 				mAllSubsystems.forEach((s) -> s.outputTelemetry());
 		}
 
-		public void registerEnabledLoops(Looper enabledLooper) {
-				mAllSubsystems.forEach((s) -> s.registerEnabledLoops(this));
-				enabledLooper.register(new EnabledLoop());
-		}
-
-		public void registerDisabledLoops(Looper disabledLooper) {
-				disabledLooper.register(new DisabledLoop());
-		}
-
-		@Override public void register(Loop loop) {
+		@Override
+		public void register(Loop loop) {
 				mLoops.add(loop);
 		}
 
-		private class EnabledLoop implements Loop {
-				@Override public void onStart(double timestamp) {
-						for (Loop l : mLoops) {
-								l.onStart(timestamp);
-						}
+		public void onLoop(){
+				double timestamp_ = Timer.getFPGATimestamp();
+				for (Loop loop : mLoops) {
+						loop.onLoop(timestamp_);
 				}
+		}
 
-				@Override public void onLoop(double timestamp) {
-						for (Subsystem s : mAllSubsystems) {
-								s.readPeriodicInputs();
-						}
-						for (Loop l : mLoops) {
-								l.onLoop(timestamp);
-						}
-						for (Subsystem s : mAllSubsystems) {
-								s.writePeriodicOutputs();
-						}
+		public void start(){
+				double timestamp_ = Timer.getFPGATimestamp();
+				for (Loop loop : mLoops) {
+						loop.onStart(timestamp_);
 				}
+		}
 
-				@Override public void onStop(double timestamp) {
-						for (Loop l : mLoops) {
-								l.onStop(timestamp);
-						}
+		public void stop(){
+				double timestamp_ = Timer.getFPGATimestamp();
+				for (Loop loop : mLoops) {
+						loop.onStop(timestamp_);
 				}
 		}
 
 
-		private class DisabledLoop implements Loop {
-				@Override public void onStart(double timestamp) {
-				}
-
-				@Override public void onLoop(double timestamp) {
-						for (Subsystem s : mAllSubsystems) {
-								s.readPeriodicInputs();
-						}
-						for (Subsystem s : mAllSubsystems) {
-								s.writePeriodicOutputs();
-						}
-				}
-
-				@Override public void onStop(double timestamp) {
-				}
-		}
 }
