@@ -95,7 +95,7 @@ public class Robot extends TimedRobot {
 
 		@Override public void robotPeriodic() {
 				try {
-						mSubsystemManager.outputToSmartDashboard();
+						//mSubsystemManager.outputToSmartDashboard();
 						RobotState.getInstance().outputToSmartDashboard();
 				} catch (Throwable t) {
 						CrashTracker.logThrowableCrash(t);
