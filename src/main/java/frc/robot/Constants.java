@@ -4,9 +4,10 @@ import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.InterpolatingTreeMap;
 
 /**
- * UNLESS OTHERWISE NOTED BY RAW/NATIVE/RPM, ALL POSITION UNITS ARE IN INCHES and DEGREES ALL VELOCITY UNITS ARE IN INCHES PER SECOND and
- * DEGREES PER SECOND DIST DENOTES POSITION AND ANG DENOTES ANGLE ID TYPICALLY DENOTES A CAN ID ALL PID CONSTANTS SENT TO THE TALON ARE IN
- * NATIVE UNITS
+ * Unless otherwise noted by raw/native/RPM, all position unites are in inches and degrees and all velocity units are in inches per second and
+ * degrees per second.
+ * ID typically notes a CAN ID
+ * All PID Constants are in Native Units
  */
 public final class Constants {
 
@@ -15,13 +16,13 @@ public final class Constants {
     public static final int kTimeoutMs = 0;
     public static final double kLooperDt = 0.005;
     public static final double PI = 3.14159265359;
-    public static final double CODES_PER_REV = 4096.0;
+    public static final double kTicksPerRev = 4096.0;
     public static final double kDriveWheelTrackWidthInches = 33.75;
     public static final double kTrackScrubFactor = 1.0;  // Tune me!
 
     // Tuned dynamics
-    public static final double kRobotLinearInertia = 26.30;  // kg TODO tune
-    public static final double kRobotAngularInertia = 4.4;  // kg m^2 TODO tune
+    public static final double kRobotLinearInertia = 26.30; //Kg
+    public static final double kRobotAngularInertia = 4.4;  // Kg m^2 TODO tune
     public static final double kRobotAngularDrag = 6.0;  // N*m / (rad/sec) TODO tune
     public static final double kDriveVIntercept = 1.07832;  // V
     public static final double kDriveKv = 0.5858;  // V per rad/s
@@ -31,42 +32,40 @@ public final class Constants {
     public static final double kPathLookaheadTime = 0.4;  // seconds to look ahead along the path for steering
     public static final double kPathMinLookaheadDistance = 24.0;  // inches
 
-    public static final int LEFT_MASTER_ID = 10;
-    public static final int LEFT_SLAVE_ID = 8;
-    public static final int RIGHT_MASTER_ID = 5;
-    public static final int RIGHT_SLAVE_ID = 3;
+    public static final int kLeftMasterID = 10;
+    public static final int kLeftSlaveID = 8;
+    public static final int kRightMasterID = 5;
+    public static final int kRightSlaveID = 3;
 
-    public static final boolean LEFT_MASTER_INVERT = false;
-    public static final boolean LEFT_SLAVE_INVERT = false;
-    public static final boolean RIGHT_MASTER_INVERT = true;
-    public static final boolean RIGHT_SLAVE_INVERT = true;
+    public static final boolean kLeftMasterInvert = false;
+    public static final boolean kLeftSlaveInvert = false;
+    public static final boolean KRightMasterInvert = true;
+    public static final boolean kRightSlaveInvert = true;
 
-    public static final boolean LEFT_INVERT_SENSOR = true;
-    public static final boolean RIGHT_INVERT_SENSOR = true;
+    public static final boolean kLeftSensorInvert = true;
+    public static final boolean kRightSensorInvert = true;
 
-    public static final double WHEEL_DIAMETER = 6.0;
-    public static final double kDriveWheelRadiusInches = WHEEL_DIAMETER / 2.0;
-    public static final double CIRCUMFERENCE = WHEEL_DIAMETER * PI;
-    public static final double TURN_IN_PLACE_CIRCUMFERENCE = 104.1;
+    public static final double kWheelDiameter = 6.0;
+    public static final double kDriveWheelRadiusInches = kWheelDiameter / 2.0;
+    public static final double kCircumference = kWheelDiameter * PI;
+    public static final double kTurnInPlaceCircumference = 104.1;
 
-    public static final double LEFT_RPM_MAX = 510.0;
-    public static final double RIGHT_RPM_MAX = 510.0;
-    public static final double LEFT_DRIVE_F = (1023.0 / ((LEFT_RPM_MAX / 60.0 / 10.0) * 4096.0));
-    public static final double RIGHT_DRIVE_F = (1023.0 / ((RIGHT_RPM_MAX / 60.0 / 10.0) * 4096.0));
-    public static final double MAX_VEL = (LEFT_RPM_MAX / 60) * (CIRCUMFERENCE); // Max Speed in In/s
-    public static final double MOTION_MAGIC_CRUISE_VEL = (((MAX_VEL / 10.0) / CIRCUMFERENCE) * CODES_PER_REV) * 0.5;
-    public static final double MOTION_MAGIC_ACCEL = MOTION_MAGIC_CRUISE_VEL * 0.5;
-    public static final double DRIVE_P = 7 * (0.1 * 1023.0) / (700); // 300
-    public static final double DRIVE_I = 0;
-    public static final double DRIVE_D = 3 * DRIVE_P;
-    public static final double MIN_TEST_POS = 200;
-    public static final double MIN_TEST_VEL = 140;
+    public static final double kLeftMaxRPM = 510.0;
+    public static final double kRightMaxRPM = 510.0;
+    public static final double kLeftDriveF = (1023.0 / ((kLeftMaxRPM / 60.0 / 10.0) * 4096.0));
+    public static final double kRightDriveF = (1023.0 / ((kRightMaxRPM / 60.0 / 10.0) * 4096.0));
+    public static final double kMaxVel = (kLeftMaxRPM / 60) * (kCircumference);
+    public static final double kMotionMagicCruiseNativeVel = (((kMaxVel / 10.0) / kCircumference) * kTicksPerRev) * 0.5;
+    public static final double kMotionMagicNativeAccel = kMotionMagicCruiseNativeVel * 0.5;
+    public static final double kDriveP = 7 * (0.1 * 1023.0) / (700); // 300
+    public static final double kDriveI = 0;
+    public static final double kDriveD = 3 * kDriveP;
+    public static final double kMinTestPos = 200;
+    public static final double kMinTestVel = 140;
 
-    public static final double OPERATOR_DEADBAND = 0.1;
     public static final double kThrottleDeadband = 0.0;
     public static final double kWheelDeadband = 0.0045;
 
-    // Pose of the camera frame w.r.t. the robot frame
     public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> visionDistMap = new InterpolatingTreeMap<>();
 
     static {
