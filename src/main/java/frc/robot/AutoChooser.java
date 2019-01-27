@@ -1,15 +1,10 @@
 package frc.robot;
 
-import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeExecutor;
-import frc.robot.auto.actions.CollectVelocityData;
-import frc.robot.auto.modes.CharacterizeHighGearStraight;
 import frc.robot.auto.modes.NearScaleOnlyMode;
-import frc.robot.lib.physics.DriveCharacterization;
-import frc.robot.lib.util.CrashTracker;
 import frc.robot.lib.util.MatchData;
 
 public class AutoChooser {

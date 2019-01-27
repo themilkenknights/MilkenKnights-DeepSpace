@@ -35,15 +35,15 @@ public class MkTalon {
         slaveTalon.configFactoryDefault();
         slaveTalon.configAllSettings(new VictorSPXConfiguration());
         if (side.equals(TalonPosition.Left)) {
-            masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.LEFT_DRIVE_F);
+            masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.kLeftDriveF);
         } else if (side.equals(TalonPosition.Right)) {
-            masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.RIGHT_DRIVE_F);
+            masterTalon.config_kF(Constants.kPIDLoopIdx, Constants.kRightDriveF);
         }
-        masterTalon.config_kP(Constants.kPIDLoopIdx, Constants.DRIVE_P);
-        masterTalon.config_kI(Constants.kPIDLoopIdx, Constants.DRIVE_I);
-        masterTalon.config_kD(Constants.kPIDLoopIdx, Constants.DRIVE_D);
-        masterTalon.configMotionCruiseVelocity((int) Constants.MOTION_MAGIC_CRUISE_VEL);
-        masterTalon.configMotionAcceleration((int) Constants.MOTION_MAGIC_ACCEL);
+        masterTalon.config_kP(Constants.kPIDLoopIdx, Constants.kDriveP);
+        masterTalon.config_kI(Constants.kPIDLoopIdx, Constants.kDriveI);
+        masterTalon.config_kD(Constants.kPIDLoopIdx, Constants.kDriveD);
+        masterTalon.configMotionCruiseVelocity((int) Constants.kMotionMagicCruiseNativeVel);
+        masterTalon.configMotionAcceleration((int) Constants.kMotionMagicNativeAccel);
         masterTalon.selectProfileSlot(Constants.kSlotIdx, Constants.kPIDLoopIdx);
         masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5);
         masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5);
@@ -81,11 +81,11 @@ public class MkTalon {
         return masterTalon.getSensorCollection().getPulseWidthRiseToRiseUs() > 100;
     }
 
-    public void set(ControlMode mode, double value, NeutralMode nMode) {
+    public synchronized void set(ControlMode mode, double value, NeutralMode nMode) {
         set(mode, value, nMode, 0);
     }
 
-    public void set(ControlMode mode, double value, NeutralMode nMode, double arbFeed) {
+    public synchronized void set(ControlMode mode, double value, NeutralMode nMode, double arbFeed) {
         if (lastOutput != value || lastControlMode != mode || lastNeutralMode != nMode) {
             lastNeutralMode = nMode;
             masterTalon.setNeutralMode(nMode);
@@ -112,7 +112,7 @@ public class MkTalon {
 
     public void updateSmartDash() {
         double rp = (((masterTalon.getSelectedSensorVelocity(0)) / 4096.0) * 60 * 10);
-        maxRPM = maxRPM > rp? maxRPM: rp;
+        maxRPM = maxRPM > rp ? maxRPM : rp;
         SmartDashboard.putNumber(side.toString() + " RPM", maxRPM);
         SmartDashboard.putNumber(side.toString() + " Velocity", getSpeed());
         SmartDashboard.putNumber(side.toString() + " Error", getError());
@@ -124,7 +124,7 @@ public class MkTalon {
         return MkMath.nativeUnitsPer100MstoInchesPerSec(masterTalon.getSelectedSensorVelocity(Constants.kPIDLoopIdx));
     }
 
-    private double getError() {
+    private synchronized double getError() {
         return MkMath.nativeUnitsPer100MstoInchesPerSec(masterTalon.getClosedLoopError(Constants.kPIDLoopIdx));
     }
 

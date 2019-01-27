@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Milken Knights Grapher</title>
+  <link rel="stylesheet" href="jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    #selectable .ui-selecting {
+      background: #FECA40;
+    }
+
+    #selectable .ui-selected {
+      background: #F39814;
+      color: white;
+    }
+
+    #selectable {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 60%;
+    }
+
+    #selectable li {
+      margin: 3px;
+      padding: 0.4em;
+      font-size: 1.4em;
+      height: 18px;
+    }
+
+    #feedback {
+      font-size: 1.4em;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    body,
+    html,
+    .container {
+      height: 100%;
+    }
+
+    .top {
+      margin-top: 15px;
+      margin-bottom: 0px;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+
+    .container,
+    .content {
+      display: flex;
+    }
+
+    .container {
+      flex-direction: column;
+    }
+
+    .content,
+    .content>div {
+      flex: 1;
+    }
+
+    .content>div {
+      overflow: scroll;
+    }
+  </style>
+  <script src="jquery-1.12.4.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script src="plotly-latest.min.js"></script>
+  <script src="html2canvas.min.js"></script>
+  <script src="papaparse.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="top" style="vertical-align: top; float: center; display:block; padding-bottom: 25px;">
+      <label for="filepicker">Choose folder</label>
+      <input type="file" id="filepicker" name="filepicker" webkitdirectory multiple />
+      <label for="file">Choose file</label>
+      <input type="file" id="file" accept=".csv" multiple>
+      <button onclick='download_file()'>Download Graph (PNG)</button>
+      <div style="float: right; display:block;">
+        <input type="text" value="timestamp" id="rowName">
+        <input type="text" placeholder="Custom X axis min" id="min">
+        <input type="text" placeholder="Custom X axis max" id="max">
+      </div>
+    </div>
+    <div class="content">
+
+      <div style="flex-basis: 25%;">
+        <ol id="selectable" style="float: left; display:block; width: 100%">
+        </ol>
+      </div>
+      <div id="tester" style="float: right; display:block; flex-basis: 75%;">
+
+      </div>
+
+    </div>
+  </div>
+  <script> 
+    var filesSelected = [];
+    var currentFile = '';
+    var currentGraph;
+    document.getElementById("filepicker").addEventListener("change", function (event) {
+      $('#tester').empty();
+      filesSelected = [];
+      var currentFile = '';
+      document.getElementById('file').value = '';
+      let output = document.getElementById("listing");
+      let files = event.target.files;
+      for (let i = 0; i < files.length; i++) {
+        if (files[i].name.split('.').pop() === 'csv' && files[i].size > 600) {
+          filesSelected[i] = files[i];
+          $("#selectable").append(' <li style=\"font-size: 16px;\" class=\"ui-widget-content\" data-value=\"' + i + '\" >' + files[i].name + '</li>');
+        }
+      };
+      $("#selectable").selectable("refresh");
+      document.getElementById("filepicker").value = '';
+    }, false);
+
+    $(function () {
+      $("#selectable").selectable({
+        selected: function () {
+          var currentFile = '';
+          $(".ui-selected", this).each(function () {
+            currentGraph = filesSelected[this.getAttribute("data-value")];
+          });
+          graphFile();
+        }
+      });
+    });
+
+    function download_file() {
+      html2canvas(document.querySelector("#tester")).then(canvas => {
+        var dlink = document.createElement('a');
+        dlink.download = currentFile.replace(/\..+$/, '') + ".png";
+        dlink.href = canvas.toDataURL('image/png');
+        dlink.onclick = function (e) {
+          var that = this;
+          setTimeout(function () {
+            window.URL.revokeObjectURL(that.href);
+          }, 1500);
+        };
+        dlink.click();
+        dlink.remove();
+      });
+    }
+
+    window.onload = function () {
+      var fileInput = document.getElementById('file');
+      fileInput.addEventListener('change', function (e) {
+        filesSelected = [];
+        $('#tester').empty();
+        $("#selectable").empty();
+        document.getElementById("filepicker").value = '';
+        currentGraph = fileInput.files[0];
+        graphFile();
+      });
+    }
+
+    var iMin = document.getElementById('min');
+    iMin.addEventListener('change', function (e) {
+      graphFile();
+    });
+
+    var iMax = document.getElementById('max');
+    iMax.addEventListener('change', function (e) {
+      graphFile();
+    });
+
+    function graphFile() {
+      currentFile = currentGraph.name;
+      Papa.parse(currentGraph, {
+        header: true,
+        complete: function (results) {
+          $('#tester').empty();
+          var rows = Object.values(results)[0];
+          if (rows[1] == null) {
+            alert("Error Parsing File");
+            return;
+          }
+          var arr = Array(Object.keys(rows[0]).length - 1).fill(null).map(() => Array(rows.length).fill(null));
+          var timestamps = [];
+          for (var i = 0; i < rows.length; i++) {
+            row = rows[i];
+            for (var j = 1; j < Object.keys(row).length; j++) {
+              arr[j - 1][i] = row[Object.keys(row)[j]];
+            }
+            timestamps.push(row[document.getElementById("rowName").value]);
+          }
+          for (var j = 1; j < Object.keys(rows[0]).length; j++) {
+            var name = Object.keys(rows[0])[j];
+            $("#tester").append('<div style=\"height: 200px;\" id=\"' + name + '\"></div>');
+            var trace1 = {
+              x: timestamps.map(Number),
+              y: arr[j - 1].map(Number),
+              type: 'scatter'
+            };
+            var min = document.getElementById("min").value;
+            var max = document.getElementById("max").value;
+            var layout;
+            if (min == null || max == null) {
+              layout = {
+                title: name,
+                margin: {
+                  l: 50,
+                  r: 50,
+                  b: 35,
+                  t: 35,
+                  pad: 4
+                },
+              };
+            }
+            else {
+              layout = {
+                title: name,
+                margin: {
+                  l: 50,
+                  r: 50,
+                  b: 35,
+                  t: 35,
+                  pad: 4
+                },
+                xaxis: { range: [min, max] },
+              };
+            }
+            Plotly.newPlot(name, [trace1], layout);
+          }
+        }
+      });
+    }
+
+  </script>
+</body>
+
+</html>

@@ -8,7 +8,7 @@ public class MkMath {
     }
 
     public static double nativeUnitsToInches(double units) {
-        return (units / Constants.CODES_PER_REV) * (Constants.CIRCUMFERENCE);
+        return (units / Constants.kTicksPerRev) * (Constants.kCircumference);
     }
 
     public static double InchesPerSecToUnitsPer100Ms(double vel) {
@@ -16,11 +16,11 @@ public class MkMath {
     }
 
     public static double InchesToNativeUnits(double in) {
-        return (Constants.CODES_PER_REV) * (in / Constants.CIRCUMFERENCE);
+        return (Constants.kTicksPerRev) * (in / Constants.kCircumference);
     }
 
     public static double AngleToVel(double angle) {
-        return (angle / 360) * Constants.TURN_IN_PLACE_CIRCUMFERENCE;
+        return (angle / 360) * Constants.kTurnInPlaceCircumference;
     }
 
     public static double handleDeadband(double val, double deadband) {
@@ -28,7 +28,7 @@ public class MkMath {
     }
 
     public static double RPMToInchesPerSec(double vel) {
-        return (vel / 60.0) * Constants.CIRCUMFERENCE;
+        return (vel / 60.0) * Constants.kCircumference;
     }
 
     public static double rpmToInchesPerSecond(double rpm) {
@@ -36,7 +36,7 @@ public class MkMath {
     }
 
     public static double rotationsToInches(double rotations) {
-        return rotations * (Constants.WHEEL_DIAMETER * Math.PI);
+        return rotations * (Constants.kWheelDiameter * Math.PI);
     }
 
     public static double inchesPerSecondToRpm(double inches_per_second) {
@@ -44,7 +44,7 @@ public class MkMath {
     }
 
     public static double inchesToRotations(double inches) {
-        return inches / (Constants.WHEEL_DIAMETER * Math.PI);
+        return inches / (Constants.kWheelDiameter * Math.PI);
     }
 
     public static double radiansPerSecondToTicksPer100ms(double rad_s) {
