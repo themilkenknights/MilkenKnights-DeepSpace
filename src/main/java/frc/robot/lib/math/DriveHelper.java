@@ -10,9 +10,9 @@ public class DriveHelper {
 		public static DriveSignal cheesyDrive(double throttle, double wheel, boolean cubeInputs) {
 				double leftMotorSpeed;
 				double rightMotorSpeed;
-				double throttleInput = limit(throttle);
-				double turnInput = limit(wheel);
-				/*moveValue = handleDeadband(moveValue, kThrottleDeadband);
+				double moveValue = limit(throttle);
+				double rotateValue = limit(wheel);
+				moveValue = handleDeadband(moveValue, kThrottleDeadband);
 				rotateValue = handleDeadband(rotateValue, kWheelDeadband);
 				if (cubeInputs) {
 						rotateValue = rotateValue * rotateValue * rotateValue;
@@ -34,28 +34,7 @@ public class DriveHelper {
 								leftMotorSpeed = moveValue - rotateValue;
 								rightMotorSpeed = -Math.max(-moveValue, -rotateValue);
 						}
-				} */
-
-
-
-				double saturatedInput;
-				double greaterInput = Math.max(Math.abs(throttleInput), Math.abs(turnInput));
-				//range [0, 1]
-				double lesserInput = Math.abs(throttleInput) + Math.abs(turnInput) - greaterInput;
-				//range [0, 1]
-				if (greaterInput > 0.0) {
-						saturatedInput = (lesserInput / greaterInput) + 1.0;
-						//range [1, 2]
-				} else {
-						saturatedInput = 1.0;
 				}
-
-				throttleInput = throttleInput / saturatedInput;
-				turnInput = turnInput / saturatedInput;
-
-
-				leftMotorSpeed = throttleInput + turnInput;
-				rightMotorSpeed = throttleInput - turnInput;
 				
 				return new DriveSignal(leftMotorSpeed, rightMotorSpeed);
 		}

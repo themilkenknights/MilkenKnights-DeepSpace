@@ -28,7 +28,8 @@ public class Robot extends TimedRobot {
 		private double dt = 0;
 		private int dashCount = 0;
 
-		public Robot() {
+		protected Robot() {
+				super(0.01);
 				CrashTracker.logRobotConstruction();
 		}
 
@@ -99,9 +100,9 @@ public class Robot extends TimedRobot {
 
 		@Override public void robotPeriodic() {
 				try {
-						if (dashCount == 3) {
+						if (dashCount == 5) {
 								mSubsystemManager.outputToSmartDashboard();
-								mEnabledLooper.outputToSmartDashboard();
+								//mEnabledLooper.outputToSmartDashboard();
 								RobotState.getInstance().outputToSmartDashboard();
 								dashCount = 0;
 						}
