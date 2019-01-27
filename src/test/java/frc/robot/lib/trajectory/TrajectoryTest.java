@@ -11,8 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TrajectoryTest {
 		public static final double kTestEpsilon = Util.kEpsilon;
-		public static final List<Translation2d> kWaypoints =
-				Arrays.asList(new Translation2d(0.0, 0.0), new Translation2d(24.0, 0.0), new Translation2d(36.0, 12.0), new Translation2d(60.0, 12.0));
+		public static final List<Translation2d> kWaypoints = Arrays.asList(new Translation2d(0.0, 0.0), new Translation2d(24.0, 0.0), new Translation2d(36.0, 12.0), new Translation2d(60.0, 12.0));
 
 		@Test public void testConstruction() {
 				// Empty constructor.

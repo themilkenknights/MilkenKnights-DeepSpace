@@ -17,8 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TimingUtilTest {
 		public static final double kTestEpsilon = Util.kEpsilon;
-		public static final List<Translation2d> kWaypoints =
-				Arrays.asList(new Translation2d(0.0, 0.0), new Translation2d(24.0, 0.0), new Translation2d(36.0, 12.0), new Translation2d(60.0, 12.0));
+		public static final List<Translation2d> kWaypoints = Arrays.asList(new Translation2d(0.0, 0.0), new Translation2d(24.0, 0.0), new Translation2d(36.0, 12.0), new Translation2d(60.0, 12.0));
 
 		@Test public void testNoConstraints() {
 				Trajectory<Translation2d> traj = new Trajectory<>(kWaypoints);
@@ -34,15 +33,14 @@ public class TimingUtilTest {
 				System.out.println(timed_traj.toCSV());
 		}
 
-		public <S extends State<S>> Trajectory<TimedState<S>> buildAndCheckTrajectory(final DistanceView<S> dist_view, double step_size, List<TimingConstraint<S>> constraints,
-				double start_vel, double end_vel, double max_vel, double max_acc) {
+		public <S extends State<S>> Trajectory<TimedState<S>> buildAndCheckTrajectory(final DistanceView<S> dist_view, double step_size, List<TimingConstraint<S>> constraints, double start_vel,
+				double end_vel, double max_vel, double max_acc) {
 				Trajectory<TimedState<S>> timed_traj = TimingUtil.timeParameterizeTrajectory(false, dist_view, step_size, constraints, start_vel, end_vel, max_vel, max_acc);
 				checkTrajectory(timed_traj, constraints, start_vel, end_vel, max_vel, max_acc);
 				return timed_traj;
 		}
 
-		public <S extends State<S>> void checkTrajectory(final Trajectory<TimedState<S>> traj, List<TimingConstraint<S>> constraints, double start_vel, double end_vel, double max_vel,
-				double max_acc) {
+		public <S extends State<S>> void checkTrajectory(final Trajectory<TimedState<S>> traj, List<TimingConstraint<S>> constraints, double start_vel, double end_vel, double max_vel, double max_acc) {
 				assertFalse(traj.isEmpty());
 				assertEquals(traj.getState(0).velocity(), start_vel, kTestEpsilon);
 				assertEquals(traj.getState(traj.length() - 1).velocity(), end_vel, kTestEpsilon);

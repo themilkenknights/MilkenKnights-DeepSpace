@@ -29,8 +29,7 @@ public class IntegrationTest {
 				IPathFollower path_follower = new PurePursuitController<Translation2d>(new DistanceView<>(reference_trajectory), /* sampling_dist */
 						1.0, /* lookahead= */ 6.0,
 						/* goal_tolerance= */ 0.1);
-				Trajectory<Pose2dWithCurvature> smooth_path =
-						TrajectoryUtil.trajectoryFromPathFollower(path_follower, Pose2dWithCurvature.identity(), /* step_size= */ 1.0, /* dcurvature_limit= */1.0);
+				Trajectory<Pose2dWithCurvature> smooth_path = TrajectoryUtil.trajectoryFromPathFollower(path_follower, Pose2dWithCurvature.identity(), /* step_size= */ 1.0, /* dcurvature_limit= */1.0);
 				assertFalse(smooth_path.isEmpty());
 				System.out.println(smooth_path.toCSV());
 				// Time parameterize the path subject to our dynamic constraints.
@@ -51,8 +50,7 @@ public class IntegrationTest {
 				final double kRobotAngularDrag = 0.0;
 				final double kWheelRadius = Units.inches_to_meters(2.0);
 				DCMotorTransmission transmission = new DCMotorTransmission(1.0 / 0.143, (kWheelRadius * kWheelRadius * kRobotMassKg / 2.0) / 0.02, 0.8);
-				DifferentialDrive drive =
-						new DifferentialDrive(kRobotMassKg, kRobotAngularInertia, kRobotAngularDrag, kWheelRadius, Units.inches_to_meters(26.0 / 2.0), transmission, transmission);
+				DifferentialDrive drive = new DifferentialDrive(kRobotMassKg, kRobotAngularInertia, kRobotAngularDrag, kWheelRadius, Units.inches_to_meters(26.0 / 2.0), transmission, transmission);
 				// Create the constraint that the robot must be able to traverse the trajectory without ever applying more
 				// than 10V.
 				DifferentialDriveDynamicsConstraint<Pose2dWithCurvature> drive_constraints = new DifferentialDriveDynamicsConstraint<>(drive, 10.0);
