@@ -22,6 +22,7 @@ import frc.robot.lib.trajectory.timing.TimedState;
 import frc.robot.lib.util.CrashTracker;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.InterpolatingDouble;
+import frc.robot.lib.util.ReflectingCSVWriter;
 import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.paths.DriveMotionPlanner;
 import frc.robot.paths.Kinematics;
@@ -357,6 +358,5 @@ public class Drive extends Subsystem {
 				public double left_feedforward;
 				public double right_feedforward;
 				public TimedState<Pose2dWithCurvature> path_setpoint = new TimedState<Pose2dWithCurvature>(Pose2dWithCurvature.identity());
-				double timestamp;
 		}
 }

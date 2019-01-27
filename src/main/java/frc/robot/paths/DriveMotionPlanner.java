@@ -26,7 +26,7 @@ public class DriveMotionPlanner implements CSVWritable {
 		private static final double kMaxDTheta = Math.toRadians(5.0);
 		final DifferentialDrive mModel;
 		public TimedState<Pose2dWithCurvature> mSetpoint = new TimedState<>(Pose2dWithCurvature.identity());
-		FollowerType mFollowerType = FollowerType.NONLINEAR_FEEDBACK;
+		FollowerType mFollowerType = FollowerType.PURE_PURSUIT;
 		TrajectoryIterator<TimedState<Pose2dWithCurvature>> mCurrentTrajectory;
 		boolean mIsReversed = false;
 		double mLastTime = Double.POSITIVE_INFINITY;
