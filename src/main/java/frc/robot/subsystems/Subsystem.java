@@ -13,18 +13,27 @@ import frc.robot.lib.structure.ILooper;
  */
 public abstract class Subsystem {
 		// Optional design pattern for caching periodic reads to avoid hammering the HAL/CAN.
-		public void readPeriodicInputs() {
+		public void readPeriodicInputs(double timestamp) {
 		}
 
 		// Optional design pattern for caching periodic writes to avoid hammering the HAL/CAN.
-		public void writePeriodicOutputs() {
+		public void writePeriodicOutputs(double timestamp) {
 		}
 
 		public abstract void outputTelemetry();
 
-		public void zeroSensors() {
+		public void registerEnabledLoops(ILooper enabledLooper) {
 		}
 
-		public void registerEnabledLoops(ILooper enabledLooper) {
+		public void onStart(double timestamp){
+
+		}
+
+		public void onLoop(double timestamp){
+
+		}
+
+		public void onStop(double timestamp){
+
 		}
 }

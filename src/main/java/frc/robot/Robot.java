@@ -9,7 +9,6 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.util.CrashTracker;
 import frc.robot.paths.RobotState;
@@ -23,8 +22,6 @@ import java.util.Arrays;
 public class Robot extends TimedRobot {
 		public static MatchState mMatchState = MatchState.DISABLED;
 		private final SubsystemManager mSubsystemManager = new SubsystemManager(Arrays.asList(Drive.getInstance(), Superstructure.getInstance()));
-		private double dt = 0;
-		private int dashCount = 0;
 
 		protected Robot() {
 				super(0.01);
@@ -36,6 +33,8 @@ public class Robot extends TimedRobot {
 						CrashTracker.logRobotInit();
 						mMatchState = MatchState.DISABLED;
 						TrajectoryGenerator.getInstance().generateTrajectories();
+						Shuffleboard.startRecording();
+
 				} catch (Throwable t) {
 						CrashTracker.logThrowableCrash(t);
 						throw t;
@@ -44,12 +43,12 @@ public class Robot extends TimedRobot {
 
 		@Override public void disabledInit() {
 				try {
-						Shuffleboard.stopRecording();
-						AutoChooser.disableAuto();
 						CrashTracker.logDisabledInit();
-						mSubsystemManager.stop();
-						RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
 						mMatchState = MatchState.DISABLED;
+						AutoChooser.disableAuto();
+						mSubsystemManager.stop();
+						Drive.getInstance().zeroSensors();
+						RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
 				} catch (Throwable t) {
 						CrashTracker.logThrowableCrash(t);
 						throw t;
@@ -58,8 +57,8 @@ public class Robot extends TimedRobot {
 
 		@Override public void autonomousInit() {
 				try {
-						Shuffleboard.startRecording();
 						CrashTracker.logAutoInit();
+						Drive.getInstance().zeroSensors();
 						RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
 						mMatchState = MatchState.AUTO;
 						mSubsystemManager.start();
@@ -72,9 +71,8 @@ public class Robot extends TimedRobot {
 
 		@Override public void teleopInit() {
 				try {
-						Shuffleboard.startRecording();
-						mMatchState = MatchState.TELEOP;
 						CrashTracker.logTeleopInit();
+						mMatchState = MatchState.TELEOP;
 						mSubsystemManager.start();
 				} catch (Throwable t) {
 						CrashTracker.logThrowableCrash(t);
@@ -97,17 +95,8 @@ public class Robot extends TimedRobot {
 
 		@Override public void robotPeriodic() {
 				try {
-						if (dashCount == 5) {
-								mSubsystemManager.outputToSmartDashboard();
-								//mEnabledLooper.outputToSmartDashboard();
-								RobotState.getInstance().outputToSmartDashboard();
-								dashCount = 0;
-						}
-						dashCount++;
-						SmartDashboard.putNumber("Main loop Dt", (Timer.getFPGATimestamp() - dt) * 1e3);
-						dt = Timer.getFPGATimestamp();
-						//double dist = Constants.visionDistMap.getInterpolated(new InterpolatingDouble(Superstructure.getInstance().getTarget().getArea())).value;
-						//System.out.println(dist);
+						mSubsystemManager.outputToSmartDashboard();
+						RobotState.getInstance().outputToSmartDashboard();
 				} catch (Throwable t) {
 						CrashTracker.logThrowableCrash(t);
 						throw t;
@@ -124,7 +113,6 @@ public class Robot extends TimedRobot {
 		}
 
 		@Override public void testPeriodic() {
-				mSubsystemManager.onLoop();
 		}
 
 		public enum MatchState {

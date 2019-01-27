@@ -15,8 +15,6 @@ import frc.robot.lib.geometry.Pose2dWithCurvature;
 import frc.robot.lib.geometry.Rotation2d;
 import frc.robot.lib.geometry.Twist2d;
 import frc.robot.lib.math.MkMath;
-import frc.robot.lib.structure.ILooper;
-import frc.robot.lib.structure.Loop;
 import frc.robot.lib.trajectory.TrajectoryIterator;
 import frc.robot.lib.trajectory.timing.TimedState;
 import frc.robot.lib.util.CrashTracker;
@@ -56,7 +54,6 @@ public class Drive extends Subsystem {
 				rightDrive.slaveTalon.setInverted(Constants.kRightSlaveInvert);
 				rightDrive.masterTalon.setSensorPhase(Constants.kRightSensorInvert);
 				mMotionPlanner = new DriveMotionPlanner();
-				navX.zeroYaw();
 		}
 
 		public static Drive getInstance() {
@@ -86,7 +83,15 @@ public class Drive extends Subsystem {
 				mPeriodicIO.gyro_heading = heading;
 		}
 
-		@Override public synchronized void readPeriodicInputs() {
+		public synchronized void zeroSensors(){
+				navX.zeroYaw();
+				leftDrive.masterTalon.setSelectedSensorPosition(0);
+				rightDrive.masterTalon.setSelectedSensorPosition(0);
+				left_encoder_prev_distance_ = 0;
+				right_encoder_prev_distance_ = 0;
+		}
+
+		@Override public synchronized void readPeriodicInputs(double timestamp) {
 				mPeriodicIO.timestamp = Timer.getFPGATimestamp();
 				mPeriodicIO.leftPos = leftDrive.getPosition();
 				mPeriodicIO.rightPos = rightDrive.getPosition();
@@ -95,7 +100,7 @@ public class Drive extends Subsystem {
 				mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(navX.getFusedHeading()).rotateBy(mGyroOffset);
 		}
 
-		@Override public synchronized void writePeriodicOutputs() {
+		@Override public synchronized void writePeriodicOutputs(double timestamp) {
 				if (mDriveControlState == DriveControlState.OPEN_LOOP) {
 						leftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, NeutralMode.Brake);
 						rightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, NeutralMode.Brake);
@@ -117,46 +122,40 @@ public class Drive extends Subsystem {
 				}
 		}
 
-		@Override public void registerEnabledLoops(ILooper enabledLooper) {
-				enabledLooper.register(new Loop() {
-						@Override public void onStart(double timestamp) {
-								synchronized (Drive.this) {
-										left_encoder_prev_distance_ = mPeriodicIO.leftPos;
-										right_encoder_prev_distance_ = mPeriodicIO.rightPos;
-										startLogging();
-								}
-						}
+		@Override public void onStart(double timestamp) {
+				synchronized (Drive.this) {
+						startLogging();
+				}
+		}
 
-						/**
-						 * Updated from mEnabledLoop in Robot.java Controls drivetrain during Path
-						 * Following and Turn In Place and logs Drivetrain data in all modes
-						 *
-						 * @param timestamp In Seconds Since Code Start
-						 */
-						@Override public void onLoop(double timestamp) {
-								synchronized (Drive.this) {
-										stateEstimator(timestamp);
-										switch (mDriveControlState) {
-												case OPEN_LOOP:
-														break;
-												case PATH_FOLLOWING:
-														updatePathFollower();
-														break;
-												case VISION_TRACKING:
-														updateVision();
-														break;
-												default:
-														System.out.println("Unexpected drive control state: " + mDriveControlState);
-														break;
-										}
-								}
+		/**
+		 * Updated from mEnabledLoop in Robot.java Controls drivetrain during Path
+		 * Following and Turn In Place and logs Drivetrain data in all modes
+		 *
+		 * @param timestamp In Seconds Since Code Start
+		 */
+		@Override public void onLoop(double timestamp) {
+				synchronized (Drive.this) {
+						stateEstimator(timestamp);
+						switch (mDriveControlState) {
+								case OPEN_LOOP:
+										break;
+								case PATH_FOLLOWING:
+										updatePathFollower();
+										break;
+								case VISION_TRACKING:
+										updateVision();
+										break;
+								default:
+										System.out.println("Unexpected drive control state: " + mDriveControlState);
+										break;
 						}
+				}
+		}
 
-						@Override public void onStop(double timestamp) {
-								setOpenLoop(DriveSignal.BRAKE);
-								stopLogging();
-						}
-				});
+		@Override public void onStop(double timestamp) {
+				setOpenLoop(DriveSignal.BRAKE);
+				stopLogging();
 		}
 
 		public synchronized void startLogging() {

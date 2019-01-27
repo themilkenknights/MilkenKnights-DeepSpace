@@ -1,18 +1,16 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.Timer;
-import frc.robot.lib.structure.ILooper;
-import frc.robot.lib.structure.Loop;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Used to reset, start, stop, and update all subsystems at once
  */
-public class SubsystemManager implements ILooper {
+public class SubsystemManager {
 		private final List<Subsystem> mAllSubsystems;
-		private List<Loop> mLoops = new ArrayList<>();
+		private double lastTime = 0;
 
 		public SubsystemManager(List<Subsystem> allSubsystems) {
 				mAllSubsystems = allSubsystems;
@@ -22,31 +20,28 @@ public class SubsystemManager implements ILooper {
 				mAllSubsystems.forEach((s) -> s.outputTelemetry());
 		}
 
-		@Override
-		public void register(Loop loop) {
-				mLoops.add(loop);
+		public void onLoop() {
+				double timestamp_ = Timer.getFPGATimestamp();
+				for (Subsystem subsystem : mAllSubsystems) {
+						subsystem.readPeriodicInputs(timestamp_);
+						subsystem.onLoop(timestamp_);
+						subsystem.writePeriodicOutputs(timestamp_);
+				}
+				SmartDashboard.putNumber("Main loop Dt", (timestamp_ - lastTime) * 1e3);
+				lastTime = timestamp_;
 		}
 
-		public void onLoop(){
+		public void start() {
 				double timestamp_ = Timer.getFPGATimestamp();
-				for (Loop loop : mLoops) {
-						loop.onLoop(timestamp_);
+				for (Subsystem subsystem : mAllSubsystems) {
+						subsystem.onStart(timestamp_);
 				}
 		}
 
-		public void start(){
+		public void stop() {
 				double timestamp_ = Timer.getFPGATimestamp();
-				for (Loop loop : mLoops) {
-						loop.onStart(timestamp_);
+				for (Subsystem subsystem : mAllSubsystems) {
+						subsystem.onStop(timestamp_);
 				}
 		}
-
-		public void stop(){
-				double timestamp_ = Timer.getFPGATimestamp();
-				for (Loop loop : mLoops) {
-						loop.onStop(timestamp_);
-				}
-		}
-
-
 }

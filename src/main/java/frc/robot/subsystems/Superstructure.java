@@ -2,8 +2,6 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Robot;
-import frc.robot.lib.structure.ILooper;
-import frc.robot.lib.structure.Loop;
 import frc.robot.lib.vision.LimeLight;
 import frc.robot.lib.vision.LimelightTarget;
 
@@ -24,21 +22,17 @@ public class Superstructure extends Subsystem {
 				SmartDashboard.putString("Robot State", Robot.mMatchState.toString());
 		}
 
-		public void registerEnabledLoops(ILooper enabledLooper) {
-				enabledLooper.register(new Loop() {
-						@Override public void onStart(double timestamp) {
-								synchronized (Superstructure.this) {
-								}
-						}
+		@Override public void onStart(double timestamp) {
+				synchronized (Superstructure.this) {
+				}
+		}
 
-						@Override public void onLoop(double timestamp) {
-								synchronized (Superstructure.this) {
-								}
-						}
+		@Override public void onLoop(double timestamp) {
+				synchronized (Superstructure.this) {
+				}
+		}
 
-						@Override public void onStop(double timestamp) {
-						}
-				});
+		@Override public void onStop(double timestamp) {
 		}
 
 		public synchronized LimelightTarget getTarget() {
