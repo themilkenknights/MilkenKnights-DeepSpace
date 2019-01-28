@@ -10,6 +10,7 @@ import frc.robot.lib.trajectory.TrajectoryUtil;
 import frc.robot.lib.trajectory.timing.CentripetalAccelerationConstraint;
 import frc.robot.lib.trajectory.timing.TimedState;
 import frc.robot.lib.trajectory.timing.TimingConstraint;
+import frc.robot.lib.util.Logger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -41,9 +42,9 @@ public class TrajectoryGenerator {
 
   public void generateTrajectories() {
     if (mTrajectorySet == null) {
-      System.out.println("Generating trajectories...");
+      Logger.logMarker("Generating trajectories...");
       mTrajectorySet = new TrajectorySet();
-      System.out.println("Finished trajectory generation");
+      Logger.logMarker("Finished trajectory generation");
     }
   }
 
@@ -75,9 +76,9 @@ public class TrajectoryGenerator {
 
   public void generateVisionTrajectories(Pose2d endPose) {
     if (mVisionTrajectorySet == null) {
-      System.out.println("Generating trajectories...");
+      Logger.logMarker("Generating trajectories...");
       mVisionTrajectorySet = new VisionTrajectorySet(endPose);
-      System.out.println("Finished trajectory generation");
+      Logger.logMarker("Finished trajectory generation");
     }
   }
 

@@ -1,12 +1,10 @@
 package frc.robot.lib.util;
 
 /**
- * A drivetrain command consisting of the left, right motor settings and whether the brake mode is
- * enabled.
+ * A drivetrain command consisting of the left, right motor settings and whether the brake mode is enabled.
  */
 public class DriveSignal {
 
-  public static DriveSignal NEUTRAL = new DriveSignal(0, 0);
   public static DriveSignal BRAKE = new DriveSignal(0, 0, true);
   protected double mLeftMotor;
   protected double mRightMotor;

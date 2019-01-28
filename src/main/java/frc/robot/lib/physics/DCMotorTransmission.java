@@ -3,8 +3,8 @@ package frc.robot.lib.physics;
 import frc.robot.lib.util.Util;
 
 /**
- * Model of a DC motor rotating a shaft.  All parameters refer to the output (e.g. should already
- * consider gearing and efficiency losses). The motor is assumed to be symmetric forward/reverse.
+ * Model of a DC motor rotating a shaft.  All parameters refer to the output (e.g. should already consider gearing and efficiency losses). The motor
+ * is assumed to be symmetric forward/reverse.
  */
 public class DCMotorTransmission {
 

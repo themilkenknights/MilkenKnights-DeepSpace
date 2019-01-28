@@ -1,5 +1,6 @@
 package frc.robot.lib.physics;
 
+import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.PolynomialRegression;
 import frc.robot.lib.util.Util;
 import java.util.List;
@@ -18,7 +19,7 @@ public class DriveCharacterization {
     if (points == null) {
       return constants;
     }
-    System.out.println(points[0][0]);
+    System.out.println(String.valueOf(points[0][0]));
     PolynomialRegression p = new PolynomialRegression(points, 1);
     System.out.println("r^2: " + p.R2());
     constants.ks = p.beta(0);

@@ -7,16 +7,15 @@ import frc.robot.lib.geometry.Rotation2d;
 import frc.robot.lib.geometry.Twist2d;
 
 /**
- * Provides forward and inverse kinematics equations for the robot modeling the wheelbase as a
- * differential drive (with a corrective factor to account for skidding).
+ * Provides forward and inverse kinematics equations for the robot modeling the wheelbase as a differential drive (with a corrective factor to account
+ * for skidding).
  */
 public class Kinematics {
 
   private static final double kEpsilon = 1E-9;
 
   /**
-   * Forward kinematics using only encoders, rotation is implicit (less accurate than below, but
-   * useful for predicting motion)
+   * Forward kinematics using only encoders, rotation is implicit (less accurate than below, but useful for predicting motion)
    */
   public static Twist2d forwardKinematics(double left_wheel_delta, double right_wheel_delta) {
     double delta_rotation =
@@ -45,17 +44,6 @@ public class Kinematics {
     return current_pose.transformBy(Pose2d.exp(forward_kinematics));
   }
 
-
-  public static class DriveVelocity {
-    public final double left;
-    public final double right;
-
-    public DriveVelocity(double left, double right) {
-      this.left = left;
-      this.right = right;
-    }
-  }
-
   /**
    * Uses inverse kinematics to convert a Twist2d into left and right wheel velocities
    */
@@ -65,6 +53,17 @@ public class Kinematics {
     }
     double delta_v = DRIVE.kDriveWheelTrackWidthInches * velocity.dtheta / (2 * DRIVE.kTrackScrubFactor);
     return new DriveVelocity(velocity.dx - delta_v, velocity.dx + delta_v);
+  }
+
+  public static class DriveVelocity {
+
+    public final double left;
+    public final double right;
+
+    public DriveVelocity(double left, double right) {
+      this.left = left;
+      this.right = right;
+    }
   }
 
 

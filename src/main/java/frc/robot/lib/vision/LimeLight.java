@@ -13,8 +13,7 @@ import frc.robot.lib.vision.LimeLightControlMode.Snapshot;
 import frc.robot.lib.vision.LimeLightControlMode.StreamType;
 
 /**
- * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you
- * Enjoy the Lime Light Camera.
+ * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you Enjoy the Lime Light Camera.
  */
 public class LimeLight {
 
@@ -241,9 +240,8 @@ public class LimeLight {
   /**
    * stream Sets limelight’s streaming mode
    * <p>
-   * kStandard - Side-by-side streams if a webcam is attached to Limelight kPiPMain - The secondary
-   * camera stream is placed in the lower-right corner of the primary camera stream kPiPSecondary -
-   * The primary camera stream is placed in the lower-right corner of the secondary camera stream
+   * kStandard - Side-by-side streams if a webcam is attached to Limelight kPiPMain - The secondary camera stream is placed in the lower-right corner
+   * of the primary camera stream kPiPSecondary - The primary camera stream is placed in the lower-right corner of the secondary camera stream
    */
   public void setStream(StreamType stream) {
     m_table.getEntry("stream").setValue(stream.getValue());
@@ -265,9 +263,8 @@ public class LimeLight {
   }
 
   /**
-   * Limelight posts three raw contours to NetworkTables that are not influenced by your grouping
-   * mode. That is, they are filtered with your pipeline parameters, but never grouped. X and Y are
-   * returned in normalized screen space (-1 to 1) rather than degrees. *
+   * Limelight posts three raw contours to NetworkTables that are not influenced by your grouping mode. That is, they are filtered with your pipeline
+   * parameters, but never grouped. X and Y are returned in normalized screen space (-1 to 1) rather than degrees. *
    */
   public double getAdvanced_RotationToTarget(Advanced_Target raw) {
     NetworkTableEntry txRaw = m_table.getEntry("tx" + raw.getValue());

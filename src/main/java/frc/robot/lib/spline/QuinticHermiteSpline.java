@@ -69,8 +69,7 @@ public class QuinticHermiteSpline extends Spline {
   }
 
   /**
-   * Finds the optimal second derivative values for a set of splines to reduce the sum of the change
-   * in curvature squared over the path
+   * Finds the optimal second derivative values for a set of splines to reduce the sum of the change in curvature squared over the path
    *
    * @param splines the list of splines to optimize
    * @return the final sumDCurvature2

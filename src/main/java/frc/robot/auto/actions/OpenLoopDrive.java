@@ -2,6 +2,7 @@ package frc.robot.auto.actions;
 
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.lib.util.DriveSignal;
+import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.Drive;
 
 public class OpenLoopDrive implements Action {
@@ -23,7 +24,6 @@ public class OpenLoopDrive implements Action {
 
   @Override
   public void update() {
-    System.out.println((Timer.getFPGATimestamp() - mStartTime) + " > " + mDuration);
   }
 
   @Override

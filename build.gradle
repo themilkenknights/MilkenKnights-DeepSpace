@@ -96,8 +96,7 @@ task swerdUpdate {
         logDir.mkdirs()
         ssh.run {
             session(remotes.webServer) {
-                get from: '/media/sda1/logs', into: 'logs/' + formattedDate, filter:{ it.name =~ /\.csv$/ }
-                get from: '/media/sda1', into: 'logs/', filter:{ it.name =~ /\.txt$/ }
+                get from: '/media/sda1', into: 'logs/'
                 remove '/media/sda1/logs'
             }
         }

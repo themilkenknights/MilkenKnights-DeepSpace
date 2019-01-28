@@ -6,8 +6,8 @@ import java.text.DecimalFormat;
 import java.util.Arrays;
 
 /**
- * Dynamic model a differential drive robot.  Note: to simplify things, this math assumes the center
- * of mass is coincident with the kinematic center of rotation (e.g. midpoint of the center axle).
+ * Dynamic model a differential drive robot.  Note: to simplify things, this math assumes the center of mass is coincident with the kinematic center
+ * of rotation (e.g. midpoint of the center axle).
  */
 public class DifferentialDrive {
 

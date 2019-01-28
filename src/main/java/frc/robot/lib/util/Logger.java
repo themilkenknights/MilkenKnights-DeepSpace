@@ -3,9 +3,11 @@ package frc.robot.lib.util;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.shuffleboard.EventImportance;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
@@ -26,7 +28,9 @@ public class Logger {
   }
 
   private static void logMarker(String mark, Throwable nullableException) {
-    try (PrintWriter writer = new PrintWriter(new FileWriter("/u/main_log.txt", true))) {
+    String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+    boolean test = new File("/media/sda1/" + dateStamp1 + "/").mkdirs();
+    try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 + "/main_log.txt", true))) {
       writer.print(RUN_INSTANCE_UUID.toString());
       writer.print(", ");
       writer.print(mark);
@@ -71,7 +75,9 @@ public class Logger {
   }
 
   private static void logCrashMarker(String mark, Throwable nullableException) {
-    try (PrintWriter writer = new PrintWriter(new FileWriter("/u/crash_log.txt", true))) {
+    String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+    boolean test = new File("/media/sda1/" + dateStamp1 + "/").mkdirs();
+    try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 + "/crash_log.txt", true))) {
       writer.print(RUN_INSTANCE_UUID.toString());
       writer.print(", ");
       writer.print(mark);

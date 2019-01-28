@@ -2,6 +2,7 @@ package frc.robot.subsystems;
 
 import frc.robot.lib.pixy.Pixy;
 import frc.robot.lib.structure.Subsystem;
+import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MovingAverage;
 import frc.robot.lib.vision.LimeLight;
 import frc.robot.lib.vision.LimeLightControlMode;
@@ -44,7 +45,7 @@ public class Vision extends Subsystem {
   @Override
   public void onLoop(double timestamp) {
     mThrottleAverage.addNumber(limeLight.returnTarget());
-    System.out.println(pixy.getBlocks().get(0).x);
+    Logger.logMarker(String.valueOf(pixy.getBlocks().get(0).x));
   }
 
   @Override

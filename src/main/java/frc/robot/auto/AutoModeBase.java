@@ -4,8 +4,7 @@ import frc.robot.auto.actions.Action;
 import frc.robot.lib.util.Logger;
 
 /**
- * An abstract class that is the basis of the robot's autonomous routines. This is implemented in
- * auto modes (which are routines that do actions).
+ * An abstract class that is the basis of the robot's autonomous routines. This is implemented in auto modes (which are routines that do actions).
  */
 public abstract class AutoModeBase {
 
@@ -26,7 +25,7 @@ public abstract class AutoModeBase {
   protected abstract void routine() throws AutoModeEndedException;
 
   public void done() {
-    System.out.println("Auto mode done");
+    Logger.logMarker("Auto mode done");
   }
 
   public void stop() {

@@ -4,9 +4,8 @@ import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.InterpolatingTreeMap;
 
 /**
- * Unless otherwise noted by raw/native/RPM, all position unites are in inches and degrees and all
- * velocity units are in inches per second and degrees per second. ID typically notes a CAN ID All
- * PID Constants are in Native Units
+ * Unless otherwise noted by raw/native/RPM, all position unites are in inches and degrees and all velocity units are in inches per second and degrees
+ * per second. ID typically notes a CAN ID All PID Constants are in Native Units
  */
 public final class Constants {
 

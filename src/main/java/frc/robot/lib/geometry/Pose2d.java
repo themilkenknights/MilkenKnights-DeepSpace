@@ -103,8 +103,7 @@ public class Pose2d implements IPose2d<Pose2d> {
   }
 
   /**
-   * Finds the point where the heading of this pose intersects the heading of another. Returns
-   * (+INF, +INF) if parallel.
+   * Finds the point where the heading of this pose intersects the heading of another. Returns (+INF, +INF) if parallel.
    */
   public Translation2d intersection(final Pose2d other) {
     final Rotation2d other_rotation = other.getRotation();
@@ -198,8 +197,7 @@ public class Pose2d implements IPose2d<Pose2d> {
   }
 
   /**
-   * Transforming this RigidTransform2d means first translating by other.translation and then
-   * rotating by other.rotation
+   * Transforming this RigidTransform2d means first translating by other.translation and then rotating by other.rotation
    *
    * @param other The other transform.
    * @return This transform * other

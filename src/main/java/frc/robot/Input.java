@@ -16,12 +16,12 @@ public class Input {
   private static final MkJoystickButton placeButton = driverJoystick.getButton(2, "Place Button");
 
   public static void updateDriveInput() {
-    if(visionIntakeHatch.isPressed()){
+    if (visionIntakeHatch.isPressed()) {
 
     }
     if (stowButton.isPressed()) {
       HatchArm.getInstance().setHatchArm(HatchArmState.STOW);
-    } else if (placeButton.isPressed()){
+    } else if (placeButton.isPressed()) {
       HatchArm.getInstance().setHatchArm(HatchArmState.PLACE);
     }
     if (Drive.getInstance().mDriveControlState != DriveControlState.PATH_FOLLOWING) {

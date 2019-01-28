@@ -20,7 +20,8 @@ public class ReflectingCSVWriter<T> {
   public ReflectingCSVWriter(String fileName, Class<T> typeClass) {
     mFields = typeClass.getFields();
     try {
-      boolean test = new File("/media/sda1/logs").mkdirs();
+      String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+      boolean test = new File("/media/sda1/" + dateStamp1 + "/").mkdirs();
       String dateStamp = new SimpleDateFormat("hh-mm-ssaaa").format(new Date());
       String fileName1 = "/media/sda1/logs/" + fileName + " " + dateStamp + ".csv";
       mOutput = new PrintWriter(fileName1);

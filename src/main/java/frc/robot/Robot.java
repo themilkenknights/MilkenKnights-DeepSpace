@@ -93,7 +93,7 @@ public class Robot extends TimedRobot {
     try {
       mMatchState = MatchState.TEST;
       mSubsystemManager.start();
-      System.out.println("Starting check systems.");
+      Logger.logMarker("Starting check systems.");
       mSubsystemManager.checkSystem();
       mSubsystemManager.stop();
     } catch (Throwable t) {

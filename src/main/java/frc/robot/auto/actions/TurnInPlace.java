@@ -2,17 +2,19 @@ package frc.robot.auto.actions;
 
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.lib.util.DriveSignal;
+import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.Drive;
 
-public class TurnInPlace implements Action{
+public class TurnInPlace implements Action {
 
   private double angle;
-  private double desiredTime,startTime = 0;
+  private double desiredTime, startTime = 0;
 
-  public TurnInPlace(double angle, double desiredTime){
+  public TurnInPlace(double angle, double desiredTime) {
     this.angle = angle;
     this.desiredTime = desiredTime;
   }
+
   @Override
   public boolean isFinished() {
     return Drive.getInstance().isTurnDone() || (Timer.getFPGATimestamp() - startTime) > desiredTime;
@@ -30,7 +32,7 @@ public class TurnInPlace implements Action{
 
   @Override
   public void start() {
-    System.out.println("Start Turn In Place");
+    Logger.logMarker("Start Turn In Place");
     Drive.getInstance().startTurnInPlace(angle);
   }
 }
