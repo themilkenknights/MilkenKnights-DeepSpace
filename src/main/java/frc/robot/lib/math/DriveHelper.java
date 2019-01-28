@@ -17,7 +17,7 @@ public class DriveHelper {
 				if (cubeInputs) {
 						rotateValue = rotateValue * rotateValue * rotateValue;
 				}
-				rotateValue = rotateValue / 1.5;
+				rotateValue = rotateValue / 2.1;
 				if (moveValue > 0.0) {
 						if (rotateValue > 0.0) {
 								leftMotorSpeed = moveValue - rotateValue;

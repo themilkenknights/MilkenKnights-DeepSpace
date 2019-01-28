@@ -12,10 +12,10 @@ import frc.robot.lib.util.InterpolatingTreeMap;
  */
 public final class Constants {
 		public static final int kPneumaticsControlModuleID = 0;
-		public static final int kDriveLeftMasterID = 1;
-		public static final int kDriveLeftSlaveID = 2;
-		public static final int kDriveRightMasterID = 3;
-		public static final int kDriveRightSlaveID = 4;
+		public static final int kDriveLeftMasterID = 4;
+		public static final int kDriveLeftSlaveID = 3;
+		public static final int kDriveRightMasterID = 7;
+		public static final int kDriveRightSlaveID = 6;
 		public static final int kPowerDistributionPanelID = 5;
 		public static final int kGroundHatchIntakeMotor = 6;
 		public static final int kLeftCargoArmMotor = 7;
@@ -40,10 +40,10 @@ public final class Constants {
 		public static final double kPathMinLookaheadDistance = 24.0;  // inches
 		public static final boolean kLeftMasterInvert = false;
 		public static final boolean kLeftSlaveInvert = false;
-		public static final boolean KRightMasterInvert = true;
+		public static final boolean KRightMasterInvert = false;
 		public static final boolean kRightSlaveInvert = true;
 		public static final boolean kLeftSensorInvert = true;
-		public static final boolean kRightSensorInvert = true;
+		public static final boolean kRightSensorInvert = false;
 		public static final double kWheelDiameter = 6.0;
 		public static final double kDriveWheelRadiusInches = kWheelDiameter / 2.0;
 		public static final double kCircumference = kWheelDiameter * PI;
@@ -62,10 +62,9 @@ public final class Constants {
 		public static final double kMinTestVel = 140;
 		public static final double kThrottleDeadband = 0.0;
 		public static final double kWheelDeadband = 0.0045;
-		public static final int kHatchArmForwardChannel = 1;
-		public static final int kHatchArmReverseChannel = 2;
-		public static final DoubleSolenoid.Value kHatchArmPlaceState = DoubleSolenoid.Value.kForward;
-		public static final DoubleSolenoid.Value kHatchArmStowState = DoubleSolenoid.Value.kReverse;
+		public static final int kHatchArmChannel = 3;
+		public static final boolean kHatchArmPlaceState = true;
+		public static final boolean kHatchArmStowState = !kHatchArmPlaceState;
 		public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> visionDistMap = new InterpolatingTreeMap<>();
 
 		static {
