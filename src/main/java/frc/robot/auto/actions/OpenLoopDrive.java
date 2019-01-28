@@ -2,7 +2,6 @@ package frc.robot.auto.actions;
 
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.lib.util.DriveSignal;
-import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.Drive;
 
 public class OpenLoopDrive implements Action {

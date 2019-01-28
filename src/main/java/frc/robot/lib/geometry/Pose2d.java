@@ -181,14 +181,14 @@ public class Pose2d implements IPose2d<Pose2d> {
     return epsilonEquals((Pose2d) other, Util.kEpsilon);
   }
 
-  public boolean epsilonEquals(final Pose2d other, double epsilon) {
-    return getTranslation().epsilonEquals(other.getTranslation(), epsilon) && getRotation()
-        .isParallel(other.getRotation());
-  }
-
   @Override
   public String toString() {
     return "T:" + translation_.toString() + ", R:" + rotation_.toString();
+  }
+
+  public boolean epsilonEquals(final Pose2d other, double epsilon) {
+    return getTranslation().epsilonEquals(other.getTranslation(), epsilon) && getRotation()
+        .isParallel(other.getRotation());
   }
 
   @Override

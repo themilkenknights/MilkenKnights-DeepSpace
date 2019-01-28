@@ -48,7 +48,7 @@ public class HatchArm extends Subsystem {
   /*
   Move Hatch Arm to Stow or Place
    */
-  public void setHatchArm(HatchArmState armState) {
+  public synchronized void setHatchArm(HatchArmState armState) {
     mArmSolenoid.set(armState.state);
     Logger.logMarker("Set Hatch Arm to " + armState.toString());
   }

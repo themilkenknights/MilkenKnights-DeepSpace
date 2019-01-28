@@ -231,58 +231,12 @@ public class QuinticHermiteSpline extends Spline {
     fy = y0;
   }
 
-  public Pose2d getStartPose() {
-    return new Pose2d(new Translation2d(x0, y0), new Rotation2d(dx0, dy0, true));
-  }
-
-  public Pose2d getEndPose() {
-    return new Pose2d(new Translation2d(x1, y1), new Rotation2d(dx1, dy1, true));
-  }
-
-  @Override
-  public double getCurvature(double t) {
-    return (dx(t) * ddy(t) - ddx(t) * dy(t)) / ((dx(t) * dx(t) + dy(t) * dy(t)) * Math
-        .sqrt((dx(t) * dx(t) + dy(t) * dy(t))));
-  }
-
-  @Override
-  public double getDCurvature(double t) {
-    double dx2dy2 = (dx(t) * dx(t) + dy(t) * dy(t));
-    double num =
-        (dx(t) * dddy(t) - dddx(t) * dy(t)) * dx2dy2 - 3 * (dx(t) * ddy(t) - ddx(t) * dy(t)) * (
-            dx(t) * ddx(t) + dy(t) * ddy(t));
-    return num / (dx2dy2 * dx2dy2 * Math.sqrt(dx2dy2));
-  }
-
   private double dddy(double t) {
     return 60 * ay * t * t + 24 * by * t + 6 * cy;
   }
 
   private double dddx(double t) {
     return 60 * ax * t * t + 24 * bx * t + 6 * cx;
-  }
-
-  @Override
-  public double getVelocity(double t) {
-    return Math.hypot(dx(t), dy(t));
-  }
-
-  /**
-   * @param t ranges from 0 to 1
-   * @return the point on the spline for that t value
-   */
-  @Override
-  public Translation2d getPoint(double t) {
-    double x =
-        ax * t * t * t * t * t + bx * t * t * t * t + cx * t * t * t + dx * t * t + ex * t + fx;
-    double y =
-        ay * t * t * t * t * t + by * t * t * t * t + cy * t * t * t + dy * t * t + ey * t + fy;
-    return new Translation2d(x, y);
-  }
-
-  @Override
-  public Rotation2d getHeading(double t) {
-    return new Rotation2d(dx(t), dy(t), true);
   }
 
   private double dx(double t) {
@@ -319,6 +273,52 @@ public class QuinticHermiteSpline extends Spline {
       sum += (dt * dCurvature2(t));
     }
     return sum;
+  }
+
+  public Pose2d getStartPose() {
+    return new Pose2d(new Translation2d(x0, y0), new Rotation2d(dx0, dy0, true));
+  }
+
+  public Pose2d getEndPose() {
+    return new Pose2d(new Translation2d(x1, y1), new Rotation2d(dx1, dy1, true));
+  }
+
+  @Override
+  public double getCurvature(double t) {
+    return (dx(t) * ddy(t) - ddx(t) * dy(t)) / ((dx(t) * dx(t) + dy(t) * dy(t)) * Math
+        .sqrt((dx(t) * dx(t) + dy(t) * dy(t))));
+  }
+
+  @Override
+  public double getDCurvature(double t) {
+    double dx2dy2 = (dx(t) * dx(t) + dy(t) * dy(t));
+    double num =
+        (dx(t) * dddy(t) - dddx(t) * dy(t)) * dx2dy2 - 3 * (dx(t) * ddy(t) - ddx(t) * dy(t)) * (
+            dx(t) * ddx(t) + dy(t) * ddy(t));
+    return num / (dx2dy2 * dx2dy2 * Math.sqrt(dx2dy2));
+  }
+
+  @Override
+  public double getVelocity(double t) {
+    return Math.hypot(dx(t), dy(t));
+  }
+
+  /**
+   * @param t ranges from 0 to 1
+   * @return the point on the spline for that t value
+   */
+  @Override
+  public Translation2d getPoint(double t) {
+    double x =
+        ax * t * t * t * t * t + bx * t * t * t * t + cx * t * t * t + dx * t * t + ex * t + fx;
+    double y =
+        ay * t * t * t * t * t + by * t * t * t * t + cy * t * t * t + dy * t * t + ey * t + fy;
+    return new Translation2d(x, y);
+  }
+
+  @Override
+  public Rotation2d getHeading(double t) {
+    return new Rotation2d(dx(t), dy(t), true);
   }
 
   /**

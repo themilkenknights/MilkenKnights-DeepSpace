@@ -22,8 +22,6 @@ public abstract class AutoModeBase {
     Logger.logMarker("Auto mode done");
   }
 
-  protected abstract void routine() throws AutoModeEndedException;
-
   public void done() {
   }
 
@@ -56,4 +54,6 @@ public abstract class AutoModeBase {
   public boolean isActive() {
     return m_active;
   }
+
+  protected abstract void routine() throws AutoModeEndedException;
 }

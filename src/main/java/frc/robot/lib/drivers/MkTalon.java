@@ -47,6 +47,11 @@ public class MkTalon {
     resetMasterConfig();
   }
 
+  private synchronized double getError() {
+    return MkMath.nativeUnitsPer100MstoInchesPerSec(
+        masterTalon.getClosedLoopError(Constants.GENERAL.kPIDLoopIdx));
+  }
+
   public void resetMasterConfig() {
     masterTalon.configFactoryDefault();
     masterTalon.configAllSettings(new TalonSRXConfiguration());
@@ -137,11 +142,6 @@ public class MkTalon {
   public synchronized double getSpeed() {
     return MkMath.nativeUnitsPer100MstoInchesPerSec(
         masterTalon.getSelectedSensorVelocity(Constants.GENERAL.kPIDLoopIdx));
-  }
-
-  private synchronized double getError() {
-    return MkMath.nativeUnitsPer100MstoInchesPerSec(
-        masterTalon.getClosedLoopError(Constants.GENERAL.kPIDLoopIdx));
   }
 
   public synchronized double getPosition() {

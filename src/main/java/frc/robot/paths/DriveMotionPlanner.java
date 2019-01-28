@@ -174,6 +174,18 @@ public class DriveMotionPlanner implements CSVWritable {
     return mOutput;
   }
 
+  public boolean isDone() {
+    return mCurrentTrajectory != null && mCurrentTrajectory.isDone();
+  }
+
+  public Pose2d error() {
+    return mError;
+  }
+
+  public TimedState<Pose2dWithCurvature> setpoint() {
+    return mSetpoint;
+  }
+
   protected Output updatePurePursuit(DifferentialDrive.DriveDynamics dynamics,
       Pose2d current_state) {
     double lookahead_time = Constants.DRIVE.kPathLookaheadTime;
@@ -249,18 +261,6 @@ public class DriveMotionPlanner implements CSVWritable {
     return new Output(dynamics.wheel_velocity.left, dynamics.wheel_velocity.right,
         dynamics.wheel_acceleration.left,
         dynamics.wheel_acceleration.right, feedforward_voltages.left, feedforward_voltages.right);
-  }
-
-  public boolean isDone() {
-    return mCurrentTrajectory != null && mCurrentTrajectory.isDone();
-  }
-
-  public Pose2d error() {
-    return mError;
-  }
-
-  public TimedState<Pose2dWithCurvature> setpoint() {
-    return mSetpoint;
   }
 
   public enum FollowerType {

@@ -81,6 +81,34 @@ public class Drive extends Subsystem {
     right_encoder_prev_distance_ = right_distance;
   }
 
+  /**
+   * Controls Drivetrain in Closed-loop velocity Mode Method sets Talons in Native Units per 100ms
+   *
+   * @param signal An object that contains left and right velocities (inches per sec)
+   */
+  private synchronized void setVelocity(DriveSignal signal, DriveSignal feedforward) {
+    if (mDriveControlState != DriveControlState.PATH_FOLLOWING) {
+      mDriveControlState = DriveControlState.PATH_FOLLOWING;
+    }
+    mPeriodicIO.left_demand = signal.getLeft();
+    mPeriodicIO.right_demand = signal.getRight();
+    mPeriodicIO.left_feedforward = feedforward.getLeft();
+    mPeriodicIO.right_feedforward = feedforward.getRight();
+  }
+
+  private synchronized void startLogging() {
+    if (mCSVWriter == null && Constants.LOG.kDriveCSVLogging) {
+      mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
+    }
+  }
+
+  private synchronized void stopLogging() {
+    if (mCSVWriter != null) {
+      mCSVWriter.flush();
+      mCSVWriter = null;
+    }
+  }
+
   private void updatePathFollower() {
     if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
       final double now = Timer.getFPGATimestamp();
@@ -125,7 +153,7 @@ public class Drive extends Subsystem {
     }
   }
 
-  private void updateTurnToHeading(double timestamp) {
+  private void updateTurnToHeading() {
     final Rotation2d field_to_robot = RobotState.getInstance().getLatestFieldToVehicle().getValue().getRotation();
     // Figure out the rotation necessary to turn to face the goal.
     final Rotation2d robot_to_target = field_to_robot.inverse().rotateBy(Rotation2d.fromDegrees(turnAngle));
@@ -158,33 +186,22 @@ public class Drive extends Subsystem {
     }
   }
 
+  private boolean driveStatus() {
+    return leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected() && navX.isConnected();
+  }
+
   /*
   Check if the trajectory is finished
    */
-  public boolean isDoneWithTrajectory() {
+  public synchronized boolean isDoneWithTrajectory() {
     if (mMotionPlanner == null || mDriveControlState != DriveControlState.PATH_FOLLOWING) {
       return false;
     }
     return mMotionPlanner.isDone() || mOverrideTrajectory;
   }
 
-  public boolean isTurnDone() {
+  public synchronized boolean isTurnDone() {
     return mIsOnTarget;
-  }
-
-  /**
-   * Controls Drivetrain in Closed-loop velocity Mode Method sets Talons in Native Units per 100ms
-   *
-   * @param signal An object that contains left and right velocities (inches per sec)
-   */
-  public synchronized void setVelocity(DriveSignal signal, DriveSignal feedforward) {
-    if (mDriveControlState != DriveControlState.PATH_FOLLOWING) {
-      mDriveControlState = DriveControlState.PATH_FOLLOWING;
-    }
-    mPeriodicIO.left_demand = signal.getLeft();
-    mPeriodicIO.right_demand = signal.getRight();
-    mPeriodicIO.left_feedforward = feedforward.getLeft();
-    mPeriodicIO.right_feedforward = feedforward.getRight();
   }
 
   /* Controls Drivetrain in PercentOutput Mode (without closed loop control) */
@@ -197,23 +214,6 @@ public class Drive extends Subsystem {
     mPeriodicIO.right_demand = signal.getRight();
     mPeriodicIO.left_feedforward = 0.0;
     mPeriodicIO.right_feedforward = 0.0;
-  }
-
-  public synchronized void startLogging() {
-    if (mCSVWriter == null && Constants.LOG.kDriveCSVLogging) {
-      mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
-    }
-  }
-
-  public synchronized void stopLogging() {
-    if (mCSVWriter != null) {
-      mCSVWriter.flush();
-      mCSVWriter = null;
-    }
-  }
-
-  public boolean driveStatus() {
-    return leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected() && navX.isConnected();
   }
 
   /*
@@ -287,7 +287,7 @@ public class Drive extends Subsystem {
           updateVision();
           break;
         case TURN_IN_PLACE:
-          updateTurnToHeading(timestamp);
+          updateTurnToHeading();
           break;
         default:
           Logger.logError("Unexpected drive control state: " + mDriveControlState);
@@ -343,7 +343,7 @@ Pass the trajectory to the drive motion planner
     }
   }
 
-  public void startTurnInPlace(double angle) {
+  public synchronized void startTurnInPlace(double angle) {
     mDriveControlState = DriveControlState.TURN_IN_PLACE;
     turnAngle = angle;
   }

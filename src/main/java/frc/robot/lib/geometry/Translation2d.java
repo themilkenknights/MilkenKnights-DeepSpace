@@ -130,6 +130,12 @@ public class Translation2d implements ITranslation2d<Translation2d> {
     return inverse().translateBy(other).norm();
   }
 
+  @Override
+  public String toCSV() {
+    final DecimalFormat fmt = new DecimalFormat("#0.000");
+    return fmt.format(x_) + "," + fmt.format(y_);
+  }
+
   /**
    * We can compose Translation2d's by adding together the x and y shifts.
    *
@@ -147,12 +153,6 @@ public class Translation2d implements ITranslation2d<Translation2d> {
    */
   public Translation2d inverse() {
     return new Translation2d(-x_, -y_);
-  }
-
-  @Override
-  public String toCSV() {
-    final DecimalFormat fmt = new DecimalFormat("#0.000");
-    return fmt.format(x_) + "," + fmt.format(y_);
   }
 
   @Override

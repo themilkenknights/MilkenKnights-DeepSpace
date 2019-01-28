@@ -18,6 +18,13 @@ public class MkXboxControllerButton {
   }
 
   /**
+   * Update the last state of the button.
+   */
+  private void update() {
+    lastState = joystick.getRawButton(rawButton);
+  }
+
+  /**
    * Returns true if the button is pressed and this is the first time it is being run.
    */
   public boolean isPressed() {
@@ -29,13 +36,6 @@ public class MkXboxControllerButton {
               + buttonName + " )");
     }
     return isPressed;
-  }
-
-  /**
-   * Update the last state of the button.
-   */
-  private void update() {
-    lastState = joystick.getRawButton(rawButton);
   }
 
   /**

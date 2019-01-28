@@ -25,14 +25,14 @@ public class Displacement1d implements State<Displacement1d> {
     return Math.abs(x() - other.x());
   }
 
-  public double x() {
-    return displacement_;
-  }
-
   @Override
   public String toCSV() {
     final DecimalFormat fmt = new DecimalFormat("#0.000");
     return fmt.format(x());
+  }
+
+  public double x() {
+    return displacement_;
   }
 
   @Override

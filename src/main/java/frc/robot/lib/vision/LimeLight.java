@@ -63,6 +63,10 @@ public class LimeLight {
     _hearBeat.startPeriodic(_hearBeatPeriod);
   }
 
+  private void resetPilelineLatency() {
+    m_table.getEntry("tl").setValue(0.0);
+  }
+
   // This is a test
   public boolean isConnected() {
     return isConnected;
@@ -134,10 +138,6 @@ public class LimeLight {
   public double getPipelineLatency() {
     double l = tl.getDouble(0.0);
     return l;
-  }
-
-  private void resetPilelineLatency() {
-    m_table.getEntry("tl").setValue(0.0);
   }
 
   /**
