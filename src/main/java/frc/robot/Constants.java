@@ -92,6 +92,8 @@ public final class Constants {
 
     public static final double kMinTestPos = 200;
     public static final double kMinTestVel = 140;
+    public static final double kMinTestCurrent = 5;
+
   }
 
 

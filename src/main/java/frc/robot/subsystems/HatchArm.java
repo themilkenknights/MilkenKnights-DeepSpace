@@ -1,6 +1,7 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.Solenoid;
+import edu.wpi.first.wpilibj.Timer;
 import frc.robot.Constants;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
@@ -31,6 +32,17 @@ public class HatchArm extends Subsystem {
   @Override
   public void onStop(double timestamp) {
     setHatchArm(HatchArmState.STOW);
+  }
+
+  @Override
+  public boolean checkSystem() {
+    setHatchArm(HatchArmState.PLACE);
+    Logger.logMarker("Set to Place");
+    Timer.delay(1.0);
+    setHatchArm(HatchArmState.STOW);
+    Timer.delay(1.0);
+    Logger.logMarker("Set to Stow");
+    return true;
   }
 
   /*

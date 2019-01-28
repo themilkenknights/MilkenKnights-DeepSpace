@@ -47,4 +47,10 @@ public class SubsystemManager {
       subsystem.onStop(timestamp_);
     }
   }
+
+  public void checkSystem() {
+    for (Subsystem subsystem : mAllSubsystems) {
+      subsystem.checkSystem();
+    }
+  }
 }

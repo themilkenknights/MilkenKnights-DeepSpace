@@ -11,15 +11,18 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPXConfiguration;
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
+import frc.robot.Constants.TEST;
 import frc.robot.lib.math.MkMath;
+import frc.robot.lib.util.Logger;
 
 public class MkTalon {
 
   public final TalonSRX masterTalon;
   public final VictorSPX slaveTalon;
-  private TalonPosition side;
+  private TalonLocation side;
   private ControlMode lastControlMode = null;
   private double lastOutput = Double.NaN;
   private NeutralMode lastNeutralMode = null;
@@ -29,21 +32,27 @@ public class MkTalon {
    * @param master Talon with Encoder CAN ID
    * @param slave Follower Talon CAN ID
    */
-  public MkTalon(int master, int slave, TalonPosition side) {
+  public MkTalon(int master, int slave, TalonLocation side) {
     masterTalon = new TalonSRX(master);
     slaveTalon = new VictorSPX(slave);
     this.side = side;
-    resetConfig();
+    resetMasterConfig();
+    resetSlaveConfig();
   }
 
-  public void resetConfig() {
+  public MkTalon(int master, TalonLocation loc) {
+    masterTalon = new TalonSRX(master);
+    slaveTalon = null;
+    this.side = loc;
+    resetMasterConfig();
+  }
+
+  public void resetMasterConfig() {
     masterTalon.configFactoryDefault();
     masterTalon.configAllSettings(new TalonSRXConfiguration());
-    slaveTalon.configFactoryDefault();
-    slaveTalon.configAllSettings(new VictorSPXConfiguration());
-    if (side.equals(TalonPosition.Left)) {
+    if (side.equals(TalonLocation.Left_Drive)) {
       masterTalon.config_kF(Constants.GENERAL.kPIDLoopIdx, Constants.DRIVE.kLeftDriveF);
-    } else if (side.equals(TalonPosition.Right)) {
+    } else if (side.equals(TalonLocation.Right_Drive)) {
       masterTalon.config_kF(Constants.GENERAL.kPIDLoopIdx, Constants.DRIVE.kRightDriveF);
     }
     masterTalon.config_kP(Constants.GENERAL.kPIDLoopIdx, Constants.DRIVE.kDriveP);
@@ -62,23 +71,32 @@ public class MkTalon {
     masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative,
         Constants.GENERAL.kPIDLoopIdx, Constants.GENERAL.kTimeoutMs);
     masterTalon.setNeutralMode(NeutralMode.Brake);
-    slaveTalon.setNeutralMode(NeutralMode.Brake);
     masterTalon.configNominalOutputForward(0);
     masterTalon.configNominalOutputReverse(0);
     masterTalon.configPeakOutputForward(1.0);
     masterTalon.configPeakOutputReverse(-1.0);
+    masterTalon.configVoltageCompSaturation(12.0);
+    masterTalon.enableVoltageCompensation(true);
+    masterTalon.configVoltageMeasurementFilter(32);
+    masterTalon.configVelocityMeasurementPeriod(VelocityMeasPeriod.Period_50Ms);
+    masterTalon.configVelocityMeasurementWindow(32);
+    lastControlMode = ControlMode.PercentOutput;
+    lastNeutralMode = NeutralMode.Brake;
+    lastOutput = Double.NaN;
+  }
+
+  public void resetSlaveConfig() {
+    slaveTalon.configFactoryDefault();
+    slaveTalon.configAllSettings(new VictorSPXConfiguration());
+    slaveTalon.setNeutralMode(NeutralMode.Brake);
+    slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5);
     slaveTalon.configNominalOutputForward(0);
     slaveTalon.configNominalOutputReverse(0);
     slaveTalon.configPeakOutputForward(1.0);
     slaveTalon.configPeakOutputReverse(-1.0);
-    masterTalon.configVoltageCompSaturation(12.0);
-    masterTalon.enableVoltageCompensation(true);
-    masterTalon.configVoltageMeasurementFilter(32);
     slaveTalon.configVoltageCompSaturation(12.0);
     slaveTalon.enableVoltageCompensation(true);
     slaveTalon.configVoltageMeasurementFilter(32);
-    masterTalon.configVelocityMeasurementPeriod(VelocityMeasPeriod.Period_50Ms);
-    masterTalon.configVelocityMeasurementWindow(32);
     lastControlMode = ControlMode.PercentOutput;
     lastNeutralMode = NeutralMode.Brake;
     lastOutput = Double.NaN;
@@ -94,7 +112,7 @@ public class MkTalon {
   }
 
   public synchronized void set(ControlMode mode, double value, NeutralMode nMode, double arbFeed) {
-    if (lastOutput != value || lastControlMode != mode || lastNeutralMode != nMode) {
+    if (lastNeutralMode != nMode) {
       lastNeutralMode = nMode;
       masterTalon.setNeutralMode(nMode);
       slaveTalon.setNeutralMode(nMode);
@@ -103,20 +121,7 @@ public class MkTalon {
   }
 
   public void resetEncoder() {
-    masterTalon
-        .setSelectedSensorPosition(0, Constants.GENERAL.kPIDLoopIdx, Constants.GENERAL.kTimeoutMs);
-  }
-
-  public void setCoastMode() {
-    lastNeutralMode = NeutralMode.Coast;
-    masterTalon.setNeutralMode(NeutralMode.Coast);
-    slaveTalon.setNeutralMode(NeutralMode.Coast);
-  }
-
-  public void setBrakeMode() {
-    lastNeutralMode = NeutralMode.Brake;
-    masterTalon.setNeutralMode(NeutralMode.Brake);
-    slaveTalon.setNeutralMode(NeutralMode.Brake);
+    masterTalon.setSelectedSensorPosition(0, Constants.GENERAL.kPIDLoopIdx, Constants.GENERAL.kTimeoutMs);
   }
 
   public void updateSmartDash() {
@@ -144,7 +149,39 @@ public class MkTalon {
         .nativeUnitsToInches(masterTalon.getSelectedSensorPosition(Constants.GENERAL.kPIDLoopIdx));
   }
 
-  public enum TalonPosition {
-    Left, Right, HatchIntake, CargoIntake
+  public boolean checkSystem() {
+    boolean check = true;
+    if (side == TalonLocation.Left_Drive || side == TalonLocation.Right_Drive) {
+      resetEncoder();
+      masterTalon.set(ControlMode.PercentOutput, 0.0);
+      slaveTalon.set(ControlMode.PercentOutput, 1.0);
+      Timer.delay(2.0);
+      if (getPosition() < Constants.TEST.kMinTestPos || getSpeed() < Constants.TEST.kMinTestVel
+          || masterTalon.getOutputCurrent() > TEST.kMinTestCurrent) {
+        Logger.logError("FAILED - " + side.toString() + "Slave FAILED TO REACH REQUIRED SPEED OR POSITION");
+        Logger.logMarker(side.toString() + " Slave Test Failed - Vel: " + getSpeed() + " Pos: " + getPosition());
+        check = false;
+      } else {
+        Logger.logMarker(side.toString() + " Slave - Vel: " + getSpeed() + " Pos: " + getPosition());
+      }
+
+      resetEncoder();
+      slaveTalon.set(ControlMode.PercentOutput, 0.0);
+      masterTalon.set(ControlMode.PercentOutput, 1.0);
+      Timer.delay(2.0);
+      if (getPosition() < Constants.TEST.kMinTestPos || getSpeed() < Constants.TEST.kMinTestVel
+          || masterTalon.getOutputCurrent() > TEST.kMinTestCurrent) {
+        Logger.logError("FAILED - " + side.toString() + "Master FAILED TO REACH REQUIRED SPEED OR POSITION");
+        Logger.logMarker(side.toString() + " Master Test Failed - Vel: " + getSpeed() + " Pos: " + getPosition());
+        check = false;
+      } else {
+        Logger.logMarker(side.toString() + " Master - Vel: " + getSpeed() + " Pos: " + getPosition());
+      }
+    }
+    return check;
+  }
+
+  public enum TalonLocation {
+    Left_Drive, Right_Drive, HatchIntake, CargoIntake
   }
 }

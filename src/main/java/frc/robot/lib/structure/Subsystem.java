@@ -34,4 +34,6 @@ public abstract class Subsystem {
   public void onStop(double timestamp) {
 
   }
+
+  public abstract boolean checkSystem();
 }

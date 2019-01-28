@@ -40,6 +40,11 @@ public class Superstructure extends Subsystem {
   public void onStop(double timestamp) {
   }
 
+  @Override
+  public boolean checkSystem() {
+    return mPDP.getTotalCurrent() > 0 && mCompressor.getCompressorCurrent() > 0;
+  }
+
   private static class InstanceHolder {
 
     private static final Superstructure mInstance = new Superstructure();

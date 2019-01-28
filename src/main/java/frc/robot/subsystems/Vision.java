@@ -56,6 +56,11 @@ public class Vision extends Subsystem {
     pixy.setLEDBrightness(1000);
   }
 
+  @Override
+  public boolean checkSystem() {
+    return limeLight.isConnected();
+  }
+
   public synchronized LimelightTarget getAverageTarget() {
     return mThrottleAverage.getAverage();
   }

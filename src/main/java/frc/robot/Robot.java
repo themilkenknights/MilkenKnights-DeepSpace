@@ -94,8 +94,8 @@ public class Robot extends TimedRobot {
       mMatchState = MatchState.TEST;
       mSubsystemManager.start();
       System.out.println("Starting check systems.");
+      mSubsystemManager.checkSystem();
       mSubsystemManager.stop();
-      Drive.getInstance().checkSystem();
     } catch (Throwable t) {
       Logger.logThrowableCrash(t);
       throw t;
@@ -122,10 +122,6 @@ public class Robot extends TimedRobot {
   public void teleopPeriodic() {
     mSubsystemManager.onLoop();
     Input.updateDriveInput();
-  }
-
-  @Override
-  public void testPeriodic() {
   }
 
   public enum MatchState {
