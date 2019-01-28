@@ -1,57 +1,58 @@
 package frc.robot.lib.util;
 
 import frc.robot.lib.vision.LimelightTarget;
-
 import java.util.ArrayList;
 
 /**
  * Helper class for storing and calculating a moving average
  */
 public class MovingAverage {
-		ArrayList<LimelightTarget> targets = new ArrayList<LimelightTarget>();
-		int maxSize;
 
-		public MovingAverage(int maxSize) {
-				this.maxSize = maxSize;
-		}
+  ArrayList<LimelightTarget> targets = new ArrayList<LimelightTarget>();
+  int maxSize;
 
-		public void addNumber(LimelightTarget newNumber) {
-				targets.add(newNumber);
-				if (targets.size() > maxSize) {
-						targets.remove(0);
-				}
-		}
+  public MovingAverage(int maxSize) {
+    this.maxSize = maxSize;
+  }
 
-		public LimelightTarget getAverage() {
-				boolean validTarget = true;
-				double totalX = 0;
-				double totalY = 0;
-				double totalArea = 0;
-				double totalCaptureTime = 0;
+  public void addNumber(LimelightTarget newNumber) {
+    targets.add(newNumber);
+    if (targets.size() > maxSize) {
+      targets.remove(0);
+    }
+  }
 
-				for (LimelightTarget target : targets) {
-						validTarget = target.isValidTarget() && validTarget;
-						totalX += target.getXOffset();
-						totalY += target.getYOffset();
-						totalArea += target.getArea();
-						totalCaptureTime += target.getCaptureTime();
-				}
+  public LimelightTarget getAverage() {
+    boolean validTarget = true;
+    double totalX = 0;
+    double totalY = 0;
+    double totalArea = 0;
+    double totalCaptureTime = 0;
 
-				LimelightTarget avgTarget = new LimelightTarget(validTarget, totalX / targets.size(), totalY / targets.size(), totalArea / targets.size(),
-						totalCaptureTime / targets.size());
+    for (LimelightTarget target : targets) {
+      validTarget = target.isValidTarget() && validTarget;
+      totalX += target.getXOffset();
+      totalY += target.getYOffset();
+      totalArea += target.getArea();
+      totalCaptureTime += target.getCaptureTime();
+    }
 
-				return avgTarget;
-		}
+    LimelightTarget avgTarget = new LimelightTarget(validTarget, totalX / targets.size(),
+        totalY / targets.size(), totalArea / targets.size(),
+        totalCaptureTime / targets.size());
 
-		public boolean isUnderMaxSize() {
-				return getSize() < maxSize;
-		}
+    return avgTarget;
+  }
 
-		public int getSize() {
-				return targets.size();
-		}
+  public boolean isUnderMaxSize() {
+    return getSize() < maxSize;
+  }
 
-		public void clear() {
-				targets.clear();
-		}
+  public int getSize() {
+    return targets.size();
+  }
+
+  public void clear() {
+    targets.clear();
+  }
 }

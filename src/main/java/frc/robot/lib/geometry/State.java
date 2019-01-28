@@ -4,11 +4,12 @@ import frc.robot.lib.util.CSVWritable;
 import frc.robot.lib.util.Interpolable;
 
 public interface State<S> extends Interpolable<S>, CSVWritable {
-		double distance(final S other);
 
-		boolean equals(final Object other);
+  double distance(final S other);
 
-		String toString();
+  boolean equals(final Object other);
 
-		String toCSV();
+  String toString();
+
+  String toCSV();
 }
