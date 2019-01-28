@@ -90,7 +90,8 @@ public class Rotation2d implements IRotation2d<Rotation2d> {
 				return new Translation2d(cos_angle_, sin_angle_);
 		}
 
-		@Override public Rotation2d interpolate(final Rotation2d other, double x) {
+		@Override
+		public Rotation2d interpolate(final Rotation2d other, double x) {
 				if (x <= 0) {
 						return new Rotation2d(this);
 				} else if (x >= 1) {
@@ -111,7 +112,8 @@ public class Rotation2d implements IRotation2d<Rotation2d> {
 		 * @return This rotation rotated by other.
 		 */
 		public Rotation2d rotateBy(final Rotation2d other) {
-				return new Rotation2d(cos_angle_ * other.cos_angle_ - sin_angle_ * other.sin_angle_, cos_angle_ * other.sin_angle_ + sin_angle_ * other.cos_angle_, true);
+				return new Rotation2d(cos_angle_ * other.cos_angle_ - sin_angle_ * other.sin_angle_,
+						cos_angle_ * other.sin_angle_ + sin_angle_ * other.cos_angle_, true);
 		}
 
 		/**
@@ -123,14 +125,16 @@ public class Rotation2d implements IRotation2d<Rotation2d> {
 				return new Rotation2d(cos_angle_, -sin_angle_, false);
 		}
 
-		@Override public boolean equals(final Object other) {
+		@Override
+		public boolean equals(final Object other) {
 				if (other == null || !(other instanceof Rotation2d)) {
 						return false;
 				}
 				return distance((Rotation2d) other) < Util.kEpsilon;
 		}
 
-		@Override public String toString() {
+		@Override
+		public String toString() {
 				final DecimalFormat fmt = new DecimalFormat("#0.000");
 				return "(" + fmt.format(getDegrees()) + " deg)";
 		}
@@ -139,16 +143,19 @@ public class Rotation2d implements IRotation2d<Rotation2d> {
 				return Math.toDegrees(getRadians());
 		}
 
-		@Override public double distance(final Rotation2d other) {
+		@Override
+		public double distance(final Rotation2d other) {
 				return inverse().rotateBy(other).getRadians();
 		}
 
-		@Override public String toCSV() {
+		@Override
+		public String toCSV() {
 				final DecimalFormat fmt = new DecimalFormat("#0.000");
 				return fmt.format(getDegrees());
 		}
 
-		@Override public Rotation2d getRotation() {
+		@Override
+		public Rotation2d getRotation() {
 				return this;
 		}
 }

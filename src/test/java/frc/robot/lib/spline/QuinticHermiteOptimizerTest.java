@@ -15,7 +15,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class QuinticHermiteOptimizerTest {
 		private static double kEpsilon = Util.kEpsilon;
 
-		@Test public void test() {
+		@Test
+		public void test() {
 				Pose2d a = new Pose2d(new Translation2d(0, 100), Rotation2d.fromDegrees(270));
 				Pose2d b = new Pose2d(new Translation2d(50, 0), Rotation2d.fromDegrees(0));
 				Pose2d c = new Pose2d(new Translation2d(100, 100), Rotation2d.fromDegrees(90));

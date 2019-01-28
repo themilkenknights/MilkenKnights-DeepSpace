@@ -51,7 +51,8 @@ public class TrajectoryUtil {
 				return new Trajectory<S>(states);
 		}
 
-		public static Trajectory<Pose2dWithCurvature> trajectoryFromPathFollower(IPathFollower path_follower, Pose2dWithCurvature start_state, double step_size, double dcurvature_limit) {
+		public static Trajectory<Pose2dWithCurvature> trajectoryFromPathFollower(IPathFollower path_follower, Pose2dWithCurvature start_state,
+				double step_size, double dcurvature_limit) {
 				List<Pose2dWithCurvature> samples = new ArrayList<Pose2dWithCurvature>();
 				samples.add(start_state);
 				Pose2dWithCurvature current_state = start_state;
@@ -66,18 +67,23 @@ public class TrajectoryUtil {
 						// Apply limits on spatial derivative of curvature, if desired.
 						final double dcurvature = (steering_command.curvature() - current_state.getCurvature()) / steering_command.norm();
 						final boolean curvature_valid =
-								!Double.isNaN(dcurvature) && !Double.isInfinite(dcurvature) && !Double.isNaN(current_state.getCurvature()) && !Double.isInfinite(current_state.getCurvature());
+								!Double.isNaN(dcurvature) && !Double.isInfinite(dcurvature) && !Double.isNaN(current_state.getCurvature()) && !Double
+										.isInfinite(current_state.getCurvature());
 						if (dcurvature > dcurvature_limit && curvature_valid) {
-								steering_command = new Twist2d(steering_command.dx, steering_command.dy, (dcurvature_limit * steering_command.norm() + current_state.getCurvature()) * steering_command.norm());
+								steering_command = new Twist2d(steering_command.dx, steering_command.dy,
+										(dcurvature_limit * steering_command.norm() + current_state.getCurvature()) * steering_command.norm());
 						} else if (dcurvature < -dcurvature_limit && curvature_valid) {
-								steering_command = new Twist2d(steering_command.dx, steering_command.dy, (-dcurvature_limit * steering_command.norm() + current_state.getCurvature()) * steering_command.norm());
+								steering_command = new Twist2d(steering_command.dx, steering_command.dy,
+										(-dcurvature_limit * steering_command.norm() + current_state.getCurvature()) * steering_command.norm());
 						}
 						// Calculate the new state.
 						// Use the average curvature over the interval to compute the next state.
 						final Twist2d average_steering_command = !curvature_valid ?
 								steering_command :
-								new Twist2d(steering_command.dx, steering_command.dy, (current_state.getCurvature() + 0.5 * dcurvature * steering_command.norm()) * steering_command.norm());
-						current_state = new Pose2dWithCurvature(current_state.getPose().transformBy(Pose2d.exp(average_steering_command)), steering_command.curvature());
+								new Twist2d(steering_command.dx, steering_command.dy,
+										(current_state.getCurvature() + 0.5 * dcurvature * steering_command.norm()) * steering_command.norm());
+						current_state =
+								new Pose2dWithCurvature(current_state.getPose().transformBy(Pose2d.exp(average_steering_command)), steering_command.curvature());
 						if (!path_follower.isDone()) {
 								samples.add(current_state);
 						}
@@ -85,7 +91,8 @@ public class TrajectoryUtil {
 				return new Trajectory<Pose2dWithCurvature>(samples);
 		}
 
-		public static Trajectory<Pose2dWithCurvature> trajectoryFromSplineWaypoints(final List<Pose2d> waypoints, double maxDx, double maxDy, double maxDTheta) {
+		public static Trajectory<Pose2dWithCurvature> trajectoryFromSplineWaypoints(final List<Pose2d> waypoints, double maxDx, double maxDy,
+				double maxDTheta) {
 				List<QuinticHermiteSpline> splines = new ArrayList<>(waypoints.size() - 1);
 				for (int i = 1; i < waypoints.size(); ++i) {
 						splines.add(new QuinticHermiteSpline(waypoints.get(i - 1), waypoints.get(i)));
@@ -94,7 +101,8 @@ public class TrajectoryUtil {
 				return trajectoryFromSplines(splines, maxDx, maxDy, maxDTheta);
 		}
 
-		public static Trajectory<Pose2dWithCurvature> trajectoryFromSplines(final List<? extends Spline> splines, double maxDx, double maxDy, double maxDTheta) {
+		public static Trajectory<Pose2dWithCurvature> trajectoryFromSplines(final List<? extends Spline> splines, double maxDx, double maxDy,
+				double maxDTheta) {
 				return new Trajectory<>(SplineGenerator.parameterizeSplines(splines, maxDx, maxDy, maxDTheta));
 		}
 }

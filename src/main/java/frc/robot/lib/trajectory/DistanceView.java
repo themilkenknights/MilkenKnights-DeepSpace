@@ -16,7 +16,8 @@ public class DistanceView<S extends State<S>> implements TrajectoryView<S> {
 				}
 		}
 
-		@Override public TrajectorySamplePoint<S> sample(double distance) {
+		@Override
+		public TrajectorySamplePoint<S> sample(double distance) {
 				if (distance >= last_interpolant()) {
 						return new TrajectorySamplePoint<S>(trajectory_.getPoint(trajectory_.length() - 1));
 				}
@@ -30,22 +31,26 @@ public class DistanceView<S extends State<S>> implements TrajectoryView<S> {
 								if (Util.epsilonEquals(distances_[i], distances_[i - 1])) {
 										return new TrajectorySamplePoint<S>(s);
 								} else {
-										return new TrajectorySamplePoint<S>(prev_s.state().interpolate(s.state(), (distance - distances_[i - 1]) / (distances_[i] - distances_[i - 1])), i - 1, i);
+										return new TrajectorySamplePoint<S>(
+												prev_s.state().interpolate(s.state(), (distance - distances_[i - 1]) / (distances_[i] - distances_[i - 1])), i - 1, i);
 								}
 						}
 				}
 				throw new RuntimeException();
 		}
 
-		@Override public double first_interpolant() {
+		@Override
+		public double first_interpolant() {
 				return 0.0;
 		}
 
-		@Override public double last_interpolant() {
+		@Override
+		public double last_interpolant() {
 				return distances_[distances_.length - 1];
 		}
 
-		@Override public Trajectory<S> trajectory() {
+		@Override
+		public Trajectory<S> trajectory() {
 				return trajectory_;
 		}
 }

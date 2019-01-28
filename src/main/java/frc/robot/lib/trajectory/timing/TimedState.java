@@ -34,7 +34,8 @@ public class TimedState<S extends State<S>> implements State<TimedState<S>> {
 				acceleration_ = acceleration;
 		}
 
-		@Override public TimedState<S> interpolate(TimedState<S> other, double x) {
+		@Override
+		public TimedState<S> interpolate(TimedState<S> other, double x) {
 				final double new_t = Util.interpolate(t(), other.t(), x);
 				final double delta_t = new_t - t();
 				if (delta_t < 0.0) {
@@ -48,11 +49,13 @@ public class TimedState<S extends State<S>> implements State<TimedState<S>> {
 				return new TimedState<S>(state().interpolate(other.state(), new_s / state().distance(other.state())), new_t, new_v, acceleration());
 		}
 
-		@Override public double distance(TimedState<S> other) {
+		@Override
+		public double distance(TimedState<S> other) {
 				return state().distance(other.state());
 		}
 
-		@Override public String toCSV() {
+		@Override
+		public String toCSV() {
 				final DecimalFormat fmt = new DecimalFormat("#0.000");
 				return state().toCSV() + "," + fmt.format(t()) + "," + fmt.format(velocity()) + "," + fmt.format(acceleration());
 		}
@@ -73,7 +76,8 @@ public class TimedState<S extends State<S>> implements State<TimedState<S>> {
 				return state_;
 		}
 
-		@Override public boolean equals(final Object other) {
+		@Override
+		public boolean equals(final Object other) {
 				if (other == null || !(other instanceof TimedState<?>)) {
 						return false;
 				}
@@ -81,7 +85,8 @@ public class TimedState<S extends State<S>> implements State<TimedState<S>> {
 				return state().equals(ts.state()) && Util.epsilonEquals(t(), ts.t());
 		}
 
-		@Override public String toString() {
+		@Override
+		public String toString() {
 				final DecimalFormat fmt = new DecimalFormat("#0.000");
 				return state().toString() + ", t: " + fmt.format(t()) + ", v: " + fmt.format(velocity()) + ", a: " + fmt.format(acceleration());
 		}

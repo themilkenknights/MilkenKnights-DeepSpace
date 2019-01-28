@@ -35,8 +35,8 @@ public class DifferentialDrive {
 		protected final DCMotorTransmission left_transmission_;
 		protected final DCMotorTransmission right_transmission_;
 
-		public DifferentialDrive(final double mass, final double moi, final double angular_drag, final double wheel_radius, final double effective_wheelbase_radius,
-				final DCMotorTransmission left_transmission, final DCMotorTransmission right_transmission) {
+		public DifferentialDrive(final double mass, final double moi, final double angular_drag, final double wheel_radius,
+				final double effective_wheelbase_radius, final DCMotorTransmission left_transmission, final DCMotorTransmission right_transmission) {
 				mass_ = mass;
 				moi_ = moi;
 				angular_drag_ = angular_drag;
@@ -94,8 +94,10 @@ public class DifferentialDrive {
 
 		// Assumptions about dynamics: velocities and voltages provided.
 		public void solveForwardDynamics(DriveDynamics dynamics) {
-				final boolean left_stationary = Util.epsilonEquals(dynamics.wheel_velocity.left, 0.0) && Math.abs(dynamics.voltage.left) < left_transmission_.friction_voltage();
-				final boolean right_stationary = Util.epsilonEquals(dynamics.wheel_velocity.right, 0.0) && Math.abs(dynamics.voltage.right) < right_transmission_.friction_voltage();
+				final boolean left_stationary =
+						Util.epsilonEquals(dynamics.wheel_velocity.left, 0.0) && Math.abs(dynamics.voltage.left) < left_transmission_.friction_voltage();
+				final boolean right_stationary =
+						Util.epsilonEquals(dynamics.wheel_velocity.right, 0.0) && Math.abs(dynamics.voltage.right) < right_transmission_.friction_voltage();
 				if (left_stationary && right_stationary) {
 						// Neither side breaks static friction, so we remain stationary.
 						dynamics.wheel_torque.left = dynamics.wheel_torque.right = 0.0;
@@ -111,17 +113,20 @@ public class DifferentialDrive {
 				dynamics.chassis_acceleration.linear = (dynamics.wheel_torque.right + dynamics.wheel_torque.left) / (wheel_radius_ * mass_);
 				// (Tr - Tl) / r_w * r_wb - drag * w = I * angular_accel
 				dynamics.chassis_acceleration.angular =
-						effective_wheelbase_radius_ * (dynamics.wheel_torque.right - dynamics.wheel_torque.left) / (wheel_radius_ * moi_) - dynamics.chassis_velocity.angular * angular_drag_ / moi_;
+						effective_wheelbase_radius_ * (dynamics.wheel_torque.right - dynamics.wheel_torque.left) / (wheel_radius_ * moi_)
+								- dynamics.chassis_velocity.angular * angular_drag_ / moi_;
 				// Solve for change in curvature from angular acceleration.
 				// total angular accel = linear_accel * curvature + v^2 * dcurvature
 				dynamics.dcurvature =
-						(dynamics.chassis_acceleration.angular - dynamics.chassis_acceleration.linear * dynamics.curvature) / (dynamics.chassis_velocity.linear * dynamics.chassis_velocity.linear);
+						(dynamics.chassis_acceleration.angular - dynamics.chassis_acceleration.linear * dynamics.curvature) / (dynamics.chassis_velocity.linear
+								* dynamics.chassis_velocity.linear);
 				if (Double.isNaN(dynamics.dcurvature)) {
 						dynamics.dcurvature = 0.0;
 				}
 				// Resolve chassis accelerations to each wheel.
 				dynamics.wheel_acceleration.left = dynamics.chassis_acceleration.linear - dynamics.chassis_acceleration.angular * effective_wheelbase_radius_;
-				dynamics.wheel_acceleration.right = dynamics.chassis_acceleration.linear + dynamics.chassis_acceleration.angular * effective_wheelbase_radius_;
+				dynamics.wheel_acceleration.right =
+						dynamics.chassis_acceleration.linear + dynamics.chassis_acceleration.angular * effective_wheelbase_radius_;
 		}
 
 		public DriveDynamics solveForwardDynamics(final WheelState wheel_velocity, final WheelState voltage) {
@@ -155,7 +160,8 @@ public class DifferentialDrive {
 				}
 				dynamics.chassis_acceleration = chassis_acceleration;
 				dynamics.dcurvature =
-						(dynamics.chassis_acceleration.angular - dynamics.chassis_acceleration.linear * dynamics.curvature) / (dynamics.chassis_velocity.linear * dynamics.chassis_velocity.linear);
+						(dynamics.chassis_acceleration.angular - dynamics.chassis_acceleration.linear * dynamics.curvature) / (dynamics.chassis_velocity.linear
+								* dynamics.chassis_velocity.linear);
 				if (Double.isNaN(dynamics.dcurvature)) {
 						dynamics.dcurvature = 0.0;
 				}
@@ -168,9 +174,11 @@ public class DifferentialDrive {
 		// Assumptions about dynamics: velocities and accelerations provided, curvature and dcurvature computed.
 		public void solveInverseDynamics(DriveDynamics dynamics) {
 				// Determine the necessary torques on the left and right wheels to produce the desired wheel accelerations.
-				dynamics.wheel_torque.left = wheel_radius_ / 2.0 * (dynamics.chassis_acceleration.linear * mass_ - dynamics.chassis_acceleration.angular * moi_ / effective_wheelbase_radius_
+				dynamics.wheel_torque.left = wheel_radius_ / 2.0 * (dynamics.chassis_acceleration.linear * mass_
+						- dynamics.chassis_acceleration.angular * moi_ / effective_wheelbase_radius_
 						- dynamics.chassis_velocity.angular * angular_drag_ / effective_wheelbase_radius_);
-				dynamics.wheel_torque.right = wheel_radius_ / 2.0 * (dynamics.chassis_acceleration.linear * mass_ + dynamics.chassis_acceleration.angular * moi_ / effective_wheelbase_radius_
+				dynamics.wheel_torque.right = wheel_radius_ / 2.0 * (dynamics.chassis_acceleration.linear * mass_
+						+ dynamics.chassis_acceleration.angular * moi_ / effective_wheelbase_radius_
 						+ dynamics.chassis_velocity.angular * angular_drag_ / effective_wheelbase_radius_);
 				// Solve for input voltages.
 				dynamics.voltage.left = left_transmission_.getVoltageForTorque(dynamics.wheel_velocity.left, dynamics.wheel_torque.left);
@@ -186,7 +194,8 @@ public class DifferentialDrive {
 				}
 				dynamics.chassis_acceleration = solveForwardKinematics(wheel_acceleration);
 				dynamics.dcurvature =
-						(dynamics.chassis_acceleration.angular - dynamics.chassis_acceleration.linear * dynamics.curvature) / (dynamics.chassis_velocity.linear * dynamics.chassis_velocity.linear);
+						(dynamics.chassis_acceleration.angular - dynamics.chassis_acceleration.linear * dynamics.curvature) / (dynamics.chassis_velocity.linear
+								* dynamics.chassis_velocity.linear);
 				if (Double.isNaN(dynamics.dcurvature)) {
 						dynamics.dcurvature = 0.0;
 				}
@@ -222,12 +231,14 @@ public class DifferentialDrive {
 						final double wheel_speed = Math.min(left_speed_at_max_voltage, right_speed_at_max_voltage);
 						return Math.signum(curvature) * wheel_radius_ * wheel_speed / effective_wheelbase_radius_;
 				}
-				final double right_speed_if_left_max = left_speed_at_max_voltage * (effective_wheelbase_radius_ * curvature + 1.0) / (1.0 - effective_wheelbase_radius_ * curvature);
+				final double right_speed_if_left_max =
+						left_speed_at_max_voltage * (effective_wheelbase_radius_ * curvature + 1.0) / (1.0 - effective_wheelbase_radius_ * curvature);
 				if (Math.abs(right_speed_if_left_max) <= right_speed_at_max_voltage + Util.kEpsilon) {
 						// Left max is active constraint.
 						return wheel_radius_ * (left_speed_at_max_voltage + right_speed_if_left_max) / 2.0;
 				}
-				final double left_speed_if_right_max = right_speed_at_max_voltage * (1.0 - effective_wheelbase_radius_ * curvature) / (1.0 + effective_wheelbase_radius_ * curvature);
+				final double left_speed_if_right_max =
+						right_speed_at_max_voltage * (1.0 - effective_wheelbase_radius_ * curvature) / (1.0 + effective_wheelbase_radius_ * curvature);
 				// Right at max is active constraint.
 				return wheel_radius_ * (right_speed_at_max_voltage + left_speed_if_right_max) / 2.0;
 		}
@@ -260,12 +271,12 @@ public class DifferentialDrive {
 								// revisiting in the future...
 								if (left) {
 										variable_torque =
-												((/*-moi_ * chassis_velocity.linear * chassis_velocity.linear * dcurvature*/ -drag_torque) * mass_ * wheel_radius_ + fixed_torque * (linear_term + angular_term)) / (linear_term
-														- angular_term);
+												((/*-moi_ * chassis_velocity.linear * chassis_velocity.linear * dcurvature*/ -drag_torque) * mass_ * wheel_radius_
+														+ fixed_torque * (linear_term + angular_term)) / (linear_term - angular_term);
 								} else {
 										variable_torque =
-												((/*moi_ * chassis_velocity.linear * chassis_velocity.linear * dcurvature*/ +drag_torque) * mass_ * wheel_radius_ + fixed_torque * (linear_term - angular_term)) / (linear_term
-														+ angular_term);
+												((/*moi_ * chassis_velocity.linear * chassis_velocity.linear * dcurvature*/ +drag_torque) * mass_ * wheel_radius_
+														+ fixed_torque * (linear_term - angular_term)) / (linear_term + angular_term);
 								}
 								final double variable_voltage = variable_transmission.getVoltageForTorque(wheel_velocities.get(!left), variable_torque);
 								if (Math.abs(variable_voltage) <= max_abs_voltage + Util.kEpsilon) {
@@ -303,7 +314,8 @@ public class DifferentialDrive {
 				public ChassisState() {
 				}
 
-				@Override public String toString() {
+				@Override
+				public String toString() {
 						DecimalFormat fmt = new DecimalFormat("#0.000");
 						return fmt.format(linear) + ", " + fmt.format(angular);
 				}
@@ -335,7 +347,8 @@ public class DifferentialDrive {
 						}
 				}
 
-				@Override public String toString() {
+				@Override
+				public String toString() {
 						DecimalFormat fmt = new DecimalFormat("#0.000");
 						return fmt.format(left) + ", " + fmt.format(right);
 				}
@@ -354,8 +367,10 @@ public class DifferentialDrive {
 				public WheelState voltage = new WheelState();  // V
 				public WheelState wheel_torque = new WheelState();  // N m
 
-				@Override public String toCSV() {
-						return curvature + "," + dcurvature + "," + chassis_velocity + ", " + chassis_acceleration + ", " + wheel_velocity + ", " + wheel_acceleration + ", " + voltage + ", " + wheel_torque;
+				@Override
+				public String toCSV() {
+						return curvature + "," + dcurvature + "," + chassis_velocity + ", " + chassis_acceleration + ", " + wheel_velocity + ", "
+								+ wheel_acceleration + ", " + voltage + ", " + wheel_torque;
 				}
 		}
 }

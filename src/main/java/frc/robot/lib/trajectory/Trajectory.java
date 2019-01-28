@@ -76,7 +76,8 @@ public class Trajectory<S extends State<S>> implements CSVWritable {
 				return index_view_;
 		}
 
-		@Override public String toString() {
+		@Override
+		public String toString() {
 				StringBuilder builder = new StringBuilder();
 				for (int i = 0; i < length(); ++i) {
 						builder.append(i);
@@ -87,7 +88,8 @@ public class Trajectory<S extends State<S>> implements CSVWritable {
 				return builder.toString();
 		}
 
-		@Override public String toCSV() {
+		@Override
+		public String toCSV() {
 				StringBuilder builder = new StringBuilder();
 				for (int i = 0; i < length(); ++i) {
 						builder.append(i);
@@ -99,19 +101,23 @@ public class Trajectory<S extends State<S>> implements CSVWritable {
 		}
 
 		public class IndexView implements TrajectoryView<S> {
-				@Override public TrajectorySamplePoint<S> sample(double index) {
+				@Override
+				public TrajectorySamplePoint<S> sample(double index) {
 						return Trajectory.this.getInterpolated(index);
 				}
 
-				@Override public double first_interpolant() {
+				@Override
+				public double first_interpolant() {
 						return 0.0;
 				}
 
-				@Override public double last_interpolant() {
+				@Override
+				public double last_interpolant() {
 						return Math.max(0.0, Trajectory.this.length() - 1);
 				}
 
-				@Override public Trajectory<S> trajectory() {
+				@Override
+				public Trajectory<S> trajectory() {
 						return Trajectory.this;
 				}
 		}

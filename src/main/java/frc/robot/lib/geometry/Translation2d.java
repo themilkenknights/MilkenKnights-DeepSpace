@@ -79,7 +79,8 @@ public class Translation2d implements ITranslation2d<Translation2d> {
 				return new Rotation2d(x_, y_, true);
 		}
 
-		@Override public Translation2d interpolate(final Translation2d other, double x) {
+		@Override
+		public Translation2d interpolate(final Translation2d other, double x) {
 				if (x <= 0) {
 						return new Translation2d(this);
 				} else if (x >= 1) {
@@ -108,19 +109,22 @@ public class Translation2d implements ITranslation2d<Translation2d> {
 				return y_;
 		}
 
-		@Override public boolean equals(final Object other) {
+		@Override
+		public boolean equals(final Object other) {
 				if (other == null || !(other instanceof Translation2d)) {
 						return false;
 				}
 				return distance((Translation2d) other) < Util.kEpsilon;
 		}
 
-		@Override public String toString() {
+		@Override
+		public String toString() {
 				final DecimalFormat fmt = new DecimalFormat("#0.000");
 				return "(" + fmt.format(x_) + "," + fmt.format(y_) + ")";
 		}
 
-		@Override public double distance(final Translation2d other) {
+		@Override
+		public double distance(final Translation2d other) {
 				return inverse().translateBy(other).norm();
 		}
 
@@ -143,12 +147,14 @@ public class Translation2d implements ITranslation2d<Translation2d> {
 				return new Translation2d(-x_, -y_);
 		}
 
-		@Override public String toCSV() {
+		@Override
+		public String toCSV() {
 				final DecimalFormat fmt = new DecimalFormat("#0.000");
 				return fmt.format(x_) + "," + fmt.format(y_);
 		}
 
-		@Override public Translation2d getTranslation() {
+		@Override
+		public Translation2d getTranslation() {
 				return this;
 		}
 }

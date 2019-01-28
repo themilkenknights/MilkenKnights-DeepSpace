@@ -2,7 +2,6 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
-import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -15,12 +14,12 @@ import frc.robot.lib.geometry.Pose2dWithCurvature;
 import frc.robot.lib.geometry.Rotation2d;
 import frc.robot.lib.geometry.Twist2d;
 import frc.robot.lib.math.MkMath;
+import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.trajectory.TrajectoryIterator;
 import frc.robot.lib.trajectory.timing.TimedState;
-import frc.robot.lib.util.CrashTracker;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.InterpolatingDouble;
-import frc.robot.lib.util.ReflectingCSVWriter;
+import frc.robot.lib.util.Logger;
 import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.paths.DriveMotionPlanner;
 import frc.robot.paths.Kinematics;
@@ -35,15 +34,15 @@ public class Drive extends Subsystem {
 		private DriveMotionPlanner mMotionPlanner;
 		private Rotation2d mGyroOffset = Rotation2d.identity();
 		private boolean mOverrideTrajectory = false;
-		private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
+		//private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
 		private double left_encoder_prev_distance_ = 0.0;
 		private double right_encoder_prev_distance_ = 0.0;
 
 		private Drive() {
 				mDriveControlState = DriveControlState.OPEN_LOOP;
 				mPeriodicIO = new PeriodicIO();
-				leftDrive = new MkTalon(Constants.kLeftMasterID, Constants.kLeftSlaveID, TalonPosition.Left);
-				rightDrive = new MkTalon(Constants.kRightMasterID, Constants.kRightSlaveID, TalonPosition.Right);
+				leftDrive = new MkTalon(Constants.kDriveLeftMasterID, Constants.kDriveLeftSlaveID, TalonPosition.Left);
+				rightDrive = new MkTalon(Constants.kDriveRightMasterID, Constants.kDriveRightSlaveID, TalonPosition.Right);
 				leftDrive.resetEncoder();
 				rightDrive.resetEncoder();
 				navX = new MkGyro(Port.kMXP);
@@ -83,7 +82,7 @@ public class Drive extends Subsystem {
 				mPeriodicIO.gyro_heading = heading;
 		}
 
-		public synchronized void zeroSensors(){
+		public synchronized void zeroSensors() {
 				navX.zeroYaw();
 				leftDrive.masterTalon.setSelectedSensorPosition(0);
 				rightDrive.masterTalon.setSelectedSensorPosition(0);
@@ -91,7 +90,8 @@ public class Drive extends Subsystem {
 				right_encoder_prev_distance_ = 0;
 		}
 
-		@Override public synchronized void readPeriodicInputs(double timestamp) {
+		@Override
+		public synchronized void readPeriodicInputs(double timestamp) {
 				mPeriodicIO.timestamp = Timer.getFPGATimestamp();
 				mPeriodicIO.leftPos = leftDrive.getPosition();
 				mPeriodicIO.rightPos = rightDrive.getPosition();
@@ -100,13 +100,16 @@ public class Drive extends Subsystem {
 				mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(navX.getFusedHeading()).rotateBy(mGyroOffset);
 		}
 
-		@Override public synchronized void writePeriodicOutputs(double timestamp) {
+		@Override
+		public synchronized void writePeriodicOutputs(double timestamp) {
 				if (mDriveControlState == DriveControlState.OPEN_LOOP) {
 						leftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, NeutralMode.Brake);
 						rightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, NeutralMode.Brake);
 				} else {
-						leftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand, NeutralMode.Brake, mPeriodicIO.left_feedforward + Constants.kDriveD * mPeriodicIO.left_accel / 1023.0);
-						rightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, NeutralMode.Brake, mPeriodicIO.right_feedforward + Constants.kDriveD * mPeriodicIO.right_accel / 1023.0);
+						leftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand, NeutralMode.Brake,
+								mPeriodicIO.left_feedforward + Constants.kDriveD * mPeriodicIO.left_accel / 1023.0);
+						rightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, NeutralMode.Brake,
+								mPeriodicIO.right_feedforward + Constants.kDriveD * mPeriodicIO.right_accel / 1023.0);
 				}
 		}
 
@@ -116,13 +119,14 @@ public class Drive extends Subsystem {
 				SmartDashboard.putString("Drive State", mDriveControlState.toString());
 				SmartDashboard.putBoolean("Drivetrain Status", leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected());
 				SmartDashboard.putNumber("NavX Fused Heading", navX.getFusedHeading());
-				if (mCSVWriter != null) {
+				/*if (mCSVWriter != null) {
 						mCSVWriter.add(mPeriodicIO);
 						mCSVWriter.write();
-				}
+				}*/
 		}
 
-		@Override public void onStart(double timestamp) {
+		@Override
+		public void onStart(double timestamp) {
 				synchronized (Drive.this) {
 						startLogging();
 				}
@@ -134,7 +138,8 @@ public class Drive extends Subsystem {
 		 *
 		 * @param timestamp In Seconds Since Code Start
 		 */
-		@Override public void onLoop(double timestamp) {
+		@Override
+		public void onLoop(double timestamp) {
 				synchronized (Drive.this) {
 						stateEstimator(timestamp);
 						switch (mDriveControlState) {
@@ -153,56 +158,10 @@ public class Drive extends Subsystem {
 				}
 		}
 
-		@Override public void onStop(double timestamp) {
+		@Override
+		public void onStop(double timestamp) {
 				setOpenLoop(DriveSignal.BRAKE);
 				stopLogging();
-		}
-
-		public synchronized void startLogging() {
-				if (mCSVWriter == null) {
-						mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
-				}
-		}
-
-		public synchronized void stateEstimator(double timestamp) {
-				final double left_distance = mPeriodicIO.leftPos;
-				final double right_distance = mPeriodicIO.rightPos;
-				final double delta_left = left_distance - left_encoder_prev_distance_;
-				final double delta_right = right_distance - right_encoder_prev_distance_;
-				final Rotation2d gyro_angle = mPeriodicIO.gyro_heading;
-				final Twist2d odometry_velocity = RobotState.getInstance().generateOdometryFromSensors(delta_left, delta_right, gyro_angle);
-				final Twist2d predicted_velocity = Kinematics.forwardKinematics(mPeriodicIO.leftVel, mPeriodicIO.leftVel);
-				RobotState.getInstance().addObservations(timestamp, odometry_velocity, predicted_velocity);
-				left_encoder_prev_distance_ = left_distance;
-				right_encoder_prev_distance_ = right_distance;
-		}
-
-		private void updatePathFollower() {
-				if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
-						final double now = Timer.getFPGATimestamp();
-						DriveMotionPlanner.Output output = mMotionPlanner.update(now, RobotState.getInstance().getFieldToVehicle(now));
-						mPeriodicIO.error = mMotionPlanner.error();
-						mPeriodicIO.path_setpoint = mMotionPlanner.setpoint();
-						if (!mOverrideTrajectory) {
-								setVelocity(new DriveSignal(MkMath.radiansPerSecondToTicksPer100ms(output.left_velocity), MkMath.radiansPerSecondToTicksPer100ms(output.right_velocity)),
-										new DriveSignal(output.left_feedforward_voltage / 12.0, output.right_feedforward_voltage / 12.0));
-								mPeriodicIO.left_accel = MkMath.radiansPerSecondToTicksPer100ms(output.left_accel) / 1000.0;
-								mPeriodicIO.right_accel = MkMath.radiansPerSecondToTicksPer100ms(output.right_accel) / 1000.0;
-						} else {
-								setVelocity(DriveSignal.BRAKE, DriveSignal.BRAKE);
-								mPeriodicIO.left_accel = mPeriodicIO.right_accel = 0.0;
-						}
-				} else {
-						DriverStation.reportError("Drive is not in path following state", false);
-				}
-		}
-
-		public void updateVision() {
-				LimelightTarget target = Superstructure.getInstance().getTarget();
-				InterpolatingDouble dist = Constants.visionDistMap.getInterpolated(new InterpolatingDouble(target.getArea()));
-				double steering_adjust = 0.08 * target.getXOffset();
-				leftDrive.set(ControlMode.MotionMagic, dist.value, NeutralMode.Brake, steering_adjust);
-				rightDrive.set(ControlMode.MotionMagic, dist.value, NeutralMode.Brake, -steering_adjust);
 		}
 
 		/* Controls Drivetrain in PercentOutput Mode (without closed loop control) */
@@ -226,6 +185,48 @@ public class Drive extends Subsystem {
         }*/
 		}
 
+		public synchronized void stateEstimator(double timestamp) {
+				final double left_distance = mPeriodicIO.leftPos;
+				final double right_distance = mPeriodicIO.rightPos;
+				final double delta_left = left_distance - left_encoder_prev_distance_;
+				final double delta_right = right_distance - right_encoder_prev_distance_;
+				final Rotation2d gyro_angle = mPeriodicIO.gyro_heading;
+				final Twist2d odometry_velocity = RobotState.getInstance().generateOdometryFromSensors(delta_left, delta_right, gyro_angle);
+				final Twist2d predicted_velocity = Kinematics.forwardKinematics(mPeriodicIO.leftVel, mPeriodicIO.leftVel);
+				RobotState.getInstance().addObservations(timestamp, odometry_velocity, predicted_velocity);
+				left_encoder_prev_distance_ = left_distance;
+				right_encoder_prev_distance_ = right_distance;
+		}
+
+		private void updatePathFollower() {
+				if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
+						final double now = Timer.getFPGATimestamp();
+						DriveMotionPlanner.Output output = mMotionPlanner.update(now, RobotState.getInstance().getFieldToVehicle(now));
+						mPeriodicIO.error = mMotionPlanner.error();
+						mPeriodicIO.path_setpoint = mMotionPlanner.setpoint();
+						if (!mOverrideTrajectory) {
+								setVelocity(new DriveSignal(MkMath.radiansPerSecondToTicksPer100ms(output.left_velocity),
+												MkMath.radiansPerSecondToTicksPer100ms(output.right_velocity)),
+										new DriveSignal(output.left_feedforward_voltage / 12.0, output.right_feedforward_voltage / 12.0));
+								mPeriodicIO.left_accel = MkMath.radiansPerSecondToTicksPer100ms(output.left_accel) / 1000.0;
+								mPeriodicIO.right_accel = MkMath.radiansPerSecondToTicksPer100ms(output.right_accel) / 1000.0;
+						} else {
+								setVelocity(DriveSignal.BRAKE, DriveSignal.BRAKE);
+								mPeriodicIO.left_accel = mPeriodicIO.right_accel = 0.0;
+						}
+				} else {
+						Logger.logError("Drive is not in path following state");
+				}
+		}
+
+		public void updateVision() {
+				LimelightTarget target = Vision.getInstance().getAverageTarget();
+				InterpolatingDouble dist = Constants.visionDistMap.getInterpolated(new InterpolatingDouble(target.getArea()));
+				double steering_adjust = 0.08 * target.getXOffset();
+				leftDrive.set(ControlMode.MotionMagic, dist.value, NeutralMode.Brake, steering_adjust);
+				rightDrive.set(ControlMode.MotionMagic, dist.value, NeutralMode.Brake, -steering_adjust);
+		}
+
 		/**
 		 * Controls Drivetrain in Closed-loop velocity Mode Method sets Talons in Native Units per 100ms
 		 *
@@ -243,6 +244,12 @@ public class Drive extends Subsystem {
 				mPeriodicIO.right_feedforward = feedforward.getRight();
 		}
 
+		public synchronized void startLogging() {
+				/*if (mCSVWriter == null) {
+						mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
+				}*/
+		}
+
 		public void checkSystem() {
 				boolean check = true;
 				leftDrive.resetEncoder();
@@ -251,11 +258,11 @@ public class Drive extends Subsystem {
 				leftDrive.masterTalon.set(ControlMode.PercentOutput, 1);
 				Timer.delay(2.0);
 				if (leftDrive.getPosition() < Constants.kMinTestPos || leftDrive.getSpeed() < Constants.kMinTestVel) {
-						CrashTracker.logMarker("FAILED - LEFT MASTER DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
-						CrashTracker.logMarker("Left Master Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: " + leftDrive.getPosition());
+						Logger.logMarker("FAILED - LEFT MASTER DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
+						Logger.logMarker("Left Master Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: " + leftDrive.getPosition());
 						check = false;
 				} else {
-						CrashTracker.logMarker("Left Master Position: " + leftDrive.getPosition() + " Left Master Speed: " + leftDrive.getSpeed());
+						Logger.logMarker("Left Master Position: " + leftDrive.getPosition() + " Left Master Speed: " + leftDrive.getSpeed());
 				}
 				leftDrive.slaveTalon.set(ControlMode.PercentOutput, 0);
 				leftDrive.masterTalon.set(ControlMode.PercentOutput, 0);
@@ -265,11 +272,11 @@ public class Drive extends Subsystem {
 				leftDrive.slaveTalon.set(ControlMode.PercentOutput, 1);
 				Timer.delay(2.0);
 				if (leftDrive.getPosition() < Constants.kMinTestPos || leftDrive.getSpeed() < Constants.kMinTestVel) {
-						CrashTracker.logMarker("FAILED - LEFT SLAVE DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
-						CrashTracker.logMarker("Left Slave Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: " + leftDrive.getPosition());
+						Logger.logMarker("FAILED - LEFT SLAVE DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
+						Logger.logMarker("Left Slave Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: " + leftDrive.getPosition());
 						check = false;
 				} else {
-						CrashTracker.logMarker("Left Slave Position: " + leftDrive.getPosition() + " Left Slave Speed: " + leftDrive.getSpeed());
+						Logger.logMarker("Left Slave Position: " + leftDrive.getPosition() + " Left Slave Speed: " + leftDrive.getSpeed());
 				}
 				leftDrive.slaveTalon.set(ControlMode.PercentOutput, 0);
 				leftDrive.masterTalon.set(ControlMode.PercentOutput, 0);
@@ -280,11 +287,11 @@ public class Drive extends Subsystem {
 				rightDrive.masterTalon.set(ControlMode.PercentOutput, 1);
 				Timer.delay(2.0);
 				if (rightDrive.getPosition() < Constants.kMinTestPos || rightDrive.getSpeed() < Constants.kMinTestVel) {
-						CrashTracker.logMarker("FAILED - RIGHT MASTER DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
-						CrashTracker.logMarker("Right Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: " + leftDrive.getPosition());
+						Logger.logMarker("FAILED - RIGHT MASTER DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
+						Logger.logMarker("Right Drive Test Failed - Vel: " + leftDrive.getSpeed() + " Pos: " + leftDrive.getPosition());
 						check = false;
 				} else {
-						CrashTracker.logMarker("Right Master Position: " + rightDrive.getPosition() + " Right Master Speed: " + rightDrive.getSpeed());
+						Logger.logMarker("Right Master Position: " + rightDrive.getPosition() + " Right Master Speed: " + rightDrive.getSpeed());
 				}
 				rightDrive.slaveTalon.set(ControlMode.PercentOutput, 0);
 				rightDrive.masterTalon.set(ControlMode.PercentOutput, 0);
@@ -294,11 +301,11 @@ public class Drive extends Subsystem {
 				rightDrive.slaveTalon.set(ControlMode.PercentOutput, 1);
 				Timer.delay(2.0);
 				if (rightDrive.getPosition() < Constants.kMinTestPos || rightDrive.getSpeed() < Constants.kMinTestVel) {
-						CrashTracker.logMarker("FAILED - RIGHT SLAVE DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
-						CrashTracker.logMarker("Right Drive Test Failed - Vel: " + rightDrive.getSpeed() + " Pos: " + rightDrive.getPosition());
+						Logger.logMarker("FAILED - RIGHT SLAVE DRIVE FAILED TO REACH REQUIRED SPEED OR POSITION");
+						Logger.logMarker("Right Drive Test Failed - Vel: " + rightDrive.getSpeed() + " Pos: " + rightDrive.getPosition());
 						check = false;
 				} else {
-						CrashTracker.logMarker("Right Slave Position: " + rightDrive.getPosition() + " Right Slave Speed: " + rightDrive.getSpeed());
+						Logger.logMarker("Right Slave Position: " + rightDrive.getPosition() + " Right Slave Speed: " + rightDrive.getSpeed());
 				}
 				rightDrive.masterTalon.set(ControlMode.PercentOutput, 0);
 				rightDrive.slaveTalon.set(ControlMode.PercentOutput, 0);
@@ -307,7 +314,7 @@ public class Drive extends Subsystem {
 						check = false;
 				}
 				if (check) {
-						CrashTracker.logMarker("Drive Test Success");
+						Logger.logMarker("Drive Test Success");
 				}
 				leftDrive.resetConfig();
 				rightDrive.resetConfig();
@@ -327,6 +334,7 @@ public class Drive extends Subsystem {
             mAutoModeExecuter.start();
         } */
 		}
+
 
 		public enum DriveControlState {
 				OPEN_LOOP, // open loop voltage control

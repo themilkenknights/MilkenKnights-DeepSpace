@@ -1,7 +1,7 @@
 package frc.robot.auto;
 
-import edu.wpi.first.wpilibj.DriverStation;
 import frc.robot.auto.actions.Action;
+import frc.robot.lib.util.Logger;
 
 /**
  * An abstract class that is the basis of the robot's autonomous routines. This is implemented in auto modes (which are routines that do
@@ -16,7 +16,7 @@ public abstract class AutoModeBase {
 				try {
 						routine();
 				} catch (AutoModeEndedException e) {
-						DriverStation.reportError("AUTO MODE DONE!!!! ENDED EARLY!!!!", false);
+						Logger.logError("AUTO MODE DONE!!!! ENDED EARLY!!!!");
 						return;
 				}
 				done();

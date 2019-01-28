@@ -14,7 +14,8 @@ public class ParallelAction implements Action {
 				mActions = new ArrayList<>(actions);
 		}
 
-		@Override public boolean isFinished() {
+		@Override
+		public boolean isFinished() {
 				for (Action action : mActions) {
 						if (!action.isFinished()) {
 								return false;
@@ -23,19 +24,22 @@ public class ParallelAction implements Action {
 				return true;
 		}
 
-		@Override public void update() {
+		@Override
+		public void update() {
 				for (Action action : mActions) {
 						action.update();
 				}
 		}
 
-		@Override public void done() {
+		@Override
+		public void done() {
 				for (Action action : mActions) {
 						action.done();
 				}
 		}
 
-		@Override public void start() {
+		@Override
+		public void start() {
 				for (Action action : mActions) {
 						action.start();
 				}

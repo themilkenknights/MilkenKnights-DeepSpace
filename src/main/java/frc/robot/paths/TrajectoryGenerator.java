@@ -51,15 +51,16 @@ public class TrajectoryGenerator {
 				return mTrajectorySet;
 		}
 
-		public Trajectory<TimedState<Pose2dWithCurvature>> generateTrajectory(boolean reversed, final List<Pose2d> waypoints, final List<TimingConstraint<Pose2dWithCurvature>> constraints, double max_vel,
+		public Trajectory<TimedState<Pose2dWithCurvature>> generateTrajectory(boolean reversed, final List<Pose2d> waypoints,
+				final List<TimingConstraint<Pose2dWithCurvature>> constraints, double max_vel,
 				// inches/s
 				double max_accel,  // inches/s^2
 				double max_voltage) {
 				return mMotionPlanner.generateTrajectory(reversed, waypoints, constraints, max_vel, max_accel, max_voltage);
 		}
 
-		public Trajectory<TimedState<Pose2dWithCurvature>> generateTrajectory(boolean reversed, final List<Pose2d> waypoints, final List<TimingConstraint<Pose2dWithCurvature>> constraints,
-				double start_vel,  // inches/s
+		public Trajectory<TimedState<Pose2dWithCurvature>> generateTrajectory(boolean reversed, final List<Pose2d> waypoints,
+				final List<TimingConstraint<Pose2dWithCurvature>> constraints, double start_vel,  // inches/s
 				double end_vel,  // inches/s
 				double max_vel,  // inches/s
 				double max_accel,  // inches/s^2
@@ -90,7 +91,8 @@ public class TrajectoryGenerator {
 						List<Pose2d> waypoints = new ArrayList<>();
 						waypoints.add(kStartPose);
 						waypoints.add(kStartPose.transformBy(new Pose2d(new Translation2d(40.0, 0.0), Rotation2d.fromDegrees(0.0))));
-						return generateTrajectory(true, waypoints, Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel, kMaxAccel, kMaxVoltage);
+						return generateTrajectory(true, waypoints, Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel, kMaxAccel,
+								kMaxVoltage);
 				}
 
 				public class MirroredTrajectory {
@@ -120,7 +122,8 @@ public class TrajectoryGenerator {
 						List<Pose2d> waypoints = new ArrayList<>();
 						waypoints.add(RobotState.getInstance().getPredictedFieldToVehicle(Timer.getFPGATimestamp() + 0.02));
 						waypoints.add(kStartPose.transformBy(endPose));
-						return generateTrajectory(true, waypoints, Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel, kMaxAccel, kMaxVoltage);
+						return generateTrajectory(true, waypoints, Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel, kMaxAccel,
+								kMaxVoltage);
 				}
 		}
 }

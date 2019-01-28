@@ -15,11 +15,13 @@ public class SeriesAction implements Action {
 				mCurAction = null;
 		}
 
-		@Override public boolean isFinished() {
+		@Override
+		public boolean isFinished() {
 				return mRemainingActions.isEmpty() && mCurAction == null;
 		}
 
-		@Override public void update() {
+		@Override
+		public void update() {
 				if (mCurAction == null) {
 						if (mRemainingActions.isEmpty()) {
 								return;
@@ -34,9 +36,11 @@ public class SeriesAction implements Action {
 				}
 		}
 
-		@Override public void done() {
+		@Override
+		public void done() {
 		}
 
-		@Override public void start() {
+		@Override
+		public void start() {
 		}
 }

@@ -25,7 +25,8 @@ public class DriveTrajectory implements Action {
 				mResetPose = resetPose;
 		}
 
-		@Override public boolean isFinished() {
+		@Override
+		public boolean isFinished() {
 				if (mDrive.isDoneWithTrajectory()) {
 						Drive.getInstance().setOpenLoop(new DriveSignal(0, 0));
 						System.out.println("Trajectory finished");
@@ -34,13 +35,16 @@ public class DriveTrajectory implements Action {
 				return false;
 		}
 
-		@Override public void update() {
+		@Override
+		public void update() {
 		}
 
-		@Override public void done() {
+		@Override
+		public void done() {
 		}
 
-		@Override public void start() {
+		@Override
+		public void start() {
 				System.out.println("Starting trajectory! (length=" + mTrajectory.getRemainingProgress() + ")");
 				if (mResetPose) {
 						mRobotState.reset(Timer.getFPGATimestamp(), mTrajectory.getState().state().getPose());

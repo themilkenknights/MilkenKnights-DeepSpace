@@ -16,7 +16,8 @@ public class AutoModeExecuter {
 		public void start() {
 				if (m_thread == null) {
 						m_thread = new Thread(new CrashTrackingRunnable() {
-								@Override public void runCrashTracked() {
+								@Override
+								public void runCrashTracked() {
 										if (m_auto_mode != null) {
 												m_auto_mode.run();
 										}

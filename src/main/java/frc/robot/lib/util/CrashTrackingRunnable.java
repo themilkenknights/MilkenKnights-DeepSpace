@@ -1,14 +1,15 @@
 package frc.robot.lib.util;
 
 /**
- * Runnable class with reports all uncaught throws to CrashTracker
+ * Runnable class with reports all uncaught throws to Logger
  */
 public abstract class CrashTrackingRunnable implements Runnable {
-		@Override public final void run() {
+		@Override
+		public final void run() {
 				try {
 						runCrashTracked();
 				} catch (Throwable t) {
-						CrashTracker.logThrowableCrash(t);
+						Logger.logThrowableCrash(t);
 						throw t;
 				}
 		}

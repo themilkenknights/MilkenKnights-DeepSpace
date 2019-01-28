@@ -38,7 +38,7 @@ public class AutoChooser {
         /*matchData.alliance = DriverStation.getInstance().getAlliance();
         matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
         matchData.matchType = DriverStation.getInstance().getMatchType();
-        CrashTracker.logMarker("Alliance: " + matchData.alliance.toString() + " Match Number: " + matchData.matchNumber + " Match Type: " + matchData.matchType.toString());
+        Logger.logMarker("Alliance: " + matchData.alliance.toString() + " Match Number: " + matchData.matchNumber + " Match Type: " + matchData.matchType.toString());
     */
 		}
 

@@ -12,10 +12,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class DistanceViewTest {
 		public static final double kTestEpsilon = Util.kEpsilon;
 
-		@Test public void test() {
+		@Test
+		public void test() {
 				// Specify desired waypoints.
-				List<Translation2d> waypoints =
-						Arrays.asList(new Translation2d(0.0, 0.0), new Translation2d(24.0, 0.0), new Translation2d(36.0, 0.0), new Translation2d(36.0, 24.0), new Translation2d(60.0, 24.0));
+				List<Translation2d> waypoints = Arrays
+						.asList(new Translation2d(0.0, 0.0), new Translation2d(24.0, 0.0), new Translation2d(36.0, 0.0), new Translation2d(36.0, 24.0),
+								new Translation2d(60.0, 24.0));
 				// Create the reference trajectory (straight line motion between waypoints).
 				Trajectory<Translation2d> trajectory = new Trajectory<>(waypoints);
 				final DistanceView<Translation2d> distance_view = new DistanceView<>(trajectory);

@@ -15,11 +15,13 @@ public class Displacement1d implements State<Displacement1d> {
 				displacement_ = displacement;
 		}
 
-		@Override public Displacement1d interpolate(final Displacement1d other, double x) {
+		@Override
+		public Displacement1d interpolate(final Displacement1d other, double x) {
 				return new Displacement1d(Util.interpolate(displacement_, other.displacement_, x));
 		}
 
-		@Override public double distance(final Displacement1d other) {
+		@Override
+		public double distance(final Displacement1d other) {
 				return Math.abs(x() - other.x());
 		}
 
@@ -27,19 +29,22 @@ public class Displacement1d implements State<Displacement1d> {
 				return displacement_;
 		}
 
-		@Override public String toCSV() {
+		@Override
+		public String toCSV() {
 				final DecimalFormat fmt = new DecimalFormat("#0.000");
 				return fmt.format(x());
 		}
 
-		@Override public boolean equals(final Object other) {
+		@Override
+		public boolean equals(final Object other) {
 				if (other == null || !(other instanceof Displacement1d)) {
 						return false;
 				}
 				return Util.epsilonEquals(x(), ((Displacement1d) other).x());
 		}
 
-		@Override public String toString() {
+		@Override
+		public String toString() {
 				final DecimalFormat fmt = new DecimalFormat("#0.000");
 				return fmt.format("(" + x() + ")");
 		}

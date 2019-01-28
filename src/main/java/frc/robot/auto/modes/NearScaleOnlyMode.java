@@ -15,7 +15,8 @@ public class NearScaleOnlyMode extends AutoModeBase {
 				mSideStartToNearScale = new DriveTrajectory(mTrajectoryGenerator.getTrajectorySet().sideStartToNearScale.get(mStartedLeft), true);
 		}
 
-		@Override protected void routine() throws AutoModeEndedException {
+		@Override
+		protected void routine() throws AutoModeEndedException {
 				runAction(mSideStartToNearScale);
 		}
 }

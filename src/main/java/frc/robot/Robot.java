@@ -10,77 +10,84 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import frc.robot.lib.geometry.Pose2d;
-import frc.robot.lib.util.CrashTracker;
+import frc.robot.lib.structure.SubsystemManager;
+import frc.robot.lib.util.Logger;
 import frc.robot.paths.RobotState;
 import frc.robot.paths.TrajectoryGenerator;
 import frc.robot.subsystems.Drive;
-import frc.robot.subsystems.SubsystemManager;
+import frc.robot.subsystems.HatchArm;
 import frc.robot.subsystems.Superstructure;
+import frc.robot.subsystems.Vision;
 
 import java.util.Arrays;
 
 public class Robot extends TimedRobot {
 		public static MatchState mMatchState = MatchState.DISABLED;
-		private final SubsystemManager mSubsystemManager = new SubsystemManager(Arrays.asList(Drive.getInstance(), Superstructure.getInstance()));
+		private final SubsystemManager mSubsystemManager =
+				new SubsystemManager(Arrays.asList(Drive.getInstance(), Vision.getInstance(), HatchArm.getInstance(), Superstructure.getInstance()));
 
 		protected Robot() {
-				super(0.01);
-				CrashTracker.logRobotConstruction();
+				super(Constants.kLoopDt);
+				Logger.logRobotConstruction();
 		}
 
-		@Override public void robotInit() {
+		@Override
+		public void robotInit() {
 				try {
-						CrashTracker.logRobotInit();
+						Logger.logRobotInit();
 						mMatchState = MatchState.DISABLED;
 						TrajectoryGenerator.getInstance().generateTrajectories();
 						Shuffleboard.startRecording();
-
 				} catch (Throwable t) {
-						CrashTracker.logThrowableCrash(t);
+						Logger.logThrowableCrash(t);
 						throw t;
 				}
 		}
 
-		@Override public void disabledInit() {
+		@Override
+		public void disabledInit() {
 				try {
-						CrashTracker.logDisabledInit();
+						Logger.logDisabledInit();
 						mMatchState = MatchState.DISABLED;
 						AutoChooser.disableAuto();
 						mSubsystemManager.stop();
 						Drive.getInstance().zeroSensors();
 						RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
 				} catch (Throwable t) {
-						CrashTracker.logThrowableCrash(t);
+						Logger.logThrowableCrash(t);
 						throw t;
 				}
 		}
 
-		@Override public void autonomousInit() {
+		@Override
+		public void autonomousInit() {
 				try {
-						CrashTracker.logAutoInit();
+						Logger.logAutoInit();
 						Drive.getInstance().zeroSensors();
 						RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
 						mMatchState = MatchState.AUTO;
 						mSubsystemManager.start();
 						AutoChooser.startAuto();
 				} catch (Throwable t) {
-						CrashTracker.logThrowableCrash(t);
+						Logger.logThrowableCrash(t);
 						throw t;
 				}
 		}
 
-		@Override public void teleopInit() {
+		@Override
+		public void teleopInit() {
 				try {
-						CrashTracker.logTeleopInit();
+						Logger.logTeleopInit();
 						mMatchState = MatchState.TELEOP;
 						mSubsystemManager.start();
 				} catch (Throwable t) {
-						CrashTracker.logThrowableCrash(t);
+						Logger.logThrowableCrash(t);
 						throw t;
 				}
 		}
 
-		@Override public void testInit() {
+		@Override
+		public void testInit() {
 				try {
 						mMatchState = MatchState.TEST;
 						mSubsystemManager.start();
@@ -88,31 +95,35 @@ public class Robot extends TimedRobot {
 						mSubsystemManager.stop();
 						Drive.getInstance().checkSystem();
 				} catch (Throwable t) {
-						CrashTracker.logThrowableCrash(t);
+						Logger.logThrowableCrash(t);
 						throw t;
 				}
 		}
 
-		@Override public void robotPeriodic() {
+		@Override
+		public void robotPeriodic() {
 				try {
-						//mSubsystemManager.outputToSmartDashboard();
+						mSubsystemManager.outputToSmartDashboard();
 						RobotState.getInstance().outputToSmartDashboard();
 				} catch (Throwable t) {
-						CrashTracker.logThrowableCrash(t);
+						Logger.logThrowableCrash(t);
 						throw t;
 				}
 		}
 
-		@Override public void autonomousPeriodic() {
+		@Override
+		public void autonomousPeriodic() {
 				mSubsystemManager.onLoop();
 		}
 
-		@Override public void teleopPeriodic() {
+		@Override
+		public void teleopPeriodic() {
 				mSubsystemManager.onLoop();
 				Input.updateDriveInput();
 		}
 
-		@Override public void testPeriodic() {
+		@Override
+		public void testPeriodic() {
 		}
 
 		public enum MatchState {

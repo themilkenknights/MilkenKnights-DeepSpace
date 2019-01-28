@@ -17,19 +17,23 @@ public class OpenLoopDrive implements Action {
 				mFinishWhenSeesCube = finishWhenSeesCube;
 		}
 
-		@Override public boolean isFinished() {
+		@Override
+		public boolean isFinished() {
 				return Timer.getFPGATimestamp() - mStartTime > mDuration || mFinishWhenSeesCube;
 		}
 
-		@Override public void update() {
+		@Override
+		public void update() {
 				System.out.println((Timer.getFPGATimestamp() - mStartTime) + " > " + mDuration);
 		}
 
-		@Override public void done() {
+		@Override
+		public void done() {
 				mDrive.setOpenLoop(new DriveSignal(0.0, 0.0));
 		}
 
-		@Override public void start() {
+		@Override
+		public void start() {
 				mDrive.setOpenLoop(new DriveSignal(mLeft, mRight));
 				mStartTime = Timer.getFPGATimestamp();
 		}

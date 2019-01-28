@@ -134,7 +134,8 @@ public class PolynomialRegression {
 				return beta.get(j, 0);
 		}
 
-		@Override public String toString() {
+		@Override
+		public String toString() {
 				StringBuilder s = new StringBuilder();
 				int j = degree;
 				// ignoring leading zero coefficients

@@ -65,7 +65,8 @@ public class Pose2d implements IPose2d<Pose2d> {
 				}
 		}
 
-		@Override public Rotation2d getRotation() {
+		@Override
+		public Rotation2d getRotation() {
 				return rotation_;
 		}
 
@@ -82,7 +83,8 @@ public class Pose2d implements IPose2d<Pose2d> {
 				return a_t.translateBy(a_r.toTranslation().scale(t));
 		}
 
-		@Override public Translation2d getTranslation() {
+		@Override
+		public Translation2d getTranslation() {
 				return translation_;
 		}
 
@@ -110,7 +112,8 @@ public class Pose2d implements IPose2d<Pose2d> {
 				} else {
 						halftheta_by_tan_of_halfdtheta = -(half_dtheta * transform.getRotation().sin()) / cos_minus_one;
 				}
-				final Translation2d translation_part = transform.getTranslation().rotateBy(new Rotation2d(halftheta_by_tan_of_halfdtheta, -half_dtheta, false));
+				final Translation2d translation_part =
+						transform.getTranslation().rotateBy(new Rotation2d(halftheta_by_tan_of_halfdtheta, -half_dtheta, false));
 				return new Twist2d(translation_part.x(), translation_part.y(), dtheta);
 		}
 
@@ -127,7 +130,8 @@ public class Pose2d implements IPose2d<Pose2d> {
 		/**
 		 * Do twist interpolation of this pose assuming constant curvature.
 		 */
-		@Override public Pose2d interpolate(final Pose2d other, double x) {
+		@Override
+		public Pose2d interpolate(final Pose2d other, double x) {
 				if (x <= 0) {
 						return new Pose2d(this);
 				} else if (x >= 1) {
@@ -154,15 +158,18 @@ public class Pose2d implements IPose2d<Pose2d> {
 				return new Pose2d(new Translation2d(delta.dx * s - delta.dy * c, delta.dx * c + delta.dy * s), new Rotation2d(cos_theta, sin_theta, false));
 		}
 
-		@Override public double distance(final Pose2d other) {
+		@Override
+		public double distance(final Pose2d other) {
 				return Pose2d.log(inverse().transformBy(other)).norm();
 		}
 
-		@Override public String toCSV() {
+		@Override
+		public String toCSV() {
 				return translation_.toCSV() + "," + rotation_.toCSV();
 		}
 
-		@Override public boolean equals(final Object other) {
+		@Override
+		public boolean equals(final Object other) {
 				if (other == null || !(other instanceof Pose2d)) {
 						return false;
 				}
@@ -173,11 +180,13 @@ public class Pose2d implements IPose2d<Pose2d> {
 				return getTranslation().epsilonEquals(other.getTranslation(), epsilon) && getRotation().isParallel(other.getRotation());
 		}
 
-		@Override public String toString() {
+		@Override
+		public String toString() {
 				return "T:" + translation_.toString() + ", R:" + rotation_.toString();
 		}
 
-		@Override public Pose2d getPose() {
+		@Override
+		public Pose2d getPose() {
 				return this;
 		}
 
@@ -187,11 +196,13 @@ public class Pose2d implements IPose2d<Pose2d> {
 		 * @param other The other transform.
 		 * @return This transform * other
 		 */
-		@Override public Pose2d transformBy(final Pose2d other) {
+		@Override
+		public Pose2d transformBy(final Pose2d other) {
 				return new Pose2d(translation_.translateBy(other.translation_.rotateBy(rotation_)), rotation_.rotateBy(other.rotation_));
 		}
 
-		@Override public Pose2d mirror() {
+		@Override
+		public Pose2d mirror() {
 				return new Pose2d(new Translation2d(getTranslation().x(), -getTranslation().y()), getRotation().inverse());
 		}
 }

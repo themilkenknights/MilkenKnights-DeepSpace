@@ -19,17 +19,21 @@ public class WaitUntilInsideRegion implements Action {
 				}
 		}
 
-		@Override public boolean isFinished() {
+		@Override
+		public boolean isFinished() {
 				Translation2d position = mRobotState.getLatestFieldToVehicle().getValue().getTranslation();
 				return position.x() > mBottomLeft.x() && position.x() < mTopRight.x() && position.y() > mBottomLeft.y() && position.y() < mTopRight.y();
 		}
 
-		@Override public void update() {
+		@Override
+		public void update() {
 		}
 
-		@Override public void done() {
+		@Override
+		public void done() {
 		}
 
-		@Override public void start() {
+		@Override
+		public void start() {
 		}
 }

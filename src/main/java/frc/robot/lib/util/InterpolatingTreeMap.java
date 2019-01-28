@@ -22,7 +22,8 @@ public class InterpolatingTreeMap<K extends InverseInterpolable<K> & Comparable<
 				max_ = maximumSize;
 		}
 
-		@Override public void putAll(Map<? extends K, ? extends V> map) {
+		@Override
+		public void putAll(Map<? extends K, ? extends V> map) {
 				System.out.println("Unimplemented Method");
 		}
 
@@ -33,7 +34,8 @@ public class InterpolatingTreeMap<K extends InverseInterpolable<K> & Comparable<
 		 * @param value Value for inserted data
 		 * @return the value
 		 */
-		@Override public V put(K key, V value) {
+		@Override
+		public V put(K key, V value) {
 				if (max_ > 0 && max_ <= size()) {
 						// "Prune" the tree if it is oversize
 						K first = firstKey();

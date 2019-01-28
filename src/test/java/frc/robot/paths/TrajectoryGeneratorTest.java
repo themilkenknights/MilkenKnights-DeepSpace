@@ -15,7 +15,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class TrajectoryGeneratorTest {
 		public static final double kTestEpsilon = 1e-5;
 
-		@Test public void test() {
+		@Test
+		public void test() {
 				TrajectoryGenerator.getInstance().generateTrajectories();
 				verifyMirroredTrajectories(TrajectoryGenerator.getInstance().getTrajectorySet().sideStartToNearScale, true);
 		}
@@ -45,10 +46,14 @@ public class TrajectoryGeneratorTest {
 								if (!Util.epsilonEquals(left_change.dtheta, 0.0) || !Util.epsilonEquals(right_change.dtheta, 0.0)) {
 										// Could be a curvature sign change between prev and now, so just check that either matches our
 										// expected sign.
-										final boolean left_curvature_positive = left_state.state().getCurvature() > kTestEpsilon || prev_left.state().getCurvature() > kTestEpsilon;
-										final boolean left_curvature_negative = left_state.state().getCurvature() < -kTestEpsilon || prev_left.state().getCurvature() < -kTestEpsilon;
-										final boolean right_curvature_positive = right_state.state().getCurvature() > kTestEpsilon || prev_right.state().getCurvature() > kTestEpsilon;
-										final boolean right_curvature_negative = right_state.state().getCurvature() < -kTestEpsilon || prev_right.state().getCurvature() < -kTestEpsilon;
+										final boolean left_curvature_positive =
+												left_state.state().getCurvature() > kTestEpsilon || prev_left.state().getCurvature() > kTestEpsilon;
+										final boolean left_curvature_negative =
+												left_state.state().getCurvature() < -kTestEpsilon || prev_left.state().getCurvature() < -kTestEpsilon;
+										final boolean right_curvature_positive =
+												right_state.state().getCurvature() > kTestEpsilon || prev_right.state().getCurvature() > kTestEpsilon;
+										final boolean right_curvature_negative =
+												right_state.state().getCurvature() < -kTestEpsilon || prev_right.state().getCurvature() < -kTestEpsilon;
 										final double actual_left_curvature = left_change.dtheta / left_change.dx;
 										final double actual_right_curvature = right_change.dtheta / right_change.dx;
 										if (actual_left_curvature < -kTestEpsilon) {

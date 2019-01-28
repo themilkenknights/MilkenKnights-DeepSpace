@@ -11,7 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CharacterizeHighGearStraight extends AutoModeBase {
-		@Override protected void routine() throws AutoModeEndedException {
+		@Override
+		protected void routine() throws AutoModeEndedException {
 				List<DriveCharacterization.VelocityDataPoint> velocityData = new ArrayList<>();
 				List<DriveCharacterization.AccelerationDataPoint> accelerationData = new ArrayList<>();
 				runAction(new WaitAction(1));

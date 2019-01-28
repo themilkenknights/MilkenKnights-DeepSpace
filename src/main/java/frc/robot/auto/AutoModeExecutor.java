@@ -29,7 +29,8 @@ public class AutoModeExecutor {
 		public void setAutoMode(AutoModeBase new_auto_mode) {
 				m_auto_mode = new_auto_mode;
 				m_thread = new Thread(new CrashTrackingRunnable() {
-						@Override public void runCrashTracked() {
+						@Override
+						public void runCrashTracked() {
 								if (m_auto_mode != null) {
 										m_auto_mode.run();
 								}

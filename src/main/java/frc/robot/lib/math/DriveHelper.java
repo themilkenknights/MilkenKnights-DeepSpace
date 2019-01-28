@@ -35,7 +35,7 @@ public class DriveHelper {
 								rightMotorSpeed = -Math.max(-moveValue, -rotateValue);
 						}
 				}
-				
+
 				return new DriveSignal(leftMotorSpeed, rightMotorSpeed);
 		}
 

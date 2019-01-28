@@ -32,31 +32,35 @@ public class CollectVelocityData implements Action {
 				mCSVWriter = new ReflectingCSVWriter<>("VELOCITY_DATA.csv", DriveCharacterization.VelocityDataPoint.class);
 		}
 
-		@Override public boolean isFinished() {
+		@Override
+		public boolean isFinished() {
 				return isFinished;
 		}
 
-		@Override public void update() {
+		@Override
+		public void update() {
 				double percentPower = kRampRate * (Timer.getFPGATimestamp() - mStartTime);
 				if (percentPower > kMaxPower) {
 						isFinished = true;
 						return;
 				}
 				mDrive.setOpenLoop(new DriveSignal((mReverse ? -1.0 : 1.0) * percentPower, (mReverse ? -1.0 : 1.0) * (mTurn ? -1.0 : 1.0) * percentPower));
-				mVelocityData.add(new DriveCharacterization.VelocityDataPoint(
-						(Math.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.leftVel)) + Math.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.rightVel))) / 4096.0 * Math.PI * 10,
+				mVelocityData.add(new DriveCharacterization.VelocityDataPoint((Math.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.leftVel)) + Math
+						.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.rightVel))) / 4096.0 * Math.PI * 10,
 						//convert velocity to radians per second
 						percentPower * 12.0 //convert to volts
 				));
 				mCSVWriter.add(mVelocityData.get(mVelocityData.size() - 1));
 		}
 
-		@Override public void done() {
+		@Override
+		public void done() {
 				mDrive.setOpenLoop(DriveSignal.BRAKE);
 				mCSVWriter.flush();
 		}
 
-		@Override public void start() {
+		@Override
+		public void start() {
 				mStartTime = Timer.getFPGATimestamp();
 		}
 }

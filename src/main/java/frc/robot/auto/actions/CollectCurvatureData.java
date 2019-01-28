@@ -33,11 +33,13 @@ public class CollectCurvatureData implements Action {
 				mCSVWriter = new ReflectingCSVWriter<>("CURVATURE_DATA.csv", DriveCharacterization.CurvatureDataPoint.class);
 		}
 
-		@Override public boolean isFinished() {
+		@Override
+		public boolean isFinished() {
 				return isFinished;
 		}
 
-		@Override public void update() {
+		@Override
+		public void update() {
 				double t = Timer.getFPGATimestamp() - mStartTime;
 				if (t < kStartTime) { // give the robot some time to accelerate before recording data
 						return;
@@ -48,16 +50,20 @@ public class CollectCurvatureData implements Action {
 						return;
 				}
 				mDrive.setOpenLoop(new DriveSignal((mReverse ? -1.0 : 1.0) * kStartPower, (mReverse ? -1.0 : 1.0) * rightPower));
-				mCurvatureData.add(new DriveCharacterization.CurvatureDataPoint(mRobotState.getPredictedVelocity().dx, mRobotState.getPredictedVelocity().dtheta, kStartPower, rightPower));
+				mCurvatureData.add(
+						new DriveCharacterization.CurvatureDataPoint(mRobotState.getPredictedVelocity().dx, mRobotState.getPredictedVelocity().dtheta,
+								kStartPower, rightPower));
 				mCSVWriter.add(mCurvatureData.get(mCurvatureData.size() - 1));
 		}
 
-		@Override public void done() {
+		@Override
+		public void done() {
 				mDrive.setOpenLoop(DriveSignal.BRAKE);
 				mCSVWriter.flush();
 		}
 
-		@Override public void start() {
+		@Override
+		public void start() {
 				mDrive.setOpenLoop(new DriveSignal(kStartPower, kStartPower));
 				mStartTime = Timer.getFPGATimestamp();
 		}

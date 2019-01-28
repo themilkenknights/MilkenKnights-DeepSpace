@@ -45,7 +45,8 @@ public class Twist2d {
 				return Math.hypot(dx, dy);
 		}
 
-		@Override public String toString() {
+		@Override
+		public String toString() {
 				final DecimalFormat fmt = new DecimalFormat("#0.000");
 				return "(" + fmt.format(dx) + "," + fmt.format(dy) + "," + fmt.format(Math.toDegrees(dtheta)) + " deg)";
 		}

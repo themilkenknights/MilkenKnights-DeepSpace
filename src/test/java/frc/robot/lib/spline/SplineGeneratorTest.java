@@ -11,7 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class SplineGeneratorTest {
 		public static final double kTestEpsilon = Util.kEpsilon;
 
-		@Test public void test() {
+		@Test
+		public void test() {
 				// Create the test spline
 				Pose2d p1 = new Pose2d(new Translation2d(0, 0), new Rotation2d());
 				Pose2d p2 = new Pose2d(new Translation2d(15, 10), new Rotation2d(1, -5, true));

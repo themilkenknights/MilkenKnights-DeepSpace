@@ -1,4 +1,4 @@
-package frc.robot.subsystems;
+package frc.robot.lib.structure;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -30,8 +30,6 @@ public class SubsystemManager {
 						subsystem.onLoop(timestamp_);
 						subsystem.writePeriodicOutputs(timestamp_);
 				}
-				SmartDashboard.putNumber("Main loop Dt", (timestamp_ - lastTime) * 1e3);
-				lastTime = timestamp_;
 		}
 
 		public void start() {

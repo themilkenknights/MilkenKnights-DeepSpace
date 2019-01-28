@@ -10,7 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class DriveCharacterizationTest {
 		public static final double kTestEpsilon = 1e-4;
 
-		@Test public void test() {
+		@Test
+		public void test() {
 				final double ks = 0.75; //Math.random();
 				final double kv = 0.2; //Math.random();
 				final double ka = 0.15; //Math.random();

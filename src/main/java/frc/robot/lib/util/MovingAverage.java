@@ -1,31 +1,46 @@
 package frc.robot.lib.util;
 
+import frc.robot.lib.vision.LimelightTarget;
+
 import java.util.ArrayList;
 
 /**
  * Helper class for storing and calculating a moving average
  */
 public class MovingAverage {
-		ArrayList<Double> numbers = new ArrayList<Double>();
+		ArrayList<LimelightTarget> targets = new ArrayList<LimelightTarget>();
 		int maxSize;
 
 		public MovingAverage(int maxSize) {
 				this.maxSize = maxSize;
 		}
 
-		public void addNumber(double newNumber) {
-				numbers.add(newNumber);
-				if (numbers.size() > maxSize) {
-						numbers.remove(0);
+		public void addNumber(LimelightTarget newNumber) {
+				targets.add(newNumber);
+				if (targets.size() > maxSize) {
+						targets.remove(0);
 				}
 		}
 
-		public double getAverage() {
-				double total = 0;
-				for (double number : numbers) {
-						total += number;
+		public LimelightTarget getAverage() {
+				boolean validTarget = true;
+				double totalX = 0;
+				double totalY = 0;
+				double totalArea = 0;
+				double totalCaptureTime = 0;
+
+				for (LimelightTarget target : targets) {
+						validTarget = target.isValidTarget() && validTarget;
+						totalX += target.getXOffset();
+						totalY += target.getYOffset();
+						totalArea += target.getArea();
+						totalCaptureTime += target.getCaptureTime();
 				}
-				return total / numbers.size();
+
+				LimelightTarget avgTarget = new LimelightTarget(validTarget, totalX / targets.size(), totalY / targets.size(), totalArea / targets.size(),
+						totalCaptureTime / targets.size());
+
+				return avgTarget;
 		}
 
 		public boolean isUnderMaxSize() {
@@ -33,10 +48,10 @@ public class MovingAverage {
 		}
 
 		public int getSize() {
-				return numbers.size();
+				return targets.size();
 		}
 
 		public void clear() {
-				numbers.clear();
+				targets.clear();
 		}
 }

@@ -32,7 +32,8 @@ public class DriveSignal {
 				return mBrakeMode;
 		}
 
-		@Override public String toString() {
+		@Override
+		public String toString() {
 				return "L: " + mLeftMotor + ", R: " + mRightMotor + (mBrakeMode ? ", BRAKE" : "");
 		}
 }

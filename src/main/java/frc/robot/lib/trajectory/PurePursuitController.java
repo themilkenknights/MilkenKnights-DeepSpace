@@ -90,7 +90,8 @@ public class PurePursuitController<S extends ITranslation2d<S>> implements IPath
 								final Translation2d centerToPose = new Translation2d(center, pose.getTranslation());
 								// If the point is behind pose, we want the opposite of this angle. To determine if the point is behind,
 								// check the sign of the cross-product between the normal vector and the vector from pose to point.
-								final boolean behind = Math.signum(Translation2d.cross(pose.getRotation().normal().toTranslation(), new Translation2d(pose.getTranslation(), point.getTranslation()))) > 0.0;
+								final boolean behind = Math.signum(Translation2d
+										.cross(pose.getRotation().normal().toTranslation(), new Translation2d(pose.getTranslation(), point.getTranslation()))) > 0.0;
 								final Rotation2d angle = Translation2d.getAngle(centerToPose, centerToPoint);
 								return radius * (behind ? 2.0 * Math.PI - Math.abs(angle.getRadians()) : Math.abs(angle.getRadians()));
 						} else {

@@ -1,7 +1,7 @@
 package frc.robot.lib.drivers;
 
 import edu.wpi.first.wpilibj.Joystick;
-import frc.robot.lib.util.CrashTracker;
+import frc.robot.lib.util.Logger;
 
 public class MkJoystickButton {
 		private final MkJoystick joystick;
@@ -22,7 +22,7 @@ public class MkJoystickButton {
 				final boolean isPressed = !lastState && joystick.getRawButton(rawButton);
 				update();
 				if (isPressed) {
-						CrashTracker.logMarker("[Joystick] " + joystick.getPort() + "\t[Button]" + rawButton + "\t Pressed ( " + buttonName + " )");
+						Logger.logMarker("[Joystick] " + joystick.getPort() + "\t[Button]" + rawButton + "\t Pressed ( " + buttonName + " )");
 				}
 				return isPressed;
 		}

@@ -8,8 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TimingUtil {
-		public static <S extends State<S>> Trajectory<TimedState<S>> timeParameterizeTrajectory(boolean reverse, final DistanceView<S> distance_view, double step_size,
-				final List<TimingConstraint<S>> constraints, double start_velocity, double end_velocity, double max_velocity, double max_abs_acceleration) {
+		public static <S extends State<S>> Trajectory<TimedState<S>> timeParameterizeTrajectory(boolean reverse, final DistanceView<S> distance_view,
+				double step_size, final List<TimingConstraint<S>> constraints, double start_velocity, double end_velocity, double max_velocity,
+				double max_abs_acceleration) {
 				final int num_states = (int) Math.ceil(distance_view.last_interpolant() / step_size + 1);
 				List<S> states = new ArrayList<>(num_states);
 				for (int i = 0; i < num_states; ++i) {
@@ -18,8 +19,8 @@ public class TimingUtil {
 				return timeParameterizeTrajectory(reverse, states, constraints, start_velocity, end_velocity, max_velocity, max_abs_acceleration);
 		}
 
-		public static <S extends State<S>> Trajectory<TimedState<S>> timeParameterizeTrajectory(boolean reverse, final List<S> states, final List<TimingConstraint<S>> constraints, double start_velocity,
-				double end_velocity, double max_velocity, double max_abs_acceleration) {
+		public static <S extends State<S>> Trajectory<TimedState<S>> timeParameterizeTrajectory(boolean reverse, final List<S> states,
+				final List<TimingConstraint<S>> constraints, double start_velocity, double end_velocity, double max_velocity, double max_abs_acceleration) {
 				List<ConstrainedState<S>> constraint_states = new ArrayList<>(states.size());
 				final double kEpsilon = 1e-6;
 				// Forward pass. We look at pairs of consecutive states, where the start state has already been velocity
@@ -45,7 +46,8 @@ public class TimingUtil {
 						while (true) {
 								// Enforce global max velocity and max reachable velocity by global acceleration limit.
 								// vf = sqrt(vi^2 + 2*a*d)
-								constraint_state.max_velocity = Math.min(max_velocity, Math.sqrt(predecessor.max_velocity * predecessor.max_velocity + 2.0 * predecessor.max_acceleration * ds));
+								constraint_state.max_velocity =
+										Math.min(max_velocity, Math.sqrt(predecessor.max_velocity * predecessor.max_velocity + 2.0 * predecessor.max_acceleration * ds));
 								if (Double.isNaN(constraint_state.max_velocity)) {
 										throw new RuntimeException();
 								}
@@ -65,13 +67,16 @@ public class TimingUtil {
 								}
 								// Now enforce all acceleration constraints.
 								for (final TimingConstraint<S> constraint : constraints) {
-										final TimingConstraint.MinMaxAcceleration min_max_accel = constraint.getMinMaxAcceleration(constraint_state.state, (reverse ? -1.0 : 1.0) * constraint_state.max_velocity);
+										final TimingConstraint.MinMaxAcceleration min_max_accel =
+												constraint.getMinMaxAcceleration(constraint_state.state, (reverse ? -1.0 : 1.0) * constraint_state.max_velocity);
 										if (!min_max_accel.valid()) {
 												// This should never happen if constraints are well-behaved.
 												throw new RuntimeException();
 										}
-										constraint_state.min_acceleration = Math.max(constraint_state.min_acceleration, reverse ? -min_max_accel.max_acceleration() : min_max_accel.min_acceleration());
-										constraint_state.max_acceleration = Math.min(constraint_state.max_acceleration, reverse ? -min_max_accel.min_acceleration() : min_max_accel.max_acceleration());
+										constraint_state.min_acceleration =
+												Math.max(constraint_state.min_acceleration, reverse ? -min_max_accel.max_acceleration() : min_max_accel.min_acceleration());
+										constraint_state.max_acceleration =
+												Math.min(constraint_state.max_acceleration, reverse ? -min_max_accel.min_acceleration() : min_max_accel.max_acceleration());
 								}
 								if (constraint_state.min_acceleration > constraint_state.max_acceleration) {
 										// This should never happen if constraints are well-behaved.
@@ -84,7 +89,9 @@ public class TimingUtil {
 								// need to reduce the max accel at the predecessor state and try again.
 								// TODO: Simply using the new max acceleration is guaranteed to be valid, but may be too conservative.
 								// Doing a search would be better.
-								final double actual_acceleration = (constraint_state.max_velocity * constraint_state.max_velocity - predecessor.max_velocity * predecessor.max_velocity) / (2.0 * ds);
+								final double actual_acceleration =
+										(constraint_state.max_velocity * constraint_state.max_velocity - predecessor.max_velocity * predecessor.max_velocity) / (2.0
+												* ds);
 								if (constraint_state.max_acceleration < actual_acceleration - kEpsilon) {
 										predecessor.max_acceleration = constraint_state.max_acceleration;
 								} else {
@@ -124,12 +131,15 @@ public class TimingUtil {
 								}
 								// Now check all acceleration constraints with the lower max velocity.
 								for (final TimingConstraint<S> constraint : constraints) {
-										final TimingConstraint.MinMaxAcceleration min_max_accel = constraint.getMinMaxAcceleration(constraint_state.state, (reverse ? -1.0 : 1.0) * constraint_state.max_velocity);
+										final TimingConstraint.MinMaxAcceleration min_max_accel =
+												constraint.getMinMaxAcceleration(constraint_state.state, (reverse ? -1.0 : 1.0) * constraint_state.max_velocity);
 										if (!min_max_accel.valid()) {
 												throw new RuntimeException();
 										}
-										constraint_state.min_acceleration = Math.max(constraint_state.min_acceleration, reverse ? -min_max_accel.max_acceleration() : min_max_accel.min_acceleration());
-										constraint_state.max_acceleration = Math.min(constraint_state.max_acceleration, reverse ? -min_max_accel.min_acceleration() : min_max_accel.max_acceleration());
+										constraint_state.min_acceleration =
+												Math.max(constraint_state.min_acceleration, reverse ? -min_max_accel.max_acceleration() : min_max_accel.min_acceleration());
+										constraint_state.max_acceleration =
+												Math.min(constraint_state.max_acceleration, reverse ? -min_max_accel.min_acceleration() : min_max_accel.max_acceleration());
 								}
 								if (constraint_state.min_acceleration > constraint_state.max_acceleration) {
 										throw new RuntimeException();
@@ -141,7 +151,8 @@ public class TimingUtil {
 								// need to reduce the min accel and try again.
 								// TODO: Simply using the new min acceleration is guaranteed to be valid, but may be too conservative.
 								// Doing a search would be better.
-								final double actual_acceleration = (constraint_state.max_velocity * constraint_state.max_velocity - successor.max_velocity * successor.max_velocity) / (2.0 * ds);
+								final double actual_acceleration =
+										(constraint_state.max_velocity * constraint_state.max_velocity - successor.max_velocity * successor.max_velocity) / (2.0 * ds);
 								if (constraint_state.min_acceleration > actual_acceleration + kEpsilon) {
 										successor.min_acceleration = constraint_state.min_acceleration;
 								} else {
@@ -190,8 +201,10 @@ public class TimingUtil {
 				public double min_acceleration;
 				public double max_acceleration;
 
-				@Override public String toString() {
-						return state.toString() + ", distance: " + distance + ", max_velocity: " + max_velocity + ", " + "min_acceleration: " + min_acceleration + ", max_acceleration: " + max_acceleration;
+				@Override
+				public String toString() {
+						return state.toString() + ", distance: " + distance + ", max_velocity: " + max_velocity + ", " + "min_acceleration: " + min_acceleration
+								+ ", max_acceleration: " + max_acceleration;
 				}
 		}
 }

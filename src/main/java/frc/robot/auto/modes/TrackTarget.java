@@ -15,7 +15,8 @@ public class TrackTarget extends AutoModeBase {
 				mTraj = new DriveTrajectory(mTrajectoryGenerator.getVisionTrajectorySet().visionTraj, true);
 		}
 
-		@Override protected void routine() throws AutoModeEndedException {
+		@Override
+		protected void routine() throws AutoModeEndedException {
 				runAction(mTraj);
 		}
 }

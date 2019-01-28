@@ -1,6 +1,4 @@
-package frc.robot.subsystems;
-
-import frc.robot.lib.structure.ILooper;
+package frc.robot.lib.structure;
 
 /**
  * The Subsystem abstract class, which serves as a basic framework for all robot subsystems. Each subsystem outputs commands to
@@ -22,18 +20,15 @@ public abstract class Subsystem {
 
 		public abstract void outputTelemetry();
 
-		public void registerEnabledLoops(ILooper enabledLooper) {
-		}
-
-		public void onStart(double timestamp){
+		public void onStart(double timestamp) {
 
 		}
 
-		public void onLoop(double timestamp){
+		public void onLoop(double timestamp) {
 
 		}
 
-		public void onStop(double timestamp){
+		public void onStop(double timestamp) {
 
 		}
 }

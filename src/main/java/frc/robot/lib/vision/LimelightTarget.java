@@ -16,6 +16,14 @@ public class LimelightTarget {
 				this.captureTime = captureTime;
 		}
 
+		public LimelightTarget(boolean validTarget, double xOffset, double yOffset, double area, double captureTime) {
+				this.validTarget = validTarget;
+				this.xOffset = xOffset;
+				this.yOffset = yOffset;
+				this.area = area;
+				this.captureTime = captureTime;
+		}
+
 		public boolean isValidTarget() {
 				return validTarget;
 		}
@@ -36,7 +44,8 @@ public class LimelightTarget {
 				return captureTime;
 		}
 
-		@Override public String toString() {
+		@Override
+		public String toString() {
 				return "X:" + xOffset + ", Y: " + yOffset + ", Area:" + area + ", Dt: " + captureTime;
 		}
 }

@@ -1,5 +1,6 @@
 package frc.robot;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.InterpolatingTreeMap;
 
@@ -10,10 +11,19 @@ import frc.robot.lib.util.InterpolatingTreeMap;
  * All PID Constants are in Native Units
  */
 public final class Constants {
+		public static final int kPneumaticsControlModuleID = 0;
+		public static final int kDriveLeftMasterID = 1;
+		public static final int kDriveLeftSlaveID = 2;
+		public static final int kDriveRightMasterID = 3;
+		public static final int kDriveRightSlaveID = 4;
+		public static final int kPowerDistributionPanelID = 5;
+		public static final int kGroundHatchIntakeMotor = 6;
+		public static final int kLeftCargoArmMotor = 7;
+		public static final int kRightCargoArmMotor = 8;
 		public static final int kSlotIdx = 0;
 		public static final int kPIDLoopIdx = 0;
 		public static final int kTimeoutMs = 0;
-		public static final double kLooperDt = 0.005;
+		public static final double kLoopDt = 0.01;
 		public static final double PI = 3.14159265359;
 		public static final double kTicksPerRev = 4096.0;
 		public static final double kDriveWheelTrackWidthInches = 33.75;
@@ -28,10 +38,6 @@ public final class Constants {
 		public static final double kPathKX = 4.0;  // units/s per unit of error
 		public static final double kPathLookaheadTime = 0.4;  // seconds to look ahead along the path for steering
 		public static final double kPathMinLookaheadDistance = 24.0;  // inches
-		public static final int kLeftMasterID = 10;
-		public static final int kLeftSlaveID = 8;
-		public static final int kRightMasterID = 5;
-		public static final int kRightSlaveID = 3;
 		public static final boolean kLeftMasterInvert = false;
 		public static final boolean kLeftSlaveInvert = false;
 		public static final boolean KRightMasterInvert = true;
@@ -56,6 +62,10 @@ public final class Constants {
 		public static final double kMinTestVel = 140;
 		public static final double kThrottleDeadband = 0.0;
 		public static final double kWheelDeadband = 0.0045;
+		public static final int kHatchArmForwardChannel = 1;
+		public static final int kHatchArmReverseChannel = 2;
+		public static final DoubleSolenoid.Value kHatchArmPlaceState = DoubleSolenoid.Value.kForward;
+		public static final DoubleSolenoid.Value kHatchArmStowState = DoubleSolenoid.Value.kReverse;
 		public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> visionDistMap = new InterpolatingTreeMap<>();
 
 		static {

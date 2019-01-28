@@ -12,8 +12,10 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PurePursuitControllerTest {
-		@Test public void test() {
-				List<Translation2d> waypoints = Arrays.asList(new Translation2d(0.0, 0.0), new Translation2d(24.0, 0.0), new Translation2d(36.0, 12.0), new Translation2d(60.0, 12.0));
+		@Test
+		public void test() {
+				List<Translation2d> waypoints =
+						Arrays.asList(new Translation2d(0.0, 0.0), new Translation2d(24.0, 0.0), new Translation2d(36.0, 12.0), new Translation2d(60.0, 12.0));
 				// Create the reference trajectory (straight line motion between waypoints).
 				Trajectory<Translation2d> reference_trajectory = new Trajectory<>(waypoints);
 				DistanceView<Translation2d> arc_length_parameterized_trajectory = new DistanceView<>(reference_trajectory);

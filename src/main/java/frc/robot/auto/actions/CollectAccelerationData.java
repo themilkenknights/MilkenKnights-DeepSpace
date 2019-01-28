@@ -34,14 +34,16 @@ public class CollectAccelerationData implements Action {
 				mCSVWriter = new ReflectingCSVWriter<>("ACCEL_DATA.csv", DriveCharacterization.AccelerationDataPoint.class);
 		}
 
-		@Override public boolean isFinished() {
+		@Override
+		public boolean isFinished() {
 				return Timer.getFPGATimestamp() - mStartTime > kTotalTime;
 		}
 
-		@Override public void update() {
+		@Override
+		public void update() {
 				//Rad/s
-				double currentVelocity =
-						(Math.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.leftVel)) + Math.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.rightVel))) / 4096.0 * Math.PI * 10;
+				double currentVelocity = (Math.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.leftVel)) + Math
+						.abs(MkMath.InchesPerSecToUnitsPer100Ms(mDrive.mPeriodicIO.rightVel))) / 4096.0 * Math.PI * 10;
 				double currentTime = Timer.getFPGATimestamp();
 				//don't calculate acceleration until we've populated prevTime and prevVelocity
 				if (mPrevTime == mStartTime) {
@@ -64,12 +66,14 @@ public class CollectAccelerationData implements Action {
 				mPrevVelocity = currentVelocity;
 		}
 
-		@Override public void done() {
+		@Override
+		public void done() {
 				mDrive.setOpenLoop(DriveSignal.BRAKE);
 				mCSVWriter.flush();
 		}
 
-		@Override public void start() {
+		@Override
+		public void start() {
 				mDrive.setOpenLoop(new DriveSignal((mReverse ? -1.0 : 1.0) * kPower, (mReverse ? -1.0 : 1.0) * (mTurn ? -1.0 : 1.0) * kPower));
 				mStartTime = Timer.getFPGATimestamp();
 				mPrevTime = mStartTime;
