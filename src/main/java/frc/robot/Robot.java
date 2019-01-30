@@ -26,8 +26,7 @@ public class Robot extends TimedRobot {
   public static MatchState mMatchState = MatchState.DISABLED;
   private final SubsystemManager mSubsystemManager =
       new SubsystemManager(Arrays
-          .asList(Drive.getInstance(), CargoArm.getInstance(), Vision.getInstance(), HatchArm.getInstance(),
-              Superstructure.getInstance()));
+          .asList(Drive.getInstance(), Vision.getInstance()));
 
   protected Robot() {
     super(Constants.GENERAL.kLoopDt);

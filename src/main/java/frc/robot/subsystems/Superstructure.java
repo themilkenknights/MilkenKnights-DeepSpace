@@ -9,11 +9,11 @@ import frc.robot.lib.structure.Subsystem;
 
 public class Superstructure extends Subsystem {
 
-  private PowerDistributionPanel mPDP;
+  //private PowerDistributionPanel mPDP;
   private Compressor mCompressor;
 
   private Superstructure() {
-    mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
+    //mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
     mCompressor = new Compressor();
   }
 
@@ -42,7 +42,7 @@ public class Superstructure extends Subsystem {
 
   @Override
   public boolean checkSystem() {
-    return mPDP.getTotalCurrent() > 0 && mCompressor.getCompressorCurrent() > 0;
+    return mCompressor.getCompressorCurrent() > 0;
   }
 
   private static class InstanceHolder {
