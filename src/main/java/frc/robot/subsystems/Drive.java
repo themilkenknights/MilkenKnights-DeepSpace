@@ -250,8 +250,8 @@ public class Drive extends Subsystem {
   }
 
   public void outputTelemetry() {
-    leftDrive.updateSmartDash();
-    rightDrive.updateSmartDash();
+    leftDrive.updateSmartDash(false);
+    rightDrive.updateSmartDash(false);
     SmartDashboard.putString("Drive State", mDriveControlState.toString());
     SmartDashboard.putBoolean("Drivetrain Status", driveStatus());
     SmartDashboard.putNumber("NavX Fused Heading", navX.getFusedHeading());

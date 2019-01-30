@@ -14,9 +14,12 @@ import com.ctre.phoenix.motorcontrol.can.VictorSPXConfiguration;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
+import frc.robot.Constants.ARM;
 import frc.robot.Constants.TEST;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.Logger;
+import frc.robot.lib.util.Util;
+import java.util.ArrayList;
 
 public class MkTalon {
 
@@ -129,10 +132,12 @@ public class MkTalon {
     masterTalon.setSelectedSensorPosition(0, Constants.GENERAL.kPIDLoopIdx, Constants.GENERAL.kTimeoutMs);
   }
 
-  public void updateSmartDash() {
-    double rp = (((masterTalon.getSelectedSensorVelocity(0)) / 4096.0) * 60 * 10);
-    maxRPM = maxRPM > rp ? maxRPM : rp;
-    SmartDashboard.putNumber(side.toString() + " RPM", maxRPM);
+  public void updateSmartDash(boolean showRPM) {
+    if (showRPM) {
+      double rp = (((masterTalon.getSelectedSensorVelocity(0)) / 4096.0) * 60 * 10);
+      maxRPM = maxRPM > rp ? maxRPM : rp;
+      SmartDashboard.putNumber(side.toString() + " RPM", maxRPM);
+    }
     SmartDashboard.putNumber(side.toString() + " Velocity", getSpeed());
     SmartDashboard.putNumber(side.toString() + " Error", getError());
     SmartDashboard.putNumber(side.toString() + " Master Output", masterTalon.getMotorOutputPercent());
@@ -149,15 +154,51 @@ public class MkTalon {
         .nativeUnitsToInches(masterTalon.getSelectedSensorPosition(Constants.GENERAL.kPIDLoopIdx));
   }
 
+  public synchronized double getCurrent() {
+    return masterTalon.getOutputCurrent();
+  }
+
+  public double getAbsolutePosition() {
+    return masterTalon.getSensorCollection().getPulseWidthPosition();
+  }
+
+  public void zeroAbsolute() {
+    int pulseWidth = masterTalon.getSensorCollection().getPulseWidthPosition();
+    if (pulseWidth > 0) {
+      pulseWidth = pulseWidth & 0xFFF;
+    } else {
+      pulseWidth += (-Math.round(((double) pulseWidth / 4096) - 0.50)) * 4096;
+    }
+    masterTalon.setSelectedSensorPosition(pulseWidth + (-ARM.kBookEnd_0), Constants.GENERAL.kPIDLoopIdx,
+        Constants.GENERAL.kTimeoutMs);
+  }
+
+  public int getZer() {
+    int pulseWidth = masterTalon.getSensorCollection().getPulseWidthPosition();
+    if (pulseWidth > 0) {
+      pulseWidth = pulseWidth & 0xFFF;
+    } else {
+      pulseWidth += (-Math.round(((double) pulseWidth / 4096) - 0.50)) * 4096;
+    }
+    return pulseWidth + (-ARM.kBookEnd_0);
+  }
+
   public boolean checkSystem() {
     boolean check = true;
+    ArrayList<Double> currents = new ArrayList<>();
+    ArrayList<Double> velocities = new ArrayList<>();
+    ArrayList<Double> positions = new ArrayList<>();
+
     if (side == TalonLocation.Left_Drive || side == TalonLocation.Right_Drive) {
       resetEncoder();
       masterTalon.set(ControlMode.PercentOutput, 0.0);
       slaveTalon.set(ControlMode.PercentOutput, 1.0);
-      Timer.delay(2.0);
-      if (getPosition() < Constants.TEST.kMinTestPos || getSpeed() < Constants.TEST.kMinTestVel
-          || masterTalon.getOutputCurrent() > TEST.kMinTestCurrent) {
+      Timer.delay(5.0);
+      currents.add(getCurrent());
+      velocities.add(getSpeed());
+      positions.add(getPosition());
+      if (getPosition() < TEST.kMinDriveTestPos || getSpeed() < TEST.kMinDriveTestVel
+          || masterTalon.getOutputCurrent() > TEST.kMinDriveTestCurrent) {
         Logger.logError("FAILED - " + side.toString() + "Slave FAILED TO REACH REQUIRED SPEED OR POSITION");
         Logger.logMarker(side.toString() + " Slave Test Failed - Vel: " + getSpeed() + " Pos: " + getPosition());
         check = false;
@@ -168,16 +209,45 @@ public class MkTalon {
       resetEncoder();
       slaveTalon.set(ControlMode.PercentOutput, 0.0);
       masterTalon.set(ControlMode.PercentOutput, 1.0);
-      Timer.delay(2.0);
-      if (getPosition() < Constants.TEST.kMinTestPos || getSpeed() < Constants.TEST.kMinTestVel
-          || masterTalon.getOutputCurrent() > TEST.kMinTestCurrent) {
+      Timer.delay(5.0);
+      currents.add(getCurrent());
+      velocities.add(getSpeed());
+      positions.add(getPosition());
+      if (getPosition() < TEST.kMinDriveTestPos || getSpeed() < TEST.kMinDriveTestVel
+          || masterTalon.getOutputCurrent() > TEST.kMinDriveTestCurrent) {
         Logger.logError("FAILED - " + side.toString() + "Master FAILED TO REACH REQUIRED SPEED OR POSITION");
         Logger.logMarker(side.toString() + " Master Test Failed - Vel: " + getSpeed() + " Pos: " + getPosition());
         check = false;
       } else {
         Logger.logMarker(side.toString() + " Master - Vel: " + getSpeed() + " Pos: " + getPosition());
       }
+
+      if (currents.size() > 0) {
+        Double average = currents.stream().mapToDouble(val -> val).average().getAsDouble();
+        if (!Util.allCloseTo(currents, average, TEST.kDriveCurrentEpsilon)) {
+          Logger.logError(side.toString() + " Currents varied!!!!!!!!!!!");
+          check = true;
+        }
+      }
+
+      if (positions.size() > 0) {
+        Double average = positions.stream().mapToDouble(val -> val).average().getAsDouble();
+        if (!Util.allCloseTo(positions, average, TEST.kDrivePosEpsilon)) {
+          Logger.logError(side.toString() + " Positions varied!!!!!!!!");
+          check = true;
+        }
+      }
+
+      if (velocities.size() > 0) {
+        Double average = velocities.stream().mapToDouble(val -> val).average().getAsDouble();
+        if (!Util.allCloseTo(velocities, average, TEST.kDriveVelEpsilon)) {
+          Logger.logError(side.toString() + " Velocities varied!!!!!!!!");
+          check = true;
+        }
+      }
+
     }
+
     return check;
   }
 

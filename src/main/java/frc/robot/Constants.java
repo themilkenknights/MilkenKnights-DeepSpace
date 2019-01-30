@@ -23,16 +23,17 @@ public final class Constants {
 
   public static class CAN {
 
-		  public static final int kPneumaticsControlModuleID = 0;
-		  public static final int kDriveLeftMasterID = 4;
-		  public static final int kDriveLeftSlaveID = 3;
-		  public static final int kDriveRightMasterID = 7;
-		  public static final int kDriveRightSlaveID = 6;
-		  public static final int kPowerDistributionPanelID = 5;
-		  public static final int kGroundHatchIntakeMotor = 6;
-      public static final int kLeftCargoArmMotorID = 7;
-      public static final int kRightCargoArmMotorID = 8;
-
+    public static final int kPneumaticsControlModuleID = 0;
+    public static final int kDriveLeftMasterID = 4;
+    public static final int kDriveLeftSlaveID = 3;
+    public static final int kDriveRightMasterID = 7;
+    public static final int kDriveRightSlaveID = 6;
+    public static final int kPowerDistributionPanelID = 5;
+    public static final int kGroundHatchIntakeMotor = 6;
+    public static final int kMasterCargoArmMotorID = 7;
+    public static final int kSlaveCargoArmMotorID = 8;
+    public static final int kLeftCargoIntakeMotorID = 9;
+    public static final int kRightCargoIntakeMotorID = 10;
   }
 
 
@@ -86,15 +87,59 @@ public final class Constants {
 
     public static final double kThrottleDeadband = 0.0;
     public static final double kWheelDeadband = 0.0045;
+    public static final double kOperatorDeadband = 0.0045;
+
   }
 
 
   public static class TEST {
 
-    public static final double kMinTestPos = 200;
-    public static final double kMinTestVel = 140;
-    public static final double kMinTestCurrent = 5;
+    public static final double kMinDriveTestPos = 200;
+    public static final double kMinDriveTestVel = 140;
+    public static final double kMinDriveTestCurrent = 5;
+    public static final double kDriveCurrentEpsilon = 2.0;
+    public static final double kDriveVelEpsilon = 2.0;
+    public static final double kDrivePosEpsilon = 2.0;
 
+
+  }
+
+  public static class ARM {
+
+    public static final boolean ARM_SENSOR_PHASE = false;
+    public static final boolean ARM_MASTER_DIRECTION = false;
+    public static final boolean ARM_SLAVE_DIRECTION = true;
+    public static final boolean LEFT_INTAKE_DIRECTION = true;
+    public static final boolean RIGHT_INTAKE_DIRECTION = false;
+
+    public static final double RPM_MAX = 35.6; //RPM Max of Arm
+    public static final double GEAR_RATIO = 1;//22.0/ 336.0; //Gear Ratio between en;coder and arm - Used to calulate arm position in degrees
+    public static final double MAX_RAW_VEL =
+        ((RPM_MAX / 60.0 / 10.0) * 4096.0) / GEAR_RATIO; // Degrees per second
+    public static final double ARM_P = 22 * ((0.1 * 1023.0) / (1600)); //7.5 deg or 1390 units
+    public static final double ARM_I = 0;
+    public static final double ARM_D = ARM_P * 52;
+    public static final double ARM_F = (1023.0 / MAX_RAW_VEL);
+
+    public static final double ARM_FORWARD_LIMIT = 250;
+    public static final double ARM_REVERSE_LIMIT = 0;
+    public static final double MOTION_MAGIC_CRUISE_VEL = MAX_RAW_VEL;
+    public static final double MOTION_MAGIC_ACCEL = MAX_RAW_VEL * 10;
+    public static final double SLOW_INTAKE_HOLD_SPEED = 0.1;
+    public static final double MAX_SAFE_CURRENT = 80;
+
+    public static final double INTAKE_IN_ROLLER_SPEED = 0.95; //Intake Roller speed, reverse if it is the wrong direction
+    public static final double INTAKE_OUT_ROLLER_SPEED = -0.40;
+    public static final double INTAKE_OUT_FAST_ROLLER_SPEED = -0.90;
+    //Comp
+    public static final int kBookEnd_0 = 827;
+    public static final int kBookEnd_1 = 3790;
+
+    //Practice
+    //public static final int kBookEnd_0 = 2178;
+    //public static final int kBookEnd_1 = 5129;
+    public static final double ARM_OFFSET = -127.3;
+    public static final double FEED_CONSTANT = 0.15;
   }
 
 

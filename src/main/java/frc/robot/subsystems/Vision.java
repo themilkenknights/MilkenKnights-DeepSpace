@@ -1,25 +1,34 @@
 package frc.robot.subsystems;
 
-import frc.robot.lib.pixy.Pixy;
+import edu.wpi.first.wpilibj.SPI;
+import edu.wpi.first.wpilibj.SPI.Port;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.lib.pixy.PixyException;
+import frc.robot.lib.pixy.PixyPacket;
+import frc.robot.lib.pixy.PixySPI;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MovingAverage;
 import frc.robot.lib.vision.LimeLight;
 import frc.robot.lib.vision.LimeLightControlMode;
 import frc.robot.lib.vision.LimelightTarget;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Vision extends Subsystem {
 
-  static final int FRAME_WIDTH = 320, FRAME_HEIGHT = 200;
-  static final int MAX_BLOCKS = 10;
-  Pixy pixy;
+
   private LimeLight limeLight;
   private MovingAverage mThrottleAverage = new MovingAverage(5);
-
+  public PixySPI pixy1;
+  Port port = Port.kOnboardCS0;
+  String print;
+  public HashMap<Integer, ArrayList<PixyPacket>> packets = new HashMap<Integer, ArrayList<PixyPacket>>();
   private Vision() {
+
     limeLight = new LimeLight();
-    pixy = new Pixy(0x053C3165);
-    Pixy.ensureAvailable(0x053C3165);
+    pixy1 = new PixySPI(new SPI(port), packets, new PixyException(print));
+
   }
 
   public static Vision getInstance() {
@@ -34,27 +43,46 @@ public class Vision extends Subsystem {
   @Override
   public void onStart(double timestamp) {
     limeLight.setLEDMode(LimeLightControlMode.LedMode.kforceOn);
-    pixy.setAutoWhiteBalance(false);
-    pixy.setWhiteBalanceValue(new Pixy.WhiteBalanceSetting(0xA0, 0x80, 0x80));
-    pixy.setAutoExposure(false);
-    pixy.setExposureCompensation(new Pixy.ExposureSetting(10, 150));
-    pixy.startBlockProgram();
-    pixy.startFrameGrabber();
+
   }
 
   @Override
   public void onLoop(double timestamp) {
     mThrottleAverage.addNumber(limeLight.returnTarget());
-    Logger.logMarker(String.valueOf(pixy.getBlocks().get(0).x));
   }
 
   @Override
   public void onStop(double timestamp) {
     mThrottleAverage.clear();
     limeLight.setLEDMode(LimeLightControlMode.LedMode.kforceOff);
-    pixy.stopFrameGrabber();
-    pixy.stopBlockProgram();
-    pixy.setLEDBrightness(1000);
+testPixy1();
+  }
+
+  public void testPixy1(){
+    int ret = -1;
+    // Get the packets from the pixy.
+    try {
+      ret = pixy1.readPackets();
+    } catch (PixyException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+
+    SmartDashboard.putNumber("Pixy Vision: packets size: ", packets.size());
+
+    for(int i = 1; i <= PixySPI.PIXY_SIG_COUNT ; i++) {
+      SmartDashboard.putString("Pixy Vision: Signature: ", Integer.toString(i));
+
+      SmartDashboard.putNumber("Pixy Vision: packet: " + Integer.toString(i) + ": size: ", packets.get(i).size());
+
+      // Loop through the packets for this signature.
+      for(int j=0; j < packets.get(i).size(); j++) {
+        SmartDashboard.putNumber("Pixy Vision: " + Integer.toString(i) + ": X: ", packets.get(i).get(j).X);
+        SmartDashboard.putNumber("Pixy Vision: " + Integer.toString(i) + ": Y: ", packets.get(i).get(j).Y);
+        SmartDashboard.putNumber("Pixy Vision: " + Integer.toString(i) + ": Width: ", packets.get(i).get(j).Width);
+        SmartDashboard.putNumber("Pixy Vision: " + Integer.toString(i) + ": Height: ", packets.get(i).get(j).Height);
+      }
+    }
   }
 
   @Override

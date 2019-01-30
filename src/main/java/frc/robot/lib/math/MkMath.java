@@ -1,6 +1,7 @@
 package frc.robot.lib.math;
 
 import frc.robot.Constants;
+import frc.robot.Constants.ARM;
 
 public class MkMath {
 
@@ -54,5 +55,9 @@ public class MkMath {
 
   public static double sin(double deg) {
     return java.lang.Math.sin(java.lang.Math.toRadians(deg));
+  }
+
+  public static double angleToNativeUnits(double ang) {
+    return ((ang / 360.0) / ARM.GEAR_RATIO) * 4096.0;
   }
 }
