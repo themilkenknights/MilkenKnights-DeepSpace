@@ -9,11 +9,11 @@ import frc.robot.lib.structure.Subsystem;
 
 public class Superstructure extends Subsystem {
 
-  //private PowerDistributionPanel mPDP;
+  private PowerDistributionPanel mPDP;
   private Compressor mCompressor;
 
   private Superstructure() {
-    //mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
+    mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
     mCompressor = new Compressor();
   }
 

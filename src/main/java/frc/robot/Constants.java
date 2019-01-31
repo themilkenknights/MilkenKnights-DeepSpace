@@ -103,7 +103,6 @@ public final class Constants {
     public static final double kDriveVelEpsilon = 2.0;
     public static final double kDrivePosEpsilon = 2.0;
 
-
   }
 
   public static class CARGO_ARM {

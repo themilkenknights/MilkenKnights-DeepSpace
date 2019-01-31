@@ -5,8 +5,8 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.CAN;
+import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.GENERAL;
 import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonLocation;
@@ -174,27 +174,7 @@ public class CargoArm extends Subsystem {
 
   @Override
   public boolean checkSystem() {
-    boolean check = true;
-    if (!armTalon.isEncoderConnected()) {
-      Logger.logError("Arm Encoder Not Connected");
-      check = false;
-    }
-    if (mArmControlState == ArmControlState.MOTION_MAGIC) {
-      for (ArmState state : ArmState.values()) {
-        if (state != ArmState.ENABLE) {
-          mArmState = state;
-          setIntakeRollers(-0.25);
-          Timer.delay(2);
-        }
-      }
-      armTalon.resetMasterConfig();
-      armTalon.resetSlaveConfig();
-    } else {
-      Logger.logError("Arm Test Failed");
-      check = false;
-    }
-
-    return check;
+    return armTalon.checkSystem();
   }
 
   public void zeroRel() {

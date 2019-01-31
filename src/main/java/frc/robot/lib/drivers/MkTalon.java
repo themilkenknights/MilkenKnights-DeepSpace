@@ -22,6 +22,8 @@ import frc.robot.Constants.TEST;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.Util;
+import frc.robot.subsystems.CargoArm;
+import frc.robot.subsystems.CargoArm.ArmState;
 import java.util.ArrayList;
 
 public class MkTalon {
@@ -277,6 +279,20 @@ public class MkTalon {
         }
       }
 
+    } else if (side == TalonLocation.CargoIntake) {
+      if (!isEncoderConnected()) {
+        Logger.logError("Arm Encoder Not Connected");
+        check = false;
+      }
+      for (ArmState state : ArmState.values()) {
+        if (state != ArmState.ENABLE) {
+          CargoArm.mArmState = state;
+          CargoArm.getInstance().setIntakeRollers(-0.25);
+          Timer.delay(2);
+        }
+      }
+      resetMasterConfig();
+      resetSlaveConfig();
     }
 
     return check;
