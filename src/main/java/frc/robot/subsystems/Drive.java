@@ -1,5 +1,6 @@
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.ErrorCode;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.SPI.Port;
@@ -392,6 +393,12 @@ Pass the trajectory to the drive motion planner
   private static class InstanceHolder {
 
     private static final Drive mInstance = new Drive();
+  }
+
+  public static void CTRE(ErrorCode errorCode) {
+    if (errorCode != ErrorCode.OK) {
+      Logger.logError(errorCode.toString());
+    }
   }
 
   public static class PeriodicIO {

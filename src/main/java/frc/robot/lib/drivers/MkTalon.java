@@ -1,5 +1,7 @@
 package frc.robot.lib.drivers;
 
+import com.ctre.phoenix.ErrorCode;
+import com.ctre.phoenix.ParamEnum;
 import com.ctre.phoenix.motorcontrol.ControlFrame;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
@@ -14,7 +16,8 @@ import com.ctre.phoenix.motorcontrol.can.VictorSPXConfiguration;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
-import frc.robot.Constants.ARM;
+import frc.robot.Constants.CARGO_ARM;
+import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.TEST;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.Logger;
@@ -51,50 +54,71 @@ public class MkTalon {
   }
 
   private synchronized double getError() {
-    return MkMath.nativeUnitsPer100MstoInchesPerSec(
-        masterTalon.getClosedLoopError(Constants.GENERAL.kPIDLoopIdx));
+    if (side == TalonLocation.CargoIntake) {
+      return MkMath.nativeUnitsToDegrees(masterTalon.getClosedLoopError(Constants.GENERAL.kPIDLoopIdx));
+    } else {
+      return MkMath.nativeUnitsPer100MstoInchesPerSec(masterTalon.getClosedLoopError(Constants.GENERAL.kPIDLoopIdx));
+    }
   }
 
   public void resetMasterConfig() {
-    masterTalon.configFactoryDefault();
-    masterTalon.configAllSettings(new TalonSRXConfiguration());
+    CTRE(masterTalon.configFactoryDefault(GENERAL.kLongCANTimeoutMs));
+    CTRE(masterTalon.configAllSettings(new TalonSRXConfiguration(), GENERAL.kLongCANTimeoutMs));
     if (side.equals(TalonLocation.Left_Drive)) {
-      masterTalon.config_kF(Constants.GENERAL.kPIDLoopIdx, Constants.DRIVE.kLeftDriveF);
+      CTRE(masterTalon.config_kF(Constants.GENERAL.kPIDLoopIdx, Constants.DRIVE.kLeftDriveF, GENERAL.kLongCANTimeoutMs));
     } else if (side.equals(TalonLocation.Right_Drive)) {
-      masterTalon.config_kF(Constants.GENERAL.kPIDLoopIdx, Constants.DRIVE.kRightDriveF);
+      CTRE(masterTalon.config_kF(Constants.GENERAL.kPIDLoopIdx, Constants.DRIVE.kRightDriveF, GENERAL.kLongCANTimeoutMs));
     }
-    masterTalon.config_kP(Constants.GENERAL.kPIDLoopIdx, Constants.DRIVE.kDriveP);
-    masterTalon.config_kI(Constants.GENERAL.kPIDLoopIdx, Constants.DRIVE.kDriveI);
-    masterTalon.config_kD(Constants.GENERAL.kPIDLoopIdx, Constants.DRIVE.kDriveD);
-    masterTalon.configMotionCruiseVelocity((int) Constants.DRIVE.kMotionMagicCruiseNativeVel);
-    masterTalon.configMotionAcceleration((int) Constants.DRIVE.kMotionMagicNativeAccel);
+    if (side == TalonLocation.Left_Drive || side == TalonLocation.Right_Drive) {
+      CTRE(masterTalon.config_kP(Constants.GENERAL.kPIDLoopIdx, Constants.DRIVE.kDriveP, GENERAL.kLongCANTimeoutMs));
+      CTRE(masterTalon.config_kI(Constants.GENERAL.kPIDLoopIdx, Constants.DRIVE.kDriveI, GENERAL.kLongCANTimeoutMs));
+      CTRE(masterTalon.config_kD(Constants.GENERAL.kPIDLoopIdx, Constants.DRIVE.kDriveD, GENERAL.kLongCANTimeoutMs));
+      CTRE(masterTalon.configMotionCruiseVelocity((int) Constants.DRIVE.kMotionMagicCruiseNativeVel, GENERAL.kLongCANTimeoutMs));
+      CTRE(masterTalon.configMotionAcceleration((int) Constants.DRIVE.kMotionMagicNativeAccel, GENERAL.kLongCANTimeoutMs));
+      CTRE(masterTalon.configVelocityMeasurementPeriod(VelocityMeasPeriod.Period_50Ms, GENERAL.kLongCANTimeoutMs));
+      CTRE(masterTalon.configVelocityMeasurementWindow(32));
+    } else if (side == TalonLocation.CargoIntake) {
+      CTRE(masterTalon.config_kF(Constants.GENERAL.kPIDLoopIdx, CARGO_ARM.ARM_F, GENERAL.kLongCANTimeoutMs));
+      CTRE(masterTalon.config_kP(Constants.GENERAL.kPIDLoopIdx, CARGO_ARM.ARM_P, GENERAL.kLongCANTimeoutMs));
+      CTRE(masterTalon.config_kI(Constants.GENERAL.kPIDLoopIdx, CARGO_ARM.ARM_I, GENERAL.kLongCANTimeoutMs));
+      CTRE(masterTalon.config_kD(Constants.GENERAL.kPIDLoopIdx, CARGO_ARM.ARM_D, GENERAL.kLongCANTimeoutMs));
+      CTRE(masterTalon.configMotionCruiseVelocity((int) CARGO_ARM.MOTION_MAGIC_CRUISE_VEL, GENERAL.kLongCANTimeoutMs));
+      CTRE(masterTalon.configMotionAcceleration((int) CARGO_ARM.MOTION_MAGIC_ACCEL, GENERAL.kLongCANTimeoutMs));
+      CTRE(masterTalon.configVelocityMeasurementPeriod(VelocityMeasPeriod.Period_100Ms, GENERAL.kLongCANTimeoutMs));
+      CTRE(masterTalon.configVelocityMeasurementWindow(64));
+      zeroAbsolute();
+    }
     masterTalon.selectProfileSlot(Constants.GENERAL.kSlotIdx, Constants.GENERAL.kPIDLoopIdx);
-    masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5);
-    masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5);
-    masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 5);
-    masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 160);
-    masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 160);
-    masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 5);
-    masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 5);
-    masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative,
-        Constants.GENERAL.kPIDLoopIdx, Constants.GENERAL.kTimeoutMs);
+    CTRE(masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5));
+    CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, GENERAL.kLongCANTimeoutMs));
+    CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 5, GENERAL.kLongCANTimeoutMs));
+    CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 160, GENERAL.kLongCANTimeoutMs));
+    CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 160, GENERAL.kLongCANTimeoutMs));
+    CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 5, GENERAL.kLongCANTimeoutMs));
+    CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 5, GENERAL.kLongCANTimeoutMs));
+    CTRE(masterTalon
+        .configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, Constants.GENERAL.kPIDLoopIdx, Constants.GENERAL.kLongCANTimeoutMs));
     masterTalon.setNeutralMode(NeutralMode.Brake);
-    masterTalon.configNominalOutputForward(0);
-    masterTalon.configNominalOutputReverse(0);
-    masterTalon.configPeakOutputForward(1.0);
-    masterTalon.configPeakOutputReverse(-1.0);
-    masterTalon.configVoltageCompSaturation(12.0);
+    CTRE(masterTalon.configNominalOutputForward(0));
+    CTRE(masterTalon.configNominalOutputReverse(0));
+    CTRE(masterTalon.configPeakOutputForward(1.0));
+    CTRE(masterTalon.configPeakOutputReverse(-1.0));
+    CTRE(masterTalon.configVoltageCompSaturation(12.0));
     masterTalon.enableVoltageCompensation(true);
-    masterTalon.configVoltageMeasurementFilter(32);
-    masterTalon.configVelocityMeasurementPeriod(VelocityMeasPeriod.Period_50Ms);
-    masterTalon.configVelocityMeasurementWindow(32);
+    CTRE(masterTalon.configVoltageMeasurementFilter(32, GENERAL.kLongCANTimeoutMs));
+    CTRE(masterTalon.configSetParameter(ParamEnum.eClearPositionOnLimitF, 0, 0, 0, GENERAL.kLongCANTimeoutMs));
+    CTRE(masterTalon.configSetParameter(ParamEnum.eClearPositionOnLimitR, 0, 0, 0, GENERAL.kLongCANTimeoutMs));
+    CTRE(masterTalon.configNeutralDeadband(0.0, GENERAL.kLongCANTimeoutMs));
+
     lastControlMode = ControlMode.PercentOutput;
     lastNeutralMode = NeutralMode.Brake;
     lastOutput = Double.NaN;
+
+
   }
 
   public void resetSlaveConfig() {
-    slaveTalon.configFactoryDefault();
+    CTRE(slaveTalon.configFactoryDefault(GENERAL.kLongCANTimeoutMs));
     slaveTalon.configAllSettings(new VictorSPXConfiguration());
     slaveTalon.setNeutralMode(NeutralMode.Brake);
     slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5);
@@ -102,9 +126,9 @@ public class MkTalon {
     slaveTalon.configNominalOutputReverse(0);
     slaveTalon.configPeakOutputForward(1.0);
     slaveTalon.configPeakOutputReverse(-1.0);
-    slaveTalon.configVoltageCompSaturation(12.0);
+    CTRE(slaveTalon.configVoltageCompSaturation(12.0, GENERAL.kLongCANTimeoutMs));
     slaveTalon.enableVoltageCompensation(true);
-    slaveTalon.configVoltageMeasurementFilter(32);
+    CTRE(slaveTalon.configVoltageMeasurementFilter(32, GENERAL.kLongCANTimeoutMs));
     lastControlMode = ControlMode.PercentOutput;
     lastNeutralMode = NeutralMode.Brake;
     lastOutput = Double.NaN;
@@ -129,7 +153,7 @@ public class MkTalon {
   }
 
   public void resetEncoder() {
-    masterTalon.setSelectedSensorPosition(0, Constants.GENERAL.kPIDLoopIdx, Constants.GENERAL.kTimeoutMs);
+    CTRE(masterTalon.setSelectedSensorPosition(0, Constants.GENERAL.kPIDLoopIdx, Constants.GENERAL.kMediumTimeoutMs));
   }
 
   public void updateSmartDash(boolean showRPM) {
@@ -145,14 +169,21 @@ public class MkTalon {
   }
 
   public synchronized double getSpeed() {
-    return MkMath.nativeUnitsPer100MstoInchesPerSec(
-        masterTalon.getSelectedSensorVelocity(Constants.GENERAL.kPIDLoopIdx));
+    if (side == TalonLocation.CargoIntake) {
+      return MkMath.nativeUnitsPer100MstoDegreesPerSec(masterTalon.getSelectedSensorVelocity(Constants.GENERAL.kPIDLoopIdx));
+    } else {
+      return MkMath.nativeUnitsPer100MstoInchesPerSec(masterTalon.getSelectedSensorVelocity(Constants.GENERAL.kPIDLoopIdx));
+    }
   }
 
   public synchronized double getPosition() {
-    return MkMath
-        .nativeUnitsToInches(masterTalon.getSelectedSensorPosition(Constants.GENERAL.kPIDLoopIdx));
+    if (side == TalonLocation.CargoIntake) {
+      return MkMath.nativeUnitsToDegrees(masterTalon.getSelectedSensorPosition(Constants.GENERAL.kPIDLoopIdx));
+    } else {
+      return MkMath.nativeUnitsToInches(masterTalon.getSelectedSensorPosition(Constants.GENERAL.kPIDLoopIdx));
+    }
   }
+
 
   public synchronized double getCurrent() {
     return masterTalon.getOutputCurrent();
@@ -169,8 +200,8 @@ public class MkTalon {
     } else {
       pulseWidth += (-Math.round(((double) pulseWidth / 4096) - 0.50)) * 4096;
     }
-    masterTalon.setSelectedSensorPosition(pulseWidth + (-ARM.kBookEnd_0), Constants.GENERAL.kPIDLoopIdx,
-        Constants.GENERAL.kTimeoutMs);
+    CTRE(masterTalon.setSelectedSensorPosition(pulseWidth + (-CARGO_ARM.kBookEnd_0), Constants.GENERAL.kPIDLoopIdx,
+        GENERAL.kMediumTimeoutMs));
   }
 
   public int getZer() {
@@ -180,7 +211,7 @@ public class MkTalon {
     } else {
       pulseWidth += (-Math.round(((double) pulseWidth / 4096) - 0.50)) * 4096;
     }
-    return pulseWidth + (-ARM.kBookEnd_0);
+    return pulseWidth + (-CARGO_ARM.kBookEnd_0);
   }
 
   public boolean checkSystem() {
@@ -253,5 +284,11 @@ public class MkTalon {
 
   public enum TalonLocation {
     Left_Drive, Right_Drive, HatchIntake, CargoIntake
+  }
+
+  public void CTRE(ErrorCode errorCode) {
+    if (errorCode != ErrorCode.OK) {
+      Logger.logError(errorCode.toString());
+    }
   }
 }

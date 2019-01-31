@@ -15,6 +15,8 @@ public final class Constants {
     public static final int kSlotIdx = 0;
     public static final int kPIDLoopIdx = 0;
     public static final int kTimeoutMs = 0;
+    public static final int kMediumTimeoutMs = 10;
+    public static final int kLongCANTimeoutMs = 100; //use for constructors
     public static final double kLoopDt = 0.01;
     public static final double PI = 3.14159265359;
     public static final double kTicksPerRev = 4096.0;
@@ -104,7 +106,7 @@ public final class Constants {
 
   }
 
-  public static class ARM {
+  public static class CARGO_ARM {
 
     public static final boolean ARM_SENSOR_PHASE = false;
     public static final boolean ARM_MASTER_DIRECTION = false;
@@ -143,11 +145,11 @@ public final class Constants {
   }
 
 
-  public static class HATCH {
+  public static class HATCH_ARM {
 
-    public static final int kHatchArmForwardChannel = 1;
-    public static final int kHatchArmReverseChannel = 2;
+    public static final int kHatchArmChannel = 1;
     public static final boolean kHatchArmPlaceState = true;
+
   }
 
   public static class LOG {

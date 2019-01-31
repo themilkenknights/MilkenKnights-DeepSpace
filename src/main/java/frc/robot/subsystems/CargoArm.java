@@ -5,7 +5,7 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.Constants.ARM;
+import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.GENERAL;
 import frc.robot.lib.drivers.MkTalon;
@@ -31,19 +31,19 @@ public class CargoArm extends Subsystem {
   private CargoArm() {
     mPeriodicIO = new PeriodicIO();
     armTalon = new MkTalon(CAN.kMasterCargoArmMotorID, CAN.kSlaveCargoArmMotorID, TalonLocation.CargoIntake);
-    armTalon.masterTalon.setSensorPhase(ARM.ARM_SENSOR_PHASE);
-    armTalon.masterTalon.configForwardSoftLimitThreshold((int) ARM.ARM_FORWARD_LIMIT);
-    armTalon.masterTalon.configReverseSoftLimitThreshold((int) ARM.ARM_REVERSE_LIMIT);
+    armTalon.masterTalon.setSensorPhase(CARGO_ARM.ARM_SENSOR_PHASE);
+    armTalon.masterTalon.configForwardSoftLimitThreshold((int) CARGO_ARM.ARM_FORWARD_LIMIT);
+    armTalon.masterTalon.configReverseSoftLimitThreshold((int) CARGO_ARM.ARM_REVERSE_LIMIT);
     armTalon.masterTalon.configForwardSoftLimitEnable(true);
     armTalon.masterTalon.configReverseSoftLimitEnable(true);
     leftIntakeRollerTalon = new VictorSPX(CAN.kLeftCargoIntakeMotorID);
     rightIntakeRollerTalon = new VictorSPX(CAN.kRightCargoIntakeMotorID);
     leftIntakeRollerTalon.setNeutralMode(NeutralMode.Brake);
     rightIntakeRollerTalon.setNeutralMode(NeutralMode.Brake);
-    armTalon.masterTalon.setInverted(ARM.ARM_MASTER_DIRECTION);
-    armTalon.slaveTalon.setInverted(ARM.ARM_SLAVE_DIRECTION);
-    leftIntakeRollerTalon.setInverted(ARM.LEFT_INTAKE_DIRECTION);
-    rightIntakeRollerTalon.setInverted(ARM.RIGHT_INTAKE_DIRECTION);
+    armTalon.masterTalon.setInverted(CARGO_ARM.ARM_MASTER_DIRECTION);
+    armTalon.slaveTalon.setInverted(CARGO_ARM.ARM_SLAVE_DIRECTION);
+    leftIntakeRollerTalon.setInverted(CARGO_ARM.LEFT_INTAKE_DIRECTION);
+    rightIntakeRollerTalon.setInverted(CARGO_ARM.RIGHT_INTAKE_DIRECTION);
   }
 
   public static CargoArm getInstance() {
@@ -74,7 +74,7 @@ public class CargoArm extends Subsystem {
       }
     }
 
-    if (armTalon.getCurrent() > ARM.MAX_SAFE_CURRENT && armSafety) {
+    if (armTalon.getCurrent() > CARGO_ARM.MAX_SAFE_CURRENT && armSafety) {
       Logger.logError("Unsafe Current " + armTalon.getCurrent() + " Amps");
       mArmControlState = ArmControlState.OPEN_LOOP;
     }
@@ -113,7 +113,7 @@ public class CargoArm extends Subsystem {
     if (mArmControlState == ArmControlState.OPEN_LOOP) {
       armTalon.set(ControlMode.PercentOutput, mPeriodicIO.setpoint, NeutralMode.Brake);
     } else if (mArmControlState == ArmControlState.MOTION_MAGIC) {
-      double armFeed = MkMath.sin(armTalon.getPosition() + ARM.ARM_OFFSET) * ARM.FEED_CONSTANT;
+      double armFeed = MkMath.sin(armTalon.getPosition() + CARGO_ARM.ARM_OFFSET) * CARGO_ARM.FEED_CONSTANT;
       if (mArmState.equals(ArmState.ENABLE)) {
         armTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(armPosEnable), NeutralMode.Brake);
       } else {

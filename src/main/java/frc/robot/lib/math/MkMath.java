@@ -1,7 +1,7 @@
 package frc.robot.lib.math;
 
 import frc.robot.Constants;
-import frc.robot.Constants.ARM;
+import frc.robot.Constants.CARGO_ARM;
 
 public class MkMath {
 
@@ -58,6 +58,14 @@ public class MkMath {
   }
 
   public static double angleToNativeUnits(double ang) {
-    return ((ang / 360.0) / ARM.GEAR_RATIO) * 4096.0;
+    return ((ang / 360.0) / CARGO_ARM.GEAR_RATIO) * 4096.0;
+  }
+
+  public static double nativeUnitsToDegrees(double raw) {
+    return ((raw / 4096.0) * 360.0) * Constants.CARGO_ARM.GEAR_RATIO;
+  }
+
+  public static double nativeUnitsPer100MstoDegreesPerSec(double vel) {
+    return nativeUnitsToDegrees(vel) * 10;
   }
 }

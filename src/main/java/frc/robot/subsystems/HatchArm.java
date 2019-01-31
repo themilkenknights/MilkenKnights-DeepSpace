@@ -2,7 +2,8 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Timer;
-import frc.robot.Constants;
+import frc.robot.Constants.CAN;
+import frc.robot.Constants.HATCH_ARM;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
 
@@ -12,8 +13,7 @@ public class HatchArm extends Subsystem {
   private Solenoid mArmSolenoid;
 
   private HatchArm() {
-    mArmSolenoid = new Solenoid(Constants.HATCH.kHatchArmForwardChannel,
-        Constants.HATCH.kHatchArmReverseChannel);
+    mArmSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, HATCH_ARM.kHatchArmChannel);
     mHatchArmState = HatchArmState.STOW;
   }
 
@@ -54,7 +54,7 @@ public class HatchArm extends Subsystem {
   }
 
   public enum HatchArmState {
-    PLACE(Constants.HATCH.kHatchArmPlaceState), STOW(!Constants.HATCH.kHatchArmPlaceState);
+    PLACE(HATCH_ARM.kHatchArmPlaceState), STOW(!HATCH_ARM.kHatchArmPlaceState);
     public final boolean state;
 
     HatchArmState(final boolean state) {
