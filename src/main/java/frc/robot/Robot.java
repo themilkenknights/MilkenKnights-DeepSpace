@@ -24,9 +24,9 @@ import java.util.Arrays;
 public class Robot extends TimedRobot {
 
   public static MatchState mMatchState = MatchState.DISABLED;
-  private final SubsystemManager mSubsystemManager =
-      new SubsystemManager(Arrays
-          .asList(Drive.getInstance(), Vision.getInstance()));
+  private final SubsystemManager mSubsystemManager = new SubsystemManager(
+      Arrays.asList(Drive.getInstance(), HatchArm.getInstance(), CargoArm.getInstance(),
+          Superstructure.getInstance(), Vision.getInstance()));
 
   protected Robot() {
     super(Constants.GENERAL.kLoopDt);
@@ -38,6 +38,7 @@ public class Robot extends TimedRobot {
     try {
       Logger.logRobotInit();
       mMatchState = MatchState.DISABLED;
+      mSubsystemManager.zero();
       TrajectoryGenerator.getInstance().generateTrajectories();
       Shuffleboard.startRecording();
     } catch (Throwable t) {
@@ -53,8 +54,6 @@ public class Robot extends TimedRobot {
       mMatchState = MatchState.DISABLED;
       AutoChooser.disableAuto();
       mSubsystemManager.stop();
-      Drive.getInstance().zeroSensors();
-      RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
     } catch (Throwable t) {
       Logger.logThrowableCrash(t);
       throw t;
@@ -65,10 +64,9 @@ public class Robot extends TimedRobot {
   public void autonomousInit() {
     try {
       Logger.logAutoInit();
-      Drive.getInstance().zeroSensors();
-      RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
       mMatchState = MatchState.AUTO;
-      mSubsystemManager.start();
+      mSubsystemManager.zero();
+      RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
       AutoChooser.startAuto();
     } catch (Throwable t) {
       Logger.logThrowableCrash(t);
@@ -81,7 +79,6 @@ public class Robot extends TimedRobot {
     try {
       Logger.logTeleopInit();
       mMatchState = MatchState.TELEOP;
-      mSubsystemManager.start();
     } catch (Throwable t) {
       Logger.logThrowableCrash(t);
       throw t;
@@ -92,7 +89,7 @@ public class Robot extends TimedRobot {
   public void testInit() {
     try {
       mMatchState = MatchState.TEST;
-      mSubsystemManager.start();
+      mSubsystemManager.zero();
       Logger.logMarker("Starting check systems.");
       mSubsystemManager.checkSystem();
       mSubsystemManager.stop();

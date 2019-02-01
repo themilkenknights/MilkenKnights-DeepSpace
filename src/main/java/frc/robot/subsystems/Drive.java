@@ -2,6 +2,7 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.ErrorCode;
 import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.Faults;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.Timer;
@@ -9,11 +10,13 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.Constants.DRIVE;
 import frc.robot.Constants.VISION;
+import frc.robot.Robot;
+import frc.robot.Robot.MatchState;
 import frc.robot.auto.AutoModeExecutor;
 import frc.robot.auto.modes.TrackTarget;
 import frc.robot.lib.drivers.MkGyro;
 import frc.robot.lib.drivers.MkTalon;
-import frc.robot.lib.drivers.MkTalon.TalonLocation;
+import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Pose2dWithCurvature;
 import frc.robot.lib.geometry.Rotation2d;
@@ -43,23 +46,14 @@ public class Drive extends Subsystem {
   private boolean mOverrideTrajectory, isVisionDone, mIsOnTarget = false;
   private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
   private double left_encoder_prev_distance_, right_encoder_prev_distance_, initial_vision_dist_, initial_vision_encoder_avg, turnAngle = 0.0;
+  Faults fa = new Faults();
 
   private Drive() {
     mDriveControlState = DriveControlState.OPEN_LOOP;
     mPeriodicIO = new PeriodicIO();
-    leftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterID, Constants.CAN.kDriveLeftSlaveID,
-        TalonLocation.Left_Drive);
-    rightDrive = new MkTalon(Constants.CAN.kDriveRightMasterID, Constants.CAN.kDriveRightSlaveID,
-        TalonLocation.Right_Drive);
-    leftDrive.resetEncoder();
-    rightDrive.resetEncoder();
+    leftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left_Drive);
+    rightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right_Drive);
     navX = new MkGyro(Port.kMXP);
-    leftDrive.masterTalon.setInverted(Constants.DRIVE.kLeftMasterInvert);
-    leftDrive.slaveTalon.setInverted(Constants.DRIVE.kLeftSlaveInvert);
-    leftDrive.masterTalon.setSensorPhase(Constants.DRIVE.kLeftSensorInvert);
-    rightDrive.masterTalon.setInverted(Constants.DRIVE.KRightMasterInvert);
-    rightDrive.slaveTalon.setInverted(Constants.DRIVE.kRightSlaveInvert);
-    rightDrive.masterTalon.setSensorPhase(Constants.DRIVE.kRightSensorInvert);
     mMotionPlanner = new DriveMotionPlanner();
   }
 
@@ -262,13 +256,6 @@ public class Drive extends Subsystem {
     }
   }
 
-  @Override
-  public void onStart(double timestamp) {
-    synchronized (Drive.this) {
-      startLogging();
-    }
-  }
-
   /**
    * Updated from mEnabledLoop in Robot.java Controls drivetrain during Path Following and Turn In Place and logs Drivetrain data in all modes
    *
@@ -314,10 +301,8 @@ public class Drive extends Subsystem {
     if (driveCheck) {
       Logger.logMarker("Drive Test Success");
     }
-    leftDrive.resetMasterConfig();
-    leftDrive.resetSlaveConfig();
-    rightDrive.resetMasterConfig();
-    rightDrive.resetSlaveConfig();
+    leftDrive.resetConfig();
+    rightDrive.resetConfig();
     return driveCheck;
   }
 
@@ -374,12 +359,15 @@ Pass the trajectory to the drive motion planner
   /*
   Clear mag encoder position and local distance counter
    */
-  public synchronized void zeroSensors() {
+  public synchronized void zero() {
     navX.zeroYaw();
     leftDrive.masterTalon.setSelectedSensorPosition(0);
     rightDrive.masterTalon.setSelectedSensorPosition(0);
     left_encoder_prev_distance_ = 0;
     right_encoder_prev_distance_ = 0;
+    if (Robot.mMatchState == MatchState.AUTO) {
+      startLogging();
+    }
   }
 
 

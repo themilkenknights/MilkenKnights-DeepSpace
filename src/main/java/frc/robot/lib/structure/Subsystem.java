@@ -20,7 +20,7 @@ public abstract class Subsystem {
 
   public abstract void outputTelemetry();
 
-  public void onStart(double timestamp) {
+  public void zero(double timestamp) {
 
   }
 

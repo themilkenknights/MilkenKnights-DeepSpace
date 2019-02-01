@@ -2,48 +2,30 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
-import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.GENERAL;
+import frc.robot.lib.drivers.CT;
 import frc.robot.lib.drivers.MkTalon;
-import frc.robot.lib.drivers.MkTalon.TalonLocation;
+import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
 
 public class CargoArm extends Subsystem {
 
-  public static ArmControlState mArmControlState = ArmControlState.MOTION_MAGIC;
-  public static ArmState mArmState = ArmState.ENABLE;
+  private static ArmControlState mArmControlState = ArmControlState.MOTION_MAGIC;
+  private static ArmState mArmState = ArmState.ENABLE;
   private final MkTalon armTalon;
-  private final VictorSPX leftIntakeRollerTalon;
-  private final VictorSPX rightIntakeRollerTalon;
-  public PeriodicIO mPeriodicIO;
-  private boolean armSafety = true;
-  private double armPosEnable = 0;
-  private double rollerSetpoint = 0;
-  private double startDis = 0;
-  private boolean disCon = false;
+  private final MkTalon intakeTalon;
+  private boolean armSafety, disCon = false;
+  private double startDis, openLoopSetpoint, rollerSetpoint, armPosEnable = 0.0;
 
   private CargoArm() {
-    mPeriodicIO = new PeriodicIO();
-    armTalon = new MkTalon(CAN.kMasterCargoArmMotorID, CAN.kSlaveCargoArmMotorID, TalonLocation.CargoIntake);
-    armTalon.masterTalon.setSensorPhase(CARGO_ARM.ARM_SENSOR_PHASE);
-    armTalon.masterTalon.configForwardSoftLimitThreshold((int) CARGO_ARM.ARM_FORWARD_LIMIT);
-    armTalon.masterTalon.configReverseSoftLimitThreshold((int) CARGO_ARM.ARM_REVERSE_LIMIT);
-    armTalon.masterTalon.configForwardSoftLimitEnable(true);
-    armTalon.masterTalon.configReverseSoftLimitEnable(true);
-    leftIntakeRollerTalon = new VictorSPX(CAN.kLeftCargoIntakeMotorID);
-    rightIntakeRollerTalon = new VictorSPX(CAN.kRightCargoIntakeMotorID);
-    leftIntakeRollerTalon.setNeutralMode(NeutralMode.Brake);
-    rightIntakeRollerTalon.setNeutralMode(NeutralMode.Brake);
-    armTalon.masterTalon.setInverted(CARGO_ARM.ARM_MASTER_DIRECTION);
-    armTalon.slaveTalon.setInverted(CARGO_ARM.ARM_SLAVE_DIRECTION);
-    leftIntakeRollerTalon.setInverted(CARGO_ARM.LEFT_INTAKE_DIRECTION);
-    rightIntakeRollerTalon.setInverted(CARGO_ARM.RIGHT_INTAKE_DIRECTION);
+    armTalon = new MkTalon(CAN.kMasterCargoArmTalonID, CAN.kSlaveCargoArmVictorID, TalonLoc.CargoArm);
+    intakeTalon = new MkTalon(CAN.kLeftCargoIntakeTalonID, CAN.kRightCargoIntakeVictorID, TalonLoc.CargoIntake);
   }
 
   public static CargoArm getInstance() {
@@ -53,8 +35,8 @@ public class CargoArm extends Subsystem {
   private void armSafetyCheck() {
     if (!armTalon.isEncoderConnected()) {
       if (disCon) {
-        if (Timer.getFPGATimestamp() - startDis > 0.5) {
-          mArmControlState = ArmControlState.OPEN_LOOP;
+        if (Timer.getFPGATimestamp() - startDis > 0.25) {
+          setArmControlState(ArmControlState.OPEN_LOOP);
           disCon = false;
           startDis = 0;
         }
@@ -67,42 +49,36 @@ public class CargoArm extends Subsystem {
       if (disCon) {
         disCon = false;
         startDis = 0;
-        armTalon.zeroAbsolute();
+        armTalon.zeroEncoder();
         Timer.delay(0.05);
-        setEnable();
-        mArmControlState = ArmControlState.MOTION_MAGIC;
+        setArmControlState(ArmControlState.MOTION_MAGIC);
       }
     }
 
-    if (armTalon.getCurrent() > CARGO_ARM.MAX_SAFE_CURRENT && armSafety) {
+    if (armTalon.getCurrent() > CARGO_ARM.MAX_SAFE_CURRENT) {
       Logger.logError("Unsafe Current " + armTalon.getCurrent() + " Amps");
-      mArmControlState = ArmControlState.OPEN_LOOP;
+      setArmControlState(ArmControlState.OPEN_LOOP);
     }
   }
 
-  public void setEnable() {
+  private void setEnable() {
     armPosEnable = armTalon.getPosition();
     mArmState = ArmState.ENABLE;
   }
 
   public void changeSafety() {
-    armSafety = !armSafety;
-    armTalon.masterTalon.configForwardSoftLimitEnable(armSafety);
-    armTalon.masterTalon.configReverseSoftLimitEnable(armSafety);
-  }
-
-  /*
- Step 1: Read inputs from CAN
-  */
-  @Override
-  public synchronized void readPeriodicInputs(double timestamp) {
-    mPeriodicIO.controlMode = mArmControlState.toString();
-    mPeriodicIO.output = armTalon.masterTalon.getMotorOutputPercent();
-    mPeriodicIO.position = armTalon.getPosition();
-    mPeriodicIO.velocity = armTalon.getSpeed();
-    mPeriodicIO.setpoint = mArmState.state;
-    mPeriodicIO.timestamp = timestamp;
-    mPeriodicIO.current = armTalon.getCurrent();
+    if (armSafety) {
+      CT.RE(armTalon.masterTalon.configForwardSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
+      CT.RE(armTalon.masterTalon.configReverseSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
+      setEnable();
+      setArmControlState(ArmControlState.OPEN_LOOP);
+      armSafety = false;
+    } else {
+      armSafety = true;
+      CT.RE(armTalon.masterTalon.configForwardSoftLimitEnable(false, GENERAL.kMediumTimeoutMs));
+      CT.RE(armTalon.masterTalon.configReverseSoftLimitEnable(false, GENERAL.kMediumTimeoutMs));
+      setArmControlState(ArmControlState.OPEN_LOOP);
+    }
   }
 
   /*
@@ -111,13 +87,13 @@ public class CargoArm extends Subsystem {
   @Override
   public synchronized void writePeriodicOutputs(double timestamp) {
     if (mArmControlState == ArmControlState.OPEN_LOOP) {
-      armTalon.set(ControlMode.PercentOutput, mPeriodicIO.setpoint, NeutralMode.Brake);
+      armTalon.set(ControlMode.PercentOutput, openLoopSetpoint, NeutralMode.Brake);
     } else if (mArmControlState == ArmControlState.MOTION_MAGIC) {
       double armFeed = MkMath.sin(armTalon.getPosition() + CARGO_ARM.ARM_OFFSET) * CARGO_ARM.FEED_CONSTANT;
       if (mArmState.equals(ArmState.ENABLE)) {
         armTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(armPosEnable), NeutralMode.Brake);
       } else {
-        armTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mPeriodicIO.setpoint), NeutralMode.Brake, -armFeed);
+        armTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mArmState.state), NeutralMode.Brake, -armFeed);
       }
     } else {
       Logger.logError("Unexpected arm control state: " + mArmControlState);
@@ -133,15 +109,14 @@ public class CargoArm extends Subsystem {
   }
 
   @Override
-  public void onStart(double timestamp) {
+  public void zero(double timestamp) {
     synchronized (CargoArm.this) {
-      armTalon.zeroAbsolute();
+      armTalon.zeroEncoder();
+      setEnable();
       if (armTalon.getZer() > GENERAL.kTicksPerRev) {
         Logger.logMarker("Arm Absolution Position > 4096");
-        mArmControlState = ArmControlState.OPEN_LOOP;
+        setArmControlState(ArmControlState.OPEN_LOOP);
       }
-      armPosEnable = armTalon.getPosition();
-      mArmState = ArmState.ENABLE;
     }
   }
 
@@ -155,15 +130,6 @@ public class CargoArm extends Subsystem {
     synchronized (CargoArm.this) {
       armSafetyCheck();
       updateRollers();
-      switch (mArmControlState) {
-        case MOTION_MAGIC:
-          return;
-        case OPEN_LOOP:
-          return;
-        default:
-          Logger.logError("Unexpected arm control state: " + mArmControlState);
-          break;
-      }
     }
   }
 
@@ -177,22 +143,37 @@ public class CargoArm extends Subsystem {
     return armTalon.checkSystem();
   }
 
-  public void zeroRel() {
-    armTalon.resetEncoder();
-    armPosEnable = armTalon.getPosition();
+  private void updateRollers() {
+    intakeTalon.set(ControlMode.PercentOutput, rollerSetpoint, NeutralMode.Brake);
   }
 
-  public void updateRollers() {
-    leftIntakeRollerTalon.set(ControlMode.PercentOutput, rollerSetpoint);
-    rightIntakeRollerTalon.set(ControlMode.PercentOutput, rollerSetpoint);
+  public synchronized void setOpenLoop(double output) {
+    if (armSafety) {
+      setArmControlState(ArmControlState.OPEN_LOOP);
+    } else {
+      Logger.logError("Failed to set Arm Open Loop Ouput: Arm Safety Not Enabled");
+    }
   }
 
-  public void setOpenLoop(double output) {
-    armTalon.set(ControlMode.PercentOutput, output, NeutralMode.Brake);
+  public synchronized void setArmState(ArmState state) {
+    if (!armSafety) {
+      setArmControlState(ArmControlState.MOTION_MAGIC);
+      mArmState = state;
+    } else {
+      Logger.logError("Failed to set Arm State: Arm Safety Enabled");
+    }
   }
 
   public void setIntakeRollers(double output) {
     rollerSetpoint = output;
+  }
+
+  public ArmControlState getArmControlState() {
+    return mArmControlState;
+  }
+
+  public ArmState getArmState() {
+    return mArmState;
   }
 
   public enum ArmControlState {
@@ -200,30 +181,25 @@ public class CargoArm extends Subsystem {
     OPEN_LOOP // Direct PercentVBus control of the arm as a failsafe
   }
 
+  private void setArmControlState(ArmControlState state) {
+    if (state == ArmControlState.MOTION_MAGIC && mArmControlState != ArmControlState.MOTION_MAGIC) {
+      setEnable();
+    } else if (state == ArmControlState.OPEN_LOOP && mArmControlState != ArmControlState.OPEN_LOOP) {
+      openLoopSetpoint = 0.0;
+    }
+    mArmControlState = state;
+  }
+
   public enum ArmState {
     ENABLE(0), //State directly after robot is enabled (not mapped to a specific angle)
-    OPPOSITE_STOW(28.5), //Used to Outtake into the exchange or store cube at start of auto
     OPPOSITE_SWITCH_PLACE(78.5), //Outtakes into the switch on the backside of the robot
-    SWITCH_PLACE(163.5), //Main switch outtake position
-    SECOND_SWITCH_PLACE(219.5), //Used to intake cubes from the second-floor of the pyramid
-    INTAKE(243.5); //Intake Setpoint to get cubes from the ground
+    SECOND_SWITCH_PLACE(219.5);
 
     public final double state;
 
     ArmState(final double state) {
       this.state = state;
     }
-  }
-
-  public static class PeriodicIO {
-
-    public double timestamp;
-    public String controlMode;
-    public double output;
-    public double position;
-    public double velocity;
-    public double setpoint;
-    public double current;
   }
 
   private static class InstanceHolder {

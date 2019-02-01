@@ -62,7 +62,7 @@ public class MkMath {
   }
 
   public static double nativeUnitsToDegrees(double raw) {
-    return ((raw / 4096.0) * 360.0) * Constants.CARGO_ARM.GEAR_RATIO;
+    return ((raw / 4096.0) * 360.0);
   }
 
   public static double nativeUnitsPer100MstoDegreesPerSec(double vel) {

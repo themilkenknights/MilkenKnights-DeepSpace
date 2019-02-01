@@ -27,7 +27,7 @@ public class MoveHatchArm implements Action {
 
   @Override
   public void start() {
-    HatchArm.getInstance().setHatchArm(armState);
+    HatchArm.getInstance().setHatchArmPosition(armState);
   }
 
 }

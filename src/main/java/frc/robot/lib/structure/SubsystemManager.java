@@ -34,10 +34,10 @@ public class SubsystemManager {
     }
   }
 
-  public void start() {
+  public void zero() {
     double timestamp_ = Timer.getFPGATimestamp();
     for (Subsystem subsystem : mAllSubsystems) {
-      subsystem.onStart(timestamp_);
+      subsystem.zero(timestamp_);
     }
   }
 

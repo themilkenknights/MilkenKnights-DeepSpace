@@ -5,16 +5,18 @@ import frc.robot.lib.util.InterpolatingTreeMap;
 
 /**
  * Unless otherwise noted by raw/native/RPM, all position unites are in inches and degrees and all velocity units are in inches per second and degrees
- * per second. ID typically notes a CAN ID All PID Constants are in Native Units
+ * per second. ID typically notes a CAN ID All PID Constants are in Native Units. The front of the robot is at the Hatch Mechanism/Battery. The
+ * exception is for the Cargo Mechanism. Left/Right for this mechanism are flipped. The zero position for the arms are at the hardstops inside the
+ * robot perimeter. Positive voltages/sensor measurements for the arms should correspond to rotating toward the ground. Positive Voltages to the drive
+ * motors should always move the robot forward.
  */
 public final class Constants {
 
+  public static final boolean isPracticeBot = true;
 
   public static class GENERAL {
 
-    public static final int kSlotIdx = 0;
     public static final int kPIDLoopIdx = 0;
-    public static final int kTimeoutMs = 0;
     public static final int kMediumTimeoutMs = 10;
     public static final int kLongCANTimeoutMs = 100; //use for constructors
     public static final double kLoopDt = 0.01;
@@ -22,22 +24,21 @@ public final class Constants {
     public static final double kTicksPerRev = 4096.0;
   }
 
-
   public static class CAN {
 
     public static final int kPneumaticsControlModuleID = 0;
-    public static final int kDriveLeftMasterID = 4;
-    public static final int kDriveLeftSlaveID = 3;
-    public static final int kDriveRightMasterID = 7;
-    public static final int kDriveRightSlaveID = 6;
-    public static final int kPowerDistributionPanelID = 5;
-    public static final int kGroundHatchIntakeMotor = 6;
-    public static final int kMasterCargoArmMotorID = 7;
-    public static final int kSlaveCargoArmMotorID = 8;
-    public static final int kLeftCargoIntakeMotorID = 9;
-    public static final int kRightCargoIntakeMotorID = 10;
+    public static final int kDriveLeftMasterTalonID = 5;
+    public static final int kDriveLeftSlaveVictorID = 2;
+    public static final int kDriveRightMasterTalonID = 10;
+    public static final int kDriveRightSlaveVictorID = 7;
+    public static final int kPowerDistributionPanelID = 11;
+    public static final int kGroundHatchArmTalonID = 9;
+    public static final int kHatchLimitSwitchTalonID = 4;
+    public static final int kMasterCargoArmTalonID = 8;
+    public static final int kSlaveCargoArmVictorID = 1;
+    public static final int kLeftCargoIntakeTalonID = 3;
+    public static final int kRightCargoIntakeVictorID = 6;
   }
-
 
   public static class DRIVE {
 
@@ -132,22 +133,41 @@ public final class Constants {
     public static final double INTAKE_IN_ROLLER_SPEED = 0.95; //Intake Roller speed, reverse if it is the wrong direction
     public static final double INTAKE_OUT_ROLLER_SPEED = -0.40;
     public static final double INTAKE_OUT_FAST_ROLLER_SPEED = -0.90;
-    //Comp
-    public static final int kBookEnd_0 = 827;
-    public static final int kBookEnd_1 = 3790;
 
-    //Practice
-    //public static final int kBookEnd_0 = 2178;
-    //public static final int kBookEnd_1 = 5129;
-    public static final double ARM_OFFSET = -127.3;
-    public static final double FEED_CONSTANT = 0.15;
+    public static final int kBookEnd_0 = isPracticeBot ? 827: 827;
+    public static final int kBookEnd_1 = isPracticeBot ? 3790: 3790;
   }
 
 
   public static class HATCH_ARM {
 
-    public static final int kHatchArmChannel = 1;
+    public static final int kHatchArmChannel = 0;
     public static final boolean kHatchArmPlaceState = true;
+
+
+    public static final boolean ARM_SENSOR_PHASE = false;
+    public static final boolean ARM_MASTER_DIRECTION = false;
+    public static final boolean ARM_SLAVE_DIRECTION = true;
+    public static final boolean LEFT_INTAKE_DIRECTION = true;
+    public static final boolean RIGHT_INTAKE_DIRECTION = false;
+
+    public static final double MAX_RAW_VEL = 243.029333333;
+    public static final double ARM_P = 22 * ((0.1 * 1023.0) / (1600)); //7.5 deg or 1390 units
+    public static final double ARM_I = 0;
+    public static final double ARM_D = ARM_P * 52;
+    public static final double ARM_F = (1023.0 / MAX_RAW_VEL);
+    public static final double ARM_FORWARD_LIMIT = 250;
+    public static final double ARM_REVERSE_LIMIT = 0;
+    public static final double MOTION_MAGIC_CRUISE_VEL = MAX_RAW_VEL;
+    public static final double MOTION_MAGIC_ACCEL = MAX_RAW_VEL * 10;
+    public static final double MAX_SAFE_CURRENT = 80;
+
+    public static final int kBookEnd_0 = 827;
+    public static final int kBookEnd_1 = 3790;
+
+    static {
+
+    }
 
   }
 
@@ -170,4 +190,6 @@ public final class Constants {
       VISION.visionDistMap.put(new InterpolatingDouble(782.0), new InterpolatingDouble(96.0));
     }
   }
+
+
 }

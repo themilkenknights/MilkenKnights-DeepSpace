@@ -39,7 +39,7 @@ public class Vision extends Subsystem {
   }
 
   @Override
-  public void onStart(double timestamp) {
+  public void zero(double timestamp) {
     limeLight.setLEDMode(LimeLightControlMode.LedMode.kforceOn);
 
   }
