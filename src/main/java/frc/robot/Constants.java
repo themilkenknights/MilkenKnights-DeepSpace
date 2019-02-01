@@ -12,7 +12,7 @@ import frc.robot.lib.util.InterpolatingTreeMap;
  */
 public final class Constants {
 
-  public static final boolean isPracticeBot = true;
+  public static final boolean kIsPracticeBot = true;
 
   public static class GENERAL {
 
@@ -114,28 +114,28 @@ public final class Constants {
     public static final boolean LEFT_INTAKE_DIRECTION = true;
     public static final boolean RIGHT_INTAKE_DIRECTION = false;
 
-    public static final double RPM_MAX = 35.6; //RPM Max of Arm
-    public static final double GEAR_RATIO = 1;//22.0/ 336.0; //Gear Ratio between en;coder and arm - Used to calulate arm position in degrees
-    public static final double MAX_RAW_VEL =
-        ((RPM_MAX / 60.0 / 10.0) * 4096.0) / GEAR_RATIO; // Degrees per second
+    public static final double MAX_RAW_VEL = 243.029333333;
     public static final double ARM_P = 22 * ((0.1 * 1023.0) / (1600)); //7.5 deg or 1390 units
     public static final double ARM_I = 0;
     public static final double ARM_D = ARM_P * 52;
     public static final double ARM_F = (1023.0 / MAX_RAW_VEL);
 
-    public static final double ARM_FORWARD_LIMIT = 250;
+    public static final double ARM_FORWARD_LIMIT = 100;
     public static final double ARM_REVERSE_LIMIT = 0;
     public static final double MOTION_MAGIC_CRUISE_VEL = MAX_RAW_VEL;
     public static final double MOTION_MAGIC_ACCEL = MAX_RAW_VEL * 10;
-    public static final double SLOW_INTAKE_HOLD_SPEED = 0.1;
     public static final double MAX_SAFE_CURRENT = 80;
 
-    public static final double INTAKE_IN_ROLLER_SPEED = 0.95; //Intake Roller speed, reverse if it is the wrong direction
+    public static final double INTAKE_IN_ROLLER_SPEED = 0.95;
     public static final double INTAKE_OUT_ROLLER_SPEED = -0.40;
-    public static final double INTAKE_OUT_FAST_ROLLER_SPEED = -0.90;
 
-    public static final int kBookEnd_0 = isPracticeBot ? 827: 827;
-    public static final int kBookEnd_1 = isPracticeBot ? 3790: 3790;
+    public static final double kArmOffset = -127.3;
+    public static final double kFeedConstant = 0.15;
+
+    public static final int kBookEnd_0 = kIsPracticeBot ? 827 : 827;
+    public static final int kBookEnd_1 = kIsPracticeBot ? 3790 : 3790;
+    public static final boolean kCrossOverZero = kIsPracticeBot ? true : true;
+    public static final int kOffset = kIsPracticeBot ? 0 : 0;
   }
 
 
@@ -156,18 +156,16 @@ public final class Constants {
     public static final double ARM_I = 0;
     public static final double ARM_D = ARM_P * 52;
     public static final double ARM_F = (1023.0 / MAX_RAW_VEL);
-    public static final double ARM_FORWARD_LIMIT = 250;
+    public static final double ARM_FORWARD_LIMIT = 100;
     public static final double ARM_REVERSE_LIMIT = 0;
-    public static final double MOTION_MAGIC_CRUISE_VEL = MAX_RAW_VEL;
-    public static final double MOTION_MAGIC_ACCEL = MAX_RAW_VEL * 10;
-    public static final double MAX_SAFE_CURRENT = 80;
+    public static final double kMotionMagicCruiseVel = MAX_RAW_VEL;
+    public static final double kMotionMagicAccel = MAX_RAW_VEL * 10;
+    public static final double kMaxSafeCurrent = 40;
 
-    public static final int kBookEnd_0 = 827;
-    public static final int kBookEnd_1 = 3790;
-
-    static {
-
-    }
+    public static final int kBookEnd_0 = kIsPracticeBot ? 827 : 827;
+    public static final int kBookEnd_1 = kIsPracticeBot ? 3790 : 3790;
+    public static final boolean kCrossOverZero = kIsPracticeBot ? true : true;
+    public static final int kOffset = kIsPracticeBot ? 0 : 0;
 
   }
 

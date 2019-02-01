@@ -12,8 +12,6 @@ import frc.robot.Constants.DRIVE;
 import frc.robot.Constants.VISION;
 import frc.robot.Robot;
 import frc.robot.Robot.MatchState;
-import frc.robot.auto.AutoModeExecutor;
-import frc.robot.auto.modes.TrackTarget;
 import frc.robot.lib.drivers.MkGyro;
 import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
@@ -33,10 +31,10 @@ import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.paths.DriveMotionPlanner;
 import frc.robot.paths.Kinematics;
 import frc.robot.paths.RobotState;
+import frc.robot.subsystems.HatchArm.HatchMechanismState;
 
 public class Drive extends Subsystem {
 
-  private static AutoModeExecutor mAutoModeExecuter = null;
   private final MkTalon leftDrive, rightDrive;
   private final MkGyro navX;
   public PeriodicIO mPeriodicIO;
@@ -135,6 +133,7 @@ public class Drive extends Subsystem {
       setOpenLoop(DriveSignal.BRAKE);
       initial_vision_dist_ = 0;
       initial_vision_encoder_avg = 0;
+      HatchArm.getInstance().setHatchMechanismState(HatchMechanismState.STOWED);
     } else if ((deltaAvg / initial_vision_dist_) < 0.75) {
       LimelightTarget target = Vision.getInstance().getAverageTarget();
       double dist = MkMath.InchesToNativeUnits(VISION.visionDistMap.getInterpolated(new InterpolatingDouble(target.getArea())).value);
@@ -339,21 +338,10 @@ Pass the trajectory to the drive motion planner
     if (target.isValidTarget()) {
       setOpenLoop(DriveSignal.BRAKE);
       mDriveControlState = DriveControlState.VISION_TRACKING;
-      if (mAutoModeExecuter != null) {
-        mAutoModeExecuter.stop();
-      }
-      mAutoModeExecuter = null;
-      mAutoModeExecuter = new AutoModeExecutor();
       double dist = Constants.VISION.visionDistMap.getInterpolated(new InterpolatingDouble(target.getArea())).value;
-      mAutoModeExecuter.setAutoMode(new TrackTarget());
-      mAutoModeExecuter.start();
       initial_vision_dist_ = dist;
       updateVision();
     }
-  }
-
-  public boolean visionTrackingDone() {
-    return isVisionDone;
   }
 
   /*

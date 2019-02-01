@@ -16,8 +16,8 @@ import frc.robot.lib.util.Logger;
 
 public class CargoArm extends Subsystem {
 
-  private static ArmControlState mArmControlState = ArmControlState.MOTION_MAGIC;
-  private static ArmState mArmState = ArmState.ENABLE;
+  private static CargoArmControlState mCargoArmControlState = CargoArmControlState.MOTION_MAGIC;
+  private static CargoArmState mCargoArmState = CargoArmState.ENABLE;
   private final MkTalon armTalon;
   private final MkTalon intakeTalon;
   private boolean armSafety, disCon = false;
@@ -36,7 +36,7 @@ public class CargoArm extends Subsystem {
     if (!armTalon.isEncoderConnected()) {
       if (disCon) {
         if (Timer.getFPGATimestamp() - startDis > 0.25) {
-          setArmControlState(ArmControlState.OPEN_LOOP);
+          setArmControlState(CargoArmControlState.OPEN_LOOP);
           disCon = false;
           startDis = 0;
         }
@@ -51,19 +51,19 @@ public class CargoArm extends Subsystem {
         startDis = 0;
         armTalon.zeroEncoder();
         Timer.delay(0.05);
-        setArmControlState(ArmControlState.MOTION_MAGIC);
+        setArmControlState(CargoArmControlState.MOTION_MAGIC);
       }
     }
 
     if (armTalon.getCurrent() > CARGO_ARM.MAX_SAFE_CURRENT) {
       Logger.logError("Unsafe Current " + armTalon.getCurrent() + " Amps");
-      setArmControlState(ArmControlState.OPEN_LOOP);
+      setArmControlState(CargoArmControlState.OPEN_LOOP);
     }
   }
 
   private void setEnable() {
     armPosEnable = armTalon.getPosition();
-    mArmState = ArmState.ENABLE;
+    mCargoArmState = CargoArmState.ENABLE;
   }
 
   public void changeSafety() {
@@ -71,13 +71,13 @@ public class CargoArm extends Subsystem {
       CT.RE(armTalon.masterTalon.configForwardSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
       CT.RE(armTalon.masterTalon.configReverseSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
       setEnable();
-      setArmControlState(ArmControlState.OPEN_LOOP);
+      setArmControlState(CargoArmControlState.OPEN_LOOP);
       armSafety = false;
     } else {
       armSafety = true;
       CT.RE(armTalon.masterTalon.configForwardSoftLimitEnable(false, GENERAL.kMediumTimeoutMs));
       CT.RE(armTalon.masterTalon.configReverseSoftLimitEnable(false, GENERAL.kMediumTimeoutMs));
-      setArmControlState(ArmControlState.OPEN_LOOP);
+      setArmControlState(CargoArmControlState.OPEN_LOOP);
     }
   }
 
@@ -86,25 +86,25 @@ public class CargoArm extends Subsystem {
    */
   @Override
   public synchronized void writePeriodicOutputs(double timestamp) {
-    if (mArmControlState == ArmControlState.OPEN_LOOP) {
+    if (mCargoArmControlState == CargoArmControlState.OPEN_LOOP) {
       armTalon.set(ControlMode.PercentOutput, openLoopSetpoint, NeutralMode.Brake);
-    } else if (mArmControlState == ArmControlState.MOTION_MAGIC) {
-      double armFeed = MkMath.sin(armTalon.getPosition() + CARGO_ARM.ARM_OFFSET) * CARGO_ARM.FEED_CONSTANT;
-      if (mArmState.equals(ArmState.ENABLE)) {
+    } else if (mCargoArmControlState == CargoArmControlState.MOTION_MAGIC) {
+      double armFeed = MkMath.sin(armTalon.getPosition() + CARGO_ARM.kArmOffset) * CARGO_ARM.kFeedConstant;
+      if (mCargoArmState.equals(CargoArmState.ENABLE)) {
         armTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(armPosEnable), NeutralMode.Brake);
       } else {
-        armTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mArmState.state), NeutralMode.Brake, -armFeed);
+        armTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mCargoArmState.state), NeutralMode.Brake, -armFeed);
       }
     } else {
-      Logger.logError("Unexpected arm control state: " + mArmControlState);
+      Logger.logError("Unexpected arm control state: " + mCargoArmControlState);
     }
   }
 
   @Override
   public void outputTelemetry() {
     armTalon.updateSmartDash(false);
-    SmartDashboard.putString("Arm Desired Position", mArmState.toString());
-    SmartDashboard.putString("Arm Control Mode", mArmControlState.toString());
+    SmartDashboard.putString("Arm Desired Position", mCargoArmState.toString());
+    SmartDashboard.putString("Arm Control Mode", mCargoArmControlState.toString());
     SmartDashboard.putBoolean("Arm Status", armTalon.isEncoderConnected());
   }
 
@@ -115,7 +115,7 @@ public class CargoArm extends Subsystem {
       setEnable();
       if (armTalon.getZer() > GENERAL.kTicksPerRev) {
         Logger.logMarker("Arm Absolution Position > 4096");
-        setArmControlState(ArmControlState.OPEN_LOOP);
+        setArmControlState(CargoArmControlState.OPEN_LOOP);
       }
     }
   }
@@ -149,16 +149,16 @@ public class CargoArm extends Subsystem {
 
   public synchronized void setOpenLoop(double output) {
     if (armSafety) {
-      setArmControlState(ArmControlState.OPEN_LOOP);
+      setArmControlState(CargoArmControlState.OPEN_LOOP);
     } else {
       Logger.logError("Failed to set Arm Open Loop Ouput: Arm Safety Not Enabled");
     }
   }
 
-  public synchronized void setArmState(ArmState state) {
+  public synchronized void setArmState(CargoArmState state) {
     if (!armSafety) {
-      setArmControlState(ArmControlState.MOTION_MAGIC);
-      mArmState = state;
+      setArmControlState(CargoArmControlState.MOTION_MAGIC);
+      mCargoArmState = state;
     } else {
       Logger.logError("Failed to set Arm State: Arm Safety Enabled");
     }
@@ -168,36 +168,36 @@ public class CargoArm extends Subsystem {
     rollerSetpoint = output;
   }
 
-  public ArmControlState getArmControlState() {
-    return mArmControlState;
+  public CargoArmControlState getArmControlState() {
+    return mCargoArmControlState;
   }
 
-  public ArmState getArmState() {
-    return mArmState;
+  public CargoArmState getArmState() {
+    return mCargoArmState;
   }
 
-  public enum ArmControlState {
+  public enum CargoArmControlState {
     MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all circumstances
     OPEN_LOOP // Direct PercentVBus control of the arm as a failsafe
   }
 
-  private void setArmControlState(ArmControlState state) {
-    if (state == ArmControlState.MOTION_MAGIC && mArmControlState != ArmControlState.MOTION_MAGIC) {
+  private void setArmControlState(CargoArmControlState state) {
+    if (state == CargoArmControlState.MOTION_MAGIC && mCargoArmControlState != CargoArmControlState.MOTION_MAGIC) {
       setEnable();
-    } else if (state == ArmControlState.OPEN_LOOP && mArmControlState != ArmControlState.OPEN_LOOP) {
+    } else if (state == CargoArmControlState.OPEN_LOOP && mCargoArmControlState != CargoArmControlState.OPEN_LOOP) {
       openLoopSetpoint = 0.0;
     }
-    mArmControlState = state;
+    mCargoArmControlState = state;
   }
 
-  public enum ArmState {
+  public enum CargoArmState {
     ENABLE(0), //State directly after robot is enabled (not mapped to a specific angle)
     OPPOSITE_SWITCH_PLACE(78.5), //Outtakes into the switch on the backside of the robot
     SECOND_SWITCH_PLACE(219.5);
 
     public final double state;
 
-    ArmState(final double state) {
+    CargoArmState(final double state) {
       this.state = state;
     }
   }

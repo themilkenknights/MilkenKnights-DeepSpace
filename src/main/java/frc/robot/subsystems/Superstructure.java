@@ -11,6 +11,7 @@ public class Superstructure extends Subsystem {
 
   private PowerDistributionPanel mPDP;
   private Compressor mCompressor;
+  private RobotState mRobotState = RobotState.TELEOP_DRIVE;
 
   private Superstructure() {
     mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
@@ -48,5 +49,9 @@ public class Superstructure extends Subsystem {
   private static class InstanceHolder {
 
     private static final Superstructure mInstance = new Superstructure();
+  }
+
+  public enum RobotState {
+    TELEOP_DRIVE, VISION_INTAKE_STATION, VISION_PLACING, VISION_CARGO_INTAKE, VISION_CARGO_OUTTAKE
   }
 }

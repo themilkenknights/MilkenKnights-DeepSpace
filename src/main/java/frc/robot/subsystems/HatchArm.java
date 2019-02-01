@@ -31,7 +31,7 @@ public class HatchArm extends Subsystem {
   private HatchArm() {
     mArmSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, HATCH_ARM.kHatchArmChannel);
     mHatchArmState = HatchArmState.STOW;
-    mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kHatchLimitSwitchTalonID, TalonLoc.HatchIntake);
+    mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kHatchLimitSwitchTalonID, TalonLoc.HatchArm);
   }
 
   public static HatchArm getInstance() {
@@ -95,11 +95,10 @@ public class HatchArm extends Subsystem {
     if (mHatchIntakeControlState == HatchIntakeControlState.OPEN_LOOP) {
       mArmTalon.set(ControlMode.PercentOutput, mOpenLoopSetpoint, NeutralMode.Brake);
     } else if (mHatchIntakeControlState == HatchIntakeControlState.MOTION_MAGIC) {
-      double armFeed = MkMath.sin(mArmTalon.getPosition() + CARGO_ARM.ARM_OFFSET) * CARGO_ARM.FEED_CONSTANT;
-      if (mHatchIntakeState.equals(CargoArm.ArmState.ENABLE)) {
+      if (mHatchIntakeState == HatchIntakeState.ENABLE) {
         mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mArmPosEnable), NeutralMode.Brake);
       } else {
-        mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mHatchIntakeState.state), NeutralMode.Brake, -armFeed);
+        mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mHatchIntakeState.state), NeutralMode.Brake, 0.0);
       }
     } else {
       Logger.logError("Unexpected arm control state: " + mHatchIntakeControlState);
@@ -231,7 +230,7 @@ public class HatchArm extends Subsystem {
   /*
   Move Hatch Arm to Stow or Place
    */
-  public synchronized void setHatchArmPosition(HatchArmState armState) {
+  private synchronized void setHatchArmPosition(HatchArmState armState) {
     mArmSolenoid.set(armState.state);
     Logger.logMarker("Set Hatch Arm to " + armState.toString());
   }
