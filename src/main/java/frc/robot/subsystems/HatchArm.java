@@ -72,6 +72,10 @@ public class HatchArm extends Subsystem {
     mHatchIntakeState = HatchIntakeState.ENABLE;
   }
 
+  public boolean hatchOnArmLimit(){
+    return mArmTalon.slaveTalon.getSensorCollection().isRevLimitSwitchClosed();
+  }
+
   public void changeSafety() {
     if (mArmSafety) {
       CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));

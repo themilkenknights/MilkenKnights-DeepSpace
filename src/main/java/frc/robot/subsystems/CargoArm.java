@@ -191,9 +191,11 @@ public class CargoArm extends Subsystem {
   }
 
   public enum CargoArmState {
-    ENABLE(0), //State directly after robot is enabled (not mapped to a specific angle)
-    OPPOSITE_SWITCH_PLACE(78.5), //Outtakes into the switch on the backside of the robot
-    SECOND_SWITCH_PLACE(219.5);
+    ENABLE(0.0), //State directly after robot is enabled (not mapped to a specific angle)
+    INTAKE(150.0),
+    STOW(80.0),
+    PLACE(100.0), //Outtakes into the switch on the backside of the robot
+    PLACE_REVERSE(30.0);
 
     public final double state;
 

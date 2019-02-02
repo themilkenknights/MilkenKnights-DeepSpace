@@ -31,7 +31,6 @@ import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.paths.DriveMotionPlanner;
 import frc.robot.paths.Kinematics;
 import frc.robot.paths.RobotState;
-import frc.robot.subsystems.HatchArm.HatchMechanismState;
 
 public class Drive extends Subsystem {
 
@@ -128,13 +127,7 @@ public class Drive extends Subsystem {
 
   private void updateVision() {
     double deltaAvg = Math.abs(initial_vision_encoder_avg - getAvgEncoderDist());
-    if (leftDrive.masterTalon.getSensorCollection().isFwdLimitSwitchClosed()) {
-      isVisionDone = true;
-      setOpenLoop(DriveSignal.BRAKE);
-      initial_vision_dist_ = 0;
-      initial_vision_encoder_avg = 0;
-      HatchArm.getInstance().setHatchMechanismState(HatchMechanismState.STOWED);
-    } else if ((deltaAvg / initial_vision_dist_) < 0.75) {
+    if ((deltaAvg - initial_vision_dist_) > 20) {
       LimelightTarget target = Vision.getInstance().getAverageTarget();
       double dist = MkMath.InchesToNativeUnits(VISION.visionDistMap.getInterpolated(new InterpolatingDouble(target.getArea())).value);
       double steering_adjust = DRIVE.kVisionTurnP * target.getXOffset();
@@ -146,6 +139,7 @@ public class Drive extends Subsystem {
       setOpenLoop(new DriveSignal(0.25, 0.25));
     }
   }
+
 
   private void updateTurnToHeading() {
     final Rotation2d field_to_robot = RobotState.getInstance().getLatestFieldToVehicle().getValue().getRotation();
@@ -334,12 +328,13 @@ Pass the trajectory to the drive motion planner
   }
 
   public void startVisionTracking() {
+    initial_vision_dist_ = 0;
+    initial_vision_encoder_avg = 0;
     LimelightTarget target = Vision.getInstance().getAverageTarget();
     if (target.isValidTarget()) {
       setOpenLoop(DriveSignal.BRAKE);
       mDriveControlState = DriveControlState.VISION_TRACKING;
-      double dist = Constants.VISION.visionDistMap.getInterpolated(new InterpolatingDouble(target.getArea())).value;
-      initial_vision_dist_ = dist;
+      initial_vision_dist_ = Constants.VISION.visionDistMap.getInterpolated(new InterpolatingDouble(target.getArea())).value;
       updateVision();
     }
   }
