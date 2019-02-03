@@ -9,48 +9,48 @@ import java.util.List;
  */
 public class SubsystemManager {
 
-  private final List<Subsystem> mAllSubsystems;
-  private double lastTime = 0;
+	private final List<Subsystem> mAllSubsystems;
+	private double lastTime = 0;
 
-  public SubsystemManager(List<Subsystem> allSubsystems) {
-    mAllSubsystems = allSubsystems;
-  }
+	public SubsystemManager(List<Subsystem> allSubsystems) {
+		mAllSubsystems = allSubsystems;
+	}
 
-  public void outputToSmartDashboard() {
-    double timestamp_ = Timer.getFPGATimestamp();
-    if (timestamp_ - lastTime >= 0.1) {
-      mAllSubsystems.forEach((s) -> s.outputTelemetry());
-      SmartDashboard.putNumber("Main loop Dt", (timestamp_ - lastTime) * 1e3);
-    }
-    lastTime = timestamp_;
-  }
+	public void outputToSmartDashboard() {
+		double timestamp_ = Timer.getFPGATimestamp();
+		if (timestamp_ - lastTime >= 0.1) {
+			mAllSubsystems.forEach((s) -> s.outputTelemetry());
+			SmartDashboard.putNumber("Main loop Dt", (timestamp_ - lastTime) * 1e3);
+		}
+		lastTime = timestamp_;
+	}
 
-  public void onLoop() {
-    double timestamp_ = Timer.getFPGATimestamp();
-    for (Subsystem subsystem : mAllSubsystems) {
-      subsystem.readPeriodicInputs(timestamp_);
-      subsystem.onLoop(timestamp_);
-      subsystem.writePeriodicOutputs(timestamp_);
-    }
-  }
+	public void onLoop() {
+		double timestamp_ = Timer.getFPGATimestamp();
+		for (Subsystem subsystem : mAllSubsystems) {
+			subsystem.readPeriodicInputs(timestamp_);
+			subsystem.onLoop(timestamp_);
+			subsystem.writePeriodicOutputs(timestamp_);
+		}
+	}
 
-  public void zero() {
-    double timestamp_ = Timer.getFPGATimestamp();
-    for (Subsystem subsystem : mAllSubsystems) {
-      subsystem.zero(timestamp_);
-    }
-  }
+	public void zero() {
+		double timestamp_ = Timer.getFPGATimestamp();
+		for (Subsystem subsystem : mAllSubsystems) {
+			subsystem.zero(timestamp_);
+		}
+	}
 
-  public void stop() {
-    double timestamp_ = Timer.getFPGATimestamp();
-    for (Subsystem subsystem : mAllSubsystems) {
-      subsystem.onStop(timestamp_);
-    }
-  }
+	public void stop() {
+		double timestamp_ = Timer.getFPGATimestamp();
+		for (Subsystem subsystem : mAllSubsystems) {
+			subsystem.onStop(timestamp_);
+		}
+	}
 
-  public void checkSystem() {
-    for (Subsystem subsystem : mAllSubsystems) {
-      subsystem.checkSystem();
-    }
-  }
+	public void checkSystem() {
+		for (Subsystem subsystem : mAllSubsystems) {
+			subsystem.checkSystem();
+		}
+	}
 }

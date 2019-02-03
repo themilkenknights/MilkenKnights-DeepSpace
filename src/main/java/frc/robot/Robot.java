@@ -23,107 +23,107 @@ import java.util.Arrays;
 
 public class Robot extends TimedRobot {
 
-  public static MatchState mMatchState = MatchState.DISABLED;
-  private final SubsystemManager mSubsystemManager = new SubsystemManager(
-      Arrays.asList(Drive.getInstance(), HatchArm.getInstance(), CargoArm.getInstance(),
-          Superstructure.getInstance(), Vision.getInstance()));
+	public static MatchState mMatchState = MatchState.DISABLED;
+	private final SubsystemManager mSubsystemManager = new SubsystemManager(
+			Arrays.asList(Drive.getInstance(), HatchArm.getInstance(), CargoArm.getInstance(),
+					Superstructure.getInstance(), Vision.getInstance()));
 
-  //TODO Check All Switch Statements
+	//TODO Check All Switch Statements
 
-  protected Robot() {
-    super(Constants.GENERAL.kLoopDt);
-    Logger.logRobotConstruction();
-  }
+	protected Robot() {
+		super(Constants.GENERAL.kLoopDt);
+		Logger.logRobotConstruction();
+	}
 
-  @Override
-  public void robotInit() {
-    try {
-      Logger.logRobotInit();
-      mMatchState = MatchState.DISABLED;
-      mSubsystemManager.zero();
-      TrajectoryGenerator.getInstance().generateTrajectories();
-      Shuffleboard.startRecording();
-    } catch (Throwable t) {
-      Logger.logThrowableCrash(t);
-      throw t;
-    }
-  }
+	@Override
+	public void robotInit() {
+		try {
+			Logger.logRobotInit();
+			mMatchState = MatchState.DISABLED;
+			mSubsystemManager.zero();
+			TrajectoryGenerator.getInstance().generateTrajectories();
+			Shuffleboard.startRecording();
+		} catch (Throwable t) {
+			Logger.logThrowableCrash(t);
+			throw t;
+		}
+	}
 
-  @Override
-  public void disabledInit() {
-    try {
-      Logger.logDisabledInit();
-      mMatchState = MatchState.DISABLED;
-      AutoChooser.disableAuto();
-      mSubsystemManager.stop();
-    } catch (Throwable t) {
-      Logger.logThrowableCrash(t);
-      throw t;
-    }
-  }
+	@Override
+	public void disabledInit() {
+		try {
+			Logger.logDisabledInit();
+			mMatchState = MatchState.DISABLED;
+			AutoChooser.disableAuto();
+			mSubsystemManager.stop();
+		} catch (Throwable t) {
+			Logger.logThrowableCrash(t);
+			throw t;
+		}
+	}
 
-  @Override
-  public void autonomousInit() {
-    try {
-      Logger.logAutoInit();
-      mMatchState = MatchState.AUTO;
-      mSubsystemManager.zero();
-      RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
-      AutoChooser.startAuto();
-    } catch (Throwable t) {
-      Logger.logThrowableCrash(t);
-      throw t;
-    }
-  }
+	@Override
+	public void autonomousInit() {
+		try {
+			Logger.logAutoInit();
+			mMatchState = MatchState.AUTO;
+			mSubsystemManager.zero();
+			RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
+			AutoChooser.startAuto();
+		} catch (Throwable t) {
+			Logger.logThrowableCrash(t);
+			throw t;
+		}
+	}
 
-  @Override
-  public void teleopInit() {
-    try {
-      Logger.logTeleopInit();
-      mMatchState = MatchState.TELEOP;
-    } catch (Throwable t) {
-      Logger.logThrowableCrash(t);
-      throw t;
-    }
-  }
+	@Override
+	public void teleopInit() {
+		try {
+			Logger.logTeleopInit();
+			mMatchState = MatchState.TELEOP;
+		} catch (Throwable t) {
+			Logger.logThrowableCrash(t);
+			throw t;
+		}
+	}
 
-  @Override
-  public void testInit() {
-    try {
-      mMatchState = MatchState.TEST;
-      mSubsystemManager.zero();
-      Logger.logMarker("Starting check systems.");
-      mSubsystemManager.checkSystem();
-      mSubsystemManager.stop();
-    } catch (Throwable t) {
-      Logger.logThrowableCrash(t);
-      throw t;
-    }
-  }
+	@Override
+	public void testInit() {
+		try {
+			mMatchState = MatchState.TEST;
+			mSubsystemManager.zero();
+			Logger.logMarker("Starting check systems.");
+			mSubsystemManager.checkSystem();
+			mSubsystemManager.stop();
+		} catch (Throwable t) {
+			Logger.logThrowableCrash(t);
+			throw t;
+		}
+	}
 
-  @Override
-  public void robotPeriodic() {
-    try {
-      mSubsystemManager.outputToSmartDashboard();
-      RobotState.getInstance().outputToSmartDashboard();
-    } catch (Throwable t) {
-      Logger.logThrowableCrash(t);
-      throw t;
-    }
-  }
+	@Override
+	public void robotPeriodic() {
+		try {
+			mSubsystemManager.outputToSmartDashboard();
+			RobotState.getInstance().outputToSmartDashboard();
+		} catch (Throwable t) {
+			Logger.logThrowableCrash(t);
+			throw t;
+		}
+	}
 
-  @Override
-  public void autonomousPeriodic() {
-    mSubsystemManager.onLoop();
-  }
+	@Override
+	public void autonomousPeriodic() {
+		mSubsystemManager.onLoop();
+	}
 
-  @Override
-  public void teleopPeriodic() {
-    mSubsystemManager.onLoop();
-    Input.updateDriveInput();
-  }
+	@Override
+	public void teleopPeriodic() {
+		mSubsystemManager.onLoop();
+		Input.updateDriveInput();
+	}
 
-  public enum MatchState {
-    AUTO, TELEOP, DISABLED, TEST
-  }
+	public enum MatchState {
+		AUTO, TELEOP, DISABLED, TEST
+	}
 }

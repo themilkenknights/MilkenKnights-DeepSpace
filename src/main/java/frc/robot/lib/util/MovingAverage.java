@@ -8,51 +8,51 @@ import java.util.ArrayList;
  */
 public class MovingAverage {
 
-  ArrayList<LimelightTarget> targets = new ArrayList<LimelightTarget>();
-  int maxSize;
+	ArrayList<LimelightTarget> targets = new ArrayList<LimelightTarget>();
+	int maxSize;
 
-  public MovingAverage(int maxSize) {
-    this.maxSize = maxSize;
-  }
+	public MovingAverage(int maxSize) {
+		this.maxSize = maxSize;
+	}
 
-  public void addNumber(LimelightTarget newNumber) {
-    targets.add(newNumber);
-    if (targets.size() > maxSize) {
-      targets.remove(0);
-    }
-  }
+	public void addNumber(LimelightTarget newNumber) {
+		targets.add(newNumber);
+		if (targets.size() > maxSize) {
+			targets.remove(0);
+		}
+	}
 
-  public LimelightTarget getAverage() {
-    boolean validTarget = true;
-    double totalX = 0;
-    double totalY = 0;
-    double totalArea = 0;
-    double totalCaptureTime = 0;
+	public LimelightTarget getAverage() {
+		boolean validTarget = true;
+		double totalX = 0;
+		double totalY = 0;
+		double totalArea = 0;
+		double totalCaptureTime = 0;
 
-    for (LimelightTarget target : targets) {
-      validTarget = target.isValidTarget() && validTarget;
-      totalX += target.getXOffset();
-      totalY += target.getYOffset();
-      totalArea += target.getArea();
-      totalCaptureTime += target.getCaptureTime();
-    }
+		for (LimelightTarget target : targets) {
+			validTarget = target.isValidTarget() && validTarget;
+			totalX += target.getXOffset();
+			totalY += target.getYOffset();
+			totalArea += target.getArea();
+			totalCaptureTime += target.getCaptureTime();
+		}
 
-    LimelightTarget avgTarget = new LimelightTarget(validTarget, totalX / targets.size(),
-        totalY / targets.size(), totalArea / targets.size(),
-        totalCaptureTime / targets.size());
+		LimelightTarget avgTarget = new LimelightTarget(validTarget, totalX / targets.size(),
+				totalY / targets.size(), totalArea / targets.size(),
+				totalCaptureTime / targets.size());
 
-    return avgTarget;
-  }
+		return avgTarget;
+	}
 
-  public boolean isUnderMaxSize() {
-    return getSize() < maxSize;
-  }
+	public boolean isUnderMaxSize() {
+		return getSize() < maxSize;
+	}
 
-  public int getSize() {
-    return targets.size();
-  }
+	public int getSize() {
+		return targets.size();
+	}
 
-  public void clear() {
-    targets.clear();
-  }
+	public void clear() {
+		targets.clear();
+	}
 }
