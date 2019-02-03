@@ -39,7 +39,6 @@ public class IntegrationTest {
     assertFalse(smooth_path.isEmpty());
     System.out.println(smooth_path.toCSV());
     // Time parameterize the path subject to our dynamic constraints.
-    // TODO
   }
 
   @Test

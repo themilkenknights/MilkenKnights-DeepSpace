@@ -16,7 +16,7 @@ public abstract class AutoModeBase {
     try {
       routine();
     } catch (AutoModeEndedException e) {
-      Logger.logError("AUTO MODE DONE!!!! ENDED EARLY!!!!");
+      Logger.logCriticalError("AUTO MODE DONE!!!! ENDED EARLY!!!!");
       return;
     }
     done();

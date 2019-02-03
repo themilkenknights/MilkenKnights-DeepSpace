@@ -16,4 +16,13 @@ public class MkGyro extends AHRS {
     }
     return a;
   }
+
+  /**
+   * @return Fused Heading from -180deg to 180deg
+   * TODO Verify method
+   */
+  public double getFusedNormalized() {
+    double heading = getFusedHeading();
+    return heading < 180.0 ? -heading : -(heading - 360.0);
+  }
 }

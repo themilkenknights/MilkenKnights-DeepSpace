@@ -22,6 +22,7 @@ public final class Constants {
     public static final double kLoopDt = 0.01;
     public static final double PI = 3.14159265359;
     public static final double kTicksPerRev = 4096.0;
+
   }
 
   public static class CAN {
@@ -54,14 +55,15 @@ public final class Constants {
     public static final double kWheelDiameter = 6.0;
     public static final double kCircumference = kWheelDiameter * GENERAL.PI;
     public static final double kDriveWheelRadiusInches = kWheelDiameter / 2.0;
-    // Tuned dynamics
+
+    // Tuned dynamics TODO Tune All Drive Params on Carpet
     public static final double kRobotLinearInertia = 26.30; //Kg
-    public static final double kRobotAngularInertia = 4.4;  // Kg m^2 TODO tune
-    public static final double kRobotAngularDrag = 6.0;  // N*m / (rad/sec) TODO tune
+    public static final double kRobotAngularInertia = 4.4;  // Kg m^2
+    public static final double kRobotAngularDrag = 6.0;  // N*m / (rad/sec)
     public static final double kDriveVIntercept = 1.07832;  // V
     public static final double kDriveKv = 0.5858;  // V per rad/s
     public static final double kDriveKa = 0.012;  // V per rad/s^2
-    public static final double kTrackScrubFactor = 1.0;  // TODO tune
+    public static final double kTrackScrubFactor = 1.0;
     //Pure Pursuit Params
     public static final double kPathKX = 4.0;  // units/s per unit of error
     public static final double kPathLookaheadTime = 0.4;  // seconds to look ahead along the path for steering

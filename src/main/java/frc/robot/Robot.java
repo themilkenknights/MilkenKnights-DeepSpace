@@ -28,6 +28,8 @@ public class Robot extends TimedRobot {
       Arrays.asList(Drive.getInstance(), HatchArm.getInstance(), CargoArm.getInstance(),
           Superstructure.getInstance(), Vision.getInstance()));
 
+  //TODO Check All Switch Statements
+
   protected Robot() {
     super(Constants.GENERAL.kLoopDt);
     Logger.logRobotConstruction();

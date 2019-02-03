@@ -13,12 +13,12 @@ import java.util.ArrayList;
 
 public class Vision extends Subsystem {
 
+  private static final int blockSignature = 1;
+  private static ArrayList<Block> blocks = null;
   private LimeLight limeLight;
   private MovingAverage mThrottleAverage = new MovingAverage(3);
   private boolean usePixy = false;
   private Pixy2 pixy = null;
-  private static ArrayList<Block> blocks = null;
-  private static final int blockSignature = 1;
 
   private Vision() {
 

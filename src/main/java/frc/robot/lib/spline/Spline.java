@@ -27,6 +27,6 @@ public abstract class Spline {
   public abstract Translation2d getPoint(double t);
 
   public abstract Rotation2d getHeading(double t);
-  // TODO add toString
+  // add toString
   // public abstract String toString();
 }

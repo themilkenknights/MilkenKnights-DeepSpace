@@ -28,7 +28,6 @@ public class DifferentialDriveDynamicsConstraint<S extends IPose2d<S> & ICurvatu
 
   @Override
   public MinMaxAcceleration getMinMaxAcceleration(S state, double velocity) {
-    // TODO figure out a units convention for generic states.  Traditionally we use inches...
     // NOTE: units cancel on angular velocity.
     DifferentialDrive.MinMax min_max = drive_
         .getMinMaxAcceleration(new DifferentialDrive.ChassisState(Units.inches_to_meters(velocity),

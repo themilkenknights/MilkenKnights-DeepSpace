@@ -7,7 +7,7 @@ public class CT {
 
   public static void RE(ErrorCode errorCode) {
     if (errorCode != ErrorCode.OK) {
-      Logger.logError(errorCode.toString());
+      Logger.logCriticalError(errorCode.toString());
     }
   }
 

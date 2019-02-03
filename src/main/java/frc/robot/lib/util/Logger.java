@@ -51,6 +51,11 @@ public class Logger {
     DriverStation.reportError(mark, false);
   }
 
+  public static synchronized void logCriticalError(String mark) {
+    logMarker(mark, null);
+    DriverStation.reportError(mark, true);
+  }
+
   public static synchronized void logThrowableCrash(Throwable throwable) {
     logCrashMarker("Exception", throwable);
   }

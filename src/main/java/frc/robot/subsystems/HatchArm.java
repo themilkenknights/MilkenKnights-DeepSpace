@@ -23,7 +23,7 @@ public class HatchArm extends Subsystem {
   private static HatchMechanismState mHatchMechanismState = HatchMechanismState.STOWED;
 
   private final MkTalon mArmTalon;
-  public HatchArmState mHatchArmState;
+  private HatchArmState mHatchArmState;
   private Solenoid mArmSolenoid;
   private boolean mArmSafety, mDisCon = false;
   private double mStartDis, mOpenLoopSetpoint, mArmPosEnable, mTransferTime = 0.0;
@@ -50,7 +50,7 @@ public class HatchArm extends Subsystem {
         mDisCon = true;
         mStartDis = Timer.getFPGATimestamp();
       }
-      Logger.logError("Arm Encoder Not Connected");
+      Logger.logCriticalError("Arm Encoder Not Connected");
     } else {
       if (mDisCon) {
         mDisCon = false;
@@ -62,7 +62,7 @@ public class HatchArm extends Subsystem {
     }
 
     if (mArmTalon.getCurrent() > CARGO_ARM.MAX_SAFE_CURRENT) {
-      Logger.logError("Unsafe Current " + mArmTalon.getCurrent() + " Amps");
+      Logger.logCriticalError("Unsafe Current " + mArmTalon.getCurrent() + " Amps");
       setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
     }
   }
@@ -72,7 +72,7 @@ public class HatchArm extends Subsystem {
     mHatchIntakeState = HatchIntakeState.ENABLE;
   }
 
-  public boolean hatchOnArmLimit(){
+  public boolean hatchOnArmLimit() {
     return mArmTalon.slaveTalon.getSensorCollection().isRevLimitSwitchClosed();
   }
 
@@ -105,7 +105,7 @@ public class HatchArm extends Subsystem {
         mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mHatchIntakeState.state), NeutralMode.Brake, 0.0);
       }
     } else {
-      Logger.logError("Unexpected arm control state: " + mHatchIntakeControlState);
+      Logger.logCriticalError("Unexpected arm control state: " + mHatchIntakeControlState);
     }
   }
 
@@ -159,7 +159,7 @@ public class HatchArm extends Subsystem {
           }
           break;
         default:
-          Logger.logError("Unexpected drive control state: " + mHatchMechanismState);
+          Logger.logCriticalError("Unexpected drive control state: " + mHatchMechanismState);
           break;
       }
 
@@ -186,7 +186,7 @@ public class HatchArm extends Subsystem {
     if (mArmSafety) {
       setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
     } else {
-      Logger.logError("Failed to set Arm Open Loop Ouput: Arm Safety Not Enabled");
+      Logger.logCriticalError("Failed to set Arm Open Loop Ouput: Arm Safety Not Enabled");
     }
   }
 
@@ -204,7 +204,7 @@ public class HatchArm extends Subsystem {
       setHatchIntakeControlState(HatchIntakeControlState.MOTION_MAGIC);
       mHatchIntakeState = state;
     } else {
-      Logger.logError("Failed to set Arm State: Arm Safety Enabled");
+      Logger.logCriticalError("Failed to set Arm State: Arm Safety Enabled");
     }
   }
 
@@ -225,7 +225,7 @@ public class HatchArm extends Subsystem {
         setHatchArmPosition(HatchArmState.PLACE);
         setHatchIntakePosition(HatchIntakeState.STOW_POINT);
       default:
-        Logger.logError("Unexpected Hatch Mechanism: " + mHatchMechanismState);
+        Logger.logCriticalError("Unexpected Hatch Mechanism: " + mHatchMechanismState);
         break;
     }
     mHatchMechanismState = state;
