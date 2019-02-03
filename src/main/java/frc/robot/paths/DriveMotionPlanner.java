@@ -165,6 +165,7 @@ public class DriveMotionPlanner implements CSVWritable {
               new DifferentialDrive.ChassisState(acceleration_m,
                   acceleration_m * curvature_m + velocity_m * velocity_m * dcurvature_ds_m));
       mError = current_state.inverse().transformBy(mSetpoint.state().getPose());
+      //TODO Choose Mode
       //mOutput = updateNonlinearFeedback(dynamics, current_state);
       mOutput = updatePurePursuit(dynamics, current_state);
     } else {
