@@ -56,7 +56,7 @@ public class Drive extends Subsystem {
   }
 
 
-  /*
+  /**
   Step 1: Read inputs from Talon and NavX
    */
   @Override
@@ -120,7 +120,7 @@ public class Drive extends Subsystem {
   /*
   Update Shuffleboard and Log to CSV
    */
-  public void outputTelemetry() {
+  public synchronized void outputTelemetry() {
     leftDrive.updateSmartDash(false);
     rightDrive.updateSmartDash(false);
     SmartDashboard.putString("Drive State", mDriveControlState.toString());
@@ -160,7 +160,7 @@ public class Drive extends Subsystem {
   /*
   Update path setpoints and parameters
    */
-  private void updatePathFollower() {
+  private synchronized void updatePathFollower() {
     if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
       final double now = Timer.getFPGATimestamp();
       DriveMotionPlanner.Output output = mMotionPlanner
@@ -189,7 +189,7 @@ public class Drive extends Subsystem {
    * @param signal Left/Right Position in inches
    * @param feedforward Left/Right arbitrary feedforward (Percent Output, [-1,1])
    */
-  public void updateMotionMagicPositionSetpoint(DriveSignal signal, DriveSignal feedforward) {
+  public synchronized void updateMotionMagicPositionSetpoint(DriveSignal signal, DriveSignal feedforward) {
     if (mDriveControlState != DriveControlState.MOTION_MAGIC) {
       Logger.logMarker("Switching to Motion Magic");
       mDriveControlState = DriveControlState.MOTION_MAGIC;
@@ -248,7 +248,7 @@ public class Drive extends Subsystem {
   /**
    * @param angle Angle to turn to in degrees (0-360)
    */
-  public void updateTurnToHeading(double angle) {
+  public synchronized void updateTurnToHeading(double angle) {
     final Rotation2d field_to_robot = RobotState.getInstance().getLatestFieldToVehicle().getValue().getRotation();
     // Figure out the rotation necessary to turn to face the goal.
     final Rotation2d robot_to_target = field_to_robot.inverse().rotateBy(Rotation2d.fromDegrees(angle));
@@ -303,7 +303,7 @@ public class Drive extends Subsystem {
     }
   }
 
-  private boolean driveStatus() {
+  private synchronized boolean driveStatus() {
     return leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected() && navX.isConnected();
   }
 

@@ -63,7 +63,7 @@ public class MkTalon {
    * each parameter is set correctly. Errors will appear on the Driver Station and will be logged to disk if a config() method return an error Every
    * position except for the Hatch Arm has a Talon and a Victor. The Hatch Arm has two Talons.
    */
-  public void resetConfig() {
+  public synchronized void resetConfig() {
     CTRE(masterTalon.configFactoryDefault(kLong));
     if (mSide == TalonLoc.Left_Drive) {
       CTRE(masterTalon.config_kF(kSlot, Constants.DRIVE.kLeftDriveF, kLong));
@@ -209,7 +209,7 @@ public class MkTalon {
     }
   }
 
-  public void zeroEncoder() {
+  public synchronized void zeroEncoder() {
     if (mSide == TalonLoc.Left_Drive || mSide == TalonLoc.Right_Drive) {
       CTRE(masterTalon.setSelectedSensorPosition(0, kSlot, kShort));
     } else if (mSide == TalonLoc.CargoArm) {
@@ -223,7 +223,7 @@ public class MkTalon {
     }
   }
 
-  public void updateSmartDash(boolean showRPM) {
+  public synchronized void updateSmartDash(boolean showRPM) {
     if (showRPM) {
       double rp = (((masterTalon.getSelectedSensorVelocity(0)) / 4096.0) * 60 * 10);
       mMaxRPM = mMaxRPM > rp ? mMaxRPM : rp;

@@ -4,13 +4,10 @@ import frc.robot.lib.util.DriveSignal;
 
 public class VisionState {
 
+  public static VisionState EMPTY = new VisionState(DriveSignal.BRAKE, LimelightTarget.EMPTY, 0.0);
   private DriveSignal mDriveSignal;
-
-
-
   private LimelightTarget mTarget;
   private double mYaw;
-  public static VisionState EMPTY = new VisionState(DriveSignal.BRAKE, LimelightTarget.EMPTY, 0.0);
 
   public VisionState(DriveSignal mDriveSignal, LimelightTarget mTarget, double mYaw) {
     this.mDriveSignal = mDriveSignal;

@@ -18,7 +18,7 @@ public class SubsystemManager {
 
   public void outputToSmartDashboard() {
     double timestamp_ = Timer.getFPGATimestamp();
-    if (timestamp_ - lastTime >= 0.05) {
+    if (timestamp_ - lastTime >= 0.1) {
       mAllSubsystems.forEach((s) -> s.outputTelemetry());
       SmartDashboard.putNumber("Main loop Dt", (timestamp_ - lastTime) * 1e3);
     }
