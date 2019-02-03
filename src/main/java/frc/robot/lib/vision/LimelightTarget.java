@@ -21,7 +21,7 @@ public class LimelightTarget {
 		this.yOffset = yOffset;
 		this.area = area;
 		this.captureTime = captureTime;
-		this.distance = VISION.visionDistMap.getInterpolated(new InterpolatingDouble(getArea())).value;
+		this.distance = VISION.kAreaToDistVisionMap.getInterpolated(new InterpolatingDouble(getArea())).value;
 	}
 
 	public LimelightTarget(boolean validTarget, double xOffset, double yOffset, double horizLength, double vertLength, double captureTime) {

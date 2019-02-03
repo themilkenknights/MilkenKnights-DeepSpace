@@ -178,15 +178,16 @@ public final class Constants {
 
 	public static class VISION {
 
-		public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> visionDistMap = new InterpolatingTreeMap<>();
+		public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> kAreaToDistVisionMap = new InterpolatingTreeMap<>();
+
 
 		static {
-			VISION.visionDistMap.put(new InterpolatingDouble(38440.0), new InterpolatingDouble(12.75));
-			VISION.visionDistMap.put(new InterpolatingDouble(1392.0), new InterpolatingDouble(23.0));
-			VISION.visionDistMap.put(new InterpolatingDouble(7208.0), new InterpolatingDouble(33.0));
-			VISION.visionDistMap.put(new InterpolatingDouble(3610.0), new InterpolatingDouble(46.75));
-			VISION.visionDistMap.put(new InterpolatingDouble(1742.0), new InterpolatingDouble(66.0));
-			VISION.visionDistMap.put(new InterpolatingDouble(782.0), new InterpolatingDouble(96.0));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(38440.0), new InterpolatingDouble(12.75));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1392.0), new InterpolatingDouble(23.0));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(7208.0), new InterpolatingDouble(33.0));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(3610.0), new InterpolatingDouble(46.75));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1742.0), new InterpolatingDouble(66.0));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(782.0), new InterpolatingDouble(96.0));
 		}
 	}
 

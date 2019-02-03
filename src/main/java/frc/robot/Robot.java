@@ -28,7 +28,7 @@ public class Robot extends TimedRobot {
 			Arrays.asList(Drive.getInstance(), HatchArm.getInstance(), CargoArm.getInstance(),
 					Superstructure.getInstance(), Vision.getInstance()));
 
-	//TODO Check All Switch Statements
+	//TODO Check All Switch Statements for breaks
 
 	protected Robot() {
 		super(Constants.GENERAL.kLoopDt);
