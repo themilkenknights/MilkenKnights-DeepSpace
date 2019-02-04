@@ -123,7 +123,7 @@ public final class Constants {
 		public static final double kHatchArmVel = 140;
 		public static final double kHatchArmCurrent = 140;
 		public static final double kHatchArmPos = 140;
-		
+
 	}
 
 	public static class CARGO_ARM {
@@ -167,18 +167,19 @@ public final class Constants {
 		public static final boolean ARM_SENSOR_PHASE = false;
 		public static final boolean ARM_MASTER_DIRECTION = false;
 		public static final boolean ARM_SLAVE_DIRECTION = true;
-		public static final boolean LEFT_INTAKE_DIRECTION = true;
-		public static final boolean RIGHT_INTAKE_DIRECTION = false;
 
 		public static final double MAX_RAW_VEL = 243.029333333;
-		public static final double ARM_P = 22 * ((0.1 * 1023.0) / (1600)); //7.5 deg or 1390 units
+		public static final double ARM_P = 22 * ((0.1 * 1023.0) / (1600));
 		public static final double ARM_I = 0;
 		public static final double ARM_D = ARM_P * 52;
 		public static final double ARM_F = (1023.0 / MAX_RAW_VEL);
+
 		public static final double ARM_FORWARD_LIMIT = 100;
 		public static final double ARM_REVERSE_LIMIT = 0;
+
 		public static final double kMotionMagicCruiseVel = MAX_RAW_VEL;
 		public static final double kMotionMagicAccel = MAX_RAW_VEL * 10;
+
 		public static final double kMaxSafeCurrent = 40;
 
 		public static final int kBookEnd_0 = kIsPracticeBot ? 827 : 827;
@@ -197,7 +198,6 @@ public final class Constants {
 	public static class VISION {
 
 		public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> kAreaToDistVisionMap = new InterpolatingTreeMap<>();
-		public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> kDistToCargoArmAngleVisionMap = new InterpolatingTreeMap<>();
 
 
 		static {
@@ -207,11 +207,6 @@ public final class Constants {
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(3610.0), new InterpolatingDouble(46.75));
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1742.0), new InterpolatingDouble(66.0));
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(782.0), new InterpolatingDouble(96.0));
-
-			VISION.kDistToCargoArmAngleVisionMap.put(new InterpolatingDouble(15.0), new InterpolatingDouble(10.0));
-			VISION.kDistToCargoArmAngleVisionMap.put(new InterpolatingDouble(15.0), new InterpolatingDouble(10.0));
-			VISION.kDistToCargoArmAngleVisionMap.put(new InterpolatingDouble(15.0), new InterpolatingDouble(10.0));
-			VISION.kDistToCargoArmAngleVisionMap.put(new InterpolatingDouble(15.0), new InterpolatingDouble(10.0));
 
 		}
 	}

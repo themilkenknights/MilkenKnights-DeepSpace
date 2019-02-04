@@ -18,6 +18,9 @@ public class MkTime {
 		hasBeenSet = false;
 	}
 
+	public boolean hasBeenSet() {
+		return hasBeenSet;
+	}
 
 	public boolean isDone() {
 		return hasBeenSet && Timer.getFPGATimestamp() - startTime >= timerLength;

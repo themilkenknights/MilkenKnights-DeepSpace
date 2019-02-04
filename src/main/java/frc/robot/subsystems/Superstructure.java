@@ -7,12 +7,14 @@ import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.Constants.CAN;
+import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.DRIVE;
 import frc.robot.Robot;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
+import frc.robot.lib.util.MkTime;
 import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.lib.vision.VisionState;
 import frc.robot.subsystems.CargoArm.CargoArmState;
@@ -29,6 +31,7 @@ public class Superstructure extends Subsystem {
 	private boolean hasHatch, inPosition, startedTurn = false;
 	private VisionState mLastVisionState = VisionState.EMPTY;
 	private double mGoalTurnAngle = 0;
+	private MkTime mRandomTimer = new MkTime();
 
 	private Superstructure() {
 		mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
@@ -110,9 +113,15 @@ public class Superstructure extends Subsystem {
 					startedTurn = true;
 					mGoalTurnAngle = MkMath.normalAbsoluteAngleDegrees(Drive.getInstance().getFused() + 180.0);
 					mDrive.updateTurnToHeading(mGoalTurnAngle);
+					mCargo.setArmState(CargoArmState.PLACE);
 				} else if (!mDrive.isTurnDone() && startedTurn) {
 					mDrive.updateTurnToHeading(mGoalTurnAngle);
-				} else if (mDrive.isTurnDone()) {
+				} else if (mDrive.isTurnDone() && !mRandomTimer.hasBeenSet()) {
+					mRandomTimer.start(0.75);
+					mCargo.setIntakeRollers(CARGO_ARM.INTAKE_OUT_ROLLER_SPEED);
+				} else if (!mRandomTimer.isDone()) {
+					mCargo.setIntakeRollers(CARGO_ARM.INTAKE_OUT_ROLLER_SPEED);
+				} else {
 					setRobotState(RobotState.TELEOP_DRIVE);
 				}
 				break;

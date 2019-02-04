@@ -215,6 +215,22 @@ public class HatchArm extends Subsystem {
 		}
 	}
 
+	/*
+	Move Hatch Arm to Stow or Place
+	 */
+	public synchronized void setHatchArmPosition(HatchArmState armState) {
+		mArmSolenoid.set(armState.state);
+		Logger.logMarker("Set Hatch Arm to " + armState.toString());
+	}
+
+	public HatchArmState getHatchArmState() {
+		return mHatchArmState;
+	}
+
+	public HatchMechanismState getHatchMechanismState() {
+		return mHatchMechanismState;
+	}
+
 	public void setHatchMechanismState(HatchMechanismState state) {
 		switch (state) {
 			case TRANSFER:
@@ -246,22 +262,6 @@ public class HatchArm extends Subsystem {
 				break;
 		}
 		mHatchMechanismState = state;
-	}
-
-	/*
-	Move Hatch Arm to Stow or Place
-	 */
-	public synchronized void setHatchArmPosition(HatchArmState armState) {
-		mArmSolenoid.set(armState.state);
-		Logger.logMarker("Set Hatch Arm to " + armState.toString());
-	}
-
-	public HatchArmState getHatchArmState() {
-		return mHatchArmState;
-	}
-
-	public HatchMechanismState getHatchMechanismState() {
-		return mHatchMechanismState;
 	}
 
 

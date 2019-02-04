@@ -25,6 +25,7 @@ import frc.robot.Constants.HATCH_ARM;
 import frc.robot.Constants.TEST;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.Logger;
+import frc.robot.lib.util.MkTime;
 import frc.robot.lib.util.Util;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmState;
@@ -43,6 +44,7 @@ public class MkTalon {
 	private ControlMode lastControlMode = null;
 	private double lastOutput, lastArbFeed, mMaxRPM = Double.NaN;
 	private NeutralMode lastNeutralMode = null;
+	private MkTime motorSafetyTimer = new MkTime();
 	//TODO see if caching setpoints is allowed
 
 	/**
@@ -130,13 +132,6 @@ public class MkTalon {
 			case CargoIntake:
 				masterTalon.setInverted(CARGO_ARM.LEFT_INTAKE_DIRECTION);
 				slaveVictor.setInverted(CARGO_ARM.RIGHT_INTAKE_DIRECTION);
-				CTRE(slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 1000));
-				CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 10, kLong));
-				CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 1000, kLong));
-				CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 1000, kLong));
-				CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 1000, kLong));
-				CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 1000, kLong));
-				CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 1000, kLong));
 				break;
 			default:
 				Logger.logError("Unknown Side");
@@ -178,19 +173,18 @@ public class MkTalon {
 				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 1000, kLong));
 				CTRE(masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Absolute, kSlot, kLong));
 				CTRE(masterTalon.configSetParameter(ParamEnum.eClearPositionOnLimitF, 0, 0, 0, kLong));
-				CTRE(masterTalon.configSetParameter(ParamEnum.eClearPositionOnLimitR, 0, 0, 0, kLong));
+				CTRE(masterTalon.configSetParameter(ParamEnum.eClearPositionOnLimitR, 1, 0, 0, kLong));
+				//((15 / 60) * (3/1000)) * 360.0
 				zeroEncoder();
 				break;
 			case CargoIntake:
-				masterTalon.setInverted(CARGO_ARM.LEFT_INTAKE_DIRECTION);
-				slaveVictor.setInverted(CARGO_ARM.RIGHT_INTAKE_DIRECTION);
-				CTRE(slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 1000));
-				CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 10, kLong));
-				CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 1000, kLong));
-				CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 1000, kLong));
-				CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 1000, kLong));
-				CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 1000, kLong));
-				CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 1000, kLong));
+				CTRE(masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 10));
+				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 1000, kLong));
+				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 1000, kLong));
+				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 1000, kLong));
+				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 1000, kLong));
+				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 1000, kLong));
+				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 1000, kLong));
 				break;
 			default:
 				Logger.logError("Unknown Side");
@@ -200,7 +194,6 @@ public class MkTalon {
 		//Set Slave Talons/Victors
 		if (mSide == TalonLoc.HatchArm) {
 			//TODO Ensure that I want to zero at limit
-			CTRE(masterTalon.configSetParameter(ParamEnum.eClearPositionOnLimitR, 1, 0, 0, kLong));
 			CTRE(slaveTalon.configFactoryDefault(kLong));
 			CTRE(slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 1000));
 			CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kLong));
@@ -237,6 +230,8 @@ public class MkTalon {
 			CTRE(slaveVictor.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kLeftSlaveCargoArmVictorID, kLong));
 			slaveVictor.setInverted(InvertType.OpposeMaster);
 		}
+
+		motorSafetyTimer.start(0.075);
 	}
 
 	public boolean isEncoderConnected() {
@@ -253,11 +248,12 @@ public class MkTalon {
 			masterTalon.setNeutralMode(nMode);
 			slaveVictor.setNeutralMode(nMode);
 		}
-		if (mode != lastControlMode || value != lastOutput || arbFeed != lastArbFeed) {
+		if (mode != lastControlMode || value != lastOutput || arbFeed != lastArbFeed || motorSafetyTimer.isDone()) {
 			masterTalon.set(mode, value, DemandType.ArbitraryFeedForward, arbFeed);
 			lastOutput = value;
 			lastArbFeed = arbFeed;
 			lastControlMode = mode;
+			motorSafetyTimer.start(0.075);
 		}
 	}
 
@@ -554,6 +550,12 @@ public class MkTalon {
 						+ getPosition() + " Vel: " + getSpeed() : " No Encoder");
 	}
 
+	/**
+	 * Left Drive and Right Drive house the Talon, Victor, and SRX Mag encoder for each side of the drivetrain.
+	 * The hatch Arm houses the ground hatch intake Talon, SRX Mag Encoder, and an unused Talon with a Breakout board with two limit switches.
+	 * One limit switch is placed at the reverse hardstop for the ground intake arm, and the second is placed on the pneumatic peg arm to detect when the main arm is inside the target.
+	 * The Cargo Arm houses the Talon, Victor, and SRX Mag encoder for the main cargo arm.
+	 */
 	public enum TalonLoc {
 		Left_Drive, Right_Drive, HatchArm, CargoArm, CargoIntake
 	}
