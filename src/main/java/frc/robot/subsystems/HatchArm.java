@@ -6,7 +6,6 @@ import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants.CAN;
-import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.HATCH_ARM;
 import frc.robot.lib.drivers.CT;
@@ -15,6 +14,7 @@ import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
+import frc.robot.lib.util.MkTime;
 
 public class HatchArm extends Subsystem {
 
@@ -25,13 +25,15 @@ public class HatchArm extends Subsystem {
 	private final MkTalon mArmTalon;
 	private HatchArmState mHatchArmState;
 	private Solenoid mArmSolenoid;
-	private boolean mArmSafety, mDisCon = false;
-	private double mStartDis, mOpenLoopSetpoint, mArmPosEnable, mTransferTime = 0.0;
+	private boolean mDisCon = false;
+	private double mOpenLoopSetpoint, mArmPosEnable = 0.0;
+	private MkTime mStartDis, mTransferTime;
 
 	private HatchArm() {
 		mArmSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, HATCH_ARM.kHatchArmChannel);
 		mHatchArmState = HatchArmState.STOW;
 		mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kHatchLimitSwitchTalonID, TalonLoc.HatchArm);
+		mStartDis = new MkTime();
 	}
 
 	public static HatchArm getInstance() {
@@ -41,28 +43,28 @@ public class HatchArm extends Subsystem {
 	private void armSafetyCheck() {
 		if (!mArmTalon.isEncoderConnected()) {
 			if (mDisCon) {
-				if (Timer.getFPGATimestamp() - mStartDis > 0.25) {
+				if (mStartDis.isDone()) {
 					setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
 					mDisCon = false;
-					mStartDis = 0;
+					mStartDis.reset();
 				}
 			} else {
 				mDisCon = true;
-				mStartDis = Timer.getFPGATimestamp();
+				mStartDis.start(0.25);
 			}
-			Logger.logCriticalError("Arm Encoder Not Connected");
+			Logger.logCriticalError("Hatch Arm Encoder Not Connected");
 		} else {
 			if (mDisCon) {
 				mDisCon = false;
-				mStartDis = 0;
+				mStartDis.reset();
 				mArmTalon.zeroEncoder();
 				Timer.delay(0.05);
 				setHatchIntakeControlState(HatchIntakeControlState.MOTION_MAGIC);
 			}
 		}
 
-		if (mArmTalon.getCurrent() > CARGO_ARM.MAX_SAFE_CURRENT) {
-			Logger.logCriticalError("Unsafe Current " + mArmTalon.getCurrent() + " Amps");
+		if (mArmTalon.getCurrent() > HATCH_ARM.kMaxSafeCurrent) {
+			Logger.logCriticalError("Unsafe Current on Hatch" + mArmTalon.getCurrent() + " Amps");
 			setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
 		}
 	}
@@ -76,15 +78,18 @@ public class HatchArm extends Subsystem {
 		return mArmTalon.slaveTalon.getSensorCollection().isRevLimitSwitchClosed();
 	}
 
-	public void changeSafety() {
-		if (mArmSafety) {
+	/**
+	 * @param state False for normal operation. True for safety mode.
+	 */
+	public void changeSafety(boolean state) {
+		if (!state) {
+			setHatchMechanismState(HatchMechanismState.UNKNOWN);
 			CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
 			CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
 			setEnable();
-			setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
-			mArmSafety = false;
+			setHatchIntakeControlState(HatchIntakeControlState.MOTION_MAGIC);
 		} else {
-			mArmSafety = true;
+			setHatchMechanismState(HatchMechanismState.MANUAL_OVERRIDE);
 			CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(false, GENERAL.kMediumTimeoutMs));
 			CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(false, GENERAL.kMediumTimeoutMs));
 			setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
@@ -112,9 +117,9 @@ public class HatchArm extends Subsystem {
 	@Override
 	public void outputTelemetry() {
 		mArmTalon.updateSmartDash(false);
-		SmartDashboard.putString("Arm Desired Position", mHatchIntakeState.toString());
-		SmartDashboard.putString("Arm Control Mode", mHatchIntakeControlState.toString());
-		SmartDashboard.putBoolean("Arm Status", mArmTalon.isEncoderConnected());
+		SmartDashboard.putString("Hatch Arm Desired Position", mHatchIntakeState.toString());
+		SmartDashboard.putString("Hatch Arm Control Mode", mHatchIntakeControlState.toString());
+		SmartDashboard.putBoolean("Hatch Arm Status", mArmTalon.isEncoderConnected());
 	}
 
 	@Override
@@ -123,7 +128,7 @@ public class HatchArm extends Subsystem {
 			mArmTalon.zeroEncoder();
 			setEnable();
 			if (mArmTalon.getZer() > GENERAL.kTicksPerRev) {
-				Logger.logMarker("Arm Absolution Position > 4096");
+				Logger.logMarker("Hatch Arm Absolution Position > 4096");
 				setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
 			}
 		}
@@ -151,15 +156,17 @@ public class HatchArm extends Subsystem {
 				case TRANSFER:
 					if (mArmTalon.slaveTalon.getSensorCollection().isRevLimitSwitchClosed()) {
 						setHatchArmPosition(HatchArmState.STOW);
-						mTransferTime = Timer.getFPGATimestamp();
+						mTransferTime.start(0.15);
 					}
-					if (Timer.getFPGATimestamp() - mTransferTime > 0.1) {
+					if (mTransferTime.isDone()) {
 						setHatchMechanismState(HatchMechanismState.STOWED);
-						mTransferTime = 0.0;
+						mTransferTime.reset();
 					}
 					break;
+				case UNKNOWN:
+					break;
 				default:
-					Logger.logCriticalError("Unexpected drive control state: " + mHatchMechanismState);
+					Logger.logCriticalError("Unexpected Hatch Arm control state: " + mHatchMechanismState);
 					break;
 			}
 
@@ -182,14 +189,6 @@ public class HatchArm extends Subsystem {
 		return mArmTalon.checkSystem();
 	}
 
-	public synchronized void setIntakeOpenLoop(double output) {
-		if (mArmSafety) {
-			setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
-		} else {
-			Logger.logCriticalError("Failed to set Arm Open Loop Ouput: Arm Safety Not Enabled");
-		}
-	}
-
 	private void setHatchIntakeControlState(HatchIntakeControlState state) {
 		if (state == HatchIntakeControlState.MOTION_MAGIC && mHatchIntakeControlState != HatchIntakeControlState.MOTION_MAGIC) {
 			setEnable();
@@ -199,12 +198,20 @@ public class HatchArm extends Subsystem {
 		mHatchIntakeControlState = state;
 	}
 
+	public synchronized void setOpenLoop(double output) {
+		if (mHatchIntakeControlState == HatchIntakeControlState.OPEN_LOOP && mHatchMechanismState != HatchMechanismState.MANUAL_OVERRIDE) {
+			mOpenLoopSetpoint = output;
+		} else {
+			Logger.logCriticalError("Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled");
+		}
+	}
+
 	private synchronized void setHatchIntakePosition(HatchIntakeState state) {
-		if (!mArmSafety) {
+		if (mHatchMechanismState != HatchMechanismState.MANUAL_OVERRIDE) {
 			setHatchIntakeControlState(HatchIntakeControlState.MOTION_MAGIC);
 			mHatchIntakeState = state;
 		} else {
-			Logger.logCriticalError("Failed to set Arm State: Arm Safety Enabled");
+			Logger.logCriticalError("Failed to set Arm State: Manual Override Enabled");
 		}
 	}
 
@@ -212,18 +219,28 @@ public class HatchArm extends Subsystem {
 		switch (state) {
 			case TRANSFER:
 				setHatchIntakePosition(HatchIntakeState.TRANSFER_POINT);
+				break;
 			case GROUND_INTAKE:
 				setHatchIntakePosition(HatchIntakeState.INTAKE_POINT);
 				setHatchArmPosition(HatchArmState.STOW);
+				break;
 			case STOWED:
 				setHatchArmPosition(HatchArmState.STOW);
 				setHatchIntakePosition(HatchIntakeState.STOW_POINT);
+				break;
 			case STATION_INTAKE:
 				setHatchArmPosition(HatchArmState.PLACE);
 				setHatchIntakePosition(HatchIntakeState.STOW_POINT);
+				break;
 			case PLACING:
 				setHatchArmPosition(HatchArmState.PLACE);
 				setHatchIntakePosition(HatchIntakeState.STOW_POINT);
+				break;
+			case MANUAL_OVERRIDE:
+				changeSafety(true);
+				break;
+			case UNKNOWN:
+				break;
 			default:
 				Logger.logCriticalError("Unexpected Hatch Mechanism: " + mHatchMechanismState);
 				break;
@@ -234,9 +251,17 @@ public class HatchArm extends Subsystem {
 	/*
 	Move Hatch Arm to Stow or Place
 	 */
-	private synchronized void setHatchArmPosition(HatchArmState armState) {
+	public synchronized void setHatchArmPosition(HatchArmState armState) {
 		mArmSolenoid.set(armState.state);
 		Logger.logMarker("Set Hatch Arm to " + armState.toString());
+	}
+
+	public HatchArmState getHatchArmState() {
+		return mHatchArmState;
+	}
+
+	public HatchMechanismState getHatchMechanismState() {
+		return mHatchMechanismState;
 	}
 
 
@@ -268,7 +293,7 @@ public class HatchArm extends Subsystem {
 	}
 
 	public enum HatchMechanismState {
-		GROUND_INTAKE, TRANSFER, STATION_INTAKE, STOWED, PLACING
+		GROUND_INTAKE, TRANSFER, STATION_INTAKE, STOWED, PLACING, MANUAL_OVERRIDE, UNKNOWN
 	}
 
 

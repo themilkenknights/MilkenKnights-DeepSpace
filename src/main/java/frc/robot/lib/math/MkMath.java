@@ -67,4 +67,8 @@ public class MkMath {
 	public static double nativeUnitsPer100MstoDegreesPerSec(double vel) {
 		return nativeUnitsToDegrees(vel) * 10;
 	}
+
+	public static double normalAbsoluteAngleDegrees(double angle) {
+		return (angle %= 360) >= 0 ? angle : (angle + 360);
+	}
 }

@@ -123,6 +123,11 @@ public class Robot extends TimedRobot {
 		Input.updateDriveInput();
 	}
 
+	@Override
+	public void testPeriodic() {
+		mSubsystemManager.onLoop();
+	}
+
 	public enum MatchState {
 		AUTO, TELEOP, DISABLED, TEST
 	}

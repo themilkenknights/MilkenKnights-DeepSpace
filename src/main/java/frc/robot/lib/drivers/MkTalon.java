@@ -6,7 +6,11 @@ import com.ctre.phoenix.motorcontrol.ControlFrame;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
+import com.ctre.phoenix.motorcontrol.InvertType;
+import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
+import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
+import com.ctre.phoenix.motorcontrol.RemoteLimitSwitchSource;
 import com.ctre.phoenix.motorcontrol.StatusFrameEnhanced;
 import com.ctre.phoenix.motorcontrol.VelocityMeasPeriod;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
@@ -14,6 +18,7 @@ import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
+import frc.robot.Constants.CAN;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.HATCH_ARM;
@@ -73,8 +78,8 @@ public class MkTalon {
 		masterTalon.setNeutralMode(NeutralMode.Brake);
 		CTRE(masterTalon.configNominalOutputForward(0, kLong));
 		CTRE(masterTalon.configNominalOutputReverse(0, kLong));
-		CTRE(masterTalon.configPeakOutputForward(1.0, kLong));
-		CTRE(masterTalon.configPeakOutputReverse(-1.0, kLong));
+		CTRE(masterTalon.configPeakOutputForward(GENERAL.kMaxNominalOutput, kLong));
+		CTRE(masterTalon.configPeakOutputReverse(-GENERAL.kMaxNominalOutput, kLong));
 		CTRE(masterTalon.configVoltageCompSaturation(12.0, kLong));
 		CTRE(masterTalon.configVoltageMeasurementFilter(32, kLong));
 		masterTalon.enableVoltageCompensation(true);
@@ -97,7 +102,6 @@ public class MkTalon {
 			case CargoArm:
 				masterTalon.setSensorPhase(CARGO_ARM.ARM_SENSOR_PHASE);
 				masterTalon.setInverted(CARGO_ARM.ARM_MASTER_DIRECTION);
-				slaveVictor.setInverted(CARGO_ARM.ARM_SLAVE_DIRECTION);
 				CTRE(masterTalon.config_kF(kSlot, CARGO_ARM.ARM_F, kLong));
 				CTRE(masterTalon.config_kP(kSlot, CARGO_ARM.ARM_P, kLong));
 				CTRE(masterTalon.config_kI(kSlot, CARGO_ARM.ARM_I, kLong));
@@ -106,6 +110,8 @@ public class MkTalon {
 				CTRE(masterTalon.configMotionAcceleration((int) CARGO_ARM.MOTION_MAGIC_ACCEL, kLong));
 				CTRE(masterTalon.configForwardSoftLimitThreshold((int) CARGO_ARM.ARM_FORWARD_LIMIT, kLong));
 				CTRE(masterTalon.configReverseSoftLimitThreshold((int) CARGO_ARM.ARM_REVERSE_LIMIT, kLong));
+				CTRE(masterTalon.configReverseLimitSwitchSource(LimitSwitchSource.FeedbackConnector, LimitSwitchNormal.NormallyOpen, kLong));
+				//TODO Ensure that the 'overrideLimitSwitchesEnable()' method is unnecessary
 				break;
 			case HatchArm:
 				masterTalon.setSensorPhase(HATCH_ARM.ARM_SENSOR_PHASE);
@@ -119,6 +125,7 @@ public class MkTalon {
 				CTRE(masterTalon.configMotionAcceleration((int) HATCH_ARM.kMotionMagicAccel, kLong));
 				CTRE(masterTalon.configForwardSoftLimitThreshold((int) HATCH_ARM.ARM_FORWARD_LIMIT, kLong));
 				CTRE(masterTalon.configReverseSoftLimitThreshold((int) HATCH_ARM.ARM_REVERSE_LIMIT, kLong));
+				CTRE(masterTalon.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kHatchLimitSwitchTalonID, kLong));
 				break;
 			case CargoIntake:
 				masterTalon.setInverted(CARGO_ARM.LEFT_INTAKE_DIRECTION);
@@ -190,9 +197,10 @@ public class MkTalon {
 				break;
 		}
 
+		//Set Slave Talons/Victors
 		if (mSide == TalonLoc.HatchArm) {
-			CTRE(masterTalon.configSetParameter(ParamEnum.eClearPositionOnLimitR, 1, 0, 0, kLong));
 			//TODO Ensure that I want to zero at limit
+			CTRE(masterTalon.configSetParameter(ParamEnum.eClearPositionOnLimitR, 1, 0, 0, kLong));
 			CTRE(slaveTalon.configFactoryDefault(kLong));
 			CTRE(slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 1000));
 			CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kLong));
@@ -201,18 +209,33 @@ public class MkTalon {
 			CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 1000, kLong));
 			CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 1000, kLong));
 			CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 1000, kLong));
+			CTRE(slaveTalon.configFactoryDefault(kLong));
+			slaveTalon.setNeutralMode(NeutralMode.Brake);
+			slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5);
+			CTRE(slaveTalon.configNominalOutputForward(0, kLong));
+			CTRE(slaveTalon.configNominalOutputReverse(0, kLong));
+			CTRE(slaveTalon.configPeakOutputForward(GENERAL.kMaxNominalOutput, kLong));
+			CTRE(slaveTalon.configPeakOutputReverse(-GENERAL.kMaxNominalOutput, kLong));
+			CTRE(slaveTalon.configVoltageCompSaturation(12.0, kLong));
+			slaveTalon.enableVoltageCompensation(true);
+			CTRE(slaveTalon.configVoltageMeasurementFilter(32, kLong));
 		} else {
 			CTRE(slaveVictor.configFactoryDefault(kLong));
 			slaveVictor.setNeutralMode(NeutralMode.Brake);
 			slaveVictor.setControlFramePeriod(ControlFrame.Control_3_General, 5);
 			CTRE(slaveVictor.configNominalOutputForward(0, kLong));
 			CTRE(slaveVictor.configNominalOutputReverse(0, kLong));
-			CTRE(slaveVictor.configPeakOutputForward(1.0, kLong));
-			CTRE(slaveVictor.configPeakOutputReverse(-1.0, kLong));
+			CTRE(slaveVictor.configPeakOutputForward(GENERAL.kMaxNominalOutput, kLong));
+			CTRE(slaveVictor.configPeakOutputReverse(-GENERAL.kMaxNominalOutput, kLong));
 			CTRE(slaveVictor.configVoltageCompSaturation(12.0, kLong));
 			slaveVictor.enableVoltageCompensation(true);
 			CTRE(slaveVictor.configVoltageMeasurementFilter(32, kLong));
 			slaveVictor.follow(masterTalon);
+		}
+
+		if (mSide == TalonLoc.CargoArm) {
+			CTRE(slaveVictor.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kLeftSlaveCargoArmVictorID, kLong));
+			slaveVictor.setInverted(InvertType.OpposeMaster);
 		}
 	}
 
@@ -416,6 +439,73 @@ public class MkTalon {
 						Timer.delay(2.0);
 					}
 				}
+
+				Timer.delay(1.0);
+				CargoArm.getInstance().setArmState(CargoArmState.INTAKE);
+				CargoArm.getInstance().setIntakeRollers(0.0);
+				Timer.delay(1.0);
+				masterTalon.set(ControlMode.PercentOutput, 0.0);
+				slaveVictor.set(ControlMode.PercentOutput, -0.3);
+				Timer.delay(1.0);
+				double current = getCurrent();
+				double vel = getSpeed();
+				double pos = getPosition();
+				currents.add(current);
+				velocities.add(vel);
+				positions.add(pos);
+				if (vel < TEST.kMinCargoArmTestVel || pos > TEST.kMinCargoArmTestPos || current > TEST.kMinCargoArmTestCurrent) {
+					Logger.logCriticalError("FAILED - " + mSide.toString() + "Cargo Arm Slave FAILED TO REACH REQUIRED SPEED OR POSITION");
+					Logger.logMarker(mSide.toString() + " Slave Test Failed - Vel: " + vel + " Pos: " + pos + " Current: " + current);
+					check = false;
+				} else {
+					Logger.logMarker(mSide.toString() + " Slave - Vel: " + vel + " Pos: " + pos + " Current: " + current);
+				}
+
+				Timer.delay(1.0);
+				CargoArm.getInstance().setArmState(CargoArmState.INTAKE);
+				CargoArm.getInstance().setIntakeRollers(0.0);
+				Timer.delay(1.0);
+				masterTalon.set(ControlMode.PercentOutput, -0.3);
+				slaveVictor.set(ControlMode.PercentOutput, 0.0);
+				Timer.delay(1.0);
+				current = getCurrent();
+				vel = getSpeed();
+				pos = getPosition();
+				currents.add(current);
+				velocities.add(vel);
+				positions.add(pos);
+				if (vel < TEST.kMinCargoArmTestVel || pos > TEST.kMinCargoArmTestPos || current > TEST.kMinCargoArmTestCurrent) {
+					Logger.logCriticalError("FAILED - " + mSide.toString() + "Cargo Arm Master FAILED TO REACH REQUIRED SPEED OR POSITION");
+					Logger.logMarker(mSide.toString() + " Master Test Failed - Vel: " + vel + " Pos: " + pos + " Current: " + current);
+					check = false;
+				} else {
+					Logger.logMarker(mSide.toString() + " Master - Vel: " + vel + " Pos: " + pos + " Current: " + current);
+				}
+
+				if (currents.size() > 0) {
+					Double average = currents.stream().mapToDouble(val -> val).average().getAsDouble();
+					if (!Util.allCloseTo(currents, average, TEST.kCargoArmCurrentEpsilon)) {
+						Logger.logCriticalError(mSide.toString() + " Currents varied!!!!!!!!!!!");
+						check = true;
+					}
+				}
+
+				if (positions.size() > 0) {
+					Double average = positions.stream().mapToDouble(val -> val).average().getAsDouble();
+					if (!Util.allCloseTo(positions, average, TEST.kCargoArmPosEpsilon)) {
+						Logger.logCriticalError(mSide.toString() + " Positions varied!!!!!!!!");
+						check = true;
+					}
+				}
+
+				if (velocities.size() > 0) {
+					Double average = velocities.stream().mapToDouble(val -> val).average().getAsDouble();
+					if (!Util.allCloseTo(velocities, average, TEST.kCargoArmVelEpsilon)) {
+						Logger.logCriticalError(mSide.toString() + " Velocities varied!!!!!!!!");
+						check = true;
+					}
+				}
+
 				break;
 			case HatchArm:
 				if (!isEncoderConnected()) {
@@ -426,6 +516,21 @@ public class MkTalon {
 					HatchArm.getInstance().setHatchMechanismState(state);
 					Timer.delay(2.0);
 				}
+				HatchArm.getInstance().setHatchMechanismState(HatchMechanismState.GROUND_INTAKE);
+				Timer.delay(1.0);
+				masterTalon.set(ControlMode.PercentOutput, -0.3);
+				Timer.delay(1.0);
+				current = getCurrent();
+				vel = getSpeed();
+				pos = getPosition();
+				if (vel < TEST.kHatchArmVel || current > TEST.kHatchArmCurrent || pos < TEST.kHatchArmPos) {
+					Logger.logCriticalError("FAILED - " + mSide.toString() + "Hatch FAILED TO REACH REQUIRED SPEED OR POSITION");
+					Logger.logMarker(mSide.toString() + " Test Failed - Vel: " + vel + " Pos: " + pos + " Current: " + current);
+					check = false;
+				} else {
+					Logger.logMarker(mSide.toString() + " - Vel: " + vel + " Pos: " + pos + " Current: " + current);
+				}
+
 				break;
 			default:
 				Logger.logError("Can't Check System!!!");

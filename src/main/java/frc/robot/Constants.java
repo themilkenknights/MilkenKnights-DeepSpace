@@ -21,22 +21,30 @@ public final class Constants {
 		public static final double kLoopDt = 0.01;
 		public static final double PI = 3.14159265359;
 		public static final double kTicksPerRev = 4096.0;
+		public static final double kMaxNominalOutput = 1.0;
 
 	}
 
 	public static class CAN {
 
 		public static final int kPneumaticsControlModuleID = 0;
+		public static final int kPowerDistributionPanelID = 11;
+
 		public static final int kDriveLeftMasterTalonID = 5;
 		public static final int kDriveLeftSlaveVictorID = 2;
+
 		public static final int kDriveRightMasterTalonID = 10;
 		public static final int kDriveRightSlaveVictorID = 7;
-		public static final int kPowerDistributionPanelID = 11;
+
 		public static final int kGroundHatchArmTalonID = 9;
+
 		public static final int kHatchLimitSwitchTalonID = 4;
-		public static final int kMasterCargoArmTalonID = 8;
-		public static final int kSlaveCargoArmVictorID = 1;
+
+		public static final int kRightMasterCargoArmTalonID = 8;
+		public static final int kLeftSlaveCargoArmVictorID = 1;
+
 		public static final int kLeftCargoIntakeTalonID = 3;
+
 		public static final int kRightCargoIntakeVictorID = 6;
 	}
 
@@ -105,13 +113,23 @@ public final class Constants {
 		public static final double kDriveVelEpsilon = 2.0;
 		public static final double kDrivePosEpsilon = 2.0;
 
+		public static final double kMinCargoArmTestVel = 140;
+		public static final double kMinCargoArmTestPos = 140;
+		public static final double kMinCargoArmTestCurrent = 5;
+		public static final double kCargoArmCurrentEpsilon = 2.0;
+		public static final double kCargoArmVelEpsilon = 2.0;
+		public static final double kCargoArmPosEpsilon = 2.0;
+
+		public static final double kHatchArmVel = 140;
+		public static final double kHatchArmCurrent = 140;
+		public static final double kHatchArmPos = 140;
+		
 	}
 
 	public static class CARGO_ARM {
 
 		public static final boolean ARM_SENSOR_PHASE = false;
 		public static final boolean ARM_MASTER_DIRECTION = false;
-		public static final boolean ARM_SLAVE_DIRECTION = true;
 		public static final boolean LEFT_INTAKE_DIRECTION = true;
 		public static final boolean RIGHT_INTAKE_DIRECTION = false;
 
@@ -179,6 +197,7 @@ public final class Constants {
 	public static class VISION {
 
 		public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> kAreaToDistVisionMap = new InterpolatingTreeMap<>();
+		public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> kDistToCargoArmAngleVisionMap = new InterpolatingTreeMap<>();
 
 
 		static {
@@ -188,6 +207,12 @@ public final class Constants {
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(3610.0), new InterpolatingDouble(46.75));
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1742.0), new InterpolatingDouble(66.0));
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(782.0), new InterpolatingDouble(96.0));
+
+			VISION.kDistToCargoArmAngleVisionMap.put(new InterpolatingDouble(15.0), new InterpolatingDouble(10.0));
+			VISION.kDistToCargoArmAngleVisionMap.put(new InterpolatingDouble(15.0), new InterpolatingDouble(10.0));
+			VISION.kDistToCargoArmAngleVisionMap.put(new InterpolatingDouble(15.0), new InterpolatingDouble(10.0));
+			VISION.kDistToCargoArmAngleVisionMap.put(new InterpolatingDouble(15.0), new InterpolatingDouble(10.0));
+
 		}
 	}
 

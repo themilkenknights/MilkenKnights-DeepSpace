@@ -27,9 +27,6 @@ import frc.robot.paths.DriveMotionPlanner;
 import frc.robot.paths.Kinematics;
 import frc.robot.paths.RobotState;
 
-/**
- *
- */
 public class Drive extends Subsystem {
 
 	private final MkTalon leftDrive, rightDrive;
@@ -207,7 +204,6 @@ public class Drive extends Subsystem {
 		return newSig;
 	}
 
-
 	/**
 	 * Update odometry
 	 *
@@ -321,8 +317,13 @@ public class Drive extends Subsystem {
 		return mIsOnTarget;
 	}
 
-	public double getFusedNormalizedHeading() {
-		return navX.getFusedNormalized();
+	public double getFused() {
+		//TODO Forgot what heading value is needed for turn to angle
+		return mPeriodicIO.gyro_heading.getDegrees();
+	}
+
+	public double getYaw() {
+		return navX.getYaw();
 	}
 
 	public boolean isMotionMagicFinished() {

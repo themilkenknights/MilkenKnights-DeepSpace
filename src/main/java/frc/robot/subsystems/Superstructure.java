@@ -9,6 +9,7 @@ import frc.robot.Constants;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.DRIVE;
 import frc.robot.Robot;
+import frc.robot.lib.math.MkMath;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
@@ -25,8 +26,9 @@ public class Superstructure extends Subsystem {
 	private PowerDistributionPanel mPDP;
 	private Compressor mCompressor;
 	private RobotState mRobotState = RobotState.TELEOP_DRIVE;
-	private boolean hasHatch = false;
+	private boolean hasHatch, inPosition, startedTurn = false;
 	private VisionState mLastVisionState = VisionState.EMPTY;
+	private double mGoalTurnAngle = 0;
 
 	private Superstructure() {
 		mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
@@ -54,21 +56,20 @@ public class Superstructure extends Subsystem {
 	public void onLoop(double timestamp) {
 
 		switch (mRobotState) {
-
 			case TELEOP_DRIVE:
 				break;
 			case VISION_INTAKE_STATION:
 			case VISION_PLACING:
+				//TODO Turn
 				if (!mHatch.hatchOnArmLimit() && !hasHatch) {
 					LimelightTarget target = Vision.getInstance().getAverageTarget();
 					double mDist = target.getDistance();
 					if (mDist > 15.0 && target.isValidTarget()) {
 						double mSteer = DRIVE.kVisionTurnP * target.getXOffset();
-						DriveSignal mSig = mDrive
-								.updateMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
-						mLastVisionState = new VisionState(mSig, target, mDrive.getFusedNormalizedHeading());
+						DriveSignal mSig = mDrive.updateMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
+						mLastVisionState = new VisionState(mSig, target, mDrive.getFused());
 					} else {
-						double mSteer = DRIVE.kVisionTurnP * (mLastVisionState.getTarget().getXOffset() - mDrive.getFusedNormalizedHeading());
+						double mSteer = DRIVE.kVisionTurnP * (mLastVisionState.getTarget().getXOffset() - mDrive.getYaw());
 						mDrive.updateMotionMagicPositionSetpoint(mLastVisionState.getDriveSignal(), new DriveSignal(mSteer, -mSteer));
 						mHatch.setHatchMechanismState(
 								mRobotState == RobotState.VISION_INTAKE_STATION ? HatchMechanismState.STATION_INTAKE : HatchMechanismState.PLACING);
@@ -79,12 +80,40 @@ public class Superstructure extends Subsystem {
 					if (mRobotState == RobotState.VISION_INTAKE_STATION) {
 						HatchArm.getInstance().setHatchMechanismState(HatchMechanismState.STOWED);
 					}
-				} else if (hasHatch && mDrive.isMotionMagicFinished() && !mDrive.isTurnDone()) {
-					mDrive.updateTurnToHeading(180.0);
+				} else if (hasHatch && mDrive.isMotionMagicFinished() && !startedTurn) {
+					startedTurn = true;
+					mGoalTurnAngle = MkMath.normalAbsoluteAngleDegrees(Drive.getInstance().getFused() + 180.0);
+					mDrive.updateTurnToHeading(mGoalTurnAngle);
+				} else if (!mDrive.isTurnDone() && startedTurn) {
+					mDrive.updateTurnToHeading(mGoalTurnAngle);
 				} else if (mDrive.isTurnDone()) {
 					setRobotState(RobotState.TELEOP_DRIVE);
 				} else {
 					Logger.logCriticalError("Unexpected Vision Intake State");
+				}
+				break;
+			case VISION_CARGO_OUTTAKE:
+				if (!inPosition) {
+					LimelightTarget target = Vision.getInstance().getAverageTarget();
+					double mDist = target.getDistance();
+					if (mDist > 15.0 && target.isValidTarget()) {
+						double mSteer = DRIVE.kVisionTurnP * target.getXOffset();
+						DriveSignal mSig = mDrive.updateMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
+						mLastVisionState = new VisionState(mSig, target, mDrive.getFused());
+					} else if (!Drive.getInstance().isMotionMagicFinished()) {
+						double mSteer = DRIVE.kVisionTurnP * (mLastVisionState.getTarget().getXOffset() - mDrive.getYaw());
+						mDrive.updateMotionMagicPositionSetpoint(mLastVisionState.getDriveSignal(), new DriveSignal(mSteer, -mSteer));
+					} else {
+						inPosition = true;
+					}
+				} else if (!startedTurn) {
+					startedTurn = true;
+					mGoalTurnAngle = MkMath.normalAbsoluteAngleDegrees(Drive.getInstance().getFused() + 180.0);
+					mDrive.updateTurnToHeading(mGoalTurnAngle);
+				} else if (!mDrive.isTurnDone() && startedTurn) {
+					mDrive.updateTurnToHeading(mGoalTurnAngle);
+				} else if (mDrive.isTurnDone()) {
+					setRobotState(RobotState.TELEOP_DRIVE);
 				}
 				break;
 			default:
@@ -112,6 +141,8 @@ public class Superstructure extends Subsystem {
 			case VISION_PLACING:
 				mRobotState = Vision.getInstance().getAverageTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
 				break;
+			case VISION_CARGO_OUTTAKE:
+				mRobotState = Vision.getInstance().getAverageTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
 			default:
 				Logger.logCriticalError("Unexpected robot state: " + mRobotState);
 				break;
@@ -130,6 +161,7 @@ public class Superstructure extends Subsystem {
 	private void resetActionVariables() {
 		hasHatch = false;
 		mLastVisionState = VisionState.EMPTY;
+		mGoalTurnAngle = 0.0;
 	}
 
 	public enum RobotState {

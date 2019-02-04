@@ -24,7 +24,7 @@ public class CargoArm extends Subsystem {
 	private double mStartDis, mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable = 0.0;
 
 	private CargoArm() {
-		mArmTalon = new MkTalon(CAN.kMasterCargoArmTalonID, CAN.kSlaveCargoArmVictorID, TalonLoc.CargoArm);
+		mArmTalon = new MkTalon(CAN.kRightMasterCargoArmTalonID, CAN.kLeftSlaveCargoArmVictorID, TalonLoc.CargoArm);
 		mIntakeTalon = new MkTalon(CAN.kLeftCargoIntakeTalonID, CAN.kRightCargoIntakeVictorID, TalonLoc.CargoIntake);
 	}
 
@@ -49,7 +49,7 @@ public class CargoArm extends Subsystem {
 				mDisCon = true;
 				mStartDis = Timer.getFPGATimestamp();
 			}
-			Logger.logError("Arm Encoder Not Connected");
+			Logger.logError("Cargo Arm Encoder Not Connected");
 		} else {
 			if (mDisCon) {
 				mDisCon = false;
@@ -61,7 +61,7 @@ public class CargoArm extends Subsystem {
 		}
 
 		if (mArmTalon.getCurrent() > CARGO_ARM.MAX_SAFE_CURRENT) {
-			Logger.logError("Unsafe Current " + mArmTalon.getCurrent() + " Amps");
+			Logger.logError("Unsafe Current on Cargo " + mArmTalon.getCurrent() + " Amps");
 			setArmControlState(CargoArmControlState.OPEN_LOOP);
 		}
 	}
@@ -108,9 +108,9 @@ public class CargoArm extends Subsystem {
 	@Override
 	public void outputTelemetry() {
 		mArmTalon.updateSmartDash(false);
-		SmartDashboard.putString("Arm Desired Position", mCargoArmState.toString());
-		SmartDashboard.putString("Arm Control Mode", mCargoArmControlState.toString());
-		SmartDashboard.putBoolean("Arm Status", mArmTalon.isEncoderConnected());
+		SmartDashboard.putString("Cargo Arm Desired Position", mCargoArmState.toString());
+		SmartDashboard.putString("Cargo Arm Control Mode", mCargoArmControlState.toString());
+		SmartDashboard.putBoolean("Cargo Arm Status", mArmTalon.isEncoderConnected());
 	}
 
 	@Override
@@ -119,7 +119,7 @@ public class CargoArm extends Subsystem {
 			mArmTalon.zeroEncoder();
 			setEnable();
 			if (mArmTalon.getZer() > GENERAL.kTicksPerRev) {
-				Logger.logError("Arm Absolute Position > 4096");
+				Logger.logError("Cargo Arm Absolute Position > 4096");
 				setArmControlState(CargoArmControlState.OPEN_LOOP);
 			}
 		}
@@ -153,10 +153,10 @@ public class CargoArm extends Subsystem {
 	}
 
 	public synchronized void setOpenLoop(double output) {
-		if (mArmSafety) {
-			setArmControlState(CargoArmControlState.OPEN_LOOP);
+		if (mArmSafety && mCargoArmControlState == CargoArmControlState.OPEN_LOOP) {
+			mOpenLoopSetpoint = output;
 		} else {
-			Logger.logCriticalError("Failed to set Arm Open Loop Ouput: Arm Safety Not Enabled");
+			Logger.logCriticalError("Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled");
 		}
 	}
 
