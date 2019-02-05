@@ -1,0 +1,683 @@
+d8aab1fb-359f-48dc-8aa2-a09cc751b6f7, Robot Startup, Sun Jan 27 16:36:45 PST 2019
+d8aab1fb-359f-48dc-8aa2-a09cc751b6f7, Robot Init, Sun Jan 27 16:36:45 PST 2019
+d8aab1fb-359f-48dc-8aa2-a09cc751b6f7, Disabled Init, Sun Jan 27 16:36:46 PST 2019
+d8aab1fb-359f-48dc-8aa2-a09cc751b6f7, Set Hatch Arm to STOW, Sun Jan 27 16:36:46 PST 2019
+d8aab1fb-359f-48dc-8aa2-a09cc751b6f7, Teleop Init, Sun Jan 27 16:36:47 PST 2019
+d8aab1fb-359f-48dc-8aa2-a09cc751b6f7, Disabled Init, Sun Jan 27 16:36:48 PST 2019
+d8aab1fb-359f-48dc-8aa2-a09cc751b6f7, Set Hatch Arm to STOW, Sun Jan 27 16:36:48 PST 2019
+d8aab1fb-359f-48dc-8aa2-a09cc751b6f7, Teleop Init, Sun Jan 27 16:36:51 PST 2019
+d8aab1fb-359f-48dc-8aa2-a09cc751b6f7, Disabled Init, Sun Jan 27 16:37:36 PST 2019
+d8aab1fb-359f-48dc-8aa2-a09cc751b6f7, Set Hatch Arm to STOW, Sun Jan 27 16:37:36 PST 2019
+d8aab1fb-359f-48dc-8aa2-a09cc751b6f7, Teleop Init, Sun Jan 27 16:37:42 PST 2019
+d8aab1fb-359f-48dc-8aa2-a09cc751b6f7, Disabled Init, Sun Jan 27 16:38:26 PST 2019
+d8aab1fb-359f-48dc-8aa2-a09cc751b6f7, Set Hatch Arm to STOW, Sun Jan 27 16:38:26 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Robot Startup, Sun Jan 27 16:38:55 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Robot Init, Sun Jan 27 16:38:55 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Disabled Init, Sun Jan 27 16:38:55 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Set Hatch Arm to STOW, Sun Jan 27 16:38:56 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Teleop Init, Sun Jan 27 16:39:13 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Disabled Init, Sun Jan 27 16:39:16 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Set Hatch Arm to STOW, Sun Jan 27 16:39:16 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Teleop Init, Sun Jan 27 16:39:27 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Disabled Init, Sun Jan 27 16:39:41 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Set Hatch Arm to STOW, Sun Jan 27 16:39:41 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Teleop Init, Sun Jan 27 16:39:52 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Disabled Init, Sun Jan 27 16:39:54 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Set Hatch Arm to STOW, Sun Jan 27 16:39:54 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Teleop Init, Sun Jan 27 16:39:58 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Disabled Init, Sun Jan 27 16:40:07 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Set Hatch Arm to STOW, Sun Jan 27 16:40:07 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Teleop Init, Sun Jan 27 16:40:15 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Disabled Init, Sun Jan 27 16:40:18 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Set Hatch Arm to STOW, Sun Jan 27 16:40:18 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Teleop Init, Sun Jan 27 16:41:20 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Disabled Init, Sun Jan 27 16:41:22 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Set Hatch Arm to STOW, Sun Jan 27 16:41:22 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Teleop Init, Sun Jan 27 16:45:42 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Disabled Init, Sun Jan 27 16:46:44 PST 2019
+e9845077-d72a-4225-897d-dcf012a6a3ad, Set Hatch Arm to STOW, Sun Jan 27 16:46:44 PST 2019
+7af0fd0b-eec4-4760-b956-511e949ce904, Robot Startup, Sun Jan 27 16:56:19 PST 2019
+7af0fd0b-eec4-4760-b956-511e949ce904, Robot Init, Sun Jan 27 16:56:19 PST 2019
+7af0fd0b-eec4-4760-b956-511e949ce904, Disabled Init, Sun Jan 27 16:56:20 PST 2019
+7af0fd0b-eec4-4760-b956-511e949ce904, Set Hatch Arm to STOW, Sun Jan 27 16:56:20 PST 2019
+7998aaaf-f8c0-4438-b22b-9faf3aa614e0, Robot Startup, Sun Jan 27 16:58:17 PST 2019
+7998aaaf-f8c0-4438-b22b-9faf3aa614e0, Robot Init, Sun Jan 27 16:58:18 PST 2019
+7998aaaf-f8c0-4438-b22b-9faf3aa614e0, Disabled Init, Sun Jan 27 16:58:18 PST 2019
+7998aaaf-f8c0-4438-b22b-9faf3aa614e0, Set Hatch Arm to STOW, Sun Jan 27 16:58:18 PST 2019
+7998aaaf-f8c0-4438-b22b-9faf3aa614e0, Teleop Init, Sun Jan 27 16:58:24 PST 2019
+7998aaaf-f8c0-4438-b22b-9faf3aa614e0, Disabled Init, Sun Jan 27 16:58:39 PST 2019
+7998aaaf-f8c0-4438-b22b-9faf3aa614e0, Set Hatch Arm to STOW, Sun Jan 27 16:58:39 PST 2019
+ceb005c4-c17a-4d76-a915-c923a6dc8068, Robot Startup, Sun Jan 27 17:02:15 PST 2019
+ceb005c4-c17a-4d76-a915-c923a6dc8068, Robot Init, Sun Jan 27 17:02:16 PST 2019
+ceb005c4-c17a-4d76-a915-c923a6dc8068, Disabled Init, Sun Jan 27 17:02:16 PST 2019
+ceb005c4-c17a-4d76-a915-c923a6dc8068, Set Hatch Arm to STOW, Sun Jan 27 17:02:16 PST 2019
+ceb005c4-c17a-4d76-a915-c923a6dc8068, Teleop Init, Sun Jan 27 17:04:04 PST 2019
+ceb005c4-c17a-4d76-a915-c923a6dc8068, Disabled Init, Sun Jan 27 17:04:24 PST 2019
+ceb005c4-c17a-4d76-a915-c923a6dc8068, Set Hatch Arm to STOW, Sun Jan 27 17:04:24 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Robot Startup, Sun Jan 27 17:06:45 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Robot Init, Sun Jan 27 17:06:45 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Disabled Init, Sun Jan 27 17:06:45 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to STOW, Sun Jan 27 17:06:46 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Teleop Init, Sun Jan 27 17:06:59 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:07:00 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to PLACE, Sun Jan 27 17:07:00 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:07:00 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to STOW, Sun Jan 27 17:07:00 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:07:02 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to STOW, Sun Jan 27 17:07:02 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:07:02 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to PLACE, Sun Jan 27 17:07:02 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:07:03 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to STOW, Sun Jan 27 17:07:03 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:07:04 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to PLACE, Sun Jan 27 17:07:04 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:07:04 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to STOW, Sun Jan 27 17:07:04 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:07:06 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to PLACE, Sun Jan 27 17:07:06 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:07:08 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to STOW, Sun Jan 27 17:07:08 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:07:08 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to PLACE, Sun Jan 27 17:07:08 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:07:09 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to STOW, Sun Jan 27 17:07:09 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:07:10 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to PLACE, Sun Jan 27 17:07:10 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:07:14 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to STOW, Sun Jan 27 17:07:14 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:07:15 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to PLACE, Sun Jan 27 17:07:15 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:07:15 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to STOW, Sun Jan 27 17:07:15 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:07:15 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to PLACE, Sun Jan 27 17:07:15 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:07:16 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to STOW, Sun Jan 27 17:07:16 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:07:16 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to PLACE, Sun Jan 27 17:07:16 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Disabled Init, Sun Jan 27 17:07:20 PST 2019
+5364a536-a53c-41e5-a2dc-acfc767ed81a, Set Hatch Arm to STOW, Sun Jan 27 17:07:20 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, Robot Startup, Sun Jan 27 17:07:49 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, Robot Init, Sun Jan 27 17:07:49 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, Disabled Init, Sun Jan 27 17:07:50 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, Set Hatch Arm to STOW, Sun Jan 27 17:07:50 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, Teleop Init, Sun Jan 27 17:07:50 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:07:52 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, Set Hatch Arm to PLACE, Sun Jan 27 17:07:52 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:07:52 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, Set Hatch Arm to PLACE, Sun Jan 27 17:07:52 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:07:53 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, Set Hatch Arm to STOW, Sun Jan 27 17:07:53 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:07:53 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, Set Hatch Arm to PLACE, Sun Jan 27 17:07:53 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, Disabled Init, Sun Jan 27 17:07:57 PST 2019
+fcfdc7e7-e9c6-4ea4-a382-1036e3443301, Set Hatch Arm to STOW, Sun Jan 27 17:07:57 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, Robot Startup, Sun Jan 27 17:08:22 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, Robot Init, Sun Jan 27 17:08:22 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, Disabled Init, Sun Jan 27 17:08:22 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, Set Hatch Arm to STOW, Sun Jan 27 17:08:23 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, Teleop Init, Sun Jan 27 17:08:24 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:08:29 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, Set Hatch Arm to STOW, Sun Jan 27 17:08:29 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:08:29 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, Set Hatch Arm to PLACE, Sun Jan 27 17:08:29 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:08:30 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, Set Hatch Arm to STOW, Sun Jan 27 17:08:30 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:08:30 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, Set Hatch Arm to PLACE, Sun Jan 27 17:08:30 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:08:30 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, Set Hatch Arm to STOW, Sun Jan 27 17:08:30 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, Disabled Init, Sun Jan 27 17:08:31 PST 2019
+56d99250-faea-4033-a04a-c20486a9efa6, Set Hatch Arm to STOW, Sun Jan 27 17:08:31 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Robot Startup, Sun Jan 27 17:08:49 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Robot Init, Sun Jan 27 17:08:49 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Disabled Init, Sun Jan 27 17:08:50 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to STOW, Sun Jan 27 17:08:50 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Teleop Init, Sun Jan 27 17:08:51 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:08:53 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to STOW, Sun Jan 27 17:08:53 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:08:53 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:08:53 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:08:53 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to STOW, Sun Jan 27 17:08:53 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:08:54 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:08:54 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:08:55 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to STOW, Sun Jan 27 17:08:55 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:08:58 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to STOW, Sun Jan 27 17:08:58 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:08:58 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:08:58 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:08:59 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to STOW, Sun Jan 27 17:08:59 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:08:59 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:08:59 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:09:00 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to STOW, Sun Jan 27 17:09:00 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:09:00 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:09:00 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:09:00 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to STOW, Sun Jan 27 17:09:00 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:09:08 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:09:08 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:09:15 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to STOW, Sun Jan 27 17:09:15 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:09:17 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:09:17 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:09:21 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:09:21 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:09:22 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to STOW, Sun Jan 27 17:09:22 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:09:23 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:09:23 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:09:24 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to STOW, Sun Jan 27 17:09:24 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:09:26 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:09:26 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:09:30 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:09:30 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:09:31 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:09:31 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:09:32 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:09:32 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:09:32 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to STOW, Sun Jan 27 17:09:32 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:09:33 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to STOW, Sun Jan 27 17:09:33 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:09:33 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:09:33 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:09:34 PST 2019
+4c70ca1b-25ff-4e76-a0b1-dab8739ac9c3, Set Hatch Arm to PLACE, Sun Jan 27 17:09:34 PST 2019
+4a183f30-fbf8-4ad1-a8e3-e50dba5a96e8, Robot Startup, Sun Jan 27 17:10:16 PST 2019
+4a183f30-fbf8-4ad1-a8e3-e50dba5a96e8, Robot Init, Sun Jan 27 17:10:17 PST 2019
+4a183f30-fbf8-4ad1-a8e3-e50dba5a96e8, Disabled Init, Sun Jan 27 17:10:17 PST 2019
+4a183f30-fbf8-4ad1-a8e3-e50dba5a96e8, Set Hatch Arm to STOW, Sun Jan 27 17:10:17 PST 2019
+5b340b68-91de-4ec4-aa3f-8878d2db9dce, Robot Startup, Sun Jan 27 17:12:33 PST 2019
+5b340b68-91de-4ec4-aa3f-8878d2db9dce, Robot Init, Sun Jan 27 17:12:34 PST 2019
+5b340b68-91de-4ec4-aa3f-8878d2db9dce, Disabled Init, Sun Jan 27 17:12:34 PST 2019
+5b340b68-91de-4ec4-aa3f-8878d2db9dce, Set Hatch Arm to STOW, Sun Jan 27 17:12:35 PST 2019
+5108284e-9dea-4e36-8b41-76c43ce1a547, Robot Startup, Sun Jan 27 17:14:30 PST 2019
+5108284e-9dea-4e36-8b41-76c43ce1a547, Robot Init, Sun Jan 27 17:14:31 PST 2019
+5108284e-9dea-4e36-8b41-76c43ce1a547, Disabled Init, Sun Jan 27 17:14:31 PST 2019
+5108284e-9dea-4e36-8b41-76c43ce1a547, Set Hatch Arm to STOW, Sun Jan 27 17:14:32 PST 2019
+5108284e-9dea-4e36-8b41-76c43ce1a547, Teleop Init, Sun Jan 27 17:14:33 PST 2019
+5108284e-9dea-4e36-8b41-76c43ce1a547, Disabled Init, Sun Jan 27 17:14:42 PST 2019
+5108284e-9dea-4e36-8b41-76c43ce1a547, Set Hatch Arm to STOW, Sun Jan 27 17:14:42 PST 2019
+5108284e-9dea-4e36-8b41-76c43ce1a547, Teleop Init, Sun Jan 27 17:14:57 PST 2019
+5108284e-9dea-4e36-8b41-76c43ce1a547, Disabled Init, Sun Jan 27 17:15:20 PST 2019
+5108284e-9dea-4e36-8b41-76c43ce1a547, Set Hatch Arm to STOW, Sun Jan 27 17:15:20 PST 2019
+a9e9ac3d-ca26-4438-a262-9ed2ad3867dc, Robot Startup, Sun Jan 27 17:15:48 PST 2019
+a9e9ac3d-ca26-4438-a262-9ed2ad3867dc, Robot Init, Sun Jan 27 17:15:48 PST 2019
+a9e9ac3d-ca26-4438-a262-9ed2ad3867dc, Disabled Init, Sun Jan 27 17:15:49 PST 2019
+a9e9ac3d-ca26-4438-a262-9ed2ad3867dc, Set Hatch Arm to STOW, Sun Jan 27 17:15:49 PST 2019
+a9e9ac3d-ca26-4438-a262-9ed2ad3867dc, Teleop Init, Sun Jan 27 17:15:50 PST 2019
+a9e9ac3d-ca26-4438-a262-9ed2ad3867dc, Disabled Init, Sun Jan 27 17:16:39 PST 2019
+a9e9ac3d-ca26-4438-a262-9ed2ad3867dc, Set Hatch Arm to STOW, Sun Jan 27 17:16:39 PST 2019
+a9e9ac3d-ca26-4438-a262-9ed2ad3867dc, Teleop Init, Sun Jan 27 17:16:50 PST 2019
+a9e9ac3d-ca26-4438-a262-9ed2ad3867dc, Disabled Init, Sun Jan 27 17:17:13 PST 2019
+a9e9ac3d-ca26-4438-a262-9ed2ad3867dc, Set Hatch Arm to STOW, Sun Jan 27 17:17:13 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Robot Startup, Sun Jan 27 17:17:22 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Robot Init, Sun Jan 27 17:17:23 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Disabled Init, Sun Jan 27 17:17:23 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:17:23 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Teleop Init, Sun Jan 27 17:17:24 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:17:30 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:17:30 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:17:31 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:17:31 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:17:31 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:17:31 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Disabled Init, Sun Jan 27 17:17:34 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:17:34 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Teleop Init, Sun Jan 27 17:17:43 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:17:45 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:17:45 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:17:48 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:17:48 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:17:50 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:17:50 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:17:51 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:17:51 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:17:52 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:17:52 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:18:03 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:18:03 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:18:03 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:18:03 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:18:07 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:18:07 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:18:07 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:18:07 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:18:08 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:18:08 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:18:09 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:18:09 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:18:18 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:18:18 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:18:19 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:18:19 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:18:19 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:18:19 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:18:21 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:18:21 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:18:22 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:18:22 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:18:23 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:18:23 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:18:25 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:18:25 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:18:27 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:18:27 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Disabled Init, Sun Jan 27 17:18:32 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:18:32 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Teleop Init, Sun Jan 27 17:23:47 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:23:50 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:23:50 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:23:50 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:23:50 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:24:12 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:24:12 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:20 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:20 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:24:23 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:24:23 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:30 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:30 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:34 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:34 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:24:34 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:24:34 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:35 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:35 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:38 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:38 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:24:39 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:24:39 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:45 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:45 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:50 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:50 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:24:50 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:24:50 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:24:51 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:24:51 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:51 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:51 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:52 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:52 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:52 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:52 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:53 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:53 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:54 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:54 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:54 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:54 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:54 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:54 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:55 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:55 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:55 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:55 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:56 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:56 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:56 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:56 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:57 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:57 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:57 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:57 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:58 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:58 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:58 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:58 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:59 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:59 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:59 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:59 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:24:59 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:24:59 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:25:00 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:25:00 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:25:00 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:25:00 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:25:01 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:25:01 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:25:04 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:25:04 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:25:17 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:25:17 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:25:26 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:25:26 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:25:38 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:25:38 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:25:44 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:25:44 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:25:46 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:25:46 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:25:49 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:25:49 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:25:56 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:25:56 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:25:57 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:25:57 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:26:03 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:26:03 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:26:03 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:26:03 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:26:07 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:26:07 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:26:19 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:26:19 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:26:20 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:26:20 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:26:21 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:26:21 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:26:27 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:26:27 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:26:33 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:26:33 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:26:40 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:26:40 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:26:47 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:26:47 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:26:51 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:26:51 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:26:58 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:26:58 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:27:20 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:27:20 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:27:20 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:27:20 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:27:28 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:27:28 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:27:28 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:27:28 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:27:36 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:27:36 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:27:36 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:27:36 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:27:53 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:27:53 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Disabled Init, Sun Jan 27 17:28:07 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:28:07 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Teleop Init, Sun Jan 27 17:28:25 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Disabled Init, Sun Jan 27 17:28:29 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to STOW, Sun Jan 27 17:28:29 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Teleop Init, Sun Jan 27 17:28:36 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:28:37 PST 2019
+f930fefa-55ee-4861-8018-ee755c0e106f, Set Hatch Arm to PLACE, Sun Jan 27 17:28:37 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, Robot Startup, Tue Jan 15 14:41:28 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, Robot Init, Tue Jan 15 14:41:29 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, Disabled Init, Tue Jan 15 14:41:29 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, Set Hatch Arm to STOW, Tue Jan 15 14:41:29 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, Teleop Init, Sun Jan 27 17:29:54 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:29:56 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, Set Hatch Arm to STOW, Sun Jan 27 17:29:56 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:29:56 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, Set Hatch Arm to PLACE, Sun Jan 27 17:29:56 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, Disabled Init, Sun Jan 27 17:29:57 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, Set Hatch Arm to STOW, Sun Jan 27 17:29:57 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, Teleop Init, Sun Jan 27 17:29:59 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:30:00 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, Set Hatch Arm to PLACE, Sun Jan 27 17:30:00 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, Disabled Init, Sun Jan 27 17:30:23 PST 2019
+e7fe5de8-704d-46ce-aa6e-271629f93761, Set Hatch Arm to STOW, Sun Jan 27 17:30:23 PST 2019
+5dba3e28-c325-4c19-8245-1ba346436717, Robot Startup, Sun Jan 27 17:31:23 PST 2019
+5dba3e28-c325-4c19-8245-1ba346436717, Robot Init, Sun Jan 27 17:31:24 PST 2019
+5dba3e28-c325-4c19-8245-1ba346436717, Disabled Init, Sun Jan 27 17:31:24 PST 2019
+5dba3e28-c325-4c19-8245-1ba346436717, Set Hatch Arm to STOW, Sun Jan 27 17:31:25 PST 2019
+5dba3e28-c325-4c19-8245-1ba346436717, Teleop Init, Sun Jan 27 17:31:33 PST 2019
+5dba3e28-c325-4c19-8245-1ba346436717, Disabled Init, Sun Jan 27 17:31:48 PST 2019
+5dba3e28-c325-4c19-8245-1ba346436717, Set Hatch Arm to STOW, Sun Jan 27 17:31:48 PST 2019
+5631d06d-ab5c-4d63-8ae1-b19460bfefb6, Robot Startup, Sun Jan 27 17:31:56 PST 2019
+5631d06d-ab5c-4d63-8ae1-b19460bfefb6, Robot Init, Sun Jan 27 17:31:56 PST 2019
+5631d06d-ab5c-4d63-8ae1-b19460bfefb6, Disabled Init, Sun Jan 27 17:31:57 PST 2019
+5631d06d-ab5c-4d63-8ae1-b19460bfefb6, Set Hatch Arm to STOW, Sun Jan 27 17:31:57 PST 2019
+5631d06d-ab5c-4d63-8ae1-b19460bfefb6, Teleop Init, Sun Jan 27 17:31:58 PST 2019
+5631d06d-ab5c-4d63-8ae1-b19460bfefb6, Disabled Init, Sun Jan 27 17:34:24 PST 2019
+5631d06d-ab5c-4d63-8ae1-b19460bfefb6, Set Hatch Arm to STOW, Sun Jan 27 17:34:24 PST 2019
+32377feb-3cc0-40d7-be24-12c291269365, Robot Startup, Sun Jan 27 17:34:30 PST 2019
+32377feb-3cc0-40d7-be24-12c291269365, Robot Init, Sun Jan 27 17:34:31 PST 2019
+32377feb-3cc0-40d7-be24-12c291269365, Disabled Init, Sun Jan 27 17:34:31 PST 2019
+32377feb-3cc0-40d7-be24-12c291269365, Set Hatch Arm to STOW, Sun Jan 27 17:34:31 PST 2019
+32377feb-3cc0-40d7-be24-12c291269365, Teleop Init, Sun Jan 27 17:34:34 PST 2019
+32377feb-3cc0-40d7-be24-12c291269365, Disabled Init, Sun Jan 27 17:34:56 PST 2019
+32377feb-3cc0-40d7-be24-12c291269365, Set Hatch Arm to STOW, Sun Jan 27 17:34:56 PST 2019
+32377feb-3cc0-40d7-be24-12c291269365, Teleop Init, Sun Jan 27 17:34:57 PST 2019
+32377feb-3cc0-40d7-be24-12c291269365, Disabled Init, Sun Jan 27 17:35:09 PST 2019
+32377feb-3cc0-40d7-be24-12c291269365, Set Hatch Arm to STOW, Sun Jan 27 17:35:09 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Robot Startup, Sun Jan 27 17:35:16 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Robot Init, Sun Jan 27 17:35:16 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Disabled Init, Sun Jan 27 17:35:17 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to STOW, Sun Jan 27 17:35:17 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Teleop Init, Sun Jan 27 17:35:20 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Disabled Init, Sun Jan 27 17:36:02 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to STOW, Sun Jan 27 17:36:02 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Teleop Init, Sun Jan 27 17:36:03 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Disabled Init, Sun Jan 27 17:36:11 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to STOW, Sun Jan 27 17:36:11 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Teleop Init, Sun Jan 27 17:37:31 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:37:43 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to STOW, Sun Jan 27 17:37:43 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:37:43 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to PLACE, Sun Jan 27 17:37:43 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:37:55 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to STOW, Sun Jan 27 17:37:55 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:38:07 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to STOW, Sun Jan 27 17:38:07 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:38:08 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to PLACE, Sun Jan 27 17:38:08 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:38:15 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to PLACE, Sun Jan 27 17:38:15 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:38:17 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to STOW, Sun Jan 27 17:38:17 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:38:27 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to PLACE, Sun Jan 27 17:38:27 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:38:35 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to PLACE, Sun Jan 27 17:38:35 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:38:36 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to STOW, Sun Jan 27 17:38:36 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:38:52 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to PLACE, Sun Jan 27 17:38:52 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:39:01 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to STOW, Sun Jan 27 17:39:01 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:39:02 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to PLACE, Sun Jan 27 17:39:02 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Disabled Init, Sun Jan 27 17:39:17 PST 2019
+034b32f5-ffaa-4ca4-9351-ab8d9b506d10, Set Hatch Arm to STOW, Sun Jan 27 17:39:17 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Robot Startup, Sun Jan 27 17:40:00 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Robot Init, Sun Jan 27 17:40:01 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Disabled Init, Sun Jan 27 17:40:01 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:40:01 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Teleop Init, Sun Jan 27 17:40:02 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:40:08 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:40:08 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:40:08 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to PLACE, Sun Jan 27 17:40:08 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:40:11 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to PLACE, Sun Jan 27 17:40:11 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:40:11 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:40:11 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:40:20 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to PLACE, Sun Jan 27 17:40:20 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:40:26 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:40:26 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:40:32 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to PLACE, Sun Jan 27 17:40:32 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Disabled Init, Sun Jan 27 17:40:42 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:40:42 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Teleop Init, Sun Jan 27 17:41:17 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:41:22 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to PLACE, Sun Jan 27 17:41:22 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:41:29 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:41:29 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:41:36 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to PLACE, Sun Jan 27 17:41:36 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Disabled Init, Sun Jan 27 17:41:46 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:41:46 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Teleop Init, Sun Jan 27 17:42:52 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:42:55 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:42:55 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:42:56 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to PLACE, Sun Jan 27 17:42:56 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:42:56 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:42:56 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:43:03 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to PLACE, Sun Jan 27 17:43:03 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:43:05 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:43:05 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Disabled Init, Sun Jan 27 17:43:13 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:43:13 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Teleop Init, Sun Jan 27 17:43:29 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Disabled Init, Sun Jan 27 17:43:45 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:43:45 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Teleop Init, Sun Jan 27 17:43:54 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:43:57 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:43:57 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:44:03 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to PLACE, Sun Jan 27 17:44:03 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:44:08 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:44:08 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:44:21 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to PLACE, Sun Jan 27 17:44:21 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Disabled Init, Sun Jan 27 17:44:31 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:44:31 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Teleop Init, Sun Jan 27 17:44:57 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Disabled Init, Sun Jan 27 17:44:59 PST 2019
+7ffc52f5-5cde-4388-a838-b7c797c7ebbe, Set Hatch Arm to STOW, Sun Jan 27 17:44:59 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Robot Startup, Sun Jan 27 17:45:20 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Robot Init, Sun Jan 27 17:45:20 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Disabled Init, Sun Jan 27 17:45:20 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:45:21 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Teleop Init, Sun Jan 27 17:45:21 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:45:30 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:45:30 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:45:37 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:45:37 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:45:57 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:45:57 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Disabled Init, Sun Jan 27 17:46:01 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:46:01 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Teleop Init, Sun Jan 27 17:46:52 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:46:53 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:46:53 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:46:53 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:46:53 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:46:59 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:46:59 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:47:00 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:47:00 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:47:00 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:47:00 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:47:01 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:47:01 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:47:01 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:47:01 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:47:02 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:47:02 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:47:02 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:47:02 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:47:05 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:47:05 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:47:06 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:47:06 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:47:06 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:47:06 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:47:07 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:47:07 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:47:08 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:47:08 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:47:08 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:47:08 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:47:10 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:47:10 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:47:20 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:47:20 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:47:21 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:47:21 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:47:37 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:47:37 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:47:39 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:47:39 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:47:49 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:47:49 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:47:50 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:47:50 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:47:52 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:47:52 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:47:53 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:47:53 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:47:54 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:47:54 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:47:55 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:47:55 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:47:58 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:47:58 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:47:59 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:47:59 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Disabled Init, Sun Jan 27 17:48:02 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:48:02 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Teleop Init, Sun Jan 27 17:48:28 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:48:30 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:48:30 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:48:31 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:48:31 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:48:36 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:48:36 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:48:37 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:48:37 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:48:38 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:48:38 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:48:45 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:48:45 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:48:45 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:48:45 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:48:46 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:48:46 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:48:54 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:48:54 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:48:59 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:48:59 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:49:02 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:49:02 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Disabled Init, Sun Jan 27 17:49:06 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:49:06 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Teleop Init, Sun Jan 27 17:50:16 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:50:21 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:50:21 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:50:21 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:50:21 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:50:53 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:50:53 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:50:57 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:50:57 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Disabled Init, Sun Jan 27 17:51:00 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:51:00 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Teleop Init, Sun Jan 27 17:51:31 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:51:43 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:51:43 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]2	 Pressed ( Stow ), Sun Jan 27 17:51:48 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:51:48 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, [Joystick] 0	[Button]1	 Pressed ( Place ), Sun Jan 27 17:51:54 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to PLACE, Sun Jan 27 17:51:54 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Disabled Init, Sun Jan 27 17:51:59 PST 2019
+20468232-ad91-437f-86fe-c51d6c5adeed, Set Hatch Arm to STOW, Sun Jan 27 17:51:59 PST 2019
+b7fe3366-dab9-496c-a1ee-b39ac62d7763, Robot Startup, Tue Jan 15 14:41:28 PST 2019
+b7fe3366-dab9-496c-a1ee-b39ac62d7763, Robot Init, Tue Jan 15 14:41:29 PST 2019
+b7fe3366-dab9-496c-a1ee-b39ac62d7763, Disabled Init, Tue Jan 15 14:41:29 PST 2019
+b7fe3366-dab9-496c-a1ee-b39ac62d7763, Set Hatch Arm to STOW, Tue Jan 15 14:41:29 PST 2019
+b7fe3366-dab9-496c-a1ee-b39ac62d7763, Teleop Init, Sun Jan 27 18:24:33 PST 2019
+b7fe3366-dab9-496c-a1ee-b39ac62d7763, Disabled Init, Sun Jan 27 18:24:33 PST 2019
+b7fe3366-dab9-496c-a1ee-b39ac62d7763, Set Hatch Arm to STOW, Sun Jan 27 18:24:33 PST 2019
+b7fe3366-dab9-496c-a1ee-b39ac62d7763, Teleop Init, Sun Jan 27 18:24:34 PST 2019
+b7fe3366-dab9-496c-a1ee-b39ac62d7763, Disabled Init, Sun Jan 27 18:24:34 PST 2019
+b7fe3366-dab9-496c-a1ee-b39ac62d7763, Set Hatch Arm to STOW, Sun Jan 27 18:24:34 PST 2019
+e78259ff-607e-4280-bf5a-0c7eead15e36, Robot Startup, Tue Jan 15 14:41:28 PST 2019
+e78259ff-607e-4280-bf5a-0c7eead15e36, Robot Init, Tue Jan 15 14:41:29 PST 2019
+e78259ff-607e-4280-bf5a-0c7eead15e36, Disabled Init, Tue Jan 15 14:41:29 PST 2019
+e78259ff-607e-4280-bf5a-0c7eead15e36, Set Hatch Arm to STOW, Tue Jan 15 14:41:29 PST 2019
+4a03f788-8ce2-42d2-8f68-1bdacad17f2d, Robot Startup, Tue Jan 15 14:41:27 PST 2019
+4a03f788-8ce2-42d2-8f68-1bdacad17f2d, Robot Init, Tue Jan 15 14:41:28 PST 2019
+4a03f788-8ce2-42d2-8f68-1bdacad17f2d, Disabled Init, Tue Jan 15 14:41:28 PST 2019
+4a03f788-8ce2-42d2-8f68-1bdacad17f2d, Set Hatch Arm to STOW, Tue Jan 15 14:41:28 PST 2019

@@ -35,7 +35,10 @@ public class Vision extends Subsystem {
 
 	@Override
 	public void outputTelemetry() {
-
+		if (usePixy) {
+			pixyUpdate();
+			System.out.println("Test");
+		}
 	}
 
 	@Override
@@ -47,9 +50,7 @@ public class Vision extends Subsystem {
 	@Override
 	public void onLoop(double timestamp) {
 		mThrottleAverage.addNumber(limeLight.returnTarget());
-		if (usePixy) {
-			pixyUpdate();
-		}
+
 	}
 
 	public void pixyUpdate() {
@@ -65,7 +66,7 @@ public class Vision extends Subsystem {
 				}
 			}
 		}
-		System.out.println(largestBlock.getX());
+		System.out.println(blocks);
 	}
 
 	@Override

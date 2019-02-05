@@ -21,7 +21,7 @@ public final class Constants {
 		public static final double kLoopDt = 0.01;
 		public static final double PI = 3.14159265359;
 		public static final double kTicksPerRev = 4096.0;
-		public static final double kMaxNominalOutput = 1.0;
+		public static final double kMaxNominalOutput = 0.3;
 
 	}
 
@@ -30,17 +30,18 @@ public final class Constants {
 		public static final int kPneumaticsControlModuleID = 0;
 		public static final int kPowerDistributionPanelID = 11;
 
-		public static final int kDriveLeftMasterTalonID = 5;
-		public static final int kDriveLeftSlaveVictorID = 2;
+		public static final int kDriveLeftMasterTalonID = 10;
+		public static final int kDriveLeftSlaveVictorID = 7;
 
-		public static final int kDriveRightMasterTalonID = 10;
-		public static final int kDriveRightSlaveVictorID = 7;
+		public static final int kDriveRightMasterTalonID = 5;
+		public static final int kDriveRightSlaveVictorID = 2;
 
 		public static final int kGroundHatchArmTalonID = 9;
 
 		public static final int kHatchLimitSwitchTalonID = 4;
 
 		public static final int kRightMasterCargoArmTalonID = 8;
+		
 		public static final int kLeftSlaveCargoArmVictorID = 1;
 
 		public static final int kLeftCargoIntakeTalonID = 3;
@@ -128,8 +129,8 @@ public final class Constants {
 
 	public static class CARGO_ARM {
 
-		public static final boolean ARM_SENSOR_PHASE = false;
-		public static final boolean ARM_MASTER_DIRECTION = false;
+		public static final boolean ARM_SENSOR_PHASE = true;
+		public static final boolean ARM_MASTER_DIRECTION = true;
 		public static final boolean LEFT_INTAKE_DIRECTION = true;
 		public static final boolean RIGHT_INTAKE_DIRECTION = false;
 
@@ -166,7 +167,6 @@ public final class Constants {
 
 		public static final boolean ARM_SENSOR_PHASE = false;
 		public static final boolean ARM_MASTER_DIRECTION = false;
-		public static final boolean ARM_SLAVE_DIRECTION = true;
 
 		public static final double MAX_RAW_VEL = 243.029333333;
 		public static final double ARM_P = 22 * ((0.1 * 1023.0) / (1600));

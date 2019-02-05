@@ -1,5 +1,6 @@
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Joystick;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.INPUT;
 import frc.robot.lib.drivers.MkJoystick;
@@ -21,20 +22,20 @@ public class Input {
 	private static final MkJoystick driverJoystick = new MkJoystick(0);
 	private static final MkJoystick operatorJoystick = new MkJoystick(1);
 
-	private static final MkJoystickButton visionIntakeHatch = driverJoystick.getButton(3, "Vision Intake Hatch");
+	private static final MkJoystickButton visionIntakeHatch = driverJoystick.getButton(13, "Vision Intake Hatch");
 
-	private static final MkJoystickButton mStationIntakeButton = driverJoystick.getButton(3, "Station Intake Button");
-	private static final MkJoystickButton mGroundIntakeButton = driverJoystick.getButton(4, "Ground Intake Button");
-	private static final MkJoystickButton mPlaceButton = driverJoystick.getButton(4, "Place Hatch Button");
-	private static final MkJoystickButton mTransferButton = driverJoystick.getButton(4, "Transfer Hatch Button");
+	private static final MkJoystickButton mStationIntakeButton = driverJoystick.getButton(14, "Station Intake Button");
+	private static final MkJoystickButton mGroundIntakeButton = driverJoystick.getButton(15, "Ground Intake Button");
+	private static final MkJoystickButton mPlaceButton = driverJoystick.getButton(16, "Place Hatch Button");
+	private static final MkJoystickButton mTransferButton = driverJoystick.getButton(17, "Transfer Hatch Button");
 
-	private static final MkJoystickButton mGroundHatchIntakeManual = driverJoystick.getButton(4, "Ground Hatch Intake Manual Mode");
-	private static final MkJoystickButton mCargoArmManual = driverJoystick.getButton(4, "Cargo Arm Manual Mode");
+	private static final MkJoystickButton mGroundHatchIntakeManual = operatorJoystick.getButton(1, "Ground Hatch Intake Manual Mode");
+	private static final MkJoystickButton mCargoArmManual =operatorJoystick.getButton(2, "Cargo Arm Manual Mode");
 
-	private static final MkJoystickButton armIntakeButton = operatorJoystick.getButton(2, "Arm Intake");
-	private static final MkJoystickButton killAuto = operatorJoystick.getButton(0, "Kill Auto");
-	private static final MkJoystickButton intakeRollerIn = operatorJoystick.getButton(3, "Intake Roller In");
-	private static final MkJoystickButton intakeRollerOutFast = operatorJoystick.getButton(9, "Intake Roller Out Fast");
+	private static final MkJoystickButton armIntakeButton = operatorJoystick.getButton(3, "Arm Intake");
+	private static final MkJoystickButton killAuto = operatorJoystick.getButton(4, "Kill Auto");
+	private static final MkJoystickButton intakeRollerIn = operatorJoystick.getButton(5, "Intake Roller In");
+	private static final MkJoystickButton intakeRollerOutFast = operatorJoystick.getButton(6, "Intake Roller Out Fast");
 
 	private static Drive mDrive = Drive.getInstance();
 	private static HatchArm mHatch = HatchArm.getInstance();
@@ -60,6 +61,7 @@ public class Input {
 
 		if (mGroundHatchIntakeManual.isPressed()) {
 			mHatch.changeSafety(mHatch.getHatchMechanismState() != HatchMechanismState.MANUAL_OVERRIDE);
+			System.out.println("Change");
 		}
 
 		if (mCargo.getArmControlState() == CargoArmControlState.OPEN_LOOP) {

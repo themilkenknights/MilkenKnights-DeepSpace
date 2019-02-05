@@ -10,19 +10,19 @@ import java.util.List;
 public class SubsystemManager {
 
 	private final List<Subsystem> mAllSubsystems;
-	private double lastTime = 0;
+	private double lastTime = 0.0;
 
 	public SubsystemManager(List<Subsystem> allSubsystems) {
 		mAllSubsystems = allSubsystems;
 	}
 
 	public void outputToSmartDashboard() {
-		double timestamp_ = Timer.getFPGATimestamp();
-		if (timestamp_ - lastTime >= 0.1) {
+	//	double timestamp_ = Timer.getFPGATimestamp();
+		//if (timestamp_ - lastTime >= 0.1) {
 			mAllSubsystems.forEach((s) -> s.outputTelemetry());
-			SmartDashboard.putNumber("Main loop Dt", (timestamp_ - lastTime) * 1e3);
-		}
-		lastTime = timestamp_;
+		//	SmartDashboard.putNumber("Main loop Dt", (timestamp_ - lastTime) * 1e3);
+	//	}
+		//lastTime = timestamp_;
 	}
 
 	public void onLoop() {

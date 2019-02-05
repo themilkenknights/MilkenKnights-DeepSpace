@@ -98,8 +98,8 @@ task swerdUpdate {
         logDir.mkdirs()
         ssh.run {
             session(remotes.webServer) {
-                get from: '/media/sda1', into: 'logs/'
-                remove '/media/sda1/logs'
+                get from: '/u/', into: 'logs/'
+                remove '/u/'
             }
         }
     }
