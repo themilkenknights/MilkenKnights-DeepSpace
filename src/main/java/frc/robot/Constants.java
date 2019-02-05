@@ -41,7 +41,7 @@ public final class Constants {
 		public static final int kHatchLimitSwitchTalonID = 4;
 
 		public static final int kRightMasterCargoArmTalonID = 8;
-		
+
 		public static final int kLeftSlaveCargoArmVictorID = 1;
 
 		public static final int kLeftCargoIntakeTalonID = 3;
