@@ -28,7 +28,7 @@ public class Superstructure extends Subsystem {
 	private PowerDistributionPanel mPDP;
 	private Compressor mCompressor;
 	private RobotState mRobotState = RobotState.TELEOP_DRIVE;
-	private boolean hasHatch, inPosition, startedTurn = false;
+	private boolean hasHatch, inPosition, startedTurn, teleopVisionEnabled = false;
 	private VisionState mLastVisionState = VisionState.EMPTY;
 	private double mGoalTurnAngle = 0;
 	private MkTime mRandomTimer = new MkTime();
