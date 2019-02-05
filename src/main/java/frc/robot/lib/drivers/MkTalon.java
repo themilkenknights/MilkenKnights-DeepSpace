@@ -78,8 +78,8 @@ public class MkTalon {
 		CTRE(masterTalon.configFactoryDefault(kLong));
 		masterTalon.selectProfileSlot(kSlot, kSlot);
 		masterTalon.setNeutralMode(NeutralMode.Brake);
-		CTRE(masterTalon.configNominalOutputForward(0, kLong));
-		CTRE(masterTalon.configNominalOutputReverse(0, kLong));
+		CTRE(masterTalon.configNominalOutputForward(0.0, kLong));
+		CTRE(masterTalon.configNominalOutputReverse(0.0, kLong));
 		CTRE(masterTalon.configPeakOutputForward(GENERAL.kMaxNominalOutput, kLong));
 		CTRE(masterTalon.configPeakOutputReverse(-GENERAL.kMaxNominalOutput, kLong));
 		CTRE(masterTalon.configVoltageCompSaturation(12.0, kLong));
@@ -110,15 +110,14 @@ public class MkTalon {
 				CTRE(masterTalon.config_kD(kSlot, CARGO_ARM.ARM_D, kLong));
 				CTRE(masterTalon.configMotionCruiseVelocity((int) CARGO_ARM.MOTION_MAGIC_CRUISE_VEL, kLong));
 				CTRE(masterTalon.configMotionAcceleration((int) CARGO_ARM.MOTION_MAGIC_ACCEL, kLong));
-				CTRE(masterTalon.configForwardSoftLimitThreshold((int) CARGO_ARM.ARM_FORWARD_LIMIT, kLong));
-				CTRE(masterTalon.configReverseSoftLimitThreshold((int) CARGO_ARM.ARM_REVERSE_LIMIT, kLong));
-				CTRE(masterTalon.configReverseLimitSwitchSource(LimitSwitchSource.FeedbackConnector, LimitSwitchNormal.NormallyOpen, kLong));
+				//CTRE(masterTalon.configForwardSoftLimitThreshold((int) CARGO_ARM.ARM_FORWARD_LIMIT, kLong));
+				//CTRE(masterTalon.configReverseSoftLimitThreshold((int) CARGO_ARM.ARM_REVERSE_LIMIT, kLong));
+				//CTRE(masterTalon.configReverseLimitSwitchSource(LimitSwitchSource.FeedbackConnector, LimitSwitchNormal.NormallyOpen, kLong));
 				//TODO Ensure that the 'overrideLimitSwitchesEnable()' method is unnecessary
 				break;
 			case HatchArm:
 				masterTalon.setSensorPhase(HATCH_ARM.ARM_SENSOR_PHASE);
 				masterTalon.setInverted(HATCH_ARM.ARM_MASTER_DIRECTION);
-				slaveVictor.setInverted(HATCH_ARM.ARM_SLAVE_DIRECTION);
 				CTRE(masterTalon.config_kF(kSlot, HATCH_ARM.ARM_F, kLong));
 				CTRE(masterTalon.config_kP(kSlot, HATCH_ARM.ARM_P, kLong));
 				CTRE(masterTalon.config_kI(kSlot, HATCH_ARM.ARM_I, kLong));

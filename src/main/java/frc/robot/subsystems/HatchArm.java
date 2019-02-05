@@ -163,6 +163,8 @@ public class HatchArm extends Subsystem {
 						mTransferTime.reset();
 					}
 					break;
+				case MANUAL_OVERRIDE:
+					break;
 				case UNKNOWN:
 					break;
 				default:

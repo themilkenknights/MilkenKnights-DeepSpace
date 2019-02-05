@@ -1,5 +1,6 @@
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Joystick;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.DRIVE;
 import frc.robot.Constants.INPUT;
@@ -24,15 +25,16 @@ public class Input {
 	private static final MkJoystick driverJoystick = new MkJoystick(0);
 	private static final MkJoystick operatorJoystick = new MkJoystick(1);
 
-	private static final MkJoystickButton toggleDriverVisionAssist = driverJoystick.getButton(3, "Driver Vision Assist");
-
+	private static final MkJoystickButton toggleDriverVisionAssist = driverJoystick.getButton(3,
+			"Driver Vision Assist");
 
 	private static final MkJoystickButton mStationIntakeButton = driverJoystick.getButton(1, "Station Intake Button");
 	private static final MkJoystickButton mGroundIntakeButton = driverJoystick.getButton(2, "Ground Intake Button");
 	private static final MkJoystickButton mPlaceButton = driverJoystick.getButton(3, "Place Hatch Button");
 	private static final MkJoystickButton mTransferButton = driverJoystick.getButton(4, "Transfer Hatch Button");
 
-	private static final MkJoystickButton mGroundHatchIntakeManual = driverJoystick.getButton(5, "Ground Hatch Intake Manual Mode");
+	private static final MkJoystickButton mGroundHatchIntakeManual = driverJoystick.getButton(5,
+			"Ground Hatch Intake Manual Mode");
 	private static final MkJoystickButton mCargoArmManual = driverJoystick.getButton(6, "Cargo Arm Manual Mode");
 
 	private static final MkJoystickButton mCargoArmIntakeButton = operatorJoystick.getButton(7, "Arm Intake");
@@ -42,9 +44,9 @@ public class Input {
 
 	private static final MkJoystickButton killAuto = operatorJoystick.getButton(11, "Kill Auto");
 	private static final MkJoystickButton intakeRollerIn = operatorJoystick.getButton(12, "Intake Roller In");
-	private static final MkJoystickButton intakeRollerOutFast = operatorJoystick.getButton(13, "Intake Roller Out Fast");
+	private static final MkJoystickButton intakeRollerOutFast = operatorJoystick.getButton(13,
+			"Intake Roller Out Fast");
 	private static final MkJoystickButton visionIntakeHatch = operatorJoystick.getButton(14, "Vision Intake Hatch");
-
 
 	private static Drive mDrive = Drive.getInstance();
 	private static HatchArm mHatch = HatchArm.getInstance();
@@ -64,7 +66,9 @@ public class Input {
 			double forward = (-driverJoystick.getRawAxis(2) + driverJoystick.getRawAxis(3));
 			double turn = (-driverJoystick.getRawAxis(0));
 			LimelightTarget target = Vision.getInstance().getAverageTarget();
-			double mSteer = target.getDistance() < 50.0 && target.isValidTarget() && mVisionAssist ? DRIVE.kVisionDriverTurnP * target.getXOffset() : 0.0;
+			double mSteer = target.getDistance() < 50.0 && target.isValidTarget() && mVisionAssist
+					? DRIVE.kVisionDriverTurnP * target.getXOffset()
+					: 0.0;
 			mDrive.setOpenLoop(DriveHelper.cheesyDrive(forward, turn + mSteer, true));
 		} else if (visionIntakeHatch.isPressed()) {
 			mStructure.setRobotState(RobotState.VISION_INTAKE_STATION);
@@ -76,6 +80,7 @@ public class Input {
 
 		if (mGroundHatchIntakeManual.isPressed()) {
 			mHatch.changeSafety(mHatch.getHatchMechanismState() != HatchMechanismState.MANUAL_OVERRIDE);
+			System.out.println("Change");
 		}
 
 		if (mCargo.getArmControlState() == CargoArmControlState.OPEN_LOOP) {
@@ -98,8 +103,9 @@ public class Input {
 			mCargo.setIntakeRollers(CARGO_ARM.INTAKE_OUT_ROLLER_SPEED);
 		}
 
-		//If in manual override mode, use open loop control for Arm (except when both arms are in manual mode)
-		//The normal hatch buttons now only serve to actuate the pneumatic arm
+		// If in manual override mode, use open loop control for Arm (except when both
+		// arms are in manual mode)
+		// The normal hatch buttons now only serve to actuate the pneumatic arm
 		if (mHatch.getHatchMechanismState() == HatchMechanismState.MANUAL_OVERRIDE) {
 
 			if (mCargo.getArmControlState() != CargoArmControlState.OPEN_LOOP) {
@@ -125,7 +131,6 @@ public class Input {
 				mHatch.setHatchMechanismState(HatchMechanismState.GROUND_INTAKE);
 			}
 		}
-
 
 	}
 }
