@@ -73,8 +73,7 @@ public class LimeLight {
 	}
 
 	public LimelightTarget returnTarget() {
-		return new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(),
-				getVertLength(), getCaptureTime());
+		return new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength() * getVertLength(), getCaptureTime());
 	}
 
 	/**

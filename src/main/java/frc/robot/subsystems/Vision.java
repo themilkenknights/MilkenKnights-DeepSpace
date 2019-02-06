@@ -4,6 +4,7 @@ import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.MovingAverage;
 import frc.robot.lib.vision.LimeLight;
 import frc.robot.lib.vision.LimeLightControlMode;
+import frc.robot.lib.vision.LimeLightControlMode.LedMode;
 import frc.robot.lib.vision.LimelightTarget;
 import io.github.pseudoresonance.pixy2api.Pixy2;
 import io.github.pseudoresonance.pixy2api.Pixy2.LinkType;
@@ -23,6 +24,7 @@ public class Vision extends Subsystem {
 	private Vision() {
 
 		limeLight = new LimeLight();
+		limeLight.setLEDMode(LedMode.kforceOn);
 		if (usePixy) {
 			pixy = Pixy2.createInstance(LinkType.SPI);
 			pixy.init();
@@ -50,6 +52,8 @@ public class Vision extends Subsystem {
 	@Override
 	public void onLoop(double timestamp) {
 		mThrottleAverage.addNumber(limeLight.returnTarget());
+
+		System.out.println(mThrottleAverage.getAverage().getDistance());
 
 	}
 

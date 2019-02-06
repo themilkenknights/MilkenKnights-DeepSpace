@@ -20,7 +20,8 @@ public class HatchArm extends Subsystem {
 
 	private static HatchIntakeControlState mHatchIntakeControlState = HatchIntakeControlState.MOTION_MAGIC;
 	private static HatchIntakeState mHatchIntakeState = HatchIntakeState.ENABLE;
-	private static HatchMechanismState mHatchMechanismState = HatchMechanismState.STOWED;
+	private static HatchMechanismState mHatchMechanismState = HatchMechanismState.UNKNOWN;
+	//TODO FIx
 
 	private final MkTalon mArmTalon;
 	private HatchArmState mHatchArmState;
@@ -32,8 +33,9 @@ public class HatchArm extends Subsystem {
 	private HatchArm() {
 		mArmSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, HATCH_ARM.kHatchArmChannel);
 		mHatchArmState = HatchArmState.STOW;
-		mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kHatchLimitSwitchTalonID, TalonLoc.HatchArm);
+		mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kHatchLimitSwitchTalonID, TalonLoc.Hatch_Arm);
 		mStartDis = new MkTime();
+		//TODO Fix
 	}
 
 	public static HatchArm getInstance() {
@@ -86,10 +88,8 @@ public class HatchArm extends Subsystem {
 			setHatchMechanismState(HatchMechanismState.UNKNOWN);
 			CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
 			CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
-			setEnable();
 			setHatchIntakeControlState(HatchIntakeControlState.MOTION_MAGIC);
 		} else {
-			setHatchMechanismState(HatchMechanismState.MANUAL_OVERRIDE);
 			CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(false, GENERAL.kMediumTimeoutMs));
 			CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(false, GENERAL.kMediumTimeoutMs));
 			setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
@@ -120,6 +120,7 @@ public class HatchArm extends Subsystem {
 		SmartDashboard.putString("Hatch Arm Desired Position", mHatchIntakeState.toString());
 		SmartDashboard.putString("Hatch Arm Control Mode", mHatchIntakeControlState.toString());
 		SmartDashboard.putBoolean("Hatch Arm Status", mArmTalon.isEncoderConnected());
+		SmartDashboard.putNumber("Hatch Arm Abs", mArmTalon.getAbsolutePosition());
 	}
 
 	@Override
@@ -166,6 +167,7 @@ public class HatchArm extends Subsystem {
 				case MANUAL_OVERRIDE:
 					break;
 				case UNKNOWN:
+					setHatchArmPosition(HatchArmState.PLACE);
 					break;
 				default:
 					Logger.logCriticalError("Unexpected Hatch Arm control state: " + mHatchMechanismState);
@@ -201,7 +203,7 @@ public class HatchArm extends Subsystem {
 	}
 
 	public synchronized void setOpenLoop(double output) {
-		if (mHatchIntakeControlState == HatchIntakeControlState.OPEN_LOOP && mHatchMechanismState != HatchMechanismState.MANUAL_OVERRIDE) {
+		if (mHatchIntakeControlState == HatchIntakeControlState.OPEN_LOOP && mHatchMechanismState == HatchMechanismState.MANUAL_OVERRIDE) {
 			mOpenLoopSetpoint = output;
 		} else {
 			Logger.logCriticalError("Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled");

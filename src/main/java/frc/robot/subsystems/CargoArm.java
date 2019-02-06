@@ -24,8 +24,8 @@ public class CargoArm extends Subsystem {
 	private double mStartDis, mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable = 0.0;
 
 	private CargoArm() {
-		mArmTalon = new MkTalon(CAN.kRightMasterCargoArmTalonID, CAN.kLeftSlaveCargoArmVictorID, TalonLoc.CargoArm);
-		mIntakeTalon = new MkTalon(CAN.kLeftCargoIntakeTalonID, CAN.kRightCargoIntakeVictorID, TalonLoc.CargoIntake);
+		mArmTalon = new MkTalon(CAN.kRightMasterCargoArmTalonID, CAN.kLeftSlaveCargoArmVictorID, TalonLoc.Cargo_Arm);
+		mIntakeTalon = new MkTalon(CAN.kLeftCargoIntakeTalonID, CAN.kRightCargoIntakeVictorID, TalonLoc.Cargo_Intake);
 	}
 
 	public static CargoArm getInstance() {
@@ -108,6 +108,7 @@ public class CargoArm extends Subsystem {
 	@Override
 	public void outputTelemetry() {
 		mArmTalon.updateSmartDash(false);
+		SmartDashboard.putNumber("Cargo Abs Pos", mArmTalon.getAbsolutePosition());
 		SmartDashboard.putString("Cargo Arm Desired Position", mCargoArmState.toString());
 		SmartDashboard.putString("Cargo Arm Control Mode", mCargoArmControlState.toString());
 		SmartDashboard.putBoolean("Cargo Arm Status", mArmTalon.isEncoderConnected());
