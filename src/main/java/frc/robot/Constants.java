@@ -1,6 +1,5 @@
 package frc.robot;
 
-import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.InterpolatingTreeMap;
 
@@ -19,11 +18,10 @@ public final class Constants {
 		public static final int kPIDLoopIdx = 0;
 		public static final int kMediumTimeoutMs = 5;
 		public static final int kLongCANTimeoutMs = 100; //use for constructors
-		public static final double kLoopDt = 0.01;
+		public static final double kLoopDt = 0.02;
 		public static final double PI = 3.14159265359;
 		public static final double kTicksPerRev = 4096.0;
 		public static final double kMaxNominalOutput = 1.0;
-		//TODO change
 
 	}
 
@@ -39,15 +37,12 @@ public final class Constants {
 		public static final int kDriveRightSlaveVictorID = 2;
 
 		public static final int kGroundHatchArmTalonID = 9;
-
 		public static final int kHatchLimitSwitchTalonID = 4;
 
 		public static final int kRightMasterCargoArmTalonID = 8;
-
 		public static final int kLeftSlaveCargoArmVictorID = 1;
 
 		public static final int kLeftCargoIntakeTalonID = 3;
-
 		public static final int kRightCargoIntakeVictorID = 6;
 	}
 
@@ -144,7 +139,7 @@ public final class Constants {
 		public static final double ARM_D = ARM_P * 27;
 		public static final double ARM_F = (1023.0 / MAX_RAW_VEL);
 
-		public static final double ARM_FORWARD_LIMIT = 190.0 ;
+		public static final double ARM_FORWARD_LIMIT = 190.0;
 		public static final double ARM_REVERSE_LIMIT = 0.0;
 		public static final double MOTION_MAGIC_CRUISE_VEL = MAX_RAW_VEL;
 		public static final double MOTION_MAGIC_ACCEL = MAX_RAW_VEL * 10;

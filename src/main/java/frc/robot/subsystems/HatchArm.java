@@ -21,7 +21,6 @@ public class HatchArm extends Subsystem {
 	private static HatchIntakeControlState mHatchIntakeControlState = HatchIntakeControlState.MOTION_MAGIC;
 	private static HatchIntakeState mHatchIntakeState = HatchIntakeState.ENABLE;
 	private static HatchMechanismState mHatchMechanismState = HatchMechanismState.UNKNOWN;
-	//TODO FIx
 
 	private final MkTalon mArmTalon;
 	private HatchArmState mHatchArmState;
@@ -36,12 +35,20 @@ public class HatchArm extends Subsystem {
 		mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kHatchLimitSwitchTalonID, TalonLoc.Hatch_Arm);
 		mStartDis = new MkTime();
 		mTransferTime = new MkTime();
-		//TODO Fix
-		setHatchMechanismState(HatchMechanismState.MANUAL_OVERRIDE);
 	}
 
 	public static HatchArm getInstance() {
 		return HatchArm.InstanceHolder.mInstance;
+	}
+
+	@Override
+	public void teleopInit(double timestamp) {
+
+	}
+
+	@Override
+	public void autonomousInit(double timestamp) {
+
 	}
 
 	private void armSafetyCheck() {
@@ -78,8 +85,8 @@ public class HatchArm extends Subsystem {
 		mHatchIntakeState = HatchIntakeState.ENABLE;
 	}
 
-	public boolean hatchOnArmLimit() {
-		return mArmTalon.slaveTalon.getSensorCollection().isRevLimitSwitchClosed();
+	public boolean isHatchLimitTriggered() {
+		return mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
 	}
 
 	/**
@@ -147,7 +154,8 @@ public class HatchArm extends Subsystem {
 	@Override
 	public void onLoop(double timestamp) {
 		synchronized (HatchArm.this) {
-			//armSafetyCheck();
+			boolean hatchLimit = isHatchLimitTriggered();
+			armSafetyCheck();
 			switch (mHatchMechanismState) {
 				case STOWED:
 					break;
@@ -156,12 +164,12 @@ public class HatchArm extends Subsystem {
 				case PLACING:
 					break;
 				case STATION_INTAKE:
-					if (mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed()) {
+					if (hatchLimit) {
 						setHatchMechanismState(HatchMechanismState.STOWED);
 					}
 					break;
 				case TRANSFER:
-					if (mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed()) {
+					if (hatchLimit) {
 						setHatchArmPosition(HatchArmState.STOW);
 						mTransferTime.start(0.4);
 					}
@@ -173,6 +181,8 @@ public class HatchArm extends Subsystem {
 				case MANUAL_OVERRIDE:
 					break;
 				case UNKNOWN:
+					break;
+				case VISION_CONTROL:
 					break;
 				default:
 					Logger.logCriticalError("Unexpected Hatch Arm control state: " + mHatchMechanismState);
@@ -269,6 +279,8 @@ public class HatchArm extends Subsystem {
 			case UNKNOWN:
 				setEnable();
 				break;
+			case VISION_CONTROL:
+				break;
 			default:
 				Logger.logCriticalError("Unexpected Hatch Mechanism: " + mHatchMechanismState);
 				break;
@@ -305,7 +317,7 @@ public class HatchArm extends Subsystem {
 	}
 
 	public enum HatchMechanismState {
-		GROUND_INTAKE, TRANSFER, STATION_INTAKE, STOWED, PLACING, MANUAL_OVERRIDE, UNKNOWN
+		GROUND_INTAKE, TRANSFER, STATION_INTAKE, STOWED, PLACING, MANUAL_OVERRIDE, UNKNOWN, VISION_CONTROL
 	}
 
 

@@ -2,7 +2,6 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.Compressor;
-import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
@@ -63,21 +62,19 @@ public class Superstructure extends Subsystem {
 				break;
 			case VISION_INTAKE_STATION:
 			case VISION_PLACING:
-				//TODO Turn
-				if (!mHatch.hatchOnArmLimit() && !hasHatch) {
+				if (!mHatch.isHatchLimitTriggered() && !hasHatch) {
 					LimelightTarget target = Vision.getInstance().getAverageTarget();
 					double mDist = target.getDistance();
-					if (mDist > 15.0 && target.isValidTarget()) {
+					if (mDist > 20.0 && target.isValidTarget()) {
 						double mSteer = DRIVE.kVisionTurnP * target.getXOffset();
 						DriveSignal mSig = mDrive.updateMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
 						mLastVisionState = new VisionState(mSig, target, mDrive.getFused());
 					} else {
 						double mSteer = DRIVE.kVisionTurnP * (mLastVisionState.getTarget().getXOffset() - mDrive.getYaw());
 						mDrive.updateMotionMagicPositionSetpoint(mLastVisionState.getDriveSignal(), new DriveSignal(mSteer, -mSteer));
-						mHatch.setHatchMechanismState(
-								mRobotState == RobotState.VISION_INTAKE_STATION ? HatchMechanismState.STATION_INTAKE : HatchMechanismState.PLACING);
+						mHatch.setHatchMechanismState(HatchMechanismState.VISION_CONTROL);
 					}
-				} else if (HatchArm.getInstance().hatchOnArmLimit() && !hasHatch) {
+				} else if (HatchArm.getInstance().isHatchLimitTriggered() && !hasHatch) {
 					hasHatch = true;
 					mDrive.updateMotionMagicDeltaSetpoint(new DriveSignal(-20.0, -20.0, NeutralMode.Brake), DriveSignal.BRAKE);
 					if (mRobotState == RobotState.VISION_INTAKE_STATION) {

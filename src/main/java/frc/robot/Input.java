@@ -44,7 +44,7 @@ public class Input {
 
 	private static final MkJoystickButton intakeRollerIn = operatorJoystick.getButton(7, "Intake Roller In");
 	private static final MkJoystickButton intakeRollerOutFast = operatorJoystick.getButton(8, "Intake Roller Out Fast");
-	//TODO Fix
+
 	private static Drive mDrive = Drive.getInstance();
 	private static HatchArm mHatch = HatchArm.getInstance();
 	private static CargoArm mCargo = CargoArm.getInstance();
@@ -78,7 +78,8 @@ public class Input {
 		}
 
 		if (mGroundHatchIntakeManual.isPressed()) {
-			mHatch.setHatchMechanismState(mHatch.getHatchMechanismState() == HatchMechanismState.MANUAL_OVERRIDE ? HatchMechanismState.UNKNOWN : HatchMechanismState.MANUAL_OVERRIDE);
+			mHatch.setHatchMechanismState(
+					mHatch.getHatchMechanismState() == HatchMechanismState.MANUAL_OVERRIDE ? HatchMechanismState.UNKNOWN : HatchMechanismState.MANUAL_OVERRIDE);
 			System.out.println("Change");
 		}
 
@@ -100,7 +101,7 @@ public class Input {
 			mCargo.setIntakeRollers(CARGO_ARM.INTAKE_IN_ROLLER_SPEED);
 		} else if (intakeRollerOutFast.isHeld()) {
 			mCargo.setIntakeRollers(CARGO_ARM.INTAKE_OUT_ROLLER_SPEED);
-		} else{
+		} else {
 			mCargo.setIntakeRollers(0.0);
 		}
 
@@ -115,9 +116,9 @@ public class Input {
 				mHatch.setOpenLoop(0.0);
 			}
 
-			if (mStationIntakeButton.isPressed()){
+			if (mStationIntakeButton.isPressed()) {
 				mHatch.setHatchMechanismState(HatchMechanismState.STATION_INTAKE);
-			} else if(mPlaceButton.isPressed()) {
+			} else if (mPlaceButton.isPressed()) {
 				mHatch.setHatchMechanismState(HatchMechanismState.PLACING);
 			} else if (mTransferButton.isPressed() || mGroundIntakeButton.isPressed()) {
 				mHatch.setHatchArmPosition(HatchArmState.STOW);

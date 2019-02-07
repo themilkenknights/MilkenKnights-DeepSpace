@@ -17,7 +17,6 @@ import frc.robot.paths.TrajectoryGenerator;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
-import frc.robot.subsystems.HatchArm.HatchIntakeState;
 import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Vision;
 import java.util.Arrays;
@@ -29,7 +28,7 @@ public class Robot extends TimedRobot {
 			Arrays.asList(Drive.getInstance(), HatchArm.getInstance(), CargoArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
 
 	protected Robot() {
-		//super(Constants.GENERAL.kLoopDt);
+		super(Constants.GENERAL.kLoopDt);
 		Logger.logRobotConstruction();
 	}
 
@@ -68,6 +67,7 @@ public class Robot extends TimedRobot {
 			mSubsystemManager.zero();
 			RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
 			AutoChooser.startAuto();
+			mSubsystemManager.autonomousInit();
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;
@@ -79,6 +79,7 @@ public class Robot extends TimedRobot {
 		try {
 			Logger.logTeleopInit();
 			mMatchState = MatchState.TELEOP;
+			mSubsystemManager.teleopInit();
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;

@@ -1,14 +1,12 @@
 package frc.robot.lib.drivers;
 
 import com.ctre.phoenix.ErrorCode;
-import com.ctre.phoenix.ParamEnum;
 import com.ctre.phoenix.motorcontrol.ControlFrame;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.InvertType;
 import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
-import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.RemoteLimitSwitchSource;
 import com.ctre.phoenix.motorcontrol.StatusFrameEnhanced;
@@ -47,7 +45,6 @@ public class MkTalon {
 	private double lastOutput, lastArbFeed, mMaxRPM = Double.NaN;
 	private NeutralMode lastNeutralMode = null;
 	private MkTime motorSafetyTimer = new MkTime();
-	//TODO see if caching setpoints is allowed
 
 	/**
 	 * @param master Talon with Encoder CAN ID
@@ -117,8 +114,8 @@ public class MkTalon {
 				CTRE(masterTalon.configMaxIntegralAccumulator(kSlot, 5000, kLong));
 				CTRE(masterTalon.configMotionCruiseVelocity((int) CARGO_ARM.MOTION_MAGIC_CRUISE_VEL, kLong));
 				CTRE(masterTalon.configMotionAcceleration((int) CARGO_ARM.MOTION_MAGIC_ACCEL, kLong));
-				CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.nativeUnitsToDegrees( CARGO_ARM.ARM_FORWARD_LIMIT), kLong));
-				CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.nativeUnitsToDegrees( CARGO_ARM.ARM_REVERSE_LIMIT), kLong));
+				CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.nativeUnitsToDegrees(CARGO_ARM.ARM_FORWARD_LIMIT), kLong));
+				CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.nativeUnitsToDegrees(CARGO_ARM.ARM_REVERSE_LIMIT), kLong));
 				CTRE(masterTalon.configForwardSoftLimitEnable(false, kLong));
 				CTRE(masterTalon.configForwardSoftLimitEnable(false, kLong));
 				CTRE(masterTalon.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kLeftCargoIntakeTalonID, kLong));
@@ -201,7 +198,6 @@ public class MkTalon {
 
 		//Set Slave Talons/Victors
 		if (mSide == TalonLoc.Hatch_Arm) {
-			//TODO Ensure that I want to zero at limit
 			CTRE(slaveTalon.configAllSettings(new TalonSRXConfiguration()));
 			CTRE(slaveTalon.configFactoryDefault(kLong));
 			CTRE(slaveTalon.clearStickyFaults(kLong));
@@ -322,7 +318,7 @@ public class MkTalon {
 
 	/**
 	 * Return the expected error value for the current mode Note that the method returns the deviation from target setpoint unlike the official getClosedLoopError() method.
-	 * This method serves to limit CAN usage by using known setpoints to calculate error. TODO Verify getError() Method
+	 * This method serves to limit CAN usage by using known setpoints to calculate error.
 	 */
 	public synchronized double getError() {
 		switch (mSide) {
