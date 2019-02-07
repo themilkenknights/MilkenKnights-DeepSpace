@@ -37,13 +37,6 @@ public class SubsystemManager {
 		}
 	}
 
-	public void zero() {
-		double timestamp_ = Timer.getFPGATimestamp();
-		for (Subsystem subsystem : mAllSubsystems) {
-			subsystem.zero(timestamp_);
-		}
-	}
-
 	public void stop() {
 		double timestamp_ = Timer.getFPGATimestamp();
 		for (Subsystem subsystem : mAllSubsystems) {

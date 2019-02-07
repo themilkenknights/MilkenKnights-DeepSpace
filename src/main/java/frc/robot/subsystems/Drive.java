@@ -7,8 +7,6 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.Constants.DRIVE;
-import frc.robot.Robot;
-import frc.robot.Robot.MatchState;
 import frc.robot.lib.drivers.MkGyro;
 import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
@@ -289,15 +287,21 @@ public class Drive extends Subsystem {
 	/**
 	 * Clear magnetic encoder position and local distance counter and start logging if appropriate
 	 */
-	public synchronized void zero() {
+	@Override
+	public void autonomousInit(double timestamp) {
+		RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
 		navX.zeroYaw();
 		leftDrive.masterTalon.setSelectedSensorPosition(0);
 		rightDrive.masterTalon.setSelectedSensorPosition(0);
 		left_encoder_prev_distance_ = 0;
 		right_encoder_prev_distance_ = 0;
-		if (Robot.mMatchState == MatchState.AUTO && mCSVWriter == null && Constants.LOG.kDriveCSVLogging) {
+		if (mCSVWriter == null && Constants.LOG.kDriveCSVLogging) {
 			mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
 		}
+	}
+
+	public void teleopInit(double timestamp) {
+
 	}
 
 	private synchronized boolean driveStatus() {

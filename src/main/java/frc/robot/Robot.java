@@ -37,7 +37,6 @@ public class Robot extends TimedRobot {
 		try {
 			Logger.logRobotInit();
 			mMatchState = MatchState.DISABLED;
-			mSubsystemManager.zero();
 			TrajectoryGenerator.getInstance().generateTrajectories();
 			Shuffleboard.startRecording();
 		} catch (Throwable t) {
@@ -64,10 +63,8 @@ public class Robot extends TimedRobot {
 		try {
 			Logger.logAutoInit();
 			mMatchState = MatchState.AUTO;
-			mSubsystemManager.zero();
-			RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
-			AutoChooser.startAuto();
 			mSubsystemManager.autonomousInit();
+			AutoChooser.startAuto();
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;
@@ -90,7 +87,7 @@ public class Robot extends TimedRobot {
 	public void testInit() {
 		try {
 			mMatchState = MatchState.TEST;
-			mSubsystemManager.zero();
+			mSubsystemManager.autonomousInit();
 			Logger.logMarker("Starting check systems.");
 			mSubsystemManager.checkSystem();
 			mSubsystemManager.stop();

@@ -28,10 +28,6 @@ public abstract class Subsystem {
 
 	}
 
-	public void zero(double timestamp) {
-
-	}
-
 	public void onLoop(double timestamp) {
 
 	}

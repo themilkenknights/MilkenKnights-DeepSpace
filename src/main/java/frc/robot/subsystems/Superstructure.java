@@ -49,11 +49,7 @@ public class Superstructure extends Subsystem {
 			DriverStation.reportWarning("Low Battery Voltage", false);
 		}*/
 	}
-
-	@Override
-	public void zero(double timestamp) {
-	}
-
+	
 	@Override
 	public void onLoop(double timestamp) {
 

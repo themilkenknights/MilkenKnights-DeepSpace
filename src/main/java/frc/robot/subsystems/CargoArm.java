@@ -116,14 +116,22 @@ public class CargoArm extends Subsystem {
 	}
 
 	@Override
-	public void zero(double timestamp) {
-		synchronized (CargoArm.this) {
-			mArmTalon.zeroEncoder();
-			setEnable();
-			if (mArmTalon.getZer() > GENERAL.kTicksPerRev) {
-				Logger.logError("Cargo Arm Absolute Position > 4096");
-				setArmControlState(CargoArmControlState.OPEN_LOOP);
-			}
+	public void teleopInit(double timestamp) {
+		mArmTalon.zeroEncoder();
+		setEnable();
+		if (mArmTalon.getZer() > GENERAL.kTicksPerRev) {
+			Logger.logError("Cargo Arm Absolute Position > 4096");
+			setArmControlState(CargoArmControlState.OPEN_LOOP);
+		}
+	}
+
+	@Override
+	public void autonomousInit(double timestamp) {
+		mArmTalon.zeroEncoder();
+		setEnable();
+		if (mArmTalon.getZer() > GENERAL.kTicksPerRev) {
+			Logger.logError("Cargo Arm Absolute Position > 4096");
+			setArmControlState(CargoArmControlState.OPEN_LOOP);
 		}
 	}
 

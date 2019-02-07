@@ -43,12 +43,22 @@ public class HatchArm extends Subsystem {
 
 	@Override
 	public void teleopInit(double timestamp) {
-
+		mArmTalon.zeroEncoder();
+		setEnable();
+		if (mArmTalon.getZer() > GENERAL.kTicksPerRev) {
+			Logger.logMarker("Hatch Arm Absolution Position > 4096");
+			setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
+		}
 	}
 
 	@Override
 	public void autonomousInit(double timestamp) {
-
+		mArmTalon.zeroEncoder();
+		setEnable();
+		if (mArmTalon.getZer() > GENERAL.kTicksPerRev) {
+			Logger.logMarker("Hatch Arm Absolution Position > 4096");
+			setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
+		}
 	}
 
 	private void armSafetyCheck() {
@@ -134,17 +144,6 @@ public class HatchArm extends Subsystem {
 		//SmartDashboard.putNumber("Arm Raw Error", MkMath.angleToNativeUnits(mArmTalon.getError()));
 	}
 
-	@Override
-	public void zero(double timestamp) {
-		synchronized (HatchArm.this) {
-			mArmTalon.zeroEncoder();
-			setEnable();
-			if (mArmTalon.getZer() > GENERAL.kTicksPerRev) {
-				Logger.logMarker("Hatch Arm Absolution Position > 4096");
-				setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
-			}
-		}
-	}
 
 	/**
 	 * Updated from mEnabledLoop in Robot.java
