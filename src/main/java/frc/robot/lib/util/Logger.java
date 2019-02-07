@@ -28,6 +28,8 @@ public class Logger {
 	}
 
 	public static void logRobotInit() {
+		String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+		boolean test = new File("/media/sda1/" + dateStamp1 + "/").mkdirs();
 		logMarker("Robot Init");
 	}
 
@@ -62,7 +64,6 @@ public class Logger {
 
 	private static synchronized void logMarker(String mark, Throwable nullableException) {
 		String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-		boolean test = new File("/media/sda1/" + dateStamp1 + "/").mkdirs();
 		try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 + "/main_log.txt", true))) {
 			writer.print(RUN_INSTANCE_UUID.toString());
 			writer.print(", ");
@@ -81,7 +82,6 @@ public class Logger {
 
 	private static synchronized void logCrashMarker(String mark, Throwable nullableException) {
 		String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-		boolean test = new File("/media/sda1/" + dateStamp1 + "/").mkdirs();
 		try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 + "/crash_log.txt", true))) {
 			writer.print(RUN_INSTANCE_UUID.toString());
 			writer.print(", ");

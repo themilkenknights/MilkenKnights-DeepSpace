@@ -35,7 +35,9 @@ public class HatchArm extends Subsystem {
 		mHatchArmState = HatchArmState.STOW;
 		mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kHatchLimitSwitchTalonID, TalonLoc.Hatch_Arm);
 		mStartDis = new MkTime();
+		mTransferTime = new MkTime();
 		//TODO Fix
+		setHatchMechanismState(HatchMechanismState.MANUAL_OVERRIDE);
 	}
 
 	public static HatchArm getInstance() {
@@ -116,11 +118,13 @@ public class HatchArm extends Subsystem {
 
 	@Override
 	public void outputTelemetry() {
-		mArmTalon.updateSmartDash(false);
+		//mArmTalon.updateSmartDash(false);
 		SmartDashboard.putString("Hatch Arm Desired Position", mHatchIntakeState.toString());
 		SmartDashboard.putString("Hatch Arm Control Mode", mHatchIntakeControlState.toString());
 		SmartDashboard.putBoolean("Hatch Arm Status", mArmTalon.isEncoderConnected());
-		SmartDashboard.putNumber("Hatch Arm Abs", mArmTalon.getAbsolutePosition());
+		//SmartDashboard.putNumber("Hatch Arm Abs", mArmTalon.getAbsolutePosition());
+		SmartDashboard.putString("Hatch Mech State", mHatchMechanismState.toString());
+		//SmartDashboard.putNumber("Arm Raw Error", MkMath.angleToNativeUnits(mArmTalon.getError()));
 	}
 
 	@Override
@@ -143,21 +147,23 @@ public class HatchArm extends Subsystem {
 	@Override
 	public void onLoop(double timestamp) {
 		synchronized (HatchArm.this) {
-			armSafetyCheck();
+			//armSafetyCheck();
 			switch (mHatchMechanismState) {
 				case STOWED:
 					break;
 				case GROUND_INTAKE:
 					break;
+				case PLACING:
+					break;
 				case STATION_INTAKE:
-					if (mArmTalon.slaveTalon.getSensorCollection().isRevLimitSwitchClosed()) {
+					if (mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed()) {
 						setHatchMechanismState(HatchMechanismState.STOWED);
 					}
 					break;
 				case TRANSFER:
-					if (mArmTalon.slaveTalon.getSensorCollection().isRevLimitSwitchClosed()) {
+					if (mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed()) {
 						setHatchArmPosition(HatchArmState.STOW);
-						mTransferTime.start(0.15);
+						mTransferTime.start(0.4);
 					}
 					if (mTransferTime.isDone()) {
 						setHatchMechanismState(HatchMechanismState.STOWED);
@@ -167,7 +173,6 @@ public class HatchArm extends Subsystem {
 				case MANUAL_OVERRIDE:
 					break;
 				case UNKNOWN:
-					setHatchArmPosition(HatchArmState.PLACE);
 					break;
 				default:
 					Logger.logCriticalError("Unexpected Hatch Arm control state: " + mHatchMechanismState);
@@ -180,6 +185,7 @@ public class HatchArm extends Subsystem {
 	@Override
 	public void onStop(double timestamp) {
 		setHatchArmPosition(HatchArmState.STOW);
+		setHatchMechanismState(HatchMechanismState.UNKNOWN);
 	}
 
 	@Override
@@ -224,7 +230,7 @@ public class HatchArm extends Subsystem {
 	 */
 	public synchronized void setHatchArmPosition(HatchArmState armState) {
 		mArmSolenoid.set(armState.state);
-		Logger.logMarker("Set Hatch Arm to " + armState.toString());
+		//Logger.logMarker("Set Hatch Arm to " + armState.toString());
 	}
 
 	public HatchArmState getHatchArmState() {
@@ -238,6 +244,7 @@ public class HatchArm extends Subsystem {
 	public void setHatchMechanismState(HatchMechanismState state) {
 		switch (state) {
 			case TRANSFER:
+				setHatchArmPosition(HatchArmState.PLACE);
 				setHatchIntakePosition(HatchIntakeState.TRANSFER_POINT);
 				break;
 			case GROUND_INTAKE:
@@ -260,6 +267,7 @@ public class HatchArm extends Subsystem {
 				changeSafety(true);
 				break;
 			case UNKNOWN:
+				setEnable();
 				break;
 			default:
 				Logger.logCriticalError("Unexpected Hatch Mechanism: " + mHatchMechanismState);
@@ -276,9 +284,9 @@ public class HatchArm extends Subsystem {
 
 	public enum HatchIntakeState {
 		ENABLE(0), //State directly after robot is enabled (not mapped to a specific angle)
-		INTAKE_POINT(200.0),
-		TRANSFER_POINT(78.5), //Outtakes into the switch on the backside of the robot
-		STOW_POINT(219.5);
+		INTAKE_POINT(170.0),
+		TRANSFER_POINT(75.0), //Outtakes into the switch on the backside of the robot
+		STOW_POINT(0.0);
 
 		public final double state;
 

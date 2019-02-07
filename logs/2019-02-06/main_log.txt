@@ -1,0 +1,1475 @@
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Teleop Init, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:46 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:47 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:48 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:48 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:48 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:48 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:48 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to PLACE, Wed Feb 06 10:56:48 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Disabled Init, Wed Feb 06 10:56:48 PST 2019
+7ed8d22e-de36-4784-b7c8-d697f087b8de, Set Hatch Arm to STOW, Wed Feb 06 10:56:48 PST 2019
+2a1fad53-a171-48cc-9da2-3b7f4b59e709, Robot Startup, Wed Feb 06 10:57:07 PST 2019
+2a1fad53-a171-48cc-9da2-3b7f4b59e709, Robot Init, Wed Feb 06 10:57:07 PST 2019
+2a1fad53-a171-48cc-9da2-3b7f4b59e709, Generating trajectories..., Wed Feb 06 10:57:07 PST 2019
+2a1fad53-a171-48cc-9da2-3b7f4b59e709, Finished trajectory generation, Wed Feb 06 10:57:08 PST 2019
+2a1fad53-a171-48cc-9da2-3b7f4b59e709, Disabled Init, Wed Feb 06 10:57:08 PST 2019
+2a1fad53-a171-48cc-9da2-3b7f4b59e709, Set Hatch Arm to STOW, Wed Feb 06 10:57:08 PST 2019
+2a1fad53-a171-48cc-9da2-3b7f4b59e709, SET HEADING: 0.0, Wed Feb 06 10:57:08 PST 2019
+2a1fad53-a171-48cc-9da2-3b7f4b59e709, Gyro offset: 120.28999328613283, Wed Feb 06 10:57:08 PST 2019
+bbb4b352-beb9-462c-9c42-474afbe6788b, Robot Startup, Wed Feb 06 10:57:56 PST 2019
+bbb4b352-beb9-462c-9c42-474afbe6788b, Robot Init, Wed Feb 06 10:57:56 PST 2019
+bbb4b352-beb9-462c-9c42-474afbe6788b, Generating trajectories..., Wed Feb 06 10:57:56 PST 2019
+bbb4b352-beb9-462c-9c42-474afbe6788b, Finished trajectory generation, Wed Feb 06 10:57:56 PST 2019
+bbb4b352-beb9-462c-9c42-474afbe6788b, Disabled Init, Wed Feb 06 10:57:57 PST 2019
+bbb4b352-beb9-462c-9c42-474afbe6788b, Set Hatch Arm to STOW, Wed Feb 06 10:57:57 PST 2019
+bbb4b352-beb9-462c-9c42-474afbe6788b, SET HEADING: 0.0, Wed Feb 06 10:57:57 PST 2019
+bbb4b352-beb9-462c-9c42-474afbe6788b, Gyro offset: 120.19999694824216, Wed Feb 06 10:57:57 PST 2019
+34477c13-1920-4fec-b516-41ddf6bd1844, Robot Startup, Wed Feb 06 10:59:04 PST 2019
+34477c13-1920-4fec-b516-41ddf6bd1844, Robot Init, Wed Feb 06 10:59:04 PST 2019
+34477c13-1920-4fec-b516-41ddf6bd1844, Generating trajectories..., Wed Feb 06 10:59:04 PST 2019
+34477c13-1920-4fec-b516-41ddf6bd1844, Finished trajectory generation, Wed Feb 06 10:59:04 PST 2019
+34477c13-1920-4fec-b516-41ddf6bd1844, Disabled Init, Wed Feb 06 10:59:04 PST 2019
+34477c13-1920-4fec-b516-41ddf6bd1844, Set Hatch Arm to STOW, Wed Feb 06 10:59:04 PST 2019
+34477c13-1920-4fec-b516-41ddf6bd1844, SET HEADING: 0.0, Wed Feb 06 10:59:05 PST 2019
+34477c13-1920-4fec-b516-41ddf6bd1844, Gyro offset: 120.25999450683595, Wed Feb 06 10:59:05 PST 2019
+59a88ec6-f51a-41ac-ab6b-7c4d7345c1e6, Robot Startup, Wed Feb 06 16:33:00 PST 2019
+59a88ec6-f51a-41ac-ab6b-7c4d7345c1e6, Robot Init, Wed Feb 06 16:33:00 PST 2019
+59a88ec6-f51a-41ac-ab6b-7c4d7345c1e6, Generating trajectories..., Wed Feb 06 16:33:00 PST 2019
+59a88ec6-f51a-41ac-ab6b-7c4d7345c1e6, Finished trajectory generation, Wed Feb 06 16:33:00 PST 2019
+59a88ec6-f51a-41ac-ab6b-7c4d7345c1e6, Disabled Init, Wed Feb 06 16:33:00 PST 2019
+59a88ec6-f51a-41ac-ab6b-7c4d7345c1e6, SET HEADING: 0.0, Wed Feb 06 16:33:02 PST 2019
+59a88ec6-f51a-41ac-ab6b-7c4d7345c1e6, Gyro offset: 23.440002441406275, Wed Feb 06 16:33:02 PST 2019
+59a88ec6-f51a-41ac-ab6b-7c4d7345c1e6, Teleop Init, Wed Feb 06 16:33:20 PST 2019
+59a88ec6-f51a-41ac-ab6b-7c4d7345c1e6, Disabled Init, Wed Feb 06 16:33:21 PST 2019
+59a88ec6-f51a-41ac-ab6b-7c4d7345c1e6, Teleop Init, Wed Feb 06 16:33:21 PST 2019
+59a88ec6-f51a-41ac-ab6b-7c4d7345c1e6, Disabled Init, Wed Feb 06 16:33:22 PST 2019
+b3257f9f-2b33-43f8-b3f9-8b3c7dbc1754, Robot Startup, Wed Feb 06 16:33:29 PST 2019
+b3257f9f-2b33-43f8-b3f9-8b3c7dbc1754, Robot Init, Wed Feb 06 16:33:29 PST 2019
+b3257f9f-2b33-43f8-b3f9-8b3c7dbc1754, Generating trajectories..., Wed Feb 06 16:33:29 PST 2019
+b3257f9f-2b33-43f8-b3f9-8b3c7dbc1754, Finished trajectory generation, Wed Feb 06 16:33:29 PST 2019
+b3257f9f-2b33-43f8-b3f9-8b3c7dbc1754, Disabled Init, Wed Feb 06 16:33:29 PST 2019
+b3257f9f-2b33-43f8-b3f9-8b3c7dbc1754, SET HEADING: 0.0, Wed Feb 06 16:33:30 PST 2019
+b3257f9f-2b33-43f8-b3f9-8b3c7dbc1754, Gyro offset: 23.570007324218746, Wed Feb 06 16:33:30 PST 2019
+b3257f9f-2b33-43f8-b3f9-8b3c7dbc1754, Teleop Init, Wed Feb 06 16:33:40 PST 2019
+b3257f9f-2b33-43f8-b3f9-8b3c7dbc1754, Disabled Init, Wed Feb 06 16:33:41 PST 2019
+b3257f9f-2b33-43f8-b3f9-8b3c7dbc1754, Teleop Init, Wed Feb 06 16:33:41 PST 2019
+b3257f9f-2b33-43f8-b3f9-8b3c7dbc1754, Disabled Init, Wed Feb 06 16:33:42 PST 2019
+12e2ac2c-5a66-483d-b803-19ca0ab83533, Robot Startup, Wed Feb 06 16:34:35 PST 2019
+12e2ac2c-5a66-483d-b803-19ca0ab83533, Robot Init, Wed Feb 06 16:34:35 PST 2019
+12e2ac2c-5a66-483d-b803-19ca0ab83533, Generating trajectories..., Wed Feb 06 16:34:35 PST 2019
+12e2ac2c-5a66-483d-b803-19ca0ab83533, Finished trajectory generation, Wed Feb 06 16:34:35 PST 2019
+12e2ac2c-5a66-483d-b803-19ca0ab83533, Disabled Init, Wed Feb 06 16:34:35 PST 2019
+12e2ac2c-5a66-483d-b803-19ca0ab83533, SET HEADING: 0.0, Wed Feb 06 16:34:37 PST 2019
+12e2ac2c-5a66-483d-b803-19ca0ab83533, Gyro offset: 23.920013427734403, Wed Feb 06 16:34:37 PST 2019
+b0f71333-7c9f-4bce-b32b-1f693852fd03, Robot Startup, Wed Feb 06 16:35:26 PST 2019
+b0f71333-7c9f-4bce-b32b-1f693852fd03, Robot Init, Wed Feb 06 16:35:26 PST 2019
+b0f71333-7c9f-4bce-b32b-1f693852fd03, Generating trajectories..., Wed Feb 06 16:35:26 PST 2019
+b0f71333-7c9f-4bce-b32b-1f693852fd03, Finished trajectory generation, Wed Feb 06 16:35:26 PST 2019
+b0f71333-7c9f-4bce-b32b-1f693852fd03, Disabled Init, Wed Feb 06 16:35:26 PST 2019
+b0f71333-7c9f-4bce-b32b-1f693852fd03, SET HEADING: 0.0, Wed Feb 06 16:35:27 PST 2019
+b0f71333-7c9f-4bce-b32b-1f693852fd03, Gyro offset: 24.239990234375018, Wed Feb 06 16:35:27 PST 2019
+b0f71333-7c9f-4bce-b32b-1f693852fd03, Teleop Init, Wed Feb 06 16:35:35 PST 2019
+b0f71333-7c9f-4bce-b32b-1f693852fd03, Disabled Init, Wed Feb 06 16:35:57 PST 2019
+b0f71333-7c9f-4bce-b32b-1f693852fd03, Teleop Init, Wed Feb 06 16:35:58 PST 2019
+b0f71333-7c9f-4bce-b32b-1f693852fd03, Disabled Init, Wed Feb 06 16:35:59 PST 2019
+930f71d8-8f4d-4d4f-98d7-0a3456fe80af, Robot Startup, Wed Feb 06 16:36:39 PST 2019
+930f71d8-8f4d-4d4f-98d7-0a3456fe80af, Robot Init, Wed Feb 06 16:36:39 PST 2019
+930f71d8-8f4d-4d4f-98d7-0a3456fe80af, Generating trajectories..., Wed Feb 06 16:36:39 PST 2019
+930f71d8-8f4d-4d4f-98d7-0a3456fe80af, Finished trajectory generation, Wed Feb 06 16:36:39 PST 2019
+930f71d8-8f4d-4d4f-98d7-0a3456fe80af, Disabled Init, Wed Feb 06 16:36:39 PST 2019
+930f71d8-8f4d-4d4f-98d7-0a3456fe80af, SET HEADING: 0.0, Wed Feb 06 16:36:39 PST 2019
+930f71d8-8f4d-4d4f-98d7-0a3456fe80af, Gyro offset: 24.51000976562498, Wed Feb 06 16:36:39 PST 2019
+930f71d8-8f4d-4d4f-98d7-0a3456fe80af, Teleop Init, Wed Feb 06 16:36:59 PST 2019
+930f71d8-8f4d-4d4f-98d7-0a3456fe80af, Disabled Init, Wed Feb 06 16:37:10 PST 2019
+930f71d8-8f4d-4d4f-98d7-0a3456fe80af, Teleop Init, Wed Feb 06 16:38:02 PST 2019
+930f71d8-8f4d-4d4f-98d7-0a3456fe80af, Disabled Init, Wed Feb 06 16:38:04 PST 2019
+05fa6ca9-39e1-48ef-bd6a-a1a7981e4768, Robot Startup, Wed Feb 06 16:38:11 PST 2019
+05fa6ca9-39e1-48ef-bd6a-a1a7981e4768, Robot Init, Wed Feb 06 16:38:12 PST 2019
+05fa6ca9-39e1-48ef-bd6a-a1a7981e4768, Generating trajectories..., Wed Feb 06 16:38:12 PST 2019
+05fa6ca9-39e1-48ef-bd6a-a1a7981e4768, Finished trajectory generation, Wed Feb 06 16:38:12 PST 2019
+05fa6ca9-39e1-48ef-bd6a-a1a7981e4768, Disabled Init, Wed Feb 06 16:38:12 PST 2019
+05fa6ca9-39e1-48ef-bd6a-a1a7981e4768, SET HEADING: 0.0, Wed Feb 06 16:38:12 PST 2019
+05fa6ca9-39e1-48ef-bd6a-a1a7981e4768, Gyro offset: 24.76998901367189, Wed Feb 06 16:38:12 PST 2019
+05fa6ca9-39e1-48ef-bd6a-a1a7981e4768, Teleop Init, Wed Feb 06 16:38:19 PST 2019
+05fa6ca9-39e1-48ef-bd6a-a1a7981e4768, Disabled Init, Wed Feb 06 16:38:22 PST 2019
+05fa6ca9-39e1-48ef-bd6a-a1a7981e4768, Teleop Init, Wed Feb 06 16:38:28 PST 2019
+05fa6ca9-39e1-48ef-bd6a-a1a7981e4768, Disabled Init, Wed Feb 06 16:38:39 PST 2019
+7facd076-52a3-4a61-a834-5016ba9e20e7, Robot Startup, Wed Feb 06 16:39:22 PST 2019
+7facd076-52a3-4a61-a834-5016ba9e20e7, Robot Init, Wed Feb 06 16:39:22 PST 2019
+7facd076-52a3-4a61-a834-5016ba9e20e7, Generating trajectories..., Wed Feb 06 16:39:22 PST 2019
+7facd076-52a3-4a61-a834-5016ba9e20e7, Finished trajectory generation, Wed Feb 06 16:39:23 PST 2019
+7facd076-52a3-4a61-a834-5016ba9e20e7, Disabled Init, Wed Feb 06 16:39:23 PST 2019
+7facd076-52a3-4a61-a834-5016ba9e20e7, SET HEADING: 0.0, Wed Feb 06 16:39:23 PST 2019
+7facd076-52a3-4a61-a834-5016ba9e20e7, Gyro offset: 25.089996337890643, Wed Feb 06 16:39:23 PST 2019
+a5aeec0e-d5d9-4bf7-a593-b0be3dfb77ce, Robot Startup, Wed Feb 06 16:39:37 PST 2019
+a5aeec0e-d5d9-4bf7-a593-b0be3dfb77ce, Robot Init, Wed Feb 06 16:39:38 PST 2019
+a5aeec0e-d5d9-4bf7-a593-b0be3dfb77ce, Generating trajectories..., Wed Feb 06 16:39:38 PST 2019
+a5aeec0e-d5d9-4bf7-a593-b0be3dfb77ce, Finished trajectory generation, Wed Feb 06 16:39:38 PST 2019
+a5aeec0e-d5d9-4bf7-a593-b0be3dfb77ce, Disabled Init, Wed Feb 06 16:39:38 PST 2019
+a5aeec0e-d5d9-4bf7-a593-b0be3dfb77ce, SET HEADING: 0.0, Wed Feb 06 16:39:38 PST 2019
+a5aeec0e-d5d9-4bf7-a593-b0be3dfb77ce, Gyro offset: 25.109985351562532, Wed Feb 06 16:39:38 PST 2019
+a5aeec0e-d5d9-4bf7-a593-b0be3dfb77ce, Teleop Init, Wed Feb 06 16:39:50 PST 2019
+a5aeec0e-d5d9-4bf7-a593-b0be3dfb77ce, Disabled Init, Wed Feb 06 16:39:51 PST 2019
+51369547-9b2a-4ed2-8b8c-93d61e494704, Robot Startup, Wed Feb 06 16:39:59 PST 2019
+51369547-9b2a-4ed2-8b8c-93d61e494704, Robot Init, Wed Feb 06 16:39:59 PST 2019
+51369547-9b2a-4ed2-8b8c-93d61e494704, Generating trajectories..., Wed Feb 06 16:39:59 PST 2019
+51369547-9b2a-4ed2-8b8c-93d61e494704, Finished trajectory generation, Wed Feb 06 16:39:59 PST 2019
+51369547-9b2a-4ed2-8b8c-93d61e494704, Disabled Init, Wed Feb 06 16:39:59 PST 2019
+51369547-9b2a-4ed2-8b8c-93d61e494704, SET HEADING: 0.0, Wed Feb 06 16:39:59 PST 2019
+51369547-9b2a-4ed2-8b8c-93d61e494704, Gyro offset: 25.220001220703118, Wed Feb 06 16:39:59 PST 2019
+51369547-9b2a-4ed2-8b8c-93d61e494704, Teleop Init, Wed Feb 06 16:40:13 PST 2019
+51369547-9b2a-4ed2-8b8c-93d61e494704, Disabled Init, Wed Feb 06 16:40:16 PST 2019
+b0d289c0-953f-4689-a85d-eefdb6514d3c, Robot Startup, Wed Feb 06 16:40:36 PST 2019
+b0d289c0-953f-4689-a85d-eefdb6514d3c, Robot Init, Wed Feb 06 16:40:36 PST 2019
+b0d289c0-953f-4689-a85d-eefdb6514d3c, Generating trajectories..., Wed Feb 06 16:40:36 PST 2019
+b0d289c0-953f-4689-a85d-eefdb6514d3c, Finished trajectory generation, Wed Feb 06 16:40:36 PST 2019
+b0d289c0-953f-4689-a85d-eefdb6514d3c, Disabled Init, Wed Feb 06 16:40:36 PST 2019
+b0d289c0-953f-4689-a85d-eefdb6514d3c, SET HEADING: 0.0, Wed Feb 06 16:40:36 PST 2019
+b0d289c0-953f-4689-a85d-eefdb6514d3c, Gyro offset: 25.48999023437499, Wed Feb 06 16:40:36 PST 2019
+b0d289c0-953f-4689-a85d-eefdb6514d3c, Teleop Init, Wed Feb 06 16:40:42 PST 2019
+b0d289c0-953f-4689-a85d-eefdb6514d3c, Disabled Init, Wed Feb 06 16:40:45 PST 2019
+b0d289c0-953f-4689-a85d-eefdb6514d3c, Teleop Init, Wed Feb 06 16:40:47 PST 2019
+b0d289c0-953f-4689-a85d-eefdb6514d3c, Disabled Init, Wed Feb 06 16:40:51 PST 2019
+b0d289c0-953f-4689-a85d-eefdb6514d3c, Teleop Init, Wed Feb 06 16:40:52 PST 2019
+b0d289c0-953f-4689-a85d-eefdb6514d3c, Disabled Init, Wed Feb 06 16:40:53 PST 2019
+e0ce0114-2e03-4d09-87df-21190c2fe98f, Robot Startup, Wed Feb 06 16:41:46 PST 2019
+e0ce0114-2e03-4d09-87df-21190c2fe98f, Robot Init, Wed Feb 06 16:41:46 PST 2019
+e0ce0114-2e03-4d09-87df-21190c2fe98f, Generating trajectories..., Wed Feb 06 16:41:46 PST 2019
+e0ce0114-2e03-4d09-87df-21190c2fe98f, Finished trajectory generation, Wed Feb 06 16:41:47 PST 2019
+e0ce0114-2e03-4d09-87df-21190c2fe98f, Disabled Init, Wed Feb 06 16:41:47 PST 2019
+e0ce0114-2e03-4d09-87df-21190c2fe98f, SET HEADING: 0.0, Wed Feb 06 16:41:47 PST 2019
+e0ce0114-2e03-4d09-87df-21190c2fe98f, Gyro offset: 25.79000854492186, Wed Feb 06 16:41:47 PST 2019
+e0ce0114-2e03-4d09-87df-21190c2fe98f, Teleop Init, Wed Feb 06 16:41:52 PST 2019
+e0ce0114-2e03-4d09-87df-21190c2fe98f, Disabled Init, Wed Feb 06 16:42:04 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Robot Startup, Wed Feb 06 16:42:24 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Robot Init, Wed Feb 06 16:42:24 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Generating trajectories..., Wed Feb 06 16:42:24 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Finished trajectory generation, Wed Feb 06 16:42:25 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Disabled Init, Wed Feb 06 16:42:25 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, SET HEADING: 0.0, Wed Feb 06 16:42:25 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Gyro offset: 25.8999938964844, Wed Feb 06 16:42:25 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Teleop Init, Wed Feb 06 16:42:28 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:34 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:35 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Switching to Robot State:TELEOP_DRIVE, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Failed to set Arm State: Arm Safety Enabled, Wed Feb 06 16:42:36 PST 2019
+ea85999a-9f53-4965-9858-867140ea7c6b, Disabled Init, Wed Feb 06 16:42:40 PST 2019
+d4e24c69-e17d-41c7-9e6c-3110e4e11c23, Robot Startup, Wed Feb 06 16:45:46 PST 2019
+d4e24c69-e17d-41c7-9e6c-3110e4e11c23, Robot Init, Wed Feb 06 16:45:46 PST 2019
+d4e24c69-e17d-41c7-9e6c-3110e4e11c23, Generating trajectories..., Wed Feb 06 16:45:46 PST 2019
+d4e24c69-e17d-41c7-9e6c-3110e4e11c23, Finished trajectory generation, Wed Feb 06 16:45:47 PST 2019
+d4e24c69-e17d-41c7-9e6c-3110e4e11c23, Disabled Init, Wed Feb 06 16:45:47 PST 2019
+d4e24c69-e17d-41c7-9e6c-3110e4e11c23, SET HEADING: 0.0, Wed Feb 06 16:45:47 PST 2019
+d4e24c69-e17d-41c7-9e6c-3110e4e11c23, Gyro offset: 27.299987792968736, Wed Feb 06 16:45:47 PST 2019
+d4e24c69-e17d-41c7-9e6c-3110e4e11c23, Teleop Init, Wed Feb 06 16:46:01 PST 2019
+d4e24c69-e17d-41c7-9e6c-3110e4e11c23, Disabled Init, Wed Feb 06 16:46:02 PST 2019
+d4e24c69-e17d-41c7-9e6c-3110e4e11c23, Teleop Init, Wed Feb 06 16:46:07 PST 2019
+d4e24c69-e17d-41c7-9e6c-3110e4e11c23, Disabled Init, Wed Feb 06 16:46:08 PST 2019
+d4e24c69-e17d-41c7-9e6c-3110e4e11c23, Teleop Init, Wed Feb 06 16:46:19 PST 2019
+d4e24c69-e17d-41c7-9e6c-3110e4e11c23, Disabled Init, Wed Feb 06 16:46:29 PST 2019
+7f77255b-7bf8-41b0-bbea-1e57c44c7501, Robot Startup, Wed Feb 06 16:46:36 PST 2019
+7f77255b-7bf8-41b0-bbea-1e57c44c7501, Robot Init, Wed Feb 06 16:46:36 PST 2019
+7f77255b-7bf8-41b0-bbea-1e57c44c7501, Generating trajectories..., Wed Feb 06 16:46:36 PST 2019
+7f77255b-7bf8-41b0-bbea-1e57c44c7501, Finished trajectory generation, Wed Feb 06 16:46:37 PST 2019
+7f77255b-7bf8-41b0-bbea-1e57c44c7501, Disabled Init, Wed Feb 06 16:46:37 PST 2019
+7f77255b-7bf8-41b0-bbea-1e57c44c7501, SET HEADING: 0.0, Wed Feb 06 16:46:37 PST 2019
+7f77255b-7bf8-41b0-bbea-1e57c44c7501, Gyro offset: 27.589996337890643, Wed Feb 06 16:46:37 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, Robot Startup, Wed Feb 06 16:47:00 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, Robot Init, Wed Feb 06 16:47:00 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, Generating trajectories..., Wed Feb 06 16:47:00 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, Finished trajectory generation, Wed Feb 06 16:47:00 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, Disabled Init, Wed Feb 06 16:47:00 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, SET HEADING: 0.0, Wed Feb 06 16:47:00 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, Gyro offset: 27.70001220703128, Wed Feb 06 16:47:00 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, Teleop Init, Wed Feb 06 16:47:07 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, Disabled Init, Wed Feb 06 16:47:12 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, Teleop Init, Wed Feb 06 16:47:12 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, Disabled Init, Wed Feb 06 16:47:13 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, Teleop Init, Wed Feb 06 16:47:14 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, Disabled Init, Wed Feb 06 16:47:14 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, Teleop Init, Wed Feb 06 16:47:23 PST 2019
+5c58eef0-e03e-4623-a888-784e2fc5fa88, Disabled Init, Wed Feb 06 16:47:28 PST 2019
+1fce8642-d370-47cb-a2e9-a0c720038d4f, Robot Startup, Wed Feb 06 16:47:59 PST 2019
+1fce8642-d370-47cb-a2e9-a0c720038d4f, Robot Init, Wed Feb 06 16:47:59 PST 2019
+1fce8642-d370-47cb-a2e9-a0c720038d4f, Generating trajectories..., Wed Feb 06 16:47:59 PST 2019
+1fce8642-d370-47cb-a2e9-a0c720038d4f, Finished trajectory generation, Wed Feb 06 16:47:59 PST 2019
+1fce8642-d370-47cb-a2e9-a0c720038d4f, Disabled Init, Wed Feb 06 16:47:59 PST 2019
+1fce8642-d370-47cb-a2e9-a0c720038d4f, SET HEADING: 0.0, Wed Feb 06 16:47:59 PST 2019
+1fce8642-d370-47cb-a2e9-a0c720038d4f, Gyro offset: 27.980010986328114, Wed Feb 06 16:47:59 PST 2019
+737dd276-9ac9-4348-abcd-265e259d9cc4, Robot Startup, Wed Feb 06 16:48:46 PST 2019
+737dd276-9ac9-4348-abcd-265e259d9cc4, Robot Init, Wed Feb 06 16:48:46 PST 2019
+737dd276-9ac9-4348-abcd-265e259d9cc4, Generating trajectories..., Wed Feb 06 16:48:46 PST 2019
+737dd276-9ac9-4348-abcd-265e259d9cc4, Finished trajectory generation, Wed Feb 06 16:48:46 PST 2019
+737dd276-9ac9-4348-abcd-265e259d9cc4, Disabled Init, Wed Feb 06 16:48:46 PST 2019
+737dd276-9ac9-4348-abcd-265e259d9cc4, SET HEADING: 0.0, Wed Feb 06 16:48:47 PST 2019
+737dd276-9ac9-4348-abcd-265e259d9cc4, Gyro offset: 28.29998779296878, Wed Feb 06 16:48:47 PST 2019
+3673070e-5fbe-42c7-99c8-f66c3bd11333, Robot Startup, Wed Feb 06 16:49:05 PST 2019
+3673070e-5fbe-42c7-99c8-f66c3bd11333, Robot Init, Wed Feb 06 16:49:05 PST 2019
+3673070e-5fbe-42c7-99c8-f66c3bd11333, Generating trajectories..., Wed Feb 06 16:49:05 PST 2019
+3673070e-5fbe-42c7-99c8-f66c3bd11333, Finished trajectory generation, Wed Feb 06 16:49:05 PST 2019
+3673070e-5fbe-42c7-99c8-f66c3bd11333, Disabled Init, Wed Feb 06 16:49:05 PST 2019
+3673070e-5fbe-42c7-99c8-f66c3bd11333, SET HEADING: 0.0, Wed Feb 06 16:49:05 PST 2019
+3673070e-5fbe-42c7-99c8-f66c3bd11333, Gyro offset: 28.480010986328132, Wed Feb 06 16:49:06 PST 2019
+c83b1014-49d1-4223-9d15-9d9ccec0ad99, Robot Startup, Wed Feb 06 16:49:20 PST 2019
+c83b1014-49d1-4223-9d15-9d9ccec0ad99, Robot Init, Wed Feb 06 16:49:20 PST 2019
+c83b1014-49d1-4223-9d15-9d9ccec0ad99, Generating trajectories..., Wed Feb 06 16:49:20 PST 2019
+c83b1014-49d1-4223-9d15-9d9ccec0ad99, Finished trajectory generation, Wed Feb 06 16:49:20 PST 2019
+c83b1014-49d1-4223-9d15-9d9ccec0ad99, Disabled Init, Wed Feb 06 16:49:20 PST 2019
+c83b1014-49d1-4223-9d15-9d9ccec0ad99, SET HEADING: 0.0, Wed Feb 06 16:49:21 PST 2019
+c83b1014-49d1-4223-9d15-9d9ccec0ad99, Gyro offset: 28.510009765624986, Wed Feb 06 16:49:21 PST 2019
+c83b1014-49d1-4223-9d15-9d9ccec0ad99, Teleop Init, Wed Feb 06 16:49:22 PST 2019
+c83b1014-49d1-4223-9d15-9d9ccec0ad99, Disabled Init, Wed Feb 06 16:49:32 PST 2019
+c83b1014-49d1-4223-9d15-9d9ccec0ad99, Teleop Init, Wed Feb 06 16:49:49 PST 2019
+c83b1014-49d1-4223-9d15-9d9ccec0ad99, Disabled Init, Wed Feb 06 16:49:54 PST 2019
+2ea324b9-1fa6-4553-aeb0-f2ff9d1b9199, Robot Startup, Wed Feb 06 16:50:33 PST 2019
+2ea324b9-1fa6-4553-aeb0-f2ff9d1b9199, Robot Init, Wed Feb 06 16:50:33 PST 2019
+2ea324b9-1fa6-4553-aeb0-f2ff9d1b9199, Generating trajectories..., Wed Feb 06 16:50:33 PST 2019
+2ea324b9-1fa6-4553-aeb0-f2ff9d1b9199, Finished trajectory generation, Wed Feb 06 16:50:33 PST 2019
+2ea324b9-1fa6-4553-aeb0-f2ff9d1b9199, Disabled Init, Wed Feb 06 16:50:33 PST 2019
+2ea324b9-1fa6-4553-aeb0-f2ff9d1b9199, SET HEADING: 0.0, Wed Feb 06 16:50:33 PST 2019
+2ea324b9-1fa6-4553-aeb0-f2ff9d1b9199, Gyro offset: 28.779998779296857, Wed Feb 06 16:50:33 PST 2019
+1990e8f8-e791-4cec-9a60-c605c1268fb5, Robot Startup, Wed Feb 06 16:50:48 PST 2019
+1990e8f8-e791-4cec-9a60-c605c1268fb5, Robot Init, Wed Feb 06 16:50:49 PST 2019
+1990e8f8-e791-4cec-9a60-c605c1268fb5, Generating trajectories..., Wed Feb 06 16:50:49 PST 2019
+1990e8f8-e791-4cec-9a60-c605c1268fb5, Finished trajectory generation, Wed Feb 06 16:50:49 PST 2019
+1990e8f8-e791-4cec-9a60-c605c1268fb5, Disabled Init, Wed Feb 06 16:50:49 PST 2019
+1990e8f8-e791-4cec-9a60-c605c1268fb5, SET HEADING: 0.0, Wed Feb 06 16:50:49 PST 2019
+1990e8f8-e791-4cec-9a60-c605c1268fb5, Gyro offset: 28.92999267578127, Wed Feb 06 16:50:49 PST 2019
+4216b308-fc0a-48bc-a36c-832c19e69d45, Robot Startup, Wed Feb 06 16:51:10 PST 2019
+4216b308-fc0a-48bc-a36c-832c19e69d45, Robot Init, Wed Feb 06 16:51:10 PST 2019
+4216b308-fc0a-48bc-a36c-832c19e69d45, Generating trajectories..., Wed Feb 06 16:51:10 PST 2019
+4216b308-fc0a-48bc-a36c-832c19e69d45, Finished trajectory generation, Wed Feb 06 16:51:10 PST 2019
+4216b308-fc0a-48bc-a36c-832c19e69d45, Disabled Init, Wed Feb 06 16:51:11 PST 2019
+4216b308-fc0a-48bc-a36c-832c19e69d45, SET HEADING: 0.0, Wed Feb 06 16:51:11 PST 2019
+4216b308-fc0a-48bc-a36c-832c19e69d45, Gyro offset: 29.01998901367188, Wed Feb 06 16:51:11 PST 2019
+4216b308-fc0a-48bc-a36c-832c19e69d45, Teleop Init, Wed Feb 06 16:51:12 PST 2019
+4216b308-fc0a-48bc-a36c-832c19e69d45, Disabled Init, Wed Feb 06 16:51:33 PST 2019
+c1369a8d-f226-4837-bc80-43aa5442c551, Robot Startup, Wed Feb 06 16:53:00 PST 2019
+c1369a8d-f226-4837-bc80-43aa5442c551, Robot Init, Wed Feb 06 16:53:00 PST 2019
+c1369a8d-f226-4837-bc80-43aa5442c551, Generating trajectories..., Wed Feb 06 16:53:00 PST 2019
+c1369a8d-f226-4837-bc80-43aa5442c551, Finished trajectory generation, Wed Feb 06 16:53:00 PST 2019
+c1369a8d-f226-4837-bc80-43aa5442c551, Disabled Init, Wed Feb 06 16:53:00 PST 2019
+c1369a8d-f226-4837-bc80-43aa5442c551, SET HEADING: 0.0, Wed Feb 06 16:53:00 PST 2019
+c1369a8d-f226-4837-bc80-43aa5442c551, Gyro offset: 29.470001220703107, Wed Feb 06 16:53:00 PST 2019
+214b924d-bd1f-4bf9-b795-288ec612160d, Robot Startup, Wed Feb 06 16:53:28 PST 2019
+214b924d-bd1f-4bf9-b795-288ec612160d, Robot Init, Wed Feb 06 16:53:28 PST 2019
+214b924d-bd1f-4bf9-b795-288ec612160d, Generating trajectories..., Wed Feb 06 16:53:28 PST 2019
+214b924d-bd1f-4bf9-b795-288ec612160d, Finished trajectory generation, Wed Feb 06 16:53:28 PST 2019
+214b924d-bd1f-4bf9-b795-288ec612160d, Disabled Init, Wed Feb 06 16:53:28 PST 2019
+214b924d-bd1f-4bf9-b795-288ec612160d, SET HEADING: 0.0, Wed Feb 06 16:53:28 PST 2019
+214b924d-bd1f-4bf9-b795-288ec612160d, Gyro offset: 29.54998779296875, Wed Feb 06 16:53:28 PST 2019
+e26f002e-4815-4ca0-b193-a528e0a284bd, Robot Startup, Wed Feb 06 16:54:03 PST 2019
+e26f002e-4815-4ca0-b193-a528e0a284bd, Robot Init, Wed Feb 06 16:54:03 PST 2019
+e26f002e-4815-4ca0-b193-a528e0a284bd, Generating trajectories..., Wed Feb 06 16:54:03 PST 2019
+e26f002e-4815-4ca0-b193-a528e0a284bd, Finished trajectory generation, Wed Feb 06 16:54:03 PST 2019
+e26f002e-4815-4ca0-b193-a528e0a284bd, Disabled Init, Wed Feb 06 16:54:03 PST 2019
+e26f002e-4815-4ca0-b193-a528e0a284bd, SET HEADING: 0.0, Wed Feb 06 16:54:03 PST 2019
+e26f002e-4815-4ca0-b193-a528e0a284bd, Gyro offset: 29.660003662109386, Wed Feb 06 16:54:03 PST 2019
+ea6eda72-6a68-4238-a47e-2a6a134837c4, Robot Startup, Wed Feb 06 16:55:31 PST 2019
+ea6eda72-6a68-4238-a47e-2a6a134837c4, Robot Init, Wed Feb 06 16:55:31 PST 2019
+ea6eda72-6a68-4238-a47e-2a6a134837c4, Generating trajectories..., Wed Feb 06 16:55:31 PST 2019
+ea6eda72-6a68-4238-a47e-2a6a134837c4, Finished trajectory generation, Wed Feb 06 16:55:31 PST 2019
+ea6eda72-6a68-4238-a47e-2a6a134837c4, Disabled Init, Wed Feb 06 16:55:32 PST 2019
+ea6eda72-6a68-4238-a47e-2a6a134837c4, SET HEADING: 0.0, Wed Feb 06 16:55:32 PST 2019
+ea6eda72-6a68-4238-a47e-2a6a134837c4, Gyro offset: 29.95999145507811, Wed Feb 06 16:55:32 PST 2019
+f4dd818d-8ab9-4f2f-84fc-8973b46e8926, Robot Startup, Wed Feb 06 16:56:14 PST 2019
+f4dd818d-8ab9-4f2f-84fc-8973b46e8926, Robot Init, Wed Feb 06 16:56:14 PST 2019
+f4dd818d-8ab9-4f2f-84fc-8973b46e8926, Generating trajectories..., Wed Feb 06 16:56:14 PST 2019
+f4dd818d-8ab9-4f2f-84fc-8973b46e8926, Finished trajectory generation, Wed Feb 06 16:56:14 PST 2019
+f4dd818d-8ab9-4f2f-84fc-8973b46e8926, Disabled Init, Wed Feb 06 16:56:14 PST 2019
+f4dd818d-8ab9-4f2f-84fc-8973b46e8926, SET HEADING: 0.0, Wed Feb 06 16:56:15 PST 2019
+f4dd818d-8ab9-4f2f-84fc-8973b46e8926, Gyro offset: -11.1899995803833, Wed Feb 06 16:56:15 PST 2019
+29b07e9b-e61a-4067-8771-eb34352a510d, Robot Startup, Wed Feb 06 16:57:45 PST 2019
+29b07e9b-e61a-4067-8771-eb34352a510d, Robot Init, Wed Feb 06 16:57:46 PST 2019
+29b07e9b-e61a-4067-8771-eb34352a510d, Generating trajectories..., Wed Feb 06 16:57:46 PST 2019
+29b07e9b-e61a-4067-8771-eb34352a510d, Finished trajectory generation, Wed Feb 06 16:57:46 PST 2019
+29b07e9b-e61a-4067-8771-eb34352a510d, Disabled Init, Wed Feb 06 16:57:46 PST 2019
+29b07e9b-e61a-4067-8771-eb34352a510d, SET HEADING: 0.0, Wed Feb 06 16:57:47 PST 2019
+29b07e9b-e61a-4067-8771-eb34352a510d, Gyro offset: -10.779999732971191, Wed Feb 06 16:57:47 PST 2019
+b54fa57a-6b56-4979-a2da-0509d497ae50, Robot Startup, Wed Feb 06 16:58:38 PST 2019
+b54fa57a-6b56-4979-a2da-0509d497ae50, Robot Init, Wed Feb 06 16:58:39 PST 2019
+b54fa57a-6b56-4979-a2da-0509d497ae50, Generating trajectories..., Wed Feb 06 16:58:39 PST 2019
+b54fa57a-6b56-4979-a2da-0509d497ae50, Finished trajectory generation, Wed Feb 06 16:58:39 PST 2019
+b54fa57a-6b56-4979-a2da-0509d497ae50, Disabled Init, Wed Feb 06 16:58:39 PST 2019
+b54fa57a-6b56-4979-a2da-0509d497ae50, SET HEADING: 0.0, Wed Feb 06 16:58:40 PST 2019
+b54fa57a-6b56-4979-a2da-0509d497ae50, Gyro offset: -10.579999923706055, Wed Feb 06 16:58:40 PST 2019
+b54fa57a-6b56-4979-a2da-0509d497ae50, Teleop Init, Wed Feb 06 16:58:45 PST 2019
+b54fa57a-6b56-4979-a2da-0509d497ae50, Disabled Init, Wed Feb 06 16:59:06 PST 2019
+26e52175-113c-456b-9e86-f5298b25107c, Robot Startup, Wed Feb 06 17:00:07 PST 2019
+26e52175-113c-456b-9e86-f5298b25107c, Robot Init, Wed Feb 06 17:00:08 PST 2019
+26e52175-113c-456b-9e86-f5298b25107c, Generating trajectories..., Wed Feb 06 17:00:08 PST 2019
+26e52175-113c-456b-9e86-f5298b25107c, Finished trajectory generation, Wed Feb 06 17:00:08 PST 2019
+26e52175-113c-456b-9e86-f5298b25107c, Disabled Init, Wed Feb 06 17:00:08 PST 2019
+26e52175-113c-456b-9e86-f5298b25107c, SET HEADING: 0.0, Wed Feb 06 17:00:08 PST 2019
+26e52175-113c-456b-9e86-f5298b25107c, Gyro offset: 0.010009765625029364, Wed Feb 06 17:00:08 PST 2019
+65dd0cb5-bc4c-4e33-9fa8-dafc1582210b, Robot Startup, Wed Feb 06 17:01:05 PST 2019
+65dd0cb5-bc4c-4e33-9fa8-dafc1582210b, Robot Init, Wed Feb 06 17:01:06 PST 2019
+65dd0cb5-bc4c-4e33-9fa8-dafc1582210b, Generating trajectories..., Wed Feb 06 17:01:06 PST 2019
+65dd0cb5-bc4c-4e33-9fa8-dafc1582210b, Finished trajectory generation, Wed Feb 06 17:01:06 PST 2019
+65dd0cb5-bc4c-4e33-9fa8-dafc1582210b, Disabled Init, Wed Feb 06 17:01:06 PST 2019
+65dd0cb5-bc4c-4e33-9fa8-dafc1582210b, SET HEADING: 0.0, Wed Feb 06 17:01:06 PST 2019
+65dd0cb5-bc4c-4e33-9fa8-dafc1582210b, Gyro offset: 0.3399963378906564, Wed Feb 06 17:01:07 PST 2019
+75562f70-f059-4338-b341-dea8ce90bd25, Robot Startup, Wed Feb 06 17:01:46 PST 2019
+75562f70-f059-4338-b341-dea8ce90bd25, Robot Init, Wed Feb 06 17:01:46 PST 2019
+75562f70-f059-4338-b341-dea8ce90bd25, Generating trajectories..., Wed Feb 06 17:01:46 PST 2019
+75562f70-f059-4338-b341-dea8ce90bd25, Finished trajectory generation, Wed Feb 06 17:01:47 PST 2019
+75562f70-f059-4338-b341-dea8ce90bd25, Disabled Init, Wed Feb 06 17:01:47 PST 2019
+75562f70-f059-4338-b341-dea8ce90bd25, SET HEADING: 0.0, Wed Feb 06 17:01:48 PST 2019
+75562f70-f059-4338-b341-dea8ce90bd25, Gyro offset: 0.5100097656249982, Wed Feb 06 17:01:48 PST 2019
+75562f70-f059-4338-b341-dea8ce90bd25, Teleop Init, Wed Feb 06 17:02:06 PST 2019
+75562f70-f059-4338-b341-dea8ce90bd25, Disabled Init, Wed Feb 06 17:02:25 PST 2019
+6e3506c4-788c-421d-a6ec-484106b9988c, Robot Startup, Wed Feb 06 17:02:49 PST 2019
+6e3506c4-788c-421d-a6ec-484106b9988c, Robot Init, Wed Feb 06 17:02:49 PST 2019
+6e3506c4-788c-421d-a6ec-484106b9988c, Generating trajectories..., Wed Feb 06 17:02:49 PST 2019
+6e3506c4-788c-421d-a6ec-484106b9988c, Finished trajectory generation, Wed Feb 06 17:02:49 PST 2019
+6e3506c4-788c-421d-a6ec-484106b9988c, Disabled Init, Wed Feb 06 17:02:49 PST 2019
+6e3506c4-788c-421d-a6ec-484106b9988c, SET HEADING: 0.0, Wed Feb 06 17:02:49 PST 2019
+6e3506c4-788c-421d-a6ec-484106b9988c, Gyro offset: 0.5499877929687734, Wed Feb 06 17:02:49 PST 2019
+6e3506c4-788c-421d-a6ec-484106b9988c, Teleop Init, Wed Feb 06 17:03:03 PST 2019
+6e3506c4-788c-421d-a6ec-484106b9988c, Disabled Init, Wed Feb 06 17:03:26 PST 2019
+9b0be99a-9667-4c46-b970-1fa59c8ef1e3, Robot Startup, Wed Feb 06 17:03:44 PST 2019
+9b0be99a-9667-4c46-b970-1fa59c8ef1e3, Robot Init, Wed Feb 06 17:03:44 PST 2019
+9b0be99a-9667-4c46-b970-1fa59c8ef1e3, Generating trajectories..., Wed Feb 06 17:03:44 PST 2019
+9b0be99a-9667-4c46-b970-1fa59c8ef1e3, Finished trajectory generation, Wed Feb 06 17:03:45 PST 2019
+9b0be99a-9667-4c46-b970-1fa59c8ef1e3, Disabled Init, Wed Feb 06 17:03:45 PST 2019
+9b0be99a-9667-4c46-b970-1fa59c8ef1e3, SET HEADING: 0.0, Wed Feb 06 17:03:45 PST 2019
+9b0be99a-9667-4c46-b970-1fa59c8ef1e3, Gyro offset: 0.30999755859375344, Wed Feb 06 17:03:45 PST 2019
+14067c49-bdad-4662-95af-84d583bb096b, Robot Startup, Wed Feb 06 17:04:20 PST 2019
+14067c49-bdad-4662-95af-84d583bb096b, Robot Init, Wed Feb 06 17:04:20 PST 2019
+14067c49-bdad-4662-95af-84d583bb096b, Generating trajectories..., Wed Feb 06 17:04:20 PST 2019
+14067c49-bdad-4662-95af-84d583bb096b, Finished trajectory generation, Wed Feb 06 17:04:20 PST 2019
+14067c49-bdad-4662-95af-84d583bb096b, Disabled Init, Wed Feb 06 17:04:20 PST 2019
+14067c49-bdad-4662-95af-84d583bb096b, SET HEADING: 0.0, Wed Feb 06 17:04:21 PST 2019
+14067c49-bdad-4662-95af-84d583bb096b, Gyro offset: 0.4400024414062788, Wed Feb 06 17:04:21 PST 2019
+fda02a1e-755b-4841-8276-00e3512e6430, Robot Startup, Wed Feb 06 17:05:17 PST 2019
+fda02a1e-755b-4841-8276-00e3512e6430, Robot Init, Wed Feb 06 17:05:17 PST 2019
+fda02a1e-755b-4841-8276-00e3512e6430, Generating trajectories..., Wed Feb 06 17:05:17 PST 2019
+fda02a1e-755b-4841-8276-00e3512e6430, Finished trajectory generation, Wed Feb 06 17:05:17 PST 2019
+fda02a1e-755b-4841-8276-00e3512e6430, Disabled Init, Wed Feb 06 17:05:17 PST 2019
+fda02a1e-755b-4841-8276-00e3512e6430, SET HEADING: 0.0, Wed Feb 06 17:05:17 PST 2019
+fda02a1e-755b-4841-8276-00e3512e6430, Gyro offset: 0.6900024414062633, Wed Feb 06 17:05:18 PST 2019
+45eaf4c5-358c-4fb0-a4a4-a9f948065d90, Robot Startup, Wed Feb 06 17:06:53 PST 2019
+45eaf4c5-358c-4fb0-a4a4-a9f948065d90, Robot Init, Wed Feb 06 17:06:54 PST 2019
+45eaf4c5-358c-4fb0-a4a4-a9f948065d90, Generating trajectories..., Wed Feb 06 17:06:54 PST 2019
+45eaf4c5-358c-4fb0-a4a4-a9f948065d90, Finished trajectory generation, Wed Feb 06 17:06:54 PST 2019
+45eaf4c5-358c-4fb0-a4a4-a9f948065d90, Disabled Init, Wed Feb 06 17:06:54 PST 2019
+45eaf4c5-358c-4fb0-a4a4-a9f948065d90, SET HEADING: 0.0, Wed Feb 06 17:06:54 PST 2019
+45eaf4c5-358c-4fb0-a4a4-a9f948065d90, Gyro offset: 1.16000366210938, Wed Feb 06 17:06:54 PST 2019
+45eaf4c5-358c-4fb0-a4a4-a9f948065d90, Teleop Init, Wed Feb 06 17:07:09 PST 2019
+45eaf4c5-358c-4fb0-a4a4-a9f948065d90, Disabled Init, Wed Feb 06 17:07:14 PST 2019
+a1dedf8d-b473-4d96-a935-6a735c90ea20, Robot Startup, Wed Feb 06 17:07:36 PST 2019
+a1dedf8d-b473-4d96-a935-6a735c90ea20, Robot Init, Wed Feb 06 17:07:36 PST 2019
+a1dedf8d-b473-4d96-a935-6a735c90ea20, Generating trajectories..., Wed Feb 06 17:07:36 PST 2019
+a1dedf8d-b473-4d96-a935-6a735c90ea20, Finished trajectory generation, Wed Feb 06 17:07:36 PST 2019
+a1dedf8d-b473-4d96-a935-6a735c90ea20, Disabled Init, Wed Feb 06 17:07:36 PST 2019
+a1dedf8d-b473-4d96-a935-6a735c90ea20, SET HEADING: 0.0, Wed Feb 06 17:07:37 PST 2019
+a1dedf8d-b473-4d96-a935-6a735c90ea20, Gyro offset: 0.9400024414062478, Wed Feb 06 17:07:37 PST 2019
+a1dedf8d-b473-4d96-a935-6a735c90ea20, Teleop Init, Wed Feb 06 17:07:44 PST 2019
+a1dedf8d-b473-4d96-a935-6a735c90ea20, [Joystick] 1	[Button]11	 Pressed ( Kill Auto ), Wed Feb 06 17:07:52 PST 2019
+a1dedf8d-b473-4d96-a935-6a735c90ea20, Disabled Init, Wed Feb 06 17:07:53 PST 2019
+a1dedf8d-b473-4d96-a935-6a735c90ea20, Teleop Init, Wed Feb 06 17:07:55 PST 2019
+a1dedf8d-b473-4d96-a935-6a735c90ea20, Disabled Init, Wed Feb 06 17:08:10 PST 2019
+e4b2ffe7-b549-4f76-af7b-16589bfd94f7, Robot Startup, Wed Feb 06 17:08:40 PST 2019
+e4b2ffe7-b549-4f76-af7b-16589bfd94f7, Robot Init, Wed Feb 06 17:08:41 PST 2019
+e4b2ffe7-b549-4f76-af7b-16589bfd94f7, Generating trajectories..., Wed Feb 06 17:08:41 PST 2019
+e4b2ffe7-b549-4f76-af7b-16589bfd94f7, Finished trajectory generation, Wed Feb 06 17:08:41 PST 2019
+e4b2ffe7-b549-4f76-af7b-16589bfd94f7, Disabled Init, Wed Feb 06 17:08:41 PST 2019
+e4b2ffe7-b549-4f76-af7b-16589bfd94f7, SET HEADING: 0.0, Wed Feb 06 17:08:41 PST 2019
+e4b2ffe7-b549-4f76-af7b-16589bfd94f7, Gyro offset: 1.0899963378906101, Wed Feb 06 17:08:41 PST 2019
+efcd316a-1f2e-434a-8a43-40de68514686, Robot Startup, Wed Feb 06 17:09:58 PST 2019
+efcd316a-1f2e-434a-8a43-40de68514686, Robot Init, Wed Feb 06 17:09:58 PST 2019
+efcd316a-1f2e-434a-8a43-40de68514686, Generating trajectories..., Wed Feb 06 17:09:58 PST 2019
+efcd316a-1f2e-434a-8a43-40de68514686, Finished trajectory generation, Wed Feb 06 17:09:59 PST 2019
+efcd316a-1f2e-434a-8a43-40de68514686, Disabled Init, Wed Feb 06 17:09:59 PST 2019
+efcd316a-1f2e-434a-8a43-40de68514686, SET HEADING: 0.0, Wed Feb 06 17:09:59 PST 2019
+efcd316a-1f2e-434a-8a43-40de68514686, Gyro offset: 1.2999877929687775, Wed Feb 06 17:09:59 PST 2019
+fc13bb90-4a73-4f3a-8a2f-cbe460fc6dc4, Robot Startup, Wed Feb 06 17:10:57 PST 2019
+fc13bb90-4a73-4f3a-8a2f-cbe460fc6dc4, Robot Init, Wed Feb 06 17:10:57 PST 2019
+fc13bb90-4a73-4f3a-8a2f-cbe460fc6dc4, Generating trajectories..., Wed Feb 06 17:10:57 PST 2019
+fc13bb90-4a73-4f3a-8a2f-cbe460fc6dc4, Finished trajectory generation, Wed Feb 06 17:10:57 PST 2019
+fc13bb90-4a73-4f3a-8a2f-cbe460fc6dc4, Disabled Init, Wed Feb 06 17:10:57 PST 2019
+fc13bb90-4a73-4f3a-8a2f-cbe460fc6dc4, SET HEADING: 0.0, Wed Feb 06 17:10:58 PST 2019
+fc13bb90-4a73-4f3a-8a2f-cbe460fc6dc4, Gyro offset: 1.690002441406252, Wed Feb 06 17:10:58 PST 2019
+fc13bb90-4a73-4f3a-8a2f-cbe460fc6dc4, Teleop Init, Wed Feb 06 17:11:09 PST 2019
+fc13bb90-4a73-4f3a-8a2f-cbe460fc6dc4, Disabled Init, Wed Feb 06 17:11:17 PST 2019
+738c80c1-28de-4059-8194-5d03c1270547, Robot Startup, Wed Feb 06 17:11:44 PST 2019
+738c80c1-28de-4059-8194-5d03c1270547, Robot Init, Wed Feb 06 17:11:44 PST 2019
+738c80c1-28de-4059-8194-5d03c1270547, Generating trajectories..., Wed Feb 06 17:11:44 PST 2019
+738c80c1-28de-4059-8194-5d03c1270547, Finished trajectory generation, Wed Feb 06 17:11:45 PST 2019
+738c80c1-28de-4059-8194-5d03c1270547, Disabled Init, Wed Feb 06 17:11:45 PST 2019
+738c80c1-28de-4059-8194-5d03c1270547, SET HEADING: 0.0, Wed Feb 06 17:11:45 PST 2019
+738c80c1-28de-4059-8194-5d03c1270547, Gyro offset: 1.5899963378906299, Wed Feb 06 17:11:45 PST 2019
+738c80c1-28de-4059-8194-5d03c1270547, Teleop Init, Wed Feb 06 17:12:05 PST 2019
+738c80c1-28de-4059-8194-5d03c1270547, Disabled Init, Wed Feb 06 17:12:16 PST 2019
+24a41cec-d92c-4169-b67c-00879f1a449c, Robot Startup, Wed Feb 06 17:12:34 PST 2019
+24a41cec-d92c-4169-b67c-00879f1a449c, Robot Init, Wed Feb 06 17:12:34 PST 2019
+24a41cec-d92c-4169-b67c-00879f1a449c, Generating trajectories..., Wed Feb 06 17:12:34 PST 2019
+24a41cec-d92c-4169-b67c-00879f1a449c, Finished trajectory generation, Wed Feb 06 17:12:34 PST 2019
+24a41cec-d92c-4169-b67c-00879f1a449c, Disabled Init, Wed Feb 06 17:12:34 PST 2019
+24a41cec-d92c-4169-b67c-00879f1a449c, SET HEADING: 0.0, Wed Feb 06 17:12:34 PST 2019
+24a41cec-d92c-4169-b67c-00879f1a449c, Gyro offset: 1.7399902343749918, Wed Feb 06 17:12:34 PST 2019
+685e9589-99e5-4fe3-89cc-16abe771356f, Robot Startup, Wed Feb 06 17:14:14 PST 2019
+685e9589-99e5-4fe3-89cc-16abe771356f, Robot Init, Wed Feb 06 17:14:14 PST 2019
+685e9589-99e5-4fe3-89cc-16abe771356f, Generating trajectories..., Wed Feb 06 17:14:14 PST 2019
+685e9589-99e5-4fe3-89cc-16abe771356f, Finished trajectory generation, Wed Feb 06 17:14:14 PST 2019
+685e9589-99e5-4fe3-89cc-16abe771356f, Disabled Init, Wed Feb 06 17:14:14 PST 2019
+685e9589-99e5-4fe3-89cc-16abe771356f, SET HEADING: 0.0, Wed Feb 06 17:14:14 PST 2019
+685e9589-99e5-4fe3-89cc-16abe771356f, Gyro offset: 2.2900085449218945, Wed Feb 06 17:14:14 PST 2019
+685e9589-99e5-4fe3-89cc-16abe771356f, Teleop Init, Wed Feb 06 17:14:28 PST 2019
+685e9589-99e5-4fe3-89cc-16abe771356f, Disabled Init, Wed Feb 06 17:14:32 PST 2019
+279847ab-5da4-4a40-bd97-ec8a40784720, Robot Startup, Wed Feb 06 17:15:33 PST 2019
+279847ab-5da4-4a40-bd97-ec8a40784720, Robot Init, Wed Feb 06 17:15:33 PST 2019
+279847ab-5da4-4a40-bd97-ec8a40784720, Generating trajectories..., Wed Feb 06 17:15:33 PST 2019
+279847ab-5da4-4a40-bd97-ec8a40784720, Finished trajectory generation, Wed Feb 06 17:15:34 PST 2019
+279847ab-5da4-4a40-bd97-ec8a40784720, Disabled Init, Wed Feb 06 17:15:34 PST 2019
+279847ab-5da4-4a40-bd97-ec8a40784720, SET HEADING: 0.0, Wed Feb 06 17:15:34 PST 2019
+279847ab-5da4-4a40-bd97-ec8a40784720, Gyro offset: 2.8399963378906534, Wed Feb 06 17:15:34 PST 2019
+279847ab-5da4-4a40-bd97-ec8a40784720, Teleop Init, Wed Feb 06 17:16:09 PST 2019
+279847ab-5da4-4a40-bd97-ec8a40784720, Disabled Init, Wed Feb 06 17:16:20 PST 2019
+712abccc-d40d-436d-a677-5da7371de8b8, Robot Startup, Wed Feb 06 17:21:12 PST 2019
+712abccc-d40d-436d-a677-5da7371de8b8, Robot Init, Wed Feb 06 17:21:12 PST 2019
+712abccc-d40d-436d-a677-5da7371de8b8, Generating trajectories..., Wed Feb 06 17:21:12 PST 2019
+712abccc-d40d-436d-a677-5da7371de8b8, Finished trajectory generation, Wed Feb 06 17:21:12 PST 2019
+712abccc-d40d-436d-a677-5da7371de8b8, Disabled Init, Wed Feb 06 17:21:12 PST 2019
+712abccc-d40d-436d-a677-5da7371de8b8, SET HEADING: 0.0, Wed Feb 06 17:21:13 PST 2019
+712abccc-d40d-436d-a677-5da7371de8b8, Gyro offset: 4.170013427734362, Wed Feb 06 17:21:13 PST 2019
+34424741-c1f7-484c-9d7d-9673b78a9973, Robot Startup, Wed Feb 06 17:23:06 PST 2019
+34424741-c1f7-484c-9d7d-9673b78a9973, Robot Init, Wed Feb 06 17:23:06 PST 2019
+34424741-c1f7-484c-9d7d-9673b78a9973, Generating trajectories..., Wed Feb 06 17:23:06 PST 2019
+34424741-c1f7-484c-9d7d-9673b78a9973, Finished trajectory generation, Wed Feb 06 17:23:07 PST 2019
+34424741-c1f7-484c-9d7d-9673b78a9973, Disabled Init, Wed Feb 06 17:23:07 PST 2019
+34424741-c1f7-484c-9d7d-9673b78a9973, SET HEADING: 0.0, Wed Feb 06 17:23:07 PST 2019
+34424741-c1f7-484c-9d7d-9673b78a9973, Gyro offset: 4.6499938964844025, Wed Feb 06 17:23:07 PST 2019
+fdac7ab2-4f1b-4c5b-ba99-4af9c305d064, Robot Startup, Wed Feb 06 17:23:36 PST 2019
+fdac7ab2-4f1b-4c5b-ba99-4af9c305d064, Robot Init, Wed Feb 06 17:23:37 PST 2019
+fdac7ab2-4f1b-4c5b-ba99-4af9c305d064, Generating trajectories..., Wed Feb 06 17:23:37 PST 2019
+fdac7ab2-4f1b-4c5b-ba99-4af9c305d064, Finished trajectory generation, Wed Feb 06 17:23:37 PST 2019
+fdac7ab2-4f1b-4c5b-ba99-4af9c305d064, Disabled Init, Wed Feb 06 17:23:37 PST 2019
+fdac7ab2-4f1b-4c5b-ba99-4af9c305d064, SET HEADING: 0.0, Wed Feb 06 17:23:37 PST 2019
+fdac7ab2-4f1b-4c5b-ba99-4af9c305d064, Gyro offset: 4.880004882812498, Wed Feb 06 17:23:37 PST 2019
+b8f562f8-b7ac-4766-b933-8e713d4c430c, Robot Startup, Wed Feb 06 17:23:59 PST 2019
+b8f562f8-b7ac-4766-b933-8e713d4c430c, Robot Init, Wed Feb 06 17:23:59 PST 2019
+b8f562f8-b7ac-4766-b933-8e713d4c430c, Generating trajectories..., Wed Feb 06 17:23:59 PST 2019
+b8f562f8-b7ac-4766-b933-8e713d4c430c, Finished trajectory generation, Wed Feb 06 17:23:59 PST 2019
+b8f562f8-b7ac-4766-b933-8e713d4c430c, Disabled Init, Wed Feb 06 17:23:59 PST 2019
+b8f562f8-b7ac-4766-b933-8e713d4c430c, SET HEADING: 0.0, Wed Feb 06 17:24:00 PST 2019
+b8f562f8-b7ac-4766-b933-8e713d4c430c, Gyro offset: 4.950012207031269, Wed Feb 06 17:24:00 PST 2019
+745dd5c9-6a61-4219-8f2f-98137415bc0e, Robot Startup, Wed Feb 06 17:24:39 PST 2019
+745dd5c9-6a61-4219-8f2f-98137415bc0e, Robot Init, Wed Feb 06 17:24:39 PST 2019
+745dd5c9-6a61-4219-8f2f-98137415bc0e, Generating trajectories..., Wed Feb 06 17:24:39 PST 2019
+745dd5c9-6a61-4219-8f2f-98137415bc0e, Finished trajectory generation, Wed Feb 06 17:24:39 PST 2019
+745dd5c9-6a61-4219-8f2f-98137415bc0e, Disabled Init, Wed Feb 06 17:24:39 PST 2019
+745dd5c9-6a61-4219-8f2f-98137415bc0e, SET HEADING: 0.0, Wed Feb 06 17:24:39 PST 2019
+745dd5c9-6a61-4219-8f2f-98137415bc0e, Gyro offset: 5.14999389648437, Wed Feb 06 17:24:39 PST 2019
+224a931b-1b91-403c-a118-0e41671edf6f, Robot Startup, Wed Feb 06 17:26:54 PST 2019
+224a931b-1b91-403c-a118-0e41671edf6f, Robot Init, Wed Feb 06 17:26:54 PST 2019
+224a931b-1b91-403c-a118-0e41671edf6f, Generating trajectories..., Wed Feb 06 17:26:54 PST 2019
+224a931b-1b91-403c-a118-0e41671edf6f, Finished trajectory generation, Wed Feb 06 17:26:54 PST 2019
+224a931b-1b91-403c-a118-0e41671edf6f, Disabled Init, Wed Feb 06 17:26:54 PST 2019
+224a931b-1b91-403c-a118-0e41671edf6f, SET HEADING: 0.0, Wed Feb 06 17:26:55 PST 2019
+224a931b-1b91-403c-a118-0e41671edf6f, Gyro offset: 5.64999389648439, Wed Feb 06 17:26:55 PST 2019
+40c8f3a8-abd2-492a-b0c0-e9187c6eca34, Robot Startup, Wed Feb 06 17:28:44 PST 2019
+40c8f3a8-abd2-492a-b0c0-e9187c6eca34, Robot Init, Wed Feb 06 17:28:44 PST 2019
+40c8f3a8-abd2-492a-b0c0-e9187c6eca34, Generating trajectories..., Wed Feb 06 17:28:44 PST 2019
+40c8f3a8-abd2-492a-b0c0-e9187c6eca34, Finished trajectory generation, Wed Feb 06 17:28:44 PST 2019
+40c8f3a8-abd2-492a-b0c0-e9187c6eca34, Disabled Init, Wed Feb 06 17:28:44 PST 2019
+40c8f3a8-abd2-492a-b0c0-e9187c6eca34, SET HEADING: 0.0, Wed Feb 06 17:28:44 PST 2019
+40c8f3a8-abd2-492a-b0c0-e9187c6eca34, Gyro offset: 5.999999999999997, Wed Feb 06 17:28:44 PST 2019
+40c8f3a8-abd2-492a-b0c0-e9187c6eca34, Teleop Init, Wed Feb 06 17:28:55 PST 2019
+1ca0cb17-053f-4187-858e-f3e1b75146c3, Robot Startup, Wed Feb 06 17:29:01 PST 2019
+1ca0cb17-053f-4187-858e-f3e1b75146c3, Robot Init, Wed Feb 06 17:29:01 PST 2019
+1ca0cb17-053f-4187-858e-f3e1b75146c3, Generating trajectories..., Wed Feb 06 17:29:01 PST 2019
+1ca0cb17-053f-4187-858e-f3e1b75146c3, Finished trajectory generation, Wed Feb 06 17:29:01 PST 2019
+1ca0cb17-053f-4187-858e-f3e1b75146c3, Disabled Init, Wed Feb 06 17:29:02 PST 2019
+1ca0cb17-053f-4187-858e-f3e1b75146c3, SET HEADING: 0.0, Wed Feb 06 17:29:02 PST 2019
+1ca0cb17-053f-4187-858e-f3e1b75146c3, Gyro offset: 6.0299987792969, Wed Feb 06 17:29:02 PST 2019
+1ca0cb17-053f-4187-858e-f3e1b75146c3, Teleop Init, Wed Feb 06 17:29:12 PST 2019
+7cbe37b4-94f2-4b36-a290-2ec412b6c399, Robot Startup, Wed Feb 06 17:29:18 PST 2019
+7cbe37b4-94f2-4b36-a290-2ec412b6c399, Robot Init, Wed Feb 06 17:29:18 PST 2019
+7cbe37b4-94f2-4b36-a290-2ec412b6c399, Generating trajectories..., Wed Feb 06 17:29:18 PST 2019
+7cbe37b4-94f2-4b36-a290-2ec412b6c399, Finished trajectory generation, Wed Feb 06 17:29:18 PST 2019
+7cbe37b4-94f2-4b36-a290-2ec412b6c399, Disabled Init, Wed Feb 06 17:29:18 PST 2019
+7cbe37b4-94f2-4b36-a290-2ec412b6c399, SET HEADING: 0.0, Wed Feb 06 17:29:18 PST 2019
+7cbe37b4-94f2-4b36-a290-2ec412b6c399, Gyro offset: 6.209991455078114, Wed Feb 06 17:29:18 PST 2019
+fbb6e4da-ef93-4053-9158-a66c81bce2d2, Robot Startup, Wed Feb 06 17:30:43 PST 2019
+fbb6e4da-ef93-4053-9158-a66c81bce2d2, Robot Init, Wed Feb 06 17:30:43 PST 2019
+fbb6e4da-ef93-4053-9158-a66c81bce2d2, Generating trajectories..., Wed Feb 06 17:30:43 PST 2019
+fbb6e4da-ef93-4053-9158-a66c81bce2d2, Finished trajectory generation, Wed Feb 06 17:30:44 PST 2019
+fbb6e4da-ef93-4053-9158-a66c81bce2d2, Disabled Init, Wed Feb 06 17:30:44 PST 2019
+fbb6e4da-ef93-4053-9158-a66c81bce2d2, SET HEADING: 0.0, Wed Feb 06 17:30:44 PST 2019
+fbb6e4da-ef93-4053-9158-a66c81bce2d2, Gyro offset: 6.760009765625016, Wed Feb 06 17:30:44 PST 2019
+fbb6e4da-ef93-4053-9158-a66c81bce2d2, Teleop Init, Wed Feb 06 17:30:46 PST 2019
+fbb6e4da-ef93-4053-9158-a66c81bce2d2, Disabled Init, Wed Feb 06 17:31:16 PST 2019
+fbb6e4da-ef93-4053-9158-a66c81bce2d2, Teleop Init, Wed Feb 06 17:31:43 PST 2019
+fbb6e4da-ef93-4053-9158-a66c81bce2d2, Disabled Init, Wed Feb 06 17:31:47 PST 2019
+592eeaf4-6a27-49ed-8df6-ef3c53bf1047, Robot Startup, Wed Feb 06 17:33:06 PST 2019
+592eeaf4-6a27-49ed-8df6-ef3c53bf1047, Robot Init, Wed Feb 06 17:33:06 PST 2019
+592eeaf4-6a27-49ed-8df6-ef3c53bf1047, Generating trajectories..., Wed Feb 06 17:33:06 PST 2019
+592eeaf4-6a27-49ed-8df6-ef3c53bf1047, Finished trajectory generation, Wed Feb 06 17:33:07 PST 2019
+592eeaf4-6a27-49ed-8df6-ef3c53bf1047, Disabled Init, Wed Feb 06 17:33:07 PST 2019
+592eeaf4-6a27-49ed-8df6-ef3c53bf1047, SET HEADING: 0.0, Wed Feb 06 17:33:07 PST 2019
+592eeaf4-6a27-49ed-8df6-ef3c53bf1047, Gyro offset: 7.200012207031282, Wed Feb 06 17:33:07 PST 2019
+592eeaf4-6a27-49ed-8df6-ef3c53bf1047, Teleop Init, Wed Feb 06 17:33:20 PST 2019
+592eeaf4-6a27-49ed-8df6-ef3c53bf1047, Disabled Init, Wed Feb 06 17:33:22 PST 2019
+592eeaf4-6a27-49ed-8df6-ef3c53bf1047, Teleop Init, Wed Feb 06 17:33:39 PST 2019
+592eeaf4-6a27-49ed-8df6-ef3c53bf1047, Disabled Init, Wed Feb 06 17:33:42 PST 2019
+592eeaf4-6a27-49ed-8df6-ef3c53bf1047, Teleop Init, Wed Feb 06 17:33:43 PST 2019
+592eeaf4-6a27-49ed-8df6-ef3c53bf1047, Disabled Init, Wed Feb 06 17:33:44 PST 2019
+3ea3e75b-da06-4b4d-99cd-ca8b1d7fda3f, Robot Startup, Wed Feb 06 17:33:51 PST 2019
+3ea3e75b-da06-4b4d-99cd-ca8b1d7fda3f, Robot Init, Wed Feb 06 17:33:51 PST 2019
+3ea3e75b-da06-4b4d-99cd-ca8b1d7fda3f, Generating trajectories..., Wed Feb 06 17:33:51 PST 2019
+3ea3e75b-da06-4b4d-99cd-ca8b1d7fda3f, Finished trajectory generation, Wed Feb 06 17:33:51 PST 2019
+3ea3e75b-da06-4b4d-99cd-ca8b1d7fda3f, Disabled Init, Wed Feb 06 17:33:51 PST 2019
+3ea3e75b-da06-4b4d-99cd-ca8b1d7fda3f, SET HEADING: 0.0, Wed Feb 06 17:33:51 PST 2019
+3ea3e75b-da06-4b4d-99cd-ca8b1d7fda3f, Gyro offset: 7.079986572265628, Wed Feb 06 17:33:51 PST 2019
+3ea3e75b-da06-4b4d-99cd-ca8b1d7fda3f, Teleop Init, Wed Feb 06 17:34:09 PST 2019
+3ea3e75b-da06-4b4d-99cd-ca8b1d7fda3f, Disabled Init, Wed Feb 06 17:34:32 PST 2019
+1a75c883-4625-474a-a711-09b01413b6c1, Robot Startup, Wed Feb 06 17:34:48 PST 2019
+1a75c883-4625-474a-a711-09b01413b6c1, Robot Init, Wed Feb 06 17:34:48 PST 2019
+1a75c883-4625-474a-a711-09b01413b6c1, Generating trajectories..., Wed Feb 06 17:34:48 PST 2019
+1a75c883-4625-474a-a711-09b01413b6c1, Finished trajectory generation, Wed Feb 06 17:34:49 PST 2019
+1a75c883-4625-474a-a711-09b01413b6c1, Disabled Init, Wed Feb 06 17:34:49 PST 2019
+1a75c883-4625-474a-a711-09b01413b6c1, SET HEADING: 0.0, Wed Feb 06 17:34:49 PST 2019
+1a75c883-4625-474a-a711-09b01413b6c1, Gyro offset: 7.320007324218741, Wed Feb 06 17:34:49 PST 2019
+1a75c883-4625-474a-a711-09b01413b6c1, Teleop Init, Wed Feb 06 17:34:52 PST 2019
+1a75c883-4625-474a-a711-09b01413b6c1, Disabled Init, Wed Feb 06 17:34:54 PST 2019
+1a75c883-4625-474a-a711-09b01413b6c1, Teleop Init, Wed Feb 06 17:35:09 PST 2019
+1a75c883-4625-474a-a711-09b01413b6c1, Disabled Init, Wed Feb 06 17:35:12 PST 2019
+1a75c883-4625-474a-a711-09b01413b6c1, Teleop Init, Wed Feb 06 17:35:24 PST 2019
+1a75c883-4625-474a-a711-09b01413b6c1, Disabled Init, Wed Feb 06 17:35:25 PST 2019
+9e6109e3-4785-430b-a066-541d23da2cc6, Robot Startup, Wed Feb 06 17:35:33 PST 2019
+9e6109e3-4785-430b-a066-541d23da2cc6, Robot Init, Wed Feb 06 17:35:33 PST 2019
+9e6109e3-4785-430b-a066-541d23da2cc6, Generating trajectories..., Wed Feb 06 17:35:33 PST 2019
+9e6109e3-4785-430b-a066-541d23da2cc6, Finished trajectory generation, Wed Feb 06 17:35:33 PST 2019
+9e6109e3-4785-430b-a066-541d23da2cc6, Disabled Init, Wed Feb 06 17:35:33 PST 2019
+9e6109e3-4785-430b-a066-541d23da2cc6, SET HEADING: 0.0, Wed Feb 06 17:35:33 PST 2019
+9e6109e3-4785-430b-a066-541d23da2cc6, Gyro offset: 7.589996337890613, Wed Feb 06 17:35:33 PST 2019
+9e6109e3-4785-430b-a066-541d23da2cc6, Teleop Init, Wed Feb 06 17:35:41 PST 2019
+9e6109e3-4785-430b-a066-541d23da2cc6, Disabled Init, Wed Feb 06 17:35:45 PST 2019
+b53fec5e-25be-48c9-90ea-acfe169f2a0a, Robot Startup, Wed Feb 06 17:36:13 PST 2019
+b53fec5e-25be-48c9-90ea-acfe169f2a0a, Robot Init, Wed Feb 06 17:36:13 PST 2019
+b53fec5e-25be-48c9-90ea-acfe169f2a0a, Generating trajectories..., Wed Feb 06 17:36:13 PST 2019
+b53fec5e-25be-48c9-90ea-acfe169f2a0a, Finished trajectory generation, Wed Feb 06 17:36:14 PST 2019
+b53fec5e-25be-48c9-90ea-acfe169f2a0a, Disabled Init, Wed Feb 06 17:36:14 PST 2019
+b53fec5e-25be-48c9-90ea-acfe169f2a0a, SET HEADING: 0.0, Wed Feb 06 17:36:14 PST 2019
+b53fec5e-25be-48c9-90ea-acfe169f2a0a, Gyro offset: 7.809997558593746, Wed Feb 06 17:36:14 PST 2019
+b53fec5e-25be-48c9-90ea-acfe169f2a0a, Teleop Init, Wed Feb 06 17:36:16 PST 2019
+b53fec5e-25be-48c9-90ea-acfe169f2a0a, Disabled Init, Wed Feb 06 17:36:21 PST 2019
+1f41b2fa-1e04-442c-8068-a355a4048e57, Robot Startup, Wed Feb 06 17:36:43 PST 2019
+1f41b2fa-1e04-442c-8068-a355a4048e57, Robot Init, Wed Feb 06 17:36:43 PST 2019
+1f41b2fa-1e04-442c-8068-a355a4048e57, Generating trajectories..., Wed Feb 06 17:36:44 PST 2019
+1f41b2fa-1e04-442c-8068-a355a4048e57, Finished trajectory generation, Wed Feb 06 17:36:44 PST 2019
+1f41b2fa-1e04-442c-8068-a355a4048e57, Disabled Init, Wed Feb 06 17:36:44 PST 2019
+1f41b2fa-1e04-442c-8068-a355a4048e57, SET HEADING: 0.0, Wed Feb 06 17:36:44 PST 2019
+1f41b2fa-1e04-442c-8068-a355a4048e57, Gyro offset: 7.850006103515614, Wed Feb 06 17:36:44 PST 2019
+1f41b2fa-1e04-442c-8068-a355a4048e57, Teleop Init, Wed Feb 06 17:36:51 PST 2019
+1f41b2fa-1e04-442c-8068-a355a4048e57, Disabled Init, Wed Feb 06 17:36:58 PST 2019
+ff215aff-020e-4299-af81-25e10c58405f, Robot Startup, Wed Feb 06 17:37:26 PST 2019
+ff215aff-020e-4299-af81-25e10c58405f, Robot Init, Wed Feb 06 17:37:26 PST 2019
+ff215aff-020e-4299-af81-25e10c58405f, Generating trajectories..., Wed Feb 06 17:37:26 PST 2019
+ff215aff-020e-4299-af81-25e10c58405f, Finished trajectory generation, Wed Feb 06 17:37:26 PST 2019
+ff215aff-020e-4299-af81-25e10c58405f, Disabled Init, Wed Feb 06 17:37:26 PST 2019
+ff215aff-020e-4299-af81-25e10c58405f, SET HEADING: 0.0, Wed Feb 06 17:37:26 PST 2019
+ff215aff-020e-4299-af81-25e10c58405f, Gyro offset: 8.079986572265618, Wed Feb 06 17:37:26 PST 2019
+ff215aff-020e-4299-af81-25e10c58405f, Teleop Init, Wed Feb 06 17:37:34 PST 2019
+ff215aff-020e-4299-af81-25e10c58405f, Disabled Init, Wed Feb 06 17:37:39 PST 2019
+9b2d23d5-f396-43ee-8228-63038ae404f9, Robot Startup, Wed Feb 06 17:38:09 PST 2019
+9b2d23d5-f396-43ee-8228-63038ae404f9, Robot Init, Wed Feb 06 17:38:09 PST 2019
+9b2d23d5-f396-43ee-8228-63038ae404f9, Generating trajectories..., Wed Feb 06 17:38:09 PST 2019
+9b2d23d5-f396-43ee-8228-63038ae404f9, Finished trajectory generation, Wed Feb 06 17:38:09 PST 2019
+9b2d23d5-f396-43ee-8228-63038ae404f9, Disabled Init, Wed Feb 06 17:38:10 PST 2019
+9b2d23d5-f396-43ee-8228-63038ae404f9, SET HEADING: 0.0, Wed Feb 06 17:38:10 PST 2019
+9b2d23d5-f396-43ee-8228-63038ae404f9, Gyro offset: 8.019989013671863, Wed Feb 06 17:38:10 PST 2019
+9b2d23d5-f396-43ee-8228-63038ae404f9, Teleop Init, Wed Feb 06 17:38:29 PST 2019
+9b2d23d5-f396-43ee-8228-63038ae404f9, Disabled Init, Wed Feb 06 17:38:36 PST 2019
+84da2956-5cea-45fb-9a42-85b16d737078, Robot Startup, Wed Feb 06 17:39:17 PST 2019
+84da2956-5cea-45fb-9a42-85b16d737078, Robot Init, Wed Feb 06 17:39:17 PST 2019
+84da2956-5cea-45fb-9a42-85b16d737078, Generating trajectories..., Wed Feb 06 17:39:17 PST 2019
+84da2956-5cea-45fb-9a42-85b16d737078, Finished trajectory generation, Wed Feb 06 17:39:17 PST 2019
+84da2956-5cea-45fb-9a42-85b16d737078, Disabled Init, Wed Feb 06 17:39:17 PST 2019
+84da2956-5cea-45fb-9a42-85b16d737078, SET HEADING: 0.0, Wed Feb 06 17:39:18 PST 2019
+84da2956-5cea-45fb-9a42-85b16d737078, Gyro offset: 7.880004882812516, Wed Feb 06 17:39:18 PST 2019
+84da2956-5cea-45fb-9a42-85b16d737078, Teleop Init, Wed Feb 06 17:39:20 PST 2019
+84da2956-5cea-45fb-9a42-85b16d737078, Disabled Init, Wed Feb 06 17:39:29 PST 2019
+84da2956-5cea-45fb-9a42-85b16d737078, Teleop Init, Wed Feb 06 17:40:06 PST 2019
+84da2956-5cea-45fb-9a42-85b16d737078, Disabled Init, Wed Feb 06 17:40:13 PST 2019
+3132fc52-a899-455e-aec2-79ca89509913, Robot Startup, Wed Feb 06 17:40:55 PST 2019
+3132fc52-a899-455e-aec2-79ca89509913, Robot Init, Wed Feb 06 17:40:55 PST 2019
+3132fc52-a899-455e-aec2-79ca89509913, Generating trajectories..., Wed Feb 06 17:40:55 PST 2019
+3132fc52-a899-455e-aec2-79ca89509913, Finished trajectory generation, Wed Feb 06 17:40:55 PST 2019
+3132fc52-a899-455e-aec2-79ca89509913, Disabled Init, Wed Feb 06 17:40:55 PST 2019
+3132fc52-a899-455e-aec2-79ca89509913, SET HEADING: 0.0, Wed Feb 06 17:40:55 PST 2019
+3132fc52-a899-455e-aec2-79ca89509913, Gyro offset: 7.470001220703153, Wed Feb 06 17:40:55 PST 2019
+3132fc52-a899-455e-aec2-79ca89509913, Teleop Init, Wed Feb 06 17:40:56 PST 2019
+3132fc52-a899-455e-aec2-79ca89509913, Disabled Init, Wed Feb 06 17:41:07 PST 2019
+3132fc52-a899-455e-aec2-79ca89509913, Teleop Init, Wed Feb 06 17:41:39 PST 2019
+3132fc52-a899-455e-aec2-79ca89509913, Disabled Init, Wed Feb 06 17:41:57 PST 2019
+3132fc52-a899-455e-aec2-79ca89509913, Teleop Init, Wed Feb 06 17:45:12 PST 2019
+3132fc52-a899-455e-aec2-79ca89509913, Disabled Init, Wed Feb 06 17:45:20 PST 2019
+26309907-3ea6-45eb-838b-add2dac3f656, Robot Startup, Wed Feb 06 17:48:33 PST 2019
+26309907-3ea6-45eb-838b-add2dac3f656, Robot Init, Wed Feb 06 17:48:33 PST 2019
+26309907-3ea6-45eb-838b-add2dac3f656, Generating trajectories..., Wed Feb 06 17:48:33 PST 2019
+26309907-3ea6-45eb-838b-add2dac3f656, Finished trajectory generation, Wed Feb 06 17:48:33 PST 2019
+26309907-3ea6-45eb-838b-add2dac3f656, Disabled Init, Wed Feb 06 17:48:34 PST 2019
+26309907-3ea6-45eb-838b-add2dac3f656, SET HEADING: 0.0, Wed Feb 06 17:48:34 PST 2019
+26309907-3ea6-45eb-838b-add2dac3f656, Gyro offset: 6.760009765625016, Wed Feb 06 17:48:34 PST 2019
+7181ccf3-0a60-44b7-80cd-743322ab6ddc, Robot Startup, Wed Feb 06 17:48:55 PST 2019
+7181ccf3-0a60-44b7-80cd-743322ab6ddc, Robot Init, Wed Feb 06 17:48:55 PST 2019
+7181ccf3-0a60-44b7-80cd-743322ab6ddc, Generating trajectories..., Wed Feb 06 17:48:55 PST 2019
+7181ccf3-0a60-44b7-80cd-743322ab6ddc, Finished trajectory generation, Wed Feb 06 17:48:56 PST 2019
+7181ccf3-0a60-44b7-80cd-743322ab6ddc, Disabled Init, Wed Feb 06 17:48:56 PST 2019
+7181ccf3-0a60-44b7-80cd-743322ab6ddc, SET HEADING: 0.0, Wed Feb 06 17:48:56 PST 2019
+7181ccf3-0a60-44b7-80cd-743322ab6ddc, Gyro offset: 6.779998779296904, Wed Feb 06 17:48:56 PST 2019
+3a0716bb-cf21-4090-99f3-8aa94ce81432, Robot Startup, Wed Feb 06 17:49:25 PST 2019
+3a0716bb-cf21-4090-99f3-8aa94ce81432, Robot Init, Wed Feb 06 17:49:25 PST 2019
+3a0716bb-cf21-4090-99f3-8aa94ce81432, Generating trajectories..., Wed Feb 06 17:49:25 PST 2019
+3a0716bb-cf21-4090-99f3-8aa94ce81432, Finished trajectory generation, Wed Feb 06 17:49:26 PST 2019
+3a0716bb-cf21-4090-99f3-8aa94ce81432, Disabled Init, Wed Feb 06 17:49:26 PST 2019
+3a0716bb-cf21-4090-99f3-8aa94ce81432, SET HEADING: 0.0, Wed Feb 06 17:49:26 PST 2019
+3a0716bb-cf21-4090-99f3-8aa94ce81432, Gyro offset: 6.750000000000002, Wed Feb 06 17:49:26 PST 2019
+3a0716bb-cf21-4090-99f3-8aa94ce81432, Teleop Init, Wed Feb 06 17:49:34 PST 2019
+3a0716bb-cf21-4090-99f3-8aa94ce81432, Disabled Init, Wed Feb 06 17:49:37 PST 2019
+3a0716bb-cf21-4090-99f3-8aa94ce81432, Teleop Init, Wed Feb 06 17:49:38 PST 2019
+3a0716bb-cf21-4090-99f3-8aa94ce81432, Disabled Init, Wed Feb 06 17:49:41 PST 2019
+7757b581-2d52-40a0-ae33-00239ed83549, SigNotUpdated, Wed Feb 06 17:50:04 PST 2019
+7757b581-2d52-40a0-ae33-00239ed83549, Robot Startup, Wed Feb 06 17:50:05 PST 2019
+7757b581-2d52-40a0-ae33-00239ed83549, Robot Init, Wed Feb 06 17:50:05 PST 2019
+7757b581-2d52-40a0-ae33-00239ed83549, Generating trajectories..., Wed Feb 06 17:50:05 PST 2019
+7757b581-2d52-40a0-ae33-00239ed83549, Finished trajectory generation, Wed Feb 06 17:50:05 PST 2019
+7757b581-2d52-40a0-ae33-00239ed83549, Disabled Init, Wed Feb 06 17:50:05 PST 2019
+7757b581-2d52-40a0-ae33-00239ed83549, SET HEADING: 0.0, Wed Feb 06 17:50:05 PST 2019
+7757b581-2d52-40a0-ae33-00239ed83549, Gyro offset: 6.76998901367189, Wed Feb 06 17:50:05 PST 2019
+7757b581-2d52-40a0-ae33-00239ed83549, Teleop Init, Wed Feb 06 17:50:06 PST 2019
+7757b581-2d52-40a0-ae33-00239ed83549, Disabled Init, Wed Feb 06 17:50:09 PST 2019
+e959636a-207b-4e20-9207-7c78a61e0916, Robot Startup, Wed Feb 06 17:50:27 PST 2019
+e959636a-207b-4e20-9207-7c78a61e0916, Robot Init, Wed Feb 06 17:50:27 PST 2019
+e959636a-207b-4e20-9207-7c78a61e0916, Generating trajectories..., Wed Feb 06 17:50:27 PST 2019
+e959636a-207b-4e20-9207-7c78a61e0916, Finished trajectory generation, Wed Feb 06 17:50:27 PST 2019
+e959636a-207b-4e20-9207-7c78a61e0916, Disabled Init, Wed Feb 06 17:50:27 PST 2019
+e959636a-207b-4e20-9207-7c78a61e0916, SET HEADING: 0.0, Wed Feb 06 17:50:28 PST 2019
+e959636a-207b-4e20-9207-7c78a61e0916, Gyro offset: 6.700012207031261, Wed Feb 06 17:50:28 PST 2019
+e959636a-207b-4e20-9207-7c78a61e0916, Teleop Init, Wed Feb 06 17:50:28 PST 2019
+e959636a-207b-4e20-9207-7c78a61e0916, Disabled Init, Wed Feb 06 17:50:30 PST 2019
+9b733672-004c-4b1b-99f4-b81357cf4c90, Robot Startup, Wed Feb 06 17:50:50 PST 2019
+9b733672-004c-4b1b-99f4-b81357cf4c90, Robot Init, Wed Feb 06 17:50:50 PST 2019
+9b733672-004c-4b1b-99f4-b81357cf4c90, Generating trajectories..., Wed Feb 06 17:50:50 PST 2019
+9b733672-004c-4b1b-99f4-b81357cf4c90, Finished trajectory generation, Wed Feb 06 17:50:50 PST 2019
+9b733672-004c-4b1b-99f4-b81357cf4c90, Disabled Init, Wed Feb 06 17:50:50 PST 2019
+9b733672-004c-4b1b-99f4-b81357cf4c90, SET HEADING: 0.0, Wed Feb 06 17:50:51 PST 2019
+9b733672-004c-4b1b-99f4-b81357cf4c90, Gyro offset: 6.690002441406246, Wed Feb 06 17:50:51 PST 2019
+9b733672-004c-4b1b-99f4-b81357cf4c90, Teleop Init, Wed Feb 06 17:50:52 PST 2019
+9b733672-004c-4b1b-99f4-b81357cf4c90, Disabled Init, Wed Feb 06 17:51:07 PST 2019
+54b2eb9d-c847-49d5-9f68-1ed0172066e1, Robot Startup, Wed Feb 06 17:51:31 PST 2019
+54b2eb9d-c847-49d5-9f68-1ed0172066e1, Robot Init, Wed Feb 06 17:51:32 PST 2019
+54b2eb9d-c847-49d5-9f68-1ed0172066e1, Generating trajectories..., Wed Feb 06 17:51:32 PST 2019
+54b2eb9d-c847-49d5-9f68-1ed0172066e1, Finished trajectory generation, Wed Feb 06 17:51:32 PST 2019
+54b2eb9d-c847-49d5-9f68-1ed0172066e1, Disabled Init, Wed Feb 06 17:51:32 PST 2019
+54b2eb9d-c847-49d5-9f68-1ed0172066e1, SET HEADING: 0.0, Wed Feb 06 17:51:32 PST 2019
+54b2eb9d-c847-49d5-9f68-1ed0172066e1, Gyro offset: 6.549987792968756, Wed Feb 06 17:51:32 PST 2019
+54b2eb9d-c847-49d5-9f68-1ed0172066e1, Teleop Init, Wed Feb 06 17:51:34 PST 2019
+54b2eb9d-c847-49d5-9f68-1ed0172066e1, Disabled Init, Wed Feb 06 17:51:37 PST 2019
+91ae93a0-f420-4270-a242-4606385093b5, Robot Startup, Wed Feb 06 17:52:09 PST 2019
+91ae93a0-f420-4270-a242-4606385093b5, Robot Init, Wed Feb 06 17:52:09 PST 2019
+91ae93a0-f420-4270-a242-4606385093b5, Generating trajectories..., Wed Feb 06 17:52:09 PST 2019
+91ae93a0-f420-4270-a242-4606385093b5, Finished trajectory generation, Wed Feb 06 17:52:10 PST 2019
+91ae93a0-f420-4270-a242-4606385093b5, Disabled Init, Wed Feb 06 17:52:10 PST 2019
+91ae93a0-f420-4270-a242-4606385093b5, SET HEADING: 0.0, Wed Feb 06 17:52:10 PST 2019
+91ae93a0-f420-4270-a242-4606385093b5, Gyro offset: 6.6199951171875275, Wed Feb 06 17:52:10 PST 2019
+91ae93a0-f420-4270-a242-4606385093b5, Teleop Init, Wed Feb 06 17:52:11 PST 2019
+91ae93a0-f420-4270-a242-4606385093b5, Disabled Init, Wed Feb 06 17:52:17 PST 2019
+1babd025-aca0-439d-a014-81a0d859756f, Robot Startup, Wed Feb 06 17:52:46 PST 2019
+1babd025-aca0-439d-a014-81a0d859756f, Robot Init, Wed Feb 06 17:52:46 PST 2019
+1babd025-aca0-439d-a014-81a0d859756f, Generating trajectories..., Wed Feb 06 17:52:46 PST 2019
+1babd025-aca0-439d-a014-81a0d859756f, Finished trajectory generation, Wed Feb 06 17:52:46 PST 2019
+1babd025-aca0-439d-a014-81a0d859756f, Disabled Init, Wed Feb 06 17:52:46 PST 2019
+1babd025-aca0-439d-a014-81a0d859756f, SET HEADING: 0.0, Wed Feb 06 17:52:46 PST 2019
+1babd025-aca0-439d-a014-81a0d859756f, Gyro offset: 6.6199951171875275, Wed Feb 06 17:52:46 PST 2019
+1babd025-aca0-439d-a014-81a0d859756f, Teleop Init, Wed Feb 06 17:52:48 PST 2019
+1babd025-aca0-439d-a014-81a0d859756f, Disabled Init, Wed Feb 06 17:52:50 PST 2019
+287a585b-2e70-4472-9b7c-d7ebb83fdc7f, Robot Startup, Wed Feb 06 17:53:25 PST 2019
+287a585b-2e70-4472-9b7c-d7ebb83fdc7f, Robot Init, Wed Feb 06 17:53:25 PST 2019
+287a585b-2e70-4472-9b7c-d7ebb83fdc7f, Generating trajectories..., Wed Feb 06 17:53:25 PST 2019
+287a585b-2e70-4472-9b7c-d7ebb83fdc7f, Finished trajectory generation, Wed Feb 06 17:53:25 PST 2019
+287a585b-2e70-4472-9b7c-d7ebb83fdc7f, Disabled Init, Wed Feb 06 17:53:25 PST 2019
+287a585b-2e70-4472-9b7c-d7ebb83fdc7f, SET HEADING: 0.0, Wed Feb 06 17:53:25 PST 2019
+287a585b-2e70-4472-9b7c-d7ebb83fdc7f, Gyro offset: 6.8299865722656445, Wed Feb 06 17:53:25 PST 2019
+287a585b-2e70-4472-9b7c-d7ebb83fdc7f, Teleop Init, Wed Feb 06 17:53:26 PST 2019
+287a585b-2e70-4472-9b7c-d7ebb83fdc7f, Disabled Init, Wed Feb 06 17:53:29 PST 2019
+8680ff69-1651-4b7c-bfdb-4e0fb5b0e270, Robot Startup, Wed Feb 06 17:53:54 PST 2019
+8680ff69-1651-4b7c-bfdb-4e0fb5b0e270, Robot Init, Wed Feb 06 17:53:54 PST 2019
+8680ff69-1651-4b7c-bfdb-4e0fb5b0e270, Generating trajectories..., Wed Feb 06 17:53:54 PST 2019
+8680ff69-1651-4b7c-bfdb-4e0fb5b0e270, Finished trajectory generation, Wed Feb 06 17:53:54 PST 2019
+8680ff69-1651-4b7c-bfdb-4e0fb5b0e270, Disabled Init, Wed Feb 06 17:53:54 PST 2019
+8680ff69-1651-4b7c-bfdb-4e0fb5b0e270, SET HEADING: 0.0, Wed Feb 06 17:53:54 PST 2019
+8680ff69-1651-4b7c-bfdb-4e0fb5b0e270, Gyro offset: 6.980010986328148, Wed Feb 06 17:53:55 PST 2019
+8680ff69-1651-4b7c-bfdb-4e0fb5b0e270, Teleop Init, Wed Feb 06 17:53:55 PST 2019
+8680ff69-1651-4b7c-bfdb-4e0fb5b0e270, Disabled Init, Wed Feb 06 17:54:00 PST 2019
+8c241a17-faeb-4757-884f-0a615e133ce4, Robot Startup, Wed Feb 06 17:54:22 PST 2019
+8c241a17-faeb-4757-884f-0a615e133ce4, Robot Init, Wed Feb 06 17:54:22 PST 2019
+8c241a17-faeb-4757-884f-0a615e133ce4, Generating trajectories..., Wed Feb 06 17:54:22 PST 2019
+8c241a17-faeb-4757-884f-0a615e133ce4, Finished trajectory generation, Wed Feb 06 17:54:23 PST 2019
+8c241a17-faeb-4757-884f-0a615e133ce4, Disabled Init, Wed Feb 06 17:54:23 PST 2019
+8c241a17-faeb-4757-884f-0a615e133ce4, SET HEADING: 0.0, Wed Feb 06 17:54:23 PST 2019
+8c241a17-faeb-4757-884f-0a615e133ce4, Gyro offset: 7.089996337890643, Wed Feb 06 17:54:23 PST 2019
+8c241a17-faeb-4757-884f-0a615e133ce4, Teleop Init, Wed Feb 06 17:54:48 PST 2019
+8c241a17-faeb-4757-884f-0a615e133ce4, Disabled Init, Wed Feb 06 17:54:58 PST 2019
+6ec954ff-1ee6-4571-8087-3894636b8aac, Robot Startup, Wed Feb 06 17:55:24 PST 2019
+6ec954ff-1ee6-4571-8087-3894636b8aac, Robot Init, Wed Feb 06 17:55:24 PST 2019
+6ec954ff-1ee6-4571-8087-3894636b8aac, Generating trajectories..., Wed Feb 06 17:55:24 PST 2019
+6ec954ff-1ee6-4571-8087-3894636b8aac, Finished trajectory generation, Wed Feb 06 17:55:24 PST 2019
+6ec954ff-1ee6-4571-8087-3894636b8aac, Disabled Init, Wed Feb 06 17:55:24 PST 2019
+6ec954ff-1ee6-4571-8087-3894636b8aac, SET HEADING: 0.0, Wed Feb 06 17:55:25 PST 2019
+6ec954ff-1ee6-4571-8087-3894636b8aac, Gyro offset: 7.29998779296876, Wed Feb 06 17:55:25 PST 2019
+6ec954ff-1ee6-4571-8087-3894636b8aac, Teleop Init, Wed Feb 06 17:55:25 PST 2019
+6ec954ff-1ee6-4571-8087-3894636b8aac, Disabled Init, Wed Feb 06 17:55:30 PST 2019
+1bbbb7f8-7e4b-4ef1-b5f4-00aee653ed47, Robot Startup, Wed Feb 06 17:55:57 PST 2019
+1bbbb7f8-7e4b-4ef1-b5f4-00aee653ed47, Robot Init, Wed Feb 06 17:55:57 PST 2019
+1bbbb7f8-7e4b-4ef1-b5f4-00aee653ed47, Generating trajectories..., Wed Feb 06 17:55:57 PST 2019
+1bbbb7f8-7e4b-4ef1-b5f4-00aee653ed47, Finished trajectory generation, Wed Feb 06 17:55:57 PST 2019
+1bbbb7f8-7e4b-4ef1-b5f4-00aee653ed47, Disabled Init, Wed Feb 06 17:55:57 PST 2019
+1bbbb7f8-7e4b-4ef1-b5f4-00aee653ed47, SET HEADING: 0.0, Wed Feb 06 17:55:57 PST 2019
+1bbbb7f8-7e4b-4ef1-b5f4-00aee653ed47, Gyro offset: 7.489990234374992, Wed Feb 06 17:55:57 PST 2019
+1bbbb7f8-7e4b-4ef1-b5f4-00aee653ed47, Teleop Init, Wed Feb 06 17:56:02 PST 2019
+1bbbb7f8-7e4b-4ef1-b5f4-00aee653ed47, Disabled Init, Wed Feb 06 17:56:07 PST 2019
+71b9c59d-f667-4292-925d-a217341a9df5, SigNotUpdated, Wed Feb 06 17:56:33 PST 2019
+71b9c59d-f667-4292-925d-a217341a9df5, Robot Startup, Wed Feb 06 17:56:33 PST 2019
+71b9c59d-f667-4292-925d-a217341a9df5, Robot Init, Wed Feb 06 17:56:33 PST 2019
+71b9c59d-f667-4292-925d-a217341a9df5, Generating trajectories..., Wed Feb 06 17:56:33 PST 2019
+71b9c59d-f667-4292-925d-a217341a9df5, Finished trajectory generation, Wed Feb 06 17:56:33 PST 2019
+71b9c59d-f667-4292-925d-a217341a9df5, Disabled Init, Wed Feb 06 17:56:33 PST 2019
+71b9c59d-f667-4292-925d-a217341a9df5, SET HEADING: 0.0, Wed Feb 06 17:56:34 PST 2019
+71b9c59d-f667-4292-925d-a217341a9df5, Gyro offset: 7.329986572265612, Wed Feb 06 17:56:34 PST 2019
+71b9c59d-f667-4292-925d-a217341a9df5, Teleop Init, Wed Feb 06 17:56:34 PST 2019
+71b9c59d-f667-4292-925d-a217341a9df5, Disabled Init, Wed Feb 06 17:56:38 PST 2019
+eb34d9d3-61b2-4979-8df4-cfe8c08b7e91, SigNotUpdated, Wed Feb 06 17:56:59 PST 2019
+eb34d9d3-61b2-4979-8df4-cfe8c08b7e91, Robot Startup, Wed Feb 06 17:56:59 PST 2019
+eb34d9d3-61b2-4979-8df4-cfe8c08b7e91, Robot Init, Wed Feb 06 17:56:59 PST 2019
+eb34d9d3-61b2-4979-8df4-cfe8c08b7e91, Generating trajectories..., Wed Feb 06 17:56:59 PST 2019
+eb34d9d3-61b2-4979-8df4-cfe8c08b7e91, Finished trajectory generation, Wed Feb 06 17:56:59 PST 2019
+eb34d9d3-61b2-4979-8df4-cfe8c08b7e91, Disabled Init, Wed Feb 06 17:56:59 PST 2019
+eb34d9d3-61b2-4979-8df4-cfe8c08b7e91, SET HEADING: 0.0, Wed Feb 06 17:57:00 PST 2019
+eb34d9d3-61b2-4979-8df4-cfe8c08b7e91, Gyro offset: 7.29000854492189, Wed Feb 06 17:57:00 PST 2019
+c3a784ca-6f8f-4ef9-b7d9-314e59daeb60, Robot Startup, Wed Feb 06 17:57:20 PST 2019
+c3a784ca-6f8f-4ef9-b7d9-314e59daeb60, Robot Init, Wed Feb 06 17:57:20 PST 2019
+c3a784ca-6f8f-4ef9-b7d9-314e59daeb60, Generating trajectories..., Wed Feb 06 17:57:20 PST 2019
+c3a784ca-6f8f-4ef9-b7d9-314e59daeb60, Finished trajectory generation, Wed Feb 06 17:57:20 PST 2019
+c3a784ca-6f8f-4ef9-b7d9-314e59daeb60, Disabled Init, Wed Feb 06 17:57:20 PST 2019
+c3a784ca-6f8f-4ef9-b7d9-314e59daeb60, SET HEADING: 0.0, Wed Feb 06 17:57:20 PST 2019
+c3a784ca-6f8f-4ef9-b7d9-314e59daeb60, Gyro offset: 7.410003662109399, Wed Feb 06 17:57:20 PST 2019
+c3a784ca-6f8f-4ef9-b7d9-314e59daeb60, Teleop Init, Wed Feb 06 17:57:33 PST 2019
+c3a784ca-6f8f-4ef9-b7d9-314e59daeb60, Disabled Init, Wed Feb 06 17:57:36 PST 2019
+2c89f401-05cd-4a6f-a936-72a302bee245, Robot Startup, Wed Feb 06 17:58:43 PST 2019
+2c89f401-05cd-4a6f-a936-72a302bee245, Robot Init, Wed Feb 06 17:58:43 PST 2019
+2c89f401-05cd-4a6f-a936-72a302bee245, Generating trajectories..., Wed Feb 06 17:58:43 PST 2019
+2c89f401-05cd-4a6f-a936-72a302bee245, Finished trajectory generation, Wed Feb 06 17:58:43 PST 2019
+2c89f401-05cd-4a6f-a936-72a302bee245, Disabled Init, Wed Feb 06 17:58:43 PST 2019
+2c89f401-05cd-4a6f-a936-72a302bee245, SET HEADING: 0.0, Wed Feb 06 17:58:43 PST 2019
+2c89f401-05cd-4a6f-a936-72a302bee245, Gyro offset: 7.589996337890613, Wed Feb 06 17:58:44 PST 2019
+2c89f401-05cd-4a6f-a936-72a302bee245, Teleop Init, Wed Feb 06 17:58:56 PST 2019
+2c89f401-05cd-4a6f-a936-72a302bee245, Disabled Init, Wed Feb 06 17:59:02 PST 2019
+2c89f401-05cd-4a6f-a936-72a302bee245, Teleop Init, Wed Feb 06 17:59:03 PST 2019
+2c89f401-05cd-4a6f-a936-72a302bee245, Disabled Init, Wed Feb 06 17:59:10 PST 2019
+2c89f401-05cd-4a6f-a936-72a302bee245, Teleop Init, Wed Feb 06 17:59:36 PST 2019
+2c89f401-05cd-4a6f-a936-72a302bee245, Disabled Init, Wed Feb 06 17:59:50 PST 2019
+f50eb9eb-063f-4efd-be77-58045eb61db8, Robot Startup, Wed Feb 06 18:00:15 PST 2019
+f50eb9eb-063f-4efd-be77-58045eb61db8, Robot Init, Wed Feb 06 18:00:15 PST 2019
+f50eb9eb-063f-4efd-be77-58045eb61db8, Generating trajectories..., Wed Feb 06 18:00:15 PST 2019
+f50eb9eb-063f-4efd-be77-58045eb61db8, Finished trajectory generation, Wed Feb 06 18:00:15 PST 2019
+f50eb9eb-063f-4efd-be77-58045eb61db8, Disabled Init, Wed Feb 06 18:00:15 PST 2019
+f50eb9eb-063f-4efd-be77-58045eb61db8, SET HEADING: 0.0, Wed Feb 06 18:00:15 PST 2019
+f50eb9eb-063f-4efd-be77-58045eb61db8, Gyro offset: 7.570007324218776, Wed Feb 06 18:00:15 PST 2019
+f50eb9eb-063f-4efd-be77-58045eb61db8, Teleop Init, Wed Feb 06 18:00:18 PST 2019
+f50eb9eb-063f-4efd-be77-58045eb61db8, Disabled Init, Wed Feb 06 18:00:20 PST 2019
+ffd00a7e-abb7-4e37-9f99-a32dd24e9324, Robot Startup, Wed Feb 06 18:00:43 PST 2019
+ffd00a7e-abb7-4e37-9f99-a32dd24e9324, Robot Init, Wed Feb 06 18:00:43 PST 2019
+ffd00a7e-abb7-4e37-9f99-a32dd24e9324, Generating trajectories..., Wed Feb 06 18:00:43 PST 2019
+ffd00a7e-abb7-4e37-9f99-a32dd24e9324, Finished trajectory generation, Wed Feb 06 18:00:43 PST 2019
+ffd00a7e-abb7-4e37-9f99-a32dd24e9324, Disabled Init, Wed Feb 06 18:00:43 PST 2019
+ffd00a7e-abb7-4e37-9f99-a32dd24e9324, SET HEADING: 0.0, Wed Feb 06 18:00:44 PST 2019
+ffd00a7e-abb7-4e37-9f99-a32dd24e9324, Gyro offset: 7.640014648437494, Wed Feb 06 18:00:44 PST 2019
+ffd00a7e-abb7-4e37-9f99-a32dd24e9324, Teleop Init, Wed Feb 06 18:00:45 PST 2019
+ffd00a7e-abb7-4e37-9f99-a32dd24e9324, Disabled Init, Wed Feb 06 18:00:47 PST 2019
+25e86dae-e59f-49b2-ade3-c961277ed6f3, Robot Startup, Wed Feb 06 18:01:10 PST 2019
+25e86dae-e59f-49b2-ade3-c961277ed6f3, Robot Init, Wed Feb 06 18:01:10 PST 2019
+25e86dae-e59f-49b2-ade3-c961277ed6f3, Generating trajectories..., Wed Feb 06 18:01:10 PST 2019
+25e86dae-e59f-49b2-ade3-c961277ed6f3, Finished trajectory generation, Wed Feb 06 18:01:11 PST 2019
+25e86dae-e59f-49b2-ade3-c961277ed6f3, Disabled Init, Wed Feb 06 18:01:11 PST 2019
+25e86dae-e59f-49b2-ade3-c961277ed6f3, SET HEADING: 0.0, Wed Feb 06 18:01:11 PST 2019
+25e86dae-e59f-49b2-ade3-c961277ed6f3, Gyro offset: 7.730010986328153, Wed Feb 06 18:01:11 PST 2019
+25e86dae-e59f-49b2-ade3-c961277ed6f3, Teleop Init, Wed Feb 06 18:01:11 PST 2019
+25e86dae-e59f-49b2-ade3-c961277ed6f3, Disabled Init, Wed Feb 06 18:01:13 PST 2019
+6ae4130b-b24b-43c1-9d45-b6583c12ebef, Robot Startup, Wed Feb 06 18:01:38 PST 2019
+6ae4130b-b24b-43c1-9d45-b6583c12ebef, Robot Init, Wed Feb 06 18:01:38 PST 2019
+6ae4130b-b24b-43c1-9d45-b6583c12ebef, Generating trajectories..., Wed Feb 06 18:01:38 PST 2019
+6ae4130b-b24b-43c1-9d45-b6583c12ebef, Finished trajectory generation, Wed Feb 06 18:01:38 PST 2019
+6ae4130b-b24b-43c1-9d45-b6583c12ebef, Disabled Init, Wed Feb 06 18:01:38 PST 2019
+6ae4130b-b24b-43c1-9d45-b6583c12ebef, SET HEADING: 0.0, Wed Feb 06 18:01:39 PST 2019
+6ae4130b-b24b-43c1-9d45-b6583c12ebef, Gyro offset: 7.779998779296893, Wed Feb 06 18:01:39 PST 2019
+6ae4130b-b24b-43c1-9d45-b6583c12ebef, Teleop Init, Wed Feb 06 18:01:52 PST 2019
+6ae4130b-b24b-43c1-9d45-b6583c12ebef, Disabled Init, Wed Feb 06 18:01:54 PST 2019
+24f1e4cb-663f-4754-8e5b-cd33df7b223c, Robot Startup, Wed Feb 06 18:02:21 PST 2019
+24f1e4cb-663f-4754-8e5b-cd33df7b223c, Robot Init, Wed Feb 06 18:02:21 PST 2019
+24f1e4cb-663f-4754-8e5b-cd33df7b223c, Generating trajectories..., Wed Feb 06 18:02:21 PST 2019
+24f1e4cb-663f-4754-8e5b-cd33df7b223c, Finished trajectory generation, Wed Feb 06 18:02:21 PST 2019
+24f1e4cb-663f-4754-8e5b-cd33df7b223c, Disabled Init, Wed Feb 06 18:02:22 PST 2019
+24f1e4cb-663f-4754-8e5b-cd33df7b223c, SET HEADING: 0.0, Wed Feb 06 18:02:22 PST 2019
+24f1e4cb-663f-4754-8e5b-cd33df7b223c, Gyro offset: 7.799987792968781, Wed Feb 06 18:02:22 PST 2019
+24f1e4cb-663f-4754-8e5b-cd33df7b223c, Teleop Init, Wed Feb 06 18:02:49 PST 2019
+24f1e4cb-663f-4754-8e5b-cd33df7b223c, Disabled Init, Wed Feb 06 18:02:51 PST 2019
+bf18ffa0-48ec-4f9a-b734-fb4fac9e2511, Robot Startup, Wed Feb 06 18:04:20 PST 2019
+bf18ffa0-48ec-4f9a-b734-fb4fac9e2511, Robot Init, Wed Feb 06 18:04:20 PST 2019
+bf18ffa0-48ec-4f9a-b734-fb4fac9e2511, Generating trajectories..., Wed Feb 06 18:04:20 PST 2019
+bf18ffa0-48ec-4f9a-b734-fb4fac9e2511, Finished trajectory generation, Wed Feb 06 18:04:21 PST 2019
+bf18ffa0-48ec-4f9a-b734-fb4fac9e2511, Disabled Init, Wed Feb 06 18:04:21 PST 2019
+bf18ffa0-48ec-4f9a-b734-fb4fac9e2511, SET HEADING: 0.0, Wed Feb 06 18:04:21 PST 2019
+bf18ffa0-48ec-4f9a-b734-fb4fac9e2511, Gyro offset: 8.20001220703127, Wed Feb 06 18:04:21 PST 2019
+bf18ffa0-48ec-4f9a-b734-fb4fac9e2511, Teleop Init, Wed Feb 06 18:04:32 PST 2019
+bf18ffa0-48ec-4f9a-b734-fb4fac9e2511, Disabled Init, Wed Feb 06 18:04:34 PST 2019
+07773e2f-3e98-4dc9-8d6b-cbb99c09a3f4, SigNotUpdated, Wed Feb 06 18:05:13 PST 2019
+07773e2f-3e98-4dc9-8d6b-cbb99c09a3f4, Robot Startup, Wed Feb 06 18:05:13 PST 2019
+07773e2f-3e98-4dc9-8d6b-cbb99c09a3f4, Robot Init, Wed Feb 06 18:05:13 PST 2019
+07773e2f-3e98-4dc9-8d6b-cbb99c09a3f4, Generating trajectories..., Wed Feb 06 18:05:13 PST 2019
+07773e2f-3e98-4dc9-8d6b-cbb99c09a3f4, Finished trajectory generation, Wed Feb 06 18:05:14 PST 2019
+07773e2f-3e98-4dc9-8d6b-cbb99c09a3f4, Disabled Init, Wed Feb 06 18:05:14 PST 2019
+07773e2f-3e98-4dc9-8d6b-cbb99c09a3f4, SET HEADING: 0.0, Wed Feb 06 18:05:14 PST 2019
+07773e2f-3e98-4dc9-8d6b-cbb99c09a3f4, Gyro offset: 8.44000244140624, Wed Feb 06 18:05:14 PST 2019
+07773e2f-3e98-4dc9-8d6b-cbb99c09a3f4, Teleop Init, Wed Feb 06 18:05:21 PST 2019
+07773e2f-3e98-4dc9-8d6b-cbb99c09a3f4, Disabled Init, Wed Feb 06 18:05:24 PST 2019
+07773e2f-3e98-4dc9-8d6b-cbb99c09a3f4, Teleop Init, Wed Feb 06 18:05:35 PST 2019
+07773e2f-3e98-4dc9-8d6b-cbb99c09a3f4, Disabled Init, Wed Feb 06 18:05:51 PST 2019
+5a33d484-819b-4f7f-a463-a3fb8f0d270c, SigNotUpdated, Wed Feb 06 18:06:15 PST 2019
+5a33d484-819b-4f7f-a463-a3fb8f0d270c, Robot Startup, Wed Feb 06 18:06:15 PST 2019
+5a33d484-819b-4f7f-a463-a3fb8f0d270c, Robot Init, Wed Feb 06 18:06:15 PST 2019
+5a33d484-819b-4f7f-a463-a3fb8f0d270c, Generating trajectories..., Wed Feb 06 18:06:15 PST 2019
+5a33d484-819b-4f7f-a463-a3fb8f0d270c, Finished trajectory generation, Wed Feb 06 18:06:15 PST 2019
+5a33d484-819b-4f7f-a463-a3fb8f0d270c, Disabled Init, Wed Feb 06 18:06:15 PST 2019
+5a33d484-819b-4f7f-a463-a3fb8f0d270c, SET HEADING: 0.0, Wed Feb 06 18:06:15 PST 2019
+5a33d484-819b-4f7f-a463-a3fb8f0d270c, Gyro offset: 8.600006103515616, Wed Feb 06 18:06:15 PST 2019
+5a33d484-819b-4f7f-a463-a3fb8f0d270c, Teleop Init, Wed Feb 06 18:06:16 PST 2019
+5a33d484-819b-4f7f-a463-a3fb8f0d270c, Disabled Init, Wed Feb 06 18:06:18 PST 2019
+5a33d484-819b-4f7f-a463-a3fb8f0d270c, Teleop Init, Wed Feb 06 18:06:18 PST 2019
+5a33d484-819b-4f7f-a463-a3fb8f0d270c, Disabled Init, Wed Feb 06 18:06:19 PST 2019
+aacebe7e-ece3-471c-8c47-563a1b673cbc, Robot Startup, Wed Feb 06 18:06:43 PST 2019
+aacebe7e-ece3-471c-8c47-563a1b673cbc, Robot Init, Wed Feb 06 18:06:43 PST 2019
+aacebe7e-ece3-471c-8c47-563a1b673cbc, Generating trajectories..., Wed Feb 06 18:06:43 PST 2019
+aacebe7e-ece3-471c-8c47-563a1b673cbc, Finished trajectory generation, Wed Feb 06 18:06:43 PST 2019
+aacebe7e-ece3-471c-8c47-563a1b673cbc, Disabled Init, Wed Feb 06 18:06:43 PST 2019
+aacebe7e-ece3-471c-8c47-563a1b673cbc, SET HEADING: 0.0, Wed Feb 06 18:06:44 PST 2019
+aacebe7e-ece3-471c-8c47-563a1b673cbc, Gyro offset: 8.720001220703129, Wed Feb 06 18:06:44 PST 2019
+aacebe7e-ece3-471c-8c47-563a1b673cbc, Teleop Init, Wed Feb 06 18:06:44 PST 2019
+aacebe7e-ece3-471c-8c47-563a1b673cbc, Disabled Init, Wed Feb 06 18:06:44 PST 2019
+70f4b9f6-83a9-449e-9319-de8a6a4ebd74, Robot Startup, Wed Feb 06 18:07:06 PST 2019
+70f4b9f6-83a9-449e-9319-de8a6a4ebd74, Robot Init, Wed Feb 06 18:07:06 PST 2019
+70f4b9f6-83a9-449e-9319-de8a6a4ebd74, Generating trajectories..., Wed Feb 06 18:07:06 PST 2019
+70f4b9f6-83a9-449e-9319-de8a6a4ebd74, Finished trajectory generation, Wed Feb 06 18:07:06 PST 2019
+70f4b9f6-83a9-449e-9319-de8a6a4ebd74, Disabled Init, Wed Feb 06 18:07:06 PST 2019
+70f4b9f6-83a9-449e-9319-de8a6a4ebd74, SET HEADING: 0.0, Wed Feb 06 18:07:07 PST 2019
+70f4b9f6-83a9-449e-9319-de8a6a4ebd74, Gyro offset: 8.829986572265621, Wed Feb 06 18:07:07 PST 2019
+70f4b9f6-83a9-449e-9319-de8a6a4ebd74, Teleop Init, Wed Feb 06 18:08:10 PST 2019
+70f4b9f6-83a9-449e-9319-de8a6a4ebd74, Disabled Init, Wed Feb 06 18:08:15 PST 2019
+70f4b9f6-83a9-449e-9319-de8a6a4ebd74, Teleop Init, Wed Feb 06 18:08:47 PST 2019
+70f4b9f6-83a9-449e-9319-de8a6a4ebd74, Disabled Init, Wed Feb 06 18:08:52 PST 2019
+70f4b9f6-83a9-449e-9319-de8a6a4ebd74, Teleop Init, Wed Feb 06 18:08:52 PST 2019
+70f4b9f6-83a9-449e-9319-de8a6a4ebd74, Disabled Init, Wed Feb 06 18:08:54 PST 2019
+2a1133b1-c4fb-4db6-b640-304bd5df8be2, Robot Startup, Wed Feb 06 18:09:29 PST 2019
+2a1133b1-c4fb-4db6-b640-304bd5df8be2, Robot Init, Wed Feb 06 18:09:30 PST 2019
+2a1133b1-c4fb-4db6-b640-304bd5df8be2, Generating trajectories..., Wed Feb 06 18:09:30 PST 2019
+2a1133b1-c4fb-4db6-b640-304bd5df8be2, Finished trajectory generation, Wed Feb 06 18:09:30 PST 2019
+2a1133b1-c4fb-4db6-b640-304bd5df8be2, Disabled Init, Wed Feb 06 18:09:30 PST 2019
+2a1133b1-c4fb-4db6-b640-304bd5df8be2, SET HEADING: 0.0, Wed Feb 06 18:09:30 PST 2019
+2a1133b1-c4fb-4db6-b640-304bd5df8be2, Gyro offset: 9.140014648437504, Wed Feb 06 18:09:30 PST 2019
+2a1133b1-c4fb-4db6-b640-304bd5df8be2, Teleop Init, Wed Feb 06 18:09:32 PST 2019
+2a1133b1-c4fb-4db6-b640-304bd5df8be2, Disabled Init, Wed Feb 06 18:09:34 PST 2019
+9e4271fd-016f-4ff6-8cad-8b0c81c7d535, Robot Startup, Wed Feb 06 18:10:05 PST 2019
+9e4271fd-016f-4ff6-8cad-8b0c81c7d535, Robot Init, Wed Feb 06 18:10:05 PST 2019
+9e4271fd-016f-4ff6-8cad-8b0c81c7d535, Generating trajectories..., Wed Feb 06 18:10:05 PST 2019
+9e4271fd-016f-4ff6-8cad-8b0c81c7d535, Finished trajectory generation, Wed Feb 06 18:10:05 PST 2019
+9e4271fd-016f-4ff6-8cad-8b0c81c7d535, Disabled Init, Wed Feb 06 18:10:05 PST 2019
+9e4271fd-016f-4ff6-8cad-8b0c81c7d535, SET HEADING: 0.0, Wed Feb 06 18:10:05 PST 2019
+9e4271fd-016f-4ff6-8cad-8b0c81c7d535, Gyro offset: 9.220001220703146, Wed Feb 06 18:10:05 PST 2019
+9e4271fd-016f-4ff6-8cad-8b0c81c7d535, Teleop Init, Wed Feb 06 18:10:06 PST 2019
+9e4271fd-016f-4ff6-8cad-8b0c81c7d535, SigNotUpdated, Wed Feb 06 18:10:06 PST 2019
+9e4271fd-016f-4ff6-8cad-8b0c81c7d535, SigNotUpdated, Wed Feb 06 18:10:07 PST 2019
+9e4271fd-016f-4ff6-8cad-8b0c81c7d535, Disabled Init, Wed Feb 06 18:10:07 PST 2019
+cf9e7aa9-360b-40c5-925f-121076fad677, Robot Startup, Wed Feb 06 18:10:39 PST 2019
+cf9e7aa9-360b-40c5-925f-121076fad677, Robot Init, Wed Feb 06 18:10:39 PST 2019
+cf9e7aa9-360b-40c5-925f-121076fad677, Generating trajectories..., Wed Feb 06 18:10:39 PST 2019
+cf9e7aa9-360b-40c5-925f-121076fad677, Finished trajectory generation, Wed Feb 06 18:10:39 PST 2019
+cf9e7aa9-360b-40c5-925f-121076fad677, Disabled Init, Wed Feb 06 18:10:39 PST 2019
+cf9e7aa9-360b-40c5-925f-121076fad677, SET HEADING: 0.0, Wed Feb 06 18:10:39 PST 2019
+cf9e7aa9-360b-40c5-925f-121076fad677, Gyro offset: 9.380004882812525, Wed Feb 06 18:10:39 PST 2019
+cf9e7aa9-360b-40c5-925f-121076fad677, Teleop Init, Wed Feb 06 18:10:57 PST 2019
+cf9e7aa9-360b-40c5-925f-121076fad677, Disabled Init, Wed Feb 06 18:10:59 PST 2019
+612ae628-6ea8-48a0-863d-331fda6a8821, Robot Startup, Wed Feb 06 18:11:40 PST 2019
+612ae628-6ea8-48a0-863d-331fda6a8821, Robot Init, Wed Feb 06 18:11:40 PST 2019
+612ae628-6ea8-48a0-863d-331fda6a8821, Generating trajectories..., Wed Feb 06 18:11:40 PST 2019
+612ae628-6ea8-48a0-863d-331fda6a8821, Finished trajectory generation, Wed Feb 06 18:11:41 PST 2019
+612ae628-6ea8-48a0-863d-331fda6a8821, Disabled Init, Wed Feb 06 18:11:41 PST 2019
+612ae628-6ea8-48a0-863d-331fda6a8821, SET HEADING: 0.0, Wed Feb 06 18:11:41 PST 2019
+612ae628-6ea8-48a0-863d-331fda6a8821, Gyro offset: 9.499999999999984, Wed Feb 06 18:11:41 PST 2019
+612ae628-6ea8-48a0-863d-331fda6a8821, Teleop Init, Wed Feb 06 18:13:47 PST 2019
+612ae628-6ea8-48a0-863d-331fda6a8821, Disabled Init, Wed Feb 06 18:13:49 PST 2019
+52d328fb-229e-4242-9222-8a9f3cb18e88, Robot Startup, Wed Feb 06 18:14:04 PST 2019
+52d328fb-229e-4242-9222-8a9f3cb18e88, Robot Init, Wed Feb 06 18:14:04 PST 2019
+52d328fb-229e-4242-9222-8a9f3cb18e88, Generating trajectories..., Wed Feb 06 18:14:04 PST 2019
+52d328fb-229e-4242-9222-8a9f3cb18e88, Finished trajectory generation, Wed Feb 06 18:14:04 PST 2019
+52d328fb-229e-4242-9222-8a9f3cb18e88, Disabled Init, Wed Feb 06 18:14:04 PST 2019
+52d328fb-229e-4242-9222-8a9f3cb18e88, SET HEADING: 0.0, Wed Feb 06 18:14:05 PST 2019
+52d328fb-229e-4242-9222-8a9f3cb18e88, Gyro offset: 10.269989013671875, Wed Feb 06 18:14:05 PST 2019
+52d328fb-229e-4242-9222-8a9f3cb18e88, Teleop Init, Wed Feb 06 18:14:19 PST 2019
+52d328fb-229e-4242-9222-8a9f3cb18e88, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:14:21 PST 2019
+f2f4c084-49dc-47d2-a123-1de0caeb2065, Robot Startup, Wed Feb 06 18:14:28 PST 2019
+f2f4c084-49dc-47d2-a123-1de0caeb2065, Robot Init, Wed Feb 06 18:14:28 PST 2019
+f2f4c084-49dc-47d2-a123-1de0caeb2065, Generating trajectories..., Wed Feb 06 18:14:28 PST 2019
+f2f4c084-49dc-47d2-a123-1de0caeb2065, Finished trajectory generation, Wed Feb 06 18:14:28 PST 2019
+f2f4c084-49dc-47d2-a123-1de0caeb2065, Disabled Init, Wed Feb 06 18:14:28 PST 2019
+f2f4c084-49dc-47d2-a123-1de0caeb2065, SET HEADING: 0.0, Wed Feb 06 18:14:28 PST 2019
+f2f4c084-49dc-47d2-a123-1de0caeb2065, Gyro offset: 10.390014648437528, Wed Feb 06 18:14:28 PST 2019
+c805063c-6cbf-4d43-98ec-8bdb0b33c83c, Robot Startup, Wed Feb 06 18:15:19 PST 2019
+c805063c-6cbf-4d43-98ec-8bdb0b33c83c, Robot Init, Wed Feb 06 18:15:19 PST 2019
+c805063c-6cbf-4d43-98ec-8bdb0b33c83c, Generating trajectories..., Wed Feb 06 18:15:19 PST 2019
+c805063c-6cbf-4d43-98ec-8bdb0b33c83c, Finished trajectory generation, Wed Feb 06 18:15:19 PST 2019
+c805063c-6cbf-4d43-98ec-8bdb0b33c83c, Disabled Init, Wed Feb 06 18:15:19 PST 2019
+c805063c-6cbf-4d43-98ec-8bdb0b33c83c, SET HEADING: 0.0, Wed Feb 06 18:15:20 PST 2019
+c805063c-6cbf-4d43-98ec-8bdb0b33c83c, Gyro offset: 10.640014648437512, Wed Feb 06 18:15:20 PST 2019
+c805063c-6cbf-4d43-98ec-8bdb0b33c83c, Teleop Init, Wed Feb 06 18:15:26 PST 2019
+c805063c-6cbf-4d43-98ec-8bdb0b33c83c, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:15:33 PST 2019
+c805063c-6cbf-4d43-98ec-8bdb0b33c83c, Disabled Init, Wed Feb 06 18:16:01 PST 2019
+8a0cf4c7-0081-4445-bdc1-8256945aab14, SigNotUpdated, Wed Feb 06 18:17:25 PST 2019
+8a0cf4c7-0081-4445-bdc1-8256945aab14, Robot Startup, Wed Feb 06 18:17:26 PST 2019
+8a0cf4c7-0081-4445-bdc1-8256945aab14, Robot Init, Wed Feb 06 18:17:26 PST 2019
+8a0cf4c7-0081-4445-bdc1-8256945aab14, Generating trajectories..., Wed Feb 06 18:17:26 PST 2019
+8a0cf4c7-0081-4445-bdc1-8256945aab14, Finished trajectory generation, Wed Feb 06 18:17:26 PST 2019
+8a0cf4c7-0081-4445-bdc1-8256945aab14, Disabled Init, Wed Feb 06 18:17:26 PST 2019
+8a0cf4c7-0081-4445-bdc1-8256945aab14, SET HEADING: 0.0, Wed Feb 06 18:17:26 PST 2019
+8a0cf4c7-0081-4445-bdc1-8256945aab14, Gyro offset: 11.16000366210937, Wed Feb 06 18:17:26 PST 2019
+8a0cf4c7-0081-4445-bdc1-8256945aab14, Teleop Init, Wed Feb 06 18:17:34 PST 2019
+8a0cf4c7-0081-4445-bdc1-8256945aab14, Disabled Init, Wed Feb 06 18:17:35 PST 2019
+35d77cc8-9a8f-4a7f-9a71-16c876c293e8, Robot Startup, Wed Feb 06 18:18:23 PST 2019
+35d77cc8-9a8f-4a7f-9a71-16c876c293e8, Robot Init, Wed Feb 06 18:18:23 PST 2019
+35d77cc8-9a8f-4a7f-9a71-16c876c293e8, Generating trajectories..., Wed Feb 06 18:18:23 PST 2019
+35d77cc8-9a8f-4a7f-9a71-16c876c293e8, Finished trajectory generation, Wed Feb 06 18:18:23 PST 2019
+35d77cc8-9a8f-4a7f-9a71-16c876c293e8, Disabled Init, Wed Feb 06 18:18:23 PST 2019
+35d77cc8-9a8f-4a7f-9a71-16c876c293e8, SET HEADING: 0.0, Wed Feb 06 18:18:24 PST 2019
+35d77cc8-9a8f-4a7f-9a71-16c876c293e8, Gyro offset: 11.410003662109405, Wed Feb 06 18:18:24 PST 2019
+35d77cc8-9a8f-4a7f-9a71-16c876c293e8, Teleop Init, Wed Feb 06 18:18:27 PST 2019
+35d77cc8-9a8f-4a7f-9a71-16c876c293e8, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:18:28 PST 2019
+35d77cc8-9a8f-4a7f-9a71-16c876c293e8, Disabled Init, Wed Feb 06 18:18:50 PST 2019
+fad8765d-6c95-40f3-976e-79563d8df392, Robot Startup, Wed Feb 06 18:19:21 PST 2019
+fad8765d-6c95-40f3-976e-79563d8df392, Robot Init, Wed Feb 06 18:19:21 PST 2019
+fad8765d-6c95-40f3-976e-79563d8df392, Generating trajectories..., Wed Feb 06 18:19:21 PST 2019
+fad8765d-6c95-40f3-976e-79563d8df392, Finished trajectory generation, Wed Feb 06 18:19:21 PST 2019
+fad8765d-6c95-40f3-976e-79563d8df392, Disabled Init, Wed Feb 06 18:19:21 PST 2019
+fad8765d-6c95-40f3-976e-79563d8df392, SET HEADING: 0.0, Wed Feb 06 18:19:22 PST 2019
+fad8765d-6c95-40f3-976e-79563d8df392, Gyro offset: 11.339996337890634, Wed Feb 06 18:19:22 PST 2019
+7d9c7d3d-3c18-4dff-8520-291aaeb1a0ad, SigNotUpdated, Wed Feb 06 18:22:45 PST 2019
+7d9c7d3d-3c18-4dff-8520-291aaeb1a0ad, Robot Startup, Wed Feb 06 18:22:46 PST 2019
+7d9c7d3d-3c18-4dff-8520-291aaeb1a0ad, Robot Init, Wed Feb 06 18:22:46 PST 2019
+7d9c7d3d-3c18-4dff-8520-291aaeb1a0ad, Generating trajectories..., Wed Feb 06 18:22:46 PST 2019
+7d9c7d3d-3c18-4dff-8520-291aaeb1a0ad, Finished trajectory generation, Wed Feb 06 18:22:46 PST 2019
+7d9c7d3d-3c18-4dff-8520-291aaeb1a0ad, Disabled Init, Wed Feb 06 18:22:46 PST 2019
+7d9c7d3d-3c18-4dff-8520-291aaeb1a0ad, SET HEADING: 0.0, Wed Feb 06 18:22:46 PST 2019
+7d9c7d3d-3c18-4dff-8520-291aaeb1a0ad, Gyro offset: 104.58999633789064, Wed Feb 06 18:22:46 PST 2019
+7d9c7d3d-3c18-4dff-8520-291aaeb1a0ad, Teleop Init, Wed Feb 06 18:22:48 PST 2019
+7d9c7d3d-3c18-4dff-8520-291aaeb1a0ad, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:22:50 PST 2019
+7d9c7d3d-3c18-4dff-8520-291aaeb1a0ad, Disabled Init, Wed Feb 06 18:22:57 PST 2019
+7bb82ba6-6b92-409b-add1-715485dff6a2, Robot Startup, Wed Feb 06 18:24:18 PST 2019
+7bb82ba6-6b92-409b-add1-715485dff6a2, Robot Init, Wed Feb 06 18:24:18 PST 2019
+7bb82ba6-6b92-409b-add1-715485dff6a2, Generating trajectories..., Wed Feb 06 18:24:19 PST 2019
+7bb82ba6-6b92-409b-add1-715485dff6a2, Finished trajectory generation, Wed Feb 06 18:24:19 PST 2019
+7bb82ba6-6b92-409b-add1-715485dff6a2, Disabled Init, Wed Feb 06 18:24:19 PST 2019
+7bb82ba6-6b92-409b-add1-715485dff6a2, SET HEADING: 0.0, Wed Feb 06 18:24:19 PST 2019
+7bb82ba6-6b92-409b-add1-715485dff6a2, Gyro offset: -49.58000183105469, Wed Feb 06 18:24:19 PST 2019
+7bb82ba6-6b92-409b-add1-715485dff6a2, Teleop Init, Wed Feb 06 18:24:20 PST 2019
+7bb82ba6-6b92-409b-add1-715485dff6a2, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:24:49 PST 2019
+7bb82ba6-6b92-409b-add1-715485dff6a2, Disabled Init, Wed Feb 06 18:24:55 PST 2019
+aab62c93-7966-4d27-b145-2741afa4eb88, SigNotUpdated, Wed Feb 06 18:25:23 PST 2019
+aab62c93-7966-4d27-b145-2741afa4eb88, Robot Startup, Wed Feb 06 18:25:23 PST 2019
+aab62c93-7966-4d27-b145-2741afa4eb88, Robot Init, Wed Feb 06 18:25:23 PST 2019
+aab62c93-7966-4d27-b145-2741afa4eb88, Generating trajectories..., Wed Feb 06 18:25:23 PST 2019
+aab62c93-7966-4d27-b145-2741afa4eb88, Finished trajectory generation, Wed Feb 06 18:25:23 PST 2019
+aab62c93-7966-4d27-b145-2741afa4eb88, Disabled Init, Wed Feb 06 18:25:23 PST 2019
+aab62c93-7966-4d27-b145-2741afa4eb88, SET HEADING: 0.0, Wed Feb 06 18:25:24 PST 2019
+aab62c93-7966-4d27-b145-2741afa4eb88, Gyro offset: -49.599998474121094, Wed Feb 06 18:25:24 PST 2019
+aab62c93-7966-4d27-b145-2741afa4eb88, Teleop Init, Wed Feb 06 18:25:24 PST 2019
+aab62c93-7966-4d27-b145-2741afa4eb88, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:25:29 PST 2019
+aab62c93-7966-4d27-b145-2741afa4eb88, Disabled Init, Wed Feb 06 18:25:32 PST 2019
+aab62c93-7966-4d27-b145-2741afa4eb88, Teleop Init, Wed Feb 06 18:25:35 PST 2019
+aab62c93-7966-4d27-b145-2741afa4eb88, Disabled Init, Wed Feb 06 18:25:36 PST 2019
+a70a2c91-6b70-4584-bc63-62f9e6b82c0d, Robot Startup, Wed Feb 06 18:26:01 PST 2019
+a70a2c91-6b70-4584-bc63-62f9e6b82c0d, Robot Init, Wed Feb 06 18:26:01 PST 2019
+a70a2c91-6b70-4584-bc63-62f9e6b82c0d, Generating trajectories..., Wed Feb 06 18:26:01 PST 2019
+a70a2c91-6b70-4584-bc63-62f9e6b82c0d, Finished trajectory generation, Wed Feb 06 18:26:02 PST 2019
+a70a2c91-6b70-4584-bc63-62f9e6b82c0d, Disabled Init, Wed Feb 06 18:26:02 PST 2019
+a70a2c91-6b70-4584-bc63-62f9e6b82c0d, SET HEADING: 0.0, Wed Feb 06 18:26:02 PST 2019
+a70a2c91-6b70-4584-bc63-62f9e6b82c0d, Gyro offset: -49.63000106811524, Wed Feb 06 18:26:02 PST 2019
+a70a2c91-6b70-4584-bc63-62f9e6b82c0d, Teleop Init, Wed Feb 06 18:26:08 PST 2019
+a70a2c91-6b70-4584-bc63-62f9e6b82c0d, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:26:11 PST 2019
+a70a2c91-6b70-4584-bc63-62f9e6b82c0d, Disabled Init, Wed Feb 06 18:26:13 PST 2019
+8980b33b-079d-41dc-b2c5-ed034b31eb84, Robot Startup, Wed Feb 06 18:26:55 PST 2019
+8980b33b-079d-41dc-b2c5-ed034b31eb84, Robot Init, Wed Feb 06 18:26:55 PST 2019
+8980b33b-079d-41dc-b2c5-ed034b31eb84, Generating trajectories..., Wed Feb 06 18:26:55 PST 2019
+8980b33b-079d-41dc-b2c5-ed034b31eb84, Finished trajectory generation, Wed Feb 06 18:26:55 PST 2019
+8980b33b-079d-41dc-b2c5-ed034b31eb84, Disabled Init, Wed Feb 06 18:26:56 PST 2019
+8980b33b-079d-41dc-b2c5-ed034b31eb84, SET HEADING: 0.0, Wed Feb 06 18:26:56 PST 2019
+8980b33b-079d-41dc-b2c5-ed034b31eb84, Gyro offset: -49.5099983215332, Wed Feb 06 18:26:56 PST 2019
+8980b33b-079d-41dc-b2c5-ed034b31eb84, Teleop Init, Wed Feb 06 18:26:56 PST 2019
+8980b33b-079d-41dc-b2c5-ed034b31eb84, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:27:01 PST 2019
+8980b33b-079d-41dc-b2c5-ed034b31eb84, Disabled Init, Wed Feb 06 18:27:03 PST 2019
+95b0c0cd-e426-46ed-88b6-13a96a66e2e6, SigNotUpdated, Wed Feb 06 18:27:33 PST 2019
+95b0c0cd-e426-46ed-88b6-13a96a66e2e6, Robot Startup, Wed Feb 06 18:27:33 PST 2019
+95b0c0cd-e426-46ed-88b6-13a96a66e2e6, Robot Init, Wed Feb 06 18:27:33 PST 2019
+95b0c0cd-e426-46ed-88b6-13a96a66e2e6, Generating trajectories..., Wed Feb 06 18:27:33 PST 2019
+95b0c0cd-e426-46ed-88b6-13a96a66e2e6, Finished trajectory generation, Wed Feb 06 18:27:34 PST 2019
+95b0c0cd-e426-46ed-88b6-13a96a66e2e6, Disabled Init, Wed Feb 06 18:27:34 PST 2019
+95b0c0cd-e426-46ed-88b6-13a96a66e2e6, SET HEADING: 0.0, Wed Feb 06 18:27:34 PST 2019
+95b0c0cd-e426-46ed-88b6-13a96a66e2e6, Gyro offset: -49.22999954223633, Wed Feb 06 18:27:34 PST 2019
+95b0c0cd-e426-46ed-88b6-13a96a66e2e6, Teleop Init, Wed Feb 06 18:27:34 PST 2019
+95b0c0cd-e426-46ed-88b6-13a96a66e2e6, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:27:36 PST 2019
+95b0c0cd-e426-46ed-88b6-13a96a66e2e6, Disabled Init, Wed Feb 06 18:27:39 PST 2019
+f1a81817-5e17-41e2-8ae2-e7dc8b66cbf0, Robot Startup, Wed Feb 06 18:28:07 PST 2019
+f1a81817-5e17-41e2-8ae2-e7dc8b66cbf0, Robot Init, Wed Feb 06 18:28:07 PST 2019
+f1a81817-5e17-41e2-8ae2-e7dc8b66cbf0, Generating trajectories..., Wed Feb 06 18:28:07 PST 2019
+f1a81817-5e17-41e2-8ae2-e7dc8b66cbf0, Finished trajectory generation, Wed Feb 06 18:28:08 PST 2019
+f1a81817-5e17-41e2-8ae2-e7dc8b66cbf0, Disabled Init, Wed Feb 06 18:28:08 PST 2019
+f1a81817-5e17-41e2-8ae2-e7dc8b66cbf0, SET HEADING: 0.0, Wed Feb 06 18:28:08 PST 2019
+f1a81817-5e17-41e2-8ae2-e7dc8b66cbf0, Gyro offset: -49.060001373291016, Wed Feb 06 18:28:08 PST 2019
+f1a81817-5e17-41e2-8ae2-e7dc8b66cbf0, Teleop Init, Wed Feb 06 18:28:08 PST 2019
+f1a81817-5e17-41e2-8ae2-e7dc8b66cbf0, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:28:10 PST 2019
+f1a81817-5e17-41e2-8ae2-e7dc8b66cbf0, Disabled Init, Wed Feb 06 18:28:20 PST 2019
+20c180b9-f779-4735-af75-27e7c1a488ee, SigNotUpdated, Wed Feb 06 18:28:49 PST 2019
+20c180b9-f779-4735-af75-27e7c1a488ee, Robot Startup, Wed Feb 06 18:28:49 PST 2019
+20c180b9-f779-4735-af75-27e7c1a488ee, Robot Init, Wed Feb 06 18:28:49 PST 2019
+20c180b9-f779-4735-af75-27e7c1a488ee, Generating trajectories..., Wed Feb 06 18:28:49 PST 2019
+20c180b9-f779-4735-af75-27e7c1a488ee, Finished trajectory generation, Wed Feb 06 18:28:49 PST 2019
+20c180b9-f779-4735-af75-27e7c1a488ee, Disabled Init, Wed Feb 06 18:28:49 PST 2019
+20c180b9-f779-4735-af75-27e7c1a488ee, SET HEADING: 0.0, Wed Feb 06 18:28:50 PST 2019
+20c180b9-f779-4735-af75-27e7c1a488ee, Gyro offset: -49.060001373291016, Wed Feb 06 18:28:50 PST 2019
+20c180b9-f779-4735-af75-27e7c1a488ee, Teleop Init, Wed Feb 06 18:28:52 PST 2019
+20c180b9-f779-4735-af75-27e7c1a488ee, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:28:55 PST 2019
+20c180b9-f779-4735-af75-27e7c1a488ee, Disabled Init, Wed Feb 06 18:28:57 PST 2019
+20e5696f-6edd-4678-9e71-32a7350a4f3f, Robot Startup, Wed Feb 06 18:29:46 PST 2019
+20e5696f-6edd-4678-9e71-32a7350a4f3f, Robot Init, Wed Feb 06 18:29:46 PST 2019
+20e5696f-6edd-4678-9e71-32a7350a4f3f, Generating trajectories..., Wed Feb 06 18:29:46 PST 2019
+20e5696f-6edd-4678-9e71-32a7350a4f3f, Finished trajectory generation, Wed Feb 06 18:29:47 PST 2019
+20e5696f-6edd-4678-9e71-32a7350a4f3f, Disabled Init, Wed Feb 06 18:29:47 PST 2019
+20e5696f-6edd-4678-9e71-32a7350a4f3f, SET HEADING: 0.0, Wed Feb 06 18:29:47 PST 2019
+20e5696f-6edd-4678-9e71-32a7350a4f3f, Gyro offset: -48.939998626708984, Wed Feb 06 18:29:47 PST 2019
+20e5696f-6edd-4678-9e71-32a7350a4f3f, Teleop Init, Wed Feb 06 18:30:26 PST 2019
+20e5696f-6edd-4678-9e71-32a7350a4f3f, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:30:27 PST 2019
+20e5696f-6edd-4678-9e71-32a7350a4f3f, Disabled Init, Wed Feb 06 18:30:31 PST 2019
+a210e092-c88d-42a5-bcfa-814ed76c246e, SigNotUpdated, Wed Feb 06 18:31:05 PST 2019
+a210e092-c88d-42a5-bcfa-814ed76c246e, Robot Startup, Wed Feb 06 18:31:05 PST 2019
+a210e092-c88d-42a5-bcfa-814ed76c246e, Robot Init, Wed Feb 06 18:31:05 PST 2019
+a210e092-c88d-42a5-bcfa-814ed76c246e, Generating trajectories..., Wed Feb 06 18:31:05 PST 2019
+a210e092-c88d-42a5-bcfa-814ed76c246e, Finished trajectory generation, Wed Feb 06 18:31:05 PST 2019
+a210e092-c88d-42a5-bcfa-814ed76c246e, Disabled Init, Wed Feb 06 18:31:05 PST 2019
+a210e092-c88d-42a5-bcfa-814ed76c246e, SET HEADING: 0.0, Wed Feb 06 18:31:05 PST 2019
+a210e092-c88d-42a5-bcfa-814ed76c246e, Gyro offset: -49.139999389648445, Wed Feb 06 18:31:05 PST 2019
+a210e092-c88d-42a5-bcfa-814ed76c246e, Teleop Init, Wed Feb 06 18:31:06 PST 2019
+a210e092-c88d-42a5-bcfa-814ed76c246e, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:31:06 PST 2019
+a210e092-c88d-42a5-bcfa-814ed76c246e, Disabled Init, Wed Feb 06 18:31:09 PST 2019
+a210e092-c88d-42a5-bcfa-814ed76c246e, Teleop Init, Wed Feb 06 18:31:11 PST 2019
+a210e092-c88d-42a5-bcfa-814ed76c246e, Disabled Init, Wed Feb 06 18:31:12 PST 2019
+68514dac-f4ed-4695-9e40-d4820d7ba5d6, Robot Startup, Wed Feb 06 18:31:24 PST 2019
+68514dac-f4ed-4695-9e40-d4820d7ba5d6, Robot Init, Wed Feb 06 18:31:24 PST 2019
+68514dac-f4ed-4695-9e40-d4820d7ba5d6, Generating trajectories..., Wed Feb 06 18:31:24 PST 2019
+68514dac-f4ed-4695-9e40-d4820d7ba5d6, Finished trajectory generation, Wed Feb 06 18:31:24 PST 2019
+68514dac-f4ed-4695-9e40-d4820d7ba5d6, Disabled Init, Wed Feb 06 18:31:24 PST 2019
+68514dac-f4ed-4695-9e40-d4820d7ba5d6, SET HEADING: 0.0, Wed Feb 06 18:31:24 PST 2019
+68514dac-f4ed-4695-9e40-d4820d7ba5d6, Gyro offset: -48.90999984741211, Wed Feb 06 18:31:24 PST 2019
+01110ae5-a14b-4946-8fee-d9081aff5ffa, Robot Startup, Wed Feb 06 18:32:31 PST 2019
+01110ae5-a14b-4946-8fee-d9081aff5ffa, Robot Init, Wed Feb 06 18:32:31 PST 2019
+01110ae5-a14b-4946-8fee-d9081aff5ffa, Generating trajectories..., Wed Feb 06 18:32:31 PST 2019
+01110ae5-a14b-4946-8fee-d9081aff5ffa, Finished trajectory generation, Wed Feb 06 18:32:31 PST 2019
+01110ae5-a14b-4946-8fee-d9081aff5ffa, Disabled Init, Wed Feb 06 18:32:31 PST 2019
+01110ae5-a14b-4946-8fee-d9081aff5ffa, SET HEADING: 0.0, Wed Feb 06 18:32:32 PST 2019
+01110ae5-a14b-4946-8fee-d9081aff5ffa, Gyro offset: -48.90999984741211, Wed Feb 06 18:32:32 PST 2019
+01110ae5-a14b-4946-8fee-d9081aff5ffa, Teleop Init, Wed Feb 06 18:32:32 PST 2019
+01110ae5-a14b-4946-8fee-d9081aff5ffa, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:32:35 PST 2019
+01110ae5-a14b-4946-8fee-d9081aff5ffa, Disabled Init, Wed Feb 06 18:32:38 PST 2019
+01110ae5-a14b-4946-8fee-d9081aff5ffa, Teleop Init, Wed Feb 06 18:32:58 PST 2019
+01110ae5-a14b-4946-8fee-d9081aff5ffa, Disabled Init, Wed Feb 06 18:33:01 PST 2019
+32df1616-f29c-4e92-b511-0570f25be115, SigNotUpdated, Wed Feb 06 18:33:19 PST 2019
+32df1616-f29c-4e92-b511-0570f25be115, Robot Startup, Wed Feb 06 18:33:19 PST 2019
+32df1616-f29c-4e92-b511-0570f25be115, Robot Init, Wed Feb 06 18:33:19 PST 2019
+32df1616-f29c-4e92-b511-0570f25be115, Generating trajectories..., Wed Feb 06 18:33:19 PST 2019
+32df1616-f29c-4e92-b511-0570f25be115, Finished trajectory generation, Wed Feb 06 18:33:19 PST 2019
+32df1616-f29c-4e92-b511-0570f25be115, Disabled Init, Wed Feb 06 18:33:19 PST 2019
+32df1616-f29c-4e92-b511-0570f25be115, SET HEADING: 0.0, Wed Feb 06 18:33:20 PST 2019
+32df1616-f29c-4e92-b511-0570f25be115, Gyro offset: -48.529998779296875, Wed Feb 06 18:33:20 PST 2019
+32df1616-f29c-4e92-b511-0570f25be115, Teleop Init, Wed Feb 06 18:33:20 PST 2019
+32df1616-f29c-4e92-b511-0570f25be115, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Wed Feb 06 18:33:24 PST 2019
+32df1616-f29c-4e92-b511-0570f25be115, SigNotUpdated, Wed Feb 06 18:33:24 PST 2019
+32df1616-f29c-4e92-b511-0570f25be115, Disabled Init, Wed Feb 06 18:33:34 PST 2019
+fcd9f5d3-d538-4ff9-aa99-e5fff27eca81, Robot Startup, Wed Feb 06 18:35:26 PST 2019
+fcd9f5d3-d538-4ff9-aa99-e5fff27eca81, Robot Init, Wed Feb 06 18:35:26 PST 2019
+fcd9f5d3-d538-4ff9-aa99-e5fff27eca81, Generating trajectories..., Wed Feb 06 18:35:26 PST 2019
+fcd9f5d3-d538-4ff9-aa99-e5fff27eca81, Finished trajectory generation, Wed Feb 06 18:35:26 PST 2019
+fcd9f5d3-d538-4ff9-aa99-e5fff27eca81, Disabled Init, Wed Feb 06 18:35:26 PST 2019
+fcd9f5d3-d538-4ff9-aa99-e5fff27eca81, SET HEADING: 0.0, Wed Feb 06 18:35:26 PST 2019
+fcd9f5d3-d538-4ff9-aa99-e5fff27eca81, Gyro offset: -48.560001373291016, Wed Feb 06 18:35:26 PST 2019
+739908b6-4cf8-4c3b-80bd-0dd021dd184b, Robot Startup, Wed Feb 06 18:35:53 PST 2019
+739908b6-4cf8-4c3b-80bd-0dd021dd184b, Robot Init, Wed Feb 06 18:35:54 PST 2019
+739908b6-4cf8-4c3b-80bd-0dd021dd184b, Generating trajectories..., Wed Feb 06 18:35:54 PST 2019
+739908b6-4cf8-4c3b-80bd-0dd021dd184b, Finished trajectory generation, Wed Feb 06 18:35:54 PST 2019
+739908b6-4cf8-4c3b-80bd-0dd021dd184b, Disabled Init, Wed Feb 06 18:35:54 PST 2019
+739908b6-4cf8-4c3b-80bd-0dd021dd184b, SET HEADING: 0.0, Wed Feb 06 18:35:54 PST 2019
+739908b6-4cf8-4c3b-80bd-0dd021dd184b, Gyro offset: -48.68000030517578, Wed Feb 06 18:35:54 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, SigNotUpdated, Wed Feb 06 18:36:49 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, Robot Startup, Wed Feb 06 18:36:49 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, Robot Init, Wed Feb 06 18:36:49 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, Generating trajectories..., Wed Feb 06 18:36:49 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, Finished trajectory generation, Wed Feb 06 18:36:50 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, Disabled Init, Wed Feb 06 18:36:50 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, SET HEADING: 0.0, Wed Feb 06 18:36:50 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, Gyro offset: -48.54999923706055, Wed Feb 06 18:36:50 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, Teleop Init, Wed Feb 06 18:36:50 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, [Joystick] 1	[Button]6	 Pressed ( Cargo Arm Manual Mode ), Wed Feb 06 18:36:52 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Wed Feb 06 18:36:55 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Wed Feb 06 18:36:59 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Wed Feb 06 18:37:01 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 18:37:05 PST 2019
+c1465f03-ebb1-4d7e-8872-277ab4af71bd, Disabled Init, Wed Feb 06 18:37:06 PST 2019
+79ec1cad-f569-4744-9289-1251707952a2, SigNotUpdated, Wed Feb 06 18:38:08 PST 2019
+79ec1cad-f569-4744-9289-1251707952a2, Robot Startup, Wed Feb 06 18:38:08 PST 2019
+79ec1cad-f569-4744-9289-1251707952a2, Robot Init, Wed Feb 06 18:38:08 PST 2019
+79ec1cad-f569-4744-9289-1251707952a2, Generating trajectories..., Wed Feb 06 18:38:08 PST 2019
+79ec1cad-f569-4744-9289-1251707952a2, Finished trajectory generation, Wed Feb 06 18:38:08 PST 2019
+79ec1cad-f569-4744-9289-1251707952a2, Disabled Init, Wed Feb 06 18:38:08 PST 2019
+79ec1cad-f569-4744-9289-1251707952a2, SET HEADING: 0.0, Wed Feb 06 18:38:08 PST 2019
+79ec1cad-f569-4744-9289-1251707952a2, Gyro offset: -48.49000167846679, Wed Feb 06 18:38:08 PST 2019
+cc38f856-28e6-4fb0-81fb-45536670ca67, Robot Startup, Wed Feb 06 18:39:16 PST 2019
+cc38f856-28e6-4fb0-81fb-45536670ca67, Robot Init, Wed Feb 06 18:39:16 PST 2019
+cc38f856-28e6-4fb0-81fb-45536670ca67, Generating trajectories..., Wed Feb 06 18:39:17 PST 2019
+cc38f856-28e6-4fb0-81fb-45536670ca67, Finished trajectory generation, Wed Feb 06 18:39:17 PST 2019
+cc38f856-28e6-4fb0-81fb-45536670ca67, Disabled Init, Wed Feb 06 18:39:17 PST 2019
+cc38f856-28e6-4fb0-81fb-45536670ca67, SET HEADING: 0.0, Wed Feb 06 18:39:17 PST 2019
+cc38f856-28e6-4fb0-81fb-45536670ca67, Gyro offset: -48.529998779296875, Wed Feb 06 18:39:17 PST 2019
+cc38f856-28e6-4fb0-81fb-45536670ca67, Teleop Init, Wed Feb 06 18:39:24 PST 2019
+cc38f856-28e6-4fb0-81fb-45536670ca67, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:39:26 PST 2019
+cc38f856-28e6-4fb0-81fb-45536670ca67, Disabled Init, Wed Feb 06 18:39:32 PST 2019
+046f2fca-eddb-401e-9afc-473f58a610ce, Robot Startup, Wed Feb 06 18:39:58 PST 2019
+046f2fca-eddb-401e-9afc-473f58a610ce, Robot Init, Wed Feb 06 18:39:58 PST 2019
+046f2fca-eddb-401e-9afc-473f58a610ce, Generating trajectories..., Wed Feb 06 18:39:58 PST 2019
+046f2fca-eddb-401e-9afc-473f58a610ce, Finished trajectory generation, Wed Feb 06 18:39:59 PST 2019
+046f2fca-eddb-401e-9afc-473f58a610ce, Disabled Init, Wed Feb 06 18:39:59 PST 2019
+046f2fca-eddb-401e-9afc-473f58a610ce, SET HEADING: 0.0, Wed Feb 06 18:39:59 PST 2019
+046f2fca-eddb-401e-9afc-473f58a610ce, Gyro offset: -47.950000762939446, Wed Feb 06 18:39:59 PST 2019
+046f2fca-eddb-401e-9afc-473f58a610ce, Teleop Init, Wed Feb 06 18:40:01 PST 2019
+046f2fca-eddb-401e-9afc-473f58a610ce, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:40:03 PST 2019
+046f2fca-eddb-401e-9afc-473f58a610ce, Disabled Init, Wed Feb 06 18:40:06 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, SigNotUpdated, Wed Feb 06 18:40:27 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, SigNotUpdated, Wed Feb 06 18:40:27 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, Robot Startup, Wed Feb 06 18:40:28 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, Robot Init, Wed Feb 06 18:40:28 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, Generating trajectories..., Wed Feb 06 18:40:28 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, Finished trajectory generation, Wed Feb 06 18:40:28 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, Disabled Init, Wed Feb 06 18:40:28 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, SET HEADING: 0.0, Wed Feb 06 18:40:28 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, Gyro offset: -47.8400001525879, Wed Feb 06 18:40:28 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, Teleop Init, Wed Feb 06 18:40:30 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:40:33 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, Disabled Init, Wed Feb 06 18:40:38 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, Teleop Init, Wed Feb 06 18:40:44 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, Disabled Init, Wed Feb 06 18:40:45 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, Teleop Init, Wed Feb 06 18:40:53 PST 2019
+977d4d3b-632e-416e-a70a-ed704863a1c1, Disabled Init, Wed Feb 06 18:40:54 PST 2019
+52a8a4fa-1b14-42b4-8dea-357f4d816132, Robot Startup, Wed Feb 06 18:42:34 PST 2019
+52a8a4fa-1b14-42b4-8dea-357f4d816132, Robot Init, Wed Feb 06 18:42:34 PST 2019
+52a8a4fa-1b14-42b4-8dea-357f4d816132, Generating trajectories..., Wed Feb 06 18:42:34 PST 2019
+52a8a4fa-1b14-42b4-8dea-357f4d816132, Finished trajectory generation, Wed Feb 06 18:42:34 PST 2019
+52a8a4fa-1b14-42b4-8dea-357f4d816132, Disabled Init, Wed Feb 06 18:42:34 PST 2019
+52a8a4fa-1b14-42b4-8dea-357f4d816132, SET HEADING: 0.0, Wed Feb 06 18:42:35 PST 2019
+52a8a4fa-1b14-42b4-8dea-357f4d816132, Gyro offset: -47.319999694824226, Wed Feb 06 18:42:35 PST 2019
+cdc8890d-c4b3-4c1e-a78f-e2658cf0b826, SigNotUpdated, Wed Feb 06 18:43:06 PST 2019
+cdc8890d-c4b3-4c1e-a78f-e2658cf0b826, Robot Startup, Wed Feb 06 18:43:06 PST 2019
+cdc8890d-c4b3-4c1e-a78f-e2658cf0b826, Robot Init, Wed Feb 06 18:43:06 PST 2019
+cdc8890d-c4b3-4c1e-a78f-e2658cf0b826, Generating trajectories..., Wed Feb 06 18:43:06 PST 2019
+cdc8890d-c4b3-4c1e-a78f-e2658cf0b826, Finished trajectory generation, Wed Feb 06 18:43:06 PST 2019
+cdc8890d-c4b3-4c1e-a78f-e2658cf0b826, Disabled Init, Wed Feb 06 18:43:06 PST 2019
+cdc8890d-c4b3-4c1e-a78f-e2658cf0b826, SET HEADING: 0.0, Wed Feb 06 18:43:07 PST 2019
+cdc8890d-c4b3-4c1e-a78f-e2658cf0b826, Gyro offset: -47.400001525878906, Wed Feb 06 18:43:07 PST 2019
+cdc8890d-c4b3-4c1e-a78f-e2658cf0b826, Teleop Init, Wed Feb 06 18:43:07 PST 2019
+cdc8890d-c4b3-4c1e-a78f-e2658cf0b826, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:43:08 PST 2019
+cdc8890d-c4b3-4c1e-a78f-e2658cf0b826, Disabled Init, Wed Feb 06 18:43:13 PST 2019
+39a43672-af6b-4d2e-bfd3-deefd9dd2f71, SigNotUpdated, Wed Feb 06 18:43:34 PST 2019
+39a43672-af6b-4d2e-bfd3-deefd9dd2f71, Robot Startup, Wed Feb 06 18:43:35 PST 2019
+39a43672-af6b-4d2e-bfd3-deefd9dd2f71, Robot Init, Wed Feb 06 18:43:35 PST 2019
+39a43672-af6b-4d2e-bfd3-deefd9dd2f71, Generating trajectories..., Wed Feb 06 18:43:35 PST 2019
+39a43672-af6b-4d2e-bfd3-deefd9dd2f71, Finished trajectory generation, Wed Feb 06 18:43:35 PST 2019
+39a43672-af6b-4d2e-bfd3-deefd9dd2f71, Disabled Init, Wed Feb 06 18:43:35 PST 2019
+39a43672-af6b-4d2e-bfd3-deefd9dd2f71, SET HEADING: 0.0, Wed Feb 06 18:43:35 PST 2019
+39a43672-af6b-4d2e-bfd3-deefd9dd2f71, Gyro offset: -47.22000122070313, Wed Feb 06 18:43:35 PST 2019
+39a43672-af6b-4d2e-bfd3-deefd9dd2f71, Teleop Init, Wed Feb 06 18:43:36 PST 2019
+39a43672-af6b-4d2e-bfd3-deefd9dd2f71, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:43:38 PST 2019
+39a43672-af6b-4d2e-bfd3-deefd9dd2f71, Disabled Init, Wed Feb 06 18:43:41 PST 2019
+a8d89311-a897-479d-92b2-57f5ba760774, SigNotUpdated, Wed Feb 06 18:47:09 PST 2019
+a8d89311-a897-479d-92b2-57f5ba760774, Robot Startup, Wed Feb 06 18:47:09 PST 2019
+a8d89311-a897-479d-92b2-57f5ba760774, Robot Init, Wed Feb 06 18:47:09 PST 2019
+a8d89311-a897-479d-92b2-57f5ba760774, Generating trajectories..., Wed Feb 06 18:47:09 PST 2019
+a8d89311-a897-479d-92b2-57f5ba760774, Finished trajectory generation, Wed Feb 06 18:47:10 PST 2019
+a8d89311-a897-479d-92b2-57f5ba760774, Disabled Init, Wed Feb 06 18:47:10 PST 2019
+a8d89311-a897-479d-92b2-57f5ba760774, SET HEADING: 0.0, Wed Feb 06 18:47:10 PST 2019
+a8d89311-a897-479d-92b2-57f5ba760774, Gyro offset: -46.470001220703125, Wed Feb 06 18:47:10 PST 2019
+a8d89311-a897-479d-92b2-57f5ba760774, Teleop Init, Wed Feb 06 18:47:11 PST 2019
+a8d89311-a897-479d-92b2-57f5ba760774, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:47:13 PST 2019
+a8d89311-a897-479d-92b2-57f5ba760774, Disabled Init, Wed Feb 06 18:47:18 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, SigNotUpdated, Wed Feb 06 18:47:41 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Robot Startup, Wed Feb 06 18:47:42 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Robot Init, Wed Feb 06 18:47:42 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Generating trajectories..., Wed Feb 06 18:47:42 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Finished trajectory generation, Wed Feb 06 18:47:42 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Disabled Init, Wed Feb 06 18:47:42 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, SET HEADING: 0.0, Wed Feb 06 18:47:43 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Gyro offset: -46.290000915527344, Wed Feb 06 18:47:43 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Teleop Init, Wed Feb 06 18:47:46 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:47:47 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Unsafe Current on Hatch32.5 Amps, Wed Feb 06 18:47:47 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Unsafe Current on Hatch30.875 Amps, Wed Feb 06 18:47:48 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:47:55 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Unsafe Current on Hatch30.375 Amps, Wed Feb 06 18:47:55 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Unsafe Current on Hatch32.5 Amps, Wed Feb 06 18:47:56 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:47:57 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Unsafe Current on Hatch29.0 Amps, Wed Feb 06 18:47:57 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Unsafe Current on Hatch35.0 Amps, Wed Feb 06 18:47:57 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:47:58 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Unsafe Current on Hatch28.125 Amps, Wed Feb 06 18:47:58 PST 2019
+a68ec997-637c-4ca4-8685-4ad2559867d9, Disabled Init, Wed Feb 06 18:48:02 PST 2019
+e1090cc7-bcd8-43c9-979f-c6595c3bfc38, SigNotUpdated, Wed Feb 06 18:48:11 PST 2019
+e1090cc7-bcd8-43c9-979f-c6595c3bfc38, Robot Startup, Wed Feb 06 18:48:12 PST 2019
+e1090cc7-bcd8-43c9-979f-c6595c3bfc38, Robot Init, Wed Feb 06 18:48:12 PST 2019
+e1090cc7-bcd8-43c9-979f-c6595c3bfc38, Generating trajectories..., Wed Feb 06 18:48:12 PST 2019
+e1090cc7-bcd8-43c9-979f-c6595c3bfc38, Finished trajectory generation, Wed Feb 06 18:48:12 PST 2019
+e1090cc7-bcd8-43c9-979f-c6595c3bfc38, Disabled Init, Wed Feb 06 18:48:12 PST 2019
+e1090cc7-bcd8-43c9-979f-c6595c3bfc38, SET HEADING: 0.0, Wed Feb 06 18:48:12 PST 2019
+e1090cc7-bcd8-43c9-979f-c6595c3bfc38, Gyro offset: -46.3499984741211, Wed Feb 06 18:48:12 PST 2019
+e1090cc7-bcd8-43c9-979f-c6595c3bfc38, Teleop Init, Wed Feb 06 18:48:54 PST 2019
+e1090cc7-bcd8-43c9-979f-c6595c3bfc38, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:48:57 PST 2019
+e1090cc7-bcd8-43c9-979f-c6595c3bfc38, Unsafe Current on Hatch28.25 Amps, Wed Feb 06 18:48:57 PST 2019
+e1090cc7-bcd8-43c9-979f-c6595c3bfc38, Unsafe Current on Hatch33.0 Amps, Wed Feb 06 18:48:57 PST 2019
+e1090cc7-bcd8-43c9-979f-c6595c3bfc38, Disabled Init, Wed Feb 06 18:48:59 PST 2019

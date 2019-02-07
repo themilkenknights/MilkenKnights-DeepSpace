@@ -45,10 +45,10 @@ public class Superstructure extends Subsystem {
 	@Override
 	public void outputTelemetry() {
 		SmartDashboard.putString("Robot State", Robot.mMatchState.toString());
-		SmartDashboard.putNumber("Compressor Current", mCompressor.getCompressorCurrent());
-		if (mPDP.getVoltage() < 11.5) {
+		//SmartDashboard.putNumber("Compressor Current", mCompressor.getCompressorCurrent());
+		/*if (mPDP.getVoltage() < 11.5) {
 			DriverStation.reportWarning("Low Battery Voltage", false);
-		}
+		}*/
 	}
 
 	@Override

@@ -118,12 +118,13 @@ public class Drive extends Subsystem {
 	Update Shuffleboard and Log to CSV
 	 */
 	public synchronized void outputTelemetry() {
-		leftDrive.updateSmartDash(false);
-		rightDrive.updateSmartDash(false);
+		//leftDrive.updateSmartDash(false);
+		//rightDrive.updateSmartDash(false);
 		SmartDashboard.putString("Drive State", mDriveControlState.toString());
 		SmartDashboard.putBoolean("Drivetrain Status", driveStatus());
-		SmartDashboard.putNumber("NavX Fused Heading", navX.getFusedHeading());
+		//SmartDashboard.putNumber("NavX Fused Heading", navX.getFusedHeading());
 		if (mCSVWriter != null) {
+			System.out.println("ERRROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			mCSVWriter.add(mPeriodicIO);
 			mCSVWriter.write();
 		}

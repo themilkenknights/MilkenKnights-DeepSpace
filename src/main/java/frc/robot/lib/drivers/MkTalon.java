@@ -40,7 +40,7 @@ public class MkTalon {
 	public final TalonSRX masterTalon, slaveTalon;
 	private final VictorSPX slaveVictor;
 	private final int kLong = GENERAL.kLongCANTimeoutMs;
-	private final int kShort = GENERAL.kMediumTimeoutMs;
+	private final int kShort = 0;
 	private final int kSlot = GENERAL.kPIDLoopIdx;
 	private TalonLoc mSide;
 	private ControlMode lastControlMode = null;
@@ -112,6 +112,9 @@ public class MkTalon {
 				CTRE(masterTalon.config_kP(kSlot, CARGO_ARM.ARM_P, kLong));
 				CTRE(masterTalon.config_kI(kSlot, CARGO_ARM.ARM_I, kLong));
 				CTRE(masterTalon.config_kD(kSlot, CARGO_ARM.ARM_D, kLong));
+				CTRE(masterTalon.config_IntegralZone(kSlot, 114, kLong));
+				CTRE(masterTalon.configAllowableClosedloopError(kSlot, 6, kLong));
+				CTRE(masterTalon.configMaxIntegralAccumulator(kSlot, 5000, kLong));
 				CTRE(masterTalon.configMotionCruiseVelocity((int) CARGO_ARM.MOTION_MAGIC_CRUISE_VEL, kLong));
 				CTRE(masterTalon.configMotionAcceleration((int) CARGO_ARM.MOTION_MAGIC_ACCEL, kLong));
 				CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.nativeUnitsToDegrees( CARGO_ARM.ARM_FORWARD_LIMIT), kLong));
@@ -130,10 +133,11 @@ public class MkTalon {
 				CTRE(masterTalon.config_kD(kSlot, HATCH_ARM.ARM_D, kLong));
 				CTRE(masterTalon.configMotionCruiseVelocity((int) HATCH_ARM.kMotionMagicCruiseVel, kLong));
 				CTRE(masterTalon.configMotionAcceleration((int) HATCH_ARM.kMotionMagicAccel, kLong));
-				CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.nativeUnitsToDegrees( HATCH_ARM.ARM_FORWARD_LIMIT), kLong));
-				CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.nativeUnitsToDegrees( HATCH_ARM.ARM_REVERSE_LIMIT), kLong));
-				CTRE(masterTalon.configForwardSoftLimitEnable(false, kLong));
-				CTRE(masterTalon.configForwardSoftLimitEnable(false, kLong));
+				CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.angleToNativeUnits(HATCH_ARM.ARM_FORWARD_LIMIT), kLong));
+				CTRE(masterTalon.configReverseSoftLimitThreshold((int) MkMath.angleToNativeUnits(HATCH_ARM.ARM_REVERSE_LIMIT), kLong));
+				//CTRE(masterTalon.configForwardSoftLimitEnable(true, kLong));
+				//CTRE(masterTalon.configReverseSoftLimitEnable(true, kLong));
+				//masterTalon.overrideSoftLimitsEnable(true);
 				//CTRE(masterTalon.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kHatchLimitSwitchTalonID, kLong));
 				break;
 			case Cargo_Intake:
@@ -159,7 +163,7 @@ public class MkTalon {
 				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 20, kLong));
 				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 5, kLong));
 				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 1000, kLong));
-				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 1000, kLong));
+				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 100, kLong));
 				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 1000, kLong));
 				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 1000, kLong));
 				CTRE(masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, kSlot, kLong));
@@ -564,4 +568,5 @@ public class MkTalon {
 	public enum TalonLoc {
 		Left_Drive, Right_Drive, Hatch_Arm, Cargo_Arm, Cargo_Intake
 	}
+
 }

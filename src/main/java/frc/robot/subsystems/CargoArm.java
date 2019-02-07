@@ -20,7 +20,7 @@ public class CargoArm extends Subsystem {
 	private static CargoArmState mCargoArmState = CargoArmState.ENABLE;
 	private final MkTalon mArmTalon;
 	private final MkTalon mIntakeTalon;
-	private boolean mArmSafety, mDisCon = false;
+	private boolean mDisCon, mArmSafety = false;
 	private double mStartDis, mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable = 0.0;
 
 	private CargoArm() {
@@ -76,13 +76,13 @@ public class CargoArm extends Subsystem {
 			CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
 			CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
 			setEnable();
-			setArmControlState(CargoArmControlState.OPEN_LOOP);
+			setArmControlState(CargoArmControlState.MOTION_MAGIC);
 			mArmSafety = false;
 		} else {
-			mArmSafety = true;
 			CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(false, GENERAL.kMediumTimeoutMs));
 			CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(false, GENERAL.kMediumTimeoutMs));
 			setArmControlState(CargoArmControlState.OPEN_LOOP);
+			mArmSafety = true;
 		}
 	}
 
@@ -112,6 +112,7 @@ public class CargoArm extends Subsystem {
 		SmartDashboard.putString("Cargo Arm Desired Position", mCargoArmState.toString());
 		SmartDashboard.putString("Cargo Arm Control Mode", mCargoArmControlState.toString());
 		SmartDashboard.putBoolean("Cargo Arm Status", mArmTalon.isEncoderConnected());
+		SmartDashboard.putNumber("Cargo Arm Error", mArmTalon.getError());
 	}
 
 	@Override
@@ -198,10 +199,10 @@ public class CargoArm extends Subsystem {
 
 	public enum CargoArmState {
 		ENABLE(0.0), //State directly after robot is enabled (not mapped to a specific angle)
-		INTAKE(150.0),
-		STOW(80.0),
-		PLACE(100.0), //Outtakes into the switch on the backside of the robot
-		PLACE_REVERSE(30.0);
+		INTAKE(177.0),
+		STOW(47.0),
+		PLACE(131.0), //Outtakes into the switch on the backside of the robot
+		PLACE_REVERSE(10.0);
 
 		public final double state;
 

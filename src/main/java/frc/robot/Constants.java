@@ -17,9 +17,9 @@ public final class Constants {
 	public static class GENERAL {
 
 		public static final int kPIDLoopIdx = 0;
-		public static final int kMediumTimeoutMs = 10;
+		public static final int kMediumTimeoutMs = 5;
 		public static final int kLongCANTimeoutMs = 100; //use for constructors
-		public static final double kLoopDt = 0.02;
+		public static final double kLoopDt = 0.01;
 		public static final double PI = 3.14159265359;
 		public static final double kTicksPerRev = 4096.0;
 		public static final double kMaxNominalOutput = 1.0;
@@ -139,27 +139,27 @@ public final class Constants {
 		public static final boolean RIGHT_INTAKE_DIRECTION = false;
 
 		public static final double MAX_RAW_VEL = 243.029333333;
-		public static final double ARM_P = 22 * ((0.1 * 1023.0) / (1600)); //7.5 deg or 1390 units
-		public static final double ARM_I = 0;
-		public static final double ARM_D = ARM_P * 52;
+		public static final double ARM_P = 39.0 * ((0.1 * 1023.0) / (1600)); //7.5 deg or 1390 units
+		public static final double ARM_I = ARM_P / 300;
+		public static final double ARM_D = ARM_P * 27;
 		public static final double ARM_F = (1023.0 / MAX_RAW_VEL);
 
-		public static final double ARM_FORWARD_LIMIT = 178.0 ;
-		public static final double ARM_REVERSE_LIMIT = 2.0;
+		public static final double ARM_FORWARD_LIMIT = 190.0 ;
+		public static final double ARM_REVERSE_LIMIT = 0.0;
 		public static final double MOTION_MAGIC_CRUISE_VEL = MAX_RAW_VEL;
 		public static final double MOTION_MAGIC_ACCEL = MAX_RAW_VEL * 10;
 		public static final double MAX_SAFE_CURRENT = 80;
 
-		public static final double INTAKE_IN_ROLLER_SPEED = 0.95;
-		public static final double INTAKE_OUT_ROLLER_SPEED = -0.40;
+		public static final double INTAKE_IN_ROLLER_SPEED = -0.40;
+		public static final double INTAKE_OUT_ROLLER_SPEED = 1.0;
 
-		public static final double kArmOffset = -127.3;
-		public static final double kFeedConstant = 0.15;
+		public static final double kArmOffset = -48.4;
+		public static final double kFeedConstant = 0.20;
 
-		public static final int kBookEnd_0 = kIsPracticeBot ? 85 : -2078;
-		public static final int kBookEnd_1 = kIsPracticeBot ? -2078 : 3790;
-		public static final boolean kCrossOverZero = kIsPracticeBot ? true : true;
-		public static final int kOffset = kIsPracticeBot ? 0 : 0;
+		public static final int kBookEnd_0 = kIsPracticeBot ? 4192 : -2078;
+		public static final int kBookEnd_1 = kIsPracticeBot ? 1993 : 3790;
+		public static final boolean kCrossOverZero = kIsPracticeBot ? false : true;
+		public static final int kOffset = kIsPracticeBot ? -4192 : 0;
 	}
 
 
@@ -173,24 +173,23 @@ public final class Constants {
 		public static final boolean ARM_MASTER_DIRECTION = false;
 
 		public static final double MAX_RAW_VEL = 3085.0;
-		public static final double ARM_P = ((0.1 * 1023.0) / (1600));
-		public static final double ARM_I = 0;
-		public static final double ARM_D = ARM_P * 0.0;
+		public static final double ARM_P = ((5.0 * 1023.0) / (500)); //1.25
+		public static final double ARM_I = ARM_P * 0.0;
+		public static final double ARM_D = ARM_P * 50.0;
 		public static final double ARM_F = (1023.0 / MAX_RAW_VEL);
 
-		public static final double ARM_FORWARD_LIMIT = MkMath.nativeUnitsToDegrees(178);
+		public static final double ARM_FORWARD_LIMIT = 175.0;
 		public static final double ARM_REVERSE_LIMIT = 0.0;
 
-		public static final double kMotionMagicCruiseVel = MAX_RAW_VEL;
-		public static final double kMotionMagicAccel = MAX_RAW_VEL * 10;
+		public static final double kMotionMagicCruiseVel = MAX_RAW_VEL * 0.9;
+		public static final double kMotionMagicAccel = MAX_RAW_VEL * 2;
 
-		public static final double kMaxSafeCurrent = 20;
+		public static final double kMaxSafeCurrent = 150;
 
-		public static final int kBookEnd_0 = kIsPracticeBot ? 3073 : 827;
-		public static final int kBookEnd_1 = kIsPracticeBot ? 4157 : 3790;
-		public static final boolean kCrossOverZero = kIsPracticeBot ? false : true;
-		public static final int kOffset = kIsPracticeBot ? (int) (((-186.7675)/(360.0)) * 4096.0) : 0;
-
+		public static final int kBookEnd_0 = kIsPracticeBot ? -1550 : 827;
+		public static final int kBookEnd_1 = kIsPracticeBot ? 497 : 3790;
+		public static final boolean kCrossOverZero = kIsPracticeBot ? true : true;
+		public static final int kOffset = kIsPracticeBot ? (1550) : 0;
 	}
 
 	public static class LOG {

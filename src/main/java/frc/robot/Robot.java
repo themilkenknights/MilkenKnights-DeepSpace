@@ -17,6 +17,7 @@ import frc.robot.paths.TrajectoryGenerator;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
+import frc.robot.subsystems.HatchArm.HatchIntakeState;
 import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Vision;
 import java.util.Arrays;
@@ -25,11 +26,10 @@ public class Robot extends TimedRobot {
 
 	public static MatchState mMatchState = MatchState.DISABLED;
 	private final SubsystemManager mSubsystemManager = new SubsystemManager(
-			Arrays.asList(Drive.getInstance(), HatchArm.getInstance(), CargoArm.getInstance(),
-					Superstructure.getInstance(), Vision.getInstance()));
+			Arrays.asList(Drive.getInstance(), HatchArm.getInstance(), CargoArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
 
 	protected Robot() {
-		super(Constants.GENERAL.kLoopDt);
+		//super(Constants.GENERAL.kLoopDt);
 		Logger.logRobotConstruction();
 	}
 
