@@ -154,7 +154,7 @@ public class HatchArm extends Subsystem {
 	public void onLoop(double timestamp) {
 		synchronized (HatchArm.this) {
 			boolean hatchLimit = isHatchLimitTriggered();
-			armSafetyCheck();
+			//armSafetyCheck();
 			switch (mHatchMechanismState) {
 				case STOWED:
 					break;

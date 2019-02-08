@@ -52,6 +52,7 @@ public class Robot extends TimedRobot {
 			mMatchState = MatchState.DISABLED;
 			AutoChooser.disableAuto();
 			mSubsystemManager.stop();
+			Vision.getInstance().enableLED();
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;

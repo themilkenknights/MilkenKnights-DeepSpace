@@ -199,13 +199,11 @@ public final class Constants {
 
 
 		static {
-			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(38440.0), new InterpolatingDouble(12.75));
-			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1392.0), new InterpolatingDouble(23.0));
-			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(7208.0), new InterpolatingDouble(33.0));
-			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(3610.0), new InterpolatingDouble(46.75));
-			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1742.0), new InterpolatingDouble(66.0));
-			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(782.0), new InterpolatingDouble(96.0));
-
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(3783.0), new InterpolatingDouble(46.75));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(2517.0), new InterpolatingDouble(57.4));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1960.0), new InterpolatingDouble(65.5));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1782.0), new InterpolatingDouble(68.8));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1368.0), new InterpolatingDouble(79.4));
 		}
 	}
 

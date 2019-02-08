@@ -13,6 +13,8 @@ import io.github.pseudoresonance.pixy2api.Pixy2CCC;
 import io.github.pseudoresonance.pixy2api.Pixy2CCC.Block;
 import java.util.ArrayList;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 public class Vision extends Subsystem {
 
 	private static final int blockSignature = 1;
@@ -25,7 +27,6 @@ public class Vision extends Subsystem {
 	private Vision() {
 		limeLight = new LimeLight();
 		limeLight.setLEDMode(LedMode.kforceOn);
-		limeLight.setCamMode(CamMode.kdriver);
 		if (usePixy) {
 			pixy = Pixy2.createInstance(LinkType.SPI);
 			pixy.init();
@@ -38,20 +39,29 @@ public class Vision extends Subsystem {
 
 	@Override
 	public void outputTelemetry() {
+		SmartDashboard.putNumber("LL Area", mThrottleAverage.getAverage().getArea());
+		SmartDashboard.putNumber("LL X", mThrottleAverage.getAverage().getXOffset());
+		SmartDashboard.putNumber("LL Dist", mThrottleAverage.getAverage().getDistance());
 		if (usePixy) {
 			pixyUpdate();
 			System.out.println("Test");
 		}
 	}
 
-	@Override
-	public void zero(double timestamp) {
-		limeLight.setLEDMode(LimeLightControlMode.LedMode.kforceOn);
+	public void teleopInit(double timestamp){
+		limeLight.setLEDMode(LedMode.kforceOn);
+	}
+	public void autonomousInit(double timestamp){
+		limeLight.setLEDMode(LedMode.kforceOn);
+	}
+
+	public void enableLED(){
+		limeLight.setLEDMode(LedMode.kforceOn);
 	}
 
 	@Override
 	public void onLoop(double timestamp) {
-		//mThrottleAverage.addNumber(limeLight.returnTarget());
+		mThrottleAverage.addNumber(limeLight.returnTarget());
 		//System.out.println(mThrottleAverage.getAverage().getDistance());
 	}
 
