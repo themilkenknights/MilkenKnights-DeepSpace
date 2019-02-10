@@ -197,7 +197,7 @@ public class Drive extends Subsystem {
 		mPeriodicIO.brake_mode = NeutralMode.Brake;
 	}
 
-	public DriveSignal updateMotionMagicDeltaSetpoint(DriveSignal signal, DriveSignal feedforward) {
+	public synchronized DriveSignal updateMotionMagicDeltaSetpoint(DriveSignal signal, DriveSignal feedforward) {
 		DriveSignal newSig = new DriveSignal(signal.getLeft() + mPeriodicIO.leftPos, signal.getRight() + mPeriodicIO.rightPos, signal.getBrakeMode());
 		updateMotionMagicPositionSetpoint(newSig, feedforward);
 		return newSig;

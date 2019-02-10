@@ -5,6 +5,7 @@ import frc.robot.auto.AutoModeEndedException;
 import frc.robot.auto.actions.DriveTrajectory;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.paths.TrajectoryGenerator;
+import frc.robot.subsystems.HatchArm;
 
 public class PathTrackTarget extends AutoModeBase {
 
@@ -13,7 +14,7 @@ public class PathTrackTarget extends AutoModeBase {
 
 	public PathTrackTarget(Pose2d endPose) {
 		mTrajectoryGenerator.generateVisionTrajectories(endPose);
-		mTraj = new DriveTrajectory(mTrajectoryGenerator.getVisionTrajectorySet().visionTraj, true);
+		mTraj = new DriveTrajectory(mTrajectoryGenerator.getVisionTrajectorySet().visionTraj, true, true);
 	}
 
 	@Override

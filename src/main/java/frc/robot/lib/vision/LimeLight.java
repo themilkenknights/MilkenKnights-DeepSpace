@@ -5,6 +5,9 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
+import frc.robot.lib.geometry.Pose2d;
+import frc.robot.lib.geometry.Rotation2d;
+import frc.robot.lib.geometry.Translation2d;
 import frc.robot.lib.vision.LimeLightControlMode.Advanced_Crosshair;
 import frc.robot.lib.vision.LimeLightControlMode.Advanced_Target;
 import frc.robot.lib.vision.LimeLightControlMode.CamMode;
@@ -19,8 +22,9 @@ public class LimeLight {
 
 	Notifier _hearBeat = new Notifier(new PeriodicRunnable());
 	NetworkTableEntry tv, tx, ty, ta, ts, tl, thoriz, tvert, ledMode, camMode, pipeline, stream, snapshot;
-	private NetworkTable m_table;
-	private String m_tableName;
+	NetworkTableEntry x, y, z, pitch, yaw, roll;
+	private NetworkTable m_table, m_pnp_table;
+	private String m_tableName, m_pnp_tableName;
 	private Boolean isConnected = false;
 	private double _hearBeatPeriod = 0.1;
 
@@ -44,6 +48,15 @@ public class LimeLight {
 		pipeline = m_table.getEntry("pipeline");
 		stream = m_table.getEntry("stream");
 		snapshot = m_table.getEntry("snapshot");
+
+		m_pnp_tableName = "limelight";
+		m_pnp_table = NetworkTableInstance.getDefault().getTable(m_pnp_tableName);
+		x = m_pnp_table.getEntry("x");
+		y = m_pnp_table.getEntry("y");
+		z = m_pnp_table.getEntry("z");
+		yaw = m_pnp_table.getEntry("yaw");
+		pitch = m_pnp_table.getEntry("pitch");
+		roll = m_pnp_table.getEntry("roll");
 	}
 
 	/**
@@ -73,7 +86,8 @@ public class LimeLight {
 	}
 
 	public LimelightTarget returnTarget() {
-		return new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength() * getVertLength(), getCaptureTime());
+		Pose2d deltaPose = new Pose2d(new Translation2d(x.getDouble(0.0), y.getDouble(0.0)), Rotation2d.fromDegrees(yaw.getDouble(0.0)));
+		return new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength() * getVertLength(), getCaptureTime(), deltaPose);
 	}
 
 	/**

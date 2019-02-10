@@ -132,9 +132,9 @@ public class TrajectoryGenerator {
 
 		private Trajectory<TimedState<Pose2dWithCurvature>> getTraj(Pose2d endPose) {
 			List<Pose2d> waypoints = new ArrayList<>();
-			waypoints.add(
-					RobotState.getInstance().getPredictedFieldToVehicle(Timer.getFPGATimestamp() + 0.02));
-			waypoints.add(kStartPose.transformBy(endPose));
+			Pose2d startPose = RobotState.getInstance().getPredictedFieldToVehicle(Timer.getFPGATimestamp() + 0.05);
+			waypoints.add(startPose);
+			waypoints.add(startPose.transformBy(endPose));
 			return generateTrajectory(true, waypoints,
 					Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel,
 					kMaxAccel,

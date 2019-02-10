@@ -1,19 +1,20 @@
 package frc.robot.subsystems;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.MovingAverage;
 import frc.robot.lib.vision.LimeLight;
 import frc.robot.lib.vision.LimeLightControlMode;
 import frc.robot.lib.vision.LimeLightControlMode.CamMode;
 import frc.robot.lib.vision.LimeLightControlMode.LedMode;
+import frc.robot.lib.vision.LimeLightControlMode.StreamType;
 import frc.robot.lib.vision.LimelightTarget;
 import io.github.pseudoresonance.pixy2api.Pixy2;
 import io.github.pseudoresonance.pixy2api.Pixy2.LinkType;
 import io.github.pseudoresonance.pixy2api.Pixy2CCC;
 import io.github.pseudoresonance.pixy2api.Pixy2CCC.Block;
 import java.util.ArrayList;
-
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Vision extends Subsystem {
 
@@ -23,10 +24,14 @@ public class Vision extends Subsystem {
 	private MovingAverage mThrottleAverage = new MovingAverage(3);
 	private boolean usePixy = false;
 	private Pixy2 pixy = null;
+	private CamMode mCurrentCamMode = CamMode.kdriver;
+	private StreamType mCurrentStreamType = StreamType.kPiPMain;
 
 	private Vision() {
 		limeLight = new LimeLight();
 		limeLight.setLEDMode(LedMode.kforceOn);
+		limeLight.setCamMode(CamMode.kdriver);
+		limeLight.setStream(StreamType.kPiPMain);
 		if (usePixy) {
 			pixy = Pixy2.createInstance(LinkType.SPI);
 			pixy.init();
@@ -48,20 +53,35 @@ public class Vision extends Subsystem {
 		}
 	}
 
-	public void teleopInit(double timestamp){
-		limeLight.setLEDMode(LedMode.kforceOn);
-	}
-	public void autonomousInit(double timestamp){
+	public void teleopInit(double timestamp) {
 		limeLight.setLEDMode(LedMode.kforceOn);
 	}
 
-	public void enableLED(){
+	public void autonomousInit(double timestamp) {
 		limeLight.setLEDMode(LedMode.kforceOn);
+	}
+
+	public void setStreamMode(StreamType streamMode) {
+		if (mCurrentStreamType != streamMode) {
+			limeLight.setStream(streamMode);
+			mCurrentStreamType = streamMode;
+		}
+	}
+
+	public void setCamMode(CamMode camMode) {
+		if (mCurrentCamMode != camMode) {
+			limeLight.setCamMode(camMode);
+			mCurrentCamMode = camMode;
+		}
+	}
+
+	public Pose2d getTargetTranslation() {
+		return limeLight.returnTarget().getDeltaPose();
 	}
 
 	@Override
 	public void onLoop(double timestamp) {
-		mThrottleAverage.addNumber(limeLight.returnTarget());
+		//mThrottleAverage.addNumber(limeLight.returnTarget());
 		//System.out.println(mThrottleAverage.getAverage().getDistance());
 	}
 
