@@ -71,8 +71,11 @@ public class CargoArm extends Subsystem {
 		mCargoArmState = CargoArmState.ENABLE;
 	}
 
-	public void changeSafety() {
-		if (mArmSafety) {
+	/**
+	 * @param state False for normal operation. True for safety mode.
+	 */
+	public void enableSafety(boolean mode) {
+		if (!mode) {
 			CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
 			CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
 			setEnable();
@@ -191,6 +194,10 @@ public class CargoArm extends Subsystem {
 		return mCargoArmState;
 	}
 
+	public boolean getSafetyState() {
+		return mArmSafety;
+	}
+
 	public synchronized void setArmState(CargoArmState state) {
 		if (!mArmSafety) {
 			setArmControlState(CargoArmControlState.MOTION_MAGIC);
@@ -209,8 +216,9 @@ public class CargoArm extends Subsystem {
 		ENABLE(0.0), //State directly after robot is enabled (not mapped to a specific angle)
 		INTAKE(177.0),
 		STOW(47.0),
-		PLACE(131.0), //Outtakes into the switch on the backside of the robot
-		PLACE_REVERSE(10.0);
+		PLACE(90.0),
+		PLACE_REVERSE_ROCKET(10.0),
+		PLACE_REVERSE_CARGO(5.0);
 
 		public final double state;
 

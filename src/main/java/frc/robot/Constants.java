@@ -87,7 +87,7 @@ public final class Constants {
 		public static final double kTurnInPlaceCircumference = 104.1;
 		//Vision Tuning
 		public static final double kVisionTurnP = 0.08;
-		public static final double kVisionDriverTurnP = 0.08;
+		public static final double kVisionDriverTurnP = -0.08;
 
 		//Turn In Place
 		public static final double kGoalPosTolerance = 0.75; // degrees

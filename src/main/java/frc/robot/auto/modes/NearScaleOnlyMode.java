@@ -14,7 +14,7 @@ public class NearScaleOnlyMode extends AutoModeBase {
 	public NearScaleOnlyMode(boolean robotStartedOnLeft) {
 		mStartedLeft = robotStartedOnLeft;
 		mSideStartToNearScale = new DriveTrajectory(
-				mTrajectoryGenerator.getTrajectorySet().sideStartToNearScale.get(mStartedLeft), true);
+				mTrajectoryGenerator.getTrajectorySet().sideStartToNearScale.get(mStartedLeft), true, false);
 	}
 
 	@Override

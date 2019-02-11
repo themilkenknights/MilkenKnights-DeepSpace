@@ -14,14 +14,14 @@ public class AutoChooser {
 	public static MatchData matchData = MatchData.defaultMatch;
 	private static AutoModeExecutor mAutoModeExecuter = null;
 
-	public static void startAuto() {
+	public static void startAuto(AutoModeBase base) {
 		updateGameData();
 		if (mAutoModeExecuter != null) {
 			mAutoModeExecuter.stop();
 		}
 		mAutoModeExecuter = null;
 		mAutoModeExecuter = new AutoModeExecutor();
-		mAutoModeExecuter.setAutoMode(getAutoMode());
+		mAutoModeExecuter.setAutoMode(base);
 		mAutoModeExecuter.start();
 	}
 

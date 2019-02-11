@@ -1,5 +1,6 @@
 package frc.robot.lib.util;
 
+import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.vision.LimelightTarget;
 import java.util.ArrayList;
 
@@ -39,7 +40,7 @@ public class MovingAverage {
 
 		LimelightTarget avgTarget = new LimelightTarget(validTarget, totalX / targets.size(),
 				totalY / targets.size(), totalArea / targets.size(),
-				totalCaptureTime / targets.size());
+				totalCaptureTime / targets.size(), Pose2d.identity());
 
 		return avgTarget;
 	}

@@ -102,7 +102,7 @@ public class HatchArm extends Subsystem {
 	/**
 	 * @param state False for normal operation. True for safety mode.
 	 */
-	public void changeSafety(boolean state) {
+	public void enableSafety(boolean state) {
 		if (!state) {
 			setHatchMechanismState(HatchMechanismState.UNKNOWN);
 			CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
@@ -273,7 +273,7 @@ public class HatchArm extends Subsystem {
 				setHatchIntakePosition(HatchIntakeState.STOW_POINT);
 				break;
 			case MANUAL_OVERRIDE:
-				changeSafety(true);
+				enableSafety(true);
 				break;
 			case UNKNOWN:
 				setEnable();

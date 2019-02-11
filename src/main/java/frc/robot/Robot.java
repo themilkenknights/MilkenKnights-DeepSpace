@@ -7,9 +7,8 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
-import frc.robot.lib.geometry.Pose2d;
+import frc.robot.auto.modes.NearScaleOnlyMode;
 import frc.robot.lib.structure.SubsystemManager;
 import frc.robot.lib.util.Logger;
 import frc.robot.paths.RobotState;
@@ -52,7 +51,6 @@ public class Robot extends TimedRobot {
 			mMatchState = MatchState.DISABLED;
 			AutoChooser.disableAuto();
 			mSubsystemManager.stop();
-			Vision.getInstance().enableLED();
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;
@@ -65,7 +63,7 @@ public class Robot extends TimedRobot {
 			Logger.logAutoInit();
 			mMatchState = MatchState.AUTO;
 			mSubsystemManager.autonomousInit();
-			AutoChooser.startAuto();
+			AutoChooser.startAuto(new NearScaleOnlyMode(true));
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;
@@ -117,7 +115,7 @@ public class Robot extends TimedRobot {
 	@Override
 	public void teleopPeriodic() {
 		mSubsystemManager.onLoop();
-		Input.updateDriveInput();
+		Input.updateControlInput();
 	}
 
 	@Override
