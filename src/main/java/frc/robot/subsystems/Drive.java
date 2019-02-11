@@ -99,6 +99,7 @@ public class Drive extends Subsystem {
 			leftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
 			rightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
 		} else if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
+			//TODO Fix Negatives
 			leftDrive.set(ControlMode.Velocity, -mPeriodicIO.left_demand, mPeriodicIO.brake_mode,
 					-(mPeriodicIO.left_feedforward + Constants.DRIVE.kDriveD * mPeriodicIO.left_accel / 1023.0));
 			rightDrive.set(ControlMode.Velocity, -mPeriodicIO.right_demand, mPeriodicIO.brake_mode,
