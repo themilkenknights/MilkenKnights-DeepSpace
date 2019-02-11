@@ -5,7 +5,6 @@ import frc.robot.auto.AutoModeEndedException;
 import frc.robot.auto.actions.DriveTrajectory;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.paths.TrajectoryGenerator;
-import frc.robot.subsystems.HatchArm;
 
 public class PathTrackTarget extends AutoModeBase {
 

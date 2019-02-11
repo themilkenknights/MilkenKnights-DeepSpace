@@ -194,10 +194,6 @@ public class CargoArm extends Subsystem {
 		return mCargoArmState;
 	}
 
-	public boolean getSafetyState() {
-		return mArmSafety;
-	}
-
 	public synchronized void setArmState(CargoArmState state) {
 		if (!mArmSafety) {
 			setArmControlState(CargoArmControlState.MOTION_MAGIC);
@@ -205,6 +201,10 @@ public class CargoArm extends Subsystem {
 		} else {
 			Logger.logErrorWithTrace("Failed to set Arm State: Arm Safety Enabled");
 		}
+	}
+
+	public boolean getSafetyState() {
+		return mArmSafety;
 	}
 
 	public enum CargoArmControlState {

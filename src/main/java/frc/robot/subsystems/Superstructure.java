@@ -28,6 +28,7 @@ public class Superstructure extends Subsystem {
 	private static Drive mDrive = Drive.getInstance();
 	private static HatchArm mHatch = HatchArm.getInstance();
 	private static CargoArm mCargo = CargoArm.getInstance();
+	private static AutoModeExecutor mAutoModeExecuter = null;
 	private PowerDistributionPanel mPDP;
 	private Compressor mCompressor;
 	private RobotState mRobotState = RobotState.TELEOP_DRIVE;
@@ -35,7 +36,6 @@ public class Superstructure extends Subsystem {
 	private VisionState mLastVisionState = VisionState.EMPTY;
 	private double mGoalTurnAngle = 0;
 	private MkTime mRandomTimer = new MkTime();
-	private static AutoModeExecutor mAutoModeExecuter = null;
 
 	private Superstructure() {
 		mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
@@ -94,7 +94,7 @@ public class Superstructure extends Subsystem {
 			case VISION_INTAKE_STATION:
 			case VISION_PLACING:
 				mDrive.setOpenLoop(DriveSignal.BRAKE);
-				//mRobotState = Vision.getInstance().getAverageTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
+				mRobotState = Vision.getInstance().getAverageTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
 				startVisionHatch();
 				break;
 			case VISION_CARGO_OUTTAKE:

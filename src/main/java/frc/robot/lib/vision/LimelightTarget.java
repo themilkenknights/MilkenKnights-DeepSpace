@@ -59,7 +59,7 @@ public class LimelightTarget {
 		return deltaPose;
 	}
 
-	public double[] getPoseArray(){
+	public double[] getPoseArray() {
 		return poseArray;
 	}
 

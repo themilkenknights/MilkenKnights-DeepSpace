@@ -49,7 +49,6 @@ public class MovingAverage {
 		LimelightTarget avgTarget = new LimelightTarget(validTarget, totalX / targets.size(),
 				totalY / targets.size(), totalHoriz / targets.size(), totalVert / targets.size(),
 				totalCaptureTime / targets.size(), finalPoseArray);
-
 		return avgTarget;
 	}
 

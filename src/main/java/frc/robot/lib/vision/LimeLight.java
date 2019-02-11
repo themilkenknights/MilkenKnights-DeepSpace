@@ -24,7 +24,7 @@ public class LimeLight {
 	private NetworkTable m_table, m_pnp_table;
 	private String m_tableName, m_pnp_tableName;
 	private Boolean isConnected = false;
-	private double _hearBeatPeriod = 0.1;
+	private double _hearBeatPeriod = 0.025;
 	private LimelightTarget mTarget;
 	private MovingAverage mThrottleAverage;
 
@@ -344,18 +344,18 @@ public class LimeLight {
 
 		//TODO Verify Thread Efficiency
 		public void run() {
-			if (i == 4) {
+			if (i == 10) {
 				resetPilelineLatency();
+				try {
+					Thread.sleep(25);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				isConnected = getPipelineLatency() != 0.0;
 				i = 0;
 			}
 			i++;
 			updateTarget();
-			try {
-				Thread.sleep(25);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			isConnected = getPipelineLatency() != 0.0;
 		}
 	}
 

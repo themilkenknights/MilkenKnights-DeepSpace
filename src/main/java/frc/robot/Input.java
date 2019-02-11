@@ -7,8 +7,6 @@ import frc.robot.lib.drivers.MkJoystick;
 import frc.robot.lib.drivers.MkJoystickButton;
 import frc.robot.lib.math.DriveHelper;
 import frc.robot.lib.math.MkMath;
-import frc.robot.lib.vision.LimeLightControlMode.CamMode;
-import frc.robot.lib.vision.LimeLightControlMode.StreamType;
 import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmControlState;
@@ -49,8 +47,6 @@ public class Input {
 
 	private static boolean mVisionAssist = false;
 
-	private static CamMode mLimelightMode = CamMode.kdriver;
-
 	public static void updateControlInput() {
 		RobotState currentRobotState = mStructure.getRobotState();
 
@@ -66,16 +62,15 @@ public class Input {
 
 		if (mCargoArmManual.isPressed()) {
 			mCargo.enableSafety(!mCargo.getSafetyState());
-			mVision.setCamMode(CamMode.kdriver);
+
 		} else if (mGroundHatchIntakeManual.isPressed()) {
 			mHatch.setHatchMechanismState(
 					mHatch.getHatchMechanismState() == HatchMechanismState.MANUAL_OVERRIDE ? HatchMechanismState.UNKNOWN : HatchMechanismState.MANUAL_OVERRIDE);
-			mVision.setCamMode(CamMode.kdriver);
+
 		}
 
 		if (toggleDriverVisionAssist.isPressed()) {
 			mVisionAssist = !mVisionAssist;
-			mVision.setCamMode(mVisionAssist ? CamMode.kvision : CamMode.kdriver);
 		}
 
 		if (currentRobotState == RobotState.TELEOP_DRIVE) {
@@ -91,26 +86,25 @@ public class Input {
 		} else if (mCargo.getArmControlState() == CargoArmControlState.MOTION_MAGIC) {
 			if (operatorJoystick.getPOV() == 0) {
 				mCargo.setArmState(CargoArmState.PLACE_REVERSE_ROCKET);
-				mVision.setStreamMode(StreamType.kPiPMain);
+
 			} else if (operatorJoystick.getPOV() == 270) {
 				mCargo.setArmState(CargoArmState.INTAKE);
-				mVision.setStreamMode(StreamType.kPiPSecondary);
 			} else if (operatorJoystick.getPOV() == 180) {
 				mCargo.setArmState(CargoArmState.PLACE_REVERSE_CARGO);
-				mVision.setStreamMode(StreamType.kPiPMain);
+
 			} else if (operatorJoystick.getPOV() == 90) {
-				mVision.setCamMode(CamMode.kvision);
+
 				mStructure.setRobotState(RobotState.VISION_CARGO_OUTTAKE);
-				mVision.setStreamMode(StreamType.kPiPMain);
+
 			}
 		}
 
 		if (intakeRollerIn.isHeld()) {
 			mCargo.setIntakeRollers(CARGO_ARM.INTAKE_IN_ROLLER_SPEED);
-			mVision.setCamMode(CamMode.kdriver);
+
 		} else if (intakeRollerOut.isHeld()) {
 			mCargo.setIntakeRollers(CARGO_ARM.INTAKE_OUT_ROLLER_SPEED);
-			mVision.setCamMode(CamMode.kdriver);
+
 		} else {
 			mCargo.setIntakeRollers(0.0);
 		}
@@ -120,8 +114,7 @@ public class Input {
 		// The normal hatch buttons now only serve to actuate the pneumatic arm
 		if (mHatch.getHatchMechanismState() == HatchMechanismState.MANUAL_OVERRIDE) {
 			if (mCargo.getArmControlState() != CargoArmControlState.OPEN_LOOP) {
-				mVision.setCamMode(CamMode.kdriver);
-				mVision.setStreamMode(StreamType.kPiPMain);
+
 				mHatch.setOpenLoop(MkMath.handleDeadband(operatorJoystick.getRawAxis(1), INPUT.kOperatorDeadband));
 			} else {
 				mHatch.setOpenLoop(0.0);
@@ -129,20 +122,20 @@ public class Input {
 		}
 
 		if (mVisionStationIntakeButton.isPressed()) {
-			mVision.setCamMode(CamMode.kvision);
+
 			mStructure.setRobotState(RobotState.VISION_INTAKE_STATION);
 		} else if (mVisionPlaceButton.isPressed()) {
-			mVision.setCamMode(CamMode.kvision);
+
 			mStructure.setRobotState(RobotState.VISION_PLACING);
 		} else if (mTransferButton.isPressed()) {
-			mVision.setCamMode(CamMode.kdriver);
+
 			mHatch.setHatchMechanismState(HatchMechanismState.TRANSFER);
-			mVision.setStreamMode(StreamType.kPiPMain);
+
 		} else if (mGroundIntakeToggleButton.isPressed()) {
-			mVision.setCamMode(CamMode.kdriver);
+
 			mHatch
 					.setHatchMechanismState(mHatch.getHatchMechanismState() == HatchMechanismState.GROUND_INTAKE ? HatchMechanismState.STOWED : HatchMechanismState.GROUND_INTAKE);
-			mVision.setStreamMode(StreamType.kPiPMain);
+
 		}
 
 

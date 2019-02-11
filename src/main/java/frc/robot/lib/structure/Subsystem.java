@@ -20,11 +20,11 @@ public abstract class Subsystem {
 
 	public abstract void outputTelemetry();
 
-	public void teleopInit(double timestamp){
+	public void teleopInit(double timestamp) {
 
 	}
 
-	public void autonomousInit(double timestamp){
+	public void autonomousInit(double timestamp) {
 
 	}
 
