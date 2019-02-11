@@ -22,7 +22,7 @@ public class LimeLight {
 
 	Notifier _hearBeat = new Notifier(new PeriodicRunnable());
 	NetworkTableEntry tv, tx, ty, ta, ts, tl, thoriz, tvert, ledMode, camMode, pipeline, stream, snapshot;
-	NetworkTableEntry x, y, z, pitch, yaw, roll;
+	NetworkTableEntry camtran;
 	private NetworkTable m_table, m_pnp_table;
 	private String m_tableName, m_pnp_tableName;
 	private Boolean isConnected = false;
@@ -51,12 +51,7 @@ public class LimeLight {
 
 		m_pnp_tableName = "limelight";
 		m_pnp_table = NetworkTableInstance.getDefault().getTable(m_pnp_tableName);
-		x = m_pnp_table.getEntry("x");
-		y = m_pnp_table.getEntry("y");
-		z = m_pnp_table.getEntry("z");
-		yaw = m_pnp_table.getEntry("yaw");
-		pitch = m_pnp_table.getEntry("pitch");
-		roll = m_pnp_table.getEntry("roll");
+		camtran = m_pnp_table.getEntry("camtran");
 	}
 
 	/**
@@ -86,7 +81,10 @@ public class LimeLight {
 	}
 
 	public LimelightTarget returnTarget() {
-		Pose2d deltaPose = new Pose2d(new Translation2d(x.getDouble(0.0), y.getDouble(0.0)), Rotation2d.fromDegrees(yaw.getDouble(0.0)));
+		double[] transl = camtran.getDoubleArray(new double[]{0,0,0,0,0,0});
+		//System.out.println("X: " + transl[0] + " Y: " + transl[1] + " Z: " + transl[2] + " Yaw: " + transl[3] + " Pitch: " + transl[4] + " Roll: " + transl[5]);
+		Pose2d deltaPose = new Pose2d(new Translation2d(-transl[2], transl[0]), Rotation2d.fromDegrees(transl[3]));
+		System.out.println(deltaPose);
 		return new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength() * getVertLength(), getCaptureTime(), deltaPose);
 	}
 

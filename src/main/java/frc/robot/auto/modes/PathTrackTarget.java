@@ -14,7 +14,7 @@ public class PathTrackTarget extends AutoModeBase {
 
 	public PathTrackTarget(Pose2d endPose) {
 		mTrajectoryGenerator.generateVisionTrajectories(endPose);
-		mTraj = new DriveTrajectory(mTrajectoryGenerator.getVisionTrajectorySet().visionTraj, true, true);
+		mTraj = new DriveTrajectory(mTrajectoryGenerator.getVisionTrajectorySet().visionTraj, false, true);
 	}
 
 	@Override

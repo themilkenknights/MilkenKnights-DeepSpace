@@ -11,6 +11,7 @@ import frc.robot.lib.util.Logger;
 import frc.robot.paths.RobotState;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
+import frc.robot.subsystems.Superstructure;
 
 public class DriveTrajectory implements Action {
 

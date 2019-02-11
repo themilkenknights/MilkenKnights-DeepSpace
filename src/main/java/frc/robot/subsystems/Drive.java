@@ -99,11 +99,11 @@ public class Drive extends Subsystem {
 			leftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
 			rightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
 		} else if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
-			leftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand, mPeriodicIO.brake_mode,
-					mPeriodicIO.left_feedforward + Constants.DRIVE.kDriveD * mPeriodicIO.left_accel / 1023.0);
-			rightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, mPeriodicIO.brake_mode,
-					mPeriodicIO.right_feedforward
-							+ Constants.DRIVE.kDriveD * mPeriodicIO.right_accel / 1023.0);
+			leftDrive.set(ControlMode.Velocity, -mPeriodicIO.left_demand, mPeriodicIO.brake_mode,
+					-(mPeriodicIO.left_feedforward + Constants.DRIVE.kDriveD * mPeriodicIO.left_accel / 1023.0));
+			rightDrive.set(ControlMode.Velocity, -mPeriodicIO.right_demand, mPeriodicIO.brake_mode,
+					-(mPeriodicIO.right_feedforward
+							+ Constants.DRIVE.kDriveD * mPeriodicIO.right_accel / 1023.0));
 		} else if (mDriveControlState == DriveControlState.MOTION_MAGIC) {
 			leftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, mPeriodicIO.brake_mode, mPeriodicIO.left_feedforward);
 			rightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, mPeriodicIO.brake_mode, mPeriodicIO.right_feedforward);

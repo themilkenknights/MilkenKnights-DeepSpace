@@ -135,6 +135,8 @@ public class TrajectoryGenerator {
 			Pose2d startPose = RobotState.getInstance().getPredictedFieldToVehicle(Timer.getFPGATimestamp() + 0.05);
 			waypoints.add(startPose);
 			waypoints.add(startPose.transformBy(endPose));
+			System.out.println("Start: " + startPose);
+			System.out.println("End: " + startPose.transformBy(endPose));
 			return generateTrajectory(true, waypoints,
 					Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel,
 					kMaxAccel,

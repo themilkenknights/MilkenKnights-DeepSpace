@@ -24,13 +24,13 @@ public class Vision extends Subsystem {
 	private MovingAverage mThrottleAverage = new MovingAverage(3);
 	private boolean usePixy = false;
 	private Pixy2 pixy = null;
-	private CamMode mCurrentCamMode = CamMode.kdriver;
+	private CamMode mCurrentCamMode = CamMode.kvision;
 	private StreamType mCurrentStreamType = StreamType.kPiPMain;
 
 	private Vision() {
 		limeLight = new LimeLight();
 		limeLight.setLEDMode(LedMode.kforceOn);
-		limeLight.setCamMode(CamMode.kdriver);
+		limeLight.setCamMode(CamMode.kvision);
 		limeLight.setStream(StreamType.kPiPMain);
 		if (usePixy) {
 			pixy = Pixy2.createInstance(LinkType.SPI);
@@ -81,6 +81,7 @@ public class Vision extends Subsystem {
 
 	@Override
 	public void onLoop(double timestamp) {
+		//limeLight.returnTarget();
 		//mThrottleAverage.addNumber(limeLight.returnTarget());
 		//System.out.println(mThrottleAverage.getAverage().getDistance());
 	}

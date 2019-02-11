@@ -21,7 +21,7 @@ public final class Constants {
 		public static final double kLoopDt = 0.02;
 		public static final double PI = 3.14159265359;
 		public static final double kTicksPerRev = 4096.0;
-		public static final double kMaxNominalOutput = 1.0;
+		public static final double kMaxNominalOutput = 0.3;
 
 	}
 

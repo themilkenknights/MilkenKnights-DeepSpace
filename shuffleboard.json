@@ -504,33 +504,9 @@
               "imageHeight": -1
             }
           },
-          "0,0": {
+          "2,1": {
             "size": [
               1,
-              1
-            ],
-            "content": {
-              "_type": "Text View",
-              "_source0": "network_table:///SmartDashboard/LL Area",
-              "_title": "SmartDashboard/LL Area"
-            }
-          },
-          "1,0": {
-            "size": [
-              2,
-              1
-            ],
-            "content": {
-              "_type": "Boolean Box",
-              "_source0": "network_table:///SmartDashboard/Driver Vision Align",
-              "_title": "SmartDashboard/Driver Vision Align",
-              "Colors/Color when true": "#7CFC00FF",
-              "Colors/Color when false": "#8B0000FF"
-            }
-          },
-          "1,1": {
-            "size": [
-              2,
               1
             ],
             "content": {
@@ -539,9 +515,9 @@
               "_title": "SmartDashboard/Cargo Arm Control Mode"
             }
           },
-          "1,2": {
+          "2,2": {
             "size": [
-              2,
+              1,
               1
             ],
             "content": {
@@ -570,6 +546,72 @@
               "_type": "Text View",
               "_source0": "network_table:///SmartDashboard/Cargo Arm Desired Position",
               "_title": "SmartDashboard/Cargo Arm Desired Position"
+            }
+          },
+          "2,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Drive State",
+              "_title": "/SmartDashboard/Drive State"
+            }
+          },
+          "1,2": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Robot Linear Velocity",
+              "_title": "/SmartDashboard/Robot Linear Velocity"
+            }
+          },
+          "1,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Robot Pose Theta",
+              "_title": "/SmartDashboard/Robot Pose Theta"
+            }
+          },
+          "1,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Robot Pose X",
+              "_title": "/SmartDashboard/Robot Pose X"
+            }
+          },
+          "0,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Robot Pose Y",
+              "_title": "/SmartDashboard/Robot Pose Y"
+            }
+          },
+          "2,3": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Robot State",
+              "_title": "/SmartDashboard/Robot State"
             }
           }
         }
@@ -607,17 +649,6 @@
               "_title": "LiveWindow/Ungrouped/PowerDistributionPanel[11]",
               "Visuals/Show voltage and current values": true
             }
-          },
-          "5,1": {
-            "size": [
-              3,
-              2
-            ],
-            "content": {
-              "_type": "Network Table Tree",
-              "_source0": "network_table:///LiveWindow/Ungrouped/Compressor[0]",
-              "_title": "LiveWindow/Ungrouped/Compressor[0]"
-            }
           }
         }
       }
@@ -627,6 +658,6 @@
     "x": -5.0,
     "y": 1.0,
     "width": 1376.0,
-    "height": 653.0
+    "height": 558.0
   }
 }
