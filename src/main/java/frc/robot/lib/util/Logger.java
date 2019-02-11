@@ -53,7 +53,7 @@ public class Logger {
 		DriverStation.reportError(mark, false);
 	}
 
-	public static synchronized void logCriticalError(String mark) {
+	public static synchronized void logErrorWithTrace(String mark) {
 		logMarker(mark, null);
 		DriverStation.reportError(mark, true);
 	}

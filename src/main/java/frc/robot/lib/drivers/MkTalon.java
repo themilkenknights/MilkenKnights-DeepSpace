@@ -115,9 +115,9 @@ public class MkTalon {
 				CTRE(masterTalon.configMotionCruiseVelocity((int) CARGO_ARM.MOTION_MAGIC_CRUISE_VEL, kLong));
 				CTRE(masterTalon.configMotionAcceleration((int) CARGO_ARM.MOTION_MAGIC_ACCEL, kLong));
 				CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.nativeUnitsToDegrees(CARGO_ARM.ARM_FORWARD_LIMIT), kLong));
-				CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.nativeUnitsToDegrees(CARGO_ARM.ARM_REVERSE_LIMIT), kLong));
-				CTRE(masterTalon.configForwardSoftLimitEnable(false, kLong));
-				CTRE(masterTalon.configForwardSoftLimitEnable(false, kLong));
+				CTRE(masterTalon.configReverseSoftLimitThreshold((int) MkMath.nativeUnitsToDegrees(CARGO_ARM.ARM_REVERSE_LIMIT), kLong));
+				CTRE(masterTalon.configForwardSoftLimitEnable(true, kLong));
+				CTRE(masterTalon.configReverseSoftLimitEnable(true, kLong));
 				CTRE(masterTalon.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kLeftCargoIntakeTalonID, kLong));
 				break;
 			case Hatch_Arm:
@@ -132,9 +132,9 @@ public class MkTalon {
 				CTRE(masterTalon.configMotionAcceleration((int) HATCH_ARM.kMotionMagicAccel, kLong));
 				CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.angleToNativeUnits(HATCH_ARM.ARM_FORWARD_LIMIT), kLong));
 				CTRE(masterTalon.configReverseSoftLimitThreshold((int) MkMath.angleToNativeUnits(HATCH_ARM.ARM_REVERSE_LIMIT), kLong));
-				//CTRE(masterTalon.configForwardSoftLimitEnable(true, kLong));
-				//CTRE(masterTalon.configReverseSoftLimitEnable(true, kLong));
-				//masterTalon.overrideSoftLimitsEnable(true);
+				CTRE(masterTalon.configForwardSoftLimitEnable(true, kLong));
+				CTRE(masterTalon.configReverseSoftLimitEnable(true, kLong));
+				//TODO Enable Hatch Limit Switch
 				//CTRE(masterTalon.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kHatchLimitSwitchTalonID, kLong));
 				break;
 			case Cargo_Intake:
@@ -179,7 +179,6 @@ public class MkTalon {
 				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 1000, kLong));
 				CTRE(masterTalon.configClearPositionOnLimitF(false, kLong));
 				CTRE(masterTalon.configClearPositionOnLimitR(true, kLong));
-				//((15 / 60) * (3/1000)) * 360.0
 				zeroEncoder();
 				break;
 			case Cargo_Intake:
@@ -272,7 +271,7 @@ public class MkTalon {
 			CTRE(masterTalon.getSensorCollection()
 					.syncQuadratureWithPulseWidth(HATCH_ARM.kBookEnd_0, HATCH_ARM.kBookEnd_1, HATCH_ARM.kCrossOverZero, HATCH_ARM.kOffset, kShort));
 		} else {
-			Logger.logCriticalError("Can't Zero Encoder: MkTalon Position - " + mSide.toString());
+			Logger.logErrorWithTrace("Can't Zero Encoder: MkTalon Position - " + mSide.toString());
 		}
 	}
 
@@ -297,7 +296,7 @@ public class MkTalon {
 			case Right_Drive:
 				return MkMath.nativeUnitsPer100MstoInchesPerSec(masterTalon.getSelectedSensorVelocity(kSlot));
 			default:
-				Logger.logCriticalError("Talon doesn't have encoder");
+				Logger.logErrorWithTrace("Talon doesn't have encoder");
 				return 0.0;
 		}
 	}
@@ -311,7 +310,7 @@ public class MkTalon {
 			case Right_Drive:
 				return MkMath.nativeUnitsToInches(masterTalon.getSelectedSensorPosition(kSlot));
 			default:
-				Logger.logCriticalError("Talon doesn't have encoder");
+				Logger.logErrorWithTrace("Talon doesn't have encoder");
 				return 0.0;
 		}
 	}
@@ -339,7 +338,7 @@ public class MkTalon {
 					return 0.0;
 				}
 			default:
-				Logger.logCriticalError("Talon doesn't have encoder");
+				Logger.logErrorWithTrace("Talon doesn't have encoder");
 				return 0.0;
 		}
 	}
@@ -381,7 +380,7 @@ public class MkTalon {
 				positions.add(getPosition());
 				if (getPosition() < TEST.kMinDriveTestPos || getSpeed() < TEST.kMinDriveTestVel
 						|| masterTalon.getOutputCurrent() > TEST.kMinDriveTestCurrent) {
-					Logger.logCriticalError("FAILED - " + mSide.toString() + "Slave FAILED TO REACH REQUIRED SPEED OR POSITION");
+					Logger.logErrorWithTrace("FAILED - " + mSide.toString() + "Slave FAILED TO REACH REQUIRED SPEED OR POSITION");
 					Logger.logMarker(mSide.toString() + " Slave Test Failed - Vel: " + getSpeed() + " Pos: " + getPosition());
 					check = false;
 				} else {
@@ -397,7 +396,7 @@ public class MkTalon {
 				positions.add(getPosition());
 				if (getPosition() < TEST.kMinDriveTestPos || getSpeed() < TEST.kMinDriveTestVel
 						|| masterTalon.getOutputCurrent() > TEST.kMinDriveTestCurrent) {
-					Logger.logCriticalError("FAILED - " + mSide.toString() + "Master FAILED TO REACH REQUIRED SPEED OR POSITION");
+					Logger.logErrorWithTrace("FAILED - " + mSide.toString() + "Master FAILED TO REACH REQUIRED SPEED OR POSITION");
 					Logger.logMarker(mSide.toString() + " Master Test Failed - Vel: " + getSpeed() + " Pos: " + getPosition());
 					check = false;
 				} else {
@@ -407,7 +406,7 @@ public class MkTalon {
 				if (currents.size() > 0) {
 					Double average = currents.stream().mapToDouble(val -> val).average().getAsDouble();
 					if (!Util.allCloseTo(currents, average, TEST.kDriveCurrentEpsilon)) {
-						Logger.logCriticalError(mSide.toString() + " Currents varied!!!!!!!!!!!");
+						Logger.logErrorWithTrace(mSide.toString() + " Currents varied!!!!!!!!!!!");
 						check = true;
 					}
 				}
@@ -415,7 +414,7 @@ public class MkTalon {
 				if (positions.size() > 0) {
 					Double average = positions.stream().mapToDouble(val -> val).average().getAsDouble();
 					if (!Util.allCloseTo(positions, average, TEST.kDrivePosEpsilon)) {
-						Logger.logCriticalError(mSide.toString() + " Positions varied!!!!!!!!");
+						Logger.logErrorWithTrace(mSide.toString() + " Positions varied!!!!!!!!");
 						check = true;
 					}
 				}
@@ -423,14 +422,14 @@ public class MkTalon {
 				if (velocities.size() > 0) {
 					Double average = velocities.stream().mapToDouble(val -> val).average().getAsDouble();
 					if (!Util.allCloseTo(velocities, average, TEST.kDriveVelEpsilon)) {
-						Logger.logCriticalError(mSide.toString() + " Velocities varied!!!!!!!!");
+						Logger.logErrorWithTrace(mSide.toString() + " Velocities varied!!!!!!!!");
 						check = true;
 					}
 				}
 				break;
 			case Cargo_Arm:
 				if (!isEncoderConnected()) {
-					Logger.logCriticalError("Arm Encoder Not Connected");
+					Logger.logErrorWithTrace("Arm Encoder Not Connected");
 					check = false;
 				}
 				for (CargoArmState state : CargoArmState.values()) {
@@ -455,7 +454,7 @@ public class MkTalon {
 				velocities.add(vel);
 				positions.add(pos);
 				if (vel < TEST.kMinCargoArmTestVel || pos > TEST.kMinCargoArmTestPos || current > TEST.kMinCargoArmTestCurrent) {
-					Logger.logCriticalError("FAILED - " + mSide.toString() + "Cargo Arm Slave FAILED TO REACH REQUIRED SPEED OR POSITION");
+					Logger.logErrorWithTrace("FAILED - " + mSide.toString() + "Cargo Arm Slave FAILED TO REACH REQUIRED SPEED OR POSITION");
 					Logger.logMarker(mSide.toString() + " Slave Test Failed - Vel: " + vel + " Pos: " + pos + " Current: " + current);
 					check = false;
 				} else {
@@ -476,7 +475,7 @@ public class MkTalon {
 				velocities.add(vel);
 				positions.add(pos);
 				if (vel < TEST.kMinCargoArmTestVel || pos > TEST.kMinCargoArmTestPos || current > TEST.kMinCargoArmTestCurrent) {
-					Logger.logCriticalError("FAILED - " + mSide.toString() + "Cargo Arm Master FAILED TO REACH REQUIRED SPEED OR POSITION");
+					Logger.logErrorWithTrace("FAILED - " + mSide.toString() + "Cargo Arm Master FAILED TO REACH REQUIRED SPEED OR POSITION");
 					Logger.logMarker(mSide.toString() + " Master Test Failed - Vel: " + vel + " Pos: " + pos + " Current: " + current);
 					check = false;
 				} else {
@@ -486,7 +485,7 @@ public class MkTalon {
 				if (currents.size() > 0) {
 					Double average = currents.stream().mapToDouble(val -> val).average().getAsDouble();
 					if (!Util.allCloseTo(currents, average, TEST.kCargoArmCurrentEpsilon)) {
-						Logger.logCriticalError(mSide.toString() + " Currents varied!!!!!!!!!!!");
+						Logger.logErrorWithTrace(mSide.toString() + " Currents varied!!!!!!!!!!!");
 						check = true;
 					}
 				}
@@ -494,7 +493,7 @@ public class MkTalon {
 				if (positions.size() > 0) {
 					Double average = positions.stream().mapToDouble(val -> val).average().getAsDouble();
 					if (!Util.allCloseTo(positions, average, TEST.kCargoArmPosEpsilon)) {
-						Logger.logCriticalError(mSide.toString() + " Positions varied!!!!!!!!");
+						Logger.logErrorWithTrace(mSide.toString() + " Positions varied!!!!!!!!");
 						check = true;
 					}
 				}
@@ -502,7 +501,7 @@ public class MkTalon {
 				if (velocities.size() > 0) {
 					Double average = velocities.stream().mapToDouble(val -> val).average().getAsDouble();
 					if (!Util.allCloseTo(velocities, average, TEST.kCargoArmVelEpsilon)) {
-						Logger.logCriticalError(mSide.toString() + " Velocities varied!!!!!!!!");
+						Logger.logErrorWithTrace(mSide.toString() + " Velocities varied!!!!!!!!");
 						check = true;
 					}
 				}
@@ -510,7 +509,7 @@ public class MkTalon {
 				break;
 			case Hatch_Arm:
 				if (!isEncoderConnected()) {
-					Logger.logCriticalError("Arm Encoder Not Connected");
+					Logger.logErrorWithTrace("Arm Encoder Not Connected");
 					check = false;
 				}
 				for (HatchMechanismState state : HatchMechanismState.values()) {
@@ -525,7 +524,7 @@ public class MkTalon {
 				vel = getSpeed();
 				pos = getPosition();
 				if (vel < TEST.kHatchArmVel || current > TEST.kHatchArmCurrent || pos < TEST.kHatchArmPos) {
-					Logger.logCriticalError("FAILED - " + mSide.toString() + "Hatch FAILED TO REACH REQUIRED SPEED OR POSITION");
+					Logger.logErrorWithTrace("FAILED - " + mSide.toString() + "Hatch FAILED TO REACH REQUIRED SPEED OR POSITION");
 					Logger.logMarker(mSide.toString() + " Test Failed - Vel: " + vel + " Pos: " + pos + " Current: " + current);
 					check = false;
 				} else {
@@ -544,7 +543,7 @@ public class MkTalon {
 
 	private void CTRE(ErrorCode errorCode) {
 		if (errorCode != ErrorCode.OK) {
-			Logger.logCriticalError(errorCode.toString());
+			Logger.logErrorWithTrace(errorCode.toString());
 		}
 	}
 

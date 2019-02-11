@@ -1,9 +1,7 @@
 package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.structure.Subsystem;
-import frc.robot.lib.util.MovingAverage;
 import frc.robot.lib.vision.LimeLight;
 import frc.robot.lib.vision.LimeLightControlMode;
 import frc.robot.lib.vision.LimeLightControlMode.CamMode;
@@ -21,7 +19,6 @@ public class Vision extends Subsystem {
 	private static final int blockSignature = 1;
 	private static ArrayList<Block> blocks = null;
 	private LimeLight limeLight;
-	private MovingAverage mThrottleAverage = new MovingAverage(3);
 	private boolean usePixy = false;
 	private Pixy2 pixy = null;
 	private CamMode mCurrentCamMode = CamMode.kvision;
@@ -44,12 +41,11 @@ public class Vision extends Subsystem {
 
 	@Override
 	public void outputTelemetry() {
-		SmartDashboard.putNumber("LL Area", mThrottleAverage.getAverage().getArea());
+		/*SmartDashboard.putNumber("LL Area", mThrottleAverage.getAverage().getArea());
 		SmartDashboard.putNumber("LL X", mThrottleAverage.getAverage().getXOffset());
-		SmartDashboard.putNumber("LL Dist", mThrottleAverage.getAverage().getDistance());
+		SmartDashboard.putNumber("LL Dist", mThrottleAverage.getAverage().getDistance()); */
 		if (usePixy) {
 			pixyUpdate();
-			System.out.println("Test");
 		}
 	}
 
@@ -73,10 +69,6 @@ public class Vision extends Subsystem {
 			limeLight.setCamMode(camMode);
 			mCurrentCamMode = camMode;
 		}
-	}
-
-	public Pose2d getTargetTranslation() {
-		return limeLight.returnTarget().getDeltaPose();
 	}
 
 	@Override
@@ -104,7 +96,6 @@ public class Vision extends Subsystem {
 
 	@Override
 	public void onStop(double timestamp) {
-		mThrottleAverage.clear();
 		limeLight.setLEDMode(LimeLightControlMode.LedMode.kforceOff);
 	}
 
@@ -114,7 +105,7 @@ public class Vision extends Subsystem {
 	}
 
 	public synchronized LimelightTarget getAverageTarget() {
-		return mThrottleAverage.getAverage();
+		return limeLight.returnAverageTarget();
 	}
 
 	private static class InstanceHolder {

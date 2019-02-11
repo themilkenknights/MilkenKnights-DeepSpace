@@ -104,7 +104,7 @@ public class CargoArm extends Subsystem {
 				mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mCargoArmState.state), NeutralMode.Brake, -armFeed);
 			}
 		} else {
-			Logger.logCriticalError("Unexpected Cargo Arm Control State: " + mCargoArmControlState);
+			Logger.logErrorWithTrace("Unexpected Cargo Arm Control State: " + mCargoArmControlState);
 		}
 	}
 
@@ -169,7 +169,7 @@ public class CargoArm extends Subsystem {
 		if (mArmSafety && mCargoArmControlState == CargoArmControlState.OPEN_LOOP) {
 			mOpenLoopSetpoint = output;
 		} else {
-			Logger.logCriticalError("Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled");
+			Logger.logErrorWithTrace("Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled");
 		}
 	}
 
@@ -203,7 +203,7 @@ public class CargoArm extends Subsystem {
 			setArmControlState(CargoArmControlState.MOTION_MAGIC);
 			mCargoArmState = state;
 		} else {
-			Logger.logCriticalError("Failed to set Arm State: Arm Safety Enabled");
+			Logger.logErrorWithTrace("Failed to set Arm State: Arm Safety Enabled");
 		}
 	}
 

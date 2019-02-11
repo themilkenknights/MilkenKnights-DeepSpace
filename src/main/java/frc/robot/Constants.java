@@ -4,10 +4,21 @@ import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.InterpolatingTreeMap;
 
 /**
- * Unless otherwise noted by raw/native/RPM, all position unites are in inches and degrees and all velocity units are in inches per second and degrees per second. ID
- * typically notes a CAN ID All PID Constants are in Native Units. The front of the robot is at the Hatch Mechanism/Battery. The exception is for the Cargo Mechanism.
- * Left/Right for this mechanism are flipped. The zero position for the arms are at the hardstops inside the robot perimeter. Positive voltages/sensor measurements for
- * the arms should correspond to rotating toward the ground. Positive Voltages to the drive motors should always move the robot forward.
+ * Unless otherwise noted by raw/native/RPM, all position unites are in inches and degrees
+ * and all velocity units are in inches per second and degrees per second.
+ * 'ID' typically notes a CAN ID All PID Constants are in Native Units.
+ * The front of the robot is at the Hatch Mechanism/Battery.
+ * The exception is for the Cargo Mechanism where Left/Right for this mechanism are flipped.
+ *
+ * The zero position for the arms are at the hardstops inside the robot perimeter.
+ *
+ * Positive voltages/sensor measurements for the arms should correspond to rotating toward the ground.
+ * Positive Voltages to the drive motors should always move the robot forward.
+ *
+ * +X is Hatch Arm/Battery Forward
+ * -X is Hatch Arm/Battery Forward
+ * +Y is Left (Hatch Arm/Battery Forward)
+ * -Y is Right (Hatch Arm/Battery Forward)
  */
 public final class Constants {
 
@@ -17,14 +28,18 @@ public final class Constants {
 
 		public static final int kPIDLoopIdx = 0;
 		public static final int kMediumTimeoutMs = 5;
-		public static final int kLongCANTimeoutMs = 100; //use for constructors
-		public static final double kLoopDt = 0.02;
+		public static final int kLongCANTimeoutMs = 100; //Use for constructors, not while enabled
+		public static final double kLoopDt = 0.02; //TODO Find optimal refresh rate
 		public static final double PI = 3.14159265359;
 		public static final double kTicksPerRev = 4096.0;
-		public static final double kMaxNominalOutput = 0.3;
+		public static final double kMaxNominalOutput = 1.0;
 
 	}
 
+	/**
+	 * Every CAN ID should be listed here. Note that the Talons & Victors are physical numerical order ony on the Comp Bot.
+	 * Every CAN ID corresponds to the same outputs on the practice bot but the order is different.
+	 */
 	public static class CAN {
 
 		public static final int kPneumaticsControlModuleID = 0;
@@ -44,6 +59,7 @@ public final class Constants {
 
 		public static final int kLeftCargoIntakeTalonID = 3;
 		public static final int kRightCargoIntakeVictorID = 6;
+
 	}
 
 	public static class DRIVE {
@@ -55,24 +71,30 @@ public final class Constants {
 		public static final boolean kRightSlaveInvert = true;
 		public static final boolean kLeftSensorInvert = true;
 		public static final boolean kRightSensorInvert = true;
+
 		//Measured params
 		public static final double kDriveWheelTrackWidthInches = 33.75; //Effective Wheelbase
 		public static final double kWheelDiameter = 6.0;
 		public static final double kCircumference = kWheelDiameter * GENERAL.PI;
 		public static final double kDriveWheelRadiusInches = kWheelDiameter / 2.0;
 
-		// Tuned dynamics TODO Tune All Drive Params on Carpet
+		//Tuned dynamics
+		//TODO Tune All Drive Params on Carpet
 		public static final double kRobotLinearInertia = 26.30; //Kg
 		public static final double kRobotAngularInertia = 4.4;  // Kg m^2
 		public static final double kRobotAngularDrag = 6.0;  // N*m / (rad/sec)
 		public static final double kDriveVIntercept = 1.07832;  // V
 		public static final double kDriveKv = 0.5858;  // V per rad/s
 		public static final double kDriveKa = 0.012;  // V per rad/s^2
+
+		//TODO Turn In Place Scrub Tuning
 		public static final double kTrackScrubFactor = 1.0;
+
 		//Pure Pursuit Params
 		public static final double kPathKX = 4.0;  // units/s per unit of error
 		public static final double kPathLookaheadTime = 0.4;  // seconds to look ahead along the path for steering
 		public static final double kPathMinLookaheadDistance = 24.0;  // inches
+
 		//Talon PID Constants
 		public static final double kMaxVel = 160.221;
 		public static final double kMaxNativeVel = 3481.6;
@@ -83,8 +105,10 @@ public final class Constants {
 		public static final double kDriveP = 7 * (0.1 * 1023.0) / (700); // 300
 		public static final double kDriveD = 3 * kDriveP;
 		public static final double kDriveI = 0;
+
 		//Other
 		public static final double kTurnInPlaceCircumference = 104.1;
+
 		//Vision Tuning
 		public static final double kVisionTurnP = 0.08;
 		public static final double kVisionDriverTurnP = -0.08;
@@ -153,7 +177,7 @@ public final class Constants {
 
 		public static final int kBookEnd_0 = kIsPracticeBot ? 4192 : -2078;
 		public static final int kBookEnd_1 = kIsPracticeBot ? 1993 : 3790;
-		public static final boolean kCrossOverZero = kIsPracticeBot ? false : true;
+		public static final boolean kCrossOverZero = !kIsPracticeBot;
 		public static final int kOffset = kIsPracticeBot ? -4192 : 0;
 	}
 
@@ -197,7 +221,6 @@ public final class Constants {
 
 		public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> kAreaToDistVisionMap = new InterpolatingTreeMap<>();
 
-
 		static {
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(3783.0), new InterpolatingDouble(46.75));
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(2517.0), new InterpolatingDouble(57.4));
@@ -205,6 +228,7 @@ public final class Constants {
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1782.0), new InterpolatingDouble(68.8));
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1368.0), new InterpolatingDouble(79.4));
 		}
+
 	}
 
 

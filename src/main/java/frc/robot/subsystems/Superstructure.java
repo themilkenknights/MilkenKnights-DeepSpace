@@ -2,6 +2,7 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.AutoChooser;
@@ -48,10 +49,10 @@ public class Superstructure extends Subsystem {
 	@Override
 	public void outputTelemetry() {
 		SmartDashboard.putString("Robot State", Robot.mMatchState.toString());
-		//SmartDashboard.putNumber("Compressor Current", mCompressor.getCompressorCurrent());
-		/*if (mPDP.getVoltage() < 11.5) {
+		SmartDashboard.putNumber("Compressor Current", mCompressor.getCompressorCurrent());
+		if (mPDP.getVoltage() < 11.5) {
 			DriverStation.reportWarning("Low Battery Voltage", false);
-		}*/
+		}
 	}
 
 	@Override
@@ -68,7 +69,7 @@ public class Superstructure extends Subsystem {
 				updateVisionCargo();
 				break;
 			default:
-				Logger.logCriticalError("Unexpected robot state: " + mRobotState);
+				Logger.logErrorWithTrace("Unexpected robot state: " + mRobotState);
 				break;
 
 		}
@@ -99,13 +100,13 @@ public class Superstructure extends Subsystem {
 			case VISION_CARGO_OUTTAKE:
 				mRobotState = Vision.getInstance().getAverageTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
 			default:
-				Logger.logCriticalError("Unexpected robot state: " + mRobotState);
+				Logger.logErrorWithTrace("Unexpected robot state: " + mRobotState);
 				break;
 		}
 	}
 
 	private void startVisionHatch() {
-		AutoChooser.startAuto(new PathTrackTarget(Vision.getInstance().getTargetTranslation()));
+		AutoChooser.startAuto(new PathTrackTarget(Vision.getInstance().getAverageTarget().getDeltaPose()));
 		mHatch.setHatchMechanismState(mRobotState == RobotState.VISION_INTAKE_STATION ? HatchMechanismState.STATION_INTAKE : HatchMechanismState.PLACING);
 	}
 
@@ -116,7 +117,7 @@ public class Superstructure extends Subsystem {
 			if (mDist > 20.0 && target.isValidTarget()) {
 				double mSteer = DRIVE.kVisionTurnP * target.getXOffset();
 				DriveSignal mSig = mDrive.updateMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
-				mLastVisionState = new VisionState(mSig, target, mDrive.getFused());
+				mLastVisionState = new VisionState(mSig, target, mDrive.getFusedHeading());
 			} else {
 				double mSteer = DRIVE.kVisionTurnP * (mLastVisionState.getTarget().getXOffset() - mDrive.getYaw());
 				mDrive.updateMotionMagicPositionSetpoint(mLastVisionState.getDriveSignal(), new DriveSignal(mSteer, -mSteer));
@@ -130,14 +131,14 @@ public class Superstructure extends Subsystem {
 			}
 		} else if (hasHatch && mDrive.isMotionMagicFinished() && !startedTurn) {
 			startedTurn = true;
-			mGoalTurnAngle = MkMath.normalAbsoluteAngleDegrees(Drive.getInstance().getFused() + 180.0);
+			mGoalTurnAngle = MkMath.normalAbsoluteAngleDegrees(Drive.getInstance().getFusedHeading() + 180.0);
 			mDrive.updateTurnToHeading(mGoalTurnAngle);
 		} else if (!mDrive.isTurnDone() && startedTurn) {
 			mDrive.updateTurnToHeading(mGoalTurnAngle);
 		} else if (mDrive.isTurnDone()) {
 			setRobotState(RobotState.TELEOP_DRIVE);
 		} else {
-			Logger.logCriticalError("Unexpected Vision Intake State");
+			Logger.logErrorWithTrace("Unexpected Vision Intake State");
 		}
 	}
 
@@ -148,7 +149,7 @@ public class Superstructure extends Subsystem {
 			if (mDist > 15.0 && target.isValidTarget()) {
 				double mSteer = DRIVE.kVisionTurnP * target.getXOffset();
 				DriveSignal mSig = mDrive.updateMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
-				mLastVisionState = new VisionState(mSig, target, mDrive.getFused());
+				mLastVisionState = new VisionState(mSig, target, mDrive.getFusedHeading());
 			} else if (!Drive.getInstance().isMotionMagicFinished()) {
 				double mSteer = DRIVE.kVisionTurnP * (mLastVisionState.getTarget().getXOffset() - mDrive.getYaw());
 				mDrive.updateMotionMagicPositionSetpoint(mLastVisionState.getDriveSignal(), new DriveSignal(mSteer, -mSteer));
@@ -157,7 +158,7 @@ public class Superstructure extends Subsystem {
 			}
 		} else if (!startedTurn) {
 			startedTurn = true;
-			mGoalTurnAngle = MkMath.normalAbsoluteAngleDegrees(Drive.getInstance().getFused() + 180.0);
+			mGoalTurnAngle = MkMath.normalAbsoluteAngleDegrees(Drive.getInstance().getFusedHeading() + 180.0);
 			mDrive.updateTurnToHeading(mGoalTurnAngle);
 			mCargo.setArmState(CargoArmState.PLACE);
 		} else if (!mDrive.isTurnDone() && startedTurn) {

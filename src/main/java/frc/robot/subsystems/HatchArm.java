@@ -73,7 +73,7 @@ public class HatchArm extends Subsystem {
 				mDisCon = true;
 				mStartDis.start(0.25);
 			}
-			Logger.logCriticalError("Hatch Arm Encoder Not Connected");
+			Logger.logErrorWithTrace("Hatch Arm Encoder Not Connected");
 		} else {
 			if (mDisCon) {
 				mDisCon = false;
@@ -85,7 +85,7 @@ public class HatchArm extends Subsystem {
 		}
 
 		if (mArmTalon.getCurrent() > HATCH_ARM.kMaxSafeCurrent) {
-			Logger.logCriticalError("Unsafe Current on Hatch" + mArmTalon.getCurrent() + " Amps");
+			Logger.logErrorWithTrace("Unsafe Current on Hatch" + mArmTalon.getCurrent() + " Amps");
 			setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
 		}
 	}
@@ -129,7 +129,7 @@ public class HatchArm extends Subsystem {
 				mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mHatchIntakeState.state), NeutralMode.Brake, 0.0);
 			}
 		} else {
-			Logger.logCriticalError("Unexpected arm control state: " + mHatchIntakeControlState);
+			Logger.logErrorWithTrace("Unexpected arm control state: " + mHatchIntakeControlState);
 		}
 	}
 
@@ -184,7 +184,7 @@ public class HatchArm extends Subsystem {
 				case VISION_CONTROL:
 					break;
 				default:
-					Logger.logCriticalError("Unexpected Hatch Arm control state: " + mHatchMechanismState);
+					Logger.logErrorWithTrace("Unexpected Hatch Arm control state: " + mHatchMechanismState);
 					break;
 			}
 
@@ -221,7 +221,7 @@ public class HatchArm extends Subsystem {
 		if (mHatchIntakeControlState == HatchIntakeControlState.OPEN_LOOP && mHatchMechanismState == HatchMechanismState.MANUAL_OVERRIDE) {
 			mOpenLoopSetpoint = output;
 		} else {
-			Logger.logCriticalError("Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled");
+			Logger.logErrorWithTrace("Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled");
 		}
 	}
 
@@ -230,7 +230,7 @@ public class HatchArm extends Subsystem {
 			setHatchIntakeControlState(HatchIntakeControlState.MOTION_MAGIC);
 			mHatchIntakeState = state;
 		} else {
-			Logger.logCriticalError("Failed to set Arm State: Manual Override Enabled");
+			Logger.logErrorWithTrace("Failed to set Arm State: Manual Override Enabled");
 		}
 	}
 
@@ -281,7 +281,7 @@ public class HatchArm extends Subsystem {
 			case VISION_CONTROL:
 				break;
 			default:
-				Logger.logCriticalError("Unexpected Hatch Mechanism: " + mHatchMechanismState);
+				Logger.logErrorWithTrace("Unexpected Hatch Mechanism: " + mHatchMechanismState);
 				break;
 		}
 		mHatchMechanismState = state;

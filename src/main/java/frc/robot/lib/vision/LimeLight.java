@@ -5,9 +5,7 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
-import frc.robot.lib.geometry.Pose2d;
-import frc.robot.lib.geometry.Rotation2d;
-import frc.robot.lib.geometry.Translation2d;
+import frc.robot.lib.util.MovingAverage;
 import frc.robot.lib.vision.LimeLightControlMode.Advanced_Crosshair;
 import frc.robot.lib.vision.LimeLightControlMode.Advanced_Target;
 import frc.robot.lib.vision.LimeLightControlMode.CamMode;
@@ -27,6 +25,9 @@ public class LimeLight {
 	private String m_tableName, m_pnp_tableName;
 	private Boolean isConnected = false;
 	private double _hearBeatPeriod = 0.1;
+	private LimelightTarget mTarget;
+	private MovingAverage mThrottleAverage;
+
 
 	/**
 	 * Using the Default Lime Light NT table
@@ -52,6 +53,9 @@ public class LimeLight {
 		m_pnp_tableName = "limelight";
 		m_pnp_table = NetworkTableInstance.getDefault().getTable(m_pnp_tableName);
 		camtran = m_pnp_table.getEntry("camtran");
+
+		mTarget = LimelightTarget.EMPTY;
+		mThrottleAverage = new MovingAverage(3);
 	}
 
 	/**
@@ -80,12 +84,22 @@ public class LimeLight {
 		return isConnected;
 	}
 
-	public LimelightTarget returnTarget() {
-		double[] transl = camtran.getDoubleArray(new double[]{0,0,0,0,0,0});
-		//System.out.println("X: " + transl[0] + " Y: " + transl[1] + " Z: " + transl[2] + " Yaw: " + transl[3] + " Pitch: " + transl[4] + " Roll: " + transl[5]);
-		Pose2d deltaPose = new Pose2d(new Translation2d(-transl[2], transl[0]), Rotation2d.fromDegrees(transl[3]));
-		System.out.println(deltaPose);
-		return new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength() * getVertLength(), getCaptureTime(), deltaPose);
+	public synchronized void updateTarget() {
+		mTarget = new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(), getVertLength(), getCaptureTime(), getCamTran());
+		mThrottleAverage.addNumber(mTarget);
+	}
+
+	public synchronized LimelightTarget returnLastTarget() {
+		return mTarget;
+	}
+
+	public synchronized LimelightTarget returnAverageTarget() {
+		return mThrottleAverage.getAverage();
+	}
+
+	public double[] getCamTran() {
+		double[] cam = camtran.getDoubleArray(new double[]{0, 0, 0, 0, 0, 0});
+		return cam;
 	}
 
 	/**
@@ -326,14 +340,23 @@ public class LimeLight {
 
 	class PeriodicRunnable implements java.lang.Runnable {
 
+		int i = 0;
+
+		//TODO Verify Thread Efficiency
 		public void run() {
-			resetPilelineLatency();
+			if (i == 4) {
+				resetPilelineLatency();
+				i = 0;
+			}
+			i++;
+			updateTarget();
 			try {
-				Thread.sleep(50);
+				Thread.sleep(25);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 			isConnected = getPipelineLatency() != 0.0;
 		}
 	}
+
 }

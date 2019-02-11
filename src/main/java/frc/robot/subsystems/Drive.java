@@ -83,7 +83,7 @@ public class Drive extends Subsystem {
 				case MOTION_MAGIC:
 					break;
 				default:
-					Logger.logCriticalError("Unexpected drive control state: " + mDriveControlState);
+					Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
 					break;
 			}
 		}
@@ -108,7 +108,7 @@ public class Drive extends Subsystem {
 			leftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, mPeriodicIO.brake_mode, mPeriodicIO.left_feedforward);
 			rightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, mPeriodicIO.brake_mode, mPeriodicIO.right_feedforward);
 		} else {
-			Logger.logCriticalError("Unexpected drive control state: " + mDriveControlState);
+			Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
 		}
 	}
 
@@ -116,13 +116,13 @@ public class Drive extends Subsystem {
 	Update Shuffleboard and Log to CSV
 	 */
 	public synchronized void outputTelemetry() {
-		//leftDrive.updateSmartDash(false);
-		//rightDrive.updateSmartDash(false);
+		leftDrive.updateSmartDash(false);
+		rightDrive.updateSmartDash(false);
 		SmartDashboard.putString("Drive State", mDriveControlState.toString());
 		SmartDashboard.putBoolean("Drivetrain Status", driveStatus());
-		//SmartDashboard.putNumber("NavX Fused Heading", navX.getFusedHeading());
+		SmartDashboard.putNumber("NavX Fused Heading", navX.getFusedHeading());
 		if (mCSVWriter != null) {
-			System.out.println("ERRROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+			Logger.logErrorWithTrace("ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			mCSVWriter.add(mPeriodicIO);
 			mCSVWriter.write();
 		}
@@ -176,7 +176,7 @@ public class Drive extends Subsystem {
 				mPeriodicIO.left_accel = mPeriodicIO.right_accel = 0.0;
 			}
 		} else {
-			Logger.logCriticalError("Drive is not in path following state");
+			Logger.logErrorWithTrace("Drive is not in path following state");
 		}
 	}
 
@@ -322,8 +322,12 @@ public class Drive extends Subsystem {
 		return mIsOnTarget;
 	}
 
-	public double getFused() {
-		//TODO Forgot what heading value is needed for turn to angle
+	/**
+	 * TODO Ensure this returns the correct angle {@link #updateTurnToHeading(double angle)}
+	 *
+	 * @return current fused heading from navX
+	 */
+	public double getFusedHeading() {
 		return mPeriodicIO.gyro_heading.getDegrees();
 	}
 
@@ -341,7 +345,7 @@ public class Drive extends Subsystem {
 			Logger.logMarker("Drive Test Success");
 		}
 		if (!navX.isConnected()) {
-			Logger.logCriticalError("FAILED - NAVX DISCONNECTED");
+			Logger.logErrorWithTrace("FAILED - NAVX DISCONNECTED");
 			driveCheck = false;
 		} else {
 			Logger.logMarker("NavX Connected");
