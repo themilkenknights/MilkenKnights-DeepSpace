@@ -46,7 +46,7 @@ public class Vision extends Subsystem {
 	}
 
 	@Override
-	public void onLoop(double timestamp) {
+	public void onMainLoop(double timestamp) {
 
 	}
 

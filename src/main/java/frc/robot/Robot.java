@@ -62,7 +62,7 @@ public class Robot extends TimedRobot {
 		try {
 			Logger.logAutoInit();
 			mMatchState = MatchState.AUTO;
-			mSubsystemManager.autonomousInit();
+			mSubsystemManager.startAuto();
 			AutoChooser.startAuto(new NearScaleOnlyMode(true));
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
@@ -75,7 +75,7 @@ public class Robot extends TimedRobot {
 		try {
 			Logger.logTeleopInit();
 			mMatchState = MatchState.TELEOP;
-			mSubsystemManager.teleopInit();
+			mSubsystemManager.startTeleop();
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;
@@ -86,7 +86,7 @@ public class Robot extends TimedRobot {
 	public void testInit() {
 		try {
 			mMatchState = MatchState.TEST;
-			mSubsystemManager.autonomousInit();
+			mSubsystemManager.startAuto();
 			Logger.logMarker("Starting check systems.");
 			mSubsystemManager.checkSystem();
 			mSubsystemManager.stop();
@@ -109,18 +109,18 @@ public class Robot extends TimedRobot {
 
 	@Override
 	public void autonomousPeriodic() {
-		mSubsystemManager.onLoop();
+		mSubsystemManager.mainLoop();
 	}
 
 	@Override
 	public void teleopPeriodic() {
-		mSubsystemManager.onLoop();
+		mSubsystemManager.mainLoop();
 		Input.updateControlInput();
 	}
 
 	@Override
 	public void testPeriodic() {
-		mSubsystemManager.onLoop();
+		mSubsystemManager.mainLoop();
 	}
 
 	public enum MatchState {

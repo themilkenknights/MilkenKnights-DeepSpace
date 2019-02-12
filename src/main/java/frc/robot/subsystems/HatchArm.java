@@ -61,7 +61,8 @@ public class HatchArm extends Subsystem {
 		}
 	}
 
-	private void armSafetyCheck() {
+	@Override
+	public void safetyCheck(double timestamp) {
 		if (!mArmTalon.isEncoderConnected()) {
 			if (mDisCon) {
 				if (mStartDis.isDone()) {
@@ -120,16 +121,20 @@ public class HatchArm extends Subsystem {
 	 */
 	@Override
 	public synchronized void writePeriodicOutputs(double timestamp) {
-		if (mHatchIntakeControlState == HatchIntakeControlState.OPEN_LOOP) {
-			mArmTalon.set(ControlMode.PercentOutput, mOpenLoopSetpoint, NeutralMode.Brake);
-		} else if (mHatchIntakeControlState == HatchIntakeControlState.MOTION_MAGIC) {
-			if (mHatchIntakeState == HatchIntakeState.ENABLE) {
-				mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mArmPosEnable), NeutralMode.Brake);
+		synchronized (HatchArm.this) {
+			if (mHatchIntakeControlState == HatchIntakeControlState.OPEN_LOOP) {
+				mArmTalon.set(ControlMode.PercentOutput, mOpenLoopSetpoint, NeutralMode.Brake);
+			} else if (mHatchIntakeControlState == HatchIntakeControlState.MOTION_MAGIC) {
+				if (mHatchIntakeState == HatchIntakeState.ENABLE) {
+					mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mArmPosEnable), NeutralMode.Brake);
+				} else {
+					mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mHatchIntakeState.state), NeutralMode.Brake, 0.0);
+				}
 			} else {
-				mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mHatchIntakeState.state), NeutralMode.Brake, 0.0);
+				Logger.logErrorWithTrace("Unexpected arm control state: " + mHatchIntakeControlState);
 			}
-		} else {
-			Logger.logErrorWithTrace("Unexpected arm control state: " + mHatchIntakeControlState);
+
+			mArmSolenoid.set(mHatchArmState.state);
 		}
 	}
 
@@ -151,10 +156,9 @@ public class HatchArm extends Subsystem {
 	 * @param timestamp Time in seconds since code start
 	 */
 	@Override
-	public void onLoop(double timestamp) {
+	public void onMainLoop(double timestamp) {
 		synchronized (HatchArm.this) {
 			boolean hatchLimit = isHatchLimitTriggered();
-			//armSafetyCheck();
 			switch (mHatchMechanismState) {
 				case STOWED:
 					break;
@@ -238,8 +242,8 @@ public class HatchArm extends Subsystem {
 	Move Hatch Arm to Stow or Place
 	 */
 	public synchronized void setHatchArmPosition(HatchArmState armState) {
-		mArmSolenoid.set(armState.state);
-		//Logger.logMarker("Set Hatch Arm to " + armState.toString());
+		mHatchArmState = armState;
+		Logger.logMarker("Set Hatch Spear to " + armState.toString());
 	}
 
 	public HatchArmState getHatchArmState() {

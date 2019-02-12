@@ -50,7 +50,6 @@ public class Drive extends Subsystem {
 		return InstanceHolder.mInstance;
 	}
 
-
 	/**
 	 * Step 1: Read inputs from Talon and NavX
 	 */
@@ -71,7 +70,7 @@ public class Drive extends Subsystem {
 	 * @param timestamp In Seconds Since Code Start
 	 */
 	@Override
-	public void onLoop(double timestamp) {
+	public void onMainLoop(double timestamp) {
 		synchronized (Drive.this) {
 			stateEstimator(timestamp);
 			switch (mDriveControlState) {

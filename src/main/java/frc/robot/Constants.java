@@ -29,10 +29,15 @@ public final class Constants {
 		public static final int kPIDLoopIdx = 0;
 		public static final int kMediumTimeoutMs = 5;
 		public static final int kLongCANTimeoutMs = 100; //Use for constructors, not while enabled
-		public static final double kLoopDt = 0.02; //TODO Find optimal refresh rate
 		public static final double PI = 3.14159265359;
 		public static final double kTicksPerRev = 4096.0;
 		public static final double kMaxNominalOutput = 1.0;
+		public static final double kLoopDt = 0.02; //TODO Find optimal refresh rate
+		public static final double kLooperDt = 0.005;
+		public static final double kSlowLooperDt = 0.005;
+		public static final double kLimelightLoopPeriod = 0.025;
+		public static final double kPixyLoopPeriod = 0.025;
+
 
 	}
 
