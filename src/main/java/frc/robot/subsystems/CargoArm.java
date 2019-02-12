@@ -146,7 +146,7 @@ public class CargoArm extends Subsystem {
 	@Override
 	public void onLoop(double timestamp) {
 		synchronized (CargoArm.this) {
-			armSafetyCheck();
+			//TODO Re enable armSafetyCheck();
 			updateRollers();
 		}
 	}

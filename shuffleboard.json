@@ -468,6 +468,20 @@
                   "_title": "Compressor[0]/Enabled",
                   "Colors/Color when true": "#7CFC00FF",
                   "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/Solenoid[0,2]/Value",
+                  "_title": "Solenoid[0,2]/Value",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/Solenoid[0,1]/Value",
+                  "_title": "Solenoid[0,1]/Value",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
                 }
               ]
             }
@@ -627,23 +641,139 @@
         "hgap": 16.0,
         "vgap": 16.0,
         "tiles": {
-          "0,0": {
+          "5,2": {
             "size": [
-              9,
-              4
+              1,
+              1
             ],
             "content": {
-              "_type": "Camera Stream",
-              "_source0": "camera_server://limelight",
-              "_title": "limelight",
-              "Crosshair/Show crosshair": true,
-              "Crosshair/Crosshair color": "#FFFFFFFF",
-              "Controls/Show controls": true,
-              "Controls/Rotation": "NONE",
-              "compression": -1.0,
-              "fps": -1,
-              "imageWidth": 0,
-              "imageHeight": 0
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Left_Drive Master Output",
+              "_title": "/SmartDashboard/Left_Drive Master Output"
+            }
+          },
+          "6,2": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Right_Drive Master Output",
+              "_title": "/SmartDashboard/Right_Drive Master Output"
+            }
+          },
+          "3,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Front Climb",
+              "_title": "/SmartDashboard/Front Climb"
+            }
+          },
+          "4,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Rear Climb",
+              "_title": "/SmartDashboard/Rear Climb"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Tab 5",
+      "autoPopulate": false,
+      "autoPopulatePrefix": "",
+      "widgetPane": {
+        "gridSize": 128.0,
+        "showGrid": true,
+        "hgap": 16.0,
+        "vgap": 16.0,
+        "tiles": {
+          "3,1": {
+            "size": [
+              3,
+              2
+            ],
+            "content": {
+              "_type": "PDP",
+              "_source0": "network_table:///LiveWindow/Ungrouped/PowerDistributionPanel[11]",
+              "_title": "/LiveWindow/Ungrouped/PowerDistributionPanel[11]",
+              "Visuals/Show voltage and current values": true
+            }
+          },
+          "6,2": {
+            "size": [
+              3,
+              2
+            ],
+            "content": {
+              "_type": "Network Table Tree",
+              "_source0": "network_table:///LiveWindow/Ungrouped/Compressor[0]",
+              "_title": "/LiveWindow/Ungrouped/Compressor[0]"
+            }
+          },
+          "3,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Network Table Tree",
+              "_source0": "network_table:///LiveWindow/Ungrouped/Solenoid[0,0]",
+              "_title": "/LiveWindow/Ungrouped/Solenoid[0,0]"
+            }
+          },
+          "4,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Network Table Tree",
+              "_source0": "network_table:///LiveWindow/Ungrouped/Solenoid[0,1]",
+              "_title": "/LiveWindow/Ungrouped/Solenoid[0,1]"
+            }
+          },
+          "5,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Network Table Tree",
+              "_source0": "network_table:///LiveWindow/Ungrouped/Solenoid[0,2]",
+              "_title": "/LiveWindow/Ungrouped/Solenoid[0,2]"
+            }
+          },
+          "6,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Front Climb",
+              "_title": "/SmartDashboard/Front Climb"
+            }
+          },
+          "7,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Rear Climb",
+              "_title": "/SmartDashboard/Rear Climb"
             }
           }
         }
@@ -651,9 +781,9 @@
     }
   ],
   "windowGeometry": {
-    "x": -8.0,
-    "y": -8.0,
-    "width": 1382.0,
-    "height": 744.0
+    "x": -7.0,
+    "y": 0.0,
+    "width": 1378.0,
+    "height": 543.0
   }
 }

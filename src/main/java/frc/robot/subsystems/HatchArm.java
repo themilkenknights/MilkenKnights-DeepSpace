@@ -5,9 +5,11 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.Constants;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.HATCH_ARM;
+import frc.robot.Constants.PNUEMATICS;
 import frc.robot.lib.drivers.CT;
 import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
@@ -30,7 +32,7 @@ public class HatchArm extends Subsystem {
 	private MkTime mStartDis, mTransferTime;
 
 	private HatchArm() {
-		mArmSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, HATCH_ARM.kHatchArmChannel);
+		mArmSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kHatchArmChannel);
 		mHatchArmState = HatchArmState.STOW;
 		mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kHatchLimitSwitchTalonID, TalonLoc.Hatch_Arm);
 		mStartDis = new MkTime();
@@ -154,7 +156,7 @@ public class HatchArm extends Subsystem {
 	public void onLoop(double timestamp) {
 		synchronized (HatchArm.this) {
 			boolean hatchLimit = isHatchLimitTriggered();
-			//armSafetyCheck();
+			//TODO Re enable armSafetyCheck();
 			switch (mHatchMechanismState) {
 				case STOWED:
 					break;

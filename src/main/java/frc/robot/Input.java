@@ -15,6 +15,7 @@ import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
 import frc.robot.subsystems.HatchArm.HatchMechanismState;
 import frc.robot.subsystems.Superstructure;
+import frc.robot.subsystems.Superstructure.ClimbState;
 import frc.robot.subsystems.Superstructure.RobotState;
 import frc.robot.subsystems.Vision;
 
@@ -24,6 +25,8 @@ public class Input {
 	private static final MkJoystick operatorJoystick = new MkJoystick(1);
 
 	private static final MkJoystickButton toggleDriverVisionAssist = driverJoystick.getButton(4, "Driver Vision Assist");
+	private static final MkJoystickButton mForwardClimb = driverJoystick.getButton(3, "Climb Forward");
+	private static final MkJoystickButton mRearClimb = driverJoystick.getButton(2, "Climb Rear");
 
 	private static final MkJoystickButton mVisionStationIntakeButton = operatorJoystick.getButton(3, "Vision Hatch HP Intake Button");
 	private static final MkJoystickButton mVisionPlaceButton = operatorJoystick.getButton(4, "Vision Place Hatch Button");
@@ -74,11 +77,17 @@ public class Input {
 		}
 
 		if (currentRobotState == RobotState.TELEOP_DRIVE) {
-			double forward = (-driverJoystick.getRawAxis(2) + driverJoystick.getRawAxis(3));
+			double forward = (-driverJoystick.getRawAxis(2) + driverJoystick.getRawAxis(3)) / 2;
 			double turn = (-driverJoystick.getRawAxis(0));
 			LimelightTarget target = mVision.getAverageTarget();
 			double mSteer = target.getDistance() < 50.0 && target.isValidTarget() && mVisionAssist ? DRIVE.kVisionDriverTurnP * target.getXOffset() : 0.0;
 			mDrive.setOpenLoop(DriveHelper.cheesyDrive(forward, turn + mSteer, true));
+		}
+
+		if(mForwardClimb.isPressed()){
+			mStructure.setFrontClimbState(mStructure.getFrontClimbState() == ClimbState.UP ? ClimbState.DOWN: ClimbState.UP);
+		} else if(mRearClimb.isPressed()){
+			mStructure.setRearClimbState(mStructure.getRearClimbState() == ClimbState.UP ? ClimbState.DOWN: ClimbState.UP);
 		}
 
 		if (mCargo.getArmControlState() == CargoArmControlState.OPEN_LOOP) {

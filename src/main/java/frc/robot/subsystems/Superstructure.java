@@ -4,12 +4,16 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.AutoChooser;
 import frc.robot.Constants;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.DRIVE;
+import frc.robot.Constants.HATCH_ARM;
+import frc.robot.Constants.PNUEMATICS;
+import frc.robot.Constants.SUPERSTRUCTURE;
 import frc.robot.Robot;
 import frc.robot.auto.AutoModeExecutor;
 import frc.robot.auto.modes.PathTrackTarget;
@@ -36,8 +40,14 @@ public class Superstructure extends Subsystem {
 	private VisionState mLastVisionState = VisionState.EMPTY;
 	private double mGoalTurnAngle = 0;
 	private MkTime mRandomTimer = new MkTime();
+	private Solenoid mFrontClimbSolenoid, mRearClimbSolenoid;
+	private ClimbState mRearClimbState = ClimbState.UP;
+	private ClimbState mFrontClimbState = ClimbState.UP;
 
 	private Superstructure() {
+		mFrontClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kFrontClimbSolenoidChannel);
+		mRearClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kRearClimbSolenoidChannel);
+
 		mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
 		mCompressor = new Compressor(CAN.kPneumaticsControlModuleID);
 	}
@@ -53,6 +63,26 @@ public class Superstructure extends Subsystem {
 		if (mPDP.getVoltage() < 11.5) {
 			DriverStation.reportWarning("Low Battery Voltage", false);
 		}
+		SmartDashboard.putString("Front Climb", mFrontClimbState.toString());
+		SmartDashboard.putString("Rear Climb", mRearClimbState.toString());
+	}
+
+	public void setFrontClimbState(ClimbState state){
+		mFrontClimbState = state;
+		mFrontClimbSolenoid.set(state.state);
+	}
+
+	public void setRearClimbState(ClimbState state){
+		mRearClimbState = state;
+		mRearClimbSolenoid.set(state.state);
+	}
+
+	public ClimbState getFrontClimbState(){
+	return mFrontClimbState;
+	}
+
+	public ClimbState getRearClimbState(){
+	return mRearClimbState;
 	}
 
 	@Override
@@ -175,6 +205,8 @@ public class Superstructure extends Subsystem {
 
 	@Override
 	public void onStop(double timestamp) {
+		setFrontClimbState(ClimbState.UP);
+		setRearClimbState(ClimbState.UP);
 	}
 
 	@Override
@@ -186,6 +218,15 @@ public class Superstructure extends Subsystem {
 		hasHatch = false;
 		mLastVisionState = VisionState.EMPTY;
 		mGoalTurnAngle = 0.0;
+	}
+
+	public enum ClimbState {
+		UP(SUPERSTRUCTURE.kClimbUpState), DOWN(!SUPERSTRUCTURE.kClimbUpState);
+		public final boolean state;
+
+		ClimbState(final boolean state) {
+			this.state = state;
+		}
 	}
 
 	public enum RobotState {

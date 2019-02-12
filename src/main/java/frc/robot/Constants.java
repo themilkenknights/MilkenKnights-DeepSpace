@@ -45,19 +45,19 @@ public final class Constants {
 		public static final int kPneumaticsControlModuleID = 0;
 		public static final int kPowerDistributionPanelID = 11;
 
-		public static final int kDriveLeftMasterTalonID = 10;
-		public static final int kDriveLeftSlaveVictorID = 7;
+		public static final int kDriveLeftMasterTalonID = 5;
+		public static final int kDriveLeftSlaveVictorID = 4;
 
-		public static final int kDriveRightMasterTalonID = 5;
-		public static final int kDriveRightSlaveVictorID = 2;
+		public static final int kDriveRightMasterTalonID = 10;
+		public static final int kDriveRightSlaveVictorID = 9;
 
-		public static final int kGroundHatchArmTalonID = 9;
-		public static final int kHatchLimitSwitchTalonID = 4;
+		public static final int kGroundHatchArmTalonID = 8;
+		public static final int kHatchLimitSwitchTalonID = 3;
 
-		public static final int kRightMasterCargoArmTalonID = 8;
-		public static final int kLeftSlaveCargoArmVictorID = 1;
+		public static final int kRightMasterCargoArmTalonID = 7;
+		public static final int kLeftSlaveCargoArmVictorID = 2;
 
-		public static final int kLeftCargoIntakeTalonID = 3;
+		public static final int kLeftCargoIntakeTalonID = 1;
 		public static final int kRightCargoIntakeVictorID = 6;
 
 	}
@@ -67,6 +67,7 @@ public final class Constants {
 		//Invert
 		public static final boolean kLeftMasterInvert = false;
 		public static final boolean kLeftSlaveInvert = false;
+
 		public static final boolean KRightMasterInvert = true;
 		public static final boolean kRightSlaveInvert = true;
 		public static final boolean kLeftSensorInvert = true;
@@ -184,7 +185,6 @@ public final class Constants {
 
 	public static class HATCH_ARM {
 
-		public static final int kHatchArmChannel = 0;
 		public static final boolean kHatchArmPlaceState = true;
 
 
@@ -209,6 +209,16 @@ public final class Constants {
 		public static final int kBookEnd_1 = kIsPracticeBot ? 497 : 3790;
 		public static final boolean kCrossOverZero = kIsPracticeBot ? true : true;
 		public static final int kOffset = kIsPracticeBot ? (1550) : 0;
+	}
+
+	public static class PNUEMATICS {
+		public static final int kHatchArmChannel = 0;
+		public static final int kFrontClimbSolenoidChannel = 1;
+		public static final int kRearClimbSolenoidChannel = 2;
+	}
+
+	public static class SUPERSTRUCTURE {
+		public static final boolean kClimbUpState = false;
 	}
 
 	public static class LOG {
