@@ -37,6 +37,7 @@ public final class Constants {
 		public static final double kSlowLooperDt = 0.005;
 		public static final double kLimelightLoopPeriod = 0.025;
 		public static final double kPixyLoopPeriod = 0.025;
+		public static final double kTelemetryDt = 0.1;
 
 
 	}
@@ -117,8 +118,8 @@ public final class Constants {
 		public static final double kTurnInPlaceCircumference = 104.1;
 
 		//Vision Tuning
-		public static final double kVisionTurnP = 0.08;
-		public static final double kVisionDriverTurnP = -0.08;
+		public static final double kVisionTurnP = 0.03;
+		public static final double kVisionDriverTurnP = -0.03;
 
 		//Turn In Place
 		public static final double kGoalPosTolerance = 0.75; // degrees
@@ -129,7 +130,7 @@ public final class Constants {
 	public static class INPUT {
 
 		public static final double kThrottleDeadband = 0.0;
-		public static final double kWheelDeadband = 0.0045;
+		public static final double kWheelDeadband = 0.003;
 		public static final double kOperatorDeadband = 0.0045;
 
 	}

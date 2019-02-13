@@ -32,7 +32,7 @@ public class MkJoystickButton {
 		if (isPressed) {
 			Logger.logMarker(
 					"[Joystick] " + joystick.getPort() + "\t[Button]" + rawButton + "\t Pressed ( "
-							+ buttonName + " )");
+							+ buttonName + " Button )");
 		}
 		return isPressed;
 	}

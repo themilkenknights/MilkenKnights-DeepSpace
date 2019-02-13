@@ -5,7 +5,6 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.Constants;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.HATCH_ARM;
@@ -141,8 +140,7 @@ public class HatchArm extends Subsystem {
 		}
 	}
 
-	@Override
-	public void outputTelemetry() {
+	public void outputTelemetry(double timestamp) {
 		mArmTalon.updateSmartDash(false);
 		SmartDashboard.putString("Hatch Arm Desired Position", mHatchIntakeState.toString());
 		SmartDashboard.putString("Hatch Arm Control Mode", mHatchIntakeControlState.toString());
@@ -162,36 +160,36 @@ public class HatchArm extends Subsystem {
 		synchronized (HatchArm.this) {
 			boolean hatchLimit = isHatchLimitTriggered();
 			switch (mHatchMechanismState) {
-			case STOWED:
-				break;
-			case GROUND_INTAKE:
-				break;
-			case PLACING:
-				break;
-			case STATION_INTAKE:
-				if (hatchLimit) {
-					setHatchMechanismState(HatchMechanismState.STOWED);
-				}
-				break;
-			case TRANSFER:
-				if (hatchLimit) {
-					setHatchArmPosition(HatchArmState.STOW);
-					mTransferTime.start(0.4);
-				}
-				if (mTransferTime.isDone()) {
-					setHatchMechanismState(HatchMechanismState.STOWED);
-					mTransferTime.reset();
-				}
-				break;
-			case MANUAL_OVERRIDE:
-				break;
-			case UNKNOWN:
-				break;
-			case VISION_CONTROL:
-				break;
-			default:
-				Logger.logErrorWithTrace("Unexpected Hatch Arm control state: " + mHatchMechanismState);
-				break;
+				case STOWED:
+					break;
+				case GROUND_INTAKE:
+					break;
+				case PLACING:
+					break;
+				case STATION_INTAKE:
+					if (hatchLimit) {
+						setHatchMechanismState(HatchMechanismState.STOWED);
+					}
+					break;
+				case TRANSFER:
+					if (hatchLimit) {
+						setHatchArmPosition(HatchArmState.STOW);
+						mTransferTime.start(0.4);
+					}
+					if (mTransferTime.isDone()) {
+						setHatchMechanismState(HatchMechanismState.STOWED);
+						mTransferTime.reset();
+					}
+					break;
+				case MANUAL_OVERRIDE:
+					break;
+				case UNKNOWN:
+					break;
+				case VISION_CONTROL:
+					break;
+				default:
+					Logger.logErrorWithTrace("Unexpected Hatch Arm control state: " + mHatchMechanismState);
+					break;
 			}
 
 		}
@@ -261,44 +259,44 @@ public class HatchArm extends Subsystem {
 
 	public void setHatchMechanismState(HatchMechanismState state) {
 		switch (state) {
-		case TRANSFER:
-			setHatchArmPosition(HatchArmState.PLACE);
-			setHatchIntakePosition(HatchIntakeState.TRANSFER_POINT);
-			break;
-		case GROUND_INTAKE:
-			setHatchIntakePosition(HatchIntakeState.INTAKE_POINT);
-			setHatchArmPosition(HatchArmState.STOW);
-			break;
-		case STOWED:
-			setHatchArmPosition(HatchArmState.STOW);
-			setHatchIntakePosition(HatchIntakeState.STOW_POINT);
-			break;
-		case STATION_INTAKE:
-			setHatchArmPosition(HatchArmState.PLACE);
-			setHatchIntakePosition(HatchIntakeState.STOW_POINT);
-			break;
-		case PLACING:
-			setHatchArmPosition(HatchArmState.PLACE);
-			setHatchIntakePosition(HatchIntakeState.STOW_POINT);
-			break;
-		case MANUAL_OVERRIDE:
-			enableSafety(true);
-			break;
-		case UNKNOWN:
-			setEnable();
-			break;
-		case VISION_CONTROL:
-			break;
-		default:
-			Logger.logErrorWithTrace("Unexpected Hatch Mechanism: " + mHatchMechanismState);
-			break;
+			case TRANSFER:
+				setHatchArmPosition(HatchArmState.PLACE);
+				setHatchIntakePosition(HatchIntakeState.TRANSFER_POINT);
+				break;
+			case GROUND_INTAKE:
+				setHatchIntakePosition(HatchIntakeState.INTAKE_POINT);
+				setHatchArmPosition(HatchArmState.STOW);
+				break;
+			case STOWED:
+				setHatchArmPosition(HatchArmState.STOW);
+				setHatchIntakePosition(HatchIntakeState.STOW_POINT);
+				break;
+			case STATION_INTAKE:
+				setHatchArmPosition(HatchArmState.PLACE);
+				setHatchIntakePosition(HatchIntakeState.STOW_POINT);
+				break;
+			case PLACING:
+				setHatchArmPosition(HatchArmState.PLACE);
+				setHatchIntakePosition(HatchIntakeState.STOW_POINT);
+				break;
+			case MANUAL_OVERRIDE:
+				enableSafety(true);
+				break;
+			case UNKNOWN:
+				setEnable();
+				break;
+			case VISION_CONTROL:
+				break;
+			default:
+				Logger.logErrorWithTrace("Unexpected Hatch Mechanism: " + mHatchMechanismState);
+				break;
 		}
 		mHatchMechanismState = state;
 	}
 
 	public enum HatchIntakeControlState {
 		MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all
-						// circumstances
+		// circumstances
 		OPEN_LOOP // Direct PercentVBus control of the arm as a failsafe
 	}
 

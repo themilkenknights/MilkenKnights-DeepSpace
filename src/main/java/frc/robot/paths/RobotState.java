@@ -94,7 +94,7 @@ public class RobotState {
 		return vehicle_velocity_measured_;
 	}
 
-	public void outputToSmartDashboard() {
+	public synchronized void outputToSmartDashboard() {
 		Pose2d odometry = getLatestFieldToVehicle().getValue();
 		SmartDashboard.putNumber("Robot Pose X", odometry.getTranslation().x());
 		SmartDashboard.putNumber("Robot Pose Y", odometry.getTranslation().y());

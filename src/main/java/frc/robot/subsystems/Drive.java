@@ -35,7 +35,7 @@ public class Drive extends Subsystem {
 	private Rotation2d mGyroOffset = Rotation2d.identity();
 	private boolean mOverrideTrajectory, mIsOnTarget = false;
 	private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
-	private double left_encoder_prev_distance_, right_encoder_prev_distance_ = 0.0;
+	private double left_encoder_prev_distance_, right_encoder_prev_distance_, mDesiredTurnAngle = 0.0;
 
 	private Drive() {
 		mDriveControlState = DriveControlState.OPEN_LOOP;
@@ -115,7 +115,7 @@ public class Drive extends Subsystem {
 	/*
 	Update Shuffleboard and Log to CSV
 	 */
-	public synchronized void outputTelemetry() {
+	public synchronized void outputTelemetry(double timestamp) {
 		leftDrive.updateSmartDash(false);
 		rightDrive.updateSmartDash(false);
 		SmartDashboard.putString("Drive State", mDriveControlState.toString());
@@ -197,7 +197,7 @@ public class Drive extends Subsystem {
 		mPeriodicIO.brake_mode = NeutralMode.Brake;
 	}
 
-	public synchronized DriveSignal updateMotionMagicDeltaSetpoint(DriveSignal signal, DriveSignal feedforward) {
+	public synchronized DriveSignal setMotionMagicDeltaSetpoint(DriveSignal signal, DriveSignal feedforward) {
 		DriveSignal newSig = new DriveSignal(signal.getLeft() + mPeriodicIO.leftPos, signal.getRight() + mPeriodicIO.rightPos, signal.getBrakeMode());
 		updateMotionMagicPositionSetpoint(newSig, feedforward);
 		return newSig;
@@ -240,13 +240,18 @@ public class Drive extends Subsystem {
 		mPeriodicIO.brake_mode = signal.getBrakeMode();
 	}
 
+	public synchronized void setTurnInPlaceHeading(double angle) {
+		mDesiredTurnAngle = angle;
+		updateTurnToHeading();
+	}
+
 	/**
 	 * @param angle Angle to turn to in degrees (0-360)
 	 */
-	public synchronized void updateTurnToHeading(double angle) {
+	public synchronized void updateTurnToHeading() {
 		final Rotation2d field_to_robot = RobotState.getInstance().getLatestFieldToVehicle().getValue().getRotation();
 		// Figure out the rotation necessary to turn to face the goal.
-		final Rotation2d robot_to_target = field_to_robot.inverse().rotateBy(Rotation2d.fromDegrees(angle));
+		final Rotation2d robot_to_target = field_to_robot.inverse().rotateBy(Rotation2d.fromDegrees(mDesiredTurnAngle));
 		// Check if we are on target
 		if (Math.abs(robot_to_target.getDegrees()) < Constants.DRIVE.kGoalPosTolerance
 				&& Math.abs(mPeriodicIO.leftVel) < Constants.DRIVE.kGoalVelTolerance && Math.abs(mPeriodicIO.rightVel) < Constants.DRIVE.kGoalVelTolerance) {

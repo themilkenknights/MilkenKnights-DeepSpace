@@ -19,7 +19,7 @@ public class Vision extends Subsystem {
 	private Vision() {
 		mLimeLight = new LimeLight();
 		mLimeLight.setLEDMode(LedMode.kforceOn);
-		mLimeLight.setCamMode(CamMode.kdriver);
+		mLimeLight.setCamMode(CamMode.kvision);
 		mLimeLight.setStream(StreamType.kPiPMain);
 		mPixy = new MkPixy();
 	}
@@ -29,17 +29,17 @@ public class Vision extends Subsystem {
 	}
 
 	@Override
-	public void outputTelemetry() {
+	public void outputTelemetry(double timestamp) {
 		if (usePixy) {
 			SmartDashboard.putNumber("Pixy X", mPixy.getX());
 			SmartDashboard.putNumber("Pixy Y", mPixy.getY());
 			SmartDashboard.putNumber("Pixy Area", mPixy.getArea());
+			SmartDashboard.putBoolean("Pixy Limit Switch", mPixy.getArea() > 2000);
 		}
 	}
 
 	public void teleopInit(double timestamp) {
 		mLimeLight.setLEDMode(LedMode.kforceOn);
-		mL
 	}
 
 	public void autonomousInit(double timestamp) {

@@ -11,7 +11,6 @@ import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import frc.robot.auto.modes.NearScaleOnlyMode;
 import frc.robot.lib.structure.SubsystemManager;
 import frc.robot.lib.util.Logger;
-import frc.robot.paths.RobotState;
 import frc.robot.paths.TrajectoryGenerator;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;
@@ -26,7 +25,7 @@ public class Robot extends TimedRobot {
 	private final SubsystemManager mSubsystemManager = new SubsystemManager(
 			Arrays.asList(Drive.getInstance(), HatchArm.getInstance(), CargoArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
 
-	protected Robot() {
+	public Robot() {
 		super(Constants.GENERAL.kLoopDt);
 		Logger.logRobotConstruction();
 	}
@@ -35,7 +34,6 @@ public class Robot extends TimedRobot {
 	public void robotInit() {
 		try {
 			Logger.logRobotInit();
-			mMatchState = MatchState.DISABLED;
 			TrajectoryGenerator.getInstance().generateTrajectories();
 			Shuffleboard.startRecording();
 		} catch (Throwable t) {
@@ -90,17 +88,6 @@ public class Robot extends TimedRobot {
 			Logger.logMarker("Starting check systems.");
 			mSubsystemManager.checkSystem();
 			mSubsystemManager.stop();
-		} catch (Throwable t) {
-			Logger.logThrowableCrash(t);
-			throw t;
-		}
-	}
-
-	@Override
-	public void robotPeriodic() {
-		try {
-			mSubsystemManager.outputToSmartDashboard();
-			RobotState.getInstance().outputToSmartDashboard();
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;

@@ -121,8 +121,6 @@ public class MkTalon {
 				CTRE(masterTalon.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kLeftCargoIntakeTalonID, kLong));
 				break;
 			case Hatch_Arm:
-				CTRE(masterTalon.configPeakOutputForward(0.5, kLong));
-				CTRE(masterTalon.configPeakOutputReverse(-0.5, kLong));
 				masterTalon.setSensorPhase(HATCH_ARM.ARM_SENSOR_PHASE);
 				masterTalon.setInverted(HATCH_ARM.ARM_MASTER_DIRECTION);
 				CTRE(masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, kSlot, kLong));
@@ -136,8 +134,7 @@ public class MkTalon {
 				CTRE(masterTalon.configReverseSoftLimitThreshold((int) MkMath.angleToNativeUnits(HATCH_ARM.ARM_REVERSE_LIMIT), kLong));
 				CTRE(masterTalon.configForwardSoftLimitEnable(true, kLong));
 				CTRE(masterTalon.configReverseSoftLimitEnable(true, kLong));
-				//TODO Enable Hatch Limit Switch
-				//CTRE(masterTalon.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kHatchLimitSwitchTalonID, kLong));
+				CTRE(masterTalon.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kHatchLimitSwitchTalonID, kLong));
 				break;
 			case Cargo_Intake:
 				masterTalon.setInverted(CARGO_ARM.LEFT_INTAKE_DIRECTION);

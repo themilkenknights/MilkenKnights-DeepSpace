@@ -119,7 +119,7 @@ public class CargoArm extends Subsystem {
 	}
 
 	@Override
-	public void outputTelemetry() {
+	public void outputTelemetry(double timestamp) {
 		mArmTalon.updateSmartDash(false);
 		SmartDashboard.putNumber("Cargo Abs Pos", mArmTalon.getAbsolutePosition());
 		SmartDashboard.putString("Cargo Arm Desired Position", mCargoArmState.toString());
@@ -208,13 +208,13 @@ public class CargoArm extends Subsystem {
 
 	public enum CargoArmControlState {
 		MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all
-						// circumstances
+		// circumstances
 		OPEN_LOOP // Direct PercentVBus control of the arm as a failsafe
 	}
 
 	public enum CargoArmState {
 		ENABLE(0.0), // State directly after robot is enabled (not mapped to a specific angle)
-		INTAKE(177.0), STOW(47.0), PLACE(90.0), PLACE_REVERSE_ROCKET(10.0), PLACE_REVERSE_CARGO(5.0);
+		INTAKE(177.0), PLACE_REVERSE_ROCKET(10.0), PLACE_REVERSE_CARGO(5.0);
 
 		public final double state;
 
