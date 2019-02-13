@@ -106,7 +106,7 @@ public class SubsystemManager {
 	private final CrashTrackingRunnable runnable_ = new CrashTrackingRunnable() {
 		@Override
 		public void runCrashTracked() {
-			synchronized (this) {
+			synchronized (taskRunningLock_) {
 				if (running_) {
 					double now = Timer.getFPGATimestamp();
 					for (Subsystem subsystem : mAllSubsystems) {
@@ -124,7 +124,7 @@ public class SubsystemManager {
 	private final CrashTrackingRunnable slowRunnable_ = new CrashTrackingRunnable() {
 		@Override
 		public void runCrashTracked() {
-			synchronized (this) {
+			synchronized (taskRunningLock_) {
 				if (running_) {
 					double now = Timer.getFPGATimestamp();
 					for (Subsystem subsystem : mAllSubsystems) {
@@ -138,7 +138,7 @@ public class SubsystemManager {
 	private final CrashTrackingRunnable telemetryRunnable_ = new CrashTrackingRunnable() {
 		@Override
 		public void runCrashTracked() {
-			synchronized (this) {
+			synchronized (taskRunningLock_) {
 				if (running_) {
 					double now = Timer.getFPGATimestamp();
 					for (Subsystem subsystem : mAllSubsystems) {
