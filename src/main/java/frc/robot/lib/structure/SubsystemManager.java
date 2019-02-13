@@ -135,7 +135,7 @@ public class SubsystemManager {
 					double now = Timer.getFPGATimestamp();
 					for (Subsystem subsystem : mAllSubsystems) {
 						subsystem.outputTelemetry(now);
-						SmartDashboard.putNumber("Main loop Dt", (timestamp_ - lastTime2) * 1e3);
+						SmartDashboard.putNumber("Main loop Dt", main_loop_dt_ * 1e3);
 						SmartDashboard.putNumber("looper_dt", dt_);
 					}
 				}
