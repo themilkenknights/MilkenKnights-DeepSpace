@@ -238,12 +238,19 @@ public final class Constants {
 
 		public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> kAreaToDistVisionMap = new InterpolatingTreeMap<>();
 
+		public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> kPixyAreaToDistVisionMap = new InterpolatingTreeMap<>();
+
 		static {
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(3783.0), new InterpolatingDouble(46.75));
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(2517.0), new InterpolatingDouble(57.4));
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1960.0), new InterpolatingDouble(65.5));
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1782.0), new InterpolatingDouble(68.8));
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1368.0), new InterpolatingDouble(79.4));
+
+
+			VISION.kPixyAreaToDistVisionMap.put(new InterpolatingDouble(3783.0), new InterpolatingDouble(46.75));
+			VISION.kPixyAreaToDistVisionMap.put(new InterpolatingDouble(2517.0), new InterpolatingDouble(57.4));
+			VISION.kPixyAreaToDistVisionMap.put(new InterpolatingDouble(1960.0), new InterpolatingDouble(65.5));
 		}
 
 	}

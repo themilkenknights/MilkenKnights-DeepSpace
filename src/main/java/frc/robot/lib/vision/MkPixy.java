@@ -58,6 +58,14 @@ public class MkPixy {
 		return mLastBlock.getHeight() * mLastBlock.getWidth();
 	}
 
+	public synchronized Block getLastBlock() {
+		return mLastBlock;
+	}
+
+	public boolean isCargoIntaked(){
+		return getArea() > 2000;
+	}
+
 	class PeriodicRunnable implements java.lang.Runnable {
 
 		public void run() {
