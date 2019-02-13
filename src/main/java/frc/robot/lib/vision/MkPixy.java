@@ -2,6 +2,8 @@ package frc.robot.lib.vision;
 
 import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
+import frc.robot.Constants.GENERAL;
+import frc.robot.lib.util.Logger;
 import io.github.pseudoresonance.pixy2api.Pixy2;
 import io.github.pseudoresonance.pixy2api.Pixy2.LinkType;
 import io.github.pseudoresonance.pixy2api.Pixy2CCC;
@@ -22,7 +24,7 @@ public class MkPixy {
 	public MkPixy() {
 		pixy = Pixy2.createInstance(LinkType.SPI);
 		pixy.init();
-		_pixyUpdate.startPeriodic(0.05);
+		_pixyUpdate.startPeriodic(GENERAL.kPixyLoopPeriod);
 	}
 
 	private void pixyUpdate() {
@@ -59,7 +61,12 @@ public class MkPixy {
 	class PeriodicRunnable implements java.lang.Runnable {
 
 		public void run() {
-			pixyUpdate();
+			try {
+				pixyUpdate();
+			} catch (Throwable t) {
+				Logger.logThrowableCrash(t);
+				throw t;
+			}
 		}
 	}
 

@@ -5,6 +5,9 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
+import frc.robot.Constants;
+import frc.robot.Constants.GENERAL;
+import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MovingAverage;
 import frc.robot.lib.vision.LimeLightControlMode.Advanced_Crosshair;
 import frc.robot.lib.vision.LimeLightControlMode.Advanced_Target;
@@ -24,7 +27,7 @@ public class LimeLight {
 	private NetworkTable m_table, m_pnp_table;
 	private String m_tableName, m_pnp_tableName;
 	private Boolean isConnected = false;
-	private double _hearBeatPeriod = 0.025;
+	private double kLimelightLoopPeriod = GENERAL.kLimelightLoopPeriod;
 	private LimelightTarget mTarget;
 	private MovingAverage mThrottleAverage;
 
@@ -35,7 +38,7 @@ public class LimeLight {
 	public LimeLight() {
 		m_tableName = "limelight";
 		m_table = NetworkTableInstance.getDefault().getTable(m_tableName);
-		_hearBeat.startPeriodic(_hearBeatPeriod);
+		_hearBeat.startPeriodic(kLimelightLoopPeriod);
 		tv = m_table.getEntry("tv");
 		tx = m_table.getEntry("tx");
 		ty = m_table.getEntry("ty");
@@ -64,7 +67,7 @@ public class LimeLight {
 	public LimeLight(String tableName) {
 		m_tableName = tableName;
 		m_table = NetworkTableInstance.getDefault().getTable(m_tableName);
-		_hearBeat.startPeriodic(_hearBeatPeriod);
+		_hearBeat.startPeriodic(kLimelightLoopPeriod);
 	}
 
 	/**
@@ -72,7 +75,7 @@ public class LimeLight {
 	 */
 	public LimeLight(NetworkTable table) {
 		m_table = table;
-		_hearBeat.startPeriodic(_hearBeatPeriod);
+		_hearBeat.startPeriodic(kLimelightLoopPeriod);
 	}
 
 	private void resetPilelineLatency() {
@@ -344,18 +347,23 @@ public class LimeLight {
 
 		//TODO Verify Thread Efficiency
 		public void run() {
-			if (i == 10) {
-				resetPilelineLatency();
-				try {
-					Thread.sleep(25);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
+			try {
+				if (i == 10) {
+					resetPilelineLatency();
+					try {
+						Thread.sleep(25);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					isConnected = getPipelineLatency() != 0.0;
+					i = 0;
 				}
-				isConnected = getPipelineLatency() != 0.0;
-				i = 0;
+				i++;
+				updateTarget();
+			} catch (Throwable t) {
+				Logger.logThrowableCrash(t);
+				throw t;
 			}
-			i++;
-			updateTarget();
 		}
 	}
 

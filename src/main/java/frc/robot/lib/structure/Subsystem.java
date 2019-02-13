@@ -14,11 +14,19 @@ public abstract class Subsystem {
 	public void readPeriodicInputs(double timestamp) {
 	}
 
+	public void onQuickLoop(double timestamp){
+
+	}
+
 	// Optional design pattern for caching periodic writes to avoid hammering the HAL/CAN.
 	public void writePeriodicOutputs(double timestamp) {
 	}
 
-	public abstract void outputTelemetry();
+	public void safetyCheck(double timestamp) {
+	}
+
+
+	public abstract void outputTelemetry(double timestamp);
 
 	public void teleopInit(double timestamp) {
 
@@ -28,7 +36,7 @@ public abstract class Subsystem {
 
 	}
 
-	public void onLoop(double timestamp) {
+	public void onMainLoop(double timestamp) {
 
 	}
 

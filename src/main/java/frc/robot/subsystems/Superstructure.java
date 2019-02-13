@@ -86,7 +86,7 @@ public class Superstructure extends Subsystem {
 	}
 
 	@Override
-	public void onLoop(double timestamp) {
+	public void onMainLoop(double timestamp) {
 
 		switch (mRobotState) {
 			case TELEOP_DRIVE:
