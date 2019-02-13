@@ -45,17 +45,17 @@ public final class Constants {
 		public static final int kPneumaticsControlModuleID = 0;
 		public static final int kPowerDistributionPanelID = 11;
 
-		public static final int kDriveLeftMasterTalonID = 5;
-		public static final int kDriveLeftSlaveVictorID = 4;
+		public static final int kDriveLeftMasterTalonID = 10;
+		public static final int kDriveLeftSlaveVictorID = 9;
 
-		public static final int kDriveRightMasterTalonID = 10;
-		public static final int kDriveRightSlaveVictorID = 9;
+		public static final int kDriveRightMasterTalonID = 5;
+		public static final int kDriveRightSlaveVictorID = 4;
 
 		public static final int kGroundHatchArmTalonID = 8;
 		public static final int kHatchLimitSwitchTalonID = 3;
 
-		public static final int kRightMasterCargoArmTalonID = 7;
-		public static final int kLeftSlaveCargoArmVictorID = 2;
+		public static final int kMasterCargoArmTalonID = 7;
+		public static final int kSlaveCargoArmVictorID = 2;
 
 		public static final int kLeftCargoIntakeTalonID = 1;
 		public static final int kRightCargoIntakeVictorID = 6;
@@ -70,6 +70,7 @@ public final class Constants {
 
 		public static final boolean KRightMasterInvert = true;
 		public static final boolean kRightSlaveInvert = true;
+
 		public static final boolean kLeftSensorInvert = true;
 		public static final boolean kRightSensorInvert = true;
 
@@ -189,7 +190,7 @@ public final class Constants {
 
 
 		public static final boolean ARM_SENSOR_PHASE = false;
-		public static final boolean ARM_MASTER_DIRECTION = false;
+		public static final boolean ARM_MASTER_DIRECTION = true;
 
 		public static final double MAX_RAW_VEL = 3085.0;
 		public static final double ARM_P = ((5.0 * 1023.0) / (500)); //1.25
@@ -205,10 +206,10 @@ public final class Constants {
 
 		public static final double kMaxSafeCurrent = 150;
 
-		public static final int kBookEnd_0 = kIsPracticeBot ? -1550 : 827;
-		public static final int kBookEnd_1 = kIsPracticeBot ? 497 : 3790;
-		public static final boolean kCrossOverZero = kIsPracticeBot ? true : true;
-		public static final int kOffset = kIsPracticeBot ? (1550) : 0;
+		public static final int kBookEnd_0 = kIsPracticeBot ? 3396 : 827;
+		public static final int kBookEnd_1 = kIsPracticeBot ? 1326 : 3790;
+		public static final boolean kCrossOverZero = kIsPracticeBot ? false : true;
+		public static final int kOffset = kIsPracticeBot ? -3396 : 0;
 	}
 
 	public static class PNUEMATICS {

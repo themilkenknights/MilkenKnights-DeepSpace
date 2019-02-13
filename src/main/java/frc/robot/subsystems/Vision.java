@@ -19,7 +19,7 @@ public class Vision extends Subsystem {
 	private Vision() {
 		mLimeLight = new LimeLight();
 		mLimeLight.setLEDMode(LedMode.kforceOn);
-		mLimeLight.setCamMode(CamMode.kvision);
+		mLimeLight.setCamMode(CamMode.kdriver);
 		mLimeLight.setStream(StreamType.kPiPMain);
 		mPixy = new MkPixy();
 	}
@@ -39,6 +39,7 @@ public class Vision extends Subsystem {
 
 	public void teleopInit(double timestamp) {
 		mLimeLight.setLEDMode(LedMode.kforceOn);
+		mL
 	}
 
 	public void autonomousInit(double timestamp) {

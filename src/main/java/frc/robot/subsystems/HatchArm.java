@@ -137,13 +137,13 @@ public class HatchArm extends Subsystem {
 
 	@Override
 	public void outputTelemetry() {
-		//mArmTalon.updateSmartDash(false);
+		mArmTalon.updateSmartDash(false);
 		SmartDashboard.putString("Hatch Arm Desired Position", mHatchIntakeState.toString());
 		SmartDashboard.putString("Hatch Arm Control Mode", mHatchIntakeControlState.toString());
 		SmartDashboard.putBoolean("Hatch Arm Status", mArmTalon.isEncoderConnected());
-		//SmartDashboard.putNumber("Hatch Arm Abs", mArmTalon.getAbsolutePosition());
+		SmartDashboard.putNumber("Hatch Arm Abs", mArmTalon.getAbsolutePosition());
 		SmartDashboard.putString("Hatch Mech State", mHatchMechanismState.toString());
-		//SmartDashboard.putNumber("Arm Raw Error", MkMath.angleToNativeUnits(mArmTalon.getError()));
+		SmartDashboard.putNumber("Arm Raw Error", MkMath.angleToNativeUnits(mArmTalon.getError()));
 	}
 
 

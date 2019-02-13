@@ -24,7 +24,7 @@ public class CargoArm extends Subsystem {
 	private double mStartDis, mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable = 0.0;
 
 	private CargoArm() {
-		mArmTalon = new MkTalon(CAN.kRightMasterCargoArmTalonID, CAN.kLeftSlaveCargoArmVictorID, TalonLoc.Cargo_Arm);
+		mArmTalon = new MkTalon(CAN.kMasterCargoArmTalonID, CAN.kSlaveCargoArmVictorID, TalonLoc.Cargo_Arm);
 		mIntakeTalon = new MkTalon(CAN.kLeftCargoIntakeTalonID, CAN.kRightCargoIntakeVictorID, TalonLoc.Cargo_Intake);
 	}
 

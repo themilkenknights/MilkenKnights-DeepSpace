@@ -13,6 +13,7 @@ import frc.robot.subsystems.CargoArm.CargoArmControlState;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
+import frc.robot.subsystems.HatchArm.HatchArmState;
 import frc.robot.subsystems.HatchArm.HatchMechanismState;
 import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Superstructure.ClimbState;
@@ -40,6 +41,10 @@ public class Input {
 
 	private static final MkJoystickButton intakeRollerIn = operatorJoystick.getButton(5, "Intake Roller In");
 	private static final MkJoystickButton intakeRollerOut = operatorJoystick.getButton(6, "Intake Roller Out Fast");
+
+	private static final MkJoystickButton mStow = operatorJoystick.getButton(10, "Stow");
+	private static final MkJoystickButton mPlace = operatorJoystick.getButton(9, "Place");
+
 
 	private static Drive mDrive = Drive.getInstance();
 	private static HatchArm mHatch = HatchArm.getInstance();
@@ -77,7 +82,7 @@ public class Input {
 		}
 
 		if (currentRobotState == RobotState.TELEOP_DRIVE) {
-			double forward = (-driverJoystick.getRawAxis(2) + driverJoystick.getRawAxis(3)) / 2;
+			double forward = (-driverJoystick.getRawAxis(2) + driverJoystick.getRawAxis(3));
 			double turn = (-driverJoystick.getRawAxis(0));
 			LimelightTarget target = mVision.getAverageTarget();
 			double mSteer = target.getDistance() < 50.0 && target.isValidTarget() && mVisionAssist ? DRIVE.kVisionDriverTurnP * target.getXOffset() : 0.0;
@@ -85,9 +90,9 @@ public class Input {
 		}
 
 		if(mForwardClimb.isPressed()){
-			mStructure.setFrontClimbState(mStructure.getFrontClimbState() == ClimbState.UP ? ClimbState.DOWN: ClimbState.UP);
+			//mStructure.setFrontClimbState(mStructure.getFrontClimbState() == ClimbState.UP ? ClimbState.DOWN: ClimbState.UP);
 		} else if(mRearClimb.isPressed()){
-			mStructure.setRearClimbState(mStructure.getRearClimbState() == ClimbState.UP ? ClimbState.DOWN: ClimbState.UP);
+			//mStructure.setRearClimbState(mStructure.getRearClimbState() == ClimbState.UP ? ClimbState.DOWN: ClimbState.UP);
 		}
 
 		if (mCargo.getArmControlState() == CargoArmControlState.OPEN_LOOP) {
@@ -131,19 +136,17 @@ public class Input {
 		}
 
 		if (mVisionStationIntakeButton.isPressed()) {
-
 			mStructure.setRobotState(RobotState.VISION_INTAKE_STATION);
 		} else if (mVisionPlaceButton.isPressed()) {
-
 			mStructure.setRobotState(RobotState.VISION_PLACING);
 		} else if (mTransferButton.isPressed()) {
-
 			mHatch.setHatchMechanismState(HatchMechanismState.TRANSFER);
-
 		} else if (mGroundIntakeToggleButton.isPressed()) {
-
-			mHatch
-					.setHatchMechanismState(mHatch.getHatchMechanismState() == HatchMechanismState.GROUND_INTAKE ? HatchMechanismState.STOWED : HatchMechanismState.GROUND_INTAKE);
+			mHatch.setHatchMechanismState(mHatch.getHatchMechanismState() == HatchMechanismState.GROUND_INTAKE ? HatchMechanismState.STOWED : HatchMechanismState.GROUND_INTAKE);
+		} else if(mStow.isPressed()){
+mHatch.setHatchArmPosition(HatchArmState.STOW);
+		} else if(mPlace.isPressed()){
+			mHatch.setHatchArmPosition(HatchArmState.PLACE);
 
 		}
 
