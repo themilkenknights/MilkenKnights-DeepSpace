@@ -4,30 +4,30 @@ import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.Constants.GENERAL;
 import frc.robot.lib.util.Logger;
+import frc.robot.lib.vision.LimeLight.PeriodicRunnable;
 import io.github.pseudoresonance.pixy2api.Pixy2;
 import io.github.pseudoresonance.pixy2api.Pixy2.LinkType;
 import io.github.pseudoresonance.pixy2api.Pixy2CCC;
 import io.github.pseudoresonance.pixy2api.Pixy2CCC.Block;
+import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 
 public class MkPixy {
 
 	private static final int blockSignature = 1;
 	private static ArrayList<Block> blocks = null;
-	Notifier _pixyUpdate = new Notifier(new PeriodicRunnable());
-	private Pixy2 pixy = null;
-	private double mX, mY, mWidth, mHeight, lastUpdate = 0.0;
+	private static Pixy2 pixy = null;
+	private static double mX, mY, mWidth, mHeight, lastUpdate = 0.0;
 	//TODO Find a way of initializing block to non-null value
-	private Block mLastBlock = null;
+	private static Block mLastBlock = null;
 
 
 	public MkPixy() {
 		pixy = Pixy2.createInstance(LinkType.SPI);
 		pixy.init();
-		_pixyUpdate.startPeriodic(GENERAL.kPixyLoopPeriod);
 	}
 
-	private void pixyUpdate() {
+	public static synchronized void pixyUpdate() {
 		pixy.getCCC().getBlocks(false, Pixy2CCC.CCC_SIG1, 5);
 		blocks = pixy.getCCC().getBlocks();
 		Block largestBlock = null;
@@ -47,35 +47,28 @@ public class MkPixy {
 	}
 
 	public synchronized double getX() {
-		return mLastBlock.getX();
+		return mLastBlock != null ? mLastBlock.getX() : 0.0;
 	}
 
 	public synchronized double getY() {
-		return mLastBlock.getY();
+		return mLastBlock != null ? mLastBlock.getY() : 0.0;
 	}
 
 	public synchronized double getArea() {
-		return mLastBlock.getHeight() * mLastBlock.getWidth();
+		return mLastBlock != null ? mLastBlock.getHeight() * mLastBlock.getWidth() : 0.0;
+	}
+
+	public synchronized double getAngle(){
+		return mLastBlock != null ? mLastBlock.getAngle() : 0.0;
 	}
 
 	public synchronized Block getLastBlock() {
-		return mLastBlock;
+		return mLastBlock != null ? mLastBlock : null;
+
 	}
 
-	public boolean isCargoIntaked(){
-		return getArea() > 2000;
-	}
-
-	class PeriodicRunnable implements java.lang.Runnable {
-
-		public void run() {
-			try {
-				pixyUpdate();
-			} catch (Throwable t) {
-				Logger.logThrowableCrash(t);
-				throw t;
-			}
-		}
+	public synchronized boolean isCargoIntaked() {
+		return mLastBlock != null ? getArea() > 45000 : false;
 	}
 
 }

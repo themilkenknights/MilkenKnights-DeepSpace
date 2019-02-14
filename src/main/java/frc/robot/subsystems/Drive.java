@@ -190,10 +190,10 @@ public class Drive extends Subsystem {
 			Logger.logMarker("Switching to Motion Magic");
 			mDriveControlState = DriveControlState.MOTION_MAGIC;
 		}
-		mPeriodicIO.left_demand = signal.getLeft();
-		mPeriodicIO.right_demand = signal.getRight();
-		mPeriodicIO.left_feedforward = MkMath.InchesToNativeUnits(feedforward.getLeft());
-		mPeriodicIO.right_feedforward = MkMath.InchesToNativeUnits(feedforward.getRight());
+		mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(signal.getLeft());
+		mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(signal.getRight());
+		mPeriodicIO.left_feedforward = feedforward.getLeft();
+		mPeriodicIO.right_feedforward = feedforward.getRight();
 		mPeriodicIO.brake_mode = NeutralMode.Brake;
 	}
 
@@ -245,9 +245,6 @@ public class Drive extends Subsystem {
 		updateTurnToHeading();
 	}
 
-	/**
-	 * @param angle Angle to turn to in degrees (0-360)
-	 */
 	public synchronized void updateTurnToHeading() {
 		final Rotation2d field_to_robot = RobotState.getInstance().getLatestFieldToVehicle().getValue().getRotation();
 		// Figure out the rotation necessary to turn to face the goal.
@@ -328,7 +325,7 @@ public class Drive extends Subsystem {
 	}
 
 	/**
-	 * TODO Ensure this returns the correct angle {@link #updateTurnToHeading(double angle)}
+	 * TODO Ensure this returns the correct angle {@link #updateTurnToHeading()}
 	 *
 	 * @return current fused heading from navX
 	 */

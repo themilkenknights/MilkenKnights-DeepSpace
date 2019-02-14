@@ -27,17 +27,17 @@ public final class Constants {
 	public static class GENERAL {
 
 		public static final int kPIDLoopIdx = 0;
-		public static final int kMediumTimeoutMs = 5;
+		public static final int kMediumTimeoutMs = 0;
 		public static final int kLongCANTimeoutMs = 100; //Use for constructors, not while enabled
 		public static final double PI = 3.14159265359;
 		public static final double kTicksPerRev = 4096.0;
 		public static final double kMaxNominalOutput = 1.0;
 		public static final double kLoopDt = 0.02; //TODO Find optimal refresh rate
-		public static final double kLooperDt = 0.005;
-		public static final double kSlowLooperDt = 0.005;
-		public static final double kLimelightLoopPeriod = 0.025;
-		public static final double kPixyLoopPeriod = 0.025;
-		public static final double kTelemetryDt = 0.1;
+		public static final double kLooperDt = 0.01;
+		public static final double kSlowLooperDt = 0.01;
+		public static final double kLimelightLoopPeriod = 0.05;
+		public static final double kPixyLoopPeriod = 0.05;
+		public static final double kTelemetryDt = 0.2;
 
 
 	}
@@ -131,7 +131,7 @@ public final class Constants {
 
 		public static final double kThrottleDeadband = 0.0;
 		public static final double kWheelDeadband = 0.003;
-		public static final double kOperatorDeadband = 0.0045;
+		public static final double kOperatorDeadband = 0.01;
 
 	}
 
@@ -212,10 +212,10 @@ public final class Constants {
 
 		public static final double kMaxSafeCurrent = 150;
 
-		public static final int kBookEnd_0 = kIsPracticeBot ? 3396 : 827;
-		public static final int kBookEnd_1 = kIsPracticeBot ? 1326 : 3790;
-		public static final boolean kCrossOverZero = kIsPracticeBot ? false : true;
-		public static final int kOffset = kIsPracticeBot ? -3396 : 0;
+		public static final int kBookEnd_0 = kIsPracticeBot ? 5453 : 827;
+		public static final int kBookEnd_1 = kIsPracticeBot ? 3340 : 3790;
+		public static final boolean kCrossOverZero = kIsPracticeBot ? true : true;
+		public static final int kOffset = kIsPracticeBot ? -1294 : 0;
 	}
 
 	public static class PNUEMATICS {

@@ -5,6 +5,8 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants.GENERAL;
 import frc.robot.lib.util.CrashTrackingRunnable;
+import frc.robot.lib.util.Logger;
+import frc.robot.lib.vision.MkPixy;
 import frc.robot.paths.RobotState;
 import java.util.List;
 
@@ -19,6 +21,7 @@ public class SubsystemManager {
 	private final Notifier notifier_;
 	private final Notifier slow_notifier_;
 	private final Notifier telemetry_notifier_;
+	private final Notifier _pixyUpdate;
 
 	private final Object taskRunningLock_ = new Object();
 	private double main_timestamp = 0;
@@ -33,12 +36,10 @@ public class SubsystemManager {
 		mAllSubsystems = allSubsystems;
 
 		notifier_ = new Notifier(runnable_);
+		_pixyUpdate = new Notifier(new PeriodicRunnable());
 		slow_notifier_ = new Notifier(slowRunnable_);
 		telemetry_notifier_ = new Notifier(telemetryRunnable_);
 		running_ = false;
-
-		telemetry_notifier_.startPeriodic(kTelemetryPeriod);
-		//Always run
 	}
 
 	public void mainLoop() {
@@ -70,6 +71,8 @@ public class SubsystemManager {
 		}
 		notifier_.startPeriodic(kPeriod);
 		slow_notifier_.startPeriodic(kSlowPeriod);
+		_pixyUpdate.startPeriodic(GENERAL.kPixyLoopPeriod);
+		telemetry_notifier_.startPeriodic(kTelemetryPeriod);
 	}
 
 	public synchronized void startTeleop() {
@@ -85,6 +88,8 @@ public class SubsystemManager {
 		}
 		notifier_.startPeriodic(kPeriod);
 		slow_notifier_.startPeriodic(kSlowPeriod);
+		_pixyUpdate.startPeriodic(GENERAL.kPixyLoopPeriod);
+		telemetry_notifier_.startPeriodic(kTelemetryPeriod);
 	}
 
 	public synchronized void stop() {
@@ -96,6 +101,8 @@ public class SubsystemManager {
 		}
 		notifier_.stop();
 		slow_notifier_.stop();
+		_pixyUpdate.startPeriodic(GENERAL.kPixyLoopPeriod);
+		telemetry_notifier_.startPeriodic(kTelemetryPeriod);
 
 		timestamp_ = Timer.getFPGATimestamp();
 		for (Subsystem subsystem : mAllSubsystems) {
@@ -139,17 +146,27 @@ public class SubsystemManager {
 		@Override
 		public void runCrashTracked() {
 			synchronized (taskRunningLock_) {
-				if (running_) {
-					double now = Timer.getFPGATimestamp();
-					for (Subsystem subsystem : mAllSubsystems) {
-						subsystem.outputTelemetry(now);
-						RobotState.getInstance().outputToSmartDashboard();
-						SmartDashboard.putNumber("Main loop Dt", main_loop_dt_ * 1e3);
-						SmartDashboard.putNumber("looper_dt", dt_);
-					}
+				double now = Timer.getFPGATimestamp();
+				for (Subsystem subsystem : mAllSubsystems) {
+					subsystem.outputTelemetry(now);
+					RobotState.getInstance().outputToSmartDashboard();
+					SmartDashboard.putNumber("Main loop Dt", main_loop_dt_ * 1e3);
+					SmartDashboard.putNumber("looper_dt", dt_);
 				}
 			}
 		}
 	};
+
+	class PeriodicRunnable implements java.lang.Runnable {
+
+		public void run() {
+			try {
+				MkPixy.pixyUpdate();
+			} catch (Throwable t) {
+				Logger.logThrowableCrash(t);
+				throw t;
+			}
+		}
+	}
 
 }

@@ -1,0 +1,467 @@
+786de83b-ec56-4a16-9355-171746b81c52, Robot Init, Tue Feb 12 14:41:22 PST 2019
+786de83b-ec56-4a16-9355-171746b81c52, Generating trajectories..., Tue Feb 12 14:41:22 PST 2019
+786de83b-ec56-4a16-9355-171746b81c52, Finished trajectory generation, Tue Feb 12 14:41:22 PST 2019
+786de83b-ec56-4a16-9355-171746b81c52, Disabled Init, Tue Feb 12 14:41:22 PST 2019
+786de83b-ec56-4a16-9355-171746b81c52, SET HEADING: 0.0, Tue Feb 12 14:41:23 PST 2019
+786de83b-ec56-4a16-9355-171746b81c52, Gyro offset: 0.6199951171874929, Tue Feb 12 14:41:23 PST 2019
+786de83b-ec56-4a16-9355-171746b81c52, Teleop Init, Tue Feb 12 14:42:57 PST 2019
+786de83b-ec56-4a16-9355-171746b81c52, Disabled Init, Tue Feb 12 14:43:06 PST 2019
+a29ede09-4bc9-470b-9d3d-413331f56965, Teleop Init, Tue Feb 12 14:46:57 PST 2019
+a29ede09-4bc9-470b-9d3d-413331f56965, Disabled Init, Tue Feb 12 14:47:04 PST 2019
+a29ede09-4bc9-470b-9d3d-413331f56965, Teleop Init, Tue Feb 12 14:47:17 PST 2019
+a29ede09-4bc9-470b-9d3d-413331f56965, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 14:47:33 PST 2019
+a29ede09-4bc9-470b-9d3d-413331f56965, Disabled Init, Tue Feb 12 14:47:39 PST 2019
+4424b60f-fbbd-447d-8449-7d376732d3ca, Robot Startup, Tue Feb 12 15:21:50 PST 2019
+4424b60f-fbbd-447d-8449-7d376732d3ca, Robot Init, Tue Feb 12 15:21:50 PST 2019
+4424b60f-fbbd-447d-8449-7d376732d3ca, Generating trajectories..., Tue Feb 12 15:21:50 PST 2019
+4424b60f-fbbd-447d-8449-7d376732d3ca, Finished trajectory generation, Tue Feb 12 15:21:50 PST 2019
+4424b60f-fbbd-447d-8449-7d376732d3ca, Disabled Init, Tue Feb 12 15:21:50 PST 2019
+4424b60f-fbbd-447d-8449-7d376732d3ca, SET HEADING: 0.0, Tue Feb 12 15:21:50 PST 2019
+4424b60f-fbbd-447d-8449-7d376732d3ca, Gyro offset: 74.489990234375, Tue Feb 12 15:21:50 PST 2019
+a50854a5-8b7d-4731-aeb1-d727e255d9e3, Robot Startup, Tue Feb 12 15:22:31 PST 2019
+a50854a5-8b7d-4731-aeb1-d727e255d9e3, Robot Init, Tue Feb 12 15:22:31 PST 2019
+a50854a5-8b7d-4731-aeb1-d727e255d9e3, Generating trajectories..., Tue Feb 12 15:22:31 PST 2019
+a50854a5-8b7d-4731-aeb1-d727e255d9e3, Finished trajectory generation, Tue Feb 12 15:22:31 PST 2019
+a50854a5-8b7d-4731-aeb1-d727e255d9e3, Disabled Init, Tue Feb 12 15:22:31 PST 2019
+a50854a5-8b7d-4731-aeb1-d727e255d9e3, SET HEADING: 0.0, Tue Feb 12 15:22:32 PST 2019
+a50854a5-8b7d-4731-aeb1-d727e255d9e3, Gyro offset: 74.45001220703126, Tue Feb 12 15:22:32 PST 2019
+a50854a5-8b7d-4731-aeb1-d727e255d9e3, Teleop Init, Tue Feb 12 15:22:34 PST 2019
+a50854a5-8b7d-4731-aeb1-d727e255d9e3, Disabled Init, Tue Feb 12 15:22:44 PST 2019
+7744fd1d-9ce7-4d5a-b4eb-8a344726c502, Robot Startup, Tue Feb 12 15:23:45 PST 2019
+7744fd1d-9ce7-4d5a-b4eb-8a344726c502, Robot Init, Tue Feb 12 15:23:45 PST 2019
+7744fd1d-9ce7-4d5a-b4eb-8a344726c502, Generating trajectories..., Tue Feb 12 15:23:45 PST 2019
+7744fd1d-9ce7-4d5a-b4eb-8a344726c502, Finished trajectory generation, Tue Feb 12 15:23:45 PST 2019
+7744fd1d-9ce7-4d5a-b4eb-8a344726c502, Disabled Init, Tue Feb 12 15:23:45 PST 2019
+7744fd1d-9ce7-4d5a-b4eb-8a344726c502, SET HEADING: 0.0, Tue Feb 12 15:23:45 PST 2019
+7744fd1d-9ce7-4d5a-b4eb-8a344726c502, Gyro offset: 73.11999511718751, Tue Feb 12 15:23:45 PST 2019
+39ce8713-6800-43a0-928e-e03cd5631de5, Robot Startup, Tue Feb 12 15:24:34 PST 2019
+39ce8713-6800-43a0-928e-e03cd5631de5, Robot Init, Tue Feb 12 15:24:34 PST 2019
+39ce8713-6800-43a0-928e-e03cd5631de5, Generating trajectories..., Tue Feb 12 15:24:34 PST 2019
+39ce8713-6800-43a0-928e-e03cd5631de5, Finished trajectory generation, Tue Feb 12 15:24:35 PST 2019
+39ce8713-6800-43a0-928e-e03cd5631de5, Disabled Init, Tue Feb 12 15:24:35 PST 2019
+39ce8713-6800-43a0-928e-e03cd5631de5, SET HEADING: 0.0, Tue Feb 12 15:24:35 PST 2019
+39ce8713-6800-43a0-928e-e03cd5631de5, Gyro offset: 72.98999023437499, Tue Feb 12 15:24:35 PST 2019
+f6057818-f1cd-4faf-9326-26104c9b002c, Robot Startup, Tue Feb 12 15:26:38 PST 2019
+f6057818-f1cd-4faf-9326-26104c9b002c, Robot Init, Tue Feb 12 15:26:38 PST 2019
+f6057818-f1cd-4faf-9326-26104c9b002c, Generating trajectories..., Tue Feb 12 15:26:38 PST 2019
+f6057818-f1cd-4faf-9326-26104c9b002c, Finished trajectory generation, Tue Feb 12 15:26:38 PST 2019
+f6057818-f1cd-4faf-9326-26104c9b002c, Disabled Init, Tue Feb 12 15:26:38 PST 2019
+f6057818-f1cd-4faf-9326-26104c9b002c, SET HEADING: 0.0, Tue Feb 12 15:26:38 PST 2019
+f6057818-f1cd-4faf-9326-26104c9b002c, Gyro offset: 72.94000244140625, Tue Feb 12 15:26:38 PST 2019
+50bbc1cd-2c76-4fa7-ad6c-1d89d21b9e4e, Robot Startup, Tue Feb 12 15:27:31 PST 2019
+50bbc1cd-2c76-4fa7-ad6c-1d89d21b9e4e, Robot Init, Tue Feb 12 15:27:31 PST 2019
+50bbc1cd-2c76-4fa7-ad6c-1d89d21b9e4e, Generating trajectories..., Tue Feb 12 15:27:31 PST 2019
+50bbc1cd-2c76-4fa7-ad6c-1d89d21b9e4e, Finished trajectory generation, Tue Feb 12 15:27:31 PST 2019
+50bbc1cd-2c76-4fa7-ad6c-1d89d21b9e4e, Disabled Init, Tue Feb 12 15:27:31 PST 2019
+50bbc1cd-2c76-4fa7-ad6c-1d89d21b9e4e, SET HEADING: 0.0, Tue Feb 12 15:27:31 PST 2019
+50bbc1cd-2c76-4fa7-ad6c-1d89d21b9e4e, Gyro offset: 72.95999145507815, Tue Feb 12 15:27:31 PST 2019
+422d2bd0-5fb0-4e13-9d5c-f0615d505013, Robot Startup, Tue Feb 12 15:28:36 PST 2019
+422d2bd0-5fb0-4e13-9d5c-f0615d505013, Robot Init, Tue Feb 12 15:28:36 PST 2019
+422d2bd0-5fb0-4e13-9d5c-f0615d505013, Generating trajectories..., Tue Feb 12 15:28:36 PST 2019
+422d2bd0-5fb0-4e13-9d5c-f0615d505013, Finished trajectory generation, Tue Feb 12 15:28:36 PST 2019
+422d2bd0-5fb0-4e13-9d5c-f0615d505013, Disabled Init, Tue Feb 12 15:28:36 PST 2019
+422d2bd0-5fb0-4e13-9d5c-f0615d505013, SET HEADING: 0.0, Tue Feb 12 15:28:37 PST 2019
+422d2bd0-5fb0-4e13-9d5c-f0615d505013, Gyro offset: 72.97000122070315, Tue Feb 12 15:28:37 PST 2019
+50b14c24-41f4-4d5b-b454-aec74436a4f8, Robot Startup, Tue Feb 12 15:30:01 PST 2019
+50b14c24-41f4-4d5b-b454-aec74436a4f8, Robot Init, Tue Feb 12 15:30:01 PST 2019
+50b14c24-41f4-4d5b-b454-aec74436a4f8, Generating trajectories..., Tue Feb 12 15:30:01 PST 2019
+50b14c24-41f4-4d5b-b454-aec74436a4f8, Finished trajectory generation, Tue Feb 12 15:30:01 PST 2019
+50b14c24-41f4-4d5b-b454-aec74436a4f8, Disabled Init, Tue Feb 12 15:30:01 PST 2019
+50b14c24-41f4-4d5b-b454-aec74436a4f8, SET HEADING: 0.0, Tue Feb 12 15:30:01 PST 2019
+50b14c24-41f4-4d5b-b454-aec74436a4f8, Gyro offset: 71.10000610351564, Tue Feb 12 15:30:01 PST 2019
+a95650d5-04cf-4a99-9a72-ca8b2796fb85, Robot Startup, Tue Feb 12 15:30:47 PST 2019
+a95650d5-04cf-4a99-9a72-ca8b2796fb85, Robot Init, Tue Feb 12 15:30:47 PST 2019
+a95650d5-04cf-4a99-9a72-ca8b2796fb85, Generating trajectories..., Tue Feb 12 15:30:47 PST 2019
+a95650d5-04cf-4a99-9a72-ca8b2796fb85, Finished trajectory generation, Tue Feb 12 15:30:47 PST 2019
+a95650d5-04cf-4a99-9a72-ca8b2796fb85, Disabled Init, Tue Feb 12 15:30:47 PST 2019
+a95650d5-04cf-4a99-9a72-ca8b2796fb85, SET HEADING: 0.0, Tue Feb 12 15:30:48 PST 2019
+a95650d5-04cf-4a99-9a72-ca8b2796fb85, Gyro offset: 69.5199890136719, Tue Feb 12 15:30:48 PST 2019
+26945703-0742-43c9-a740-b07ff2f7870f, Robot Startup, Tue Feb 12 15:31:50 PST 2019
+26945703-0742-43c9-a740-b07ff2f7870f, Robot Init, Tue Feb 12 15:31:50 PST 2019
+26945703-0742-43c9-a740-b07ff2f7870f, Generating trajectories..., Tue Feb 12 15:31:50 PST 2019
+26945703-0742-43c9-a740-b07ff2f7870f, Finished trajectory generation, Tue Feb 12 15:31:51 PST 2019
+26945703-0742-43c9-a740-b07ff2f7870f, Disabled Init, Tue Feb 12 15:31:51 PST 2019
+26945703-0742-43c9-a740-b07ff2f7870f, SET HEADING: 0.0, Tue Feb 12 15:31:51 PST 2019
+26945703-0742-43c9-a740-b07ff2f7870f, Gyro offset: 69.57998657226561, Tue Feb 12 15:31:51 PST 2019
+26945703-0742-43c9-a740-b07ff2f7870f, Teleop Init, Tue Feb 12 15:32:04 PST 2019
+4741d3ef-8dd3-4b78-82ec-0ff569cc22a0, Robot Startup, Tue Feb 12 15:32:19 PST 2019
+4741d3ef-8dd3-4b78-82ec-0ff569cc22a0, Robot Init, Tue Feb 12 15:32:19 PST 2019
+4741d3ef-8dd3-4b78-82ec-0ff569cc22a0, Generating trajectories..., Tue Feb 12 15:32:19 PST 2019
+4741d3ef-8dd3-4b78-82ec-0ff569cc22a0, Finished trajectory generation, Tue Feb 12 15:32:19 PST 2019
+4741d3ef-8dd3-4b78-82ec-0ff569cc22a0, Disabled Init, Tue Feb 12 15:32:19 PST 2019
+4741d3ef-8dd3-4b78-82ec-0ff569cc22a0, SET HEADING: 0.0, Tue Feb 12 15:32:19 PST 2019
+4741d3ef-8dd3-4b78-82ec-0ff569cc22a0, Gyro offset: 69.57000732421874, Tue Feb 12 15:32:20 PST 2019
+4741d3ef-8dd3-4b78-82ec-0ff569cc22a0, Teleop Init, Tue Feb 12 15:32:20 PST 2019
+4741d3ef-8dd3-4b78-82ec-0ff569cc22a0, Disabled Init, Tue Feb 12 15:32:43 PST 2019
+4741d3ef-8dd3-4b78-82ec-0ff569cc22a0, Teleop Init, Tue Feb 12 15:32:47 PST 2019
+4741d3ef-8dd3-4b78-82ec-0ff569cc22a0, Disabled Init, Tue Feb 12 15:33:09 PST 2019
+57e99a45-acbc-416c-8c75-151d11b824c0, Robot Startup, Tue Feb 12 15:33:36 PST 2019
+57e99a45-acbc-416c-8c75-151d11b824c0, Robot Init, Tue Feb 12 15:33:36 PST 2019
+57e99a45-acbc-416c-8c75-151d11b824c0, Generating trajectories..., Tue Feb 12 15:33:36 PST 2019
+57e99a45-acbc-416c-8c75-151d11b824c0, Finished trajectory generation, Tue Feb 12 15:33:36 PST 2019
+57e99a45-acbc-416c-8c75-151d11b824c0, Disabled Init, Tue Feb 12 15:33:36 PST 2019
+57e99a45-acbc-416c-8c75-151d11b824c0, SET HEADING: 0.0, Tue Feb 12 15:33:36 PST 2019
+57e99a45-acbc-416c-8c75-151d11b824c0, Gyro offset: 69.55999755859378, Tue Feb 12 15:33:36 PST 2019
+7e8ae216-5889-41cb-8a45-6c61abcca805, Robot Startup, Tue Feb 12 15:34:25 PST 2019
+7e8ae216-5889-41cb-8a45-6c61abcca805, Robot Init, Tue Feb 12 15:34:25 PST 2019
+7e8ae216-5889-41cb-8a45-6c61abcca805, Generating trajectories..., Tue Feb 12 15:34:25 PST 2019
+7e8ae216-5889-41cb-8a45-6c61abcca805, Finished trajectory generation, Tue Feb 12 15:34:25 PST 2019
+7e8ae216-5889-41cb-8a45-6c61abcca805, Disabled Init, Tue Feb 12 15:34:26 PST 2019
+7e8ae216-5889-41cb-8a45-6c61abcca805, SET HEADING: 0.0, Tue Feb 12 15:34:26 PST 2019
+7e8ae216-5889-41cb-8a45-6c61abcca805, Gyro offset: 70.74999999999999, Tue Feb 12 15:34:26 PST 2019
+4e4dbfa8-b55a-4098-aad5-e1fbb22db1cd, Robot Startup, Tue Feb 12 15:37:15 PST 2019
+4e4dbfa8-b55a-4098-aad5-e1fbb22db1cd, Robot Init, Tue Feb 12 15:37:15 PST 2019
+4e4dbfa8-b55a-4098-aad5-e1fbb22db1cd, Generating trajectories..., Tue Feb 12 15:37:15 PST 2019
+4e4dbfa8-b55a-4098-aad5-e1fbb22db1cd, Finished trajectory generation, Tue Feb 12 15:37:15 PST 2019
+4e4dbfa8-b55a-4098-aad5-e1fbb22db1cd, Disabled Init, Tue Feb 12 15:37:15 PST 2019
+4e4dbfa8-b55a-4098-aad5-e1fbb22db1cd, SET HEADING: 0.0, Tue Feb 12 15:37:15 PST 2019
+4e4dbfa8-b55a-4098-aad5-e1fbb22db1cd, Gyro offset: 70.22000122070311, Tue Feb 12 15:37:15 PST 2019
+f4bd3a9b-2534-42b5-89ff-3b6bacb41b1c, Robot Startup, Tue Feb 12 15:37:44 PST 2019
+f4bd3a9b-2534-42b5-89ff-3b6bacb41b1c, Robot Init, Tue Feb 12 15:37:44 PST 2019
+f4bd3a9b-2534-42b5-89ff-3b6bacb41b1c, Generating trajectories..., Tue Feb 12 15:37:44 PST 2019
+f4bd3a9b-2534-42b5-89ff-3b6bacb41b1c, Finished trajectory generation, Tue Feb 12 15:37:44 PST 2019
+f4bd3a9b-2534-42b5-89ff-3b6bacb41b1c, Disabled Init, Tue Feb 12 15:37:44 PST 2019
+f4bd3a9b-2534-42b5-89ff-3b6bacb41b1c, SET HEADING: 0.0, Tue Feb 12 15:37:45 PST 2019
+f4bd3a9b-2534-42b5-89ff-3b6bacb41b1c, Gyro offset: 70.29998779296876, Tue Feb 12 15:37:45 PST 2019
+6c0ae9f1-c847-4dd2-9bf4-d5edf9045251, Robot Startup, Tue Feb 12 15:38:15 PST 2019
+6c0ae9f1-c847-4dd2-9bf4-d5edf9045251, Robot Init, Tue Feb 12 15:38:15 PST 2019
+6c0ae9f1-c847-4dd2-9bf4-d5edf9045251, Generating trajectories..., Tue Feb 12 15:38:15 PST 2019
+6c0ae9f1-c847-4dd2-9bf4-d5edf9045251, Finished trajectory generation, Tue Feb 12 15:38:15 PST 2019
+6c0ae9f1-c847-4dd2-9bf4-d5edf9045251, Disabled Init, Tue Feb 12 15:38:15 PST 2019
+6c0ae9f1-c847-4dd2-9bf4-d5edf9045251, SET HEADING: 0.0, Tue Feb 12 15:38:15 PST 2019
+6c0ae9f1-c847-4dd2-9bf4-d5edf9045251, Gyro offset: 70.45999145507814, Tue Feb 12 15:38:15 PST 2019
+35d1078b-784d-4047-b9e4-7adfe9d5907d, Robot Startup, Tue Feb 12 15:38:54 PST 2019
+35d1078b-784d-4047-b9e4-7adfe9d5907d, Robot Init, Tue Feb 12 15:38:55 PST 2019
+35d1078b-784d-4047-b9e4-7adfe9d5907d, Generating trajectories..., Tue Feb 12 15:38:55 PST 2019
+35d1078b-784d-4047-b9e4-7adfe9d5907d, Finished trajectory generation, Tue Feb 12 15:38:55 PST 2019
+35d1078b-784d-4047-b9e4-7adfe9d5907d, Disabled Init, Tue Feb 12 15:38:55 PST 2019
+35d1078b-784d-4047-b9e4-7adfe9d5907d, SET HEADING: 0.0, Tue Feb 12 15:38:55 PST 2019
+35d1078b-784d-4047-b9e4-7adfe9d5907d, Gyro offset: 70.63000488281253, Tue Feb 12 15:38:55 PST 2019
+d955724b-5cc4-4d14-b704-e7981ee2c6a0, Robot Startup, Tue Feb 12 15:39:43 PST 2019
+d955724b-5cc4-4d14-b704-e7981ee2c6a0, Robot Init, Tue Feb 12 15:39:43 PST 2019
+d955724b-5cc4-4d14-b704-e7981ee2c6a0, Generating trajectories..., Tue Feb 12 15:39:43 PST 2019
+d955724b-5cc4-4d14-b704-e7981ee2c6a0, Finished trajectory generation, Tue Feb 12 15:39:43 PST 2019
+d955724b-5cc4-4d14-b704-e7981ee2c6a0, Disabled Init, Tue Feb 12 15:39:44 PST 2019
+d955724b-5cc4-4d14-b704-e7981ee2c6a0, SET HEADING: 0.0, Tue Feb 12 15:39:44 PST 2019
+d955724b-5cc4-4d14-b704-e7981ee2c6a0, Gyro offset: 70.86999511718751, Tue Feb 12 15:39:44 PST 2019
+34059f87-9622-4cd8-9076-337b442e16f8, Robot Startup, Tue Feb 12 15:40:20 PST 2019
+34059f87-9622-4cd8-9076-337b442e16f8, Robot Init, Tue Feb 12 15:40:21 PST 2019
+34059f87-9622-4cd8-9076-337b442e16f8, Generating trajectories..., Tue Feb 12 15:40:21 PST 2019
+34059f87-9622-4cd8-9076-337b442e16f8, Finished trajectory generation, Tue Feb 12 15:40:21 PST 2019
+34059f87-9622-4cd8-9076-337b442e16f8, Disabled Init, Tue Feb 12 15:40:21 PST 2019
+34059f87-9622-4cd8-9076-337b442e16f8, SET HEADING: 0.0, Tue Feb 12 15:40:21 PST 2019
+34059f87-9622-4cd8-9076-337b442e16f8, Gyro offset: 89.4200134277344, Tue Feb 12 15:40:21 PST 2019
+22722312-84ff-42f9-8e6e-984c4b6804af, Robot Startup, Tue Feb 12 15:41:14 PST 2019
+22722312-84ff-42f9-8e6e-984c4b6804af, Robot Init, Tue Feb 12 15:41:14 PST 2019
+22722312-84ff-42f9-8e6e-984c4b6804af, Generating trajectories..., Tue Feb 12 15:41:14 PST 2019
+22722312-84ff-42f9-8e6e-984c4b6804af, Finished trajectory generation, Tue Feb 12 15:41:14 PST 2019
+22722312-84ff-42f9-8e6e-984c4b6804af, Disabled Init, Tue Feb 12 15:41:14 PST 2019
+22722312-84ff-42f9-8e6e-984c4b6804af, SET HEADING: 0.0, Tue Feb 12 15:41:15 PST 2019
+22722312-84ff-42f9-8e6e-984c4b6804af, Gyro offset: 88.98001098632814, Tue Feb 12 15:41:15 PST 2019
+b738fd5a-6605-43dd-8597-1aea7fd01882, Robot Startup, Tue Feb 12 15:43:53 PST 2019
+b738fd5a-6605-43dd-8597-1aea7fd01882, Robot Init, Tue Feb 12 15:43:53 PST 2019
+b738fd5a-6605-43dd-8597-1aea7fd01882, Generating trajectories..., Tue Feb 12 15:43:53 PST 2019
+b738fd5a-6605-43dd-8597-1aea7fd01882, Finished trajectory generation, Tue Feb 12 15:43:53 PST 2019
+b738fd5a-6605-43dd-8597-1aea7fd01882, Disabled Init, Tue Feb 12 15:43:53 PST 2019
+b738fd5a-6605-43dd-8597-1aea7fd01882, SET HEADING: 0.0, Tue Feb 12 15:43:53 PST 2019
+b738fd5a-6605-43dd-8597-1aea7fd01882, Gyro offset: 88.8699951171875, Tue Feb 12 15:43:53 PST 2019
+83448965-a286-4772-b167-d88d9f3b3f4d, Robot Startup, Tue Feb 12 15:44:26 PST 2019
+83448965-a286-4772-b167-d88d9f3b3f4d, Robot Init, Tue Feb 12 15:44:26 PST 2019
+83448965-a286-4772-b167-d88d9f3b3f4d, Generating trajectories..., Tue Feb 12 15:44:26 PST 2019
+83448965-a286-4772-b167-d88d9f3b3f4d, Finished trajectory generation, Tue Feb 12 15:44:26 PST 2019
+83448965-a286-4772-b167-d88d9f3b3f4d, Disabled Init, Tue Feb 12 15:44:26 PST 2019
+83448965-a286-4772-b167-d88d9f3b3f4d, SET HEADING: 0.0, Tue Feb 12 15:44:26 PST 2019
+83448965-a286-4772-b167-d88d9f3b3f4d, Gyro offset: 88.95001220703124, Tue Feb 12 15:44:26 PST 2019
+5ed36db6-5cbd-46d3-9191-ca680faae36a, Robot Startup, Tue Feb 12 15:44:48 PST 2019
+5ed36db6-5cbd-46d3-9191-ca680faae36a, Robot Init, Tue Feb 12 15:44:48 PST 2019
+5ed36db6-5cbd-46d3-9191-ca680faae36a, Generating trajectories..., Tue Feb 12 15:44:48 PST 2019
+5ed36db6-5cbd-46d3-9191-ca680faae36a, Finished trajectory generation, Tue Feb 12 15:44:48 PST 2019
+5ed36db6-5cbd-46d3-9191-ca680faae36a, Disabled Init, Tue Feb 12 15:44:48 PST 2019
+5ed36db6-5cbd-46d3-9191-ca680faae36a, SET HEADING: 0.0, Tue Feb 12 15:44:48 PST 2019
+5ed36db6-5cbd-46d3-9191-ca680faae36a, Gyro offset: 89.08999633789062, Tue Feb 12 15:44:48 PST 2019
+13ffa567-8cd3-43d1-93e6-1c0eb11619dc, Robot Startup, Tue Feb 12 15:45:16 PST 2019
+13ffa567-8cd3-43d1-93e6-1c0eb11619dc, Robot Init, Tue Feb 12 15:45:16 PST 2019
+13ffa567-8cd3-43d1-93e6-1c0eb11619dc, Generating trajectories..., Tue Feb 12 15:45:16 PST 2019
+13ffa567-8cd3-43d1-93e6-1c0eb11619dc, Finished trajectory generation, Tue Feb 12 15:45:16 PST 2019
+13ffa567-8cd3-43d1-93e6-1c0eb11619dc, Disabled Init, Tue Feb 12 15:45:16 PST 2019
+13ffa567-8cd3-43d1-93e6-1c0eb11619dc, SET HEADING: 0.0, Tue Feb 12 15:45:16 PST 2019
+13ffa567-8cd3-43d1-93e6-1c0eb11619dc, Gyro offset: 95.50000000000003, Tue Feb 12 15:45:17 PST 2019
+13ffa567-8cd3-43d1-93e6-1c0eb11619dc, Teleop Init, Tue Feb 12 15:45:18 PST 2019
+13ffa567-8cd3-43d1-93e6-1c0eb11619dc, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button ), Tue Feb 12 15:45:31 PST 2019
+13ffa567-8cd3-43d1-93e6-1c0eb11619dc, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button ), Tue Feb 12 15:45:32 PST 2019
+13ffa567-8cd3-43d1-93e6-1c0eb11619dc, Disabled Init, Tue Feb 12 15:45:33 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, Robot Startup, Tue Feb 12 15:45:50 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, Robot Init, Tue Feb 12 15:45:51 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, Generating trajectories..., Tue Feb 12 15:45:51 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, Finished trajectory generation, Tue Feb 12 15:45:51 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, Disabled Init, Tue Feb 12 15:45:51 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, SET HEADING: 0.0, Tue Feb 12 15:45:51 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, Gyro offset: 95.3699951171875, Tue Feb 12 15:45:51 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, Teleop Init, Tue Feb 12 15:45:58 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, Disabled Init, Tue Feb 12 15:46:00 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, Teleop Init, Tue Feb 12 15:46:01 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button ), Tue Feb 12 15:46:03 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button ), Tue Feb 12 15:46:07 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, Disabled Init, Tue Feb 12 15:46:10 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, Teleop Init, Tue Feb 12 15:46:20 PST 2019
+b8295003-506f-4f9e-b332-a34f98e0275c, Disabled Init, Tue Feb 12 15:46:23 PST 2019
+0e9868ac-e818-4a0f-9577-5b93debcb014, Robot Startup, Tue Feb 12 15:46:50 PST 2019
+0e9868ac-e818-4a0f-9577-5b93debcb014, Robot Init, Tue Feb 12 15:46:50 PST 2019
+0e9868ac-e818-4a0f-9577-5b93debcb014, Generating trajectories..., Tue Feb 12 15:46:50 PST 2019
+0e9868ac-e818-4a0f-9577-5b93debcb014, Finished trajectory generation, Tue Feb 12 15:46:50 PST 2019
+0e9868ac-e818-4a0f-9577-5b93debcb014, Disabled Init, Tue Feb 12 15:46:50 PST 2019
+0e9868ac-e818-4a0f-9577-5b93debcb014, SET HEADING: 0.0, Tue Feb 12 15:46:51 PST 2019
+0e9868ac-e818-4a0f-9577-5b93debcb014, Gyro offset: 95.75000000000003, Tue Feb 12 15:46:51 PST 2019
+0e9868ac-e818-4a0f-9577-5b93debcb014, Teleop Init, Tue Feb 12 15:46:52 PST 2019
+0e9868ac-e818-4a0f-9577-5b93debcb014, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button ), Tue Feb 12 15:46:55 PST 2019
+0e9868ac-e818-4a0f-9577-5b93debcb014, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button ), Tue Feb 12 15:46:56 PST 2019
+0e9868ac-e818-4a0f-9577-5b93debcb014, Disabled Init, Tue Feb 12 15:46:59 PST 2019
+268c6831-ef9e-4c38-b7be-b415f0d11953, Robot Startup, Tue Feb 12 15:47:36 PST 2019
+268c6831-ef9e-4c38-b7be-b415f0d11953, Robot Init, Tue Feb 12 15:47:36 PST 2019
+268c6831-ef9e-4c38-b7be-b415f0d11953, Generating trajectories..., Tue Feb 12 15:47:36 PST 2019
+268c6831-ef9e-4c38-b7be-b415f0d11953, Finished trajectory generation, Tue Feb 12 15:47:36 PST 2019
+268c6831-ef9e-4c38-b7be-b415f0d11953, Disabled Init, Tue Feb 12 15:47:36 PST 2019
+268c6831-ef9e-4c38-b7be-b415f0d11953, SET HEADING: 0.0, Tue Feb 12 15:47:36 PST 2019
+268c6831-ef9e-4c38-b7be-b415f0d11953, Gyro offset: 92.57000732421879, Tue Feb 12 15:47:36 PST 2019
+62462b58-6709-4936-9ed7-fcc1b5d86427, Robot Startup, Tue Feb 12 15:48:18 PST 2019
+62462b58-6709-4936-9ed7-fcc1b5d86427, Robot Init, Tue Feb 12 15:48:19 PST 2019
+62462b58-6709-4936-9ed7-fcc1b5d86427, Generating trajectories..., Tue Feb 12 15:48:19 PST 2019
+62462b58-6709-4936-9ed7-fcc1b5d86427, Finished trajectory generation, Tue Feb 12 15:48:19 PST 2019
+62462b58-6709-4936-9ed7-fcc1b5d86427, Disabled Init, Tue Feb 12 15:48:19 PST 2019
+62462b58-6709-4936-9ed7-fcc1b5d86427, SET HEADING: 0.0, Tue Feb 12 15:48:19 PST 2019
+62462b58-6709-4936-9ed7-fcc1b5d86427, Gyro offset: 83.58999633789061, Tue Feb 12 15:48:19 PST 2019
+43ba67a2-302b-4053-b0ab-dc8ccf54bbce, Teleop Init, Tue Feb 12 15:59:22 PST 2019
+43ba67a2-302b-4053-b0ab-dc8ccf54bbce, Disabled Init, Tue Feb 12 15:59:45 PST 2019
+43ba67a2-302b-4053-b0ab-dc8ccf54bbce, Teleop Init, Tue Feb 12 16:06:03 PST 2019
+43ba67a2-302b-4053-b0ab-dc8ccf54bbce, Disabled Init, Tue Feb 12 16:06:50 PST 2019
+43ba67a2-302b-4053-b0ab-dc8ccf54bbce, Teleop Init, Tue Feb 12 16:07:00 PST 2019
+43ba67a2-302b-4053-b0ab-dc8ccf54bbce, Disabled Init, Tue Feb 12 16:07:03 PST 2019
+43ba67a2-302b-4053-b0ab-dc8ccf54bbce, Teleop Init, Tue Feb 12 16:07:57 PST 2019
+43ba67a2-302b-4053-b0ab-dc8ccf54bbce, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Tue Feb 12 16:08:08 PST 2019
+43ba67a2-302b-4053-b0ab-dc8ccf54bbce, Switching to Robot State:TELEOP_DRIVE, Tue Feb 12 16:08:08 PST 2019
+43ba67a2-302b-4053-b0ab-dc8ccf54bbce, Generating trajectories..., Tue Feb 12 16:08:08 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, Robot Startup, Tue Feb 12 16:08:20 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, Robot Init, Tue Feb 12 16:08:21 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, Generating trajectories..., Tue Feb 12 16:08:21 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, Finished trajectory generation, Tue Feb 12 16:08:21 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, Disabled Init, Tue Feb 12 16:08:21 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, SET HEADING: 0.0, Tue Feb 12 16:08:21 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, Gyro offset: -107.33999633789064, Tue Feb 12 16:08:21 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, Teleop Init, Tue Feb 12 16:08:26 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:08:35 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:08:39 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:09:22 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:09:26 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, Disabled Init, Tue Feb 12 16:09:43 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, Teleop Init, Tue Feb 12 16:09:53 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:10:01 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:10:04 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:10:11 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:10:11 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:10:14 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:10:15 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:10:20 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:10:22 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:10:25 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:10:45 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:10:48 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:10:49 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:10:57 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:11:00 PST 2019
+7715a658-8d73-4bea-b2cd-f1d7799c23e4, Disabled Init, Tue Feb 12 16:11:01 PST 2019
+79c8c7bc-eb7f-4367-96a9-a7119efeed00, Robot Startup, Tue Feb 12 16:12:34 PST 2019
+79c8c7bc-eb7f-4367-96a9-a7119efeed00, Robot Init, Tue Feb 12 16:12:34 PST 2019
+79c8c7bc-eb7f-4367-96a9-a7119efeed00, Generating trajectories..., Tue Feb 12 16:12:34 PST 2019
+79c8c7bc-eb7f-4367-96a9-a7119efeed00, Finished trajectory generation, Tue Feb 12 16:12:34 PST 2019
+79c8c7bc-eb7f-4367-96a9-a7119efeed00, Disabled Init, Tue Feb 12 16:12:34 PST 2019
+79c8c7bc-eb7f-4367-96a9-a7119efeed00, SET HEADING: 0.0, Tue Feb 12 16:12:35 PST 2019
+79c8c7bc-eb7f-4367-96a9-a7119efeed00, Gyro offset: -58.880001068115234, Tue Feb 12 16:12:35 PST 2019
+b6ad6ee5-939e-43ad-b036-3ced62240f27, Robot Startup, Tue Feb 12 16:13:14 PST 2019
+b6ad6ee5-939e-43ad-b036-3ced62240f27, Robot Init, Tue Feb 12 16:13:14 PST 2019
+b6ad6ee5-939e-43ad-b036-3ced62240f27, Generating trajectories..., Tue Feb 12 16:13:14 PST 2019
+b6ad6ee5-939e-43ad-b036-3ced62240f27, Finished trajectory generation, Tue Feb 12 16:13:14 PST 2019
+b6ad6ee5-939e-43ad-b036-3ced62240f27, Disabled Init, Tue Feb 12 16:13:14 PST 2019
+b6ad6ee5-939e-43ad-b036-3ced62240f27, SET HEADING: 0.0, Tue Feb 12 16:13:15 PST 2019
+b6ad6ee5-939e-43ad-b036-3ced62240f27, Gyro offset: -58.669998168945305, Tue Feb 12 16:13:15 PST 2019
+b6ad6ee5-939e-43ad-b036-3ced62240f27, Teleop Init, Tue Feb 12 16:13:33 PST 2019
+b6ad6ee5-939e-43ad-b036-3ced62240f27, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:13:34 PST 2019
+b6ad6ee5-939e-43ad-b036-3ced62240f27, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:13:34 PST 2019
+b6ad6ee5-939e-43ad-b036-3ced62240f27, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:13:35 PST 2019
+b6ad6ee5-939e-43ad-b036-3ced62240f27, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:13:35 PST 2019
+b6ad6ee5-939e-43ad-b036-3ced62240f27, Disabled Init, Tue Feb 12 16:13:48 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Robot Startup, Tue Feb 12 16:15:37 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Robot Init, Tue Feb 12 16:15:37 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Generating trajectories..., Tue Feb 12 16:15:37 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Finished trajectory generation, Tue Feb 12 16:15:38 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Disabled Init, Tue Feb 12 16:15:38 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, SET HEADING: 0.0, Tue Feb 12 16:15:38 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Gyro offset: -66.86000061035156, Tue Feb 12 16:15:38 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Teleop Init, Tue Feb 12 16:16:10 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:16:14 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:16:14 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:16:16 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Switching to Robot State:TELEOP_DRIVE, Tue Feb 12 16:16:18 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Unexpected robot state: TELEOP_DRIVE, Tue Feb 12 16:16:18 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Switching to Robot State:TELEOP_DRIVE, Tue Feb 12 16:16:18 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Unexpected robot state: TELEOP_DRIVE, Tue Feb 12 16:16:18 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Switching to Robot State:TELEOP_DRIVE, Tue Feb 12 16:16:18 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Unexpected robot state: TELEOP_DRIVE, Tue Feb 12 16:16:18 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Switching to Robot State:TELEOP_DRIVE, Tue Feb 12 16:16:18 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Unexpected robot state: TELEOP_DRIVE, Tue Feb 12 16:16:18 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Switching to Robot State:TELEOP_DRIVE, Tue Feb 12 16:16:18 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Unexpected robot state: TELEOP_DRIVE, Tue Feb 12 16:16:18 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Switching to Robot State:TELEOP_DRIVE, Tue Feb 12 16:17:00 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Unexpected robot state: TELEOP_DRIVE, Tue Feb 12 16:17:00 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Switching to Robot State:TELEOP_DRIVE, Tue Feb 12 16:17:00 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Unexpected robot state: TELEOP_DRIVE, Tue Feb 12 16:17:00 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Switching to Robot State:TELEOP_DRIVE, Tue Feb 12 16:17:00 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Unexpected robot state: TELEOP_DRIVE, Tue Feb 12 16:17:00 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Switching to Robot State:TELEOP_DRIVE, Tue Feb 12 16:17:00 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Unexpected robot state: TELEOP_DRIVE, Tue Feb 12 16:17:00 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Switching to Robot State:TELEOP_DRIVE, Tue Feb 12 16:17:00 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Unexpected robot state: TELEOP_DRIVE, Tue Feb 12 16:17:00 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Switching to Robot State:TELEOP_DRIVE, Tue Feb 12 16:17:00 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Unexpected robot state: TELEOP_DRIVE, Tue Feb 12 16:17:00 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Disabled Init, Tue Feb 12 16:17:12 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Teleop Init, Tue Feb 12 16:17:17 PST 2019
+e5f719d6-5a69-46d3-a894-36fb9f773c93, Disabled Init, Tue Feb 12 16:17:21 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, Robot Startup, Tue Feb 12 16:17:34 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, Robot Init, Tue Feb 12 16:17:34 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, Generating trajectories..., Tue Feb 12 16:17:34 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, Finished trajectory generation, Tue Feb 12 16:17:34 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, Disabled Init, Tue Feb 12 16:17:35 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, SET HEADING: 0.0, Tue Feb 12 16:17:35 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, Gyro offset: -67.4000015258789, Tue Feb 12 16:17:35 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, Teleop Init, Tue Feb 12 16:17:36 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:17:38 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:17:40 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, Disabled Init, Tue Feb 12 16:17:51 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, Teleop Init, Tue Feb 12 16:18:11 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:18:11 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:18:12 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:18:14 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, Disabled Init, Tue Feb 12 16:18:22 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, Teleop Init, Tue Feb 12 16:18:52 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:19:00 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:19:02 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:19:03 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:19:04 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:19:05 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:19:07 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:19:08 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:19:09 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:19:27 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Tue Feb 12 16:19:30 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Tue Feb 12 16:19:34 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, Switching to Robot State:TELEOP_DRIVE, Tue Feb 12 16:19:34 PST 2019
+64c5b242-eb51-42bc-ac68-575e19bf7598, Generating trajectories..., Tue Feb 12 16:19:34 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, Robot Startup, Tue Feb 12 16:19:46 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, Robot Init, Tue Feb 12 16:19:46 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, Generating trajectories..., Tue Feb 12 16:19:46 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, Finished trajectory generation, Tue Feb 12 16:19:46 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, Disabled Init, Tue Feb 12 16:19:46 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, SET HEADING: 0.0, Tue Feb 12 16:19:46 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, Gyro offset: 178.6499938964844, Tue Feb 12 16:19:46 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, Teleop Init, Tue Feb 12 16:19:57 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:20:52 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:20:53 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:20:54 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:20:55 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Tue Feb 12 16:21:48 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Tue Feb 12 16:22:02 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, Switching to Robot State:TELEOP_DRIVE, Tue Feb 12 16:22:02 PST 2019
+91009c27-95f4-4e76-8b5b-e832e2f1df7e, Generating trajectories..., Tue Feb 12 16:22:02 PST 2019
+44df532c-5a96-4096-8099-173ce2fad404, Robot Startup, Tue Feb 12 16:22:14 PST 2019
+44df532c-5a96-4096-8099-173ce2fad404, Robot Init, Tue Feb 12 16:22:14 PST 2019
+44df532c-5a96-4096-8099-173ce2fad404, Generating trajectories..., Tue Feb 12 16:22:14 PST 2019
+44df532c-5a96-4096-8099-173ce2fad404, Finished trajectory generation, Tue Feb 12 16:22:14 PST 2019
+44df532c-5a96-4096-8099-173ce2fad404, Disabled Init, Tue Feb 12 16:22:14 PST 2019
+44df532c-5a96-4096-8099-173ce2fad404, SET HEADING: 0.0, Tue Feb 12 16:22:15 PST 2019
+44df532c-5a96-4096-8099-173ce2fad404, Gyro offset: 21.010009765624993, Tue Feb 12 16:22:15 PST 2019
+4add1edd-d58d-440e-b48c-84c8d4a9900a, Robot Startup, Tue Feb 12 16:24:35 PST 2019
+4add1edd-d58d-440e-b48c-84c8d4a9900a, Robot Init, Tue Feb 12 16:24:35 PST 2019
+4add1edd-d58d-440e-b48c-84c8d4a9900a, Generating trajectories..., Tue Feb 12 16:24:35 PST 2019
+4add1edd-d58d-440e-b48c-84c8d4a9900a, Finished trajectory generation, Tue Feb 12 16:24:35 PST 2019
+4add1edd-d58d-440e-b48c-84c8d4a9900a, Disabled Init, Tue Feb 12 16:24:35 PST 2019
+4add1edd-d58d-440e-b48c-84c8d4a9900a, SET HEADING: 0.0, Tue Feb 12 16:24:35 PST 2019
+4add1edd-d58d-440e-b48c-84c8d4a9900a, Gyro offset: 21.320007324218736, Tue Feb 12 16:24:35 PST 2019
+4add1edd-d58d-440e-b48c-84c8d4a9900a, Teleop Init, Tue Feb 12 16:24:41 PST 2019
+4add1edd-d58d-440e-b48c-84c8d4a9900a, Disabled Init, Tue Feb 12 16:24:46 PST 2019
+4add1edd-d58d-440e-b48c-84c8d4a9900a, Teleop Init, Tue Feb 12 16:25:04 PST 2019
+4add1edd-d58d-440e-b48c-84c8d4a9900a, Disabled Init, Tue Feb 12 16:25:04 PST 2019
+a05aca81-a7c9-43ec-ad62-634a519105e1, Teleop Init, Tue Feb 12 16:28:24 PST 2019
+a05aca81-a7c9-43ec-ad62-634a519105e1, Disabled Init, Tue Feb 12 16:28:33 PST 2019
+a05aca81-a7c9-43ec-ad62-634a519105e1, Teleop Init, Tue Feb 12 16:28:36 PST 2019
+a05aca81-a7c9-43ec-ad62-634a519105e1, Disabled Init, Tue Feb 12 16:28:37 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Teleop Init, Tue Feb 12 16:30:10 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Disabled Init, Tue Feb 12 16:30:14 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Teleop Init, Tue Feb 12 16:30:24 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Disabled Init, Tue Feb 12 16:31:05 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Teleop Init, Tue Feb 12 16:31:26 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:32:42 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Disabled Init, Tue Feb 12 16:34:54 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Teleop Init, Tue Feb 12 16:36:51 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:37:00 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:37:01 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:37:07 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:37:09 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:37:11 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:37:11 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:37:25 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Disabled Init, Tue Feb 12 16:37:31 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Teleop Init, Tue Feb 12 16:37:40 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:37:49 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:37:51 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:37:56 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:38:03 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:38:12 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:38:25 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:38:41 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Disabled Init, Tue Feb 12 16:38:55 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Teleop Init, Tue Feb 12 16:38:57 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:38:59 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:39:02 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:39:18 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:39:30 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:39:40 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:39:41 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:39:46 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:40:13 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:40:17 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:40:19 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:40:35 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Disabled Init, Tue Feb 12 16:40:35 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Teleop Init, Tue Feb 12 16:40:41 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Disabled Init, Tue Feb 12 16:40:59 PST 2019
+84777791-2253-408b-9a79-234d5be26676, Teleop Init, Tue Feb 12 16:42:16 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:42:56 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:43:01 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:43:24 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:43:28 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:43:31 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:43:54 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:43:58 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:44:09 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:44:14 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:44:14 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:44:27 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:44:28 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:44:33 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:44:35 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:44:41 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:44:42 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:45:16 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:45:32 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:45:47 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:45:50 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:47:45 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:47:46 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]9	 Pressed ( Place ), Tue Feb 12 16:47:47 PST 2019
+84777791-2253-408b-9a79-234d5be26676, [Joystick] 1	[Button]10	 Pressed ( Stow ), Tue Feb 12 16:47:47 PST 2019
+e262cc76-2aa2-486a-8f31-3f25541c7212, Teleop Init, Tue Feb 12 16:55:32 PST 2019
+e262cc76-2aa2-486a-8f31-3f25541c7212, Disabled Init, Tue Feb 12 16:55:42 PST 2019
+e262cc76-2aa2-486a-8f31-3f25541c7212, Teleop Init, Tue Feb 12 16:55:59 PST 2019
+e262cc76-2aa2-486a-8f31-3f25541c7212, Disabled Init, Tue Feb 12 16:56:01 PST 2019
+e262cc76-2aa2-486a-8f31-3f25541c7212, Teleop Init, Tue Feb 12 16:56:40 PST 2019
+743c7fc8-3b7a-4435-8232-6536f169acf1, Teleop Init, Tue Feb 12 17:11:17 PST 2019
+743c7fc8-3b7a-4435-8232-6536f169acf1, Disabled Init, Tue Feb 12 17:11:18 PST 2019

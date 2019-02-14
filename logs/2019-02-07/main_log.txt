@@ -1,0 +1,733 @@
+f9894902-2967-4e48-842c-54354df7ebc4, Robot Init, Thu Feb 07 15:10:48 PST 2019
+f9894902-2967-4e48-842c-54354df7ebc4, Generating trajectories..., Thu Feb 07 15:10:48 PST 2019
+f9894902-2967-4e48-842c-54354df7ebc4, Finished trajectory generation, Thu Feb 07 15:10:48 PST 2019
+f9894902-2967-4e48-842c-54354df7ebc4, Disabled Init, Thu Feb 07 15:10:48 PST 2019
+f9894902-2967-4e48-842c-54354df7ebc4, SET HEADING: 0.0, Thu Feb 07 15:10:49 PST 2019
+f9894902-2967-4e48-842c-54354df7ebc4, Gyro offset: 23.04000854492188, Thu Feb 07 15:10:49 PST 2019
+f9894902-2967-4e48-842c-54354df7ebc4, Teleop Init, Thu Feb 07 15:11:32 PST 2019
+f9894902-2967-4e48-842c-54354df7ebc4, Disabled Init, Thu Feb 07 15:11:41 PST 2019
+f9894902-2967-4e48-842c-54354df7ebc4, Teleop Init, Thu Feb 07 15:11:52 PST 2019
+f9894902-2967-4e48-842c-54354df7ebc4, Disabled Init, Thu Feb 07 15:11:53 PST 2019
+e391e7aa-0bcd-48d4-a5a2-2e11820f55da, SigNotUpdated, Thu Feb 07 15:12:28 PST 2019
+e391e7aa-0bcd-48d4-a5a2-2e11820f55da, Robot Startup, Thu Feb 07 15:12:28 PST 2019
+e391e7aa-0bcd-48d4-a5a2-2e11820f55da, Robot Init, Thu Feb 07 15:12:28 PST 2019
+e391e7aa-0bcd-48d4-a5a2-2e11820f55da, Generating trajectories..., Thu Feb 07 15:12:28 PST 2019
+e391e7aa-0bcd-48d4-a5a2-2e11820f55da, Finished trajectory generation, Thu Feb 07 15:12:28 PST 2019
+e391e7aa-0bcd-48d4-a5a2-2e11820f55da, Disabled Init, Thu Feb 07 15:12:28 PST 2019
+e391e7aa-0bcd-48d4-a5a2-2e11820f55da, SET HEADING: 0.0, Thu Feb 07 15:12:29 PST 2019
+e391e7aa-0bcd-48d4-a5a2-2e11820f55da, Gyro offset: 27.899993896484382, Thu Feb 07 15:12:29 PST 2019
+dd67d1aa-e6c3-44aa-93cf-a4a6150c54ac, Robot Startup, Thu Feb 07 15:18:14 PST 2019
+dd67d1aa-e6c3-44aa-93cf-a4a6150c54ac, Robot Init, Thu Feb 07 15:18:14 PST 2019
+dd67d1aa-e6c3-44aa-93cf-a4a6150c54ac, Generating trajectories..., Thu Feb 07 15:18:14 PST 2019
+dd67d1aa-e6c3-44aa-93cf-a4a6150c54ac, Finished trajectory generation, Thu Feb 07 15:18:14 PST 2019
+dd67d1aa-e6c3-44aa-93cf-a4a6150c54ac, Disabled Init, Thu Feb 07 15:18:14 PST 2019
+dd67d1aa-e6c3-44aa-93cf-a4a6150c54ac, SET HEADING: 0.0, Thu Feb 07 15:18:14 PST 2019
+dd67d1aa-e6c3-44aa-93cf-a4a6150c54ac, Gyro offset: 29.660003662109386, Thu Feb 07 15:18:14 PST 2019
+bf2562eb-74ea-4961-bfa9-323224659344, Robot Startup, Thu Feb 07 15:18:26 PST 2019
+bf2562eb-74ea-4961-bfa9-323224659344, Robot Init, Thu Feb 07 15:18:26 PST 2019
+bf2562eb-74ea-4961-bfa9-323224659344, Generating trajectories..., Thu Feb 07 15:18:26 PST 2019
+bf2562eb-74ea-4961-bfa9-323224659344, Finished trajectory generation, Thu Feb 07 15:18:27 PST 2019
+bf2562eb-74ea-4961-bfa9-323224659344, Disabled Init, Thu Feb 07 15:18:27 PST 2019
+bf2562eb-74ea-4961-bfa9-323224659344, SET HEADING: 0.0, Thu Feb 07 15:18:27 PST 2019
+bf2562eb-74ea-4961-bfa9-323224659344, Gyro offset: 29.749999999999993, Thu Feb 07 15:18:27 PST 2019
+bf2562eb-74ea-4961-bfa9-323224659344, Teleop Init, Thu Feb 07 15:18:33 PST 2019
+bf2562eb-74ea-4961-bfa9-323224659344, Disabled Init, Thu Feb 07 15:18:34 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, Robot Startup, Thu Feb 07 15:19:19 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, Robot Init, Thu Feb 07 15:19:19 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, Generating trajectories..., Thu Feb 07 15:19:19 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, Finished trajectory generation, Thu Feb 07 15:19:19 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, Disabled Init, Thu Feb 07 15:19:19 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, SET HEADING: 0.0, Thu Feb 07 15:19:20 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, Gyro offset: 29.980010986328143, Thu Feb 07 15:19:20 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, Teleop Init, Thu Feb 07 15:19:39 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Thu Feb 07 15:19:41 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Thu Feb 07 15:19:42 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, Disabled Init, Thu Feb 07 15:19:43 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, Teleop Init, Thu Feb 07 15:19:44 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Thu Feb 07 15:19:45 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]10	 Pressed ( Arm Reverse ), Thu Feb 07 15:19:45 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Thu Feb 07 15:19:46 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Thu Feb 07 15:19:47 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Thu Feb 07 15:19:47 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Thu Feb 07 15:19:50 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Thu Feb 07 15:19:51 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Thu Feb 07 15:19:52 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Thu Feb 07 15:19:52 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Thu Feb 07 15:19:53 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, Disabled Init, Thu Feb 07 15:19:54 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, Teleop Init, Thu Feb 07 15:23:01 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Thu Feb 07 15:23:03 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]10	 Pressed ( Arm Reverse ), Thu Feb 07 15:23:29 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Thu Feb 07 15:23:30 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Thu Feb 07 15:23:33 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Thu Feb 07 15:23:54 PST 2019
+973d62ea-26b0-406c-8a3c-d063478f5ba3, Disabled Init, Thu Feb 07 15:24:05 PST 2019
+b31569b0-f0ad-465c-95cb-a341c0fd1065, Robot Startup, Thu Feb 07 15:27:41 PST 2019
+b31569b0-f0ad-465c-95cb-a341c0fd1065, Robot Init, Thu Feb 07 15:27:41 PST 2019
+b31569b0-f0ad-465c-95cb-a341c0fd1065, Generating trajectories..., Thu Feb 07 15:27:41 PST 2019
+b31569b0-f0ad-465c-95cb-a341c0fd1065, Finished trajectory generation, Thu Feb 07 15:27:41 PST 2019
+b31569b0-f0ad-465c-95cb-a341c0fd1065, Disabled Init, Thu Feb 07 15:27:41 PST 2019
+b31569b0-f0ad-465c-95cb-a341c0fd1065, SET HEADING: 0.0, Thu Feb 07 15:27:42 PST 2019
+b31569b0-f0ad-465c-95cb-a341c0fd1065, Gyro offset: 29.519989013671903, Thu Feb 07 15:27:42 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Robot Startup, Thu Feb 07 15:29:23 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Robot Init, Thu Feb 07 15:29:23 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Generating trajectories..., Thu Feb 07 15:29:23 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Finished trajectory generation, Thu Feb 07 15:29:23 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Disabled Init, Thu Feb 07 15:29:23 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, SET HEADING: 0.0, Thu Feb 07 15:29:23 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Gyro offset: 30.010009765624993, Thu Feb 07 15:29:23 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Teleop Init, Thu Feb 07 15:31:31 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:31 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:31 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:31 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:31 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:31 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:31 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:32 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:33 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:34 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:35 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:36 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:37 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:38 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:39 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:40 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Hatch Arm Encoder Not Connected, Thu Feb 07 15:31:41 PST 2019
+b60cfa5d-88be-4f3b-b367-719401f85e98, Disabled Init, Thu Feb 07 15:31:41 PST 2019
+4fe71b29-2b44-4fa6-bcd0-146cda3bba9f, Robot Startup, Thu Feb 07 15:32:19 PST 2019
+4fe71b29-2b44-4fa6-bcd0-146cda3bba9f, Robot Init, Thu Feb 07 15:32:19 PST 2019
+4fe71b29-2b44-4fa6-bcd0-146cda3bba9f, Generating trajectories..., Thu Feb 07 15:32:19 PST 2019
+4fe71b29-2b44-4fa6-bcd0-146cda3bba9f, Finished trajectory generation, Thu Feb 07 15:32:19 PST 2019
+4fe71b29-2b44-4fa6-bcd0-146cda3bba9f, Disabled Init, Thu Feb 07 15:32:19 PST 2019
+4fe71b29-2b44-4fa6-bcd0-146cda3bba9f, SET HEADING: 0.0, Thu Feb 07 15:32:19 PST 2019
+4fe71b29-2b44-4fa6-bcd0-146cda3bba9f, Gyro offset: 35.140014648437514, Thu Feb 07 15:32:19 PST 2019
+468b359b-aa46-42ec-8bf2-8d3716e6ef43, Teleop Init, Thu Feb 07 15:43:50 PST 2019
+468b359b-aa46-42ec-8bf2-8d3716e6ef43, Disabled Init, Thu Feb 07 15:43:58 PST 2019
+22891e21-6ab4-4084-b148-f7a8e566cc3b, Robot Startup, Thu Feb 07 15:45:23 PST 2019
+22891e21-6ab4-4084-b148-f7a8e566cc3b, Robot Init, Thu Feb 07 15:45:23 PST 2019
+22891e21-6ab4-4084-b148-f7a8e566cc3b, Generating trajectories..., Thu Feb 07 15:45:23 PST 2019
+22891e21-6ab4-4084-b148-f7a8e566cc3b, Finished trajectory generation, Thu Feb 07 15:45:24 PST 2019
+22891e21-6ab4-4084-b148-f7a8e566cc3b, Disabled Init, Thu Feb 07 15:45:24 PST 2019
+22891e21-6ab4-4084-b148-f7a8e566cc3b, SET HEADING: 0.0, Thu Feb 07 15:45:24 PST 2019
+22891e21-6ab4-4084-b148-f7a8e566cc3b, Gyro offset: 0.7699890136719059, Thu Feb 07 15:45:24 PST 2019
+22891e21-6ab4-4084-b148-f7a8e566cc3b, Teleop Init, Thu Feb 07 15:45:28 PST 2019
+22891e21-6ab4-4084-b148-f7a8e566cc3b, Disabled Init, Thu Feb 07 15:45:32 PST 2019
+e86241a8-b036-4123-b743-b4f1ba0e5b4a, Robot Startup, Thu Feb 07 15:46:11 PST 2019
+e86241a8-b036-4123-b743-b4f1ba0e5b4a, Robot Init, Thu Feb 07 15:46:11 PST 2019
+e86241a8-b036-4123-b743-b4f1ba0e5b4a, Generating trajectories..., Thu Feb 07 15:46:11 PST 2019
+e86241a8-b036-4123-b743-b4f1ba0e5b4a, Finished trajectory generation, Thu Feb 07 15:46:11 PST 2019
+e86241a8-b036-4123-b743-b4f1ba0e5b4a, Disabled Init, Thu Feb 07 15:46:12 PST 2019
+e86241a8-b036-4123-b743-b4f1ba0e5b4a, SET HEADING: 0.0, Thu Feb 07 15:46:12 PST 2019
+e86241a8-b036-4123-b743-b4f1ba0e5b4a, Gyro offset: 1.1199951171875127, Thu Feb 07 15:46:12 PST 2019
+e86241a8-b036-4123-b743-b4f1ba0e5b4a, Teleop Init, Thu Feb 07 15:46:14 PST 2019
+e86241a8-b036-4123-b743-b4f1ba0e5b4a, Disabled Init, Thu Feb 07 15:46:15 PST 2019
+e86241a8-b036-4123-b743-b4f1ba0e5b4a, Teleop Init, Thu Feb 07 15:46:15 PST 2019
+e86241a8-b036-4123-b743-b4f1ba0e5b4a, Disabled Init, Thu Feb 07 15:46:16 PST 2019
+42c29bde-b555-4de7-a5dc-21e3f1415dc6, Robot Startup, Thu Feb 07 15:46:37 PST 2019
+42c29bde-b555-4de7-a5dc-21e3f1415dc6, Robot Init, Thu Feb 07 15:46:37 PST 2019
+42c29bde-b555-4de7-a5dc-21e3f1415dc6, Generating trajectories..., Thu Feb 07 15:46:37 PST 2019
+42c29bde-b555-4de7-a5dc-21e3f1415dc6, Finished trajectory generation, Thu Feb 07 15:46:37 PST 2019
+42c29bde-b555-4de7-a5dc-21e3f1415dc6, Disabled Init, Thu Feb 07 15:46:37 PST 2019
+42c29bde-b555-4de7-a5dc-21e3f1415dc6, SET HEADING: 0.0, Thu Feb 07 15:46:38 PST 2019
+42c29bde-b555-4de7-a5dc-21e3f1415dc6, Gyro offset: 1.3999938964844, Thu Feb 07 15:46:38 PST 2019
+aa16e3b0-1b9a-4db2-bc87-6b5bb0a6a5bf, Robot Startup, Thu Feb 07 15:47:40 PST 2019
+aa16e3b0-1b9a-4db2-bc87-6b5bb0a6a5bf, Robot Init, Thu Feb 07 15:47:41 PST 2019
+aa16e3b0-1b9a-4db2-bc87-6b5bb0a6a5bf, Generating trajectories..., Thu Feb 07 15:47:41 PST 2019
+aa16e3b0-1b9a-4db2-bc87-6b5bb0a6a5bf, Finished trajectory generation, Thu Feb 07 15:47:41 PST 2019
+aa16e3b0-1b9a-4db2-bc87-6b5bb0a6a5bf, Disabled Init, Thu Feb 07 15:47:41 PST 2019
+aa16e3b0-1b9a-4db2-bc87-6b5bb0a6a5bf, SET HEADING: 0.0, Thu Feb 07 15:47:41 PST 2019
+aa16e3b0-1b9a-4db2-bc87-6b5bb0a6a5bf, Gyro offset: 1.7900085449218746, Thu Feb 07 15:47:41 PST 2019
+aa16e3b0-1b9a-4db2-bc87-6b5bb0a6a5bf, Teleop Init, Thu Feb 07 15:48:00 PST 2019
+aa16e3b0-1b9a-4db2-bc87-6b5bb0a6a5bf, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Thu Feb 07 15:49:49 PST 2019
+aa16e3b0-1b9a-4db2-bc87-6b5bb0a6a5bf, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Thu Feb 07 15:49:51 PST 2019
+aa16e3b0-1b9a-4db2-bc87-6b5bb0a6a5bf, Disabled Init, Thu Feb 07 15:49:53 PST 2019
+aa16e3b0-1b9a-4db2-bc87-6b5bb0a6a5bf, Teleop Init, Thu Feb 07 15:50:02 PST 2019
+aa16e3b0-1b9a-4db2-bc87-6b5bb0a6a5bf, Disabled Init, Thu Feb 07 15:50:03 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Robot Startup, Thu Feb 07 15:50:39 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Robot Init, Thu Feb 07 15:50:40 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Generating trajectories..., Thu Feb 07 15:50:40 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Finished trajectory generation, Thu Feb 07 15:50:40 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Disabled Init, Thu Feb 07 15:50:40 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, SET HEADING: 0.0, Thu Feb 07 15:50:40 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Gyro offset: -9.0600004196167, Thu Feb 07 15:50:40 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Teleop Init, Thu Feb 07 15:50:47 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Disabled Init, Thu Feb 07 15:51:02 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Teleop Init, Thu Feb 07 15:55:57 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Disabled Init, Thu Feb 07 15:56:04 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Teleop Init, Thu Feb 07 15:57:40 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Disabled Init, Thu Feb 07 15:57:43 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Teleop Init, Thu Feb 07 15:58:30 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Disabled Init, Thu Feb 07 15:58:37 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Teleop Init, Thu Feb 07 15:59:44 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Disabled Init, Thu Feb 07 15:59:46 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Teleop Init, Thu Feb 07 16:00:52 PST 2019
+6c65263c-3e10-44b0-b717-a49fdeed1876, Disabled Init, Thu Feb 07 16:00:54 PST 2019
+d44c4100-60f5-4416-a3b8-052da646577f, Robot Startup, Thu Feb 07 17:34:31 PST 2019
+d44c4100-60f5-4416-a3b8-052da646577f, Robot Init, Thu Feb 07 17:34:31 PST 2019
+d44c4100-60f5-4416-a3b8-052da646577f, Generating trajectories..., Thu Feb 07 17:34:31 PST 2019
+d44c4100-60f5-4416-a3b8-052da646577f, Finished trajectory generation, Thu Feb 07 17:34:31 PST 2019
+d44c4100-60f5-4416-a3b8-052da646577f, Disabled Init, Thu Feb 07 17:34:31 PST 2019
+d44c4100-60f5-4416-a3b8-052da646577f, SET HEADING: 0.0, Thu Feb 07 17:34:31 PST 2019
+d44c4100-60f5-4416-a3b8-052da646577f, Gyro offset: 27.660003662109357, Thu Feb 07 17:34:31 PST 2019
+d44c4100-60f5-4416-a3b8-052da646577f, Teleop Init, Thu Feb 07 17:52:24 PST 2019
+d44c4100-60f5-4416-a3b8-052da646577f, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Thu Feb 07 17:52:26 PST 2019
+d44c4100-60f5-4416-a3b8-052da646577f, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Thu Feb 07 17:52:26 PST 2019
+d44c4100-60f5-4416-a3b8-052da646577f, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Thu Feb 07 17:52:28 PST 2019
+d44c4100-60f5-4416-a3b8-052da646577f, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Thu Feb 07 17:52:29 PST 2019
+d44c4100-60f5-4416-a3b8-052da646577f, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Thu Feb 07 17:52:30 PST 2019
+d44c4100-60f5-4416-a3b8-052da646577f, Disabled Init, Thu Feb 07 17:53:20 PST 2019
+93da4e13-f25a-4700-8add-d9efadbca4ae, Teleop Init, Thu Feb 07 17:55:08 PST 2019
+93da4e13-f25a-4700-8add-d9efadbca4ae, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Thu Feb 07 17:55:13 PST 2019
+93da4e13-f25a-4700-8add-d9efadbca4ae, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Thu Feb 07 17:55:15 PST 2019
+93da4e13-f25a-4700-8add-d9efadbca4ae, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Thu Feb 07 17:55:15 PST 2019
+93da4e13-f25a-4700-8add-d9efadbca4ae, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Thu Feb 07 17:56:00 PST 2019
+93da4e13-f25a-4700-8add-d9efadbca4ae, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Thu Feb 07 17:56:17 PST 2019
+93da4e13-f25a-4700-8add-d9efadbca4ae, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Thu Feb 07 17:56:19 PST 2019
+93da4e13-f25a-4700-8add-d9efadbca4ae, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Thu Feb 07 17:56:32 PST 2019
+93da4e13-f25a-4700-8add-d9efadbca4ae, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Thu Feb 07 17:56:53 PST 2019
+93da4e13-f25a-4700-8add-d9efadbca4ae, Disabled Init, Thu Feb 07 17:56:55 PST 2019
+4a77bf7e-44a4-4f3a-bee4-7f3b8d8c37ee, Robot Startup, Thu Feb 07 17:57:03 PST 2019
+4a77bf7e-44a4-4f3a-bee4-7f3b8d8c37ee, Robot Init, Thu Feb 07 17:57:03 PST 2019
+4a77bf7e-44a4-4f3a-bee4-7f3b8d8c37ee, Generating trajectories..., Thu Feb 07 17:57:03 PST 2019
+4a77bf7e-44a4-4f3a-bee4-7f3b8d8c37ee, Finished trajectory generation, Thu Feb 07 17:57:04 PST 2019
+4a77bf7e-44a4-4f3a-bee4-7f3b8d8c37ee, Disabled Init, Thu Feb 07 17:57:04 PST 2019
+4a77bf7e-44a4-4f3a-bee4-7f3b8d8c37ee, SET HEADING: 0.0, Thu Feb 07 17:57:04 PST 2019
+4a77bf7e-44a4-4f3a-bee4-7f3b8d8c37ee, Gyro offset: 18.959991455078136, Thu Feb 07 17:57:04 PST 2019
+4a77bf7e-44a4-4f3a-bee4-7f3b8d8c37ee, Teleop Init, Thu Feb 07 17:57:05 PST 2019
+4a77bf7e-44a4-4f3a-bee4-7f3b8d8c37ee, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Thu Feb 07 17:57:07 PST 2019
+4a77bf7e-44a4-4f3a-bee4-7f3b8d8c37ee, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Thu Feb 07 17:57:08 PST 2019
+4a77bf7e-44a4-4f3a-bee4-7f3b8d8c37ee, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Thu Feb 07 17:57:12 PST 2019
+4a77bf7e-44a4-4f3a-bee4-7f3b8d8c37ee, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Thu Feb 07 17:57:22 PST 2019
+4a77bf7e-44a4-4f3a-bee4-7f3b8d8c37ee, Disabled Init, Thu Feb 07 17:57:28 PST 2019
+93b4f886-08a9-4a3f-a10b-cf9c9548e48e, Robot Startup, Thu Feb 07 17:58:04 PST 2019
+93b4f886-08a9-4a3f-a10b-cf9c9548e48e, Robot Init, Thu Feb 07 17:58:04 PST 2019
+93b4f886-08a9-4a3f-a10b-cf9c9548e48e, Generating trajectories..., Thu Feb 07 17:58:04 PST 2019
+93b4f886-08a9-4a3f-a10b-cf9c9548e48e, Finished trajectory generation, Thu Feb 07 17:58:05 PST 2019
+93b4f886-08a9-4a3f-a10b-cf9c9548e48e, Disabled Init, Thu Feb 07 17:58:05 PST 2019
+93b4f886-08a9-4a3f-a10b-cf9c9548e48e, SET HEADING: 0.0, Thu Feb 07 17:58:05 PST 2019
+93b4f886-08a9-4a3f-a10b-cf9c9548e48e, Gyro offset: 2.549987792968751, Thu Feb 07 17:58:05 PST 2019
+93b4f886-08a9-4a3f-a10b-cf9c9548e48e, Teleop Init, Thu Feb 07 17:58:15 PST 2019
+93b4f886-08a9-4a3f-a10b-cf9c9548e48e, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Thu Feb 07 17:58:21 PST 2019
+93b4f886-08a9-4a3f-a10b-cf9c9548e48e, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Thu Feb 07 17:58:32 PST 2019
+93b4f886-08a9-4a3f-a10b-cf9c9548e48e, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Thu Feb 07 17:58:33 PST 2019
+93b4f886-08a9-4a3f-a10b-cf9c9548e48e, Disabled Init, Thu Feb 07 17:58:42 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, Robot Startup, Thu Feb 07 17:58:57 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, Robot Init, Thu Feb 07 17:58:57 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, Generating trajectories..., Thu Feb 07 17:58:57 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, Finished trajectory generation, Thu Feb 07 17:58:57 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, Disabled Init, Thu Feb 07 17:58:57 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, SET HEADING: 0.0, Thu Feb 07 17:58:58 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, Gyro offset: -2.059999942779541, Thu Feb 07 17:58:58 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, Teleop Init, Thu Feb 07 17:58:58 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, Disabled Init, Thu Feb 07 17:59:01 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, Teleop Init, Thu Feb 07 17:59:10 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Thu Feb 07 17:59:16 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Thu Feb 07 17:59:26 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Thu Feb 07 17:59:37 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, Disabled Init, Thu Feb 07 17:59:42 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, Teleop Init, Thu Feb 07 17:59:45 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Thu Feb 07 18:00:32 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Thu Feb 07 18:00:33 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Thu Feb 07 18:00:33 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]10	 Pressed ( Arm Reverse ), Thu Feb 07 18:00:36 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Thu Feb 07 18:00:38 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Thu Feb 07 18:00:45 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Thu Feb 07 18:01:00 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Thu Feb 07 18:01:12 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Thu Feb 07 18:01:36 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Thu Feb 07 18:01:38 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Thu Feb 07 18:01:39 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Thu Feb 07 18:01:39 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Thu Feb 07 18:02:15 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Thu Feb 07 18:02:33 PST 2019
+5f417fff-48ec-4bfe-ba1e-2b8bb391edaf, Disabled Init, Thu Feb 07 18:02:42 PST 2019

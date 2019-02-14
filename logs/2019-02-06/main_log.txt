@@ -1473,3 +1473,1585 @@ e1090cc7-bcd8-43c9-979f-c6595c3bfc38, [Joystick] 1	[Button]4	 Pressed ( Transfer
 e1090cc7-bcd8-43c9-979f-c6595c3bfc38, Unsafe Current on Hatch28.25 Amps, Wed Feb 06 18:48:57 PST 2019
 e1090cc7-bcd8-43c9-979f-c6595c3bfc38, Unsafe Current on Hatch33.0 Amps, Wed Feb 06 18:48:57 PST 2019
 e1090cc7-bcd8-43c9-979f-c6595c3bfc38, Disabled Init, Wed Feb 06 18:48:59 PST 2019
+08f1d51c-2fe8-4ed2-afc7-15a322e270c0, Robot Startup, Wed Feb 06 18:49:33 PST 2019
+08f1d51c-2fe8-4ed2-afc7-15a322e270c0, Robot Init, Wed Feb 06 18:49:33 PST 2019
+08f1d51c-2fe8-4ed2-afc7-15a322e270c0, Generating trajectories..., Wed Feb 06 18:49:33 PST 2019
+08f1d51c-2fe8-4ed2-afc7-15a322e270c0, Finished trajectory generation, Wed Feb 06 18:49:33 PST 2019
+08f1d51c-2fe8-4ed2-afc7-15a322e270c0, Disabled Init, Wed Feb 06 18:49:33 PST 2019
+08f1d51c-2fe8-4ed2-afc7-15a322e270c0, SET HEADING: 0.0, Wed Feb 06 18:49:34 PST 2019
+08f1d51c-2fe8-4ed2-afc7-15a322e270c0, Gyro offset: -45.549999237060554, Wed Feb 06 18:49:34 PST 2019
+08f1d51c-2fe8-4ed2-afc7-15a322e270c0, Teleop Init, Wed Feb 06 18:49:47 PST 2019
+08f1d51c-2fe8-4ed2-afc7-15a322e270c0, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:49:49 PST 2019
+08f1d51c-2fe8-4ed2-afc7-15a322e270c0, Disabled Init, Wed Feb 06 18:49:54 PST 2019
+d17c3e44-fa5e-414e-b8ae-58b07bccd38a, SigNotUpdated, Wed Feb 06 18:50:28 PST 2019
+d17c3e44-fa5e-414e-b8ae-58b07bccd38a, SigNotUpdated, Wed Feb 06 18:50:28 PST 2019
+d17c3e44-fa5e-414e-b8ae-58b07bccd38a, Robot Startup, Wed Feb 06 18:50:28 PST 2019
+d17c3e44-fa5e-414e-b8ae-58b07bccd38a, Robot Init, Wed Feb 06 18:50:28 PST 2019
+d17c3e44-fa5e-414e-b8ae-58b07bccd38a, Generating trajectories..., Wed Feb 06 18:50:28 PST 2019
+d17c3e44-fa5e-414e-b8ae-58b07bccd38a, Finished trajectory generation, Wed Feb 06 18:50:29 PST 2019
+d17c3e44-fa5e-414e-b8ae-58b07bccd38a, Disabled Init, Wed Feb 06 18:50:29 PST 2019
+d17c3e44-fa5e-414e-b8ae-58b07bccd38a, SET HEADING: 0.0, Wed Feb 06 18:50:29 PST 2019
+d17c3e44-fa5e-414e-b8ae-58b07bccd38a, Gyro offset: -45.549999237060554, Wed Feb 06 18:50:29 PST 2019
+d17c3e44-fa5e-414e-b8ae-58b07bccd38a, Teleop Init, Wed Feb 06 18:50:39 PST 2019
+d17c3e44-fa5e-414e-b8ae-58b07bccd38a, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 18:50:40 PST 2019
+d17c3e44-fa5e-414e-b8ae-58b07bccd38a, Disabled Init, Wed Feb 06 18:50:42 PST 2019
+65195044-c9c8-4b53-a6a3-287883597f5e, Robot Startup, Wed Feb 06 18:51:12 PST 2019
+65195044-c9c8-4b53-a6a3-287883597f5e, Robot Init, Wed Feb 06 18:51:12 PST 2019
+65195044-c9c8-4b53-a6a3-287883597f5e, Generating trajectories..., Wed Feb 06 18:51:12 PST 2019
+65195044-c9c8-4b53-a6a3-287883597f5e, Finished trajectory generation, Wed Feb 06 18:51:12 PST 2019
+65195044-c9c8-4b53-a6a3-287883597f5e, Disabled Init, Wed Feb 06 18:51:12 PST 2019
+65195044-c9c8-4b53-a6a3-287883597f5e, SET HEADING: 0.0, Wed Feb 06 18:51:13 PST 2019
+65195044-c9c8-4b53-a6a3-287883597f5e, Gyro offset: -44.900001525878906, Wed Feb 06 18:51:13 PST 2019
+621eca45-eeae-474d-af1a-f8f35cf82942, Robot Startup, Wed Feb 06 19:03:47 PST 2019
+621eca45-eeae-474d-af1a-f8f35cf82942, Robot Init, Wed Feb 06 19:03:47 PST 2019
+621eca45-eeae-474d-af1a-f8f35cf82942, Generating trajectories..., Wed Feb 06 19:03:47 PST 2019
+621eca45-eeae-474d-af1a-f8f35cf82942, Finished trajectory generation, Wed Feb 06 19:03:47 PST 2019
+621eca45-eeae-474d-af1a-f8f35cf82942, Disabled Init, Wed Feb 06 19:03:47 PST 2019
+621eca45-eeae-474d-af1a-f8f35cf82942, SET HEADING: 0.0, Wed Feb 06 19:03:48 PST 2019
+621eca45-eeae-474d-af1a-f8f35cf82942, Gyro offset: -44.97000122070313, Wed Feb 06 19:03:48 PST 2019
+621eca45-eeae-474d-af1a-f8f35cf82942, Teleop Init, Wed Feb 06 19:03:48 PST 2019
+621eca45-eeae-474d-af1a-f8f35cf82942, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:03:50 PST 2019
+621eca45-eeae-474d-af1a-f8f35cf82942, Unsafe Current on Hatch62.75 Amps, Wed Feb 06 19:03:50 PST 2019
+621eca45-eeae-474d-af1a-f8f35cf82942, Unsafe Current on Hatch59.875 Amps, Wed Feb 06 19:03:50 PST 2019
+621eca45-eeae-474d-af1a-f8f35cf82942, Disabled Init, Wed Feb 06 19:03:52 PST 2019
+57a71687-c53b-4b5b-a41f-d953a5df035b, Robot Startup, Wed Feb 06 19:04:24 PST 2019
+57a71687-c53b-4b5b-a41f-d953a5df035b, Robot Init, Wed Feb 06 19:04:25 PST 2019
+57a71687-c53b-4b5b-a41f-d953a5df035b, Generating trajectories..., Wed Feb 06 19:04:25 PST 2019
+57a71687-c53b-4b5b-a41f-d953a5df035b, Finished trajectory generation, Wed Feb 06 19:04:25 PST 2019
+57a71687-c53b-4b5b-a41f-d953a5df035b, Disabled Init, Wed Feb 06 19:04:25 PST 2019
+57a71687-c53b-4b5b-a41f-d953a5df035b, SET HEADING: 0.0, Wed Feb 06 19:04:25 PST 2019
+57a71687-c53b-4b5b-a41f-d953a5df035b, Gyro offset: -44.43000030517578, Wed Feb 06 19:04:25 PST 2019
+57a71687-c53b-4b5b-a41f-d953a5df035b, Teleop Init, Wed Feb 06 19:04:44 PST 2019
+57a71687-c53b-4b5b-a41f-d953a5df035b, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:04:46 PST 2019
+57a71687-c53b-4b5b-a41f-d953a5df035b, Unsafe Current on Hatch81.125 Amps, Wed Feb 06 19:04:46 PST 2019
+57a71687-c53b-4b5b-a41f-d953a5df035b, Unsafe Current on Hatch94.75 Amps, Wed Feb 06 19:04:46 PST 2019
+57a71687-c53b-4b5b-a41f-d953a5df035b, Disabled Init, Wed Feb 06 19:04:48 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, SigNotUpdated, Wed Feb 06 19:06:03 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, Robot Startup, Wed Feb 06 19:06:03 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, Robot Init, Wed Feb 06 19:06:03 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, Generating trajectories..., Wed Feb 06 19:06:03 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, Finished trajectory generation, Wed Feb 06 19:06:03 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, Disabled Init, Wed Feb 06 19:06:03 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, SET HEADING: 0.0, Wed Feb 06 19:06:04 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, Gyro offset: -44.16999816894531, Wed Feb 06 19:06:04 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, Teleop Init, Wed Feb 06 19:06:40 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:06:42 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, Unsafe Current on Hatch89.5 Amps, Wed Feb 06 19:06:42 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, Unsafe Current on Hatch94.625 Amps, Wed Feb 06 19:06:43 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, Disabled Init, Wed Feb 06 19:06:44 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, Teleop Init, Wed Feb 06 19:06:58 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Wed Feb 06 19:07:00 PST 2019
+171bc87d-817e-4855-9360-ba9d1c7f99f9, Disabled Init, Wed Feb 06 19:07:18 PST 2019
+ceab9e9b-1241-437f-b3be-a66b0b05857f, SigNotUpdated, Wed Feb 06 19:07:42 PST 2019
+ceab9e9b-1241-437f-b3be-a66b0b05857f, Robot Startup, Wed Feb 06 19:07:42 PST 2019
+ceab9e9b-1241-437f-b3be-a66b0b05857f, Robot Init, Wed Feb 06 19:07:42 PST 2019
+ceab9e9b-1241-437f-b3be-a66b0b05857f, Generating trajectories..., Wed Feb 06 19:07:42 PST 2019
+ceab9e9b-1241-437f-b3be-a66b0b05857f, Finished trajectory generation, Wed Feb 06 19:07:43 PST 2019
+ceab9e9b-1241-437f-b3be-a66b0b05857f, Disabled Init, Wed Feb 06 19:07:43 PST 2019
+ceab9e9b-1241-437f-b3be-a66b0b05857f, SET HEADING: 0.0, Wed Feb 06 19:07:43 PST 2019
+ceab9e9b-1241-437f-b3be-a66b0b05857f, Gyro offset: -43.9900016784668, Wed Feb 06 19:07:43 PST 2019
+ceab9e9b-1241-437f-b3be-a66b0b05857f, Teleop Init, Wed Feb 06 19:08:04 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, SigNotUpdated, Wed Feb 06 19:08:14 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Robot Startup, Wed Feb 06 19:08:15 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Robot Init, Wed Feb 06 19:08:15 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Generating trajectories..., Wed Feb 06 19:08:15 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Finished trajectory generation, Wed Feb 06 19:08:15 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Disabled Init, Wed Feb 06 19:08:15 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, SET HEADING: 0.0, Wed Feb 06 19:08:15 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Gyro offset: -43.93999862670899, Wed Feb 06 19:08:15 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Teleop Init, Wed Feb 06 19:09:26 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Wed Feb 06 19:09:37 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:10:06 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Disabled Init, Wed Feb 06 19:10:07 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Teleop Init, Wed Feb 06 19:10:10 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:10:11 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Unsafe Current on Hatch81.75 Amps, Wed Feb 06 19:10:12 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Unsafe Current on Hatch94.25 Amps, Wed Feb 06 19:10:12 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Disabled Init, Wed Feb 06 19:10:13 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Teleop Init, Wed Feb 06 19:10:24 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:10:25 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Unsafe Current on Hatch83.375 Amps, Wed Feb 06 19:10:25 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Unsafe Current on Hatch93.375 Amps, Wed Feb 06 19:10:25 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Unsafe Current on Hatch88.375 Amps, Wed Feb 06 19:10:25 PST 2019
+71760839-4575-4785-87a8-288fa4d74229, Disabled Init, Wed Feb 06 19:10:27 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, SigNotUpdated, Wed Feb 06 19:10:52 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, SigNotUpdated, Wed Feb 06 19:10:52 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Robot Startup, Wed Feb 06 19:10:52 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Robot Init, Wed Feb 06 19:10:52 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Generating trajectories..., Wed Feb 06 19:10:52 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Finished trajectory generation, Wed Feb 06 19:10:52 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Disabled Init, Wed Feb 06 19:10:52 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, SET HEADING: 0.0, Wed Feb 06 19:10:53 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Gyro offset: -42.6500015258789, Wed Feb 06 19:10:53 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Teleop Init, Wed Feb 06 19:11:09 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:11:10 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Unsafe Current on Hatch91.5 Amps, Wed Feb 06 19:11:10 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Unsafe Current on Hatch93.25 Amps, Wed Feb 06 19:11:10 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Unsafe Current on Hatch93.375 Amps, Wed Feb 06 19:11:10 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Disabled Init, Wed Feb 06 19:11:18 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Teleop Init, Wed Feb 06 19:11:25 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:11:26 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Unsafe Current on Hatch91.75 Amps, Wed Feb 06 19:11:26 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Unsafe Current on Hatch92.125 Amps, Wed Feb 06 19:11:27 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Disabled Init, Wed Feb 06 19:11:28 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Teleop Init, Wed Feb 06 19:11:43 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:11:44 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Unsafe Current on Hatch82.25 Amps, Wed Feb 06 19:11:44 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Unsafe Current on Hatch93.75 Amps, Wed Feb 06 19:11:44 PST 2019
+6ea3d618-cf05-469a-a2b7-959384dda752, Disabled Init, Wed Feb 06 19:11:48 PST 2019
+3de7644c-a135-41db-851f-0dbf24374f00, Robot Startup, Wed Feb 06 19:12:23 PST 2019
+3de7644c-a135-41db-851f-0dbf24374f00, Robot Init, Wed Feb 06 19:12:23 PST 2019
+3de7644c-a135-41db-851f-0dbf24374f00, Generating trajectories..., Wed Feb 06 19:12:23 PST 2019
+3de7644c-a135-41db-851f-0dbf24374f00, Finished trajectory generation, Wed Feb 06 19:12:24 PST 2019
+3de7644c-a135-41db-851f-0dbf24374f00, Disabled Init, Wed Feb 06 19:12:24 PST 2019
+3de7644c-a135-41db-851f-0dbf24374f00, SET HEADING: 0.0, Wed Feb 06 19:12:24 PST 2019
+3de7644c-a135-41db-851f-0dbf24374f00, Gyro offset: -40.75, Wed Feb 06 19:12:24 PST 2019
+3de7644c-a135-41db-851f-0dbf24374f00, Teleop Init, Wed Feb 06 19:12:26 PST 2019
+3de7644c-a135-41db-851f-0dbf24374f00, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:12:27 PST 2019
+3de7644c-a135-41db-851f-0dbf24374f00, Disabled Init, Wed Feb 06 19:12:41 PST 2019
+68d73520-da3e-4194-b43d-b76eb00455fd, SigNotUpdated, Wed Feb 06 19:13:25 PST 2019
+68d73520-da3e-4194-b43d-b76eb00455fd, Robot Startup, Wed Feb 06 19:13:25 PST 2019
+68d73520-da3e-4194-b43d-b76eb00455fd, Robot Init, Wed Feb 06 19:13:25 PST 2019
+68d73520-da3e-4194-b43d-b76eb00455fd, Generating trajectories..., Wed Feb 06 19:13:25 PST 2019
+68d73520-da3e-4194-b43d-b76eb00455fd, Finished trajectory generation, Wed Feb 06 19:13:25 PST 2019
+68d73520-da3e-4194-b43d-b76eb00455fd, Disabled Init, Wed Feb 06 19:13:25 PST 2019
+68d73520-da3e-4194-b43d-b76eb00455fd, SET HEADING: 0.0, Wed Feb 06 19:13:26 PST 2019
+68d73520-da3e-4194-b43d-b76eb00455fd, Gyro offset: -40.689998626708984, Wed Feb 06 19:13:26 PST 2019
+3af31b9d-3f10-463f-9722-3600bb562930, SigNotUpdated, Wed Feb 06 19:14:20 PST 2019
+3af31b9d-3f10-463f-9722-3600bb562930, Robot Startup, Wed Feb 06 19:14:21 PST 2019
+3af31b9d-3f10-463f-9722-3600bb562930, Robot Init, Wed Feb 06 19:14:21 PST 2019
+3af31b9d-3f10-463f-9722-3600bb562930, Generating trajectories..., Wed Feb 06 19:14:21 PST 2019
+3af31b9d-3f10-463f-9722-3600bb562930, Finished trajectory generation, Wed Feb 06 19:14:21 PST 2019
+3af31b9d-3f10-463f-9722-3600bb562930, Disabled Init, Wed Feb 06 19:14:21 PST 2019
+3af31b9d-3f10-463f-9722-3600bb562930, SET HEADING: 0.0, Wed Feb 06 19:14:21 PST 2019
+3af31b9d-3f10-463f-9722-3600bb562930, Gyro offset: -40.81999969482422, Wed Feb 06 19:14:21 PST 2019
+3af31b9d-3f10-463f-9722-3600bb562930, Teleop Init, Wed Feb 06 19:14:25 PST 2019
+3af31b9d-3f10-463f-9722-3600bb562930, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:14:27 PST 2019
+3af31b9d-3f10-463f-9722-3600bb562930, Disabled Init, Wed Feb 06 19:14:29 PST 2019
+3af31b9d-3f10-463f-9722-3600bb562930, Teleop Init, Wed Feb 06 19:15:11 PST 2019
+3af31b9d-3f10-463f-9722-3600bb562930, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:15:13 PST 2019
+3af31b9d-3f10-463f-9722-3600bb562930, Disabled Init, Wed Feb 06 19:15:14 PST 2019
+88ed3be8-2ab0-4401-a8fc-bb012c4f50c0, SigNotUpdated, Wed Feb 06 19:15:23 PST 2019
+88ed3be8-2ab0-4401-a8fc-bb012c4f50c0, Robot Startup, Wed Feb 06 19:15:23 PST 2019
+88ed3be8-2ab0-4401-a8fc-bb012c4f50c0, Robot Init, Wed Feb 06 19:15:23 PST 2019
+88ed3be8-2ab0-4401-a8fc-bb012c4f50c0, Generating trajectories..., Wed Feb 06 19:15:23 PST 2019
+88ed3be8-2ab0-4401-a8fc-bb012c4f50c0, Finished trajectory generation, Wed Feb 06 19:15:23 PST 2019
+88ed3be8-2ab0-4401-a8fc-bb012c4f50c0, Disabled Init, Wed Feb 06 19:15:23 PST 2019
+88ed3be8-2ab0-4401-a8fc-bb012c4f50c0, SET HEADING: 0.0, Wed Feb 06 19:15:24 PST 2019
+88ed3be8-2ab0-4401-a8fc-bb012c4f50c0, Gyro offset: -40.25, Wed Feb 06 19:15:24 PST 2019
+88ed3be8-2ab0-4401-a8fc-bb012c4f50c0, Teleop Init, Wed Feb 06 19:15:24 PST 2019
+88ed3be8-2ab0-4401-a8fc-bb012c4f50c0, SigNotUpdated, Wed Feb 06 19:15:25 PST 2019
+88ed3be8-2ab0-4401-a8fc-bb012c4f50c0, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:15:25 PST 2019
+88ed3be8-2ab0-4401-a8fc-bb012c4f50c0, Disabled Init, Wed Feb 06 19:15:29 PST 2019
+3a026ad1-785b-4d39-bfc9-e3fb27bc539b, SigNotUpdated, Wed Feb 06 19:15:56 PST 2019
+3a026ad1-785b-4d39-bfc9-e3fb27bc539b, Robot Startup, Wed Feb 06 19:15:56 PST 2019
+3a026ad1-785b-4d39-bfc9-e3fb27bc539b, Robot Init, Wed Feb 06 19:15:56 PST 2019
+3a026ad1-785b-4d39-bfc9-e3fb27bc539b, Generating trajectories..., Wed Feb 06 19:15:56 PST 2019
+3a026ad1-785b-4d39-bfc9-e3fb27bc539b, Finished trajectory generation, Wed Feb 06 19:15:56 PST 2019
+3a026ad1-785b-4d39-bfc9-e3fb27bc539b, Disabled Init, Wed Feb 06 19:15:56 PST 2019
+3a026ad1-785b-4d39-bfc9-e3fb27bc539b, SET HEADING: 0.0, Wed Feb 06 19:15:57 PST 2019
+3a026ad1-785b-4d39-bfc9-e3fb27bc539b, Gyro offset: -40.31999969482422, Wed Feb 06 19:15:57 PST 2019
+3a026ad1-785b-4d39-bfc9-e3fb27bc539b, Teleop Init, Wed Feb 06 19:16:10 PST 2019
+3a026ad1-785b-4d39-bfc9-e3fb27bc539b, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:16:11 PST 2019
+3a026ad1-785b-4d39-bfc9-e3fb27bc539b, Disabled Init, Wed Feb 06 19:16:13 PST 2019
+fd3550be-b3f6-438a-9d15-4a7e86d78425, SigNotUpdated, Wed Feb 06 19:16:46 PST 2019
+ec38257d-4c5c-434d-a635-898df9d6105d, Robot Startup, Wed Feb 06 19:16:56 PST 2019
+ec38257d-4c5c-434d-a635-898df9d6105d, Robot Init, Wed Feb 06 19:16:56 PST 2019
+ec38257d-4c5c-434d-a635-898df9d6105d, Generating trajectories..., Wed Feb 06 19:16:56 PST 2019
+ec38257d-4c5c-434d-a635-898df9d6105d, Finished trajectory generation, Wed Feb 06 19:16:56 PST 2019
+ec38257d-4c5c-434d-a635-898df9d6105d, Disabled Init, Wed Feb 06 19:16:56 PST 2019
+ec38257d-4c5c-434d-a635-898df9d6105d, SET HEADING: 0.0, Wed Feb 06 19:16:56 PST 2019
+ec38257d-4c5c-434d-a635-898df9d6105d, Gyro offset: -40.299999237060554, Wed Feb 06 19:16:56 PST 2019
+ec38257d-4c5c-434d-a635-898df9d6105d, Teleop Init, Wed Feb 06 19:16:59 PST 2019
+ec38257d-4c5c-434d-a635-898df9d6105d, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:17:00 PST 2019
+ec38257d-4c5c-434d-a635-898df9d6105d, Disabled Init, Wed Feb 06 19:17:02 PST 2019
+e60855c0-c4bb-4cde-b1ab-04b0f1c3cd56, SigNotUpdated, Wed Feb 06 19:17:23 PST 2019
+e60855c0-c4bb-4cde-b1ab-04b0f1c3cd56, Robot Startup, Wed Feb 06 19:17:23 PST 2019
+e60855c0-c4bb-4cde-b1ab-04b0f1c3cd56, Robot Init, Wed Feb 06 19:17:23 PST 2019
+e60855c0-c4bb-4cde-b1ab-04b0f1c3cd56, Generating trajectories..., Wed Feb 06 19:17:23 PST 2019
+e60855c0-c4bb-4cde-b1ab-04b0f1c3cd56, Finished trajectory generation, Wed Feb 06 19:17:24 PST 2019
+e60855c0-c4bb-4cde-b1ab-04b0f1c3cd56, Disabled Init, Wed Feb 06 19:17:24 PST 2019
+e60855c0-c4bb-4cde-b1ab-04b0f1c3cd56, SET HEADING: 0.0, Wed Feb 06 19:17:24 PST 2019
+e60855c0-c4bb-4cde-b1ab-04b0f1c3cd56, Gyro offset: -40.27999877929687, Wed Feb 06 19:17:24 PST 2019
+69611ff1-b36c-430a-94b9-3634d8b0263d, SigNotUpdated, Wed Feb 06 19:17:38 PST 2019
+69611ff1-b36c-430a-94b9-3634d8b0263d, Robot Startup, Wed Feb 06 19:17:38 PST 2019
+69611ff1-b36c-430a-94b9-3634d8b0263d, Robot Init, Wed Feb 06 19:17:38 PST 2019
+69611ff1-b36c-430a-94b9-3634d8b0263d, Generating trajectories..., Wed Feb 06 19:17:38 PST 2019
+69611ff1-b36c-430a-94b9-3634d8b0263d, Finished trajectory generation, Wed Feb 06 19:17:38 PST 2019
+69611ff1-b36c-430a-94b9-3634d8b0263d, Disabled Init, Wed Feb 06 19:17:38 PST 2019
+69611ff1-b36c-430a-94b9-3634d8b0263d, SET HEADING: 0.0, Wed Feb 06 19:17:39 PST 2019
+69611ff1-b36c-430a-94b9-3634d8b0263d, Gyro offset: -40.22000122070313, Wed Feb 06 19:17:39 PST 2019
+f2b70d43-05d9-4733-bb62-6b3346dc4b20, SigNotUpdated, Wed Feb 06 19:18:10 PST 2019
+4afcad6e-765e-461f-9436-ad72ff69bed8, SigNotUpdated, Wed Feb 06 19:18:19 PST 2019
+4afcad6e-765e-461f-9436-ad72ff69bed8, Robot Startup, Wed Feb 06 19:18:20 PST 2019
+4afcad6e-765e-461f-9436-ad72ff69bed8, Robot Init, Wed Feb 06 19:18:20 PST 2019
+4afcad6e-765e-461f-9436-ad72ff69bed8, Generating trajectories..., Wed Feb 06 19:18:20 PST 2019
+4afcad6e-765e-461f-9436-ad72ff69bed8, Finished trajectory generation, Wed Feb 06 19:18:20 PST 2019
+4afcad6e-765e-461f-9436-ad72ff69bed8, Disabled Init, Wed Feb 06 19:18:20 PST 2019
+4afcad6e-765e-461f-9436-ad72ff69bed8, SET HEADING: 0.0, Wed Feb 06 19:18:20 PST 2019
+4afcad6e-765e-461f-9436-ad72ff69bed8, Gyro offset: -40.299999237060554, Wed Feb 06 19:18:20 PST 2019
+4afcad6e-765e-461f-9436-ad72ff69bed8, Teleop Init, Wed Feb 06 19:18:21 PST 2019
+4afcad6e-765e-461f-9436-ad72ff69bed8, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:18:22 PST 2019
+4afcad6e-765e-461f-9436-ad72ff69bed8, Disabled Init, Wed Feb 06 19:18:24 PST 2019
+90cdb8fd-f98d-4076-8cb2-e307701e8fa3, Robot Startup, Wed Feb 06 19:18:53 PST 2019
+90cdb8fd-f98d-4076-8cb2-e307701e8fa3, Robot Init, Wed Feb 06 19:18:53 PST 2019
+90cdb8fd-f98d-4076-8cb2-e307701e8fa3, Generating trajectories..., Wed Feb 06 19:18:53 PST 2019
+90cdb8fd-f98d-4076-8cb2-e307701e8fa3, Finished trajectory generation, Wed Feb 06 19:18:53 PST 2019
+90cdb8fd-f98d-4076-8cb2-e307701e8fa3, Disabled Init, Wed Feb 06 19:18:53 PST 2019
+90cdb8fd-f98d-4076-8cb2-e307701e8fa3, SET HEADING: 0.0, Wed Feb 06 19:18:54 PST 2019
+90cdb8fd-f98d-4076-8cb2-e307701e8fa3, Gyro offset: -40.3499984741211, Wed Feb 06 19:18:54 PST 2019
+90cdb8fd-f98d-4076-8cb2-e307701e8fa3, Teleop Init, Wed Feb 06 19:18:54 PST 2019
+90cdb8fd-f98d-4076-8cb2-e307701e8fa3, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:18:56 PST 2019
+90cdb8fd-f98d-4076-8cb2-e307701e8fa3, Disabled Init, Wed Feb 06 19:19:00 PST 2019
+918b866d-2652-4686-bffe-3128a6abb80b, SigNotUpdated, Wed Feb 06 19:19:20 PST 2019
+918b866d-2652-4686-bffe-3128a6abb80b, Robot Startup, Wed Feb 06 19:19:20 PST 2019
+918b866d-2652-4686-bffe-3128a6abb80b, Robot Init, Wed Feb 06 19:19:20 PST 2019
+918b866d-2652-4686-bffe-3128a6abb80b, Generating trajectories..., Wed Feb 06 19:19:20 PST 2019
+918b866d-2652-4686-bffe-3128a6abb80b, Finished trajectory generation, Wed Feb 06 19:19:20 PST 2019
+918b866d-2652-4686-bffe-3128a6abb80b, Disabled Init, Wed Feb 06 19:19:20 PST 2019
+918b866d-2652-4686-bffe-3128a6abb80b, SET HEADING: 0.0, Wed Feb 06 19:19:20 PST 2019
+918b866d-2652-4686-bffe-3128a6abb80b, Gyro offset: -40.22000122070313, Wed Feb 06 19:19:20 PST 2019
+918b866d-2652-4686-bffe-3128a6abb80b, Teleop Init, Wed Feb 06 19:19:29 PST 2019
+918b866d-2652-4686-bffe-3128a6abb80b, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:19:30 PST 2019
+918b866d-2652-4686-bffe-3128a6abb80b, Disabled Init, Wed Feb 06 19:19:33 PST 2019
+8b1f9204-dc9a-4914-84fc-7ad7538dc919, SigNotUpdated, Wed Feb 06 19:20:08 PST 2019
+8b1f9204-dc9a-4914-84fc-7ad7538dc919, Robot Startup, Wed Feb 06 19:20:08 PST 2019
+8b1f9204-dc9a-4914-84fc-7ad7538dc919, Robot Init, Wed Feb 06 19:20:08 PST 2019
+8b1f9204-dc9a-4914-84fc-7ad7538dc919, Generating trajectories..., Wed Feb 06 19:20:08 PST 2019
+8b1f9204-dc9a-4914-84fc-7ad7538dc919, Finished trajectory generation, Wed Feb 06 19:20:08 PST 2019
+8b1f9204-dc9a-4914-84fc-7ad7538dc919, Disabled Init, Wed Feb 06 19:20:08 PST 2019
+8b1f9204-dc9a-4914-84fc-7ad7538dc919, SET HEADING: 0.0, Wed Feb 06 19:20:09 PST 2019
+8b1f9204-dc9a-4914-84fc-7ad7538dc919, Gyro offset: -39.959999084472656, Wed Feb 06 19:20:09 PST 2019
+8b1f9204-dc9a-4914-84fc-7ad7538dc919, Teleop Init, Wed Feb 06 19:20:09 PST 2019
+8b1f9204-dc9a-4914-84fc-7ad7538dc919, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:20:11 PST 2019
+8b1f9204-dc9a-4914-84fc-7ad7538dc919, Disabled Init, Wed Feb 06 19:20:22 PST 2019
+88f352ce-7c02-403b-b86a-951e45ddbd24, Robot Startup, Wed Feb 06 19:21:04 PST 2019
+88f352ce-7c02-403b-b86a-951e45ddbd24, Robot Init, Wed Feb 06 19:21:04 PST 2019
+88f352ce-7c02-403b-b86a-951e45ddbd24, Generating trajectories..., Wed Feb 06 19:21:04 PST 2019
+88f352ce-7c02-403b-b86a-951e45ddbd24, Finished trajectory generation, Wed Feb 06 19:21:05 PST 2019
+88f352ce-7c02-403b-b86a-951e45ddbd24, Disabled Init, Wed Feb 06 19:21:05 PST 2019
+88f352ce-7c02-403b-b86a-951e45ddbd24, SET HEADING: 0.0, Wed Feb 06 19:21:05 PST 2019
+88f352ce-7c02-403b-b86a-951e45ddbd24, Gyro offset: -40.029998779296875, Wed Feb 06 19:21:05 PST 2019
+88f352ce-7c02-403b-b86a-951e45ddbd24, Teleop Init, Wed Feb 06 19:21:11 PST 2019
+88f352ce-7c02-403b-b86a-951e45ddbd24, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:21:13 PST 2019
+88f352ce-7c02-403b-b86a-951e45ddbd24, Disabled Init, Wed Feb 06 19:21:26 PST 2019
+f25582ea-1f40-4e3c-9134-40295b88a016, Robot Startup, Wed Feb 06 19:21:44 PST 2019
+f25582ea-1f40-4e3c-9134-40295b88a016, Robot Init, Wed Feb 06 19:21:44 PST 2019
+f25582ea-1f40-4e3c-9134-40295b88a016, Generating trajectories..., Wed Feb 06 19:21:44 PST 2019
+f25582ea-1f40-4e3c-9134-40295b88a016, Finished trajectory generation, Wed Feb 06 19:21:44 PST 2019
+f25582ea-1f40-4e3c-9134-40295b88a016, Disabled Init, Wed Feb 06 19:21:44 PST 2019
+f25582ea-1f40-4e3c-9134-40295b88a016, SET HEADING: 0.0, Wed Feb 06 19:21:45 PST 2019
+f25582ea-1f40-4e3c-9134-40295b88a016, Gyro offset: -39.639999389648445, Wed Feb 06 19:21:45 PST 2019
+f25582ea-1f40-4e3c-9134-40295b88a016, Teleop Init, Wed Feb 06 19:21:45 PST 2019
+f25582ea-1f40-4e3c-9134-40295b88a016, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:21:47 PST 2019
+f25582ea-1f40-4e3c-9134-40295b88a016, Disabled Init, Wed Feb 06 19:21:51 PST 2019
+471d0bdb-092f-42f4-bdcf-7a3bfc81bd11, Robot Startup, Wed Feb 06 19:22:12 PST 2019
+471d0bdb-092f-42f4-bdcf-7a3bfc81bd11, Robot Init, Wed Feb 06 19:22:13 PST 2019
+471d0bdb-092f-42f4-bdcf-7a3bfc81bd11, Generating trajectories..., Wed Feb 06 19:22:13 PST 2019
+471d0bdb-092f-42f4-bdcf-7a3bfc81bd11, Finished trajectory generation, Wed Feb 06 19:22:13 PST 2019
+471d0bdb-092f-42f4-bdcf-7a3bfc81bd11, Disabled Init, Wed Feb 06 19:22:13 PST 2019
+471d0bdb-092f-42f4-bdcf-7a3bfc81bd11, SET HEADING: 0.0, Wed Feb 06 19:22:13 PST 2019
+471d0bdb-092f-42f4-bdcf-7a3bfc81bd11, Gyro offset: -39.18000030517578, Wed Feb 06 19:22:13 PST 2019
+471d0bdb-092f-42f4-bdcf-7a3bfc81bd11, Teleop Init, Wed Feb 06 19:22:14 PST 2019
+471d0bdb-092f-42f4-bdcf-7a3bfc81bd11, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:22:15 PST 2019
+471d0bdb-092f-42f4-bdcf-7a3bfc81bd11, Disabled Init, Wed Feb 06 19:22:25 PST 2019
+6ca05b33-149c-43f3-b2c5-b784371363e2, SigNotUpdated, Wed Feb 06 19:23:43 PST 2019
+6ca05b33-149c-43f3-b2c5-b784371363e2, Robot Startup, Wed Feb 06 19:23:44 PST 2019
+6ca05b33-149c-43f3-b2c5-b784371363e2, Robot Init, Wed Feb 06 19:23:44 PST 2019
+6ca05b33-149c-43f3-b2c5-b784371363e2, Generating trajectories..., Wed Feb 06 19:23:44 PST 2019
+6ca05b33-149c-43f3-b2c5-b784371363e2, Finished trajectory generation, Wed Feb 06 19:23:44 PST 2019
+6ca05b33-149c-43f3-b2c5-b784371363e2, Disabled Init, Wed Feb 06 19:23:44 PST 2019
+6ca05b33-149c-43f3-b2c5-b784371363e2, SET HEADING: 0.0, Wed Feb 06 19:23:44 PST 2019
+6ca05b33-149c-43f3-b2c5-b784371363e2, Gyro offset: -39.27999877929688, Wed Feb 06 19:23:44 PST 2019
+6ca05b33-149c-43f3-b2c5-b784371363e2, Teleop Init, Wed Feb 06 19:23:45 PST 2019
+6ca05b33-149c-43f3-b2c5-b784371363e2, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:23:46 PST 2019
+6ca05b33-149c-43f3-b2c5-b784371363e2, Disabled Init, Wed Feb 06 19:23:52 PST 2019
+faea1755-13fa-4c7e-8932-6d291429f687, SigNotUpdated, Wed Feb 06 19:24:54 PST 2019
+faea1755-13fa-4c7e-8932-6d291429f687, Robot Startup, Wed Feb 06 19:24:54 PST 2019
+faea1755-13fa-4c7e-8932-6d291429f687, Robot Init, Wed Feb 06 19:24:54 PST 2019
+faea1755-13fa-4c7e-8932-6d291429f687, Generating trajectories..., Wed Feb 06 19:24:54 PST 2019
+faea1755-13fa-4c7e-8932-6d291429f687, Finished trajectory generation, Wed Feb 06 19:24:54 PST 2019
+faea1755-13fa-4c7e-8932-6d291429f687, Disabled Init, Wed Feb 06 19:24:54 PST 2019
+faea1755-13fa-4c7e-8932-6d291429f687, SET HEADING: 0.0, Wed Feb 06 19:24:55 PST 2019
+faea1755-13fa-4c7e-8932-6d291429f687, Gyro offset: -39.06999969482422, Wed Feb 06 19:24:55 PST 2019
+faea1755-13fa-4c7e-8932-6d291429f687, Teleop Init, Wed Feb 06 19:24:55 PST 2019
+faea1755-13fa-4c7e-8932-6d291429f687, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:24:56 PST 2019
+faea1755-13fa-4c7e-8932-6d291429f687, Disabled Init, Wed Feb 06 19:25:01 PST 2019
+403c0071-8142-409a-836d-07421b7d1552, SigNotUpdated, Wed Feb 06 19:25:30 PST 2019
+403c0071-8142-409a-836d-07421b7d1552, Robot Startup, Wed Feb 06 19:25:30 PST 2019
+403c0071-8142-409a-836d-07421b7d1552, Robot Init, Wed Feb 06 19:25:30 PST 2019
+403c0071-8142-409a-836d-07421b7d1552, Generating trajectories..., Wed Feb 06 19:25:30 PST 2019
+403c0071-8142-409a-836d-07421b7d1552, Finished trajectory generation, Wed Feb 06 19:25:30 PST 2019
+403c0071-8142-409a-836d-07421b7d1552, Disabled Init, Wed Feb 06 19:25:31 PST 2019
+403c0071-8142-409a-836d-07421b7d1552, SET HEADING: 0.0, Wed Feb 06 19:25:31 PST 2019
+403c0071-8142-409a-836d-07421b7d1552, Gyro offset: -39.439998626708984, Wed Feb 06 19:25:31 PST 2019
+403c0071-8142-409a-836d-07421b7d1552, Teleop Init, Wed Feb 06 19:25:32 PST 2019
+403c0071-8142-409a-836d-07421b7d1552, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:25:33 PST 2019
+403c0071-8142-409a-836d-07421b7d1552, Disabled Init, Wed Feb 06 19:25:38 PST 2019
+06eabfd7-dc8e-4f3d-a50e-140ab9ee8c9e, Robot Startup, Wed Feb 06 19:27:25 PST 2019
+06eabfd7-dc8e-4f3d-a50e-140ab9ee8c9e, Robot Init, Wed Feb 06 19:27:25 PST 2019
+06eabfd7-dc8e-4f3d-a50e-140ab9ee8c9e, Generating trajectories..., Wed Feb 06 19:27:25 PST 2019
+06eabfd7-dc8e-4f3d-a50e-140ab9ee8c9e, Finished trajectory generation, Wed Feb 06 19:27:25 PST 2019
+06eabfd7-dc8e-4f3d-a50e-140ab9ee8c9e, Disabled Init, Wed Feb 06 19:27:25 PST 2019
+06eabfd7-dc8e-4f3d-a50e-140ab9ee8c9e, SET HEADING: 0.0, Wed Feb 06 19:27:25 PST 2019
+06eabfd7-dc8e-4f3d-a50e-140ab9ee8c9e, Gyro offset: -44.470001220703125, Wed Feb 06 19:27:25 PST 2019
+ebfe2e86-8f6e-40ff-ab4a-4223b0ea7605, SigNotUpdated, Wed Feb 06 19:28:35 PST 2019
+ebfe2e86-8f6e-40ff-ab4a-4223b0ea7605, Robot Startup, Wed Feb 06 19:28:36 PST 2019
+ebfe2e86-8f6e-40ff-ab4a-4223b0ea7605, Robot Init, Wed Feb 06 19:28:36 PST 2019
+ebfe2e86-8f6e-40ff-ab4a-4223b0ea7605, Generating trajectories..., Wed Feb 06 19:28:36 PST 2019
+ebfe2e86-8f6e-40ff-ab4a-4223b0ea7605, Finished trajectory generation, Wed Feb 06 19:28:36 PST 2019
+ebfe2e86-8f6e-40ff-ab4a-4223b0ea7605, Disabled Init, Wed Feb 06 19:28:36 PST 2019
+ebfe2e86-8f6e-40ff-ab4a-4223b0ea7605, SET HEADING: 0.0, Wed Feb 06 19:28:36 PST 2019
+ebfe2e86-8f6e-40ff-ab4a-4223b0ea7605, Gyro offset: -54.75000000000001, Wed Feb 06 19:28:36 PST 2019
+ebfe2e86-8f6e-40ff-ab4a-4223b0ea7605, Teleop Init, Wed Feb 06 19:28:41 PST 2019
+ebfe2e86-8f6e-40ff-ab4a-4223b0ea7605, Disabled Init, Wed Feb 06 19:28:45 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, SigNotUpdated, Wed Feb 06 19:29:42 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, Robot Startup, Wed Feb 06 19:29:42 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, Robot Init, Wed Feb 06 19:29:42 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, Generating trajectories..., Wed Feb 06 19:29:42 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, Finished trajectory generation, Wed Feb 06 19:29:42 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, Disabled Init, Wed Feb 06 19:29:43 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, SET HEADING: 0.0, Wed Feb 06 19:29:43 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, Gyro offset: -75.29000091552734, Wed Feb 06 19:29:43 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, Teleop Init, Wed Feb 06 19:30:00 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:30:02 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, Disabled Init, Wed Feb 06 19:30:06 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, Teleop Init, Wed Feb 06 19:30:09 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, Disabled Init, Wed Feb 06 19:30:11 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, Teleop Init, Wed Feb 06 19:30:14 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, Disabled Init, Wed Feb 06 19:30:17 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, Teleop Init, Wed Feb 06 19:31:30 PST 2019
+56c7ee7d-1a42-4d10-a844-fddd1b62830a, Disabled Init, Wed Feb 06 19:31:40 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, SigNotUpdated, Wed Feb 06 19:31:58 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, Robot Startup, Wed Feb 06 19:31:58 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, Robot Init, Wed Feb 06 19:31:58 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, Generating trajectories..., Wed Feb 06 19:31:58 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, Finished trajectory generation, Wed Feb 06 19:31:58 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, Disabled Init, Wed Feb 06 19:31:58 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, SET HEADING: 0.0, Wed Feb 06 19:31:59 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, Gyro offset: -142.89999389648438, Wed Feb 06 19:31:59 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, Teleop Init, Wed Feb 06 19:31:59 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:32:02 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, Disabled Init, Wed Feb 06 19:32:03 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, Teleop Init, Wed Feb 06 19:32:05 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, Disabled Init, Wed Feb 06 19:32:07 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, Teleop Init, Wed Feb 06 19:34:23 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:34:25 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:34:26 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, [Joystick] 1	[Button]4	 Pressed ( Transfer Hatch Button ), Wed Feb 06 19:34:27 PST 2019
+fbcf160d-4a99-4107-af7f-afc13893ba2b, Disabled Init, Wed Feb 06 19:34:29 PST 2019
+3d3aa998-d070-4853-bbc0-27b312ec4d68, SigNotUpdated, Wed Feb 06 19:48:12 PST 2019
+3d3aa998-d070-4853-bbc0-27b312ec4d68, Robot Startup, Wed Feb 06 19:48:13 PST 2019
+3d3aa998-d070-4853-bbc0-27b312ec4d68, Robot Init, Wed Feb 06 19:48:13 PST 2019
+3d3aa998-d070-4853-bbc0-27b312ec4d68, Generating trajectories..., Wed Feb 06 19:48:13 PST 2019
+3d3aa998-d070-4853-bbc0-27b312ec4d68, Finished trajectory generation, Wed Feb 06 19:48:13 PST 2019
+3d3aa998-d070-4853-bbc0-27b312ec4d68, Disabled Init, Wed Feb 06 19:48:13 PST 2019
+3d3aa998-d070-4853-bbc0-27b312ec4d68, SET HEADING: 0.0, Wed Feb 06 19:48:13 PST 2019
+3d3aa998-d070-4853-bbc0-27b312ec4d68, Gyro offset: 87.17001342773439, Wed Feb 06 19:48:13 PST 2019
+683e355e-622a-426c-ab93-af0f713b3c5b, Robot Startup, Wed Feb 06 20:13:25 PST 2019
+683e355e-622a-426c-ab93-af0f713b3c5b, Robot Init, Wed Feb 06 20:13:25 PST 2019
+683e355e-622a-426c-ab93-af0f713b3c5b, Generating trajectories..., Wed Feb 06 20:13:25 PST 2019
+683e355e-622a-426c-ab93-af0f713b3c5b, Finished trajectory generation, Wed Feb 06 20:13:25 PST 2019
+683e355e-622a-426c-ab93-af0f713b3c5b, Disabled Init, Wed Feb 06 20:13:25 PST 2019
+683e355e-622a-426c-ab93-af0f713b3c5b, SET HEADING: 0.0, Wed Feb 06 20:13:26 PST 2019
+683e355e-622a-426c-ab93-af0f713b3c5b, Gyro offset: -0.029999999329447746, Wed Feb 06 20:13:26 PST 2019
+62e7a422-1f91-44e5-81d7-496f41b91872, Robot Startup, Wed Feb 06 20:18:10 PST 2019
+62e7a422-1f91-44e5-81d7-496f41b91872, Robot Init, Wed Feb 06 20:18:10 PST 2019
+62e7a422-1f91-44e5-81d7-496f41b91872, Generating trajectories..., Wed Feb 06 20:18:10 PST 2019
+62e7a422-1f91-44e5-81d7-496f41b91872, Finished trajectory generation, Wed Feb 06 20:18:11 PST 2019
+62e7a422-1f91-44e5-81d7-496f41b91872, Disabled Init, Wed Feb 06 20:18:11 PST 2019
+62e7a422-1f91-44e5-81d7-496f41b91872, SET HEADING: 0.0, Wed Feb 06 20:18:11 PST 2019
+62e7a422-1f91-44e5-81d7-496f41b91872, Gyro offset: 0.2600097656250138, Wed Feb 06 20:18:11 PST 2019
+3cd4f617-43e6-4d4f-94a7-37828b6b1891, Robot Startup, Wed Feb 06 20:19:08 PST 2019
+3cd4f617-43e6-4d4f-94a7-37828b6b1891, Robot Init, Wed Feb 06 20:19:08 PST 2019
+3cd4f617-43e6-4d4f-94a7-37828b6b1891, Generating trajectories..., Wed Feb 06 20:19:08 PST 2019
+3cd4f617-43e6-4d4f-94a7-37828b6b1891, Finished trajectory generation, Wed Feb 06 20:19:08 PST 2019
+3cd4f617-43e6-4d4f-94a7-37828b6b1891, Disabled Init, Wed Feb 06 20:19:08 PST 2019
+3cd4f617-43e6-4d4f-94a7-37828b6b1891, SET HEADING: 0.0, Wed Feb 06 20:19:09 PST 2019
+3cd4f617-43e6-4d4f-94a7-37828b6b1891, Gyro offset: 0.4899902343750186, Wed Feb 06 20:19:09 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Robot Startup, Wed Feb 06 20:19:23 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Robot Init, Wed Feb 06 20:19:23 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Generating trajectories..., Wed Feb 06 20:19:23 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Finished trajectory generation, Wed Feb 06 20:19:23 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Disabled Init, Wed Feb 06 20:19:23 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, SET HEADING: 0.0, Wed Feb 06 20:19:24 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Gyro offset: 0.589996337890641, Wed Feb 06 20:19:24 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Teleop Init, Wed Feb 06 20:19:28 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:28 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:29 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Hatch Arm Encoder Not Connected, Wed Feb 06 20:19:30 PST 2019
+7b1db704-d598-4fc6-a58c-4e9882baacb6, Disabled Init, Wed Feb 06 20:19:30 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Robot Startup, Wed Feb 06 20:19:56 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Robot Init, Wed Feb 06 20:19:56 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Generating trajectories..., Wed Feb 06 20:19:56 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Finished trajectory generation, Wed Feb 06 20:19:57 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Disabled Init, Wed Feb 06 20:19:57 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, SET HEADING: 0.0, Wed Feb 06 20:19:57 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Gyro offset: 0.7699890136719059, Wed Feb 06 20:19:57 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Teleop Init, Wed Feb 06 20:20:20 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Disabled Init, Wed Feb 06 20:20:32 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Teleop Init, Wed Feb 06 20:20:43 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, [Joystick] 1	[Button]6	 Pressed ( Cargo Arm Manual Mode ), Wed Feb 06 20:20:45 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Disabled Init, Wed Feb 06 20:21:38 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Teleop Init, Wed Feb 06 20:21:48 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Disabled Init, Wed Feb 06 20:22:04 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Teleop Init, Wed Feb 06 20:22:09 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Disabled Init, Wed Feb 06 20:22:22 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Teleop Init, Wed Feb 06 20:22:31 PST 2019
+8c491f01-ffc9-4fbb-934a-a418d26cec06, Disabled Init, Wed Feb 06 20:22:42 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, Robot Startup, Wed Feb 06 20:23:01 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, Robot Init, Wed Feb 06 20:23:01 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, Generating trajectories..., Wed Feb 06 20:23:01 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, Finished trajectory generation, Wed Feb 06 20:23:01 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, Disabled Init, Wed Feb 06 20:23:01 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, SET HEADING: 0.0, Wed Feb 06 20:23:02 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, Gyro offset: 1.450012207031232, Wed Feb 06 20:23:02 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, Teleop Init, Wed Feb 06 20:23:03 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, [Joystick] 1	[Button]6	 Pressed ( Cargo Arm Manual Mode ), Wed Feb 06 20:23:04 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, Disabled Init, Wed Feb 06 20:23:09 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, Teleop Init, Wed Feb 06 20:23:14 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, Disabled Init, Wed Feb 06 20:24:12 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, Teleop Init, Wed Feb 06 20:24:27 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, Disabled Init, Wed Feb 06 20:25:35 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, Teleop Init, Wed Feb 06 20:25:42 PST 2019
+a456e929-74b2-46e0-8ce4-9c4a03919882, Disabled Init, Wed Feb 06 20:25:55 PST 2019
+e229c3d3-abd9-40c5-9ffd-b0795ede1731, Robot Startup, Wed Feb 06 20:27:34 PST 2019
+e229c3d3-abd9-40c5-9ffd-b0795ede1731, Robot Init, Wed Feb 06 20:27:34 PST 2019
+e229c3d3-abd9-40c5-9ffd-b0795ede1731, Generating trajectories..., Wed Feb 06 20:27:34 PST 2019
+e229c3d3-abd9-40c5-9ffd-b0795ede1731, Finished trajectory generation, Wed Feb 06 20:27:34 PST 2019
+e229c3d3-abd9-40c5-9ffd-b0795ede1731, Disabled Init, Wed Feb 06 20:27:34 PST 2019
+e229c3d3-abd9-40c5-9ffd-b0795ede1731, SET HEADING: 0.0, Wed Feb 06 20:27:35 PST 2019
+e229c3d3-abd9-40c5-9ffd-b0795ede1731, Gyro offset: 2.760009765625011, Wed Feb 06 20:27:35 PST 2019
+e229c3d3-abd9-40c5-9ffd-b0795ede1731, Teleop Init, Wed Feb 06 20:27:39 PST 2019
+e229c3d3-abd9-40c5-9ffd-b0795ede1731, [Joystick] 1	[Button]6	 Pressed ( Cargo Arm Manual Mode ), Wed Feb 06 20:27:42 PST 2019
+e229c3d3-abd9-40c5-9ffd-b0795ede1731, Disabled Init, Wed Feb 06 20:27:48 PST 2019
+a280513d-f745-4adf-a787-505d6a89e076, Robot Startup, Wed Feb 06 20:28:07 PST 2019
+a280513d-f745-4adf-a787-505d6a89e076, Robot Init, Wed Feb 06 20:28:07 PST 2019
+a280513d-f745-4adf-a787-505d6a89e076, Generating trajectories..., Wed Feb 06 20:28:07 PST 2019
+a280513d-f745-4adf-a787-505d6a89e076, Finished trajectory generation, Wed Feb 06 20:28:07 PST 2019
+a280513d-f745-4adf-a787-505d6a89e076, Disabled Init, Wed Feb 06 20:28:07 PST 2019
+a280513d-f745-4adf-a787-505d6a89e076, SET HEADING: 0.0, Wed Feb 06 20:28:08 PST 2019
+a280513d-f745-4adf-a787-505d6a89e076, Gyro offset: 3.010009765624995, Wed Feb 06 20:28:08 PST 2019
+6989f5b3-ee63-4fb2-9792-ebd0028f755e, Robot Startup, Wed Feb 06 20:28:56 PST 2019
+6989f5b3-ee63-4fb2-9792-ebd0028f755e, Robot Init, Wed Feb 06 20:28:56 PST 2019
+6989f5b3-ee63-4fb2-9792-ebd0028f755e, Generating trajectories..., Wed Feb 06 20:28:56 PST 2019
+6989f5b3-ee63-4fb2-9792-ebd0028f755e, Finished trajectory generation, Wed Feb 06 20:28:57 PST 2019
+6989f5b3-ee63-4fb2-9792-ebd0028f755e, Disabled Init, Wed Feb 06 20:28:57 PST 2019
+6989f5b3-ee63-4fb2-9792-ebd0028f755e, SET HEADING: 0.0, Wed Feb 06 20:28:58 PST 2019
+6989f5b3-ee63-4fb2-9792-ebd0028f755e, Gyro offset: 3.269989013671903, Wed Feb 06 20:28:58 PST 2019
+f29f4b2f-53ec-4cea-8d7a-0d0c364b1ade, Robot Startup, Wed Feb 06 20:29:09 PST 2019
+f29f4b2f-53ec-4cea-8d7a-0d0c364b1ade, Robot Init, Wed Feb 06 20:29:09 PST 2019
+f29f4b2f-53ec-4cea-8d7a-0d0c364b1ade, Generating trajectories..., Wed Feb 06 20:29:09 PST 2019
+f29f4b2f-53ec-4cea-8d7a-0d0c364b1ade, Finished trajectory generation, Wed Feb 06 20:29:09 PST 2019
+f29f4b2f-53ec-4cea-8d7a-0d0c364b1ade, Disabled Init, Wed Feb 06 20:29:09 PST 2019
+f29f4b2f-53ec-4cea-8d7a-0d0c364b1ade, SET HEADING: 0.0, Wed Feb 06 20:29:10 PST 2019
+f29f4b2f-53ec-4cea-8d7a-0d0c364b1ade, Gyro offset: 3.2200012207031126, Wed Feb 06 20:29:10 PST 2019
+f29f4b2f-53ec-4cea-8d7a-0d0c364b1ade, Teleop Init, Wed Feb 06 20:29:11 PST 2019
+f29f4b2f-53ec-4cea-8d7a-0d0c364b1ade, [Joystick] 1	[Button]6	 Pressed ( Cargo Arm Manual Mode ), Wed Feb 06 20:29:12 PST 2019
+f29f4b2f-53ec-4cea-8d7a-0d0c364b1ade, Disabled Init, Wed Feb 06 20:29:28 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Robot Startup, Wed Feb 06 20:30:07 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Robot Init, Wed Feb 06 20:30:07 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Generating trajectories..., Wed Feb 06 20:30:07 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Finished trajectory generation, Wed Feb 06 20:30:07 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Disabled Init, Wed Feb 06 20:30:07 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, SET HEADING: 0.0, Wed Feb 06 20:30:08 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Gyro offset: 3.5, Wed Feb 06 20:30:08 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Teleop Init, Wed Feb 06 20:30:10 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:30:11 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:30:15 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Disabled Init, Wed Feb 06 20:30:18 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Teleop Init, Wed Feb 06 20:30:22 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:30:23 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:30:23 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, [Joystick] 1	[Button]9	 Pressed ( Arm Intake ), Wed Feb 06 20:30:55 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, [Joystick] 1	[Button]10	 Pressed ( Arm Intake ), Wed Feb 06 20:31:03 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Disabled Init, Wed Feb 06 20:31:09 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Teleop Init, Wed Feb 06 20:32:04 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, [Joystick] 1	[Button]10	 Pressed ( Arm Intake ), Wed Feb 06 20:32:06 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, [Joystick] 1	[Button]9	 Pressed ( Arm Intake ), Wed Feb 06 20:32:31 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Disabled Init, Wed Feb 06 20:32:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Teleop Init, Wed Feb 06 20:32:47 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:32:51 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, [Joystick] 1	[Button]6	 Pressed ( Cargo Arm Manual Mode ), Wed Feb 06 20:32:53 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Disabled Init, Wed Feb 06 20:33:42 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Teleop Init, Wed Feb 06 20:34:17 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, [Joystick] 1	[Button]6	 Pressed ( Cargo Arm Manual Mode ), Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:36 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:37 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:38 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, [Joystick] 1	[Button]6	 Pressed ( Cargo Arm Manual Mode ), Wed Feb 06 20:34:39 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, [Joystick] 1	[Button]6	 Pressed ( Cargo Arm Manual Mode ), Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:40 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled, Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, [Joystick] 1	[Button]6	 Pressed ( Cargo Arm Manual Mode ), Wed Feb 06 20:34:41 PST 2019
+c8190ff7-4815-4b9e-bb21-150d03b0f56f, Disabled Init, Wed Feb 06 20:34:42 PST 2019
+20cd3fcb-7bf9-4fcb-b075-4a3accdb12ec, Robot Startup, Wed Feb 06 20:35:37 PST 2019
+20cd3fcb-7bf9-4fcb-b075-4a3accdb12ec, Robot Init, Wed Feb 06 20:35:37 PST 2019
+20cd3fcb-7bf9-4fcb-b075-4a3accdb12ec, Generating trajectories..., Wed Feb 06 20:35:37 PST 2019
+20cd3fcb-7bf9-4fcb-b075-4a3accdb12ec, Finished trajectory generation, Wed Feb 06 20:35:37 PST 2019
+20cd3fcb-7bf9-4fcb-b075-4a3accdb12ec, Disabled Init, Wed Feb 06 20:35:37 PST 2019
+20cd3fcb-7bf9-4fcb-b075-4a3accdb12ec, SET HEADING: 0.0, Wed Feb 06 20:35:37 PST 2019
+20cd3fcb-7bf9-4fcb-b075-4a3accdb12ec, Gyro offset: 2.6300048828124853, Wed Feb 06 20:35:37 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, Robot Startup, Wed Feb 06 20:35:58 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, Robot Init, Wed Feb 06 20:35:58 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, Generating trajectories..., Wed Feb 06 20:35:58 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, Finished trajectory generation, Wed Feb 06 20:35:59 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, Disabled Init, Wed Feb 06 20:35:59 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, SET HEADING: 0.0, Wed Feb 06 20:35:59 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, Gyro offset: 2.6499938964843732, Wed Feb 06 20:35:59 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, Teleop Init, Wed Feb 06 20:36:05 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, [Joystick] 1	[Button]9	 Pressed ( Arm Intake ), Wed Feb 06 20:36:11 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, [Joystick] 1	[Button]10	 Pressed ( Arm Intake ), Wed Feb 06 20:36:16 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:36:19 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:36:20 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:36:21 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:36:23 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:36:24 PST 2019
+71e203c9-6a96-4c95-9305-e68496b180d9, Disabled Init, Wed Feb 06 20:36:27 PST 2019
+d2bd53b0-9ec9-4123-9199-afdb53d4b5cb, Robot Startup, Wed Feb 06 20:37:11 PST 2019
+d2bd53b0-9ec9-4123-9199-afdb53d4b5cb, Robot Init, Wed Feb 06 20:37:11 PST 2019
+d2bd53b0-9ec9-4123-9199-afdb53d4b5cb, Generating trajectories..., Wed Feb 06 20:37:11 PST 2019
+d2bd53b0-9ec9-4123-9199-afdb53d4b5cb, Finished trajectory generation, Wed Feb 06 20:37:11 PST 2019
+d2bd53b0-9ec9-4123-9199-afdb53d4b5cb, Disabled Init, Wed Feb 06 20:37:11 PST 2019
+d2bd53b0-9ec9-4123-9199-afdb53d4b5cb, SET HEADING: 0.0, Wed Feb 06 20:37:11 PST 2019
+d2bd53b0-9ec9-4123-9199-afdb53d4b5cb, Gyro offset: 2.1499938964844048, Wed Feb 06 20:37:11 PST 2019
+d2bd53b0-9ec9-4123-9199-afdb53d4b5cb, Teleop Init, Wed Feb 06 20:37:14 PST 2019
+d2bd53b0-9ec9-4123-9199-afdb53d4b5cb, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:37:16 PST 2019
+d2bd53b0-9ec9-4123-9199-afdb53d4b5cb, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:37:16 PST 2019
+d2bd53b0-9ec9-4123-9199-afdb53d4b5cb, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:37:18 PST 2019
+d2bd53b0-9ec9-4123-9199-afdb53d4b5cb, Disabled Init, Wed Feb 06 20:37:22 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, Robot Startup, Wed Feb 06 20:37:43 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, Robot Init, Wed Feb 06 20:37:43 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, Generating trajectories..., Wed Feb 06 20:37:43 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, Finished trajectory generation, Wed Feb 06 20:37:43 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, Disabled Init, Wed Feb 06 20:37:43 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, SET HEADING: 0.0, Wed Feb 06 20:37:43 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, Gyro offset: 1.9100036621093845, Wed Feb 06 20:37:43 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, Teleop Init, Wed Feb 06 20:40:35 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:40:37 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:40:47 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:40:51 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:40:55 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:40:58 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:40:59 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:40:59 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:00 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:00 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:01 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:02 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:03 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:04 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:04 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:05 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:06 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:06 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:07 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:08 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:09 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:12 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:17 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:19 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:19 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]8	 Pressed ( Arm Intake ), Wed Feb 06 20:41:20 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:41:21 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:41:22 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:41:23 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:41:26 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:41:36 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:41:38 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:41:39 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:41:40 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, [Joystick] 1	[Button]7	 Pressed ( Arm Intake ), Wed Feb 06 20:41:41 PST 2019
+ae236672-a9b2-4e0f-a9fc-01f90ad22b92, Disabled Init, Wed Feb 06 20:41:48 PST 2019
+116ba1c6-a7b1-4c6b-92e7-1bd7be8ab89d, Robot Startup, Wed Feb 06 20:42:01 PST 2019
+116ba1c6-a7b1-4c6b-92e7-1bd7be8ab89d, Robot Init, Wed Feb 06 20:42:02 PST 2019
+116ba1c6-a7b1-4c6b-92e7-1bd7be8ab89d, Generating trajectories..., Wed Feb 06 20:42:02 PST 2019
+116ba1c6-a7b1-4c6b-92e7-1bd7be8ab89d, Finished trajectory generation, Wed Feb 06 20:42:02 PST 2019
+116ba1c6-a7b1-4c6b-92e7-1bd7be8ab89d, Disabled Init, Wed Feb 06 20:42:02 PST 2019
+116ba1c6-a7b1-4c6b-92e7-1bd7be8ab89d, SET HEADING: 0.0, Wed Feb 06 20:42:02 PST 2019
+116ba1c6-a7b1-4c6b-92e7-1bd7be8ab89d, Gyro offset: 3.850006103515607, Wed Feb 06 20:42:02 PST 2019
+116ba1c6-a7b1-4c6b-92e7-1bd7be8ab89d, Teleop Init, Wed Feb 06 20:42:04 PST 2019
+116ba1c6-a7b1-4c6b-92e7-1bd7be8ab89d, Disabled Init, Wed Feb 06 20:42:10 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, Robot Startup, Wed Feb 06 20:42:47 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, Robot Init, Wed Feb 06 20:42:47 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, Generating trajectories..., Wed Feb 06 20:42:47 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, Finished trajectory generation, Wed Feb 06 20:42:47 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, Disabled Init, Wed Feb 06 20:42:47 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, SET HEADING: 0.0, Wed Feb 06 20:42:47 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, Gyro offset: 3.95001220703128, Wed Feb 06 20:42:47 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, Teleop Init, Wed Feb 06 20:42:53 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 20:43:34 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 20:43:36 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 20:43:42 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, [Joystick] 1	[Button]10	 Pressed ( Arm Reverse ), Wed Feb 06 20:43:43 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 20:43:45 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 20:43:46 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 20:43:50 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 20:43:53 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 20:43:54 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 20:43:56 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, [Joystick] 1	[Button]10	 Pressed ( Arm Reverse ), Wed Feb 06 20:43:58 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 20:43:59 PST 2019
+498021d6-02fb-4f1f-837f-56ef1ef9ea49, Disabled Init, Wed Feb 06 20:44:01 PST 2019
+8598d5e9-fbee-45bb-aa36-300dced9ecfd, Robot Startup, Wed Feb 06 20:44:38 PST 2019
+8598d5e9-fbee-45bb-aa36-300dced9ecfd, Robot Init, Wed Feb 06 20:44:38 PST 2019
+8598d5e9-fbee-45bb-aa36-300dced9ecfd, Generating trajectories..., Wed Feb 06 20:44:39 PST 2019
+8598d5e9-fbee-45bb-aa36-300dced9ecfd, Finished trajectory generation, Wed Feb 06 20:44:39 PST 2019
+8598d5e9-fbee-45bb-aa36-300dced9ecfd, Disabled Init, Wed Feb 06 20:44:39 PST 2019
+8598d5e9-fbee-45bb-aa36-300dced9ecfd, SET HEADING: 0.0, Wed Feb 06 20:44:39 PST 2019
+8598d5e9-fbee-45bb-aa36-300dced9ecfd, Gyro offset: -167.0, Wed Feb 06 20:44:39 PST 2019
+8598d5e9-fbee-45bb-aa36-300dced9ecfd, Teleop Init, Wed Feb 06 20:44:48 PST 2019
+8598d5e9-fbee-45bb-aa36-300dced9ecfd, Disabled Init, Wed Feb 06 20:44:58 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, Robot Startup, Wed Feb 06 20:45:35 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, Robot Init, Wed Feb 06 20:45:35 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, Generating trajectories..., Wed Feb 06 20:45:35 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, Finished trajectory generation, Wed Feb 06 20:45:35 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, Disabled Init, Wed Feb 06 20:45:35 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, SET HEADING: 0.0, Wed Feb 06 20:45:36 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, Gyro offset: -166.66000366210938, Wed Feb 06 20:45:36 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, Teleop Init, Wed Feb 06 20:45:36 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 20:45:38 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 20:45:39 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 20:45:40 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 20:45:42 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:45:46 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:45:47 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:45:48 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:45:50 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:45:52 PST 2019
+3f3ffd79-ed7e-470c-83fd-5cee9f778a77, Disabled Init, Wed Feb 06 20:45:53 PST 2019
+05078594-78b8-4cc6-85f3-d6005c36388f, Robot Startup, Wed Feb 06 20:48:31 PST 2019
+05078594-78b8-4cc6-85f3-d6005c36388f, Robot Init, Wed Feb 06 20:48:31 PST 2019
+05078594-78b8-4cc6-85f3-d6005c36388f, Generating trajectories..., Wed Feb 06 20:48:31 PST 2019
+05078594-78b8-4cc6-85f3-d6005c36388f, Finished trajectory generation, Wed Feb 06 20:48:31 PST 2019
+05078594-78b8-4cc6-85f3-d6005c36388f, Disabled Init, Wed Feb 06 20:48:31 PST 2019
+05078594-78b8-4cc6-85f3-d6005c36388f, SET HEADING: 0.0, Wed Feb 06 20:48:31 PST 2019
+05078594-78b8-4cc6-85f3-d6005c36388f, Gyro offset: -166.61000061035156, Wed Feb 06 20:48:31 PST 2019
+117fc8f9-75a8-414d-af9f-6bcc00c79171, Robot Startup, Wed Feb 06 20:48:44 PST 2019
+117fc8f9-75a8-414d-af9f-6bcc00c79171, Robot Init, Wed Feb 06 20:48:44 PST 2019
+117fc8f9-75a8-414d-af9f-6bcc00c79171, Generating trajectories..., Wed Feb 06 20:48:44 PST 2019
+117fc8f9-75a8-414d-af9f-6bcc00c79171, Finished trajectory generation, Wed Feb 06 20:48:44 PST 2019
+117fc8f9-75a8-414d-af9f-6bcc00c79171, Disabled Init, Wed Feb 06 20:48:44 PST 2019
+117fc8f9-75a8-414d-af9f-6bcc00c79171, SET HEADING: 0.0, Wed Feb 06 20:48:44 PST 2019
+117fc8f9-75a8-414d-af9f-6bcc00c79171, Gyro offset: -166.60000610351562, Wed Feb 06 20:48:44 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, Robot Startup, Wed Feb 06 20:49:17 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, Robot Init, Wed Feb 06 20:49:17 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, Generating trajectories..., Wed Feb 06 20:49:17 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, Finished trajectory generation, Wed Feb 06 20:49:17 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, Disabled Init, Wed Feb 06 20:49:17 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, SET HEADING: 0.0, Wed Feb 06 20:49:17 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, Gyro offset: -166.36000061035156, Wed Feb 06 20:49:17 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, Teleop Init, Wed Feb 06 20:49:33 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]5	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:49:35 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 20:49:43 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 20:49:48 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 20:49:49 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 20:49:50 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 20:49:52 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 20:49:53 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]6	 Pressed ( Cargo Arm Manual Mode ), Wed Feb 06 20:49:56 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, Disabled Init, Wed Feb 06 20:49:58 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, Teleop Init, Wed Feb 06 20:50:49 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]6	 Pressed ( Cargo Arm Manual Mode ), Wed Feb 06 20:50:50 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]5	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:50:52 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 20:50:57 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 20:50:58 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 20:50:58 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 20:50:59 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 20:50:59 PST 2019
+74d5b557-0b10-4c8e-8d99-fbbf9cae8ced, Disabled Init, Wed Feb 06 20:51:00 PST 2019
+f03d2de7-9100-4443-92d8-287e43f87cce, Robot Startup, Wed Feb 06 20:51:59 PST 2019
+f03d2de7-9100-4443-92d8-287e43f87cce, Robot Init, Wed Feb 06 20:51:59 PST 2019
+f03d2de7-9100-4443-92d8-287e43f87cce, Generating trajectories..., Wed Feb 06 20:51:59 PST 2019
+f03d2de7-9100-4443-92d8-287e43f87cce, Finished trajectory generation, Wed Feb 06 20:51:59 PST 2019
+f03d2de7-9100-4443-92d8-287e43f87cce, Disabled Init, Wed Feb 06 20:51:59 PST 2019
+f03d2de7-9100-4443-92d8-287e43f87cce, SET HEADING: 0.0, Wed Feb 06 20:52:00 PST 2019
+f03d2de7-9100-4443-92d8-287e43f87cce, Gyro offset: -165.77999877929688, Wed Feb 06 20:52:00 PST 2019
+1cd3bea5-f382-4ee4-83a5-36182ca2a80e, Robot Startup, Wed Feb 06 20:52:26 PST 2019
+1cd3bea5-f382-4ee4-83a5-36182ca2a80e, Robot Init, Wed Feb 06 20:52:26 PST 2019
+1cd3bea5-f382-4ee4-83a5-36182ca2a80e, Generating trajectories..., Wed Feb 06 20:52:26 PST 2019
+1cd3bea5-f382-4ee4-83a5-36182ca2a80e, Finished trajectory generation, Wed Feb 06 20:52:26 PST 2019
+1cd3bea5-f382-4ee4-83a5-36182ca2a80e, Disabled Init, Wed Feb 06 20:52:26 PST 2019
+1cd3bea5-f382-4ee4-83a5-36182ca2a80e, SET HEADING: 0.0, Wed Feb 06 20:52:27 PST 2019
+1cd3bea5-f382-4ee4-83a5-36182ca2a80e, Gyro offset: -165.6300048828125, Wed Feb 06 20:52:27 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Robot Startup, Wed Feb 06 20:54:42 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Robot Init, Wed Feb 06 20:54:42 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Generating trajectories..., Wed Feb 06 20:54:42 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Finished trajectory generation, Wed Feb 06 20:54:42 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Disabled Init, Wed Feb 06 20:54:42 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, SET HEADING: 0.0, Wed Feb 06 20:54:43 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Gyro offset: -165.00999450683594, Wed Feb 06 20:54:43 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Teleop Init, Wed Feb 06 20:55:13 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:55:15 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:55:15 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 20:55:16 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:17 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:18 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:19 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:20 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:20 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 20:55:20 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:55:21 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:22 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Unexpected Hatch Arm control state: PLACING, Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:55:23 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 20:55:24 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:55:25 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:55:26 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:55:26 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:55:27 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:55:27 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:55:32 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:55:33 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:55:34 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Disabled Init, Wed Feb 06 20:55:35 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Teleop Init, Wed Feb 06 20:55:56 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 20:55:58 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:55:59 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:00 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:00 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:00 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:00 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:01 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:56:02 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 20:56:02 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:03 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:03 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:04 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:04 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:04 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:05 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:05 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:06 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:07 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:56:09 PST 2019
+6a189c56-9262-4d26-a46d-25f363296808, Disabled Init, Wed Feb 06 20:56:16 PST 2019
+939e15ce-2021-492b-bafe-4c4032138ffe, Robot Startup, Wed Feb 06 20:56:38 PST 2019
+939e15ce-2021-492b-bafe-4c4032138ffe, Robot Init, Wed Feb 06 20:56:38 PST 2019
+939e15ce-2021-492b-bafe-4c4032138ffe, Generating trajectories..., Wed Feb 06 20:56:38 PST 2019
+939e15ce-2021-492b-bafe-4c4032138ffe, Finished trajectory generation, Wed Feb 06 20:56:38 PST 2019
+939e15ce-2021-492b-bafe-4c4032138ffe, Disabled Init, Wed Feb 06 20:56:38 PST 2019
+939e15ce-2021-492b-bafe-4c4032138ffe, SET HEADING: 0.0, Wed Feb 06 20:56:39 PST 2019
+939e15ce-2021-492b-bafe-4c4032138ffe, Gyro offset: -164.3300018310547, Wed Feb 06 20:56:39 PST 2019
+939e15ce-2021-492b-bafe-4c4032138ffe, Teleop Init, Wed Feb 06 20:56:41 PST 2019
+939e15ce-2021-492b-bafe-4c4032138ffe, Disabled Init, Wed Feb 06 20:56:43 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, Robot Startup, Wed Feb 06 20:57:03 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, Robot Init, Wed Feb 06 20:57:03 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, Generating trajectories..., Wed Feb 06 20:57:03 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, Finished trajectory generation, Wed Feb 06 20:57:03 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, Disabled Init, Wed Feb 06 20:57:03 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, SET HEADING: 0.0, Wed Feb 06 20:57:04 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, Gyro offset: -164.24000549316406, Wed Feb 06 20:57:04 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, Teleop Init, Wed Feb 06 20:57:25 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:57:28 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:57:30 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:57:31 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:57:31 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:57:32 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:57:32 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:57:33 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:57:33 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:57:34 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:57:35 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]1	 Pressed ( Transfer Hatch Button ), Wed Feb 06 20:57:35 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 20:57:36 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 20:57:38 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 20:57:47 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 20:57:49 PST 2019
+07f58e05-fc2a-45c6-a505-0c6f90621566, Disabled Init, Wed Feb 06 20:57:57 PST 2019
+c6847ed8-d19c-4710-846d-a1690514846c, Robot Startup, Wed Feb 06 20:59:05 PST 2019
+c6847ed8-d19c-4710-846d-a1690514846c, Robot Init, Wed Feb 06 20:59:05 PST 2019
+c6847ed8-d19c-4710-846d-a1690514846c, Generating trajectories..., Wed Feb 06 20:59:05 PST 2019
+c6847ed8-d19c-4710-846d-a1690514846c, Finished trajectory generation, Wed Feb 06 20:59:05 PST 2019
+c6847ed8-d19c-4710-846d-a1690514846c, Disabled Init, Wed Feb 06 20:59:05 PST 2019
+c6847ed8-d19c-4710-846d-a1690514846c, SET HEADING: 0.0, Wed Feb 06 20:59:05 PST 2019
+c6847ed8-d19c-4710-846d-a1690514846c, Gyro offset: -163.52999877929688, Wed Feb 06 20:59:05 PST 2019
+c6847ed8-d19c-4710-846d-a1690514846c, Teleop Init, Wed Feb 06 20:59:43 PST 2019
+c6847ed8-d19c-4710-846d-a1690514846c, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 20:59:44 PST 2019
+c6847ed8-d19c-4710-846d-a1690514846c, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 20:59:48 PST 2019
+c6847ed8-d19c-4710-846d-a1690514846c, Disabled Init, Wed Feb 06 20:59:51 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, Robot Startup, Wed Feb 06 21:00:11 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, Robot Init, Wed Feb 06 21:00:11 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, Generating trajectories..., Wed Feb 06 21:00:11 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, Finished trajectory generation, Wed Feb 06 21:00:11 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, Disabled Init, Wed Feb 06 21:00:11 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, SET HEADING: 0.0, Wed Feb 06 21:00:12 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, Gyro offset: -163.16000366210938, Wed Feb 06 21:00:12 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, Teleop Init, Wed Feb 06 21:00:12 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:00:14 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:00:16 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:00:17 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:00:18 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:00:21 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:00:22 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, Disabled Init, Wed Feb 06 21:00:24 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, Teleop Init, Wed Feb 06 21:00:25 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 21:00:26 PST 2019
+b0026816-f980-4486-b96b-2efdb31f7035, Disabled Init, Wed Feb 06 21:00:28 PST 2019
+ef509834-af32-445a-8a4b-850d26bf0def, Robot Startup, Wed Feb 06 21:00:47 PST 2019
+ef509834-af32-445a-8a4b-850d26bf0def, Robot Init, Wed Feb 06 21:00:47 PST 2019
+ef509834-af32-445a-8a4b-850d26bf0def, Generating trajectories..., Wed Feb 06 21:00:47 PST 2019
+ef509834-af32-445a-8a4b-850d26bf0def, Finished trajectory generation, Wed Feb 06 21:00:47 PST 2019
+ef509834-af32-445a-8a4b-850d26bf0def, Disabled Init, Wed Feb 06 21:00:47 PST 2019
+ef509834-af32-445a-8a4b-850d26bf0def, SET HEADING: 0.0, Wed Feb 06 21:00:48 PST 2019
+ef509834-af32-445a-8a4b-850d26bf0def, Gyro offset: -163.19000244140625, Wed Feb 06 21:00:48 PST 2019
+ef509834-af32-445a-8a4b-850d26bf0def, Teleop Init, Wed Feb 06 21:00:48 PST 2019
+ef509834-af32-445a-8a4b-850d26bf0def, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:00:49 PST 2019
+ef509834-af32-445a-8a4b-850d26bf0def, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:00:51 PST 2019
+ef509834-af32-445a-8a4b-850d26bf0def, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:00:53 PST 2019
+ef509834-af32-445a-8a4b-850d26bf0def, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:00:55 PST 2019
+ef509834-af32-445a-8a4b-850d26bf0def, Disabled Init, Wed Feb 06 21:00:55 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, Robot Startup, Wed Feb 06 21:01:19 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, Robot Init, Wed Feb 06 21:01:19 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, Generating trajectories..., Wed Feb 06 21:01:19 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, Finished trajectory generation, Wed Feb 06 21:01:19 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, Disabled Init, Wed Feb 06 21:01:19 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, SET HEADING: 0.0, Wed Feb 06 21:01:20 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, Gyro offset: -163.69000244140625, Wed Feb 06 21:01:20 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, Teleop Init, Wed Feb 06 21:01:21 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:01:22 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:01:23 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 21:01:26 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:01:28 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, Disabled Init, Wed Feb 06 21:01:29 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, Teleop Init, Wed Feb 06 21:01:31 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:01:32 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:01:33 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 21:01:36 PST 2019
+925e2c19-704f-484e-83ed-5b1407ef651e, Disabled Init, Wed Feb 06 21:01:38 PST 2019
+9094a888-f4c6-4eb0-88a9-66f85e57645b, Robot Startup, Wed Feb 06 21:01:56 PST 2019
+9094a888-f4c6-4eb0-88a9-66f85e57645b, Robot Init, Wed Feb 06 21:01:56 PST 2019
+9094a888-f4c6-4eb0-88a9-66f85e57645b, Generating trajectories..., Wed Feb 06 21:01:56 PST 2019
+9094a888-f4c6-4eb0-88a9-66f85e57645b, Finished trajectory generation, Wed Feb 06 21:01:56 PST 2019
+9094a888-f4c6-4eb0-88a9-66f85e57645b, Disabled Init, Wed Feb 06 21:01:56 PST 2019
+9094a888-f4c6-4eb0-88a9-66f85e57645b, SET HEADING: 0.0, Wed Feb 06 21:01:57 PST 2019
+9094a888-f4c6-4eb0-88a9-66f85e57645b, Gyro offset: -164.55999755859375, Wed Feb 06 21:01:57 PST 2019
+9094a888-f4c6-4eb0-88a9-66f85e57645b, Teleop Init, Wed Feb 06 21:01:57 PST 2019
+9094a888-f4c6-4eb0-88a9-66f85e57645b, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:01:58 PST 2019
+9094a888-f4c6-4eb0-88a9-66f85e57645b, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:02:01 PST 2019
+9094a888-f4c6-4eb0-88a9-66f85e57645b, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:02:04 PST 2019
+9094a888-f4c6-4eb0-88a9-66f85e57645b, Disabled Init, Wed Feb 06 21:02:05 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, Robot Startup, Wed Feb 06 21:02:29 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, Robot Init, Wed Feb 06 21:02:29 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, Generating trajectories..., Wed Feb 06 21:02:29 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, Finished trajectory generation, Wed Feb 06 21:02:29 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, Disabled Init, Wed Feb 06 21:02:29 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, SET HEADING: 0.0, Wed Feb 06 21:02:30 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, Gyro offset: -165.60000610351562, Wed Feb 06 21:02:30 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, Teleop Init, Wed Feb 06 21:02:30 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:02:31 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:02:33 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:02:34 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 21:02:37 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, [Joystick] 1	[Button]10	 Pressed ( Arm Reverse ), Wed Feb 06 21:02:39 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 21:02:50 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:02:52 PST 2019
+e2e5f790-2aff-4d9d-becb-a4f75a344c8b, Disabled Init, Wed Feb 06 21:02:56 PST 2019
+19895fbd-b6ea-48dc-a9b4-7c41d82f0098, Robot Startup, Wed Feb 06 21:03:21 PST 2019
+19895fbd-b6ea-48dc-a9b4-7c41d82f0098, Robot Init, Wed Feb 06 21:03:22 PST 2019
+19895fbd-b6ea-48dc-a9b4-7c41d82f0098, Generating trajectories..., Wed Feb 06 21:03:22 PST 2019
+19895fbd-b6ea-48dc-a9b4-7c41d82f0098, Finished trajectory generation, Wed Feb 06 21:03:22 PST 2019
+19895fbd-b6ea-48dc-a9b4-7c41d82f0098, Disabled Init, Wed Feb 06 21:03:22 PST 2019
+19895fbd-b6ea-48dc-a9b4-7c41d82f0098, SET HEADING: 0.0, Wed Feb 06 21:03:22 PST 2019
+19895fbd-b6ea-48dc-a9b4-7c41d82f0098, Gyro offset: -167.0500030517578, Wed Feb 06 21:03:22 PST 2019
+19895fbd-b6ea-48dc-a9b4-7c41d82f0098, Teleop Init, Wed Feb 06 21:03:22 PST 2019
+19895fbd-b6ea-48dc-a9b4-7c41d82f0098, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:03:24 PST 2019
+19895fbd-b6ea-48dc-a9b4-7c41d82f0098, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:03:27 PST 2019
+19895fbd-b6ea-48dc-a9b4-7c41d82f0098, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 21:03:35 PST 2019
+19895fbd-b6ea-48dc-a9b4-7c41d82f0098, [Joystick] 1	[Button]10	 Pressed ( Arm Reverse ), Wed Feb 06 21:03:39 PST 2019
+19895fbd-b6ea-48dc-a9b4-7c41d82f0098, Disabled Init, Wed Feb 06 21:03:41 PST 2019
+bc5ebaa7-d087-459b-954e-5df521208ee5, Robot Startup, Wed Feb 06 21:05:11 PST 2019
+bc5ebaa7-d087-459b-954e-5df521208ee5, Robot Init, Wed Feb 06 21:05:11 PST 2019
+bc5ebaa7-d087-459b-954e-5df521208ee5, Generating trajectories..., Wed Feb 06 21:05:11 PST 2019
+bc5ebaa7-d087-459b-954e-5df521208ee5, Finished trajectory generation, Wed Feb 06 21:05:11 PST 2019
+bc5ebaa7-d087-459b-954e-5df521208ee5, Disabled Init, Wed Feb 06 21:05:11 PST 2019
+bc5ebaa7-d087-459b-954e-5df521208ee5, SET HEADING: 0.0, Wed Feb 06 21:05:12 PST 2019
+bc5ebaa7-d087-459b-954e-5df521208ee5, Gyro offset: -167.58000183105472, Wed Feb 06 21:05:12 PST 2019
+bc5ebaa7-d087-459b-954e-5df521208ee5, Teleop Init, Wed Feb 06 21:05:12 PST 2019
+bc5ebaa7-d087-459b-954e-5df521208ee5, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:05:14 PST 2019
+bc5ebaa7-d087-459b-954e-5df521208ee5, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:05:16 PST 2019
+bc5ebaa7-d087-459b-954e-5df521208ee5, Disabled Init, Wed Feb 06 21:05:35 PST 2019
+ab669e0b-c0f0-43af-9aaa-ccda5449553b, Robot Startup, Wed Feb 06 21:06:11 PST 2019
+ab669e0b-c0f0-43af-9aaa-ccda5449553b, Robot Init, Wed Feb 06 21:06:11 PST 2019
+ab669e0b-c0f0-43af-9aaa-ccda5449553b, Generating trajectories..., Wed Feb 06 21:06:11 PST 2019
+ab669e0b-c0f0-43af-9aaa-ccda5449553b, Finished trajectory generation, Wed Feb 06 21:06:11 PST 2019
+ab669e0b-c0f0-43af-9aaa-ccda5449553b, Disabled Init, Wed Feb 06 21:06:11 PST 2019
+ab669e0b-c0f0-43af-9aaa-ccda5449553b, SET HEADING: 0.0, Wed Feb 06 21:06:12 PST 2019
+ab669e0b-c0f0-43af-9aaa-ccda5449553b, Gyro offset: -167.83999633789062, Wed Feb 06 21:06:12 PST 2019
+ab669e0b-c0f0-43af-9aaa-ccda5449553b, Teleop Init, Wed Feb 06 21:06:23 PST 2019
+ab669e0b-c0f0-43af-9aaa-ccda5449553b, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:06:25 PST 2019
+ab669e0b-c0f0-43af-9aaa-ccda5449553b, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:06:29 PST 2019
+ab669e0b-c0f0-43af-9aaa-ccda5449553b, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 21:06:34 PST 2019
+ab669e0b-c0f0-43af-9aaa-ccda5449553b, [Joystick] 1	[Button]10	 Pressed ( Arm Reverse ), Wed Feb 06 21:06:37 PST 2019
+ab669e0b-c0f0-43af-9aaa-ccda5449553b, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:06:41 PST 2019
+ab669e0b-c0f0-43af-9aaa-ccda5449553b, Disabled Init, Wed Feb 06 21:06:47 PST 2019
+a36ce71d-6bf5-4e38-88f5-32701392f85d, Robot Startup, Wed Feb 06 21:07:20 PST 2019
+a36ce71d-6bf5-4e38-88f5-32701392f85d, Robot Init, Wed Feb 06 21:07:20 PST 2019
+a36ce71d-6bf5-4e38-88f5-32701392f85d, Generating trajectories..., Wed Feb 06 21:07:20 PST 2019
+a36ce71d-6bf5-4e38-88f5-32701392f85d, Finished trajectory generation, Wed Feb 06 21:07:20 PST 2019
+a36ce71d-6bf5-4e38-88f5-32701392f85d, Disabled Init, Wed Feb 06 21:07:20 PST 2019
+a36ce71d-6bf5-4e38-88f5-32701392f85d, SET HEADING: 0.0, Wed Feb 06 21:07:21 PST 2019
+a36ce71d-6bf5-4e38-88f5-32701392f85d, Gyro offset: -168.72999572753906, Wed Feb 06 21:07:21 PST 2019
+a36ce71d-6bf5-4e38-88f5-32701392f85d, Teleop Init, Wed Feb 06 21:07:21 PST 2019
+a36ce71d-6bf5-4e38-88f5-32701392f85d, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:07:22 PST 2019
+a36ce71d-6bf5-4e38-88f5-32701392f85d, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:07:24 PST 2019
+a36ce71d-6bf5-4e38-88f5-32701392f85d, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:07:25 PST 2019
+a36ce71d-6bf5-4e38-88f5-32701392f85d, Disabled Init, Wed Feb 06 21:07:31 PST 2019
+e16fd9ac-ce70-419f-99a9-512e86815427, Robot Startup, Wed Feb 06 21:07:59 PST 2019
+e16fd9ac-ce70-419f-99a9-512e86815427, Robot Init, Wed Feb 06 21:07:59 PST 2019
+e16fd9ac-ce70-419f-99a9-512e86815427, Generating trajectories..., Wed Feb 06 21:07:59 PST 2019
+e16fd9ac-ce70-419f-99a9-512e86815427, Finished trajectory generation, Wed Feb 06 21:07:59 PST 2019
+e16fd9ac-ce70-419f-99a9-512e86815427, Disabled Init, Wed Feb 06 21:07:59 PST 2019
+e16fd9ac-ce70-419f-99a9-512e86815427, SET HEADING: 0.0, Wed Feb 06 21:07:59 PST 2019
+e16fd9ac-ce70-419f-99a9-512e86815427, Gyro offset: -168.82000732421875, Wed Feb 06 21:07:59 PST 2019
+e16fd9ac-ce70-419f-99a9-512e86815427, Teleop Init, Wed Feb 06 21:08:00 PST 2019
+e16fd9ac-ce70-419f-99a9-512e86815427, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:08:02 PST 2019
+e16fd9ac-ce70-419f-99a9-512e86815427, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:08:04 PST 2019
+e16fd9ac-ce70-419f-99a9-512e86815427, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 21:08:06 PST 2019
+e16fd9ac-ce70-419f-99a9-512e86815427, Disabled Init, Wed Feb 06 21:08:08 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, Robot Startup, Wed Feb 06 21:08:44 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, Robot Init, Wed Feb 06 21:08:44 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, Generating trajectories..., Wed Feb 06 21:08:44 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, Finished trajectory generation, Wed Feb 06 21:08:44 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, Disabled Init, Wed Feb 06 21:08:44 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, SET HEADING: 0.0, Wed Feb 06 21:08:44 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, Gyro offset: -169.61000061035156, Wed Feb 06 21:08:44 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, Teleop Init, Wed Feb 06 21:08:44 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:08:46 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:08:50 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 21:08:51 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:08:53 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 21:08:54 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:08:55 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:08:57 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:08:58 PST 2019
+77525070-e7d2-4c2a-876e-6c67e6fed0fe, Disabled Init, Wed Feb 06 21:08:58 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, Robot Startup, Wed Feb 06 21:09:22 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, Robot Init, Wed Feb 06 21:09:22 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, Generating trajectories..., Wed Feb 06 21:09:22 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, Finished trajectory generation, Wed Feb 06 21:09:22 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, Disabled Init, Wed Feb 06 21:09:22 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, SET HEADING: 0.0, Wed Feb 06 21:09:23 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, Gyro offset: -173.00999450683594, Wed Feb 06 21:09:23 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, Teleop Init, Wed Feb 06 21:09:23 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:09:24 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:09:24 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:09:26 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:09:27 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:09:28 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:09:29 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:09:30 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 21:09:33 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]10	 Pressed ( Arm Reverse ), Wed Feb 06 21:09:34 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]9	 Pressed ( Arm Stow ), Wed Feb 06 21:09:35 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]11	 Pressed ( Arm Intake ), Wed Feb 06 21:09:35 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]12	 Pressed ( Arm Place ), Wed Feb 06 21:09:38 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:09:43 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 21:09:44 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:09:45 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 21:09:46 PST 2019
+3b66dd46-4d2d-4a78-bd8a-a18379a18384, Disabled Init, Wed Feb 06 21:09:53 PST 2019
+52534ed6-47a8-4e75-a21b-23d48474c65c, Robot Startup, Wed Feb 06 21:23:49 PST 2019
+52534ed6-47a8-4e75-a21b-23d48474c65c, Robot Init, Wed Feb 06 21:23:49 PST 2019
+52534ed6-47a8-4e75-a21b-23d48474c65c, Generating trajectories..., Wed Feb 06 21:23:49 PST 2019
+52534ed6-47a8-4e75-a21b-23d48474c65c, Finished trajectory generation, Wed Feb 06 21:23:49 PST 2019
+52534ed6-47a8-4e75-a21b-23d48474c65c, Disabled Init, Wed Feb 06 21:23:49 PST 2019
+52534ed6-47a8-4e75-a21b-23d48474c65c, SET HEADING: 0.0, Wed Feb 06 21:23:50 PST 2019
+52534ed6-47a8-4e75-a21b-23d48474c65c, Gyro offset: -2.009999990463257, Wed Feb 06 21:23:50 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, Robot Startup, Wed Feb 06 21:32:11 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, Robot Init, Wed Feb 06 21:32:12 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, Generating trajectories..., Wed Feb 06 21:32:12 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, Finished trajectory generation, Wed Feb 06 21:32:12 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, Disabled Init, Wed Feb 06 21:32:12 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, SET HEADING: 0.0, Wed Feb 06 21:32:12 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, Gyro offset: 73.6300048828125, Wed Feb 06 21:32:12 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, Teleop Init, Wed Feb 06 21:32:13 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, Disabled Init, Wed Feb 06 21:32:21 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, Teleop Init, Wed Feb 06 21:32:37 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:32:41 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:32:42 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, Disabled Init, Wed Feb 06 21:32:51 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, Teleop Init, Wed Feb 06 21:33:10 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:33:12 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 21:33:31 PST 2019
+ec0e7d1c-31e8-4f60-9ea0-8caadcd80ae7, Disabled Init, Wed Feb 06 21:34:01 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, Robot Startup, Wed Feb 06 21:34:53 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, Robot Init, Wed Feb 06 21:34:53 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, Generating trajectories..., Wed Feb 06 21:34:53 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, Finished trajectory generation, Wed Feb 06 21:34:53 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, Disabled Init, Wed Feb 06 21:34:53 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, SET HEADING: 0.0, Wed Feb 06 21:34:53 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, Gyro offset: -113.95999908447267, Wed Feb 06 21:34:53 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, Teleop Init, Wed Feb 06 21:34:59 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:35:02 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 21:35:11 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, Disabled Init, Wed Feb 06 21:35:14 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, Teleop Init, Wed Feb 06 21:35:42 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:35:43 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 21:35:51 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:35:52 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 21:36:02 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:36:03 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 21:36:04 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:36:05 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 21:36:06 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:36:12 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:36:19 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 21:36:29 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 21:36:34 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 21:36:49 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 21:36:51 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 21:37:04 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:37:10 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:37:21 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:37:31 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:37:40 PST 2019
+2f8ac34d-e789-4df2-8865-cbf3f113406d, Disabled Init, Wed Feb 06 21:37:47 PST 2019
+495405b9-c3bc-404c-b82f-7f757e9339cf, Robot Startup, Wed Feb 06 21:37:56 PST 2019
+495405b9-c3bc-404c-b82f-7f757e9339cf, Robot Init, Wed Feb 06 21:37:57 PST 2019
+495405b9-c3bc-404c-b82f-7f757e9339cf, Generating trajectories..., Wed Feb 06 21:37:57 PST 2019
+495405b9-c3bc-404c-b82f-7f757e9339cf, Finished trajectory generation, Wed Feb 06 21:37:57 PST 2019
+495405b9-c3bc-404c-b82f-7f757e9339cf, Disabled Init, Wed Feb 06 21:37:57 PST 2019
+495405b9-c3bc-404c-b82f-7f757e9339cf, SET HEADING: 0.0, Wed Feb 06 21:37:57 PST 2019
+495405b9-c3bc-404c-b82f-7f757e9339cf, Gyro offset: 84.1300048828125, Wed Feb 06 21:37:57 PST 2019
+495405b9-c3bc-404c-b82f-7f757e9339cf, Teleop Init, Wed Feb 06 21:37:58 PST 2019
+495405b9-c3bc-404c-b82f-7f757e9339cf, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:37:59 PST 2019
+495405b9-c3bc-404c-b82f-7f757e9339cf, Disabled Init, Wed Feb 06 21:38:16 PST 2019
+563eb92b-7493-49b7-81e1-c703b352cc0e, Robot Startup, Wed Feb 06 21:39:11 PST 2019
+563eb92b-7493-49b7-81e1-c703b352cc0e, Robot Init, Wed Feb 06 21:39:11 PST 2019
+563eb92b-7493-49b7-81e1-c703b352cc0e, Generating trajectories..., Wed Feb 06 21:39:11 PST 2019
+563eb92b-7493-49b7-81e1-c703b352cc0e, Finished trajectory generation, Wed Feb 06 21:39:11 PST 2019
+563eb92b-7493-49b7-81e1-c703b352cc0e, Disabled Init, Wed Feb 06 21:39:11 PST 2019
+9d49433d-d19d-4893-98f0-cc4959b636ad, Robot Startup, Wed Feb 06 21:39:18 PST 2019
+9d49433d-d19d-4893-98f0-cc4959b636ad, Robot Init, Wed Feb 06 21:39:18 PST 2019
+9d49433d-d19d-4893-98f0-cc4959b636ad, Generating trajectories..., Wed Feb 06 21:39:18 PST 2019
+9d49433d-d19d-4893-98f0-cc4959b636ad, Finished trajectory generation, Wed Feb 06 21:39:18 PST 2019
+9d49433d-d19d-4893-98f0-cc4959b636ad, Disabled Init, Wed Feb 06 21:39:18 PST 2019
+45cc03b0-df2a-40a1-a857-6cff1d15cf64, Robot Startup, Wed Feb 06 21:39:35 PST 2019
+45cc03b0-df2a-40a1-a857-6cff1d15cf64, Robot Init, Wed Feb 06 21:39:35 PST 2019
+45cc03b0-df2a-40a1-a857-6cff1d15cf64, Generating trajectories..., Wed Feb 06 21:39:35 PST 2019
+45cc03b0-df2a-40a1-a857-6cff1d15cf64, Finished trajectory generation, Wed Feb 06 21:39:35 PST 2019
+45cc03b0-df2a-40a1-a857-6cff1d15cf64, Disabled Init, Wed Feb 06 21:39:35 PST 2019
+45cc03b0-df2a-40a1-a857-6cff1d15cf64, SET HEADING: 0.0, Wed Feb 06 21:39:35 PST 2019
+45cc03b0-df2a-40a1-a857-6cff1d15cf64, Gyro offset: -146.52000427246094, Wed Feb 06 21:39:35 PST 2019
+45cc03b0-df2a-40a1-a857-6cff1d15cf64, Teleop Init, Wed Feb 06 21:39:36 PST 2019
+45cc03b0-df2a-40a1-a857-6cff1d15cf64, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:39:37 PST 2019
+45cc03b0-df2a-40a1-a857-6cff1d15cf64, Disabled Init, Wed Feb 06 21:40:09 PST 2019
+61607e79-dfc1-49cf-96e0-4f8710a6b153, Teleop Init, Wed Feb 06 21:42:43 PST 2019
+61607e79-dfc1-49cf-96e0-4f8710a6b153, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:42:45 PST 2019
+61607e79-dfc1-49cf-96e0-4f8710a6b153, Disabled Init, Wed Feb 06 21:43:06 PST 2019
+61607e79-dfc1-49cf-96e0-4f8710a6b153, Teleop Init, Wed Feb 06 21:45:53 PST 2019
+61607e79-dfc1-49cf-96e0-4f8710a6b153, Disabled Init, Wed Feb 06 21:45:59 PST 2019
+61607e79-dfc1-49cf-96e0-4f8710a6b153, Teleop Init, Wed Feb 06 21:46:02 PST 2019
+61607e79-dfc1-49cf-96e0-4f8710a6b153, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:46:02 PST 2019
+61607e79-dfc1-49cf-96e0-4f8710a6b153, Disabled Init, Wed Feb 06 21:46:09 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, Robot Startup, Wed Feb 06 21:48:31 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, Robot Init, Wed Feb 06 21:48:31 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, Generating trajectories..., Wed Feb 06 21:48:31 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, Finished trajectory generation, Wed Feb 06 21:48:31 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, Disabled Init, Wed Feb 06 21:48:31 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, SET HEADING: 0.0, Wed Feb 06 21:48:31 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, Gyro offset: 1.9700012207031392, Wed Feb 06 21:48:31 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, Teleop Init, Wed Feb 06 21:48:35 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:48:37 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, [Joystick] 1	[Button]2	 Pressed ( Ground Intake Button ), Wed Feb 06 21:48:58 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 21:49:02 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:49:21 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 21:49:33 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:50:10 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 21:50:20 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:50:31 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 21:50:59 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, Disabled Init, Wed Feb 06 21:51:21 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, Teleop Init, Wed Feb 06 21:51:42 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:51:46 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 21:52:01 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:52:03 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Wed Feb 06 21:52:19 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Wed Feb 06 21:52:35 PST 2019
+d596446c-a716-4040-9884-1c6f6f6ebadf, Disabled Init, Wed Feb 06 21:52:40 PST 2019

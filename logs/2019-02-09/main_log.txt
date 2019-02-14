@@ -1,0 +1,1208 @@
+3f34f99a-6ff7-46dd-983c-75b13490e967, Robot Init, Sat Feb 09 13:47:10 PST 2019
+3f34f99a-6ff7-46dd-983c-75b13490e967, Generating trajectories..., Sat Feb 09 13:47:10 PST 2019
+3f34f99a-6ff7-46dd-983c-75b13490e967, Finished trajectory generation, Sat Feb 09 13:47:11 PST 2019
+3f34f99a-6ff7-46dd-983c-75b13490e967, Disabled Init, Sat Feb 09 13:47:11 PST 2019
+3f34f99a-6ff7-46dd-983c-75b13490e967, SET HEADING: 0.0, Sat Feb 09 13:47:11 PST 2019
+3f34f99a-6ff7-46dd-983c-75b13490e967, Gyro offset: -82.38999938964844, Sat Feb 09 13:47:11 PST 2019
+fbc9e42d-f501-4989-b9fc-c036cbf2daa7, Robot Startup, Sat Feb 09 13:48:08 PST 2019
+fbc9e42d-f501-4989-b9fc-c036cbf2daa7, Robot Init, Sat Feb 09 13:48:08 PST 2019
+fbc9e42d-f501-4989-b9fc-c036cbf2daa7, Generating trajectories..., Sat Feb 09 13:48:08 PST 2019
+fbc9e42d-f501-4989-b9fc-c036cbf2daa7, Finished trajectory generation, Sat Feb 09 13:48:08 PST 2019
+fbc9e42d-f501-4989-b9fc-c036cbf2daa7, Disabled Init, Sat Feb 09 13:48:09 PST 2019
+fbc9e42d-f501-4989-b9fc-c036cbf2daa7, SET HEADING: 0.0, Sat Feb 09 13:48:09 PST 2019
+fbc9e42d-f501-4989-b9fc-c036cbf2daa7, Gyro offset: -82.22000122070312, Sat Feb 09 13:48:09 PST 2019
+fbc9e42d-f501-4989-b9fc-c036cbf2daa7, Teleop Init, Sat Feb 09 13:49:25 PST 2019
+fbc9e42d-f501-4989-b9fc-c036cbf2daa7, Disabled Init, Sat Feb 09 13:49:43 PST 2019
+644bbe7d-5246-42e1-9e60-e60b83145b8a, Robot Startup, Sat Feb 09 13:50:09 PST 2019
+644bbe7d-5246-42e1-9e60-e60b83145b8a, Robot Init, Sat Feb 09 13:50:09 PST 2019
+644bbe7d-5246-42e1-9e60-e60b83145b8a, Generating trajectories..., Sat Feb 09 13:50:09 PST 2019
+644bbe7d-5246-42e1-9e60-e60b83145b8a, Finished trajectory generation, Sat Feb 09 13:50:09 PST 2019
+644bbe7d-5246-42e1-9e60-e60b83145b8a, Disabled Init, Sat Feb 09 13:50:09 PST 2019
+644bbe7d-5246-42e1-9e60-e60b83145b8a, SET HEADING: 0.0, Sat Feb 09 13:50:09 PST 2019
+644bbe7d-5246-42e1-9e60-e60b83145b8a, Gyro offset: -82.62000274658203, Sat Feb 09 13:50:09 PST 2019
+2354b5bd-5f40-461c-9706-f224534595b9, Robot Startup, Sat Feb 09 13:53:36 PST 2019
+2354b5bd-5f40-461c-9706-f224534595b9, Robot Init, Sat Feb 09 13:53:36 PST 2019
+2354b5bd-5f40-461c-9706-f224534595b9, Generating trajectories..., Sat Feb 09 13:53:36 PST 2019
+2354b5bd-5f40-461c-9706-f224534595b9, Finished trajectory generation, Sat Feb 09 13:53:37 PST 2019
+2354b5bd-5f40-461c-9706-f224534595b9, Disabled Init, Sat Feb 09 13:53:37 PST 2019
+2354b5bd-5f40-461c-9706-f224534595b9, SET HEADING: 0.0, Sat Feb 09 13:53:37 PST 2019
+2354b5bd-5f40-461c-9706-f224534595b9, Gyro offset: -68.26000213623047, Sat Feb 09 13:53:37 PST 2019
+64fa7798-014b-49fb-91c7-8c6f8d5a7a68, Robot Startup, Sat Feb 09 13:56:27 PST 2019
+64fa7798-014b-49fb-91c7-8c6f8d5a7a68, Robot Init, Sat Feb 09 13:56:27 PST 2019
+64fa7798-014b-49fb-91c7-8c6f8d5a7a68, Generating trajectories..., Sat Feb 09 13:56:27 PST 2019
+64fa7798-014b-49fb-91c7-8c6f8d5a7a68, Finished trajectory generation, Sat Feb 09 13:56:27 PST 2019
+64fa7798-014b-49fb-91c7-8c6f8d5a7a68, Disabled Init, Sat Feb 09 13:56:27 PST 2019
+64fa7798-014b-49fb-91c7-8c6f8d5a7a68, SET HEADING: 0.0, Sat Feb 09 13:56:27 PST 2019
+64fa7798-014b-49fb-91c7-8c6f8d5a7a68, Gyro offset: 11.839996337890652, Sat Feb 09 13:56:27 PST 2019
+b7f81606-8f20-4f0a-b604-55bd1247e2ad, Robot Startup, Sat Feb 09 13:57:45 PST 2019
+b7f81606-8f20-4f0a-b604-55bd1247e2ad, Robot Init, Sat Feb 09 13:57:45 PST 2019
+b7f81606-8f20-4f0a-b604-55bd1247e2ad, Generating trajectories..., Sat Feb 09 13:57:45 PST 2019
+b7f81606-8f20-4f0a-b604-55bd1247e2ad, Finished trajectory generation, Sat Feb 09 13:57:46 PST 2019
+b7f81606-8f20-4f0a-b604-55bd1247e2ad, Disabled Init, Sat Feb 09 13:57:46 PST 2019
+b7f81606-8f20-4f0a-b604-55bd1247e2ad, SET HEADING: 0.0, Sat Feb 09 13:57:46 PST 2019
+b7f81606-8f20-4f0a-b604-55bd1247e2ad, Gyro offset: -62.91999816894531, Sat Feb 09 13:57:46 PST 2019
+4fb1aacc-b8ff-44e8-8d43-25d30eb1a025, Robot Startup, Sat Feb 09 13:58:55 PST 2019
+4fb1aacc-b8ff-44e8-8d43-25d30eb1a025, Robot Init, Sat Feb 09 13:58:55 PST 2019
+4fb1aacc-b8ff-44e8-8d43-25d30eb1a025, Generating trajectories..., Sat Feb 09 13:58:55 PST 2019
+4fb1aacc-b8ff-44e8-8d43-25d30eb1a025, Finished trajectory generation, Sat Feb 09 13:58:56 PST 2019
+4fb1aacc-b8ff-44e8-8d43-25d30eb1a025, Disabled Init, Sat Feb 09 13:58:56 PST 2019
+4fb1aacc-b8ff-44e8-8d43-25d30eb1a025, SET HEADING: 0.0, Sat Feb 09 13:58:56 PST 2019
+4fb1aacc-b8ff-44e8-8d43-25d30eb1a025, Gyro offset: -173.6199951171875, Sat Feb 09 13:58:56 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, Robot Startup, Sat Feb 09 13:59:32 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, Robot Init, Sat Feb 09 13:59:32 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, Generating trajectories..., Sat Feb 09 13:59:32 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, Finished trajectory generation, Sat Feb 09 13:59:32 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, Disabled Init, Sat Feb 09 13:59:32 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, SET HEADING: 0.0, Sat Feb 09 13:59:32 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, Gyro offset: 79.73001098632815, Sat Feb 09 13:59:32 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, Teleop Init, Sat Feb 09 13:59:33 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, Disabled Init, Sat Feb 09 13:59:38 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, Teleop Init, Sat Feb 09 13:59:41 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 13:59:49 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 13:59:51 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 13:59:52 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 13:59:53 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, Disabled Init, Sat Feb 09 13:59:58 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, Teleop Init, Sat Feb 09 14:00:02 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, [Joystick] 1	[Button]1	 Pressed ( Ground Hatch Intake Manual Mode ), Sat Feb 09 14:00:04 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, [Joystick] 1	[Button]1	 Pressed ( Ground Hatch Intake Manual Mode ), Sat Feb 09 14:00:08 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, [Joystick] 1	[Button]1	 Pressed ( Ground Hatch Intake Manual Mode ), Sat Feb 09 14:00:10 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, [Joystick] 1	[Button]1	 Pressed ( Ground Hatch Intake Manual Mode ), Sat Feb 09 14:00:11 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 14:00:12 PST 2019
+9cb41352-3c87-454f-8626-dcfa0a3919bc, Disabled Init, Sat Feb 09 14:00:14 PST 2019
+9932bc05-c7a8-4cb4-a672-06e1c72aaace, Robot Startup, Sat Feb 09 14:01:11 PST 2019
+9932bc05-c7a8-4cb4-a672-06e1c72aaace, Robot Init, Sat Feb 09 14:01:11 PST 2019
+9932bc05-c7a8-4cb4-a672-06e1c72aaace, Generating trajectories..., Sat Feb 09 14:01:11 PST 2019
+9932bc05-c7a8-4cb4-a672-06e1c72aaace, Finished trajectory generation, Sat Feb 09 14:01:11 PST 2019
+9932bc05-c7a8-4cb4-a672-06e1c72aaace, Disabled Init, Sat Feb 09 14:01:11 PST 2019
+9932bc05-c7a8-4cb4-a672-06e1c72aaace, SET HEADING: 0.0, Sat Feb 09 14:01:11 PST 2019
+9932bc05-c7a8-4cb4-a672-06e1c72aaace, Gyro offset: 80.32998657226565, Sat Feb 09 14:01:11 PST 2019
+9932bc05-c7a8-4cb4-a672-06e1c72aaace, Teleop Init, Sat Feb 09 14:01:12 PST 2019
+9932bc05-c7a8-4cb4-a672-06e1c72aaace, [Joystick] 1	[Button]9	 Pressed ( Down ), Sat Feb 09 14:01:13 PST 2019
+9932bc05-c7a8-4cb4-a672-06e1c72aaace, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 14:01:15 PST 2019
+9932bc05-c7a8-4cb4-a672-06e1c72aaace, Disabled Init, Sat Feb 09 14:01:23 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Robot Startup, Sat Feb 09 14:02:37 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Robot Init, Sat Feb 09 14:02:37 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Generating trajectories..., Sat Feb 09 14:02:37 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Finished trajectory generation, Sat Feb 09 14:02:38 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Disabled Init, Sat Feb 09 14:02:38 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, SET HEADING: 0.0, Sat Feb 09 14:02:38 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Gyro offset: 80.77999877929688, Sat Feb 09 14:02:38 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Teleop Init, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:53 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:54 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:55 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:56 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:57 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:58 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:02:59 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:00 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:01 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:02 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:03 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled, Sat Feb 09 14:03:04 PST 2019
+8ef900d2-54f3-4529-ad5e-8aa7588a29bf, Disabled Init, Sat Feb 09 14:03:04 PST 2019
+bd994bb2-bcc7-4a32-b70e-cd89ba7f6d41, Robot Startup, Sat Feb 09 14:04:14 PST 2019
+bd994bb2-bcc7-4a32-b70e-cd89ba7f6d41, Robot Init, Sat Feb 09 14:04:15 PST 2019
+bd994bb2-bcc7-4a32-b70e-cd89ba7f6d41, Generating trajectories..., Sat Feb 09 14:04:15 PST 2019
+bd994bb2-bcc7-4a32-b70e-cd89ba7f6d41, Finished trajectory generation, Sat Feb 09 14:04:15 PST 2019
+bd994bb2-bcc7-4a32-b70e-cd89ba7f6d41, Disabled Init, Sat Feb 09 14:04:15 PST 2019
+bd994bb2-bcc7-4a32-b70e-cd89ba7f6d41, SET HEADING: 0.0, Sat Feb 09 14:04:15 PST 2019
+bd994bb2-bcc7-4a32-b70e-cd89ba7f6d41, Gyro offset: 80.8800048828125, Sat Feb 09 14:04:15 PST 2019
+bd994bb2-bcc7-4a32-b70e-cd89ba7f6d41, Teleop Init, Sat Feb 09 14:04:15 PST 2019
+bd994bb2-bcc7-4a32-b70e-cd89ba7f6d41, Disabled Init, Sat Feb 09 14:04:19 PST 2019
+5b5ed1a9-d188-45a7-954b-82356445f36e, Robot Startup, Sat Feb 09 14:05:56 PST 2019
+5b5ed1a9-d188-45a7-954b-82356445f36e, Robot Init, Sat Feb 09 14:05:57 PST 2019
+5b5ed1a9-d188-45a7-954b-82356445f36e, Generating trajectories..., Sat Feb 09 14:05:57 PST 2019
+5b5ed1a9-d188-45a7-954b-82356445f36e, Finished trajectory generation, Sat Feb 09 14:05:57 PST 2019
+5b5ed1a9-d188-45a7-954b-82356445f36e, Disabled Init, Sat Feb 09 14:05:57 PST 2019
+5b5ed1a9-d188-45a7-954b-82356445f36e, SET HEADING: 0.0, Sat Feb 09 14:05:57 PST 2019
+5b5ed1a9-d188-45a7-954b-82356445f36e, Gyro offset: 80.54998779296874, Sat Feb 09 14:05:57 PST 2019
+5228c6cc-20ed-4bf0-ab09-f44d6c15a34e, Robot Startup, Sat Feb 09 14:09:49 PST 2019
+5228c6cc-20ed-4bf0-ab09-f44d6c15a34e, Robot Init, Sat Feb 09 14:09:49 PST 2019
+5228c6cc-20ed-4bf0-ab09-f44d6c15a34e, Generating trajectories..., Sat Feb 09 14:09:49 PST 2019
+5228c6cc-20ed-4bf0-ab09-f44d6c15a34e, Finished trajectory generation, Sat Feb 09 14:09:49 PST 2019
+5228c6cc-20ed-4bf0-ab09-f44d6c15a34e, Disabled Init, Sat Feb 09 14:09:49 PST 2019
+5228c6cc-20ed-4bf0-ab09-f44d6c15a34e, SET HEADING: 0.0, Sat Feb 09 14:09:49 PST 2019
+5228c6cc-20ed-4bf0-ab09-f44d6c15a34e, Gyro offset: 81.82998657226561, Sat Feb 09 14:09:49 PST 2019
+5228c6cc-20ed-4bf0-ab09-f44d6c15a34e, Teleop Init, Sat Feb 09 14:09:50 PST 2019
+5228c6cc-20ed-4bf0-ab09-f44d6c15a34e, [Joystick] 1	[Button]9	 Pressed ( Down ), Sat Feb 09 14:09:57 PST 2019
+5228c6cc-20ed-4bf0-ab09-f44d6c15a34e, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 14:09:58 PST 2019
+5228c6cc-20ed-4bf0-ab09-f44d6c15a34e, [Joystick] 1	[Button]9	 Pressed ( Down ), Sat Feb 09 14:09:59 PST 2019
+5228c6cc-20ed-4bf0-ab09-f44d6c15a34e, Disabled Init, Sat Feb 09 14:10:02 PST 2019
+f7ec7b99-d744-4f92-89f3-99a06dfb1bbc, Robot Startup, Sat Feb 09 14:11:07 PST 2019
+f7ec7b99-d744-4f92-89f3-99a06dfb1bbc, Robot Init, Sat Feb 09 14:11:07 PST 2019
+f7ec7b99-d744-4f92-89f3-99a06dfb1bbc, Generating trajectories..., Sat Feb 09 14:11:07 PST 2019
+f7ec7b99-d744-4f92-89f3-99a06dfb1bbc, Finished trajectory generation, Sat Feb 09 14:11:07 PST 2019
+f7ec7b99-d744-4f92-89f3-99a06dfb1bbc, Disabled Init, Sat Feb 09 14:11:07 PST 2019
+f7ec7b99-d744-4f92-89f3-99a06dfb1bbc, SET HEADING: 0.0, Sat Feb 09 14:11:07 PST 2019
+f7ec7b99-d744-4f92-89f3-99a06dfb1bbc, Gyro offset: 82.11999511718751, Sat Feb 09 14:11:07 PST 2019
+f7ec7b99-d744-4f92-89f3-99a06dfb1bbc, Teleop Init, Sat Feb 09 14:11:08 PST 2019
+f7ec7b99-d744-4f92-89f3-99a06dfb1bbc, Disabled Init, Sat Feb 09 14:11:18 PST 2019
+46ce1d33-7339-4374-b0d3-11a2393a72d0, Robot Startup, Sat Feb 09 14:11:46 PST 2019
+46ce1d33-7339-4374-b0d3-11a2393a72d0, Robot Init, Sat Feb 09 14:11:46 PST 2019
+46ce1d33-7339-4374-b0d3-11a2393a72d0, Generating trajectories..., Sat Feb 09 14:11:46 PST 2019
+46ce1d33-7339-4374-b0d3-11a2393a72d0, Finished trajectory generation, Sat Feb 09 14:11:46 PST 2019
+46ce1d33-7339-4374-b0d3-11a2393a72d0, Disabled Init, Sat Feb 09 14:11:46 PST 2019
+46ce1d33-7339-4374-b0d3-11a2393a72d0, SET HEADING: 0.0, Sat Feb 09 14:11:47 PST 2019
+46ce1d33-7339-4374-b0d3-11a2393a72d0, Gyro offset: 82.35000610351561, Sat Feb 09 14:11:47 PST 2019
+46ce1d33-7339-4374-b0d3-11a2393a72d0, Teleop Init, Sat Feb 09 14:11:51 PST 2019
+46ce1d33-7339-4374-b0d3-11a2393a72d0, Disabled Init, Sat Feb 09 14:11:52 PST 2019
+46ce1d33-7339-4374-b0d3-11a2393a72d0, Teleop Init, Sat Feb 09 14:16:55 PST 2019
+46ce1d33-7339-4374-b0d3-11a2393a72d0, Disabled Init, Sat Feb 09 14:17:07 PST 2019
+49462fe1-344f-4735-a5d6-e7a145873b6c, Robot Startup, Sat Feb 09 14:17:42 PST 2019
+49462fe1-344f-4735-a5d6-e7a145873b6c, Robot Init, Sat Feb 09 14:17:42 PST 2019
+49462fe1-344f-4735-a5d6-e7a145873b6c, Generating trajectories..., Sat Feb 09 14:17:42 PST 2019
+49462fe1-344f-4735-a5d6-e7a145873b6c, Finished trajectory generation, Sat Feb 09 14:17:42 PST 2019
+49462fe1-344f-4735-a5d6-e7a145873b6c, Disabled Init, Sat Feb 09 14:17:42 PST 2019
+49462fe1-344f-4735-a5d6-e7a145873b6c, SET HEADING: 0.0, Sat Feb 09 14:17:42 PST 2019
+49462fe1-344f-4735-a5d6-e7a145873b6c, Gyro offset: 89.85000610351565, Sat Feb 09 14:17:42 PST 2019
+49462fe1-344f-4735-a5d6-e7a145873b6c, Teleop Init, Sat Feb 09 14:17:43 PST 2019
+49462fe1-344f-4735-a5d6-e7a145873b6c, Disabled Init, Sat Feb 09 14:18:22 PST 2019
+49462fe1-344f-4735-a5d6-e7a145873b6c, Teleop Init, Sat Feb 09 14:20:29 PST 2019
+49462fe1-344f-4735-a5d6-e7a145873b6c, Disabled Init, Sat Feb 09 14:20:41 PST 2019
+49462fe1-344f-4735-a5d6-e7a145873b6c, Teleop Init, Sat Feb 09 14:21:15 PST 2019
+49462fe1-344f-4735-a5d6-e7a145873b6c, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:21:23 PST 2019
+49462fe1-344f-4735-a5d6-e7a145873b6c, Disabled Init, Sat Feb 09 14:21:30 PST 2019
+9c43806a-8189-4c3d-8e09-4624aba2b228, Robot Startup, Sat Feb 09 14:21:59 PST 2019
+9c43806a-8189-4c3d-8e09-4624aba2b228, Robot Init, Sat Feb 09 14:21:59 PST 2019
+9c43806a-8189-4c3d-8e09-4624aba2b228, Generating trajectories..., Sat Feb 09 14:21:59 PST 2019
+9c43806a-8189-4c3d-8e09-4624aba2b228, Finished trajectory generation, Sat Feb 09 14:21:59 PST 2019
+9c43806a-8189-4c3d-8e09-4624aba2b228, Disabled Init, Sat Feb 09 14:21:59 PST 2019
+9c43806a-8189-4c3d-8e09-4624aba2b228, SET HEADING: 0.0, Sat Feb 09 14:21:59 PST 2019
+9c43806a-8189-4c3d-8e09-4624aba2b228, Gyro offset: 176.32000732421878, Sat Feb 09 14:21:59 PST 2019
+9c43806a-8189-4c3d-8e09-4624aba2b228, Teleop Init, Sat Feb 09 14:22:02 PST 2019
+9c43806a-8189-4c3d-8e09-4624aba2b228, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:22:31 PST 2019
+9c43806a-8189-4c3d-8e09-4624aba2b228, Disabled Init, Sat Feb 09 14:22:40 PST 2019
+4f1c4a44-d459-46f9-961d-39e6611647e9, Robot Startup, Sat Feb 09 14:23:04 PST 2019
+4f1c4a44-d459-46f9-961d-39e6611647e9, Robot Init, Sat Feb 09 14:23:04 PST 2019
+4f1c4a44-d459-46f9-961d-39e6611647e9, Generating trajectories..., Sat Feb 09 14:23:04 PST 2019
+4f1c4a44-d459-46f9-961d-39e6611647e9, Finished trajectory generation, Sat Feb 09 14:23:04 PST 2019
+4f1c4a44-d459-46f9-961d-39e6611647e9, Disabled Init, Sat Feb 09 14:23:04 PST 2019
+4f1c4a44-d459-46f9-961d-39e6611647e9, SET HEADING: 0.0, Sat Feb 09 14:23:04 PST 2019
+4f1c4a44-d459-46f9-961d-39e6611647e9, Gyro offset: -156.3300018310547, Sat Feb 09 14:23:04 PST 2019
+4f1c4a44-d459-46f9-961d-39e6611647e9, Teleop Init, Sat Feb 09 14:23:05 PST 2019
+4f1c4a44-d459-46f9-961d-39e6611647e9, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:23:26 PST 2019
+4f1c4a44-d459-46f9-961d-39e6611647e9, Disabled Init, Sat Feb 09 14:23:35 PST 2019
+7327e6ea-62a0-49fc-9413-65b28ac75df1, Robot Startup, Sat Feb 09 14:23:57 PST 2019
+7327e6ea-62a0-49fc-9413-65b28ac75df1, Robot Init, Sat Feb 09 14:23:57 PST 2019
+7327e6ea-62a0-49fc-9413-65b28ac75df1, Generating trajectories..., Sat Feb 09 14:23:57 PST 2019
+7327e6ea-62a0-49fc-9413-65b28ac75df1, Finished trajectory generation, Sat Feb 09 14:23:57 PST 2019
+7327e6ea-62a0-49fc-9413-65b28ac75df1, Disabled Init, Sat Feb 09 14:23:57 PST 2019
+7327e6ea-62a0-49fc-9413-65b28ac75df1, SET HEADING: 0.0, Sat Feb 09 14:23:58 PST 2019
+7327e6ea-62a0-49fc-9413-65b28ac75df1, Gyro offset: -118.74999999999999, Sat Feb 09 14:23:58 PST 2019
+7327e6ea-62a0-49fc-9413-65b28ac75df1, Teleop Init, Sat Feb 09 14:23:58 PST 2019
+7327e6ea-62a0-49fc-9413-65b28ac75df1, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:24:17 PST 2019
+7327e6ea-62a0-49fc-9413-65b28ac75df1, Disabled Init, Sat Feb 09 14:24:39 PST 2019
+73a45070-51a0-43b6-a84d-ff8243fde6f0, Robot Startup, Sat Feb 09 14:25:40 PST 2019
+73a45070-51a0-43b6-a84d-ff8243fde6f0, Robot Init, Sat Feb 09 14:25:41 PST 2019
+73a45070-51a0-43b6-a84d-ff8243fde6f0, Generating trajectories..., Sat Feb 09 14:25:41 PST 2019
+73a45070-51a0-43b6-a84d-ff8243fde6f0, Finished trajectory generation, Sat Feb 09 14:25:41 PST 2019
+73a45070-51a0-43b6-a84d-ff8243fde6f0, Disabled Init, Sat Feb 09 14:25:41 PST 2019
+73a45070-51a0-43b6-a84d-ff8243fde6f0, SET HEADING: 0.0, Sat Feb 09 14:25:41 PST 2019
+73a45070-51a0-43b6-a84d-ff8243fde6f0, Gyro offset: -138.7100067138672, Sat Feb 09 14:25:41 PST 2019
+95cbb1cc-dbe8-443a-85b1-9ab3ccd20ea0, Robot Startup, Sat Feb 09 14:29:08 PST 2019
+95cbb1cc-dbe8-443a-85b1-9ab3ccd20ea0, Robot Init, Sat Feb 09 14:29:08 PST 2019
+95cbb1cc-dbe8-443a-85b1-9ab3ccd20ea0, Generating trajectories..., Sat Feb 09 14:29:08 PST 2019
+95cbb1cc-dbe8-443a-85b1-9ab3ccd20ea0, Finished trajectory generation, Sat Feb 09 14:29:09 PST 2019
+95cbb1cc-dbe8-443a-85b1-9ab3ccd20ea0, Disabled Init, Sat Feb 09 14:29:09 PST 2019
+95cbb1cc-dbe8-443a-85b1-9ab3ccd20ea0, SET HEADING: 0.0, Sat Feb 09 14:29:09 PST 2019
+95cbb1cc-dbe8-443a-85b1-9ab3ccd20ea0, Gyro offset: -150.0500030517578, Sat Feb 09 14:29:09 PST 2019
+95cbb1cc-dbe8-443a-85b1-9ab3ccd20ea0, Teleop Init, Sat Feb 09 14:29:13 PST 2019
+95cbb1cc-dbe8-443a-85b1-9ab3ccd20ea0, Disabled Init, Sat Feb 09 14:29:29 PST 2019
+95cbb1cc-dbe8-443a-85b1-9ab3ccd20ea0, Teleop Init, Sat Feb 09 14:29:33 PST 2019
+95cbb1cc-dbe8-443a-85b1-9ab3ccd20ea0, Disabled Init, Sat Feb 09 14:29:36 PST 2019
+1f6499f1-66c4-421d-a448-d1d036aedb38, Robot Startup, Sat Feb 09 14:29:59 PST 2019
+1f6499f1-66c4-421d-a448-d1d036aedb38, Robot Init, Sat Feb 09 14:29:59 PST 2019
+1f6499f1-66c4-421d-a448-d1d036aedb38, Generating trajectories..., Sat Feb 09 14:29:59 PST 2019
+1f6499f1-66c4-421d-a448-d1d036aedb38, Finished trajectory generation, Sat Feb 09 14:29:59 PST 2019
+1f6499f1-66c4-421d-a448-d1d036aedb38, Disabled Init, Sat Feb 09 14:29:59 PST 2019
+1f6499f1-66c4-421d-a448-d1d036aedb38, SET HEADING: 0.0, Sat Feb 09 14:29:59 PST 2019
+1f6499f1-66c4-421d-a448-d1d036aedb38, Gyro offset: 113.44999694824219, Sat Feb 09 14:29:59 PST 2019
+1f6499f1-66c4-421d-a448-d1d036aedb38, Teleop Init, Sat Feb 09 14:30:00 PST 2019
+1f6499f1-66c4-421d-a448-d1d036aedb38, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:30:13 PST 2019
+1f6499f1-66c4-421d-a448-d1d036aedb38, Disabled Init, Sat Feb 09 14:30:20 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, SigNotUpdated, Sat Feb 09 14:30:45 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Robot Startup, Sat Feb 09 14:30:45 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Robot Init, Sat Feb 09 14:30:45 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Generating trajectories..., Sat Feb 09 14:30:45 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Finished trajectory generation, Sat Feb 09 14:30:46 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Disabled Init, Sat Feb 09 14:30:46 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, SET HEADING: 0.0, Sat Feb 09 14:30:46 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Gyro offset: 66.45001220703126, Sat Feb 09 14:30:46 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Teleop Init, Sat Feb 09 14:30:46 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Disabled Init, Sat Feb 09 14:31:24 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Teleop Init, Sat Feb 09 14:31:24 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:31:26 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:31:44 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:32:01 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Disabled Init, Sat Feb 09 14:32:06 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Teleop Init, Sat Feb 09 14:32:09 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:32:12 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Disabled Init, Sat Feb 09 14:32:16 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Teleop Init, Sat Feb 09 14:33:14 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Disabled Init, Sat Feb 09 14:33:20 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Teleop Init, Sat Feb 09 14:33:47 PST 2019
+063cf0f9-9c98-4193-882f-5fa9477b4104, Disabled Init, Sat Feb 09 14:34:00 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, Robot Startup, Sat Feb 09 14:34:24 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, Robot Init, Sat Feb 09 14:34:24 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, Generating trajectories..., Sat Feb 09 14:34:24 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, Finished trajectory generation, Sat Feb 09 14:34:24 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, Disabled Init, Sat Feb 09 14:34:24 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, SET HEADING: 0.0, Sat Feb 09 14:34:25 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, Gyro offset: -116.93000030517578, Sat Feb 09 14:34:25 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, Teleop Init, Sat Feb 09 14:34:30 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:34:41 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:35:00 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:35:00 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:35:00 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:35:01 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:35:01 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:35:03 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:35:07 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:35:41 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:35:48 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:35:59 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:36:01 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:36:01 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:36:01 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:36:02 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:36:02 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:36:03 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:36:04 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:36:04 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:36:04 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:36:04 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:36:05 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:36:05 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:36:05 PST 2019
+df223d5e-ba56-44c8-863e-4eb4a365701e, Disabled Init, Sat Feb 09 14:36:17 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, Robot Startup, Sat Feb 09 14:36:51 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, Robot Init, Sat Feb 09 14:36:51 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, Generating trajectories..., Sat Feb 09 14:36:51 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, Finished trajectory generation, Sat Feb 09 14:36:51 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, Disabled Init, Sat Feb 09 14:36:51 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, SET HEADING: 0.0, Sat Feb 09 14:36:52 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, Gyro offset: -171.94000244140625, Sat Feb 09 14:36:52 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, Teleop Init, Sat Feb 09 14:37:08 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 14:37:15 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 14:37:21 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 14:37:33 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 14:37:47 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, Disabled Init, Sat Feb 09 14:37:58 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, Teleop Init, Sat Feb 09 14:38:20 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 14:38:36 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 14:38:39 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, Disabled Init, Sat Feb 09 14:38:44 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, Teleop Init, Sat Feb 09 14:39:04 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 14:39:09 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 14:39:19 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, Disabled Init, Sat Feb 09 14:39:26 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, Teleop Init, Sat Feb 09 14:41:05 PST 2019
+e5a359ac-d7bf-42b9-bc58-c4b8b3803c41, Disabled Init, Sat Feb 09 14:41:07 PST 2019
+036e56a3-e900-4d07-b726-ffd6f3fba541, Robot Startup, Sat Feb 09 14:41:40 PST 2019
+036e56a3-e900-4d07-b726-ffd6f3fba541, Robot Init, Sat Feb 09 14:41:40 PST 2019
+036e56a3-e900-4d07-b726-ffd6f3fba541, Generating trajectories..., Sat Feb 09 14:41:40 PST 2019
+036e56a3-e900-4d07-b726-ffd6f3fba541, Finished trajectory generation, Sat Feb 09 14:41:40 PST 2019
+036e56a3-e900-4d07-b726-ffd6f3fba541, Disabled Init, Sat Feb 09 14:41:40 PST 2019
+036e56a3-e900-4d07-b726-ffd6f3fba541, SET HEADING: 0.0, Sat Feb 09 14:41:41 PST 2019
+036e56a3-e900-4d07-b726-ffd6f3fba541, Gyro offset: -172.30999755859375, Sat Feb 09 14:41:41 PST 2019
+036e56a3-e900-4d07-b726-ffd6f3fba541, Teleop Init, Sat Feb 09 14:41:41 PST 2019
+036e56a3-e900-4d07-b726-ffd6f3fba541, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:42:48 PST 2019
+036e56a3-e900-4d07-b726-ffd6f3fba541, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 14:42:59 PST 2019
+036e56a3-e900-4d07-b726-ffd6f3fba541, Disabled Init, Sat Feb 09 14:43:11 PST 2019
+c950a0a5-9def-4078-80b6-49f2b569f55d, Robot Startup, Sat Feb 09 14:43:39 PST 2019
+c950a0a5-9def-4078-80b6-49f2b569f55d, Robot Init, Sat Feb 09 14:43:39 PST 2019
+c950a0a5-9def-4078-80b6-49f2b569f55d, Generating trajectories..., Sat Feb 09 14:43:40 PST 2019
+c950a0a5-9def-4078-80b6-49f2b569f55d, Finished trajectory generation, Sat Feb 09 14:43:40 PST 2019
+c950a0a5-9def-4078-80b6-49f2b569f55d, Disabled Init, Sat Feb 09 14:43:40 PST 2019
+c950a0a5-9def-4078-80b6-49f2b569f55d, SET HEADING: 0.0, Sat Feb 09 14:43:40 PST 2019
+c950a0a5-9def-4078-80b6-49f2b569f55d, Gyro offset: -140.58999633789062, Sat Feb 09 14:43:40 PST 2019
+c950a0a5-9def-4078-80b6-49f2b569f55d, Teleop Init, Sat Feb 09 14:43:41 PST 2019
+c950a0a5-9def-4078-80b6-49f2b569f55d, Disabled Init, Sat Feb 09 14:43:48 PST 2019
+832370c5-7fa5-47ac-93af-27b64ab04b5c, Robot Startup, Sat Feb 09 14:44:18 PST 2019
+832370c5-7fa5-47ac-93af-27b64ab04b5c, Robot Init, Sat Feb 09 14:44:18 PST 2019
+832370c5-7fa5-47ac-93af-27b64ab04b5c, Generating trajectories..., Sat Feb 09 14:44:18 PST 2019
+832370c5-7fa5-47ac-93af-27b64ab04b5c, Finished trajectory generation, Sat Feb 09 14:44:18 PST 2019
+832370c5-7fa5-47ac-93af-27b64ab04b5c, Disabled Init, Sat Feb 09 14:44:18 PST 2019
+832370c5-7fa5-47ac-93af-27b64ab04b5c, SET HEADING: 0.0, Sat Feb 09 14:44:18 PST 2019
+832370c5-7fa5-47ac-93af-27b64ab04b5c, Gyro offset: -141.24000549316406, Sat Feb 09 14:44:18 PST 2019
+832370c5-7fa5-47ac-93af-27b64ab04b5c, Teleop Init, Sat Feb 09 14:44:47 PST 2019
+832370c5-7fa5-47ac-93af-27b64ab04b5c, Disabled Init, Sat Feb 09 14:45:06 PST 2019
+08fea158-f0d8-45f4-af1f-0c7eb9dcdc67, Robot Startup, Sat Feb 09 14:45:24 PST 2019
+08fea158-f0d8-45f4-af1f-0c7eb9dcdc67, Robot Init, Sat Feb 09 14:45:24 PST 2019
+08fea158-f0d8-45f4-af1f-0c7eb9dcdc67, Generating trajectories..., Sat Feb 09 14:45:24 PST 2019
+08fea158-f0d8-45f4-af1f-0c7eb9dcdc67, Finished trajectory generation, Sat Feb 09 14:45:24 PST 2019
+08fea158-f0d8-45f4-af1f-0c7eb9dcdc67, Disabled Init, Sat Feb 09 14:45:24 PST 2019
+08fea158-f0d8-45f4-af1f-0c7eb9dcdc67, SET HEADING: 0.0, Sat Feb 09 14:45:25 PST 2019
+08fea158-f0d8-45f4-af1f-0c7eb9dcdc67, Gyro offset: -139.30999755859375, Sat Feb 09 14:45:25 PST 2019
+08fea158-f0d8-45f4-af1f-0c7eb9dcdc67, Teleop Init, Sat Feb 09 14:45:25 PST 2019
+08fea158-f0d8-45f4-af1f-0c7eb9dcdc67, Disabled Init, Sat Feb 09 14:45:36 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Robot Startup, Sat Feb 09 14:45:55 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Robot Init, Sat Feb 09 14:45:55 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Generating trajectories..., Sat Feb 09 14:45:55 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Finished trajectory generation, Sat Feb 09 14:45:55 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Disabled Init, Sat Feb 09 14:45:55 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, SET HEADING: 0.0, Sat Feb 09 14:45:55 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Gyro offset: -144.11000061035156, Sat Feb 09 14:45:55 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Teleop Init, Sat Feb 09 14:45:57 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:49:10 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:49:20 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:49:21 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:49:22 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:49:24 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:49:48 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:50:06 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 14:50:20 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:50:33 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:50:53 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:51:01 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:51:05 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:51:14 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:51:54 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:52:17 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 14:52:26 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:52:28 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:52:32 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:52:52 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Disabled Init, Sat Feb 09 14:53:36 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Teleop Init, Sat Feb 09 14:54:29 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:54:32 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:54:39 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:55:05 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:55:14 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:55:36 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:56:20 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:57:01 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:57:01 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:57:08 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:57:47 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:58:04 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:58:08 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 14:58:30 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:58:42 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 14:58:46 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:58:51 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:59:04 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Disabled Init, Sat Feb 09 14:59:14 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Teleop Init, Sat Feb 09 14:59:18 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 14:59:20 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:59:21 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 14:59:38 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 14:59:43 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Disabled Init, Sat Feb 09 14:59:56 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Teleop Init, Sat Feb 09 15:00:08 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 15:00:09 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:00:15 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:00:45 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 15:00:49 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:01:03 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:01:37 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Disabled Init, Sat Feb 09 15:02:02 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Teleop Init, Sat Feb 09 15:02:11 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:02:17 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 15:02:25 PST 2019
+eed7d3bb-3c5a-474d-ad33-5677b009c58a, Disabled Init, Sat Feb 09 15:03:15 PST 2019
+50975b5a-07a0-4cd3-b654-319d9708a820, Robot Startup, Sat Feb 09 15:08:50 PST 2019
+50975b5a-07a0-4cd3-b654-319d9708a820, Robot Init, Sat Feb 09 15:08:50 PST 2019
+50975b5a-07a0-4cd3-b654-319d9708a820, Generating trajectories..., Sat Feb 09 15:08:50 PST 2019
+50975b5a-07a0-4cd3-b654-319d9708a820, Finished trajectory generation, Sat Feb 09 15:08:50 PST 2019
+50975b5a-07a0-4cd3-b654-319d9708a820, Disabled Init, Sat Feb 09 15:08:50 PST 2019
+50975b5a-07a0-4cd3-b654-319d9708a820, SET HEADING: 0.0, Sat Feb 09 15:08:51 PST 2019
+50975b5a-07a0-4cd3-b654-319d9708a820, Gyro offset: 63.44000244140628, Sat Feb 09 15:08:51 PST 2019
+8b75c7e4-6ee9-4d63-ac57-066ad4a2fac3, Robot Startup, Sat Feb 09 15:09:16 PST 2019
+8b75c7e4-6ee9-4d63-ac57-066ad4a2fac3, Robot Init, Sat Feb 09 15:09:16 PST 2019
+8b75c7e4-6ee9-4d63-ac57-066ad4a2fac3, Generating trajectories..., Sat Feb 09 15:09:16 PST 2019
+8b75c7e4-6ee9-4d63-ac57-066ad4a2fac3, Finished trajectory generation, Sat Feb 09 15:09:17 PST 2019
+8b75c7e4-6ee9-4d63-ac57-066ad4a2fac3, Disabled Init, Sat Feb 09 15:09:17 PST 2019
+8b75c7e4-6ee9-4d63-ac57-066ad4a2fac3, SET HEADING: 0.0, Sat Feb 09 15:09:17 PST 2019
+8b75c7e4-6ee9-4d63-ac57-066ad4a2fac3, Gyro offset: 63.579986572265625, Sat Feb 09 15:09:17 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, Robot Startup, Sat Feb 09 15:09:39 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, Robot Init, Sat Feb 09 15:09:39 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, Generating trajectories..., Sat Feb 09 15:09:39 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, Finished trajectory generation, Sat Feb 09 15:09:39 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, Disabled Init, Sat Feb 09 15:09:39 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, SET HEADING: 0.0, Sat Feb 09 15:09:40 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, Gyro offset: 63.709991455078146, Sat Feb 09 15:09:40 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, Teleop Init, Sat Feb 09 15:09:41 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:09:46 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:09:49 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:09:51 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 15:09:51 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:09:51 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:09:56 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:10:14 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:10:36 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 15:10:42 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:10:42 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:10:49 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:10:56 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:10:57 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:11:09 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:11:22 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:11:30 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:11:43 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:11:45 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:11:45 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:11:48 PST 2019
+28298612-ac9b-4a07-8271-714411c0b491, Disabled Init, Sat Feb 09 15:11:54 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, Teleop Init, Sat Feb 09 15:16:59 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:17:44 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:18:07 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:18:19 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:18:32 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]9	 Pressed ( Down ), Sat Feb 09 15:18:33 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:18:36 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:18:58 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:19:09 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:19:15 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:19:24 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, Disabled Init, Sat Feb 09 15:19:48 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, Teleop Init, Sat Feb 09 15:21:49 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:22:03 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:22:25 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 15:22:48 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 15:22:49 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 15:22:49 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 15:22:57 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:22:57 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:23:03 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:23:16 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:23:29 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:23:32 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:23:38 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:23:38 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:23:39 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]9	 Pressed ( Down ), Sat Feb 09 15:24:13 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:24:14 PST 2019
+bd3e7ce6-d17e-4d4d-a05b-0d6e58326b26, Disabled Init, Sat Feb 09 15:24:24 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, Teleop Init, Sat Feb 09 15:30:55 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:30:57 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:31:03 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:31:23 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:31:32 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:31:35 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:31:45 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:31:58 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:32:00 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:32:08 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:32:09 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:32:14 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:32:56 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:33:07 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:33:17 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:33:32 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:33:41 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:33:47 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:33:49 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:33:58 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:34:01 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:34:03 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:34:06 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:34:21 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:34:25 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:34:27 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:34:47 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, Disabled Init, Sat Feb 09 15:34:57 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, Teleop Init, Sat Feb 09 15:36:25 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:36:31 PST 2019
+06d3b002-2e69-466f-ae6d-f064ba587f99, Disabled Init, Sat Feb 09 15:36:36 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, Teleop Init, Sat Feb 09 15:38:31 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:38:34 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:39:04 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:39:25 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:39:28 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:39:52 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:40:02 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:40:04 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:40:10 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, Disabled Init, Sat Feb 09 15:40:28 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, Teleop Init, Sat Feb 09 15:41:00 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:41:08 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:41:16 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:41:46 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:42:08 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:42:15 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:42:17 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:42:20 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:42:21 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:42:25 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:42:45 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:42:48 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:42:54 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:42:56 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:43:02 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:43:10 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:43:36 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:43:39 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:43:45 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:43:48 PST 2019
+abf24c1a-0074-48d4-94cc-dc7d9dcde28c, Disabled Init, Sat Feb 09 15:43:51 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, Robot Startup, Sat Feb 09 15:43:58 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, Robot Init, Sat Feb 09 15:43:58 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, Generating trajectories..., Sat Feb 09 15:43:58 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, Finished trajectory generation, Sat Feb 09 15:43:58 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, Disabled Init, Sat Feb 09 15:43:58 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, SET HEADING: 0.0, Sat Feb 09 15:43:58 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, Gyro offset: -79.9800033569336, Sat Feb 09 15:43:59 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, Teleop Init, Sat Feb 09 15:43:59 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:44:09 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:44:17 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:44:57 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:44:59 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:45:05 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:45:08 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:45:14 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 15:45:16 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, Disabled Init, Sat Feb 09 15:45:21 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, Teleop Init, Sat Feb 09 15:45:48 PST 2019
+eb58577f-3555-4811-9137-29f718c5c55e, Disabled Init, Sat Feb 09 15:46:03 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, Robot Startup, Sat Feb 09 15:46:20 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, Robot Init, Sat Feb 09 15:46:20 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, Generating trajectories..., Sat Feb 09 15:46:20 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, Finished trajectory generation, Sat Feb 09 15:46:20 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, Disabled Init, Sat Feb 09 15:46:20 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, SET HEADING: 0.0, Sat Feb 09 15:46:21 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, Gyro offset: -44.18000030517578, Sat Feb 09 15:46:21 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, Teleop Init, Sat Feb 09 15:46:25 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:50:09 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:50:36 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:50:50 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:51:04 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:51:13 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:51:24 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:51:30 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:52:05 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:52:08 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:52:38 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:52:39 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:53:02 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 15:53:07 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:53:10 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:53:27 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:53:29 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:53:29 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:53:30 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]3	 Pressed ( Station Intake Button ), Sat Feb 09 15:53:30 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, Disabled Init, Sat Feb 09 15:53:55 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, Teleop Init, Sat Feb 09 15:54:01 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 15:54:07 PST 2019
+bd1bc3db-ccb1-4252-86a5-87b16b9abfa7, Disabled Init, Sat Feb 09 15:54:14 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, Robot Startup, Sat Feb 09 15:59:53 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, Robot Init, Sat Feb 09 15:59:53 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, Generating trajectories..., Sat Feb 09 15:59:53 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, Finished trajectory generation, Sat Feb 09 15:59:54 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, Disabled Init, Sat Feb 09 15:59:54 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, SET HEADING: 0.0, Sat Feb 09 15:59:54 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, Gyro offset: 1.1900024414062322, Sat Feb 09 15:59:54 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, Teleop Init, Sat Feb 09 16:01:55 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 16:01:58 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 16:02:01 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 16:02:04 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 16:02:06 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, Unsafe Current on Cargo 84.75 Amps, Sat Feb 09 16:02:44 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, Unsafe Current on Cargo 94.875 Amps, Sat Feb 09 16:02:44 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, Unsafe Current on Cargo 93.75 Amps, Sat Feb 09 16:02:44 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, Unsafe Current on Cargo 84.25 Amps, Sat Feb 09 16:02:44 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, Unsafe Current on Cargo 84.25 Amps, Sat Feb 09 16:02:44 PST 2019
+7d232a36-7aae-4286-a0ff-028fc6d6157f, Disabled Init, Sat Feb 09 16:03:06 PST 2019
+101998f6-8c46-4d16-8143-9dd68aa059af, Robot Startup, Sat Feb 09 16:09:27 PST 2019
+101998f6-8c46-4d16-8143-9dd68aa059af, Robot Init, Sat Feb 09 16:09:27 PST 2019
+101998f6-8c46-4d16-8143-9dd68aa059af, Generating trajectories..., Sat Feb 09 16:09:27 PST 2019
+101998f6-8c46-4d16-8143-9dd68aa059af, Finished trajectory generation, Sat Feb 09 16:09:27 PST 2019
+101998f6-8c46-4d16-8143-9dd68aa059af, Disabled Init, Sat Feb 09 16:09:27 PST 2019
+101998f6-8c46-4d16-8143-9dd68aa059af, SET HEADING: 0.0, Sat Feb 09 16:09:28 PST 2019
+101998f6-8c46-4d16-8143-9dd68aa059af, Gyro offset: -83.73999786376953, Sat Feb 09 16:09:28 PST 2019
+6a30eddd-eb36-4fe1-ae58-1b2816fcee5c, Robot Startup, Sat Feb 09 16:10:13 PST 2019
+6a30eddd-eb36-4fe1-ae58-1b2816fcee5c, Robot Init, Sat Feb 09 16:10:13 PST 2019
+6a30eddd-eb36-4fe1-ae58-1b2816fcee5c, Generating trajectories..., Sat Feb 09 16:10:13 PST 2019
+6a30eddd-eb36-4fe1-ae58-1b2816fcee5c, Finished trajectory generation, Sat Feb 09 16:10:14 PST 2019
+6a30eddd-eb36-4fe1-ae58-1b2816fcee5c, Disabled Init, Sat Feb 09 16:10:14 PST 2019
+6a30eddd-eb36-4fe1-ae58-1b2816fcee5c, SET HEADING: 0.0, Sat Feb 09 16:10:14 PST 2019
+6a30eddd-eb36-4fe1-ae58-1b2816fcee5c, Gyro offset: -120.54000091552736, Sat Feb 09 16:10:14 PST 2019
+6a30eddd-eb36-4fe1-ae58-1b2816fcee5c, Teleop Init, Sat Feb 09 16:10:24 PST 2019
+6a30eddd-eb36-4fe1-ae58-1b2816fcee5c, Disabled Init, Sat Feb 09 16:10:32 PST 2019
+6a30eddd-eb36-4fe1-ae58-1b2816fcee5c, Teleop Init, Sat Feb 09 16:11:19 PST 2019
+6a30eddd-eb36-4fe1-ae58-1b2816fcee5c, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 16:11:21 PST 2019
+6a30eddd-eb36-4fe1-ae58-1b2816fcee5c, [Joystick] 0	[Button]4	 Pressed ( Driver Vision Assist ), Sat Feb 09 16:11:22 PST 2019
+6a30eddd-eb36-4fe1-ae58-1b2816fcee5c, Disabled Init, Sat Feb 09 16:11:23 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, Teleop Init, Sat Feb 09 16:13:38 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, Disabled Init, Sat Feb 09 16:13:42 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, Teleop Init, Sat Feb 09 16:14:04 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 16:15:21 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 16:15:23 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, [Joystick] 1	[Button]10	 Pressed ( Up ), Sat Feb 09 16:15:37 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 16:15:45 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, Disabled Init, Sat Feb 09 16:17:06 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, Teleop Init, Sat Feb 09 16:17:49 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 16:18:06 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, [Joystick] 1	[Button]2	 Pressed ( Cargo Arm Manual Mode ), Sat Feb 09 16:18:08 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, [Joystick] 1	[Button]4	 Pressed ( Place Hatch Button ), Sat Feb 09 16:18:15 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, Disabled Init, Sat Feb 09 16:18:31 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, Teleop Init, Sat Feb 09 16:18:32 PST 2019
+1d251fb8-4380-4df6-829d-4723de261b1a, Disabled Init, Sat Feb 09 16:18:36 PST 2019

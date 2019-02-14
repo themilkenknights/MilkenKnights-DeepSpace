@@ -114,8 +114,8 @@ public class MkTalon {
 				CTRE(masterTalon.configMaxIntegralAccumulator(kSlot, 5000, kLong));
 				CTRE(masterTalon.configMotionCruiseVelocity((int) CARGO_ARM.MOTION_MAGIC_CRUISE_VEL, kLong));
 				CTRE(masterTalon.configMotionAcceleration((int) CARGO_ARM.MOTION_MAGIC_ACCEL, kLong));
-				CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.nativeUnitsToDegrees(CARGO_ARM.ARM_FORWARD_LIMIT), kLong));
-				CTRE(masterTalon.configReverseSoftLimitThreshold((int) MkMath.nativeUnitsToDegrees(CARGO_ARM.ARM_REVERSE_LIMIT), kLong));
+				CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.angleToNativeUnits(CARGO_ARM.ARM_FORWARD_LIMIT), kLong));
+				CTRE(masterTalon.configReverseSoftLimitThreshold((int) MkMath.angleToNativeUnits(CARGO_ARM.ARM_REVERSE_LIMIT), kLong));
 				CTRE(masterTalon.configForwardSoftLimitEnable(true, kLong));
 				CTRE(masterTalon.configReverseSoftLimitEnable(true, kLong));
 				CTRE(masterTalon.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kLeftCargoIntakeTalonID, kLong));
@@ -172,10 +172,10 @@ public class MkTalon {
 				CTRE(masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 10));
 				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 10, kLong));
 				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 20, kLong));
-				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 1000, kLong));
+				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 200, kLong));
 				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 50, kLong));
-				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 1000, kLong));
-				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 1000, kLong));
+				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 200, kLong));
+				CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 200, kLong));
 				CTRE(masterTalon.configClearPositionOnLimitF(false, kLong));
 				CTRE(masterTalon.configClearPositionOnLimitR(true, kLong));
 				zeroEncoder();

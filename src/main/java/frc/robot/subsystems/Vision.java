@@ -13,7 +13,7 @@ public class Vision extends Subsystem {
 
 	private LimeLight mLimeLight;
 	public static MkPixy mPixy;
-	private boolean usePixy = false;
+	private boolean usePixy = true;
 
 
 	private Vision() {
@@ -34,7 +34,7 @@ public class Vision extends Subsystem {
 			SmartDashboard.putNumber("Pixy X", mPixy.getX());
 			SmartDashboard.putNumber("Pixy Y", mPixy.getY());
 			SmartDashboard.putNumber("Pixy Area", mPixy.getArea());
-			SmartDashboard.putBoolean("Pixy Limit Switch", mPixy.getArea() > 2000);
+			SmartDashboard.putBoolean("Pixy Limit Switch", mPixy.isCargoIntaked());
 		}
 	}
 

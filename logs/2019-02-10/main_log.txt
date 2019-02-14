@@ -1,0 +1,358 @@
+fe1b280c-cb9e-4505-8b98-59ce7200b675, Robot Init, Sun Feb 10 18:19:11 PST 2019
+fe1b280c-cb9e-4505-8b98-59ce7200b675, Generating trajectories..., Sun Feb 10 18:19:11 PST 2019
+fe1b280c-cb9e-4505-8b98-59ce7200b675, Finished trajectory generation, Sun Feb 10 18:19:12 PST 2019
+fe1b280c-cb9e-4505-8b98-59ce7200b675, Disabled Init, Sun Feb 10 18:19:12 PST 2019
+fe1b280c-cb9e-4505-8b98-59ce7200b675, SET HEADING: 0.0, Sun Feb 10 18:19:12 PST 2019
+fe1b280c-cb9e-4505-8b98-59ce7200b675, Gyro offset: 2.179992675781256, Sun Feb 10 18:19:12 PST 2019
+fe1b280c-cb9e-4505-8b98-59ce7200b675, Teleop Init, Sun Feb 10 18:19:44 PST 2019
+fe1b280c-cb9e-4505-8b98-59ce7200b675, Disabled Init, Sun Feb 10 18:19:47 PST 2019
+fe1b280c-cb9e-4505-8b98-59ce7200b675, Teleop Init, Sun Feb 10 18:20:00 PST 2019
+fe1b280c-cb9e-4505-8b98-59ce7200b675, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 18:20:01 PST 2019
+fe1b280c-cb9e-4505-8b98-59ce7200b675, Switching to Robot State:TELEOP_DRIVE, Sun Feb 10 18:20:01 PST 2019
+fe1b280c-cb9e-4505-8b98-59ce7200b675, Generating trajectories..., Sun Feb 10 18:20:01 PST 2019
+ed530dfa-c81c-482e-be6c-4780ae22bdbf, Robot Startup, Sun Feb 10 18:20:08 PST 2019
+ed530dfa-c81c-482e-be6c-4780ae22bdbf, Robot Init, Sun Feb 10 18:20:08 PST 2019
+ed530dfa-c81c-482e-be6c-4780ae22bdbf, Generating trajectories..., Sun Feb 10 18:20:08 PST 2019
+ed530dfa-c81c-482e-be6c-4780ae22bdbf, Finished trajectory generation, Sun Feb 10 18:20:08 PST 2019
+ed530dfa-c81c-482e-be6c-4780ae22bdbf, Disabled Init, Sun Feb 10 18:20:08 PST 2019
+ed530dfa-c81c-482e-be6c-4780ae22bdbf, SET HEADING: 0.0, Sun Feb 10 18:20:08 PST 2019
+ed530dfa-c81c-482e-be6c-4780ae22bdbf, Gyro offset: 2.230010986328139, Sun Feb 10 18:20:08 PST 2019
+ed530dfa-c81c-482e-be6c-4780ae22bdbf, Teleop Init, Sun Feb 10 18:20:14 PST 2019
+ed530dfa-c81c-482e-be6c-4780ae22bdbf, Disabled Init, Sun Feb 10 18:20:15 PST 2019
+ed530dfa-c81c-482e-be6c-4780ae22bdbf, Teleop Init, Sun Feb 10 18:20:26 PST 2019
+ed530dfa-c81c-482e-be6c-4780ae22bdbf, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 18:20:35 PST 2019
+ed530dfa-c81c-482e-be6c-4780ae22bdbf, Switching to Robot State:TELEOP_DRIVE, Sun Feb 10 18:20:35 PST 2019
+ed530dfa-c81c-482e-be6c-4780ae22bdbf, Generating trajectories..., Sun Feb 10 18:20:35 PST 2019
+5d85fa67-dd84-4626-9dee-2443f2c3f376, Robot Startup, Sun Feb 10 18:20:40 PST 2019
+5d85fa67-dd84-4626-9dee-2443f2c3f376, Robot Init, Sun Feb 10 18:20:41 PST 2019
+5d85fa67-dd84-4626-9dee-2443f2c3f376, Generating trajectories..., Sun Feb 10 18:20:41 PST 2019
+5d85fa67-dd84-4626-9dee-2443f2c3f376, Finished trajectory generation, Sun Feb 10 18:20:41 PST 2019
+5d85fa67-dd84-4626-9dee-2443f2c3f376, Disabled Init, Sun Feb 10 18:20:41 PST 2019
+5d85fa67-dd84-4626-9dee-2443f2c3f376, SET HEADING: 0.0, Sun Feb 10 18:20:41 PST 2019
+5d85fa67-dd84-4626-9dee-2443f2c3f376, Gyro offset: 2.4599914550781437, Sun Feb 10 18:20:41 PST 2019
+98acdc2f-430a-44b0-abf2-e8c2aa3e8ec0, Robot Startup, Sun Feb 10 18:21:45 PST 2019
+98acdc2f-430a-44b0-abf2-e8c2aa3e8ec0, Robot Init, Sun Feb 10 18:21:45 PST 2019
+98acdc2f-430a-44b0-abf2-e8c2aa3e8ec0, Generating trajectories..., Sun Feb 10 18:21:45 PST 2019
+98acdc2f-430a-44b0-abf2-e8c2aa3e8ec0, Finished trajectory generation, Sun Feb 10 18:21:46 PST 2019
+98acdc2f-430a-44b0-abf2-e8c2aa3e8ec0, Disabled Init, Sun Feb 10 18:21:46 PST 2019
+98acdc2f-430a-44b0-abf2-e8c2aa3e8ec0, SET HEADING: 0.0, Sun Feb 10 18:21:46 PST 2019
+98acdc2f-430a-44b0-abf2-e8c2aa3e8ec0, Gyro offset: 2.7999877929687353, Sun Feb 10 18:21:46 PST 2019
+98acdc2f-430a-44b0-abf2-e8c2aa3e8ec0, Teleop Init, Sun Feb 10 18:21:57 PST 2019
+98acdc2f-430a-44b0-abf2-e8c2aa3e8ec0, Disabled Init, Sun Feb 10 18:22:09 PST 2019
+98acdc2f-430a-44b0-abf2-e8c2aa3e8ec0, Teleop Init, Sun Feb 10 18:22:29 PST 2019
+98acdc2f-430a-44b0-abf2-e8c2aa3e8ec0, Disabled Init, Sun Feb 10 18:22:30 PST 2019
+98acdc2f-430a-44b0-abf2-e8c2aa3e8ec0, Teleop Init, Sun Feb 10 18:22:31 PST 2019
+98acdc2f-430a-44b0-abf2-e8c2aa3e8ec0, Disabled Init, Sun Feb 10 18:22:32 PST 2019
+98acdc2f-430a-44b0-abf2-e8c2aa3e8ec0, Teleop Init, Sun Feb 10 18:23:07 PST 2019
+f0832d93-6220-497c-bf90-55cf9d5f7390, Teleop Init, Sun Feb 10 18:25:55 PST 2019
+f0832d93-6220-497c-bf90-55cf9d5f7390, Disabled Init, Sun Feb 10 18:25:58 PST 2019
+f0832d93-6220-497c-bf90-55cf9d5f7390, Teleop Init, Sun Feb 10 18:26:30 PST 2019
+f0832d93-6220-497c-bf90-55cf9d5f7390, Disabled Init, Sun Feb 10 18:34:17 PST 2019
+f0832d93-6220-497c-bf90-55cf9d5f7390, Teleop Init, Sun Feb 10 18:34:23 PST 2019
+f0832d93-6220-497c-bf90-55cf9d5f7390, Disabled Init, Sun Feb 10 18:34:39 PST 2019
+f0832d93-6220-497c-bf90-55cf9d5f7390, Teleop Init, Sun Feb 10 18:35:01 PST 2019
+7fc4959c-b0f1-47e7-bf20-ded7cf3328d9, Robot Startup, Sun Feb 10 18:36:24 PST 2019
+7fc4959c-b0f1-47e7-bf20-ded7cf3328d9, Robot Init, Sun Feb 10 18:36:24 PST 2019
+7fc4959c-b0f1-47e7-bf20-ded7cf3328d9, Generating trajectories..., Sun Feb 10 18:36:24 PST 2019
+7fc4959c-b0f1-47e7-bf20-ded7cf3328d9, Finished trajectory generation, Sun Feb 10 18:36:25 PST 2019
+7fc4959c-b0f1-47e7-bf20-ded7cf3328d9, Disabled Init, Sun Feb 10 18:36:25 PST 2019
+7fc4959c-b0f1-47e7-bf20-ded7cf3328d9, SET HEADING: 0.0, Sun Feb 10 18:36:25 PST 2019
+7fc4959c-b0f1-47e7-bf20-ded7cf3328d9, Gyro offset: 4.019989013671856, Sun Feb 10 18:36:25 PST 2019
+6bc650f7-8bdd-44b6-b2c5-45803f7f4498, Robot Startup, Sun Feb 10 18:37:33 PST 2019
+6bc650f7-8bdd-44b6-b2c5-45803f7f4498, Robot Init, Sun Feb 10 18:37:33 PST 2019
+6bc650f7-8bdd-44b6-b2c5-45803f7f4498, Generating trajectories..., Sun Feb 10 18:37:33 PST 2019
+6bc650f7-8bdd-44b6-b2c5-45803f7f4498, Finished trajectory generation, Sun Feb 10 18:37:33 PST 2019
+6bc650f7-8bdd-44b6-b2c5-45803f7f4498, Disabled Init, Sun Feb 10 18:37:33 PST 2019
+6bc650f7-8bdd-44b6-b2c5-45803f7f4498, SET HEADING: 0.0, Sun Feb 10 18:37:34 PST 2019
+6bc650f7-8bdd-44b6-b2c5-45803f7f4498, Gyro offset: 4.320007324218774, Sun Feb 10 18:37:34 PST 2019
+6bc650f7-8bdd-44b6-b2c5-45803f7f4498, Teleop Init, Sun Feb 10 18:38:05 PST 2019
+6bc650f7-8bdd-44b6-b2c5-45803f7f4498, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 18:39:00 PST 2019
+6bc650f7-8bdd-44b6-b2c5-45803f7f4498, Switching to Robot State:TELEOP_DRIVE, Sun Feb 10 18:39:00 PST 2019
+6bc650f7-8bdd-44b6-b2c5-45803f7f4498, Generating trajectories..., Sun Feb 10 18:39:00 PST 2019
+6bc650f7-8bdd-44b6-b2c5-45803f7f4498, Finished trajectory generation, Sun Feb 10 18:39:00 PST 2019
+6bc650f7-8bdd-44b6-b2c5-45803f7f4498, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 18:39:00 PST 2019
+6bc650f7-8bdd-44b6-b2c5-45803f7f4498, Starting trajectory! (length=1.0600555926414121), Sun Feb 10 18:39:00 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Robot Startup, Sun Feb 10 18:42:12 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Robot Init, Sun Feb 10 18:42:12 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Generating trajectories..., Sun Feb 10 18:42:12 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Finished trajectory generation, Sun Feb 10 18:42:12 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Disabled Init, Sun Feb 10 18:42:12 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, SET HEADING: 0.0, Sun Feb 10 18:42:13 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Gyro offset: 5.049987792968748, Sun Feb 10 18:42:13 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Teleop Init, Sun Feb 10 18:43:06 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 18:43:29 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Switching to Robot State:TELEOP_DRIVE, Sun Feb 10 18:43:29 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Generating trajectories..., Sun Feb 10 18:43:29 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Finished trajectory generation, Sun Feb 10 18:43:29 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 18:43:29 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Starting trajectory! (length=1.0592921501197277), Sun Feb 10 18:43:29 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, SET HEADING: 0.3499755859375152, Sun Feb 10 18:43:29 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Gyro offset: 5.0299682617187695, Sun Feb 10 18:43:29 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Switching to open loop, Sun Feb 10 18:43:30 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Trajectory finished, Sun Feb 10 18:43:30 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Auto mode done, Sun Feb 10 18:43:30 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Disabled Init, Sun Feb 10 18:43:40 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Teleop Init, Sun Feb 10 18:43:44 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 18:43:47 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Switching to Robot State:VISION_INTAKE_STATION, Sun Feb 10 18:43:47 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 18:43:47 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Starting trajectory! (length=1.0592921501197277), Sun Feb 10 18:43:47 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, SET HEADING: 0.3499755859375152, Sun Feb 10 18:43:47 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Gyro offset: 5.019989013671897, Sun Feb 10 18:43:47 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Switching to open loop, Sun Feb 10 18:43:48 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Trajectory finished, Sun Feb 10 18:43:48 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Auto mode done, Sun Feb 10 18:43:48 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Disabled Init, Sun Feb 10 18:43:53 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Teleop Init, Sun Feb 10 18:43:59 PST 2019
+29b9be6f-d7d7-488d-9994-38d3fd42a16e, Disabled Init, Sun Feb 10 18:44:02 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Robot Startup, Sun Feb 10 18:44:09 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Robot Init, Sun Feb 10 18:44:09 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Generating trajectories..., Sun Feb 10 18:44:10 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Finished trajectory generation, Sun Feb 10 18:44:10 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Disabled Init, Sun Feb 10 18:44:10 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, SET HEADING: 0.0, Sun Feb 10 18:44:10 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Gyro offset: 5.019989013671896, Sun Feb 10 18:44:10 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Teleop Init, Sun Feb 10 18:44:22 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 18:44:31 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Switching to Robot State:TELEOP_DRIVE, Sun Feb 10 18:44:31 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Generating trajectories..., Sun Feb 10 18:44:31 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Finished trajectory generation, Sun Feb 10 18:44:32 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 18:44:32 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Starting trajectory! (length=1.059339034626741), Sun Feb 10 18:44:32 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, SET HEADING: 0.27999877929688827, Sun Feb 10 18:44:32 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Gyro offset: 4.989990234375045, Sun Feb 10 18:44:32 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Switching to open loop, Sun Feb 10 18:44:33 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Trajectory finished, Sun Feb 10 18:44:33 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Auto mode done, Sun Feb 10 18:44:33 PST 2019
+d426bcd0-0484-4b86-933d-a46f7b8a7021, Disabled Init, Sun Feb 10 18:44:35 PST 2019
+d788c55b-9662-4e11-b24b-8870fc00e811, Robot Startup, Sun Feb 10 18:45:43 PST 2019
+d788c55b-9662-4e11-b24b-8870fc00e811, Robot Init, Sun Feb 10 18:45:43 PST 2019
+d788c55b-9662-4e11-b24b-8870fc00e811, Generating trajectories..., Sun Feb 10 18:45:43 PST 2019
+d788c55b-9662-4e11-b24b-8870fc00e811, Finished trajectory generation, Sun Feb 10 18:45:43 PST 2019
+d788c55b-9662-4e11-b24b-8870fc00e811, Disabled Init, Sun Feb 10 18:45:43 PST 2019
+d788c55b-9662-4e11-b24b-8870fc00e811, SET HEADING: 0.0, Sun Feb 10 18:45:44 PST 2019
+d788c55b-9662-4e11-b24b-8870fc00e811, Gyro offset: 4.640014648437528, Sun Feb 10 18:45:44 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Robot Startup, Sun Feb 10 18:47:17 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Robot Init, Sun Feb 10 18:47:17 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Generating trajectories..., Sun Feb 10 18:47:17 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Finished trajectory generation, Sun Feb 10 18:47:17 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Disabled Init, Sun Feb 10 18:47:17 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, SET HEADING: 0.0, Sun Feb 10 18:47:18 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Gyro offset: 5.299987792968733, Sun Feb 10 18:47:18 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Teleop Init, Sun Feb 10 18:47:30 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Disabled Init, Sun Feb 10 18:48:02 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Teleop Init, Sun Feb 10 18:48:06 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Disabled Init, Sun Feb 10 18:48:38 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Teleop Init, Sun Feb 10 18:48:38 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 18:48:41 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to Robot State:TELEOP_DRIVE, Sun Feb 10 18:48:41 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Generating trajectories..., Sun Feb 10 18:48:41 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Finished trajectory generation, Sun Feb 10 18:48:41 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 18:48:42 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Starting trajectory! (length=0.8968027705763014), Sun Feb 10 18:48:42 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to open loop, Sun Feb 10 18:48:42 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Trajectory finished, Sun Feb 10 18:48:42 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Auto mode done, Sun Feb 10 18:48:42 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Disabled Init, Sun Feb 10 18:48:43 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Teleop Init, Sun Feb 10 18:54:04 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 18:54:09 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to Robot State:VISION_INTAKE_STATION, Sun Feb 10 18:54:09 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 18:54:09 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Starting trajectory! (length=0.8968027705763014), Sun Feb 10 18:54:09 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to open loop, Sun Feb 10 18:54:10 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Trajectory finished, Sun Feb 10 18:54:10 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Auto mode done, Sun Feb 10 18:54:10 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Disabled Init, Sun Feb 10 18:54:11 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Teleop Init, Sun Feb 10 18:54:42 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 18:54:43 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to Robot State:VISION_INTAKE_STATION, Sun Feb 10 18:54:43 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 18:54:43 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Starting trajectory! (length=0.8968027705763014), Sun Feb 10 18:54:43 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to open loop, Sun Feb 10 18:54:44 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Trajectory finished, Sun Feb 10 18:54:44 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Auto mode done, Sun Feb 10 18:54:44 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Disabled Init, Sun Feb 10 18:54:51 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Teleop Init, Sun Feb 10 18:55:34 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 18:55:35 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to Robot State:VISION_INTAKE_STATION, Sun Feb 10 18:55:35 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 18:55:35 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Starting trajectory! (length=0.8968027705763014), Sun Feb 10 18:55:35 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to open loop, Sun Feb 10 18:55:36 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Trajectory finished, Sun Feb 10 18:55:36 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Auto mode done, Sun Feb 10 18:55:36 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Disabled Init, Sun Feb 10 18:55:39 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Teleop Init, Sun Feb 10 18:56:51 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 18:56:52 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to Robot State:VISION_INTAKE_STATION, Sun Feb 10 18:56:52 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 18:56:52 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Starting trajectory! (length=0.8968027705763014), Sun Feb 10 18:56:52 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to open loop, Sun Feb 10 18:56:53 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Trajectory finished, Sun Feb 10 18:56:53 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Auto mode done, Sun Feb 10 18:56:53 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Disabled Init, Sun Feb 10 18:57:02 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Teleop Init, Sun Feb 10 18:57:58 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 18:57:59 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to Robot State:VISION_INTAKE_STATION, Sun Feb 10 18:57:59 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 18:57:59 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Starting trajectory! (length=0.8968027705763014), Sun Feb 10 18:57:59 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to open loop, Sun Feb 10 18:58:00 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Trajectory finished, Sun Feb 10 18:58:00 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Auto mode done, Sun Feb 10 18:58:00 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Disabled Init, Sun Feb 10 18:58:05 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Teleop Init, Sun Feb 10 18:58:11 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 18:58:12 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to Robot State:VISION_INTAKE_STATION, Sun Feb 10 18:58:12 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 18:58:12 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Starting trajectory! (length=0.8968027705763014), Sun Feb 10 18:58:12 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to open loop, Sun Feb 10 18:58:13 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Trajectory finished, Sun Feb 10 18:58:13 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Auto mode done, Sun Feb 10 18:58:13 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Disabled Init, Sun Feb 10 18:58:20 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Teleop Init, Sun Feb 10 18:58:41 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 18:58:42 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to Robot State:VISION_INTAKE_STATION, Sun Feb 10 18:58:42 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 18:58:42 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Starting trajectory! (length=0.8968027705763014), Sun Feb 10 18:58:42 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to open loop, Sun Feb 10 18:58:43 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Trajectory finished, Sun Feb 10 18:58:43 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Auto mode done, Sun Feb 10 18:58:43 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Disabled Init, Sun Feb 10 18:58:48 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Teleop Init, Sun Feb 10 19:00:05 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 19:00:07 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to Robot State:VISION_INTAKE_STATION, Sun Feb 10 19:00:07 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 19:00:07 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Starting trajectory! (length=0.8968027705763014), Sun Feb 10 19:00:07 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Switching to open loop, Sun Feb 10 19:00:08 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Trajectory finished, Sun Feb 10 19:00:08 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Auto mode done, Sun Feb 10 19:00:08 PST 2019
+32e4953e-2794-418a-8bb4-2f21f460c09d, Disabled Init, Sun Feb 10 19:00:09 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, Robot Startup, Sun Feb 10 19:06:05 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, Robot Init, Sun Feb 10 19:06:05 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, Generating trajectories..., Sun Feb 10 19:06:05 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, Finished trajectory generation, Sun Feb 10 19:06:05 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, Disabled Init, Sun Feb 10 19:06:05 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, SET HEADING: 0.0, Sun Feb 10 19:06:05 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, Gyro offset: -103.2699966430664, Sun Feb 10 19:06:05 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, Teleop Init, Sun Feb 10 19:06:09 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 19:06:13 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, Switching to Robot State:TELEOP_DRIVE, Sun Feb 10 19:06:13 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, Generating trajectories..., Sun Feb 10 19:06:13 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, Finished trajectory generation, Sun Feb 10 19:06:14 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 19:06:14 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, Starting trajectory! (length=2.0339152845598734), Sun Feb 10 19:06:14 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, Disabled Init, Sun Feb 10 19:06:14 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, Switching to open loop, Sun Feb 10 19:06:14 PST 2019
+53a4c4cd-91d0-4f4f-af25-7274a0edcaf7, AUTO MODE DONE!!!! ENDED EARLY!!!!, Sun Feb 10 19:06:14 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, Robot Startup, Sun Feb 10 19:07:41 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, Robot Init, Sun Feb 10 19:07:41 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, Generating trajectories..., Sun Feb 10 19:07:41 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, Finished trajectory generation, Sun Feb 10 19:07:42 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, Disabled Init, Sun Feb 10 19:07:42 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, SET HEADING: 0.0, Sun Feb 10 19:07:42 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, Gyro offset: -43.08000183105469, Sun Feb 10 19:07:42 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, Teleop Init, Sun Feb 10 19:07:57 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 19:08:00 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, Switching to Robot State:TELEOP_DRIVE, Sun Feb 10 19:08:00 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, Generating trajectories..., Sun Feb 10 19:08:00 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, Finished trajectory generation, Sun Feb 10 19:08:00 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 19:08:00 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, Starting trajectory! (length=1.460752204023109), Sun Feb 10 19:08:00 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, Disabled Init, Sun Feb 10 19:08:01 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, Switching to open loop, Sun Feb 10 19:08:01 PST 2019
+1bf87d9a-dff9-4814-ae26-c8fd117d9d77, AUTO MODE DONE!!!! ENDED EARLY!!!!, Sun Feb 10 19:08:01 PST 2019
+81ef7ba6-3f4f-4712-874f-a14118fc01b5, Robot Startup, Sun Feb 10 19:08:44 PST 2019
+81ef7ba6-3f4f-4712-874f-a14118fc01b5, Robot Init, Sun Feb 10 19:08:44 PST 2019
+81ef7ba6-3f4f-4712-874f-a14118fc01b5, Generating trajectories..., Sun Feb 10 19:08:44 PST 2019
+81ef7ba6-3f4f-4712-874f-a14118fc01b5, Finished trajectory generation, Sun Feb 10 19:08:44 PST 2019
+81ef7ba6-3f4f-4712-874f-a14118fc01b5, Disabled Init, Sun Feb 10 19:08:44 PST 2019
+81ef7ba6-3f4f-4712-874f-a14118fc01b5, SET HEADING: 0.0, Sun Feb 10 19:08:44 PST 2019
+81ef7ba6-3f4f-4712-874f-a14118fc01b5, Gyro offset: -49.41999816894531, Sun Feb 10 19:08:44 PST 2019
+5004edb0-8ce9-41ca-b4fa-bb18bf05cda9, Robot Startup, Sun Feb 10 19:08:56 PST 2019
+5004edb0-8ce9-41ca-b4fa-bb18bf05cda9, Robot Init, Sun Feb 10 19:08:56 PST 2019
+5004edb0-8ce9-41ca-b4fa-bb18bf05cda9, Generating trajectories..., Sun Feb 10 19:08:56 PST 2019
+5004edb0-8ce9-41ca-b4fa-bb18bf05cda9, Finished trajectory generation, Sun Feb 10 19:08:56 PST 2019
+5004edb0-8ce9-41ca-b4fa-bb18bf05cda9, Disabled Init, Sun Feb 10 19:08:56 PST 2019
+5004edb0-8ce9-41ca-b4fa-bb18bf05cda9, SET HEADING: 0.0, Sun Feb 10 19:08:57 PST 2019
+5004edb0-8ce9-41ca-b4fa-bb18bf05cda9, Gyro offset: -49.31999969482422, Sun Feb 10 19:08:57 PST 2019
+5004edb0-8ce9-41ca-b4fa-bb18bf05cda9, Teleop Init, Sun Feb 10 19:08:59 PST 2019
+5004edb0-8ce9-41ca-b4fa-bb18bf05cda9, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 19:09:04 PST 2019
+5004edb0-8ce9-41ca-b4fa-bb18bf05cda9, Switching to Robot State:TELEOP_DRIVE, Sun Feb 10 19:09:04 PST 2019
+5004edb0-8ce9-41ca-b4fa-bb18bf05cda9, Generating trajectories..., Sun Feb 10 19:09:05 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Robot Startup, Sun Feb 10 19:09:11 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Robot Init, Sun Feb 10 19:09:11 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Generating trajectories..., Sun Feb 10 19:09:11 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Finished trajectory generation, Sun Feb 10 19:09:11 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Disabled Init, Sun Feb 10 19:09:11 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, SET HEADING: 0.0, Sun Feb 10 19:09:11 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Gyro offset: -49.22999954223633, Sun Feb 10 19:09:11 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Teleop Init, Sun Feb 10 19:09:23 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Disabled Init, Sun Feb 10 19:09:35 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Teleop Init, Sun Feb 10 19:09:39 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 19:10:01 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Switching to Robot State:TELEOP_DRIVE, Sun Feb 10 19:10:01 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Generating trajectories..., Sun Feb 10 19:10:01 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Finished trajectory generation, Sun Feb 10 19:10:01 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 19:10:01 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Starting trajectory! (length=2.228772420525675), Sun Feb 10 19:10:01 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Switching to open loop, Sun Feb 10 19:10:03 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Trajectory finished, Sun Feb 10 19:10:03 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Auto mode done, Sun Feb 10 19:10:03 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Disabled Init, Sun Feb 10 19:10:08 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Teleop Init, Sun Feb 10 19:10:47 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, [Joystick] 1	[Button]3	 Pressed ( Vision Hatch HP Intake Button ), Sun Feb 10 19:11:19 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Switching to Robot State:VISION_INTAKE_STATION, Sun Feb 10 19:11:19 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 10 19:11:19 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Starting trajectory! (length=2.228772420525675), Sun Feb 10 19:11:19 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Switching to open loop, Sun Feb 10 19:11:22 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Trajectory finished, Sun Feb 10 19:11:22 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Auto mode done, Sun Feb 10 19:11:22 PST 2019
+3f34cfe9-4afb-44b3-8b27-8f8d7d1cf902, Disabled Init, Sun Feb 10 19:11:25 PST 2019
+55e2086e-5a87-4e77-95c1-0d616a976203, Robot Startup, Sun Feb 10 19:11:56 PST 2019
+55e2086e-5a87-4e77-95c1-0d616a976203, Robot Init, Sun Feb 10 19:11:57 PST 2019
+55e2086e-5a87-4e77-95c1-0d616a976203, Generating trajectories..., Sun Feb 10 19:11:57 PST 2019
+55e2086e-5a87-4e77-95c1-0d616a976203, Finished trajectory generation, Sun Feb 10 19:11:57 PST 2019
+55e2086e-5a87-4e77-95c1-0d616a976203, Disabled Init, Sun Feb 10 19:11:57 PST 2019
+55e2086e-5a87-4e77-95c1-0d616a976203, SET HEADING: 0.0, Sun Feb 10 19:11:57 PST 2019
+55e2086e-5a87-4e77-95c1-0d616a976203, Gyro offset: -82.04000091552734, Sun Feb 10 19:11:57 PST 2019
+713011ce-fb56-42b8-ab6e-5eafc4dcbec3, Robot Startup, Sun Feb 10 19:12:10 PST 2019
+713011ce-fb56-42b8-ab6e-5eafc4dcbec3, Robot Init, Sun Feb 10 19:12:10 PST 2019
+713011ce-fb56-42b8-ab6e-5eafc4dcbec3, Generating trajectories..., Sun Feb 10 19:12:10 PST 2019
+713011ce-fb56-42b8-ab6e-5eafc4dcbec3, Finished trajectory generation, Sun Feb 10 19:12:10 PST 2019
+713011ce-fb56-42b8-ab6e-5eafc4dcbec3, Disabled Init, Sun Feb 10 19:12:10 PST 2019
+713011ce-fb56-42b8-ab6e-5eafc4dcbec3, SET HEADING: 0.0, Sun Feb 10 19:12:10 PST 2019
+713011ce-fb56-42b8-ab6e-5eafc4dcbec3, Gyro offset: -81.88999938964844, Sun Feb 10 19:12:10 PST 2019
+713011ce-fb56-42b8-ab6e-5eafc4dcbec3, Teleop Init, Sun Feb 10 19:12:11 PST 2019
+713011ce-fb56-42b8-ab6e-5eafc4dcbec3, Disabled Init, Sun Feb 10 19:13:31 PST 2019
+5844f00c-da42-4325-9bfc-ab93bc12f34f, Teleop Init, Sun Feb 10 19:23:44 PST 2019
+5844f00c-da42-4325-9bfc-ab93bc12f34f, Disabled Init, Sun Feb 10 19:23:46 PST 2019
+5844f00c-da42-4325-9bfc-ab93bc12f34f, Teleop Init, Sun Feb 10 19:24:01 PST 2019
+5844f00c-da42-4325-9bfc-ab93bc12f34f, Disabled Init, Sun Feb 10 19:24:03 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Robot Startup, Sun Feb 10 19:29:55 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Robot Init, Sun Feb 10 19:29:55 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Generating trajectories..., Sun Feb 10 19:29:55 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Finished trajectory generation, Sun Feb 10 19:29:56 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Disabled Init, Sun Feb 10 19:29:56 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, SET HEADING: 0.0, Sun Feb 10 19:29:56 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Gyro offset: 17.57998657226564, Sun Feb 10 19:29:56 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Teleop Init, Sun Feb 10 19:29:57 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Disabled Init, Sun Feb 10 19:30:07 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Teleop Init, Sun Feb 10 19:30:47 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Disabled Init, Sun Feb 10 19:30:54 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Teleop Init, Sun Feb 10 19:31:06 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Disabled Init, Sun Feb 10 19:31:45 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Teleop Init, Sun Feb 10 19:34:29 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Sun Feb 10 19:35:58 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Sun Feb 10 19:35:58 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, [Joystick] 1	[Button]5	 Pressed ( Ground Hatch Intake Manual Mode ), Sun Feb 10 19:36:00 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Disabled Init, Sun Feb 10 19:36:13 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Teleop Init, Sun Feb 10 19:36:59 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button ), Sun Feb 10 19:37:00 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button ), Sun Feb 10 19:37:02 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button ), Sun Feb 10 19:37:03 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button ), Sun Feb 10 19:37:03 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button ), Sun Feb 10 19:37:05 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button ), Sun Feb 10 19:37:05 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, [Joystick] 1	[Button]12	 Pressed ( Transfer Hatch Button ), Sun Feb 10 19:37:06 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button ), Sun Feb 10 19:37:06 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button ), Sun Feb 10 19:37:13 PST 2019
+20bc7dc9-ec33-4326-98be-1275380d7675, Disabled Init, Sun Feb 10 19:37:22 PST 2019

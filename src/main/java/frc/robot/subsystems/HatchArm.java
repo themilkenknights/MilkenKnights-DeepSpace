@@ -5,6 +5,7 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.Constants;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.HATCH_ARM;
@@ -28,7 +29,8 @@ public class HatchArm extends Subsystem {
 	private Solenoid mArmSolenoid;
 	private boolean mDisCon = false;
 	private double mOpenLoopSetpoint, mArmPosEnable = 0.0;
-	private MkTime mStartDis, mTransferTime;
+	private MkTime mStartDis, mTransferTime, mMoveTime;
+	private boolean mHatchLimitTriggered = false;
 
 	private HatchArm() {
 		mArmSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kHatchArmChannel);
@@ -36,6 +38,7 @@ public class HatchArm extends Subsystem {
 		mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kHatchLimitSwitchTalonID, TalonLoc.Hatch_Arm);
 		mStartDis = new MkTime();
 		mTransferTime = new MkTime();
+		mMoveTime = new MkTime();
 	}
 
 	public static HatchArm getInstance() {
@@ -98,7 +101,7 @@ public class HatchArm extends Subsystem {
 	}
 
 	public boolean isHatchLimitTriggered() {
-		return mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
+		return mHatchLimitTriggered;
 	}
 
 	/**
@@ -147,7 +150,9 @@ public class HatchArm extends Subsystem {
 		SmartDashboard.putBoolean("Hatch Arm Status", mArmTalon.isEncoderConnected());
 		SmartDashboard.putNumber("Hatch Arm Abs", mArmTalon.getAbsolutePosition());
 		SmartDashboard.putString("Hatch Mech State", mHatchMechanismState.toString());
-		SmartDashboard.putNumber("Arm Raw Error", MkMath.angleToNativeUnits(mArmTalon.getError()));
+		SmartDashboard.putNumber("Hatch Arm Raw Error", MkMath.angleToNativeUnits(mArmTalon.getError()));
+		SmartDashboard.putNumber("Hatch Arm Raw Pos", mArmTalon.masterTalon.getSelectedSensorPosition());
+		SmartDashboard.putBoolean("Hatch Limit Triggered", isHatchLimitTriggered());
 	}
 
 	/**
@@ -158,27 +163,30 @@ public class HatchArm extends Subsystem {
 	@Override
 	public void onMainLoop(double timestamp) {
 		synchronized (HatchArm.this) {
-			boolean hatchLimit = isHatchLimitTriggered();
+			mHatchLimitTriggered = mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
 			switch (mHatchMechanismState) {
 				case STOWED:
-					break;
+				case SPEAR_STOW_ONLY:
 				case GROUND_INTAKE:
-					break;
 				case PLACING:
 					break;
 				case STATION_INTAKE:
-					if (hatchLimit) {
+					if (isHatchLimitTriggered()) {
 						setHatchMechanismState(HatchMechanismState.STOWED);
 					}
 					break;
 				case TRANSFER:
-					if (hatchLimit) {
+					if (mMoveTime.isDone()) {
+						setHatchIntakePosition(HatchIntakeState.TRANSFER_POINT);
+					}
+					if (isHatchLimitTriggered()) {
 						setHatchArmPosition(HatchArmState.STOW);
-						mTransferTime.start(0.4);
+						mTransferTime.start(0.125);
 					}
 					if (mTransferTime.isDone()) {
 						setHatchMechanismState(HatchMechanismState.STOWED);
 						mTransferTime.reset();
+						mArmTalon.masterTalon.configMotionCruiseVelocity((int) HATCH_ARM.kMotionMagicCruiseVel);
 					}
 					break;
 				case MANUAL_OVERRIDE:
@@ -261,7 +269,8 @@ public class HatchArm extends Subsystem {
 		switch (state) {
 			case TRANSFER:
 				setHatchArmPosition(HatchArmState.PLACE);
-				setHatchIntakePosition(HatchIntakeState.TRANSFER_POINT);
+				mArmTalon.masterTalon.configMotionCruiseVelocity((int) HATCH_ARM.kMotionMagicCruiseVel / 10);
+				mMoveTime.start(0.3);
 				break;
 			case GROUND_INTAKE:
 				setHatchIntakePosition(HatchIntakeState.INTAKE_POINT);
@@ -273,7 +282,6 @@ public class HatchArm extends Subsystem {
 				break;
 			case STATION_INTAKE:
 				setHatchArmPosition(HatchArmState.PLACE);
-				setHatchIntakePosition(HatchIntakeState.STOW_POINT);
 				break;
 			case PLACING:
 				setHatchArmPosition(HatchArmState.PLACE);
@@ -286,6 +294,8 @@ public class HatchArm extends Subsystem {
 				setEnable();
 				break;
 			case VISION_CONTROL:
+			case SPEAR_STOW_ONLY:
+				setHatchArmPosition(HatchArmState.STOW);
 				break;
 			default:
 				Logger.logErrorWithTrace("Unexpected Hatch Mechanism: " + mHatchMechanismState);
@@ -302,7 +312,7 @@ public class HatchArm extends Subsystem {
 
 	public enum HatchIntakeState {
 		ENABLE(0), // State directly after robot is enabled (not mapped to a specific angle)
-		INTAKE_POINT(170.0), TRANSFER_POINT(75.0), // Outtakes into the switch on the backside of the robot
+		INTAKE_POINT(177.6), TRANSFER_POINT(55.0), // Outtakes into the switch on the backside of the robot
 		STOW_POINT(0.0);
 
 		public final double state;
@@ -322,7 +332,7 @@ public class HatchArm extends Subsystem {
 	}
 
 	public enum HatchMechanismState {
-		GROUND_INTAKE, TRANSFER, STATION_INTAKE, STOWED, PLACING, MANUAL_OVERRIDE, UNKNOWN, VISION_CONTROL
+		GROUND_INTAKE, TRANSFER, STATION_INTAKE, STOWED, PLACING, MANUAL_OVERRIDE, UNKNOWN, VISION_CONTROL, SPEAR_STOW_ONLY
 	}
 
 	private static class InstanceHolder {

@@ -12,6 +12,7 @@ import frc.robot.Constants.PNUEMATICS;
 import frc.robot.Constants.SUPERSTRUCTURE;
 import frc.robot.Robot;
 import frc.robot.auto.AutoModeExecutor;
+import frc.robot.auto.modes.CargoVisionIntake;
 import frc.robot.auto.modes.SimpleCargoOuttake;
 import frc.robot.auto.modes.SimpleHatchVision;
 import frc.robot.lib.structure.Subsystem;
@@ -55,7 +56,7 @@ public class Superstructure extends Subsystem {
 	public void outputTelemetry(double timestamp) {
 		SmartDashboard.putString("Robot State", Robot.mMatchState.toString());
 		SmartDashboard.putNumber("Compressor Current", mCompressor.getCompressorCurrent());
-		if (mPDP.getVoltage() < 11.5) {
+		if (mPDP.getVoltage() < 9.0) {
 			DriverStation.reportWarning("Low Battery Voltage", false);
 		}
 		SmartDashboard.putString("Front Climb", mFrontClimbState.toString());
@@ -89,6 +90,8 @@ public class Superstructure extends Subsystem {
 			case VISION_INTAKE_STATION:
 			case VISION_PLACING:
 				//updateVisionHatch();
+				break;
+			case VISION_CARGO_INTAKE:
 				break;
 			case VISION_CARGO_OUTTAKE:
 				break;
@@ -124,6 +127,8 @@ public class Superstructure extends Subsystem {
 			case VISION_CARGO_OUTTAKE:
 				mRobotState = Vision.getInstance().getAverageTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
 				startVisionCargo();
+			case VISION_CARGO_INTAKE:
+				startVisionCargoIntake();
 			default:
 				Logger.logErrorWithTrace("Unexpected robot state: " + mRobotState);
 				break;
@@ -139,6 +144,12 @@ public class Superstructure extends Subsystem {
 	private void startVisionCargo() {
 		mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
 		AutoChooser.startAuto(new SimpleCargoOuttake());
+	}
+
+
+	private void startVisionCargoIntake() {
+
+		AutoChooser.startAuto(new CargoVisionIntake());
 	}
 
 	@Override
