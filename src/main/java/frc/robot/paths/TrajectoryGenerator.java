@@ -97,7 +97,7 @@ public class TrajectoryGenerator {
 		private Trajectory<TimedState<Pose2dWithCurvature>> getSideStartToNearScale() {
 			List<Pose2d> waypoints = new ArrayList<>();
 			waypoints.add(kStartPose);
-			waypoints.add(kStartPose.transformBy(new Pose2d(new Translation2d(40.0, 0.0), Rotation2d.fromDegrees(0.0))));
+			waypoints.add(kStartPose.transformBy(new Pose2d(new Translation2d(-20.0, 0.0), Rotation2d.fromDegrees(180.0))));
 			return generateTrajectory(true, waypoints,
 					Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel,
 					kMaxAccel,
