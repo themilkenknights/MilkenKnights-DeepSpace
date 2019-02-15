@@ -5,7 +5,6 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.Constants;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.HATCH_ARM;
@@ -51,7 +50,7 @@ public class HatchArm extends Subsystem {
 		setEnable();
 		if (mArmTalon.getZer() > GENERAL.kTicksPerRev) {
 			Logger.logMarker("Hatch Arm Absolution Position > 4096");
-			setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
+			enableSafety(true);
 		}
 	}
 
@@ -61,7 +60,7 @@ public class HatchArm extends Subsystem {
 		setEnable();
 		if (mArmTalon.getZer() > GENERAL.kTicksPerRev) {
 			Logger.logMarker("Hatch Arm Absolution Position > 4096");
-			setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
+			enableSafety(true);
 		}
 	}
 
@@ -70,13 +69,13 @@ public class HatchArm extends Subsystem {
 		if (!mArmTalon.isEncoderConnected()) {
 			if (mDisCon) {
 				if (mStartDis.isDone()) {
-					setHatchIntakeControlState(HatchIntakeControlState.OPEN_LOOP);
+					enableSafety(true);
 					mDisCon = false;
 					mStartDis.reset();
 				}
 			} else {
 				mDisCon = true;
-				mStartDis.start(0.25);
+				mStartDis.start(0.3);
 			}
 			Logger.logErrorWithTrace("Hatch Arm Encoder Not Connected");
 		} else {
@@ -85,7 +84,7 @@ public class HatchArm extends Subsystem {
 				mStartDis.reset();
 				mArmTalon.zeroEncoder();
 				Timer.delay(0.05);
-				setHatchIntakeControlState(HatchIntakeControlState.MOTION_MAGIC);
+				enableSafety(false);
 			}
 		}
 
@@ -143,6 +142,13 @@ public class HatchArm extends Subsystem {
 		}
 	}
 
+	@Override
+	public synchronized void readPeriodicInputs(double timestamp) {
+		synchronized (HatchArm.this) {
+			mHatchLimitTriggered = mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
+		}
+	}
+
 	public void outputTelemetry(double timestamp) {
 		mArmTalon.updateSmartDash(false);
 		SmartDashboard.putString("Hatch Arm Desired Position", mHatchIntakeState.toString());
@@ -163,7 +169,6 @@ public class HatchArm extends Subsystem {
 	@Override
 	public void onMainLoop(double timestamp) {
 		synchronized (HatchArm.this) {
-			mHatchLimitTriggered = mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
 			switch (mHatchMechanismState) {
 				case STOWED:
 				case SPEAR_STOW_ONLY:
@@ -266,10 +271,14 @@ public class HatchArm extends Subsystem {
 	}
 
 	public void setHatchMechanismState(HatchMechanismState state) {
+		if (mHatchMechanismState == HatchMechanismState.TRANSFER && state != HatchMechanismState.TRANSFER) {
+			mArmTalon.masterTalon.configMotionCruiseVelocity((int) HATCH_ARM.kMotionMagicCruiseVel);
+		} else if (state == HatchMechanismState.TRANSFER) {
+			mArmTalon.masterTalon.configMotionCruiseVelocity((int) HATCH_ARM.kMotionMagicCruiseVel / 10);
+		}
 		switch (state) {
 			case TRANSFER:
 				setHatchArmPosition(HatchArmState.PLACE);
-				mArmTalon.masterTalon.configMotionCruiseVelocity((int) HATCH_ARM.kMotionMagicCruiseVel / 10);
 				mMoveTime.start(0.3);
 				break;
 			case GROUND_INTAKE:

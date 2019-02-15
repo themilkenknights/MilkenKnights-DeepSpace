@@ -18,7 +18,7 @@ public class Kinematics {
 	 */
 	public static Twist2d forwardKinematics(double left_wheel_delta, double right_wheel_delta) {
 		double delta_rotation =
-				(right_wheel_delta - left_wheel_delta) / (Constants.DRIVE.kDriveWheelTrackWidthInches
+				(right_wheel_delta - left_wheel_delta) / (Constants.DRIVE.kEffectiveDriveWheelTrackWidthInches
 						* Constants.DRIVE.kTrackScrubFactor);
 		return forwardKinematics(left_wheel_delta, right_wheel_delta, delta_rotation);
 	}
@@ -50,7 +50,7 @@ public class Kinematics {
 		if (Math.abs(velocity.dtheta) < kEpsilon) {
 			return new DriveVelocity(velocity.dx, velocity.dx);
 		}
-		double delta_v = DRIVE.kDriveWheelTrackWidthInches * velocity.dtheta / (2 * DRIVE.kTrackScrubFactor);
+		double delta_v = DRIVE.kEffectiveDriveWheelTrackWidthInches * velocity.dtheta / (2 * DRIVE.kTrackScrubFactor);
 		return new DriveVelocity(velocity.dx - delta_v, velocity.dx + delta_v);
 	}
 

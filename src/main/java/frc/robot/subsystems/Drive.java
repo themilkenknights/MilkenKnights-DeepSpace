@@ -1,7 +1,9 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -27,7 +29,7 @@ import frc.robot.paths.RobotState;
 
 public class Drive extends Subsystem {
 
-	private final MkTalon leftDrive, rightDrive;
+	private final MkTalon mLeftDrive, mRightDrive;
 	private final MkGyro navX;
 	public PeriodicIO mPeriodicIO;
 	public DriveControlState mDriveControlState;
@@ -40,8 +42,8 @@ public class Drive extends Subsystem {
 	private Drive() {
 		mDriveControlState = DriveControlState.OPEN_LOOP;
 		mPeriodicIO = new PeriodicIO();
-		leftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left_Drive);
-		rightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right_Drive);
+		mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left_Drive);
+		mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right_Drive);
 		navX = new MkGyro(Port.kMXP);
 		mMotionPlanner = new DriveMotionPlanner();
 	}
@@ -56,10 +58,10 @@ public class Drive extends Subsystem {
 	@Override
 	public synchronized void readPeriodicInputs(double timestamp) {
 		mPeriodicIO.timestamp = Timer.getFPGATimestamp();
-		mPeriodicIO.leftPos = leftDrive.getPosition();
-		mPeriodicIO.rightPos = rightDrive.getPosition();
-		mPeriodicIO.leftVel = leftDrive.getSpeed();
-		mPeriodicIO.rightVel = rightDrive.getSpeed();
+		mPeriodicIO.leftPos = mLeftDrive.getPosition();
+		mPeriodicIO.rightPos = mRightDrive.getPosition();
+		mPeriodicIO.leftVel = mLeftDrive.getSpeed();
+		mPeriodicIO.rightVel = mRightDrive.getSpeed();
 		mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(navX.getFusedHeading()).rotateBy(mGyroOffset);
 	}
 
@@ -95,18 +97,17 @@ public class Drive extends Subsystem {
 	@Override
 	public synchronized void writePeriodicOutputs(double timestamp) {
 		if (mDriveControlState == DriveControlState.OPEN_LOOP) {
-			leftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
-			rightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
+			mLeftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
+			mRightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
 		} else if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
 			//TODO Fix Negatives
-			leftDrive.set(ControlMode.Velocity, -mPeriodicIO.left_demand, mPeriodicIO.brake_mode,
-					-(mPeriodicIO.left_feedforward + Constants.DRIVE.kDriveD * mPeriodicIO.left_accel / 1023.0));
-			rightDrive.set(ControlMode.Velocity, -mPeriodicIO.right_demand, mPeriodicIO.brake_mode,
-					-(mPeriodicIO.right_feedforward
-							+ Constants.DRIVE.kDriveD * mPeriodicIO.right_accel / 1023.0));
+			mLeftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand, NeutralMode.Brake,
+					mPeriodicIO.left_feedforward + DRIVE.kDriveD * mPeriodicIO.left_accel / 1023.0);
+			mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, NeutralMode.Brake,
+					mPeriodicIO.right_feedforward + DRIVE.kDriveD * mPeriodicIO.right_accel / 1023.0);
 		} else if (mDriveControlState == DriveControlState.MOTION_MAGIC) {
-			leftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, mPeriodicIO.brake_mode, mPeriodicIO.left_feedforward);
-			rightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, mPeriodicIO.brake_mode, mPeriodicIO.right_feedforward);
+			mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, mPeriodicIO.brake_mode, mPeriodicIO.left_feedforward);
+			mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, mPeriodicIO.brake_mode, mPeriodicIO.right_feedforward);
 		} else {
 			Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
 		}
@@ -116,11 +117,17 @@ public class Drive extends Subsystem {
 	Update Shuffleboard and Log to CSV
 	 */
 	public synchronized void outputTelemetry(double timestamp) {
-		leftDrive.updateSmartDash(false);
-		rightDrive.updateSmartDash(false);
+		mLeftDrive.updateSmartDash(false);
+		mRightDrive.updateSmartDash(false);
 		SmartDashboard.putString("Drive State", mDriveControlState.toString());
 		SmartDashboard.putBoolean("Drivetrain Status", driveStatus());
 		SmartDashboard.putNumber("NavX Fused Heading", navX.getFusedHeading());
+		SmartDashboard.putNumber("x err", mPeriodicIO.error.getTranslation().x());
+		SmartDashboard.putNumber("y err", mPeriodicIO.error.getTranslation().y());
+		SmartDashboard.putNumber("theta err", mPeriodicIO.error.getRotation().getDegrees());
+		if (getHeading() != null) {
+			SmartDashboard.putNumber("Gyro Heading", getHeading().getDegrees());
+		}
 		if (mCSVWriter != null) {
 			Logger.logErrorWithTrace("ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			mCSVWriter.add(mPeriodicIO);
@@ -159,24 +166,26 @@ public class Drive extends Subsystem {
 	private synchronized void updatePathFollower() {
 		if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
 			final double now = Timer.getFPGATimestamp();
-			DriveMotionPlanner.Output output = mMotionPlanner
-					.update(now, RobotState.getInstance().getFieldToVehicle(now));
+
+			DriveMotionPlanner.Output output = mMotionPlanner.update(now, RobotState.getInstance().getFieldToVehicle(now));
+
+			// DriveSignal signal = new DriveSignal(demand.left_feedforward_voltage / 12.0, demand.right_feedforward_voltage / 12.0);
+
 			mPeriodicIO.error = mMotionPlanner.error();
 			mPeriodicIO.path_setpoint = mMotionPlanner.setpoint();
+
 			if (!mOverrideTrajectory) {
-				setVelocity(new DriveSignal(MkMath.radiansPerSecondToTicksPer100ms(output.left_velocity),
-								MkMath.radiansPerSecondToTicksPer100ms(output.right_velocity), NeutralMode.Brake),
-						new DriveSignal(output.left_feedforward_voltage / 12.0,
-								output.right_feedforward_voltage / 12.0));
+				setVelocity(new DriveSignal(MkMath.radiansPerSecondToTicksPer100ms(output.left_velocity), MkMath.radiansPerSecondToTicksPer100ms(output.right_velocity)),
+						new DriveSignal(output.left_feedforward_voltage / 12.0, output.right_feedforward_voltage / 12.0));
+
 				mPeriodicIO.left_accel = MkMath.radiansPerSecondToTicksPer100ms(output.left_accel) / 1000.0;
-				mPeriodicIO.right_accel =
-						MkMath.radiansPerSecondToTicksPer100ms(output.right_accel) / 1000.0;
+				mPeriodicIO.right_accel = MkMath.radiansPerSecondToTicksPer100ms(output.right_accel) / 1000.0;
 			} else {
 				setVelocity(DriveSignal.BRAKE, DriveSignal.BRAKE);
 				mPeriodicIO.left_accel = mPeriodicIO.right_accel = 0.0;
 			}
 		} else {
-			Logger.logErrorWithTrace("Drive is not in path following state");
+			Logger.logError("Drive is not in path following state");
 		}
 	}
 
@@ -203,6 +212,10 @@ public class Drive extends Subsystem {
 		return newSig;
 	}
 
+	public synchronized Rotation2d getHeading() {
+		return mPeriodicIO.gyro_heading;
+	}
+
 	/**
 	 * Update odometry
 	 *
@@ -213,7 +226,7 @@ public class Drive extends Subsystem {
 		final double right_distance = mPeriodicIO.rightPos;
 		final double delta_left = left_distance - left_encoder_prev_distance_;
 		final double delta_right = right_distance - right_encoder_prev_distance_;
-		final Rotation2d gyro_angle = mPeriodicIO.gyro_heading;
+		final Rotation2d gyro_angle = getHeading();
 		final Twist2d odometry_velocity = RobotState.getInstance()
 				.generateOdometryFromSensors(delta_left, delta_right, gyro_angle);
 		final Twist2d predicted_velocity = Kinematics
@@ -293,13 +306,14 @@ public class Drive extends Subsystem {
 	public void autonomousInit(double timestamp) {
 		RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
 		navX.zeroYaw();
-		leftDrive.masterTalon.setSelectedSensorPosition(0);
-		rightDrive.masterTalon.setSelectedSensorPosition(0);
 		left_encoder_prev_distance_ = 0;
 		right_encoder_prev_distance_ = 0;
 		if (mCSVWriter == null && Constants.LOG.kDriveCSVLogging) {
 			mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
 		}
+		setHeading(Rotation2d.identity());
+		mLeftDrive.masterTalon.setSelectedSensorPosition(0);
+		mRightDrive.masterTalon.setSelectedSensorPosition(0);
 	}
 
 	public void teleopInit(double timestamp) {
@@ -307,7 +321,7 @@ public class Drive extends Subsystem {
 	}
 
 	private synchronized boolean driveStatus() {
-		return leftDrive.isEncoderConnected() && rightDrive.isEncoderConnected() && navX.isConnected();
+		return mLeftDrive.isEncoderConnected() && mRightDrive.isEncoderConnected() && navX.isConnected();
 	}
 
 	/*
@@ -338,11 +352,11 @@ public class Drive extends Subsystem {
 	}
 
 	public boolean isMotionMagicFinished() {
-		return leftDrive.getError() < DRIVE.kGoalPosTolerance && rightDrive.getError() < DRIVE.kGoalPosTolerance;
+		return mLeftDrive.getError() < DRIVE.kGoalPosTolerance && mRightDrive.getError() < DRIVE.kGoalPosTolerance;
 	}
 
 	public boolean checkSystem() {
-		boolean driveCheck = leftDrive.checkSystem() & rightDrive.checkSystem();
+		boolean driveCheck = mLeftDrive.checkSystem() & mRightDrive.checkSystem();
 		if (driveCheck) {
 			Logger.logMarker("Drive Test Success");
 		}
@@ -352,8 +366,8 @@ public class Drive extends Subsystem {
 		} else {
 			Logger.logMarker("NavX Connected");
 		}
-		leftDrive.resetConfig();
-		rightDrive.resetConfig();
+		mLeftDrive.resetConfig();
+		mRightDrive.resetConfig();
 		return driveCheck;
 	}
 
