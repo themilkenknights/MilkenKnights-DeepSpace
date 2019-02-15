@@ -30,7 +30,7 @@ public class MotionMagicPixy implements Action {
 		double mDist = VISION.kPixyAreaToDistVisionMap.getInterpolated(new InterpolatingDouble((double) (target.getHeight() * target.getWidth()))).value;
 		if (mDist > 5.0 && mDist < 60) {
 			double mSteer = DRIVE.kVisionTurnP * target.getX();
-			DriveSignal mSig = Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
+			Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
 		} else {
 			Drive.getInstance().setOpenLoop(new DriveSignal(-0.3, -0.3));
 		}

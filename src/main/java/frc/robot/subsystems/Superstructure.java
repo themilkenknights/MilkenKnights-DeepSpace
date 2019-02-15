@@ -11,15 +11,12 @@ import frc.robot.Constants.CAN;
 import frc.robot.Constants.PNUEMATICS;
 import frc.robot.Constants.SUPERSTRUCTURE;
 import frc.robot.Robot;
-import frc.robot.auto.AutoModeExecutor;
 import frc.robot.auto.modes.CargoVisionIntake;
 import frc.robot.auto.modes.SimpleCargoOuttake;
 import frc.robot.auto.modes.SimpleHatchVision;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
-import frc.robot.lib.util.MkTime;
-import frc.robot.lib.vision.VisionState;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.HatchArm.HatchMechanismState;
 
@@ -28,14 +25,9 @@ public class Superstructure extends Subsystem {
 	private static Drive mDrive = Drive.getInstance();
 	private static HatchArm mHatch = HatchArm.getInstance();
 	private static CargoArm mCargo = CargoArm.getInstance();
-	private static AutoModeExecutor mAutoModeExecuter = null;
 	private PowerDistributionPanel mPDP;
 	private Compressor mCompressor;
 	private RobotState mRobotState = RobotState.TELEOP_DRIVE;
-	private boolean hasHatch, inPosition, startedTurn = false;
-	private VisionState mLastVisionState = VisionState.EMPTY;
-	private double mGoalTurnAngle = 0;
-	private MkTime mRandomTimer = new MkTime();
 	private Solenoid mFrontClimbSolenoid, mRearClimbSolenoid;
 	private ClimbState mRearClimbState = ClimbState.RETRACTED;
 	private ClimbState mFrontClimbState = ClimbState.RETRACTED;
@@ -108,7 +100,6 @@ public class Superstructure extends Subsystem {
 	}
 
 	public void setRobotState(RobotState state) {
-		resetActionVariables();
 		Logger.logMarker("Switching to Robot State:" + mRobotState);
 		mRobotState = state;
 		switch (state) {
@@ -161,12 +152,6 @@ public class Superstructure extends Subsystem {
 	@Override
 	public boolean checkSystem() {
 		return mCompressor.getCompressorCurrent() > 0.0 && mPDP.getTotalCurrent() > 0.0;
-	}
-
-	private void resetActionVariables() {
-		hasHatch = false;
-		mLastVisionState = VisionState.EMPTY;
-		mGoalTurnAngle = 0.0;
 	}
 
 	public enum ClimbState {

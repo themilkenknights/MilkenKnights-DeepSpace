@@ -12,7 +12,7 @@ public class MkPixy {
 	private static final int blockSignature = 1;
 	private static ArrayList<Block> blocks = null;
 	private static Pixy2 pixy = null;
-	private static double mX, mY, mWidth, mHeight, lastUpdate = 0.0;
+	private static double lastUpdate = 0.0;
 	//TODO Find a way of initializing block to non-null value
 	private static Block mLastBlock = null;
 
@@ -59,7 +59,6 @@ public class MkPixy {
 
 	public synchronized Block getLastBlock() {
 		return mLastBlock;
-
 	}
 
 	public synchronized boolean isCargoIntaked() {
