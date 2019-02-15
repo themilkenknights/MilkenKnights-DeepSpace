@@ -21,12 +21,12 @@ public class MotionMagicPixy implements Action {
 
 	@Override
 	public boolean isFinished() {
-		return expirationTimer.isDone() || Vision.getInstance().mPixy.isCargoIntaked();
+		return expirationTimer.isDone() || Vision.mPixy.isCargoIntaked();
 	}
 
 	@Override
 	public void update() {
-		Block target = Vision.getInstance().mPixy.getLastBlock();
+		Block target = Vision.mPixy.getLastBlock();
 		double mDist = VISION.kPixyAreaToDistVisionMap.getInterpolated(new InterpolatingDouble((double) (target.getHeight() * target.getWidth()))).value;
 		if (mDist > 5.0 && mDist < 60) {
 			double mSteer = DRIVE.kVisionTurnP * target.getX();

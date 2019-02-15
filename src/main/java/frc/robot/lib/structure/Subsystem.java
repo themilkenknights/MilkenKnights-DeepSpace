@@ -14,7 +14,7 @@ public abstract class Subsystem {
 	public void readPeriodicInputs(double timestamp) {
 	}
 
-	public void onQuickLoop(double timestamp){
+	public void onQuickLoop(double timestamp) {
 
 	}
 

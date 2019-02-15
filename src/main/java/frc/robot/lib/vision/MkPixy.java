@@ -1,15 +1,10 @@
 package frc.robot.lib.vision;
 
-import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
-import frc.robot.Constants.GENERAL;
-import frc.robot.lib.util.Logger;
-import frc.robot.lib.vision.LimeLight.PeriodicRunnable;
 import io.github.pseudoresonance.pixy2api.Pixy2;
 import io.github.pseudoresonance.pixy2api.Pixy2.LinkType;
 import io.github.pseudoresonance.pixy2api.Pixy2CCC;
 import io.github.pseudoresonance.pixy2api.Pixy2CCC.Block;
-import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 
 public class MkPixy {
@@ -58,17 +53,17 @@ public class MkPixy {
 		return mLastBlock != null ? mLastBlock.getHeight() * mLastBlock.getWidth() : 0.0;
 	}
 
-	public synchronized double getAngle(){
+	public synchronized double getAngle() {
 		return mLastBlock != null ? mLastBlock.getAngle() : 0.0;
 	}
 
 	public synchronized Block getLastBlock() {
-		return mLastBlock != null ? mLastBlock : null;
+		return mLastBlock;
 
 	}
 
 	public synchronized boolean isCargoIntaked() {
-		return mLastBlock != null ? getArea() > 45000 : false;
+		return mLastBlock != null && getArea() > 45000;
 	}
 
 }

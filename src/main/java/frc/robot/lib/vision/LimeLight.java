@@ -5,7 +5,6 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
-import frc.robot.Constants;
 import frc.robot.Constants.GENERAL;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MovingAverage;
@@ -345,7 +344,6 @@ public class LimeLight {
 
 		int i = 0;
 
-		//TODO Verify Thread Efficiency
 		public void run() {
 			try {
 				if (i == 10) {

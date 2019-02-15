@@ -20,6 +20,7 @@ import frc.robot.lib.util.Units;
  * -X is Hatch Arm/Battery Forward
  * +Y is Left (Hatch Arm/Battery Forward)
  * -Y is Right (Hatch Arm/Battery Forward)
+ * TODO Fix the orientation to match path gen/follower
  */
 public final class Constants {
 
@@ -33,7 +34,7 @@ public final class Constants {
 		public static final double PI = 3.14159265359;
 		public static final double kTicksPerRev = 4096.0;
 		public static final double kMaxNominalOutput = 1.0;
-		public static final double kLoopDt = 0.02; //TODO Find optimal refresh rate
+		public static final double kLoopDt = 0.02;
 		public static final double kLooperDt = 0.01;
 		public static final double kSlowLooperDt = 0.01;
 		public static final double kLimelightLoopPeriod = 0.01;
@@ -221,13 +222,15 @@ public final class Constants {
 	}
 
 	public static class PNUEMATICS {
+
 		public static final int kHatchArmChannel = 0;
 		public static final int kFrontClimbSolenoidChannel = 1;
 		public static final int kRearClimbSolenoidChannel = 2;
 	}
 
 	public static class SUPERSTRUCTURE {
-		public static final boolean kClimbUpState = false;
+
+		public static final boolean kClimbRetractedState = false;
 	}
 
 	public static class LOG {
@@ -248,7 +251,6 @@ public final class Constants {
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1960.0), new InterpolatingDouble(65.5));
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1782.0), new InterpolatingDouble(68.8));
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1368.0), new InterpolatingDouble(79.4));
-
 
 			VISION.kPixyAreaToDistVisionMap.put(new InterpolatingDouble(3783.0), new InterpolatingDouble(46.75));
 			VISION.kPixyAreaToDistVisionMap.put(new InterpolatingDouble(2517.0), new InterpolatingDouble(57.4));

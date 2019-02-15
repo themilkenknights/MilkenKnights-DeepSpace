@@ -31,7 +31,7 @@ public class MkJoystickButton {
 		update();
 		if (isPressed) {
 			Logger.logMarker(
-					"[Joystick] " + joystick.getPort() + "\t[Button]" + rawButton + "\t Pressed ( "
+					"[Joystick] " + joystick.getPort() + "\t [Button]" + rawButton + "\t Pressed ( "
 							+ buttonName + " Button )");
 		}
 		return isPressed;

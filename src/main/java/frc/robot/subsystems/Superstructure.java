@@ -37,8 +37,8 @@ public class Superstructure extends Subsystem {
 	private double mGoalTurnAngle = 0;
 	private MkTime mRandomTimer = new MkTime();
 	private Solenoid mFrontClimbSolenoid, mRearClimbSolenoid;
-	private ClimbState mRearClimbState = ClimbState.UP;
-	private ClimbState mFrontClimbState = ClimbState.UP;
+	private ClimbState mRearClimbState = ClimbState.RETRACTED;
+	private ClimbState mFrontClimbState = ClimbState.RETRACTED;
 
 	private Superstructure() {
 		mFrontClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kFrontClimbSolenoidChannel);
@@ -154,8 +154,8 @@ public class Superstructure extends Subsystem {
 
 	@Override
 	public void onStop(double timestamp) {
-		setFrontClimbState(ClimbState.UP);
-		setRearClimbState(ClimbState.UP);
+		setFrontClimbState(ClimbState.RETRACTED);
+		setRearClimbState(ClimbState.RETRACTED);
 	}
 
 	@Override
@@ -170,7 +170,7 @@ public class Superstructure extends Subsystem {
 	}
 
 	public enum ClimbState {
-		UP(SUPERSTRUCTURE.kClimbUpState), DOWN(!SUPERSTRUCTURE.kClimbUpState);
+		RETRACTED(SUPERSTRUCTURE.kClimbRetractedState), LOWERED(!SUPERSTRUCTURE.kClimbRetractedState);
 		public final boolean state;
 
 		ClimbState(final boolean state) {

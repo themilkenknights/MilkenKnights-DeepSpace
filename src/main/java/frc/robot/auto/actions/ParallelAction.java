@@ -1,6 +1,5 @@
 package frc.robot.auto.actions;
 
-import frc.robot.auto.actions.Action;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -11,8 +11,8 @@ import frc.robot.lib.vision.MkPixy;
 
 public class Vision extends Subsystem {
 
-	private LimeLight mLimeLight;
 	public static MkPixy mPixy;
+	private LimeLight mLimeLight;
 	private boolean usePixy = true;
 
 

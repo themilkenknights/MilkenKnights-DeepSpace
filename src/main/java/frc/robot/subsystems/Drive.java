@@ -1,9 +1,7 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
-import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
-import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -100,7 +98,6 @@ public class Drive extends Subsystem {
 			mLeftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
 			mRightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
 		} else if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
-			//TODO Fix Negatives
 			mLeftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand, NeutralMode.Brake,
 					mPeriodicIO.left_feedforward + DRIVE.kDriveD * mPeriodicIO.left_accel / 1023.0);
 			mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, NeutralMode.Brake,
@@ -217,6 +214,16 @@ public class Drive extends Subsystem {
 	}
 
 	/**
+	 * Zero heading by adding an offset
+	 */
+	public synchronized void setHeading(Rotation2d heading) {
+		Logger.logMarker("SET HEADING: " + heading.getDegrees());
+		mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(navX.getFusedHeading()).inverse());
+		Logger.logMarker("Gyro offset: " + mGyroOffset.getDegrees());
+		mPeriodicIO.gyro_heading = heading;
+	}
+
+	/**
 	 * Update odometry
 	 *
 	 * @param timestamp Current FPGA Time
@@ -287,16 +294,6 @@ public class Drive extends Subsystem {
 			mMotionPlanner.setTrajectory(trajectory);
 			mDriveControlState = DriveControlState.PATH_FOLLOWING;
 		}
-	}
-
-	/**
-	 * Zero heading by adding an offset
-	 */
-	public synchronized void setHeading(Rotation2d heading) {
-		Logger.logMarker("SET HEADING: " + heading.getDegrees());
-		mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(navX.getFusedHeading()).inverse());
-		Logger.logMarker("Gyro offset: " + mGyroOffset.getDegrees());
-		mPeriodicIO.gyro_heading = heading;
 	}
 
 	/**

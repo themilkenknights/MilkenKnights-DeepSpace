@@ -8,7 +8,6 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
-import frc.robot.auto.modes.NearScaleOnlyMode;
 import frc.robot.lib.structure.SubsystemManager;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;

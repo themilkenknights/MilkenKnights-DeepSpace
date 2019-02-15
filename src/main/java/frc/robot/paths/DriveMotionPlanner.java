@@ -25,32 +25,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DriveMotionPlanner implements CSVWritable {
+
 	private static final double kMaxDx = 2.0;
 	private static final double kMaxDy = 0.25;
 	private static final double kMaxDTheta = Math.toRadians(5.0);
-
-	public enum FollowerType {
-		FEEDFORWARD_ONLY,
-		PURE_PURSUIT,
-		PID,
-		NONLINEAR_FEEDBACK
-	}
-
-	FollowerType mFollowerType = FollowerType.NONLINEAR_FEEDBACK;
-
-	public void setFollowerType(FollowerType type) {
-		mFollowerType = type;
-	}
-
 	final DifferentialDrive mModel;
-
+	public TimedState<Pose2dWithCurvature> mSetpoint = new TimedState<>(Pose2dWithCurvature.identity());
+	FollowerType mFollowerType = FollowerType.NONLINEAR_FEEDBACK;
 	TrajectoryIterator<TimedState<Pose2dWithCurvature>> mCurrentTrajectory;
 	boolean mIsReversed = false;
 	double mLastTime = Double.POSITIVE_INFINITY;
-	public TimedState<Pose2dWithCurvature> mSetpoint = new TimedState<>(Pose2dWithCurvature.identity());
 	Pose2d mError = Pose2d.identity();
 	Output mOutput = new Output();
-
 	DifferentialDrive.ChassisState prev_velocity_ = new DifferentialDrive.ChassisState();
 	double mDt = 0.0;
 
@@ -68,6 +54,10 @@ public class DriveMotionPlanner implements CSVWritable {
 				Units.inches_to_meters(Constants.DRIVE.kEffectiveDriveWheelTrackWidthInches / 2.0 * Constants.DRIVE.kTrackScrubFactor),
 				transmission, transmission
 		);
+	}
+
+	public void setFollowerType(FollowerType type) {
+		mFollowerType = type;
 	}
 
 	public void setTrajectory(final TrajectoryIterator<TimedState<Pose2dWithCurvature>> trajectory) {
@@ -111,7 +101,7 @@ public class DriveMotionPlanner implements CSVWritable {
 			double max_voltage) {
 		List<Pose2d> waypoints_maybe_flipped = waypoints;
 		final Pose2d flip = Pose2d.fromRotation(new Rotation2d(-1, 0, false));
-		// TODO re-architect the spline generator to support reverse.
+		// re-architect the spline generator to support reverse.
 		if (reversed) {
 			waypoints_maybe_flipped = new ArrayList<>(waypoints.size());
 			for (int i = 0; i < waypoints.size(); ++i) {
@@ -153,45 +143,6 @@ public class DriveMotionPlanner implements CSVWritable {
 		return fmt.format(mOutput.left_velocity) + "," + fmt.format(mOutput.right_velocity) + "," + fmt.format
 				(mOutput.left_feedforward_voltage) + "," + fmt.format(mOutput.right_feedforward_voltage) + "," +
 				mSetpoint.toCSV();
-	}
-
-	public static class Output {
-		public Output() {
-		}
-
-		public Output(double left_velocity, double right_velocity, double left_accel, double right_accel,
-				double left_feedforward_voltage, double
-				right_feedforward_voltage) {
-			this.left_velocity = left_velocity;
-			this.right_velocity = right_velocity;
-			this.left_accel = left_accel;
-			this.right_accel = right_accel;
-			this.left_feedforward_voltage = left_feedforward_voltage;
-			this.right_feedforward_voltage = right_feedforward_voltage;
-		}
-
-		public double left_velocity;  // rad/s
-		public double right_velocity;  // rad/s
-
-		public double left_accel;  // rad/s^2
-		public double right_accel;  // rad/s^2
-
-		public double left_feedforward_voltage;
-		public double right_feedforward_voltage;
-
-		public void flip() {
-			double tmp_left_velocity = left_velocity;
-			left_velocity = -right_velocity;
-			right_velocity = -tmp_left_velocity;
-
-			double tmp_left_accel = left_accel;
-			left_accel = -right_accel;
-			right_accel = -tmp_left_accel;
-
-			double tmp_left_feedforward = left_feedforward_voltage;
-			left_feedforward_voltage = -right_feedforward_voltage;
-			right_feedforward_voltage = -tmp_left_feedforward;
-		}
 	}
 
 	protected Output updatePID(DifferentialDrive.DriveDynamics dynamics, Pose2d current_state) {
@@ -303,7 +254,9 @@ public class DriveMotionPlanner implements CSVWritable {
 	}
 
 	public Output update(double timestamp, Pose2d current_state) {
-		if (mCurrentTrajectory == null) return new Output();
+		if (mCurrentTrajectory == null) {
+			return new Output();
+		}
 
 		if (mCurrentTrajectory.getProgress() == 0.0 && !Double.isFinite(mLastTime)) {
 			mLastTime = timestamp;
@@ -339,7 +292,7 @@ public class DriveMotionPlanner implements CSVWritable {
 				mOutput = updateNonlinearFeedback(dynamics, current_state);
 			}
 		} else {
-			// TODO Possibly switch to a pose stabilizing controller?
+			// Possibly switch to a pose stabilizing controller?
 			mOutput = new Output();
 		}
 		return mOutput;
@@ -355,5 +308,49 @@ public class DriveMotionPlanner implements CSVWritable {
 
 	public TimedState<Pose2dWithCurvature> setpoint() {
 		return mSetpoint;
+	}
+
+	public enum FollowerType {
+		FEEDFORWARD_ONLY,
+		PURE_PURSUIT,
+		PID,
+		NONLINEAR_FEEDBACK
+	}
+
+	public static class Output {
+
+		public double left_velocity;  // rad/s
+		public double right_velocity;  // rad/s
+		public double left_accel;  // rad/s^2
+		public double right_accel;  // rad/s^2
+		public double left_feedforward_voltage;
+		public double right_feedforward_voltage;
+
+		public Output() {
+		}
+		public Output(double left_velocity, double right_velocity, double left_accel, double right_accel,
+				double left_feedforward_voltage, double
+				right_feedforward_voltage) {
+			this.left_velocity = left_velocity;
+			this.right_velocity = right_velocity;
+			this.left_accel = left_accel;
+			this.right_accel = right_accel;
+			this.left_feedforward_voltage = left_feedforward_voltage;
+			this.right_feedforward_voltage = right_feedforward_voltage;
+		}
+
+		public void flip() {
+			double tmp_left_velocity = left_velocity;
+			left_velocity = -right_velocity;
+			right_velocity = -tmp_left_velocity;
+
+			double tmp_left_accel = left_accel;
+			left_accel = -right_accel;
+			right_accel = -tmp_left_accel;
+
+			double tmp_left_feedforward = left_feedforward_voltage;
+			left_feedforward_voltage = -right_feedforward_voltage;
+			right_feedforward_voltage = -tmp_left_feedforward;
+		}
 	}
 }
