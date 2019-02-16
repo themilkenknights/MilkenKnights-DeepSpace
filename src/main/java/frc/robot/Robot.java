@@ -8,8 +8,8 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import frc.robot.auto.modes.CharacterizeHighGearStraight;
 import frc.robot.auto.modes.NearScaleOnlyMode;
-import frc.robot.lib.structure.SubsystemManager;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.paths.TrajectoryGenerator;
@@ -63,7 +63,10 @@ public class Robot extends TimedRobot {
 			mMatchState = MatchState.AUTO;
 			mSubsystemManager.startAuto();
 			//AutoChooser.startAuto(new NearScaleOnlyMode(true));
-			Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(20, 20), DriveSignal.BRAKE);
+			//Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(20, 20), DriveSignal.BRAKE);
+			AutoChooser.startAuto(new NearScaleOnlyMode(false));
+			//AutoChooser.startAuto(new CharacterizeHighGearStraight());
+
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;

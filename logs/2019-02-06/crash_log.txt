@@ -1,8 +1,8 @@
 563eb92b-7493-49b7-81e1-c703b352cc0e, Exception, Wed Feb 06 21:39:11 PST 2019, java.lang.NullPointerException
 	at frc.robot.subsystems.CargoArm.outputTelemetry(CargoArm.java:116)
-	at frc.robot.lib.structure.SubsystemManager.lambda$outputToSmartDashboard$0(SubsystemManager.java:26)
+	at frc.robot.SubsystemManager.lambda$outputToSmartDashboard$0(SubsystemManager.java:26)
 	at java.base/java.util.Arrays$ArrayList.forEach(Unknown Source)
-	at frc.robot.lib.structure.SubsystemManager.outputToSmartDashboard(SubsystemManager.java:26)
+	at frc.robot.SubsystemManager.outputToSmartDashboard(SubsystemManager.java:26)
 	at frc.robot.Robot.robotPeriodic(Robot.java:105)
 	at edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:258)
 	at edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81)
@@ -11,9 +11,9 @@
 
 9d49433d-d19d-4893-98f0-cc4959b636ad, Exception, Wed Feb 06 21:39:18 PST 2019, java.lang.NullPointerException
 	at frc.robot.subsystems.CargoArm.outputTelemetry(CargoArm.java:116)
-	at frc.robot.lib.structure.SubsystemManager.lambda$outputToSmartDashboard$0(SubsystemManager.java:26)
+	at frc.robot.SubsystemManager.lambda$outputToSmartDashboard$0(SubsystemManager.java:26)
 	at java.base/java.util.Arrays$ArrayList.forEach(Unknown Source)
-	at frc.robot.lib.structure.SubsystemManager.outputToSmartDashboard(SubsystemManager.java:26)
+	at frc.robot.SubsystemManager.outputToSmartDashboard(SubsystemManager.java:26)
 	at frc.robot.Robot.robotPeriodic(Robot.java:105)
 	at edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:258)
 	at edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81)

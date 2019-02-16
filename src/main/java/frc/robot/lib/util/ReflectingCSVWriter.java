@@ -23,7 +23,7 @@ public class ReflectingCSVWriter<T> {
 			String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 			boolean test = new File("/media/sda1/" + dateStamp1 + "/").mkdirs();
 			String dateStamp = new SimpleDateFormat("hh-mm-ssaaa").format(new Date());
-			String fileName1 = "/media/sda1/logs/" + fileName + " " + dateStamp + ".csv";
+			String fileName1 = "/media/sda1/" + dateStamp1 + "/" + fileName + ".csv";
 			mOutput = new PrintWriter(fileName1);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

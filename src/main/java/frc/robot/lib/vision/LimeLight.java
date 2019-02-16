@@ -20,17 +20,14 @@ import frc.robot.lib.vision.LimeLightControlMode.StreamType;
  * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you Enjoy the Lime Light Camera.
  */
 public class LimeLight {
-
-	Notifier _hearBeat = new Notifier(new PeriodicRunnable());
 	NetworkTableEntry tv, tx, ty, ta, ts, tl, thoriz, tvert, ledMode, camMode, pipeline, stream, snapshot;
 	NetworkTableEntry camtran;
 	private NetworkTable m_table, m_pnp_table;
 	private String m_tableName, m_pnp_tableName;
 	private Boolean isConnected = false;
-	private double kLimelightLoopPeriod = GENERAL.kLimelightLoopPeriod;
 	private LimelightTarget mTarget;
 	private MovingAverage mThrottleAverage;
-
+	private int i = 0;
 
 	/**
 	 * Using the Default Lime Light NT table
@@ -38,7 +35,6 @@ public class LimeLight {
 	public LimeLight() {
 		m_tableName = "limelight";
 		m_table = NetworkTableInstance.getDefault().getTable(m_tableName);
-		_hearBeat.startPeriodic(kLimelightLoopPeriod);
 		tv = m_table.getEntry("tv");
 		tx = m_table.getEntry("tx");
 		ty = m_table.getEntry("ty");
@@ -67,7 +63,6 @@ public class LimeLight {
 	public LimeLight(String tableName) {
 		m_tableName = tableName;
 		m_table = NetworkTableInstance.getDefault().getTable(m_tableName);
-		_hearBeat.startPeriodic(kLimelightLoopPeriod);
 	}
 
 	/**
@@ -75,7 +70,6 @@ public class LimeLight {
 	 */
 	public LimeLight(NetworkTable table) {
 		m_table = table;
-		_hearBeat.startPeriodic(kLimelightLoopPeriod);
 	}
 
 	private void resetPilelineLatency() {
@@ -341,29 +335,23 @@ public class LimeLight {
 		return y;
 	}
 
-	class PeriodicRunnable implements java.lang.Runnable {
-
-		int i = 0;
-
-		//TODO Verify Thread Efficiency
-		public void run() {
-			try {
-				if (i == 10) {
-					resetPilelineLatency();
-					try {
-						Thread.sleep(25);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-					isConnected = getPipelineLatency() != 0.0;
-					i = 0;
+	public synchronized void threadUpdate() {
+		try {
+			if (i == 10) {
+				resetPilelineLatency();
+				try {
+					Thread.sleep(25);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
 				}
-				i++;
-				updateTarget();
-			} catch (Throwable t) {
-				Logger.logThrowableCrash(t);
-				throw t;
+				isConnected = getPipelineLatency() != 0.0;
+				i = 0;
 			}
+			i++;
+			updateTarget();
+		} catch (Throwable t) {
+			Logger.logThrowableCrash(t);
+			throw t;
 		}
 	}
 

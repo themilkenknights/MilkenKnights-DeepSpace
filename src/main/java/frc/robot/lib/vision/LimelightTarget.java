@@ -18,12 +18,24 @@ public class LimelightTarget {
 	private double[] poseArray;
 	private Pose2d deltaPose;
 
+	public double getHorizLength() {
+		return horizLength;
+	}
+
+	public double getVertLength() {
+		return vertLength;
+	}
+
+	private double horizLength;
+	private double vertLength;
 
 	public LimelightTarget(boolean validTarget, double xOffset, double yOffset, double horizLength, double vertLength,
 			double captureTime, double[] poseArray) {
 		this.validTarget = validTarget;
 		this.xOffset = xOffset;
 		this.yOffset = yOffset;
+		this.horizLength = horizLength;
+		this.vertLength = vertLength;
 		this.area = horizLength * vertLength;
 		this.captureTime = captureTime;
 		this.distance = VISION.kAreaToDistVisionMap.getInterpolated(new InterpolatingDouble(getArea())).value;

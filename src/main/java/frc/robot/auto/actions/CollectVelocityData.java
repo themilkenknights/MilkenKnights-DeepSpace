@@ -30,7 +30,7 @@ public class CollectVelocityData implements Action {
 		mVelocityData = data;
 		mReverse = reverse;
 		mTurn = turn;
-		mCSVWriter = new ReflectingCSVWriter<>("VELOCITY_DATA.csv",
+		mCSVWriter = new ReflectingCSVWriter<>("VELOCITY_DATA",
 				DriveCharacterization.VelocityDataPoint.class);
 	}
 

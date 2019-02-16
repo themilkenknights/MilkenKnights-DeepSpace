@@ -35,8 +35,8 @@ public class MovingAverage {
 			validTarget = target.isValidTarget() && validTarget;
 			totalX += target.getXOffset();
 			totalY += target.getYOffset();
-			totalHoriz += target.getArea();
-			totalVert += target.getArea();
+			totalHoriz += target.getHorizLength();
+			totalVert += target.getVertLength();
 			totalCaptureTime += target.getCaptureTime();
 			for (int i = 0; i < poseArray.length; i++) {
 				poseArray[i] = target.getPoseArray()[i];

@@ -11,7 +11,7 @@ import frc.robot.lib.vision.MkPixy;
 
 public class Vision extends Subsystem {
 
-	private LimeLight mLimeLight;
+	public static LimeLight mLimeLight;
 	public static MkPixy mPixy;
 	private boolean usePixy = true;
 
@@ -36,6 +36,9 @@ public class Vision extends Subsystem {
 			SmartDashboard.putNumber("Pixy Area", mPixy.getArea());
 			SmartDashboard.putBoolean("Pixy Limit Switch", mPixy.isCargoIntaked());
 		}
+		SmartDashboard.putNumber("Limelight X", mLimeLight.returnAverageTarget().getXOffset());
+		SmartDashboard.putNumber("Limelight Dist", mLimeLight.returnAverageTarget().getDistance());
+		SmartDashboard.putNumber("Limelight Area", mLimeLight.returnAverageTarget().getArea());
 	}
 
 	public void teleopInit(double timestamp) {

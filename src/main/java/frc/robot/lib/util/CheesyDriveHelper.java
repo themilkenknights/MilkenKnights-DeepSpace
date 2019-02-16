@@ -39,6 +39,10 @@ public class CheesyDriveHelper {
         wheel = handleDeadband(wheel, kWheelDeadband);
         throttle = handleDeadband(throttle, kThrottleDeadband);
 
+       /*  if(throttle == 0.0){
+            isQuickTurn = true;
+        } */
+
         double negInertia = wheel - mOldWheel;
         mOldWheel = wheel;
 
@@ -104,7 +108,7 @@ public class CheesyDriveHelper {
                         + alpha * Util.limit(wheel, 1.0) * kQuickStopScalar;
             }
             overPower = 1.0;
-            angularPower = wheel;
+            angularPower = wheel * wheel * wheel;
         } else {
             overPower = 0.0;
             angularPower = Math.abs(throttle) * wheel * sensitivity - mQuickStopAccumlator;
@@ -135,10 +139,10 @@ public class CheesyDriveHelper {
             rightPwm = -1.0;
         }
 
-        if(!isQuickTurn && throttle == 0.0){
+       /* if(!isQuickTurn && throttle == 0.0){
             leftPwm = wheel / 4;
             rightPwm = -wheel / 4;
-        }
+        } */
         return new DriveSignal(leftPwm, rightPwm);
     }
 

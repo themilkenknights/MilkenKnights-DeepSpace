@@ -1,13 +1,15 @@
-package frc.robot.lib.structure;
+package frc.robot;
 
 import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants.GENERAL;
+import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.CrashTrackingRunnable;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.vision.MkPixy;
 import frc.robot.paths.RobotState;
+import frc.robot.subsystems.Vision;
 import java.util.List;
 
 /**
@@ -22,6 +24,7 @@ public class SubsystemManager {
 	private final Notifier slow_notifier_;
 	private final Notifier telemetry_notifier_;
 	private final Notifier _pixyUpdate;
+	private final Notifier _limelightUpdate;
 
 	private final Object taskRunningLock_ = new Object();
 	private double main_timestamp = 0;
@@ -36,7 +39,8 @@ public class SubsystemManager {
 		mAllSubsystems = allSubsystems;
 
 		notifier_ = new Notifier(runnable_);
-		_pixyUpdate = new Notifier(new PeriodicRunnable());
+		_pixyUpdate = new Notifier(pixyRunnable_);
+		_limelightUpdate = new Notifier(limelightRunnable_);
 		slow_notifier_ = new Notifier(slowRunnable_);
 		telemetry_notifier_ = new Notifier(telemetryRunnable_);
 		running_ = false;
@@ -72,6 +76,7 @@ public class SubsystemManager {
 		notifier_.startPeriodic(kPeriod);
 		slow_notifier_.startPeriodic(kSlowPeriod);
 		_pixyUpdate.startPeriodic(GENERAL.kPixyLoopPeriod);
+		_limelightUpdate.startPeriodic(GENERAL.kLimelightLoopPeriod);
 		telemetry_notifier_.startPeriodic(kTelemetryPeriod);
 	}
 
@@ -89,6 +94,7 @@ public class SubsystemManager {
 		notifier_.startPeriodic(kPeriod);
 		slow_notifier_.startPeriodic(kSlowPeriod);
 		_pixyUpdate.startPeriodic(GENERAL.kPixyLoopPeriod);
+		_limelightUpdate.startPeriodic(GENERAL.kLimelightLoopPeriod);
 		telemetry_notifier_.startPeriodic(kTelemetryPeriod);
 	}
 
@@ -102,6 +108,7 @@ public class SubsystemManager {
 		notifier_.stop();
 		slow_notifier_.stop();
 		_pixyUpdate.startPeriodic(GENERAL.kPixyLoopPeriod);
+		_limelightUpdate.startPeriodic(GENERAL.kLimelightLoopPeriod);
 		telemetry_notifier_.startPeriodic(kTelemetryPeriod);
 
 		timestamp_ = Timer.getFPGATimestamp();
@@ -157,16 +164,22 @@ public class SubsystemManager {
 		}
 	};
 
-	class PeriodicRunnable implements java.lang.Runnable {
-
-		public void run() {
-			try {
+	private final CrashTrackingRunnable pixyRunnable_ = new CrashTrackingRunnable() {
+		@Override
+		public void runCrashTracked() {
+			synchronized (taskRunningLock_) {
 				MkPixy.pixyUpdate();
-			} catch (Throwable t) {
-				Logger.logThrowableCrash(t);
-				throw t;
 			}
 		}
-	}
+	};
+
+	private final CrashTrackingRunnable limelightRunnable_ = new CrashTrackingRunnable() {
+		@Override
+		public void runCrashTracked() {
+			synchronized (taskRunningLock_) {
+				Vision.getInstance().mLimeLight.threadUpdate();
+			}
+		}
+	};
 
 }

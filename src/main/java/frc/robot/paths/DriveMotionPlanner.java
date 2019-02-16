@@ -32,7 +32,7 @@ public class DriveMotionPlanner implements CSVWritable {
 	final DifferentialDrive mModel;
 	public TimedState<Pose2dWithCurvature> mSetpoint = new TimedState<>(
 			Pose2dWithCurvature.identity());
-	FollowerType mFollowerType = FollowerType.PURE_PURSUIT;
+	FollowerType mFollowerType = FollowerType.NONLINEAR_FEEDBACK;
 	TrajectoryIterator<TimedState<Pose2dWithCurvature>> mCurrentTrajectory;
 	boolean mIsReversed = false;
 	double mLastTime = Double.POSITIVE_INFINITY;
@@ -165,9 +165,17 @@ public class DriveMotionPlanner implements CSVWritable {
 							new DifferentialDrive.ChassisState(acceleration_m,
 									acceleration_m * curvature_m + velocity_m * velocity_m * dcurvature_ds_m));
 			mError = current_state.inverse().transformBy(mSetpoint.state().getPose());
-			//TODO Decide which controller to use
-			//mOutput = updateNonlinearFeedback(dynamics, current_state);
-			mOutput = updatePurePursuit(dynamics, current_state);
+			if (mFollowerType == FollowerType.FEEDFORWARD_ONLY) {
+				mOutput = new Output(dynamics.wheel_velocity.left, dynamics.wheel_velocity.right, dynamics
+						.wheel_acceleration.left, dynamics.wheel_acceleration.right, dynamics.voltage
+						.left, dynamics.voltage.right);
+			} else if (mFollowerType == FollowerType.PURE_PURSUIT) {
+				mOutput = updatePurePursuit(dynamics, current_state);
+			} else if (mFollowerType == FollowerType.PID) {
+				mOutput = updatePID(dynamics, current_state);
+			} else if (mFollowerType == FollowerType.NONLINEAR_FEEDBACK) {
+				mOutput = updateNonlinearFeedback(dynamics, current_state);
+			}
 		} else {
 			mOutput = new Output();
 		}
@@ -184,6 +192,34 @@ public class DriveMotionPlanner implements CSVWritable {
 
 	public TimedState<Pose2dWithCurvature> setpoint() {
 		return mSetpoint;
+	}
+
+	protected Output updatePID(DifferentialDrive.DriveDynamics dynamics, Pose2d current_state) {
+		DifferentialDrive.ChassisState adjusted_velocity = new DifferentialDrive.ChassisState();
+		// Feedback on longitudinal error (distance).
+		final double kPathKX = 5.0;
+		final double kPathKY = 1.0;
+		final double kPathKTheta = 5.0;
+		adjusted_velocity.linear = dynamics.chassis_velocity.linear + kPathKX * Units.inches_to_meters
+				(mError.getTranslation().x());
+		adjusted_velocity.angular = dynamics.chassis_velocity.angular + dynamics.chassis_velocity.linear * kPathKY *
+				Units.inches_to_meters(mError.getTranslation().y()) + kPathKTheta * mError.getRotation().getRadians();
+
+		double curvature = adjusted_velocity.angular / adjusted_velocity.linear;
+		if (Double.isInfinite(curvature)) {
+			adjusted_velocity.linear = 0.0;
+			adjusted_velocity.angular = dynamics.chassis_velocity.angular;
+		}
+
+		// Compute adjusted left and right wheel velocities.
+		final DifferentialDrive.WheelState wheel_velocities = mModel.solveInverseKinematics(adjusted_velocity);
+		final double left_voltage = dynamics.voltage.left + (wheel_velocities.left - dynamics.wheel_velocity
+				.left) / mModel.left_transmission().speed_per_volt();
+		final double right_voltage = dynamics.voltage.right + (wheel_velocities.right - dynamics.wheel_velocity
+				.right) / mModel.right_transmission().speed_per_volt();
+
+		return new Output(wheel_velocities.left, wheel_velocities.right, dynamics.wheel_acceleration.left, dynamics
+				.wheel_acceleration.right, left_voltage, right_voltage);
 	}
 
 	protected Output updatePurePursuit(DifferentialDrive.DriveDynamics dynamics,
@@ -264,7 +300,7 @@ public class DriveMotionPlanner implements CSVWritable {
 	}
 
 	public enum FollowerType {
-		NONLINEAR_FEEDBACK, PURE_PURSUIT
+		NONLINEAR_FEEDBACK, PURE_PURSUIT, PID, FEEDFORWARD_ONLY
 	}
 
 

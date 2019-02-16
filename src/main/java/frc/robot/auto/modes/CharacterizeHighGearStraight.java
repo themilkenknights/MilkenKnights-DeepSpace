@@ -25,5 +25,6 @@ public class CharacterizeHighGearStraight extends AutoModeBase {
 		Logger.logMarker("ks: " + constants.ks);
 		Logger.logMarker("kv: " + constants.kv);
 		Logger.logMarker("ka: " + constants.ka);
+		Logger.logMarker("DONEEEEE");
 	}
 }

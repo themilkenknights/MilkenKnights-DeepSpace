@@ -12,7 +12,7 @@ import java.util.List;
 public class CollectAccelerationData implements Action {
 
 	private static final double kPower = 0.5;
-	private static final double kTotalTime = 2.0; //how long to run the test for
+	private static final double kTotalTime = 1.0; //how long to run the test for
 	private static final Drive mDrive = Drive.getInstance();
 	private final ReflectingCSVWriter<DriveCharacterization.AccelerationDataPoint> mCSVWriter;
 	private final List<DriveCharacterization.AccelerationDataPoint> mAccelerationData;
@@ -32,7 +32,7 @@ public class CollectAccelerationData implements Action {
 		mAccelerationData = data;
 		mReverse = reverse;
 		mTurn = turn;
-		mCSVWriter = new ReflectingCSVWriter<>("ACCEL_DATA.csv",
+		mCSVWriter = new ReflectingCSVWriter<>("ACCEL_DATA",
 				DriveCharacterization.AccelerationDataPoint.class);
 	}
 

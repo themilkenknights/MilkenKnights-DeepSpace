@@ -4,7 +4,6 @@ import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.Constants.GENERAL;
 import frc.robot.lib.util.Logger;
-import frc.robot.lib.vision.LimeLight.PeriodicRunnable;
 import io.github.pseudoresonance.pixy2api.Pixy2;
 import io.github.pseudoresonance.pixy2api.Pixy2.LinkType;
 import io.github.pseudoresonance.pixy2api.Pixy2CCC;

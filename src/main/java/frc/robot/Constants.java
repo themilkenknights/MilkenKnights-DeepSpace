@@ -91,15 +91,15 @@ public final class Constants {
 		public static final double kRobotLinearInertia = 26.30; //Kg
 		public static final double kRobotAngularInertia = 4.4;  // Kg m^2
 		public static final double kRobotAngularDrag = 6.0;  // N*m / (rad/sec)
-		public static final double kDriveVIntercept = 1.07832;  // V
-		public static final double kDriveKv = 0.5858;  // V per rad/s
-		public static final double kDriveKa = 0.012;  // V per rad/s^2
+		public static final double kDriveVIntercept = 0.5603;  // V
+		public static final double kDriveKv = 0.24763;  // V per rad/s
+		public static final double kDriveKa = 0.00704;  // V per rad/s^2
 
 		//TODO Turn In Place Scrub Tuning
 		public static final double kTrackScrubFactor = 1.0;
 
 		//Pure Pursuit Params
-		public static final double kPathKX = 4.0;  // units/s per unit of error
+		public static final double kPathKX = 0.9;  // units/s per unit of error
 		public static final double kPathLookaheadTime = 0.4;  // seconds to look ahead along the path for steering
 		public static final double kPathMinLookaheadDistance = 24.0;  // inches
 
@@ -118,7 +118,7 @@ public final class Constants {
 		public static final double kTurnInPlaceCircumference = 104.1;
 
 		//Vision Tuning
-		public static final double kVisionTurnP = 0.03;
+		public static final double kVisionTurnP = 0.040;
 		public static final double kVisionDriverTurnP = -0.03;
 
 		//Turn In Place
@@ -219,9 +219,9 @@ public final class Constants {
 	}
 
 	public static class PNUEMATICS {
-		public static final int kHatchArmChannel = 0;
-		public static final int kFrontClimbSolenoidChannel = 1;
-		public static final int kRearClimbSolenoidChannel = 2;
+		public static final int kHatchArmChannel = 2;
+		public static final int kFrontClimbSolenoidChannel = 0;
+		public static final int kRearClimbSolenoidChannel = 1;
 	}
 
 	public static class SUPERSTRUCTURE {
@@ -241,11 +241,14 @@ public final class Constants {
 		public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> kPixyAreaToDistVisionMap = new InterpolatingTreeMap<>();
 
 		static {
-			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(3783.0), new InterpolatingDouble(46.75));
-			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(2517.0), new InterpolatingDouble(57.4));
-			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1960.0), new InterpolatingDouble(65.5));
-			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1782.0), new InterpolatingDouble(68.8));
-			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1368.0), new InterpolatingDouble(79.4));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(12400.0), new InterpolatingDouble(15.9));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(9362.0), new InterpolatingDouble(20.16));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(6958.0), new InterpolatingDouble(26.26));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(5122.0), new InterpolatingDouble(32.45));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(3423.0), new InterpolatingDouble(42.8));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(2155.0), new InterpolatingDouble(57.44));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1464.0), new InterpolatingDouble(73.35));
+			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(980.0), new InterpolatingDouble(94.09));
 
 
 			VISION.kPixyAreaToDistVisionMap.put(new InterpolatingDouble(3783.0), new InterpolatingDouble(46.75));
