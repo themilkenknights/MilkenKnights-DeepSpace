@@ -40,6 +40,7 @@ public class MkTalon {
 	private final int kLong = GENERAL.kLongCANTimeoutMs;
 	private final int kShort = 0;
 	private final int kSlot = GENERAL.kPIDLoopIdx;
+	private final double motorTimer = GENERAL.kMotorSafetyTimer;
 	private TalonLoc mSide;
 	private ControlMode lastControlMode = null;
 	private double lastOutput, lastArbFeed, mMaxRPM = Double.NaN;
@@ -234,7 +235,7 @@ public class MkTalon {
 			slaveVictor.setInverted(InvertType.OpposeMaster);
 		}
 
-		motorSafetyTimer.start(0.075);
+		motorSafetyTimer.start(motorTimer);
 	}
 
 	public boolean isEncoderConnected() {
@@ -245,6 +246,14 @@ public class MkTalon {
 		set(mode, value, nMode, 0.0);
 	}
 
+	/**
+	 * Primary method for all Talon Control. Only sends commands to the Talon if they are new or if the motor safety timer expires.
+	 *
+	 * @param mode Control Mode for Talon (PercentOuput, MotionMagic, Velocity, etc.)
+	 * @param value Setpoint (Units based on Control Mode, See {@link Constants}
+	 * @param nMode Neutral Mode (Brake/Coast) for Talons/Victors
+	 * @param arbFeed Arbitrary feedforward added as a PercentOutput to any closed loop (or open loop) mode.
+	 */
 	public synchronized void set(ControlMode mode, double value, NeutralMode nMode, double arbFeed) {
 		if (lastNeutralMode != nMode) {
 			lastNeutralMode = nMode;
@@ -256,7 +265,7 @@ public class MkTalon {
 			lastOutput = value;
 			lastArbFeed = arbFeed;
 			lastControlMode = mode;
-			motorSafetyTimer.start(0.075);
+			motorSafetyTimer.start(motorTimer);
 		}
 	}
 
@@ -361,6 +370,13 @@ public class MkTalon {
 		return pulseWidth + (-CARGO_ARM.kBookEnd_0);
 	}
 
+	/**
+	 * Defines the tests for each mechanism. The current, velocity, and position of each mechanism must meet a minimum (or maximum) value
+	 * and for mechanisms with several motors, the delta between these measurements must be below a certain threshold.
+	 *
+	 * The cargo and ground intake move to each available setpoint and should be verified by the test operator.
+	 * @return Whether the test was successful
+	 */
 	public boolean checkSystem() {
 		boolean check = true;
 		ArrayList<Double> currents = new ArrayList<>();
@@ -540,6 +556,9 @@ public class MkTalon {
 		return check;
 	}
 
+	/**
+	 * Logs and sends error to DS if any Phoenix Config method returns an Error Code that is not 'OK'
+	 */
 	private void CTRE(ErrorCode errorCode) {
 		if (errorCode != ErrorCode.OK) {
 			Logger.logErrorWithTrace(errorCode.toString());
@@ -556,7 +575,7 @@ public class MkTalon {
 	/**
 	 * Left Drive and Right Drive house the Talon, Victor, and SRX Mag encoder for each side of the drivetrain.
 	 * The hatch Arm houses the ground hatch intake Talon, SRX Mag Encoder, and an unused Talon with a Breakout board with two limit switches.
-	 * One limit switch is placed at the reverse hardstop for the ground intake arm, and the second is placed on the pneumatic peg arm to detect when the main arm is inside the target.
+	 * One limit switch is placed at the reverse hardstop for the ground intake arm, and the second is placed on the pneumatic spear arm to detect when the main arm is inside the target.
 	 * The Cargo Arm houses the Talon, Victor, and SRX Mag encoder for the main cargo arm.
 	 */
 	public enum TalonLoc {

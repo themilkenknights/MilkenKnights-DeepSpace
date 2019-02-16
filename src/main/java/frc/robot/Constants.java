@@ -2,6 +2,7 @@ package frc.robot;
 
 import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.InterpolatingTreeMap;
+import frc.robot.lib.util.Units;
 
 /**
  * Unless otherwise noted by raw/native/RPM, all position unites are in inches and degrees
@@ -19,6 +20,7 @@ import frc.robot.lib.util.InterpolatingTreeMap;
  * -X is Hatch Arm/Battery Forward
  * +Y is Left (Hatch Arm/Battery Forward)
  * -Y is Right (Hatch Arm/Battery Forward)
+ * TODO Fix the orientation to match path gen/follower
  */
 public final class Constants {
 
@@ -32,14 +34,13 @@ public final class Constants {
 		public static final double PI = 3.14159265359;
 		public static final double kTicksPerRev = 4096.0;
 		public static final double kMaxNominalOutput = 1.0;
-		public static final double kLoopDt = 0.02; //TODO Find optimal refresh rate
+		public static final double kMotorSafetyTimer = 0.05;
+		public static final double kLoopDt = 0.02;
 		public static final double kLooperDt = 0.01;
 		public static final double kSlowLooperDt = 0.01;
-		public static final double kLimelightLoopPeriod = 0.05;
+		public static final double kLimelightLoopPeriod = 0.01;
 		public static final double kPixyLoopPeriod = 0.05;
 		public static final double kTelemetryDt = 0.2;
-
-
 	}
 
 	/**
@@ -51,11 +52,11 @@ public final class Constants {
 		public static final int kPneumaticsControlModuleID = 0;
 		public static final int kPowerDistributionPanelID = 11;
 
-		public static final int kDriveLeftMasterTalonID = 10;
-		public static final int kDriveLeftSlaveVictorID = 9;
+		public static final int kDriveLeftMasterTalonID = 5;
+		public static final int kDriveLeftSlaveVictorID = 4;
 
-		public static final int kDriveRightMasterTalonID = 5;
-		public static final int kDriveRightSlaveVictorID = 4;
+		public static final int kDriveRightMasterTalonID = 10;
+		public static final int kDriveRightSlaveVictorID = 9;
 
 		public static final int kGroundHatchArmTalonID = 8;
 		public static final int kHatchLimitSwitchTalonID = 3;
@@ -77,26 +78,30 @@ public final class Constants {
 		public static final boolean KRightMasterInvert = true;
 		public static final boolean kRightSlaveInvert = true;
 
-		public static final boolean kLeftSensorInvert = true;
-		public static final boolean kRightSensorInvert = true;
+		public static final boolean kLeftSensorInvert = false;
+		public static final boolean kRightSensorInvert = false;
 
 		//Measured params
-		public static final double kDriveWheelTrackWidthInches = 33.75; //Effective Wheelbase
+		public static final double kEffectiveDriveWheelTrackWidthInches = 33.75; //Effective Wheelbase
+		public static final double kDriveWheelTrackWidthInches = 26.0;
+		public static final double kDriveWheelTrackRadiusMeters = Units.inches_to_meters(kDriveWheelTrackWidthInches / 2.0);
 		public static final double kWheelDiameter = 6.0;
 		public static final double kCircumference = kWheelDiameter * GENERAL.PI;
 		public static final double kDriveWheelRadiusInches = kWheelDiameter / 2.0;
 
 		//Tuned dynamics
 		//TODO Tune All Drive Params on Carpet
-		public static final double kRobotLinearInertia = 26.30; //Kg
-		public static final double kRobotAngularInertia = 4.4;  // Kg m^2
+		public static final double kRobotLinearInertia = 45.30; //Kg
 		public static final double kRobotAngularDrag = 6.0;  // N*m / (rad/sec)
+
 		public static final double kDriveVIntercept = 0.5603;  // V
-		public static final double kDriveKv = 0.24763;  // V per rad/s
-		public static final double kDriveKa = 0.00704;  // V per rad/s^2
+		public static final double kDriveKv =0.24763;  // V per rad/s2
+		public static final double kDriveKa = 0.012;  // V per rad/s^
+		public static final double kDriveAngularKa = 0.00704;  // V per rad/s^ (found by turn in place)
+		public static final double kRobotAngularInertia = (kDriveWheelTrackRadiusMeters * kDriveKa * kRobotLinearInertia) / (kDriveAngularKa);  // Kg m^2
 
 		//TODO Turn In Place Scrub Tuning
-		public static final double kTrackScrubFactor = 1.0;
+		public static final double kTrackScrubFactor = 0.95;
 
 		//Pure Pursuit Params
 		public static final double kPathKX = 0.9;  // units/s per unit of error
@@ -118,8 +123,10 @@ public final class Constants {
 		public static final double kTurnInPlaceCircumference = 104.1;
 
 		//Vision Tuning
+
 		public static final double kVisionTurnP = 0.040;
 		public static final double kVisionDriverTurnP = -0.03;
+
 
 		//Turn In Place
 		public static final double kGoalPosTolerance = 0.75; // degrees
@@ -219,13 +226,16 @@ public final class Constants {
 	}
 
 	public static class PNUEMATICS {
-		public static final int kHatchArmChannel = 2;
-		public static final int kFrontClimbSolenoidChannel = 0;
-		public static final int kRearClimbSolenoidChannel = 1;
+
+
+		public static final int kHatchArmChannel = 0;
+		public static final int kFrontClimbSolenoidChannel = 1;
+		public static final int kRearClimbSolenoidChannel = 2;
 	}
 
 	public static class SUPERSTRUCTURE {
-		public static final boolean kClimbUpState = false;
+
+		public static final boolean kClimbRetractedState = false;
 	}
 
 	public static class LOG {
@@ -249,7 +259,6 @@ public final class Constants {
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(2155.0), new InterpolatingDouble(57.44));
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1464.0), new InterpolatingDouble(73.35));
 			VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(980.0), new InterpolatingDouble(94.09));
-
 
 			VISION.kPixyAreaToDistVisionMap.put(new InterpolatingDouble(3783.0), new InterpolatingDouble(46.75));
 			VISION.kPixyAreaToDistVisionMap.put(new InterpolatingDouble(2517.0), new InterpolatingDouble(57.4));

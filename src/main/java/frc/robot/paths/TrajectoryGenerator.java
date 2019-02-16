@@ -10,7 +10,6 @@ import frc.robot.lib.trajectory.TrajectoryUtil;
 import frc.robot.lib.trajectory.timing.CentripetalAccelerationConstraint;
 import frc.robot.lib.trajectory.timing.TimedState;
 import frc.robot.lib.trajectory.timing.TimingConstraint;
-import frc.robot.lib.util.Logger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,7 +21,7 @@ public class TrajectoryGenerator {
 	// +x is towards the center of the field.
 	// +y is to the left.
 	// ALL POSES DEFINED FOR THE CASE THAT ROBOT STARTS ON RIGHT! (mirrored about +x axis for LEFT)
-	public static final Pose2d kStartPose = new Pose2d(0.0, 0.0, Rotation2d.fromDegrees(0.0));
+	public static final Pose2d kStartPose = new Pose2d(0.0, 0.0, Rotation2d.fromDegrees(180.0));
 	private static final double kMaxCentripetalAccel = 110.0;
 	private static final double kMaxVoltage = 12.0;
 	private static final double kMaxAccel = 130.0;
@@ -42,9 +41,9 @@ public class TrajectoryGenerator {
 
 	public void generateTrajectories() {
 		if (mTrajectorySet == null) {
-			Logger.logMarker("Generating trajectories...");
+			System.out.println("Generating trajectories...");
 			mTrajectorySet = new TrajectorySet();
-			Logger.logMarker("Finished trajectory generation");
+			System.out.println("Finished trajectory generation");
 		}
 	}
 
@@ -76,9 +75,9 @@ public class TrajectoryGenerator {
 
 	public void generateVisionTrajectories(Pose2d endPose) {
 		if (mVisionTrajectorySet == null) {
-			Logger.logMarker("Generating trajectories...");
+			System.out.println("Generating trajectories...");
 			mVisionTrajectorySet = new VisionTrajectorySet(endPose);
-			Logger.logMarker("Finished trajectory generation");
+			System.out.println("Finished trajectory generation");
 		}
 	}
 
@@ -97,7 +96,8 @@ public class TrajectoryGenerator {
 		private Trajectory<TimedState<Pose2dWithCurvature>> getSideStartToNearScale() {
 			List<Pose2d> waypoints = new ArrayList<>();
 			waypoints.add(kStartPose);
-			waypoints.add(kStartPose.transformBy(new Pose2d(new Translation2d(20.0, 0.0), Rotation2d.fromDegrees(0.0))));
+			waypoints.add(kStartPose.transformBy(new Pose2d(new Translation2d(-20.0, 0.0), Rotation2d.fromDegrees(0.0))));
+
 			return generateTrajectory(true, waypoints,
 					Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel,
 					kMaxAccel,

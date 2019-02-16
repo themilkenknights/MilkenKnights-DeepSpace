@@ -4,7 +4,6 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.Constants;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.GENERAL;
@@ -174,7 +173,7 @@ public class CargoArm extends Subsystem {
 	}
 
 	public void setIntakeRollers(double output) {
-		if(output == CARGO_ARM.INTAKE_IN_ROLLER_SPEED && Vision.getInstance().mPixy.isCargoIntaked()){
+		if (output == CARGO_ARM.INTAKE_IN_ROLLER_SPEED && Vision.mPixy.isCargoIntaked()) {
 			setArmState(CargoArmState.PLACE_REVERSE_CARGO);
 		}
 		mRollerSetpoint = output;
@@ -211,8 +210,7 @@ public class CargoArm extends Subsystem {
 	}
 
 	public enum CargoArmControlState {
-		MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all
-		// circumstances
+		MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all circumstances
 		OPEN_LOOP // Direct PercentVBus control of the arm as a failsafe
 	}
 

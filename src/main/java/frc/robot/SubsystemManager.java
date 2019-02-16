@@ -18,22 +18,20 @@ import java.util.List;
 public class SubsystemManager {
 
 	private final List<Subsystem> mAllSubsystems;
-	private boolean running_;
-
 	private final Notifier notifier_;
 	private final Notifier slow_notifier_;
 	private final Notifier telemetry_notifier_;
 	private final Notifier _pixyUpdate;
 	private final Notifier _limelightUpdate;
-
 	private final Object taskRunningLock_ = new Object();
+	private final double kPeriod = GENERAL.kLooperDt;
+	private final double kSlowPeriod = GENERAL.kSlowLooperDt;
+	private final double kTelemetryPeriod = GENERAL.kTelemetryDt;
+	private boolean running_;
 	private double main_timestamp = 0;
 	private double timestamp_ = 0;
 	private double dt_ = 0;
 	private double main_loop_dt_ = 0;
-	private final double kPeriod = GENERAL.kLooperDt;
-	private final double kSlowPeriod = GENERAL.kSlowLooperDt;
-	private final double kTelemetryPeriod = GENERAL.kTelemetryDt;
 
 	public SubsystemManager(List<Subsystem> allSubsystems) {
 		mAllSubsystems = allSubsystems;
@@ -116,7 +114,6 @@ public class SubsystemManager {
 			subsystem.onStop(timestamp_);
 		}
 	}
-
 	private final CrashTrackingRunnable runnable_ = new CrashTrackingRunnable() {
 		@Override
 		public void runCrashTracked() {
@@ -168,6 +165,8 @@ public class SubsystemManager {
 		@Override
 		public void runCrashTracked() {
 			synchronized (taskRunningLock_) {
+
+
 				MkPixy.pixyUpdate();
 			}
 		}
