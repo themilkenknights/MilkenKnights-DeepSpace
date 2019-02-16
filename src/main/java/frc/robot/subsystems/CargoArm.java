@@ -210,8 +210,7 @@ public class CargoArm extends Subsystem {
 	}
 
 	public enum CargoArmControlState {
-		MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all
-		// circumstances
+		MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all circumstances
 		OPEN_LOOP // Direct PercentVBus control of the arm as a failsafe
 	}
 

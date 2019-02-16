@@ -62,7 +62,7 @@ public class Robot extends TimedRobot {
 			mMatchState = MatchState.AUTO;
 			mSubsystemManager.startAuto();
 			//AutoChooser.startAuto(new NearScaleOnlyMode(true));
-			Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(20, 20), DriveSignal.BRAKE);
+			//Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(20, 20), DriveSignal.BRAKE);
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;
@@ -98,6 +98,7 @@ public class Robot extends TimedRobot {
 	@Override
 	public void autonomousPeriodic() {
 		mSubsystemManager.mainLoop();
+		Input.updateControlInput();
 	}
 
 	@Override

@@ -68,7 +68,7 @@ public class SubsystemManager {
 					subsystem.outputTelemetry(now);
 					RobotState.getInstance().outputToSmartDashboard();
 					SmartDashboard.putNumber("Main loop Dt", main_loop_dt_ * 1e3);
-					SmartDashboard.putNumber("looper_dt", dt_);
+					SmartDashboard.putNumber("looper_dt", dt_ * 1e3);
 				}
 			}
 		}

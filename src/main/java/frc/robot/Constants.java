@@ -34,6 +34,7 @@ public final class Constants {
 		public static final double PI = 3.14159265359;
 		public static final double kTicksPerRev = 4096.0;
 		public static final double kMaxNominalOutput = 1.0;
+		public static final double kMotorSafetyTimer = 0.05;
 		public static final double kLoopDt = 0.02;
 		public static final double kLooperDt = 0.01;
 		public static final double kSlowLooperDt = 0.01;
@@ -122,7 +123,7 @@ public final class Constants {
 
 		//Vision Tuning
 		public static final double kVisionTurnP = 0.03;
-		public static final double kVisionDriverTurnP = -0.03;
+		public static final double kVisionDriverTurnP = -0.033;
 
 		//Turn In Place
 		public static final double kGoalPosTolerance = 0.75; // degrees

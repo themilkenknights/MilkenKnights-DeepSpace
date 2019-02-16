@@ -89,7 +89,7 @@ public class Input {
 			double forward = (-driverJoystick.getRawAxis(2) + driverJoystick.getRawAxis(3));
 			double turn = (-driverJoystick.getRawAxis(0));
 			LimelightTarget target = mVision.getAverageTarget();
-			double mSteer = target.getDistance() < 50.0 && target.isValidTarget() && mVisionAssist ? DRIVE.kVisionDriverTurnP * target.getXOffset() : 0.0;
+			double mSteer = target.getArea() > 1000 && target.isValidTarget() && mVisionAssist ? DRIVE.kVisionDriverTurnP * target.getXOffset() : 0.0;
 			DriveSignal controlSig = mCheesyDriveHelper.cheesyDrive(-forward, turn + mSteer, driverJoystick.getRawButton(1), false);
 			mDrive.setOpenLoop(controlSig);
 		}

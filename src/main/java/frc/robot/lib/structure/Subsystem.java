@@ -22,10 +22,15 @@ public abstract class Subsystem {
 	public void writePeriodicOutputs(double timestamp) {
 	}
 
+	/**
+	 * Method for sanity checks with a slow update period
+	 */
 	public void safetyCheck(double timestamp) {
 	}
 
-
+	/**
+	 * Method to log data or send to Shuffleboard
+	 */
 	public abstract void outputTelemetry(double timestamp);
 
 	public void teleopInit(double timestamp) {

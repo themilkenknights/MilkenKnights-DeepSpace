@@ -77,6 +77,8 @@ public class Superstructure extends Subsystem {
 	public void onMainLoop(double timestamp) {
 
 		switch (mRobotState) {
+			case PATH_FOLLOWING:
+				break;
 			case TELEOP_DRIVE:
 				break;
 			case VISION_INTAKE_STATION:
@@ -120,6 +122,8 @@ public class Superstructure extends Subsystem {
 				startVisionCargo();
 			case VISION_CARGO_INTAKE:
 				startVisionCargoIntake();
+			case PATH_FOLLOWING:
+				break;
 			default:
 				Logger.logErrorWithTrace("Unexpected robot state: " + mRobotState);
 				break;

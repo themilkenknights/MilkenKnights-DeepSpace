@@ -15,29 +15,34 @@ public class MkPixy {
 	private static double lastUpdate = 0.0;
 	//TODO Find a way of initializing block to non-null value
 	private static Block mLastBlock = null;
+	private static int PixyResult = 0;
 
 
 	public MkPixy() {
 		pixy = Pixy2.createInstance(LinkType.SPI);
-		pixy.init();
+		PixyResult = pixy.init();
 	}
 
 	public static synchronized void pixyUpdate() {
-		pixy.getCCC().getBlocks(false, Pixy2CCC.CCC_SIG1, 5);
-		blocks = pixy.getCCC().getBlocks();
-		Block largestBlock = null;
-		for (Block block : blocks) {
-			if (block.getSignature() == blockSignature) {
-				if (largestBlock == null) {
-					largestBlock = block;
-				} else if (block.getWidth() * block.getHeight() > largestBlock.getWidth() * largestBlock.getHeight()) {
-					largestBlock = block;
+		if (PixyResult == 0) {
+			int updateStatus = pixy.getCCC().getBlocks(false, Pixy2CCC.CCC_SIG1, 10);
+			if (updateStatus > 0) {
+				blocks = pixy.getCCC().getBlocks();
+				Block largestBlock = null;
+				for (Block block : blocks) {
+					if (block.getSignature() == blockSignature) {
+						if (largestBlock == null) {
+							largestBlock = block;
+						} else if (block.getWidth() * block.getHeight() > largestBlock.getWidth() * largestBlock.getHeight()) {
+							largestBlock = block;
+						}
+					}
+				}
+				if (largestBlock != null) {
+					mLastBlock = largestBlock;
+					lastUpdate = Timer.getFPGATimestamp();
 				}
 			}
-		}
-		if (largestBlock != null) {
-			mLastBlock = largestBlock;
-			lastUpdate = Timer.getFPGATimestamp();
 		}
 	}
 
@@ -53,12 +58,8 @@ public class MkPixy {
 		return mLastBlock != null ? mLastBlock.getHeight() * mLastBlock.getWidth() : 0.0;
 	}
 
-	public synchronized double getAngle() {
-		return mLastBlock != null ? mLastBlock.getAngle() : 0.0;
-	}
-
-	public synchronized Block getLastBlock() {
-		return mLastBlock;
+	public synchronized double getYaw() {
+		return mLastBlock != null ? ((mLastBlock.getX() - 157.5) * 0.1904761905) : 0.0;
 	}
 
 	public synchronized boolean isCargoIntaked() {

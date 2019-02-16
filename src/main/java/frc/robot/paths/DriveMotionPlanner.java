@@ -328,6 +328,7 @@ public class DriveMotionPlanner implements CSVWritable {
 
 		public Output() {
 		}
+
 		public Output(double left_velocity, double right_velocity, double left_accel, double right_accel,
 				double left_feedforward_voltage, double
 				right_feedforward_voltage) {

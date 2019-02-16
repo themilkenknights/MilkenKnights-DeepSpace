@@ -337,6 +337,9 @@ public class HatchArm extends Subsystem {
 		}
 	}
 
+	/**
+	 * The state of the pnuematic spear that places and intakes the Hatches. The default state should always be stowed on power off.
+	 */
 	public enum HatchSpearState {
 		PLACE(HATCH_ARM.kHatchArmPlaceState), STOW(!HATCH_ARM.kHatchArmPlaceState);
 		public final boolean state;
