@@ -23,6 +23,11 @@ public class Robot extends TimedRobot {
 	public static MatchState mMatchState = MatchState.DISABLED;
 	private final SubsystemManager mSubsystemManager = new SubsystemManager(
 			Arrays.asList());
+	private static Drive mDrive = Drive.getInstance();
+	private static HatchArm mHatch = HatchArm.getInstance();
+	private static CargoArm mCargo = CargoArm.getInstance();
+	private static Superstructure mStructure = Superstructure.getInstance();
+	private static Vision mVision = Vision.getInstance();
 
 	public Robot() {
 		super(Constants.GENERAL.kLoopDt);
@@ -102,7 +107,7 @@ public class Robot extends TimedRobot {
 	@Override
 	public void teleopPeriodic() {
 		mSubsystemManager.mainLoop();
-		//Input.updateControlInput();
+		Input.updateControlInput();
 	}
 
 	@Override
