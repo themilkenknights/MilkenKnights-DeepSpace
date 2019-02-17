@@ -19,8 +19,8 @@ public class Vision extends Subsystem {
 	private Vision() {
 		mLimeLight = new LimeLight();
 		mLimeLight.setLEDMode(LedMode.kforceOn);
-		mLimeLight.setCamMode(CamMode.kvision);
-		mLimeLight.setStream(StreamType.kPiPMain);
+		mLimeLight.setCamMode(CamMode.kdriver);
+		mLimeLight.setStream(StreamType.kStandard);
 		mPixy = new MkPixy();
 	}
 

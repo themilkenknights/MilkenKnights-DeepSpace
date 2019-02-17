@@ -139,10 +139,6 @@ public class CheesyDriveHelper {
             rightPwm = -1.0;
         }
 
-       /* if(!isQuickTurn && throttle == 0.0){
-            leftPwm = wheel / 4;
-            rightPwm = -wheel / 4;
-        } */
         return new DriveSignal(leftPwm, rightPwm);
     }
 

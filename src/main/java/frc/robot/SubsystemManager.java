@@ -165,8 +165,6 @@ public class SubsystemManager {
 		@Override
 		public void runCrashTracked() {
 			synchronized (taskRunningLock_) {
-
-
 				MkPixy.pixyUpdate();
 			}
 		}

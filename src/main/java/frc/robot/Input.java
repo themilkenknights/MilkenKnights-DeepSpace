@@ -5,6 +5,7 @@ import frc.robot.Constants.DRIVE;
 import frc.robot.Constants.INPUT;
 import frc.robot.lib.drivers.MkJoystick;
 import frc.robot.lib.drivers.MkJoystickButton;
+import frc.robot.lib.math.DriveHelper;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.CheesyDriveHelper;
 import frc.robot.lib.util.DriveSignal;
@@ -31,6 +32,9 @@ public class Input {
 	private static final MkJoystickButton toggleDriverVisionAssist = driverJoystick.getButton(4, "Driver Vision Assist");
 	private static final MkJoystickButton mRearClimb = driverJoystick.getButton(2, "Climb Rear");
 	private static final MkJoystickButton mForwardClimb = driverJoystick.getButton(3, "Climb Climb");
+	private static final MkJoystickButton mFast = driverJoystick.getButton(1, "Fast");
+	private static final MkJoystickButton mRocketTwo = driverJoystick.getButton(5, "Rocket Two");
+
 
 	private static final MkJoystickButton mVisionStationIntakeButton = operatorJoystick.getButton(3, "Vision Hatch HP Intake");
 	private static final MkJoystickButton mVisionPlaceButton = operatorJoystick.getButton(4, "Vision Place Hatch Button");
@@ -90,7 +94,7 @@ public class Input {
 			double turn = (-driverJoystick.getRawAxis(0));
 			LimelightTarget target = mVision.getAverageTarget();
 			double mSteer = target.getArea() > 1000 && target.isValidTarget() && mVisionAssist ? DRIVE.kVisionDriverTurnP * target.getXOffset() : 0.0;
-			DriveSignal controlSig = mCheesyDriveHelper.cheesyDrive(-forward, turn + mSteer, driverJoystick.getRawButton(1), false);
+			DriveSignal controlSig = DriveHelper.cheesyDrive(-forward, turn, true);
 			mDrive.setOpenLoop(controlSig);
 		}
 
@@ -161,6 +165,10 @@ public class Input {
 		} else if (mStowAllButton.isPressed()) {
 			mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
 			mCargo.setArmState(CargoArmState.PLACE_REVERSE_CARGO);
+		} else if (mFast.isHeld()){
+			mCargo.setIntakeRollers(1.0);
+		} else if(mRocketTwo.isPressed()){
+			mCargo.setArmState(CargoArmState.ROCKET_TWO);
 		}
 	}
 }

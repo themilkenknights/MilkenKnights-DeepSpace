@@ -95,7 +95,7 @@ public final class Constants {
 		public static final double kRobotAngularDrag = 6.0;  // N*m / (rad/sec)
 
 		public static final double kDriveVIntercept = 0.5603;  // V
-		public static final double kDriveKv =0.24763;  // V per rad/s2
+		public static final double kDriveKv = 0.24763;  // V per rad/s2
 		public static final double kDriveKa = 0.012;  // V per rad/s^
 		public static final double kDriveAngularKa = 0.00704;  // V per rad/s^ (found by turn in place)
 		public static final double kRobotAngularInertia = (kDriveWheelTrackRadiusMeters * kDriveKa * kRobotLinearInertia) / (kDriveAngularKa);  // Kg m^2
@@ -185,7 +185,7 @@ public final class Constants {
 		public static final double MAX_SAFE_CURRENT = 80;
 
 		public static final double INTAKE_IN_ROLLER_SPEED = -0.40;
-		public static final double INTAKE_OUT_ROLLER_SPEED = 1.0;
+		public static final double INTAKE_OUT_ROLLER_SPEED = 0.3;
 
 		public static final double kArmOffset = -48.4;
 		public static final double kFeedConstant = 0.20;

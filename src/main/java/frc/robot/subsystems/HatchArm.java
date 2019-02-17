@@ -328,7 +328,7 @@ public class HatchArm extends Subsystem {
 	public enum HatchIntakeState {
 		ENABLE(0), // State directly after robot is enabled (not mapped to a specific angle)
 		INTAKE_POINT(177.9), TRANSFER_POINT(55.0), // Outtakes into the switch on the backside of the robot
-		CLEAR_CARGO_POINT(177.9),
+		CLEAR_CARGO_POINT(130.0),
 		STOW_POINT(0.0);
 
 		public final double state;
