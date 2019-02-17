@@ -35,7 +35,6 @@ public class Input {
 	private static final MkJoystickButton mFast = driverJoystick.getButton(1, "Fast");
 	private static final MkJoystickButton mRocketTwo = driverJoystick.getButton(5, "Rocket Two");
 
-
 	private static final MkJoystickButton mVisionStationIntakeButton = operatorJoystick.getButton(3, "Vision Hatch HP Intake");
 	private static final MkJoystickButton mVisionPlaceButton = operatorJoystick.getButton(4, "Vision Place Hatch Button");
 
@@ -51,7 +50,6 @@ public class Input {
 
 	private static final MkJoystickButton mGroundIntakeToggleButton = operatorJoystick.getButton(9, "Ground Intake Toggle (Stow/Ground)");
 	private static final MkJoystickButton mTransferButton = operatorJoystick.getButton(10, "Transfer Hatch Button");
-	private static final MkJoystickButton mGroundIntakeClearCargo = operatorJoystick.getButton(8, "Ground Intake Clear Cargo");
 
 
 	private static Drive mDrive = Drive.getInstance();
@@ -165,9 +163,9 @@ public class Input {
 		} else if (mStowAllButton.isPressed()) {
 			mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
 			mCargo.setArmState(CargoArmState.PLACE_REVERSE_CARGO);
-		} else if (mFast.isHeld()){
+		} else if (mFast.isHeld()) {
 			mCargo.setIntakeRollers(1.0);
-		} else if(mRocketTwo.isPressed()){
+		} else if (mRocketTwo.isPressed()) {
 			mCargo.setArmState(CargoArmState.ROCKET_TWO);
 		}
 	}

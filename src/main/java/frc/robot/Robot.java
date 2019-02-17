@@ -61,8 +61,6 @@ public class Robot extends TimedRobot {
 			Logger.logAutoInit();
 			mMatchState = MatchState.AUTO;
 			mSubsystemManager.startAuto();
-			//AutoChooser.startAuto(new NearScaleOnlyMode(true));
-			//Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(20, 20), DriveSignal.BRAKE);
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;
