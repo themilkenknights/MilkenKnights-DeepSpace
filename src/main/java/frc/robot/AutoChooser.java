@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeExecutor;
-import frc.robot.auto.modes.NearScaleOnlyMode;
+import frc.robot.auto.modes.TestPathMode;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MatchData;
 
@@ -34,7 +34,7 @@ public class AutoChooser {
 	}
 
 	private static AutoModeBase getStraightMode() {
-		return new NearScaleOnlyMode(true);
+		return new TestPathMode(true);
 	}
 
 	private static void updateGameData() {

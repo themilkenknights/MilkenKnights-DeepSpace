@@ -46,6 +46,10 @@ public class Drive extends Subsystem {
 		mMotionPlanner = new DriveMotionPlanner();
 	}
 
+	public static Drive getInstance() {
+		return InstanceHolder.mInstance;
+	}
+
 	/**
 	 * Step 1: Read inputs from Talon and NavX
 	 */
@@ -59,14 +63,13 @@ public class Drive extends Subsystem {
 		mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(navX.getFusedHeading()).rotateBy(mGyroOffset);
 	}
 
-
 	/**
 	 * Periodic update after read. Used to update odometry and path setpoints
 	 *
 	 * @param timestamp In Seconds Since Code Start
 	 */
 	@Override
-	public void onMainLoop(double timestamp) {
+	public void onQuickLoop(double timestamp) {
 		synchronized (Drive.this) {
 			stateEstimator(timestamp);
 			switch (mDriveControlState) {
@@ -182,7 +185,6 @@ public class Drive extends Subsystem {
 		mPeriodicIO.right_feedforward = 0.0;
 		mPeriodicIO.brake_mode = NeutralMode.Brake;
 	}
-
 
 	/**
 	 * @param signal Left/Right Position in inches
@@ -305,7 +307,6 @@ public class Drive extends Subsystem {
 
 	}
 
-
 	public boolean checkSystem() {
 		boolean driveCheck = mLeftDrive.checkSystem() & mRightDrive.checkSystem();
 		if (driveCheck) {
@@ -320,16 +321,6 @@ public class Drive extends Subsystem {
 		mLeftDrive.resetConfig();
 		mRightDrive.resetConfig();
 		return driveCheck;
-	}
-
-	/**
-	 * Zero heading by adding a software offset
-	 */
-	public synchronized void setHeading(Rotation2d heading) {
-		Logger.logMarker("SET HEADING: " + heading.getDegrees());
-		mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(navX.getFusedHeading()).inverse());
-		Logger.logMarker("Gyro offset: " + mGyroOffset.getDegrees());
-		mPeriodicIO.gyro_heading = heading;
 	}
 
 	/*
@@ -355,6 +346,16 @@ public class Drive extends Subsystem {
 	}
 
 	/**
+	 * Zero heading by adding a software offset
+	 */
+	public synchronized void setHeading(Rotation2d heading) {
+		Logger.logMarker("SET HEADING: " + heading.getDegrees());
+		mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(navX.getFusedHeading()).inverse());
+		Logger.logMarker("Gyro offset: " + mGyroOffset.getDegrees());
+		mPeriodicIO.gyro_heading = heading;
+	}
+
+	/**
 	 * TODO Ensure this returns the correct angle {@link #updateTurnToHeading()}
 	 *
 	 * @return current fused heading from navX
@@ -369,10 +370,6 @@ public class Drive extends Subsystem {
 
 	public boolean isMotionMagicFinished() {
 		return mLeftDrive.getError() < DRIVE.kGoalPosTolerance && mRightDrive.getError() < DRIVE.kGoalPosTolerance;
-	}
-
-	public static Drive getInstance() {
-		return InstanceHolder.mInstance;
 	}
 
 	public enum DriveControlState {

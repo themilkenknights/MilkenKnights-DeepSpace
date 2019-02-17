@@ -88,7 +88,7 @@ public class MkTalon {
 		masterTalon.enableVoltageCompensation(true);
 		CTRE(masterTalon.configNeutralDeadband(0.0, kLong));
 		CTRE(masterTalon.configClosedloopRamp(0.0, kLong));
-
+		CTRE(masterTalon.configMotionSCurveStrength(4, kLong));
 		switch (mSide) {
 			case Left_Drive:
 				CTRE(masterTalon.config_kF(kSlot, Constants.DRIVE.kLeftDriveF, kLong));
@@ -200,7 +200,7 @@ public class MkTalon {
 			CTRE(slaveTalon.configAllSettings(new TalonSRXConfiguration()));
 			CTRE(slaveTalon.configFactoryDefault(kLong));
 			CTRE(slaveTalon.clearStickyFaults(kLong));
-			CTRE(slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 50));
+			CTRE(slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 10));
 			CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kLong));
 			CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 500, kLong));
 			CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 500, kLong));
@@ -375,6 +375,7 @@ public class MkTalon {
 	 * and for mechanisms with several motors, the delta between these measurements must be below a certain threshold.
 	 *
 	 * The cargo and ground intake move to each available setpoint and should be verified by the test operator.
+	 *
 	 * @return Whether the test was successful
 	 */
 	public boolean checkSystem() {

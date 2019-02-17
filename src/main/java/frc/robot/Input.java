@@ -106,13 +106,11 @@ public class Input {
 				mCargo.setArmState(CargoArmState.INTAKE);
 			} else if (operatorJoystick.getPOV() == 180) {
 				mCargo.setArmState(CargoArmState.REVERSE_CARGOSHIP);
-			}
-				else if (mCargoRocketLevelTwo.isPressed()) {
-			mCargo.setArmState(CargoArmState.REVERSE_ROCKET_LEVEL_TWO);
-		}
-			 else if (mCargoRocketLevelTwo.isPressed()) {
+			} else if (mCargoRocketLevelTwo.isPressed()) {
 				mCargo.setArmState(CargoArmState.REVERSE_ROCKET_LEVEL_TWO);
-			}else if (operatorJoystick.getPOV() == 90) {
+			} else if (mCargoRocketLevelTwo.isPressed()) {
+				mCargo.setArmState(CargoArmState.REVERSE_ROCKET_LEVEL_TWO);
+			} else if (operatorJoystick.getPOV() == 90) {
 				if (mCargo.getArmState() == CargoArmState.REVERSE_CARGOSHIP || mCargo.getArmState() == CargoArmState.FORWARD_ROCKET_LEVEL_ONE) {
 					mStructure.setRobotState(RobotState.VISION_CARGO_OUTTAKE);
 				} else if (mCargo.getArmState() == CargoArmState.INTAKE) {

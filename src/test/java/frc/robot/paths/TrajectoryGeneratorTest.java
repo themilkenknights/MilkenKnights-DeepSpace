@@ -20,7 +20,7 @@ public class TrajectoryGeneratorTest {
 	public void test() {
 		TrajectoryGenerator.getInstance().generateTrajectories();
 		verifyMirroredTrajectories(
-				TrajectoryGenerator.getInstance().getTrajectorySet().sideStartToNearScale, true);
+				TrajectoryGenerator.getInstance().getTrajectorySet().testPath, true);
 	}
 
 	public void verifyMirroredTrajectories(

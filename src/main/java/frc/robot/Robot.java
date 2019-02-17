@@ -8,8 +8,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
-import frc.robot.auto.modes.NearScaleOnlyMode;
-import frc.robot.lib.util.DriveSignal;
+import frc.robot.auto.modes.TestPathMode;
 import frc.robot.lib.util.Logger;
 import frc.robot.paths.TrajectoryGenerator;
 import frc.robot.subsystems.CargoArm;
@@ -23,7 +22,7 @@ public class Robot extends TimedRobot {
 
 	public static MatchState mMatchState = MatchState.DISABLED;
 	private final SubsystemManager mSubsystemManager = new SubsystemManager(
-			Arrays.asList(Drive.getInstance(), HatchArm.getInstance(), CargoArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
+			Arrays.asList(Drive.getInstance(), HatchArm.getInstance()));
 
 	public Robot() {
 		super(Constants.GENERAL.kLoopDt);
@@ -61,6 +60,7 @@ public class Robot extends TimedRobot {
 			Logger.logAutoInit();
 			mMatchState = MatchState.AUTO;
 			mSubsystemManager.startAuto();
+			AutoChooser.startAuto(new TestPathMode(false));
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;

@@ -87,13 +87,13 @@ public class TrajectoryGenerator {
 
 	public class TrajectorySet {
 
-		public final MirroredTrajectory sideStartToNearScale;
+		public final MirroredTrajectory testPath;
 
 		private TrajectorySet() {
-			sideStartToNearScale = new MirroredTrajectory(getSideStartToNearScale());
+			testPath = new MirroredTrajectory(getTestPath());
 		}
 
-		private Trajectory<TimedState<Pose2dWithCurvature>> getSideStartToNearScale() {
+		private Trajectory<TimedState<Pose2dWithCurvature>> getTestPath() {
 			List<Pose2d> waypoints = new ArrayList<>();
 			waypoints.add(kStartPose);
 			waypoints.add(kStartPose.transformBy(new Pose2d(new Translation2d(-20.0, 0.0), Rotation2d.fromDegrees(0.0))));

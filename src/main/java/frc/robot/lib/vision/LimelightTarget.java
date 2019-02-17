@@ -17,15 +17,6 @@ public class LimelightTarget {
 	private double distance;
 	private double[] poseArray;
 	private Pose2d deltaPose;
-
-	public double getHorizLength() {
-		return horizLength;
-	}
-
-	public double getVertLength() {
-		return vertLength;
-	}
-
 	private double horizLength;
 	private double vertLength;
 
@@ -41,6 +32,14 @@ public class LimelightTarget {
 		this.distance = VISION.kAreaToDistVisionMap.getInterpolated(new InterpolatingDouble(getArea())).value;
 		this.poseArray = poseArray;
 		this.deltaPose = new Pose2d(new Translation2d(-this.poseArray[2], this.poseArray[0]), Rotation2d.fromDegrees(this.poseArray[3]));
+	}
+
+	public double getHorizLength() {
+		return horizLength;
+	}
+
+	public double getVertLength() {
+		return vertLength;
 	}
 
 	public boolean isValidTarget() {

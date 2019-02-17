@@ -4,7 +4,6 @@ import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeEndedException;
 import frc.robot.auto.actions.MotionMagicBlind;
 import frc.robot.auto.actions.MotionMagicVision;
-import frc.robot.auto.actions.TurnInPlace;
 import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Superstructure.RobotState;
 

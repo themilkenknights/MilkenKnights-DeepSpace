@@ -36,10 +36,10 @@ public final class Constants {
 		public static final double kMaxNominalOutput = 1.0;
 		public static final double kMotorSafetyTimer = 0.05;
 		public static final double kLoopDt = 0.02;
-		public static final double kLooperDt = 0.01;
-		public static final double kSlowLooperDt = 0.05;
-		public static final double kLimelightLoopPeriod = 0.01;
-		public static final double kPixyLoopPeriod = 0.05;
+		public static final double kLooperDt = 0.02;
+		public static final double kSlowLooperDt = 0.02;
+		public static final double kLimelightLoopPeriod = 0.02;
+		public static final double kPixyLoopPeriod = 0.02;
 		public static final double kTelemetryDt = 0.2;
 	}
 

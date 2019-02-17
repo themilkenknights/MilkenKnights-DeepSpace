@@ -94,11 +94,7 @@ public class CargoArm extends Subsystem {
 		}
 	}
 
-	/*
-	 * Step 3: Write setpoints to Talon
-	 */
-	@Override
-	public synchronized void writePeriodicOutputs(double timestamp) {
+	public synchronized void slowUpdate(double timestamp) {
 		synchronized (CargoArm.this) {
 			if (mCargoArmControlState == CargoArmControlState.OPEN_LOOP) {
 				mArmTalon.set(ControlMode.PercentOutput, mOpenLoopSetpoint, NeutralMode.Brake);

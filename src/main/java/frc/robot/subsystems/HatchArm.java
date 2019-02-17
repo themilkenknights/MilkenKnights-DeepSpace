@@ -119,35 +119,6 @@ public class HatchArm extends Subsystem {
 		}
 	}
 
-	/*
-	 * Step 3: Write setpoints to Talon
-	 */
-	@Override
-	public synchronized void writePeriodicOutputs(double timestamp) {
-		synchronized (HatchArm.this) {
-			if (mHatchIntakeControlState == HatchIntakeControlState.OPEN_LOOP) {
-				mArmTalon.set(ControlMode.PercentOutput, mOpenLoopSetpoint, NeutralMode.Brake);
-			} else if (mHatchIntakeControlState == HatchIntakeControlState.MOTION_MAGIC) {
-				if (mHatchIntakeState == HatchIntakeState.ENABLE) {
-					mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mArmPosEnable), NeutralMode.Brake);
-				} else {
-					mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mHatchIntakeState.state),
-							NeutralMode.Brake, 0.0);
-				}
-			} else {
-				Logger.logErrorWithTrace("Unexpected arm control state: " + mHatchIntakeControlState);
-			}
-
-			mArmSolenoid.set(mHatchSpearState.state);
-		}
-	}
-
-	@Override
-	public synchronized void readPeriodicInputs(double timestamp) {
-		synchronized (HatchArm.this) {
-			mHatchLimitTriggered = mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
-		}
-	}
 
 	public void outputTelemetry(double timestamp) {
 		mArmTalon.updateSmartDash(false);
@@ -167,8 +138,9 @@ public class HatchArm extends Subsystem {
 	 * @param timestamp Time in seconds since code start
 	 */
 	@Override
-	public void onMainLoop(double timestamp) {
+	public void slowUpdate(double timestamp) {
 		synchronized (HatchArm.this) {
+			mHatchLimitTriggered = mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
 			switch (mHatchMechanismState) {
 				case STOWED:
 				case SPEAR_STOW_ONLY:
@@ -202,7 +174,19 @@ public class HatchArm extends Subsystem {
 					Logger.logErrorWithTrace("Unexpected Hatch Arm control state: " + mHatchMechanismState);
 					break;
 			}
-
+			if (mHatchIntakeControlState == HatchIntakeControlState.OPEN_LOOP) {
+				mArmTalon.set(ControlMode.PercentOutput, mOpenLoopSetpoint, NeutralMode.Brake);
+			} else if (mHatchIntakeControlState == HatchIntakeControlState.MOTION_MAGIC) {
+				if (mHatchIntakeState == HatchIntakeState.ENABLE) {
+					mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mArmPosEnable), NeutralMode.Brake);
+				} else {
+					mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mHatchIntakeState.state),
+							NeutralMode.Brake, 0.0);
+				}
+			} else {
+				Logger.logErrorWithTrace("Unexpected arm control state: " + mHatchIntakeControlState);
+			}
+			mArmSolenoid.set(mHatchSpearState.state);
 		}
 	}
 

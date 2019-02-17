@@ -3,9 +3,7 @@ package frc.robot.lib.vision;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
-import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
-import frc.robot.Constants.GENERAL;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MovingAverage;
 import frc.robot.lib.vision.LimeLightControlMode.Advanced_Crosshair;
@@ -19,6 +17,7 @@ import frc.robot.lib.vision.LimeLightControlMode.StreamType;
  * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you Enjoy the Lime Light Camera.
  */
 public class LimeLight {
+
 	NetworkTableEntry tv, tx, ty, ta, ts, tl, thoriz, tvert, ledMode, camMode, pipeline, stream, snapshot;
 	NetworkTableEntry camtran;
 	private NetworkTable m_table, m_pnp_table;

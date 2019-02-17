@@ -2566,3 +2566,1232 @@ d13e11bf-d258-42cf-8221-0b08cfb97164, Disabled Init, Wed Feb 13 19:48:55 PST 201
 d13e11bf-d258-42cf-8221-0b08cfb97164, Set Hatch Spear to STOW, Wed Feb 13 19:48:55 PST 2019
 d13e11bf-d258-42cf-8221-0b08cfb97164, SET HEADING: 0.0, Wed Feb 13 19:48:55 PST 2019
 d13e11bf-d258-42cf-8221-0b08cfb97164, Gyro offset: 109.69000244140626, Wed Feb 13 19:48:55 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Robot Startup, Wed Feb 13 19:53:12 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Robot Init, Wed Feb 13 19:53:12 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Generating trajectories..., Wed Feb 13 19:53:12 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Finished trajectory generation, Wed Feb 13 19:53:13 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Disabled Init, Wed Feb 13 19:53:13 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Set Hatch Spear to STOW, Wed Feb 13 19:53:13 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, SET HEADING: 0.0, Wed Feb 13 19:53:13 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Gyro offset: 110.8999938964844, Wed Feb 13 19:53:13 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Teleop Init, Wed Feb 13 19:53:13 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Switching to Motion Magic, Wed Feb 13 19:53:13 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Switching to open loop, Wed Feb 13 19:53:13 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, [Joystick] 1	[Button]8	 Pressed ( Stow All Button ), Wed Feb 13 19:53:31 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Set Hatch Spear to STOW, Wed Feb 13 19:53:31 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, [Joystick] 1	[Button]8	 Pressed ( Stow All Button ), Wed Feb 13 19:53:31 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Set Hatch Spear to STOW, Wed Feb 13 19:53:31 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Unsafe Current on Hatch32.875 Amps, Wed Feb 13 19:53:31 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Unsafe Current on Hatch45.0 Amps, Wed Feb 13 19:53:31 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, [Joystick] 1	[Button]8	 Pressed ( Stow All Button ), Wed Feb 13 19:53:33 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Set Hatch Spear to STOW, Wed Feb 13 19:53:33 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Unsafe Current on Hatch33.125 Amps, Wed Feb 13 19:53:33 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Unsafe Current on Hatch41.5 Amps, Wed Feb 13 19:53:33 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, [Joystick] 1	[Button]8	 Pressed ( Stow All Button ), Wed Feb 13 19:53:34 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Set Hatch Spear to STOW, Wed Feb 13 19:53:34 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Unsafe Current on Hatch27.875 Amps, Wed Feb 13 19:53:34 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Unsafe Current on Hatch32.75 Amps, Wed Feb 13 19:53:34 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, [Joystick] 1	[Button]8	 Pressed ( Stow All Button ), Wed Feb 13 19:53:34 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Set Hatch Spear to STOW, Wed Feb 13 19:53:34 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Unsafe Current on Hatch27.5 Amps, Wed Feb 13 19:53:34 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Unsafe Current on Hatch34.875 Amps, Wed Feb 13 19:53:34 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Unsafe Current on Hatch42.875 Amps, Wed Feb 13 19:53:35 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, [Joystick] 1	[Button]8	 Pressed ( Stow All Button ), Wed Feb 13 19:53:35 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Set Hatch Spear to STOW, Wed Feb 13 19:53:35 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Unsafe Current on Hatch26.5 Amps, Wed Feb 13 19:53:36 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, [Joystick] 1	[Button]8	 Pressed ( Stow All Button ), Wed Feb 13 19:53:36 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Set Hatch Spear to STOW, Wed Feb 13 19:53:36 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Disabled Init, Wed Feb 13 19:53:40 PST 2019
+16fc0d04-b981-4a66-98b4-5f3e012c4592, Set Hatch Spear to STOW, Wed Feb 13 19:53:40 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Robot Startup, Wed Feb 13 19:54:03 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Robot Init, Wed Feb 13 19:54:03 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Generating trajectories..., Wed Feb 13 19:54:03 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Finished trajectory generation, Wed Feb 13 19:54:03 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Disabled Init, Wed Feb 13 19:54:03 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Set Hatch Spear to STOW, Wed Feb 13 19:54:03 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, SET HEADING: 0.0, Wed Feb 13 19:54:04 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Gyro offset: -63.279998779296875, Wed Feb 13 19:54:04 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Teleop Init, Wed Feb 13 19:54:04 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Switching to Motion Magic, Wed Feb 13 19:54:04 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Switching to open loop, Wed Feb 13 19:54:05 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:54:06 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Set Hatch Spear to STOW, Wed Feb 13 19:54:06 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:54:07 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Set Hatch Spear to STOW, Wed Feb 13 19:54:07 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:54:08 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Set Hatch Spear to STOW, Wed Feb 13 19:54:08 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:54:09 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Set Hatch Spear to STOW, Wed Feb 13 19:54:09 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:54:09 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Set Hatch Spear to STOW, Wed Feb 13 19:54:09 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Disabled Init, Wed Feb 13 19:54:38 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Set Hatch Spear to STOW, Wed Feb 13 19:54:38 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Teleop Init, Wed Feb 13 19:54:52 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Switching to Motion Magic, Wed Feb 13 19:54:52 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Switching to open loop, Wed Feb 13 19:54:52 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Disabled Init, Wed Feb 13 19:55:08 PST 2019
+ab45fedb-ef2e-4d2d-82bc-ac15af484a27, Set Hatch Spear to STOW, Wed Feb 13 19:55:08 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Robot Startup, Wed Feb 13 19:55:49 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Robot Init, Wed Feb 13 19:55:49 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Generating trajectories..., Wed Feb 13 19:55:49 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Finished trajectory generation, Wed Feb 13 19:55:49 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Disabled Init, Wed Feb 13 19:55:49 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Set Hatch Spear to STOW, Wed Feb 13 19:55:49 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, SET HEADING: 0.0, Wed Feb 13 19:55:50 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Gyro offset: 102.25000000000003, Wed Feb 13 19:55:50 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Teleop Init, Wed Feb 13 19:56:12 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Switching to Motion Magic, Wed Feb 13 19:56:12 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Switching to open loop, Wed Feb 13 19:56:12 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Disabled Init, Wed Feb 13 19:56:42 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Set Hatch Spear to STOW, Wed Feb 13 19:56:42 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Teleop Init, Wed Feb 13 19:56:53 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Switching to Motion Magic, Wed Feb 13 19:56:53 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Switching to open loop, Wed Feb 13 19:56:53 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Disabled Init, Wed Feb 13 19:57:23 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Set Hatch Spear to STOW, Wed Feb 13 19:57:23 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Teleop Init, Wed Feb 13 19:57:32 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Switching to Motion Magic, Wed Feb 13 19:57:32 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Switching to open loop, Wed Feb 13 19:57:32 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Disabled Init, Wed Feb 13 19:57:46 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Set Hatch Spear to STOW, Wed Feb 13 19:57:46 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Teleop Init, Wed Feb 13 19:57:53 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Switching to Motion Magic, Wed Feb 13 19:57:53 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Switching to open loop, Wed Feb 13 19:57:53 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Disabled Init, Wed Feb 13 19:58:13 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Set Hatch Spear to STOW, Wed Feb 13 19:58:13 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Teleop Init, Wed Feb 13 19:58:24 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Switching to Motion Magic, Wed Feb 13 19:58:24 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Switching to open loop, Wed Feb 13 19:58:24 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:58:28 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Set Hatch Spear to STOW, Wed Feb 13 19:58:28 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:58:28 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Set Hatch Spear to STOW, Wed Feb 13 19:58:28 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:58:29 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Set Hatch Spear to STOW, Wed Feb 13 19:58:29 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Disabled Init, Wed Feb 13 19:58:35 PST 2019
+8f0ef18b-e192-4d31-bf3d-2c48e778cdef, Set Hatch Spear to STOW, Wed Feb 13 19:58:35 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, Robot Startup, Wed Feb 13 19:58:43 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, Robot Init, Wed Feb 13 19:58:43 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, Generating trajectories..., Wed Feb 13 19:58:43 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, Finished trajectory generation, Wed Feb 13 19:58:43 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, Disabled Init, Wed Feb 13 19:58:43 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, Set Hatch Spear to STOW, Wed Feb 13 19:58:43 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, SET HEADING: 0.0, Wed Feb 13 19:58:44 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, Gyro offset: 99.60000610351567, Wed Feb 13 19:58:44 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, Teleop Init, Wed Feb 13 19:58:44 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, Switching to Motion Magic, Wed Feb 13 19:58:44 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, Switching to open loop, Wed Feb 13 19:58:44 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:58:58 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, Set Hatch Spear to STOW, Wed Feb 13 19:58:58 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, Disabled Init, Wed Feb 13 19:59:16 PST 2019
+19cff67f-21ed-4ca3-8241-8f3ee0465700, Set Hatch Spear to STOW, Wed Feb 13 19:59:16 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Robot Startup, Wed Feb 13 19:59:30 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Robot Init, Wed Feb 13 19:59:30 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Generating trajectories..., Wed Feb 13 19:59:30 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Finished trajectory generation, Wed Feb 13 19:59:30 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Disabled Init, Wed Feb 13 19:59:30 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 19:59:30 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, SET HEADING: 0.0, Wed Feb 13 19:59:31 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Gyro offset: 103.23001098632811, Wed Feb 13 19:59:31 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Teleop Init, Wed Feb 13 19:59:31 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Switching to Motion Magic, Wed Feb 13 19:59:31 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Switching to open loop, Wed Feb 13 19:59:31 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:59:37 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 19:59:37 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:59:39 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 19:59:39 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]12	 Pressed ( Transfer Hatch Button Button ), Wed Feb 13 19:59:42 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to PLACE, Wed Feb 13 19:59:42 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]12	 Pressed ( Transfer Hatch Button Button ), Wed Feb 13 19:59:45 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to PLACE, Wed Feb 13 19:59:45 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]12	 Pressed ( Transfer Hatch Button Button ), Wed Feb 13 19:59:46 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to PLACE, Wed Feb 13 19:59:46 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]12	 Pressed ( Transfer Hatch Button Button ), Wed Feb 13 19:59:47 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to PLACE, Wed Feb 13 19:59:47 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:59:47 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 19:59:47 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:59:48 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 19:59:48 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:59:49 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 19:59:49 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:59:50 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 19:59:50 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:59:51 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 19:59:51 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]12	 Pressed ( Transfer Hatch Button Button ), Wed Feb 13 19:59:52 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to PLACE, Wed Feb 13 19:59:52 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:59:53 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 19:59:53 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:59:54 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 19:59:54 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 19:59:54 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 19:59:54 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]9	 Pressed ( Place Button ), Wed Feb 13 20:00:16 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to PLACE, Wed Feb 13 20:00:16 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 20:00:20 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]8	 Pressed ( Stow All Button ), Wed Feb 13 20:00:29 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 20:00:29 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]7	 Pressed ( Disable Limits Button ), Wed Feb 13 20:00:31 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to PLACE, Wed Feb 13 20:00:31 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:00:51 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 20:00:51 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:00:54 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 20:00:54 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:00:54 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 20:00:54 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:00:57 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 20:00:57 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]12	 Pressed ( Transfer Hatch Button Button ), Wed Feb 13 20:01:00 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to PLACE, Wed Feb 13 20:01:00 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:01:02 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 20:01:02 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:01:04 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 20:01:04 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:01:05 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 20:01:05 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Disabled Init, Wed Feb 13 20:01:29 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 20:01:29 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Teleop Init, Wed Feb 13 20:01:47 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Switching to Motion Magic, Wed Feb 13 20:01:47 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Switching to open loop, Wed Feb 13 20:01:47 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:01:49 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 20:01:49 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:01:50 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 20:01:50 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:01:50 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 20:01:50 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Disabled Init, Wed Feb 13 20:01:52 PST 2019
+f73380c3-6a18-4698-9535-05a16101aef5, Set Hatch Spear to STOW, Wed Feb 13 20:01:52 PST 2019
+ee09f246-0519-4063-8a9c-4e92a8398469, Robot Startup, Wed Feb 13 20:01:59 PST 2019
+ee09f246-0519-4063-8a9c-4e92a8398469, Robot Init, Wed Feb 13 20:02:00 PST 2019
+ee09f246-0519-4063-8a9c-4e92a8398469, Generating trajectories..., Wed Feb 13 20:02:00 PST 2019
+ee09f246-0519-4063-8a9c-4e92a8398469, Finished trajectory generation, Wed Feb 13 20:02:00 PST 2019
+ee09f246-0519-4063-8a9c-4e92a8398469, Disabled Init, Wed Feb 13 20:02:00 PST 2019
+ee09f246-0519-4063-8a9c-4e92a8398469, Set Hatch Spear to STOW, Wed Feb 13 20:02:00 PST 2019
+ee09f246-0519-4063-8a9c-4e92a8398469, SET HEADING: 0.0, Wed Feb 13 20:02:00 PST 2019
+ee09f246-0519-4063-8a9c-4e92a8398469, Gyro offset: 104.52000427246097, Wed Feb 13 20:02:00 PST 2019
+5e9559db-99ff-4741-beaf-8ee29c5bfc87, Robot Startup, Wed Feb 13 20:02:42 PST 2019
+5e9559db-99ff-4741-beaf-8ee29c5bfc87, Robot Init, Wed Feb 13 20:02:42 PST 2019
+5e9559db-99ff-4741-beaf-8ee29c5bfc87, Generating trajectories..., Wed Feb 13 20:02:42 PST 2019
+5e9559db-99ff-4741-beaf-8ee29c5bfc87, Finished trajectory generation, Wed Feb 13 20:02:43 PST 2019
+5e9559db-99ff-4741-beaf-8ee29c5bfc87, Disabled Init, Wed Feb 13 20:02:43 PST 2019
+5e9559db-99ff-4741-beaf-8ee29c5bfc87, Set Hatch Spear to STOW, Wed Feb 13 20:02:43 PST 2019
+5e9559db-99ff-4741-beaf-8ee29c5bfc87, SET HEADING: 0.0, Wed Feb 13 20:02:43 PST 2019
+5e9559db-99ff-4741-beaf-8ee29c5bfc87, Gyro offset: 104.78999328613283, Wed Feb 13 20:02:43 PST 2019
+5e9559db-99ff-4741-beaf-8ee29c5bfc87, Teleop Init, Wed Feb 13 20:02:43 PST 2019
+5e9559db-99ff-4741-beaf-8ee29c5bfc87, Switching to Motion Magic, Wed Feb 13 20:02:43 PST 2019
+5e9559db-99ff-4741-beaf-8ee29c5bfc87, Switching to open loop, Wed Feb 13 20:02:44 PST 2019
+5e9559db-99ff-4741-beaf-8ee29c5bfc87, Disabled Init, Wed Feb 13 20:02:46 PST 2019
+5e9559db-99ff-4741-beaf-8ee29c5bfc87, Set Hatch Spear to STOW, Wed Feb 13 20:02:46 PST 2019
+cc78c1fb-7be8-423b-95cd-078b9f65879b, Robot Startup, Wed Feb 13 20:02:54 PST 2019
+cc78c1fb-7be8-423b-95cd-078b9f65879b, Robot Init, Wed Feb 13 20:02:55 PST 2019
+cc78c1fb-7be8-423b-95cd-078b9f65879b, Generating trajectories..., Wed Feb 13 20:02:55 PST 2019
+cc78c1fb-7be8-423b-95cd-078b9f65879b, Finished trajectory generation, Wed Feb 13 20:02:55 PST 2019
+cc78c1fb-7be8-423b-95cd-078b9f65879b, Disabled Init, Wed Feb 13 20:02:55 PST 2019
+cc78c1fb-7be8-423b-95cd-078b9f65879b, Set Hatch Spear to STOW, Wed Feb 13 20:02:55 PST 2019
+cc78c1fb-7be8-423b-95cd-078b9f65879b, SET HEADING: 0.0, Wed Feb 13 20:02:55 PST 2019
+cc78c1fb-7be8-423b-95cd-078b9f65879b, Gyro offset: 108.11000061035155, Wed Feb 13 20:02:55 PST 2019
+ed0e8071-0270-4080-b752-df73b8cfe6c4, Robot Startup, Wed Feb 13 20:03:10 PST 2019
+ed0e8071-0270-4080-b752-df73b8cfe6c4, Robot Init, Wed Feb 13 20:03:10 PST 2019
+ed0e8071-0270-4080-b752-df73b8cfe6c4, Generating trajectories..., Wed Feb 13 20:03:10 PST 2019
+ed0e8071-0270-4080-b752-df73b8cfe6c4, Finished trajectory generation, Wed Feb 13 20:03:10 PST 2019
+ed0e8071-0270-4080-b752-df73b8cfe6c4, Disabled Init, Wed Feb 13 20:03:10 PST 2019
+ed0e8071-0270-4080-b752-df73b8cfe6c4, Set Hatch Spear to STOW, Wed Feb 13 20:03:10 PST 2019
+ed0e8071-0270-4080-b752-df73b8cfe6c4, SET HEADING: 0.0, Wed Feb 13 20:03:11 PST 2019
+ed0e8071-0270-4080-b752-df73b8cfe6c4, Gyro offset: 107.94000244140626, Wed Feb 13 20:03:11 PST 2019
+ed0e8071-0270-4080-b752-df73b8cfe6c4, Teleop Init, Wed Feb 13 20:03:11 PST 2019
+ed0e8071-0270-4080-b752-df73b8cfe6c4, Switching to Motion Magic, Wed Feb 13 20:03:11 PST 2019
+ed0e8071-0270-4080-b752-df73b8cfe6c4, Switching to open loop, Wed Feb 13 20:03:11 PST 2019
+ed0e8071-0270-4080-b752-df73b8cfe6c4, Disabled Init, Wed Feb 13 20:03:12 PST 2019
+ed0e8071-0270-4080-b752-df73b8cfe6c4, Set Hatch Spear to STOW, Wed Feb 13 20:03:12 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Robot Startup, Wed Feb 13 20:03:45 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Robot Init, Wed Feb 13 20:03:45 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Generating trajectories..., Wed Feb 13 20:03:45 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Finished trajectory generation, Wed Feb 13 20:03:46 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Disabled Init, Wed Feb 13 20:03:46 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Set Hatch Spear to STOW, Wed Feb 13 20:03:46 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, SET HEADING: 0.0, Wed Feb 13 20:03:46 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Gyro offset: 108.03999328613284, Wed Feb 13 20:03:46 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Auto Init, Wed Feb 13 20:03:46 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, SET HEADING: 0.0, Wed Feb 13 20:03:46 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Gyro offset: 108.03999328613284, Wed Feb 13 20:03:46 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Switching to Motion Magic, Wed Feb 13 20:03:46 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Disabled Init, Wed Feb 13 20:03:52 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Switching to open loop, Wed Feb 13 20:03:52 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Set Hatch Spear to STOW, Wed Feb 13 20:03:52 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Auto Init, Wed Feb 13 20:03:54 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, SET HEADING: 0.0, Wed Feb 13 20:03:54 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Gyro offset: 108.0800018310547, Wed Feb 13 20:03:54 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Switching to Motion Magic, Wed Feb 13 20:03:54 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Disabled Init, Wed Feb 13 20:03:54 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Switching to open loop, Wed Feb 13 20:03:54 PST 2019
+e37cf794-567c-49e6-a136-e37c3a362174, Set Hatch Spear to STOW, Wed Feb 13 20:03:54 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, Robot Startup, Wed Feb 13 20:04:32 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, Robot Init, Wed Feb 13 20:04:32 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, Generating trajectories..., Wed Feb 13 20:04:32 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, Finished trajectory generation, Wed Feb 13 20:04:32 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, Disabled Init, Wed Feb 13 20:04:32 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, Set Hatch Spear to STOW, Wed Feb 13 20:04:33 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, SET HEADING: 0.0, Wed Feb 13 20:04:33 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, Gyro offset: 108.30000305175783, Wed Feb 13 20:04:33 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, Auto Init, Wed Feb 13 20:04:33 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, SET HEADING: 0.0, Wed Feb 13 20:04:33 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, Gyro offset: 108.30000305175783, Wed Feb 13 20:04:33 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, Switching to Motion Magic, Wed Feb 13 20:04:33 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, Disabled Init, Wed Feb 13 20:04:35 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, Switching to open loop, Wed Feb 13 20:04:35 PST 2019
+93d3655e-1c28-4f4e-86b1-e06fb8e50243, Set Hatch Spear to STOW, Wed Feb 13 20:04:35 PST 2019
+c0d12f74-3e04-4f39-b71b-e4194280263b, Robot Startup, Wed Feb 13 20:05:37 PST 2019
+c0d12f74-3e04-4f39-b71b-e4194280263b, Robot Init, Wed Feb 13 20:05:37 PST 2019
+c0d12f74-3e04-4f39-b71b-e4194280263b, Generating trajectories..., Wed Feb 13 20:05:37 PST 2019
+c0d12f74-3e04-4f39-b71b-e4194280263b, Finished trajectory generation, Wed Feb 13 20:05:37 PST 2019
+c0d12f74-3e04-4f39-b71b-e4194280263b, Disabled Init, Wed Feb 13 20:05:37 PST 2019
+c0d12f74-3e04-4f39-b71b-e4194280263b, Set Hatch Spear to STOW, Wed Feb 13 20:05:37 PST 2019
+c0d12f74-3e04-4f39-b71b-e4194280263b, SET HEADING: 0.0, Wed Feb 13 20:05:38 PST 2019
+c0d12f74-3e04-4f39-b71b-e4194280263b, Gyro offset: 108.58999633789064, Wed Feb 13 20:05:38 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Robot Startup, Wed Feb 13 20:05:58 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Robot Init, Wed Feb 13 20:05:58 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Generating trajectories..., Wed Feb 13 20:05:58 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Finished trajectory generation, Wed Feb 13 20:05:58 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Disabled Init, Wed Feb 13 20:05:58 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Set Hatch Spear to STOW, Wed Feb 13 20:05:58 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, SET HEADING: 0.0, Wed Feb 13 20:05:59 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Gyro offset: 108.75999450683595, Wed Feb 13 20:05:59 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Auto Init, Wed Feb 13 20:05:59 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, SET HEADING: 0.0, Wed Feb 13 20:05:59 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Gyro offset: 108.77000427246095, Wed Feb 13 20:05:59 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Switching to Motion Magic, Wed Feb 13 20:05:59 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Disabled Init, Wed Feb 13 20:06:02 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Switching to open loop, Wed Feb 13 20:06:02 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Set Hatch Spear to STOW, Wed Feb 13 20:06:02 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Auto Init, Wed Feb 13 20:06:04 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, SET HEADING: 0.0, Wed Feb 13 20:06:04 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Gyro offset: 109.75, Wed Feb 13 20:06:04 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Switching to Motion Magic, Wed Feb 13 20:06:04 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Disabled Init, Wed Feb 13 20:06:07 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Switching to open loop, Wed Feb 13 20:06:07 PST 2019
+832df74f-a437-4a3e-9a76-6ca74ea57c11, Set Hatch Spear to STOW, Wed Feb 13 20:06:07 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Robot Startup, Wed Feb 13 20:07:04 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Robot Init, Wed Feb 13 20:07:04 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Generating trajectories..., Wed Feb 13 20:07:04 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Finished trajectory generation, Wed Feb 13 20:07:04 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Disabled Init, Wed Feb 13 20:07:04 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to STOW, Wed Feb 13 20:07:04 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, SET HEADING: 0.0, Wed Feb 13 20:07:05 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Gyro offset: 110.33999633789062, Wed Feb 13 20:07:05 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Teleop Init, Wed Feb 13 20:07:05 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:07:07 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to STOW, Wed Feb 13 20:07:07 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, [Joystick] 1	[Button]9	 Pressed ( Place Button ), Wed Feb 13 20:07:32 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to PLACE, Wed Feb 13 20:07:32 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:09:37 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to STOW, Wed Feb 13 20:09:37 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:09:39 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to STOW, Wed Feb 13 20:09:39 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:09:39 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to STOW, Wed Feb 13 20:09:39 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:09:40 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to STOW, Wed Feb 13 20:09:40 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:09:41 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to STOW, Wed Feb 13 20:09:41 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:09:41 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to STOW, Wed Feb 13 20:09:41 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:09:42 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to STOW, Wed Feb 13 20:09:42 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:09:43 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to STOW, Wed Feb 13 20:09:43 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:09:44 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to STOW, Wed Feb 13 20:09:44 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:09:47 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to STOW, Wed Feb 13 20:09:47 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, [Joystick] 1	[Button]12	 Pressed ( Transfer Hatch Button Button ), Wed Feb 13 20:09:49 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to PLACE, Wed Feb 13 20:09:49 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Disabled Init, Wed Feb 13 20:09:56 PST 2019
+5a7aa696-5217-4054-9d7d-0392be04cdd4, Set Hatch Spear to STOW, Wed Feb 13 20:09:56 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Robot Startup, Wed Feb 13 20:10:22 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Robot Init, Wed Feb 13 20:10:22 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Generating trajectories..., Wed Feb 13 20:10:22 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Finished trajectory generation, Wed Feb 13 20:10:22 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Disabled Init, Wed Feb 13 20:10:22 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:10:23 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, SET HEADING: 0.0, Wed Feb 13 20:10:23 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Gyro offset: -170.3699951171875, Wed Feb 13 20:10:23 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Teleop Init, Wed Feb 13 20:10:37 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:10:38 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:10:38 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:10:39 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:10:39 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]12	 Pressed ( Transfer Hatch Button Button ), Wed Feb 13 20:10:43 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to PLACE, Wed Feb 13 20:10:43 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:10:44 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:10:44 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:10:44 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:10:44 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:10:44 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:10:44 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Disabled Init, Wed Feb 13 20:10:46 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:10:46 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Teleop Init, Wed Feb 13 20:10:49 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:10:50 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:10:50 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:10:59 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:10:59 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]9	 Pressed ( Place Button ), Wed Feb 13 20:11:01 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to PLACE, Wed Feb 13 20:11:01 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]7	 Pressed ( Disable Limits Button ), Wed Feb 13 20:11:03 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to PLACE, Wed Feb 13 20:11:03 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]9	 Pressed ( Place Button ), Wed Feb 13 20:11:07 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to PLACE, Wed Feb 13 20:11:07 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:11:08 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:11:08 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]9	 Pressed ( Place Button ), Wed Feb 13 20:11:09 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to PLACE, Wed Feb 13 20:11:09 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:11:11 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:11:11 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:11:12 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:11:12 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]9	 Pressed ( Place Button ), Wed Feb 13 20:11:13 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to PLACE, Wed Feb 13 20:11:13 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]8	 Pressed ( Stow All Button ), Wed Feb 13 20:11:14 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:11:14 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:11:25 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:11:25 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]9	 Pressed ( Place Button ), Wed Feb 13 20:11:25 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to PLACE, Wed Feb 13 20:11:25 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]8	 Pressed ( Stow All Button ), Wed Feb 13 20:11:29 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:11:29 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Disabled Init, Wed Feb 13 20:11:58 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:11:58 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Teleop Init, Wed Feb 13 20:12:10 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Disabled Init, Wed Feb 13 20:12:32 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:12:32 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Teleop Init, Wed Feb 13 20:15:01 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:15:01 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:15:01 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:15:02 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:15:02 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:15:03 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:15:03 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:15:04 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:15:04 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:15:05 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:15:05 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:15:06 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:15:06 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:15:06 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:15:06 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:15:07 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:15:07 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Disabled Init, Wed Feb 13 20:15:11 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:15:11 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Teleop Init, Wed Feb 13 20:32:57 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:33:01 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:33:01 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Disabled Init, Wed Feb 13 20:33:34 PST 2019
+553c52c3-72eb-4b85-81db-919350ca88f1, Set Hatch Spear to STOW, Wed Feb 13 20:33:34 PST 2019
+7b53a144-297e-4aa6-b6b3-a6380dd2b23d, Robot Startup, Wed Feb 13 20:34:37 PST 2019
+7b53a144-297e-4aa6-b6b3-a6380dd2b23d, Robot Init, Wed Feb 13 20:34:37 PST 2019
+7b53a144-297e-4aa6-b6b3-a6380dd2b23d, Generating trajectories..., Wed Feb 13 20:34:37 PST 2019
+7b53a144-297e-4aa6-b6b3-a6380dd2b23d, Finished trajectory generation, Wed Feb 13 20:34:37 PST 2019
+7b53a144-297e-4aa6-b6b3-a6380dd2b23d, Disabled Init, Wed Feb 13 20:34:37 PST 2019
+7b53a144-297e-4aa6-b6b3-a6380dd2b23d, Set Hatch Spear to STOW, Wed Feb 13 20:34:37 PST 2019
+7b53a144-297e-4aa6-b6b3-a6380dd2b23d, SET HEADING: 0.0, Wed Feb 13 20:34:38 PST 2019
+7b53a144-297e-4aa6-b6b3-a6380dd2b23d, Gyro offset: 0.20001220703125883, Wed Feb 13 20:34:38 PST 2019
+a81bfa22-fb6d-4c4e-8261-3f1fa444c11c, Robot Startup, Wed Feb 13 20:35:03 PST 2019
+a81bfa22-fb6d-4c4e-8261-3f1fa444c11c, Robot Init, Wed Feb 13 20:35:04 PST 2019
+a81bfa22-fb6d-4c4e-8261-3f1fa444c11c, Generating trajectories..., Wed Feb 13 20:35:04 PST 2019
+a81bfa22-fb6d-4c4e-8261-3f1fa444c11c, Finished trajectory generation, Wed Feb 13 20:35:04 PST 2019
+a81bfa22-fb6d-4c4e-8261-3f1fa444c11c, Disabled Init, Wed Feb 13 20:35:04 PST 2019
+a81bfa22-fb6d-4c4e-8261-3f1fa444c11c, Set Hatch Spear to STOW, Wed Feb 13 20:35:04 PST 2019
+a81bfa22-fb6d-4c4e-8261-3f1fa444c11c, SET HEADING: 0.0, Wed Feb 13 20:35:04 PST 2019
+a81bfa22-fb6d-4c4e-8261-3f1fa444c11c, Gyro offset: 0.3200073242187688, Wed Feb 13 20:35:04 PST 2019
+3fa02edc-9d48-4a1b-a3fa-afe72a0afa2f, Robot Startup, Wed Feb 13 20:39:25 PST 2019
+3fa02edc-9d48-4a1b-a3fa-afe72a0afa2f, Robot Init, Wed Feb 13 20:39:25 PST 2019
+3fa02edc-9d48-4a1b-a3fa-afe72a0afa2f, Generating trajectories..., Wed Feb 13 20:39:25 PST 2019
+3fa02edc-9d48-4a1b-a3fa-afe72a0afa2f, Finished trajectory generation, Wed Feb 13 20:39:25 PST 2019
+3fa02edc-9d48-4a1b-a3fa-afe72a0afa2f, Disabled Init, Wed Feb 13 20:39:25 PST 2019
+3fa02edc-9d48-4a1b-a3fa-afe72a0afa2f, Set Hatch Spear to STOW, Wed Feb 13 20:39:25 PST 2019
+3fa02edc-9d48-4a1b-a3fa-afe72a0afa2f, SET HEADING: 0.0, Wed Feb 13 20:39:25 PST 2019
+3fa02edc-9d48-4a1b-a3fa-afe72a0afa2f, Gyro offset: 1.489990234375007, Wed Feb 13 20:39:25 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Robot Startup, Wed Feb 13 20:40:11 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Robot Init, Wed Feb 13 20:40:11 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Generating trajectories..., Wed Feb 13 20:40:11 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Finished trajectory generation, Wed Feb 13 20:40:11 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Disabled Init, Wed Feb 13 20:40:11 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Set Hatch Spear to STOW, Wed Feb 13 20:40:11 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, SET HEADING: 0.0, Wed Feb 13 20:40:11 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Gyro offset: -15.390000343322757, Wed Feb 13 20:40:11 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Teleop Init, Wed Feb 13 20:40:17 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Switching to Robot State:TELEOP_DRIVE, Wed Feb 13 20:40:22 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Alliance: Red Match Number: 0 Match Type: None, Wed Feb 13 20:40:22 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:22 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:22 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Switching to Robot State:VISION_CARGO_INTAKE, Wed Feb 13 20:40:22 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Alliance: Red Match Number: 0 Match Type: None, Wed Feb 13 20:40:22 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:22 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, AUTO MODE DONE!!!! ENDED EARLY!!!!, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Switching to Robot State:VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Alliance: Red Match Number: 0 Match Type: None, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, AUTO MODE DONE!!!! ENDED EARLY!!!!, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Switching to Robot State:VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Alliance: Red Match Number: 0 Match Type: None, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, AUTO MODE DONE!!!! ENDED EARLY!!!!, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Switching to Robot State:VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Alliance: Red Match Number: 0 Match Type: None, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, AUTO MODE DONE!!!! ENDED EARLY!!!!, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:23 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Disabled Init, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, AUTO MODE DONE!!!! ENDED EARLY!!!!, Wed Feb 13 20:40:24 PST 2019
+e422f0b2-b197-480e-95c1-a1d146ac888e, Set Hatch Spear to STOW, Wed Feb 13 20:40:24 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Robot Startup, Wed Feb 13 20:41:00 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Robot Init, Wed Feb 13 20:41:00 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Generating trajectories..., Wed Feb 13 20:41:00 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Finished trajectory generation, Wed Feb 13 20:41:00 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Disabled Init, Wed Feb 13 20:41:00 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Set Hatch Spear to STOW, Wed Feb 13 20:41:00 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, SET HEADING: 0.0, Wed Feb 13 20:41:01 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Gyro offset: -0.019999999552965164, Wed Feb 13 20:41:01 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Teleop Init, Wed Feb 13 20:41:01 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Switching to Robot State:TELEOP_DRIVE, Wed Feb 13 20:41:06 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Alliance: Red Match Number: 0 Match Type: None, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:07 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Disabled Init, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, AUTO MODE DONE!!!! ENDED EARLY!!!!, Wed Feb 13 20:41:08 PST 2019
+8f4517e6-f955-4830-be8c-a2d3cb93bfd4, Set Hatch Spear to STOW, Wed Feb 13 20:41:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Robot Startup, Wed Feb 13 20:41:47 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Robot Init, Wed Feb 13 20:41:47 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Generating trajectories..., Wed Feb 13 20:41:47 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Finished trajectory generation, Wed Feb 13 20:41:47 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Disabled Init, Wed Feb 13 20:41:47 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Set Hatch Spear to STOW, Wed Feb 13 20:41:47 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, SET HEADING: 0.0, Wed Feb 13 20:41:47 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Gyro offset: -49.04999923706055, Wed Feb 13 20:41:47 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Teleop Init, Wed Feb 13 20:41:48 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Switching to Robot State:TELEOP_DRIVE, Wed Feb 13 20:41:51 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Alliance: Red Match Number: 0 Match Type: None, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:52 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:53 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:54 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:55 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:56 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Disabled Init, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, AUTO MODE DONE!!!! ENDED EARLY!!!!, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Set Hatch Spear to STOW, Wed Feb 13 20:41:57 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Teleop Init, Wed Feb 13 20:42:01 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:01 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:01 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:01 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:01 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:01 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:01 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:01 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:01 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:01 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:01 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:01 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:01 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:01 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:02 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:03 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:04 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:05 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:06 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Disabled Init, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Set Hatch Spear to STOW, Wed Feb 13 20:42:07 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Teleop Init, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:08 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:09 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:10 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:11 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Unexpected robot state: VISION_CARGO_INTAKE, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Disabled Init, Wed Feb 13 20:42:12 PST 2019
+1c147365-3506-4b5f-9305-54dfc8321968, Set Hatch Spear to STOW, Wed Feb 13 20:42:12 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Robot Startup, Wed Feb 13 20:42:43 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Robot Init, Wed Feb 13 20:42:43 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Generating trajectories..., Wed Feb 13 20:42:43 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Finished trajectory generation, Wed Feb 13 20:42:44 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Disabled Init, Wed Feb 13 20:42:44 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Set Hatch Spear to STOW, Wed Feb 13 20:42:44 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, SET HEADING: 0.0, Wed Feb 13 20:42:44 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Gyro offset: -8.270000457763672, Wed Feb 13 20:42:44 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Teleop Init, Wed Feb 13 20:42:46 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Disabled Init, Wed Feb 13 20:43:50 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Set Hatch Spear to STOW, Wed Feb 13 20:43:50 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Teleop Init, Wed Feb 13 20:44:21 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, [Joystick] 1	[Button]11	 Pressed ( Ground Intake Toggle Button Button ), Wed Feb 13 20:46:23 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Set Hatch Spear to STOW, Wed Feb 13 20:46:23 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Disabled Init, Wed Feb 13 20:48:33 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Set Hatch Spear to STOW, Wed Feb 13 20:48:33 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Teleop Init, Wed Feb 13 20:49:22 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Disabled Init, Wed Feb 13 20:49:24 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Set Hatch Spear to STOW, Wed Feb 13 20:49:24 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Teleop Init, Wed Feb 13 20:49:25 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Disabled Init, Wed Feb 13 20:49:26 PST 2019
+df7cdc4a-99fe-4f9d-9b72-a8be85ef4d11, Set Hatch Spear to STOW, Wed Feb 13 20:49:26 PST 2019
+aac0eaba-3f4e-4873-a470-a6d0013155a2, Robot Startup, Wed Feb 13 20:49:46 PST 2019
+aac0eaba-3f4e-4873-a470-a6d0013155a2, Robot Init, Wed Feb 13 20:49:46 PST 2019
+aac0eaba-3f4e-4873-a470-a6d0013155a2, Generating trajectories..., Wed Feb 13 20:49:46 PST 2019
+aac0eaba-3f4e-4873-a470-a6d0013155a2, Finished trajectory generation, Wed Feb 13 20:49:46 PST 2019
+aac0eaba-3f4e-4873-a470-a6d0013155a2, Disabled Init, Wed Feb 13 20:49:46 PST 2019
+aac0eaba-3f4e-4873-a470-a6d0013155a2, Set Hatch Spear to STOW, Wed Feb 13 20:49:46 PST 2019
+aac0eaba-3f4e-4873-a470-a6d0013155a2, SET HEADING: 0.0, Wed Feb 13 20:49:46 PST 2019
+aac0eaba-3f4e-4873-a470-a6d0013155a2, Gyro offset: -6.6500000953674325, Wed Feb 13 20:49:46 PST 2019
+aac0eaba-3f4e-4873-a470-a6d0013155a2, Teleop Init, Wed Feb 13 20:49:50 PST 2019
+aac0eaba-3f4e-4873-a470-a6d0013155a2, Disabled Init, Wed Feb 13 20:49:51 PST 2019
+aac0eaba-3f4e-4873-a470-a6d0013155a2, Set Hatch Spear to STOW, Wed Feb 13 20:49:51 PST 2019
+aac0eaba-3f4e-4873-a470-a6d0013155a2, Teleop Init, Wed Feb 13 20:49:54 PST 2019
+aac0eaba-3f4e-4873-a470-a6d0013155a2, Disabled Init, Wed Feb 13 20:49:56 PST 2019
+aac0eaba-3f4e-4873-a470-a6d0013155a2, Set Hatch Spear to STOW, Wed Feb 13 20:49:56 PST 2019
+d316363c-a151-46be-b86f-a9ee703270e5, Robot Startup, Wed Feb 13 20:50:17 PST 2019
+d316363c-a151-46be-b86f-a9ee703270e5, Robot Init, Wed Feb 13 20:50:17 PST 2019
+d316363c-a151-46be-b86f-a9ee703270e5, Generating trajectories..., Wed Feb 13 20:50:17 PST 2019
+d316363c-a151-46be-b86f-a9ee703270e5, Finished trajectory generation, Wed Feb 13 20:50:17 PST 2019
+d316363c-a151-46be-b86f-a9ee703270e5, Disabled Init, Wed Feb 13 20:50:17 PST 2019
+d316363c-a151-46be-b86f-a9ee703270e5, Set Hatch Spear to STOW, Wed Feb 13 20:50:17 PST 2019
+d316363c-a151-46be-b86f-a9ee703270e5, SET HEADING: 0.0, Wed Feb 13 20:50:18 PST 2019
+d316363c-a151-46be-b86f-a9ee703270e5, Gyro offset: -6.480000019073486, Wed Feb 13 20:50:18 PST 2019
+d316363c-a151-46be-b86f-a9ee703270e5, Teleop Init, Wed Feb 13 20:51:21 PST 2019
+d316363c-a151-46be-b86f-a9ee703270e5, Disabled Init, Wed Feb 13 20:51:21 PST 2019
+d316363c-a151-46be-b86f-a9ee703270e5, Set Hatch Spear to STOW, Wed Feb 13 20:51:21 PST 2019
+e265a595-3dbb-48e1-aeaa-32cce6b32602, Robot Startup, Wed Feb 13 20:52:13 PST 2019
+e265a595-3dbb-48e1-aeaa-32cce6b32602, Robot Init, Wed Feb 13 20:52:13 PST 2019
+e265a595-3dbb-48e1-aeaa-32cce6b32602, Generating trajectories..., Wed Feb 13 20:52:13 PST 2019
+e265a595-3dbb-48e1-aeaa-32cce6b32602, Finished trajectory generation, Wed Feb 13 20:52:13 PST 2019
+e265a595-3dbb-48e1-aeaa-32cce6b32602, Disabled Init, Wed Feb 13 20:52:13 PST 2019
+e265a595-3dbb-48e1-aeaa-32cce6b32602, Set Hatch Spear to STOW, Wed Feb 13 20:52:13 PST 2019
+e265a595-3dbb-48e1-aeaa-32cce6b32602, SET HEADING: 0.0, Wed Feb 13 20:52:13 PST 2019
+e265a595-3dbb-48e1-aeaa-32cce6b32602, Gyro offset: -5.949999809265136, Wed Feb 13 20:52:13 PST 2019
+e265a595-3dbb-48e1-aeaa-32cce6b32602, Teleop Init, Wed Feb 13 20:54:15 PST 2019
+e265a595-3dbb-48e1-aeaa-32cce6b32602, Disabled Init, Wed Feb 13 20:55:12 PST 2019
+e265a595-3dbb-48e1-aeaa-32cce6b32602, Set Hatch Spear to STOW, Wed Feb 13 20:55:12 PST 2019
+e265a595-3dbb-48e1-aeaa-32cce6b32602, Teleop Init, Wed Feb 13 20:55:31 PST 2019
+e265a595-3dbb-48e1-aeaa-32cce6b32602, Disabled Init, Wed Feb 13 20:55:32 PST 2019
+e265a595-3dbb-48e1-aeaa-32cce6b32602, Set Hatch Spear to STOW, Wed Feb 13 20:55:32 PST 2019

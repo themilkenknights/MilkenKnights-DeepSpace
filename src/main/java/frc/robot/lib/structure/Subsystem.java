@@ -27,6 +27,9 @@ public abstract class Subsystem {
 	 */
 	public void safetyCheck(double timestamp) {
 	}
+	public void slowUpdate(double timestamp) {
+	}
+
 
 	/**
 	 * Method to log data or send to Shuffleboard

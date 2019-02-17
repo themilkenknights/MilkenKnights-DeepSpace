@@ -5,16 +5,16 @@ import frc.robot.auto.AutoModeEndedException;
 import frc.robot.auto.actions.DriveTrajectory;
 import frc.robot.paths.TrajectoryGenerator;
 
-public class NearScaleOnlyMode extends AutoModeBase {
+public class TestPathMode extends AutoModeBase {
 
 	private static final TrajectoryGenerator mTrajectoryGenerator = TrajectoryGenerator.getInstance();
 	private final boolean mStartedLeft;
 	private DriveTrajectory mSideStartToNearScale;
 
-	public NearScaleOnlyMode(boolean robotStartedOnLeft) {
+	public TestPathMode(boolean robotStartedOnLeft) {
 		mStartedLeft = robotStartedOnLeft;
 		mSideStartToNearScale = new DriveTrajectory(
-				mTrajectoryGenerator.getTrajectorySet().sideStartToNearScale.get(mStartedLeft), true, false);
+				mTrajectoryGenerator.getTrajectorySet().testPath.get(mStartedLeft), true, false);
 	}
 
 	@Override

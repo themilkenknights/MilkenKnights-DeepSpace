@@ -6,7 +6,6 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants.GENERAL;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.CrashTrackingRunnable;
-import frc.robot.lib.util.Logger;
 import frc.robot.lib.vision.MkPixy;
 import frc.robot.paths.RobotState;
 import frc.robot.subsystems.Vision;
@@ -23,15 +22,71 @@ public class SubsystemManager {
 	private final Notifier telemetry_notifier_;
 	private final Notifier _pixyUpdate;
 	private final Notifier _limelightUpdate;
-	private final Object taskRunningLock_ = new Object();
 	private final double kPeriod = GENERAL.kLooperDt;
 	private final double kSlowPeriod = GENERAL.kSlowLooperDt;
 	private final double kTelemetryPeriod = GENERAL.kTelemetryDt;
-	private boolean running_;
 	private double main_timestamp = 0;
 	private double timestamp_ = 0;
 	private double dt_ = 0;
 	private double main_loop_dt_ = 0;
+	private boolean running_;
+
+	private final CrashTrackingRunnable pixyRunnable_ = new CrashTrackingRunnable() {
+		@Override
+		public void runCrashTracked() {
+			//MkPixy.pixyUpdate();
+		}
+	};
+	private final CrashTrackingRunnable limelightRunnable_ = new CrashTrackingRunnable() {
+		@Override
+		public void runCrashTracked() {
+			//Vision.mLimeLight.threadUpdate();
+		}
+	};
+	private final CrashTrackingRunnable slowRunnable_ = new CrashTrackingRunnable() {
+		@Override
+		public void runCrashTracked() {
+
+			if (running_) {
+				double now = Timer.getFPGATimestamp();
+				for (Subsystem subsystem : mAllSubsystems) {
+					subsystem.safetyCheck(now);
+					subsystem.slowUpdate(now);
+				}
+			}
+
+		}
+	};
+
+	private final CrashTrackingRunnable runnable_ = new CrashTrackingRunnable() {
+		@Override
+		public void runCrashTracked() {
+
+			if (running_) {
+				double now = Timer.getFPGATimestamp();
+				for (Subsystem subsystem : mAllSubsystems) {
+					subsystem.readPeriodicInputs(now);
+					subsystem.onQuickLoop(now);
+					subsystem.writePeriodicOutputs(now);
+				}
+				dt_ = now - timestamp_;
+				timestamp_ = now;
+			}
+		}
+	};
+
+	private final CrashTrackingRunnable telemetryRunnable_ = new CrashTrackingRunnable() {
+		@Override
+		public void runCrashTracked() {
+			double now = Timer.getFPGATimestamp();
+			for (Subsystem subsystem : mAllSubsystems) {
+				subsystem.outputTelemetry(now);
+				RobotState.getInstance().outputToSmartDashboard();
+				SmartDashboard.putNumber("Main loop Dt", main_loop_dt_ * 1e3);
+				SmartDashboard.putNumber("looper_dt", dt_ * 1e3);
+			}
+		}
+	};
 
 	public SubsystemManager(List<Subsystem> allSubsystems) {
 		mAllSubsystems = allSubsystems;
@@ -66,10 +121,9 @@ public class SubsystemManager {
 		}
 
 		if (!running_) {
-			synchronized (taskRunningLock_) {
-				System.out.println("Starting Auto loops");
-				running_ = true;
-			}
+			System.out.println("Starting Auto loops");
+			running_ = true;
+
 		}
 		notifier_.startPeriodic(kPeriod);
 		slow_notifier_.startPeriodic(kSlowPeriod);
@@ -84,10 +138,9 @@ public class SubsystemManager {
 			subsystem.teleopInit(now);
 		}
 		if (!running_) {
-			synchronized (taskRunningLock_) {
-				System.out.println("Starting Teleop loops");
-				running_ = true;
-			}
+			System.out.println("Starting Teleop loops");
+			running_ = true;
+
 		}
 		notifier_.startPeriodic(kPeriod);
 		slow_notifier_.startPeriodic(kSlowPeriod);
@@ -98,10 +151,9 @@ public class SubsystemManager {
 
 	public synchronized void stop() {
 		if (running_) {
-			synchronized (taskRunningLock_) {
-				System.out.println("Stopping loops");
-				running_ = false;
-			}
+			System.out.println("Stopping loops");
+			running_ = false;
+
 		}
 		notifier_.stop();
 		slow_notifier_.stop();
@@ -114,69 +166,5 @@ public class SubsystemManager {
 			subsystem.onStop(timestamp_);
 		}
 	}
-	private final CrashTrackingRunnable runnable_ = new CrashTrackingRunnable() {
-		@Override
-		public void runCrashTracked() {
-			synchronized (taskRunningLock_) {
-				if (running_) {
-					double now = Timer.getFPGATimestamp();
-					for (Subsystem subsystem : mAllSubsystems) {
-						subsystem.readPeriodicInputs(now);
-						subsystem.onQuickLoop(now);
-						subsystem.writePeriodicOutputs(now);
-					}
-					dt_ = now - timestamp_;
-					timestamp_ = now;
-				}
-			}
-		}
-	};
-
-	private final CrashTrackingRunnable slowRunnable_ = new CrashTrackingRunnable() {
-		@Override
-		public void runCrashTracked() {
-			synchronized (taskRunningLock_) {
-				if (running_) {
-					double now = Timer.getFPGATimestamp();
-					for (Subsystem subsystem : mAllSubsystems) {
-						subsystem.safetyCheck(now);
-					}
-				}
-			}
-		}
-	};
-
-	private final CrashTrackingRunnable telemetryRunnable_ = new CrashTrackingRunnable() {
-		@Override
-		public void runCrashTracked() {
-			synchronized (taskRunningLock_) {
-				double now = Timer.getFPGATimestamp();
-				for (Subsystem subsystem : mAllSubsystems) {
-					subsystem.outputTelemetry(now);
-					RobotState.getInstance().outputToSmartDashboard();
-					SmartDashboard.putNumber("Main loop Dt", main_loop_dt_ * 1e3);
-					SmartDashboard.putNumber("looper_dt", dt_);
-				}
-			}
-		}
-	};
-
-	private final CrashTrackingRunnable pixyRunnable_ = new CrashTrackingRunnable() {
-		@Override
-		public void runCrashTracked() {
-			synchronized (taskRunningLock_) {
-				MkPixy.pixyUpdate();
-			}
-		}
-	};
-
-	private final CrashTrackingRunnable limelightRunnable_ = new CrashTrackingRunnable() {
-		@Override
-		public void runCrashTracked() {
-			synchronized (taskRunningLock_) {
-				Vision.getInstance().mLimeLight.threadUpdate();
-			}
-		}
-	};
 
 }

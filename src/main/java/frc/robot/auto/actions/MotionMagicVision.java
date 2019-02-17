@@ -36,7 +36,7 @@ public class MotionMagicVision implements Action {
 		LimelightTarget target = Vision.getInstance().getAverageTarget();
 		double mDist = target.getDistance();
 		if (mDist > 20.0 && target.isValidTarget()) {
-			double vel = (mLastVisionState.getTarget().getXOffset() - target.getXOffset())/(Timer.getFPGATimestamp() - lastTime);
+			double vel = (mLastVisionState.getTarget().getXOffset() - target.getXOffset()) / (Timer.getFPGATimestamp() - lastTime);
 			double mSteer = DRIVE.kVisionTurnP * -(Drive.getInstance().getYaw() - (targetYaw + initYaw)) + vel * DRIVE.kVisionTurnP * 8;
 			DriveSignal mSig = Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
 			mLastVisionState = new VisionState(mSig, target, Drive.getInstance().getFusedHeading());

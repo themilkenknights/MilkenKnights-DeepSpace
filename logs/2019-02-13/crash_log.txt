@@ -1,7 +1,7 @@
 fb7ca537-2823-4cc5-966b-47eb692150d0, Exception, Wed Feb 13 16:06:10 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:145)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:145)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
@@ -9,7 +9,7 @@ fb7ca537-2823-4cc5-966b-47eb692150d0, Exception, Wed Feb 13 16:06:10 PST 2019, j
 726c77fe-9f0e-4711-820b-02911fb61dc1, Exception, Wed Feb 13 16:09:28 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:145)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:145)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
@@ -17,7 +17,7 @@ fb7ca537-2823-4cc5-966b-47eb692150d0, Exception, Wed Feb 13 16:06:10 PST 2019, j
 4d55084b-4a67-4234-a30c-a5cca1b01e63, Exception, Wed Feb 13 16:13:59 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:146)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:146)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
@@ -25,7 +25,7 @@ fb7ca537-2823-4cc5-966b-47eb692150d0, Exception, Wed Feb 13 16:06:10 PST 2019, j
 75845a06-3f28-4774-abc6-352576702291, Exception, Wed Feb 13 16:14:24 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:146)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:146)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
@@ -33,7 +33,7 @@ fb7ca537-2823-4cc5-966b-47eb692150d0, Exception, Wed Feb 13 16:06:10 PST 2019, j
 ed5d5ae5-53df-4bf6-8073-d6abc3ae5a56, Exception, Wed Feb 13 16:14:47 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:146)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:146)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
@@ -41,7 +41,7 @@ ed5d5ae5-53df-4bf6-8073-d6abc3ae5a56, Exception, Wed Feb 13 16:14:47 PST 2019, j
 c3f5c7b7-06c3-4dfa-8310-e53d588697d1, Exception, Wed Feb 13 16:25:27 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:153)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:153)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
@@ -49,7 +49,7 @@ c3f5c7b7-06c3-4dfa-8310-e53d588697d1, Exception, Wed Feb 13 16:25:27 PST 2019, j
 48d50b3e-e93e-4809-9e55-afbd3c1bcc2d, Exception, Wed Feb 13 16:26:46 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:154)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:154)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
@@ -57,7 +57,7 @@ c3f5c7b7-06c3-4dfa-8310-e53d588697d1, Exception, Wed Feb 13 16:25:27 PST 2019, j
 4ce45b59-dce9-4688-8222-f60bb88a418c, Exception, Wed Feb 13 16:27:09 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:154)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:154)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
@@ -65,7 +65,7 @@ c3f5c7b7-06c3-4dfa-8310-e53d588697d1, Exception, Wed Feb 13 16:25:27 PST 2019, j
 20692a3b-087a-490c-9589-bb8821fe1e49, Exception, Wed Feb 13 16:27:45 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:154)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:154)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
@@ -73,7 +73,7 @@ c3f5c7b7-06c3-4dfa-8310-e53d588697d1, Exception, Wed Feb 13 16:25:27 PST 2019, j
 e514c735-a6e7-44d6-a5ec-1b6ee2be0cee, Exception, Wed Feb 13 16:29:45 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:153)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:153)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
@@ -81,7 +81,7 @@ e514c735-a6e7-44d6-a5ec-1b6ee2be0cee, Exception, Wed Feb 13 16:29:45 PST 2019, j
 c6cb20fc-e492-4666-9f99-c96c0a1d5a4e, Exception, Wed Feb 13 16:30:26 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:153)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:153)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
@@ -89,7 +89,7 @@ c6cb20fc-e492-4666-9f99-c96c0a1d5a4e, Exception, Wed Feb 13 16:30:26 PST 2019, j
 ed8b904a-33ba-43f0-8fa2-f9fba3093de9, Exception, Wed Feb 13 16:34:08 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:154)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:154)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
@@ -97,7 +97,7 @@ ed8b904a-33ba-43f0-8fa2-f9fba3093de9, Exception, Wed Feb 13 16:34:08 PST 2019, j
 c33657f3-fc00-4143-84f4-cd07065e85f6, Exception, Wed Feb 13 16:34:50 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:154)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:154)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
@@ -105,7 +105,7 @@ c33657f3-fc00-4143-84f4-cd07065e85f6, Exception, Wed Feb 13 16:34:50 PST 2019, j
 2dba72a4-f197-4d38-a2d5-bdfbb2f2bb5b, Exception, Wed Feb 13 16:37:10 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:154)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:154)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
@@ -113,7 +113,7 @@ c33657f3-fc00-4143-84f4-cd07065e85f6, Exception, Wed Feb 13 16:34:50 PST 2019, j
 c6b52e1e-1551-4f84-968c-cb73f7ec77c8, Exception, Wed Feb 13 16:51:08 PST 2019, java.lang.NullPointerException
 	at frc.robot.lib.vision.MkPixy.getX(MkPixy.java:50)
 	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:34)
-	at frc.robot.SubsystemManager$3.runCrashTracked(SubsystemManager.java:151)
+	at frc.robot.lib.structure.SubsystemManager$3.runCrashTracked(SubsystemManager.java:151)
 	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
 	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
 	at java.base/java.lang.Thread.run(Unknown Source)
