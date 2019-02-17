@@ -109,7 +109,7 @@ public class Superstructure extends Subsystem {
 				AutoChooser.disableAuto();
 				mDrive.setOpenLoop(DriveSignal.BRAKE);
 				mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
-				mCargo.setArmState(CargoArmState.PLACE_REVERSE_CARGO);
+				mCargo.setArmState(CargoArmState.REVERSE_CARGOSHIP);
 				break;
 			case VISION_INTAKE_STATION:
 			case VISION_PLACING:
