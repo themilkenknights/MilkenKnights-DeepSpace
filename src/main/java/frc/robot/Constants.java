@@ -37,7 +37,7 @@ public final class Constants {
 		public static final double kMotorSafetyTimer = 0.05;
 		public static final double kLoopDt = 0.02;
 		public static final double kLooperDt = 0.01;
-		public static final double kSlowLooperDt = 0.01;
+		public static final double kSlowLooperDt = 0.05;
 		public static final double kLimelightLoopPeriod = 0.01;
 		public static final double kPixyLoopPeriod = 0.05;
 		public static final double kTelemetryDt = 0.2;
@@ -185,7 +185,10 @@ public final class Constants {
 		public static final double MAX_SAFE_CURRENT = 80;
 
 		public static final double INTAKE_IN_ROLLER_SPEED = -0.40;
-		public static final double INTAKE_OUT_ROLLER_SPEED = 0.3;
+		public static final double CARGOSHIP_INTAKE_OUT_ROLLER_SPEED = 0.3;
+		public static final double ROCKET_LEVEL_ONE_INTAKE_OUT_ROLLER_SPEED = 0.3;
+		public static final double ROCKET_LEVEL_TWO_OUT_ROLLER_SPEED = 0.3;
+		public static final double DEFAULT_INTAKE_ROLLER_OUT_SPEED = 0.3;
 
 		public static final double kArmOffset = -48.4;
 		public static final double kFeedConstant = 0.20;
@@ -200,7 +203,6 @@ public final class Constants {
 	public static class HATCH_ARM {
 
 		public static final boolean kHatchArmPlaceState = true;
-
 
 		public static final boolean ARM_SENSOR_PHASE = false;
 		public static final boolean ARM_MASTER_DIRECTION = true;

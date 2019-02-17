@@ -103,10 +103,10 @@ public class CargoArm extends Subsystem {
 			if (mCargoArmControlState == CargoArmControlState.OPEN_LOOP) {
 				mArmTalon.set(ControlMode.PercentOutput, mOpenLoopSetpoint, NeutralMode.Brake);
 			} else if (mCargoArmControlState == CargoArmControlState.MOTION_MAGIC) {
-				double armFeed = MkMath.sin(mArmTalon.getPosition() + CARGO_ARM.kArmOffset) * CARGO_ARM.kFeedConstant;
 				if (mCargoArmState.equals(CargoArmState.ENABLE)) {
 					mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mArmPosEnable), NeutralMode.Brake);
 				} else {
+					double armFeed = MkMath.sin(mArmTalon.getPosition() + CARGO_ARM.kArmOffset) * CARGO_ARM.kFeedConstant;
 					mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mCargoArmState.state),
 							NeutralMode.Brake, -armFeed);
 				}
@@ -148,12 +148,6 @@ public class CargoArm extends Subsystem {
 		}
 	}
 
-	public void onMainLoop(double timestamp) {
-		synchronized (CargoArm.this) {
-
-		}
-	}
-
 	@Override
 	public void onStop(double timestamp) {
 		setIntakeRollers(0);
@@ -174,7 +168,7 @@ public class CargoArm extends Subsystem {
 
 	public void setIntakeRollers(double output) {
 		if (output == CARGO_ARM.INTAKE_IN_ROLLER_SPEED && Vision.mPixy.isCargoIntaked()) {
-			setArmState(CargoArmState.PLACE_REVERSE_CARGO);
+			setArmState(CargoArmState.REVERSE_CARGOSHIP);
 		}
 		mRollerSetpoint = output;
 	}
@@ -216,7 +210,7 @@ public class CargoArm extends Subsystem {
 
 	public enum CargoArmState {
 		ENABLE(0.0), // State directly after robot is enabled (not mapped to a specific angle)
-		INTAKE(177.0), PLACE_REVERSE_ROCKET(125.0), PLACE_REVERSE_CARGO(11.0), ROCKET_TWO(30.0);
+		INTAKE(177.0), FORWARD_ROCKET_LEVEL_ONE(125.0), REVERSE_CARGOSHIP(11.0), REVERSE_ROCKET_LEVEL_TWO(30.0);
 
 		public final double state;
 

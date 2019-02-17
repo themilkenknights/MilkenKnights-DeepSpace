@@ -7,7 +7,6 @@ import frc.robot.lib.drivers.MkJoystick;
 import frc.robot.lib.drivers.MkJoystickButton;
 import frc.robot.lib.math.DriveHelper;
 import frc.robot.lib.math.MkMath;
-import frc.robot.lib.util.CheesyDriveHelper;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.vision.LimelightTarget;
@@ -32,9 +31,6 @@ public class Input {
 	private static final MkJoystickButton toggleDriverVisionAssist = driverJoystick.getButton(4, "Driver Vision Assist");
 	private static final MkJoystickButton mRearClimb = driverJoystick.getButton(2, "Climb Rear");
 	private static final MkJoystickButton mForwardClimb = driverJoystick.getButton(3, "Climb Climb");
-	private static final MkJoystickButton mFast = driverJoystick.getButton(1, "Fast");
-	private static final MkJoystickButton mRocketTwo = driverJoystick.getButton(5, "Rocket Two");
-
 
 	private static final MkJoystickButton mVisionStationIntakeButton = operatorJoystick.getButton(3, "Vision Hatch HP Intake");
 	private static final MkJoystickButton mVisionPlaceButton = operatorJoystick.getButton(4, "Vision Place Hatch Button");
@@ -42,7 +38,7 @@ public class Input {
 	private static final MkJoystickButton mCargoArmManual = operatorJoystick.getButton(2, "Cargo Arm Manual Mode");
 
 	private static final MkJoystickButton mIntakeRollerIn = operatorJoystick.getButton(5, "Intake Roller In");
-	private static final MkJoystickButton mIintakeRollerOut = operatorJoystick.getButton(6, "Intake Roller Out Fast");
+	private static final MkJoystickButton mIntakeRollerOut = operatorJoystick.getButton(6, "Intake Roller Out Fast");
 
 	private static final MkJoystickButton mStowAllButton = operatorJoystick.getButton(7, "Stow All");
 
@@ -51,7 +47,8 @@ public class Input {
 
 	private static final MkJoystickButton mGroundIntakeToggleButton = operatorJoystick.getButton(9, "Ground Intake Toggle (Stow/Ground)");
 	private static final MkJoystickButton mTransferButton = operatorJoystick.getButton(10, "Transfer Hatch Button");
-	private static final MkJoystickButton mGroundIntakeClearCargo = operatorJoystick.getButton(8, "Ground Intake Clear Cargo");
+
+	private static final MkJoystickButton mCargoRocketLevelTwo = driverJoystick.getButton(8, "Cargo Arm Rocket Level Two");
 
 
 	private static Drive mDrive = Drive.getInstance();
@@ -60,11 +57,7 @@ public class Input {
 	private static Superstructure mStructure = Superstructure.getInstance();
 	private static Vision mVision = Vision.getInstance();
 
-
 	private static boolean mVisionAssist = false;
-
-	private static CheesyDriveHelper mCheesyDriveHelper = new CheesyDriveHelper();
-
 
 	public static void updateControlInput() {
 		RobotState currentRobotState = mStructure.getRobotState();
@@ -108,13 +101,13 @@ public class Input {
 			mCargo.setOpenLoop(MkMath.handleDeadband(-operatorJoystick.getRawAxis(1), INPUT.kOperatorDeadband));
 		} else if (mCargo.getArmControlState() == CargoArmControlState.MOTION_MAGIC) {
 			if (operatorJoystick.getPOV() == 0) {
-				mCargo.setArmState(CargoArmState.PLACE_REVERSE_ROCKET);
+				mCargo.setArmState(CargoArmState.FORWARD_ROCKET_LEVEL_ONE);
 			} else if (operatorJoystick.getPOV() == 270) {
 				mCargo.setArmState(CargoArmState.INTAKE);
 			} else if (operatorJoystick.getPOV() == 180) {
-				mCargo.setArmState(CargoArmState.PLACE_REVERSE_CARGO);
+				mCargo.setArmState(CargoArmState.REVERSE_CARGOSHIP);
 			} else if (operatorJoystick.getPOV() == 90) {
-				if (mCargo.getArmState() == CargoArmState.PLACE_REVERSE_CARGO || mCargo.getArmState() == CargoArmState.PLACE_REVERSE_ROCKET) {
+				if (mCargo.getArmState() == CargoArmState.REVERSE_CARGOSHIP || mCargo.getArmState() == CargoArmState.FORWARD_ROCKET_LEVEL_ONE) {
 					mStructure.setRobotState(RobotState.VISION_CARGO_OUTTAKE);
 				} else if (mCargo.getArmState() == CargoArmState.INTAKE) {
 					mStructure.setRobotState(RobotState.VISION_CARGO_INTAKE);
@@ -126,8 +119,25 @@ public class Input {
 
 		if (mIntakeRollerIn.isHeld()) {
 			mCargo.setIntakeRollers(CARGO_ARM.INTAKE_IN_ROLLER_SPEED);
-		} else if (mIintakeRollerOut.isHeld()) {
-			mCargo.setIntakeRollers(CARGO_ARM.INTAKE_OUT_ROLLER_SPEED);
+		} else if (mIntakeRollerOut.isHeld()) {
+			switch (mCargo.getArmState()) {
+				case INTAKE:
+				case ENABLE:
+					mCargo.setIntakeRollers(CARGO_ARM.DEFAULT_INTAKE_ROLLER_OUT_SPEED);
+					break;
+				case FORWARD_ROCKET_LEVEL_ONE:
+					mCargo.setIntakeRollers(CARGO_ARM.ROCKET_LEVEL_ONE_INTAKE_OUT_ROLLER_SPEED);
+					break;
+				case REVERSE_ROCKET_LEVEL_TWO:
+					mCargo.setIntakeRollers(CARGO_ARM.ROCKET_LEVEL_TWO_OUT_ROLLER_SPEED);
+					break;
+				case REVERSE_CARGOSHIP:
+					mCargo.setIntakeRollers(CARGO_ARM.CARGOSHIP_INTAKE_OUT_ROLLER_SPEED);
+					break;
+				default:
+					Logger.logError("Unexpected Cargo Arm State");
+					break;
+			}
 		} else {
 			mCargo.setIntakeRollers(0.0);
 		}
@@ -160,15 +170,11 @@ public class Input {
 			}
 		} else if (mSpearIntake.isPressed()) {
 			mHatch.setHatchMechanismState(HatchMechanismState.STATION_INTAKE);
-		} else if (mGroundIntakeClearCargo.isPressed()) {
-			mHatch.setHatchMechanismState(HatchMechanismState.CLEAR_CARGO);
 		} else if (mStowAllButton.isPressed()) {
 			mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
-			mCargo.setArmState(CargoArmState.PLACE_REVERSE_CARGO);
-		} else if (mFast.isHeld()){
-			mCargo.setIntakeRollers(1.0);
-		} else if(mRocketTwo.isPressed()){
-			mCargo.setArmState(CargoArmState.ROCKET_TWO);
+			mCargo.setArmState(CargoArmState.REVERSE_CARGOSHIP);
+		} else if (mCargoRocketLevelTwo.isPressed()) {
+			mCargo.setArmState(CargoArmState.REVERSE_ROCKET_LEVEL_TWO);
 		}
 	}
 }
