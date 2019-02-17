@@ -6,9 +6,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants.GENERAL;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.CrashTrackingRunnable;
-import frc.robot.lib.vision.MkPixy;
 import frc.robot.paths.RobotState;
-import frc.robot.subsystems.Vision;
 import java.util.List;
 
 /**
@@ -46,7 +44,6 @@ public class SubsystemManager {
 	private final CrashTrackingRunnable slowRunnable_ = new CrashTrackingRunnable() {
 		@Override
 		public void runCrashTracked() {
-
 			if (running_) {
 				double now = Timer.getFPGATimestamp();
 				for (Subsystem subsystem : mAllSubsystems) {
@@ -54,14 +51,12 @@ public class SubsystemManager {
 					subsystem.slowUpdate(now);
 				}
 			}
-
 		}
 	};
 
 	private final CrashTrackingRunnable runnable_ = new CrashTrackingRunnable() {
 		@Override
 		public void runCrashTracked() {
-
 			if (running_) {
 				double now = Timer.getFPGATimestamp();
 				for (Subsystem subsystem : mAllSubsystems) {

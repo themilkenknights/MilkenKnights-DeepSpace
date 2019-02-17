@@ -138,8 +138,7 @@ public class HatchArm extends Subsystem {
 	 * @param timestamp Time in seconds since code start
 	 */
 	@Override
-	public void slowUpdate(double timestamp) {
-		synchronized (HatchArm.this) {
+	public synchronized void slowUpdate(double timestamp) {
 			mHatchLimitTriggered = mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
 			switch (mHatchMechanismState) {
 				case STOWED:
@@ -187,7 +186,6 @@ public class HatchArm extends Subsystem {
 				Logger.logErrorWithTrace("Unexpected arm control state: " + mHatchIntakeControlState);
 			}
 			mArmSolenoid.set(mHatchSpearState.state);
-		}
 	}
 
 	@Override
