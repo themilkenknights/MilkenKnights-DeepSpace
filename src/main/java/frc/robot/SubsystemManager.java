@@ -96,11 +96,13 @@ public class SubsystemManager {
 
 	public void mainLoop() {
 		double now = Timer.getFPGATimestamp();
-		for (Subsystem subsystem : mAllSubsystems) {
+		/*for (Subsystem subsystem : mAllSubsystems) {
 			subsystem.onMainLoop(timestamp_);
-		}
+		}*/
 		main_loop_dt_ = now - main_timestamp;
 		main_timestamp = now;
+
+		SmartDashboard.putNumber("Main loop Dt", main_loop_dt_ * 1e3);
 	}
 
 	public void checkSystem() {
