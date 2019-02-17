@@ -131,6 +131,8 @@ public final class Constants {
 		//Turn In Place
 		public static final double kGoalPosTolerance = 0.75; // degrees
 		public static final double kGoalVelTolerance = 5.0; // inches per second
+
+		public static final byte kNavXUpdateRate = (byte) 200;
 	}
 
 
