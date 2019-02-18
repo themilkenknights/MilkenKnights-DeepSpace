@@ -61,7 +61,6 @@ public class Input {
 
 	public static void updateControlInput() {
 		RobotState currentRobotState = mStructure.getRobotState();
-
 		boolean isVisionState =
 				currentRobotState == RobotState.VISION_CARGO_INTAKE
 						|| currentRobotState == RobotState.VISION_CARGO_OUTTAKE
@@ -69,6 +68,8 @@ public class Input {
 						|| currentRobotState == RobotState.VISION_PLACING;
 
 		if (isVisionState && (Math.abs(driverJoystick.getRawAxis(0)) > 0.35)) {
+			Logger.logErrorWithTrace("AHHHHHHHHHHHHHHHHHHHHHHH");
+			//TODO Remove
 			mStructure.setRobotState(RobotState.TELEOP_DRIVE);
 		} else if (toggleDriverVisionAssist.isPressed()) {
 			mVisionAssist = !mVisionAssist;
@@ -87,7 +88,7 @@ public class Input {
 			double turn = (-driverJoystick.getRawAxis(0));
 			LimelightTarget target = mVision.getAverageTarget();
 			double mSteer = target.getArea() > 1000 && target.isValidTarget() && mVisionAssist ? DRIVE.kVisionDriverTurnP * target.getXOffset() : 0.0;
-			DriveSignal controlSig = DriveHelper.cheesyDrive(-forward, turn, true);
+			DriveSignal controlSig = DriveHelper.cheesyDrive(forward, -turn, true);
 			mDrive.setOpenLoop(controlSig);
 		}
 

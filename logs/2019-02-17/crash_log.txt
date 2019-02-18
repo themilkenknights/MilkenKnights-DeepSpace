@@ -1,0 +1,154 @@
+092d280f-b409-4130-a731-1991fe6e9349, Exception, Sun Feb 17 12:36:44 PST 2019, java.lang.NullPointerException
+	at frc.robot.SubsystemManager$2.runCrashTracked(SubsystemManager.java:45)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+092d280f-b409-4130-a731-1991fe6e9349, Exception, Sun Feb 17 12:36:44 PST 2019, java.lang.NullPointerException
+	at frc.robot.lib.vision.MkPixy.pixyUpdate(MkPixy.java:28)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:37)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+6c6049dd-f5aa-4118-aa01-602976f54626, Exception, Sun Feb 17 12:37:15 PST 2019, java.lang.NullPointerException
+	at frc.robot.SubsystemManager$2.runCrashTracked(SubsystemManager.java:45)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+6c6049dd-f5aa-4118-aa01-602976f54626, Exception, Sun Feb 17 12:37:15 PST 2019, java.lang.NullPointerException
+	at frc.robot.lib.vision.MkPixy.pixyUpdate(MkPixy.java:28)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:37)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2f8aff02-f810-434f-836b-49739f525e5c, Exception, Sun Feb 17 12:39:16 PST 2019, java.lang.NullPointerException
+	at frc.robot.SubsystemManager$2.runCrashTracked(SubsystemManager.java:45)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2f8aff02-f810-434f-836b-49739f525e5c, Exception, Sun Feb 17 12:39:16 PST 2019, java.lang.NullPointerException
+	at frc.robot.lib.vision.MkPixy.pixyUpdate(MkPixy.java:28)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:37)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+7b0b17a5-2e94-4008-b4aa-6fea0c27062c, Exception, Sun Feb 17 12:39:33 PST 2019, java.lang.NullPointerException
+	at frc.robot.SubsystemManager$2.runCrashTracked(SubsystemManager.java:42)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+7b0b17a5-2e94-4008-b4aa-6fea0c27062c, Exception, Sun Feb 17 12:39:34 PST 2019, java.lang.NullPointerException
+	at frc.robot.lib.vision.MkPixy.pixyUpdate(MkPixy.java:28)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:35)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+4e23fb98-1dc7-4be2-b640-ad655e9e699f, Exception, Sun Feb 17 12:39:54 PST 2019, java.lang.NullPointerException
+	at frc.robot.SubsystemManager$2.runCrashTracked(SubsystemManager.java:42)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+4e23fb98-1dc7-4be2-b640-ad655e9e699f, Exception, Sun Feb 17 12:39:54 PST 2019, java.lang.NullPointerException
+	at frc.robot.lib.vision.MkPixy.pixyUpdate(MkPixy.java:28)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:35)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+05bf1787-d4ea-4a92-9989-797af5c6f94c, Exception, Sun Feb 17 12:41:14 PST 2019, java.lang.NullPointerException
+	at frc.robot.SubsystemManager$2.runCrashTracked(SubsystemManager.java:42)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+05bf1787-d4ea-4a92-9989-797af5c6f94c, Exception, Sun Feb 17 12:41:15 PST 2019, java.lang.NullPointerException
+	at frc.robot.lib.vision.MkPixy.pixyUpdate(MkPixy.java:28)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:35)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+b57d15f5-4a31-468b-b4d0-74c541980309, Exception, Sun Feb 17 15:02:32 PST 2019, java.lang.NullPointerException
+	at frc.robot.SubsystemManager$2.runCrashTracked(SubsystemManager.java:42)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+ba24eba3-5d0d-4a6c-8da9-80ee5ac24822, Exception, Sun Feb 17 15:11:15 PST 2019, java.lang.IllegalArgumentException: Title is already in use: Left_Drive Velocity
+	at edu.wpi.first.wpilibj.shuffleboard.ContainerHelper.checkTitle(ContainerHelper.java:91)
+	at edu.wpi.first.wpilibj.shuffleboard.ContainerHelper.add(ContainerHelper.java:73)
+	at edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab.add(ShuffleboardTab.java:68)
+	at edu.wpi.first.wpilibj.shuffleboard.ShuffleboardContainer.addPersistent(ShuffleboardContainer.java:141)
+	at frc.robot.lib.drivers.MkTalon.updateSmartDash(MkTalon.java:292)
+	at frc.robot.subsystems.Drive.outputTelemetry(Drive.java:148)
+	at frc.robot.SubsystemManager$5.runCrashTracked(SubsystemManager.java:84)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+d9850617-c0a1-477a-ba34-467d3d45dea5, Exception, Sun Feb 17 15:12:18 PST 2019, java.lang.IllegalArgumentException: Title is already in use: Left_Drive Velocity
+	at edu.wpi.first.wpilibj.shuffleboard.ContainerHelper.checkTitle(ContainerHelper.java:91)
+	at edu.wpi.first.wpilibj.shuffleboard.ContainerHelper.add(ContainerHelper.java:73)
+	at edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab.add(ShuffleboardTab.java:68)
+	at edu.wpi.first.wpilibj.shuffleboard.ShuffleboardContainer.addPersistent(ShuffleboardContainer.java:141)
+	at frc.robot.lib.drivers.MkTalon.updateSmartDash(MkTalon.java:292)
+	at frc.robot.subsystems.Drive.outputTelemetry(Drive.java:148)
+	at frc.robot.SubsystemManager$5.runCrashTracked(SubsystemManager.java:84)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+699ce346-665f-49dc-833f-df74916856cd, Exception, Sun Feb 17 15:12:57 PST 2019, java.lang.IllegalArgumentException: Title is already in use: Left_Drive Velocity
+	at edu.wpi.first.wpilibj.shuffleboard.ContainerHelper.checkTitle(ContainerHelper.java:91)
+	at edu.wpi.first.wpilibj.shuffleboard.ContainerHelper.add(ContainerHelper.java:73)
+	at edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab.add(ShuffleboardTab.java:68)
+	at edu.wpi.first.wpilibj.shuffleboard.ShuffleboardContainer.addPersistent(ShuffleboardContainer.java:141)
+	at frc.robot.lib.drivers.MkTalon.updateSmartDash(MkTalon.java:292)
+	at frc.robot.subsystems.Drive.outputTelemetry(Drive.java:148)
+	at frc.robot.SubsystemManager$5.runCrashTracked(SubsystemManager.java:84)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+79171273-e6f3-4c18-8297-ae5007069bff, Exception, Sun Feb 17 15:13:23 PST 2019, java.lang.IllegalArgumentException: Title is already in use: Left_Drive Velocity
+	at edu.wpi.first.wpilibj.shuffleboard.ContainerHelper.checkTitle(ContainerHelper.java:91)
+	at edu.wpi.first.wpilibj.shuffleboard.ContainerHelper.add(ContainerHelper.java:73)
+	at edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab.add(ShuffleboardTab.java:68)
+	at edu.wpi.first.wpilibj.shuffleboard.ShuffleboardContainer.addPersistent(ShuffleboardContainer.java:141)
+	at frc.robot.lib.drivers.MkTalon.updateSmartDash(MkTalon.java:292)
+	at frc.robot.subsystems.Drive.outputTelemetry(Drive.java:148)
+	at frc.robot.SubsystemManager$5.runCrashTracked(SubsystemManager.java:84)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+77fae95d-c484-4e14-97dc-0f74b703429e, Exception, Sun Feb 17 15:25:30 PST 2019, java.lang.IllegalArgumentException: Title is already in use: Drive State
+	at edu.wpi.first.wpilibj.shuffleboard.ContainerHelper.checkTitle(ContainerHelper.java:91)
+	at edu.wpi.first.wpilibj.shuffleboard.ContainerHelper.add(ContainerHelper.java:73)
+	at edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab.add(ShuffleboardTab.java:68)
+	at edu.wpi.first.wpilibj.shuffleboard.ShuffleboardContainer.addPersistent(ShuffleboardContainer.java:141)
+	at frc.robot.subsystems.Drive.outputTelemetry(Drive.java:150)
+	at frc.robot.SubsystemManager$5.runCrashTracked(SubsystemManager.java:84)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+b64aac1f-d0ef-47a9-b48b-4218722220df, Exception, Sun Feb 17 15:26:16 PST 2019, java.lang.IllegalArgumentException: Title is already in use: Drive State
+	at edu.wpi.first.wpilibj.shuffleboard.ContainerHelper.checkTitle(ContainerHelper.java:91)
+	at edu.wpi.first.wpilibj.shuffleboard.ContainerHelper.add(ContainerHelper.java:73)
+	at edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab.add(ShuffleboardTab.java:68)
+	at edu.wpi.first.wpilibj.shuffleboard.ShuffleboardContainer.addPersistent(ShuffleboardContainer.java:141)
+	at frc.robot.subsystems.Drive.outputTelemetry(Drive.java:150)
+	at frc.robot.SubsystemManager$5.runCrashTracked(SubsystemManager.java:84)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+

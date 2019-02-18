@@ -10,7 +10,7 @@ import java.util.List;
 
 public class CollectVelocityData implements Action {
 
-	private static final double kMaxPower = 0.25;
+	private static final double kMaxPower = 0.5;
 	private static final double kRampRate = 0.02;
 	private static final Drive mDrive = Drive.getInstance();
 	private final ReflectingCSVWriter<DriveCharacterization.VelocityDataPoint> mCSVWriter;

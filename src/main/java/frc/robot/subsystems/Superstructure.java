@@ -1,10 +1,11 @@
 package frc.robot.subsystems;
 
+import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.Compressor;
-import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.Solenoid;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.AutoChooser;
 import frc.robot.Constants;
 import frc.robot.Constants.CAN;
@@ -31,8 +32,17 @@ public class Superstructure extends Subsystem {
 	private Solenoid mFrontClimbSolenoid, mRearClimbSolenoid;
 	private ClimbState mRearClimbState = ClimbState.RETRACTED;
 	private ClimbState mFrontClimbState = ClimbState.RETRACTED;
+	private ShuffleboardTab mStructureTab;
+	private NetworkTableEntry mMatchState, mRobotStateEntry, mCompressorCurrent, mFrontClimb, mRearClimb;
 
 	private Superstructure() {
+		mStructureTab = Shuffleboard.getTab("Superstructure");
+		mMatchState = mStructureTab.add("Match State", "").getEntry();
+		mRobotStateEntry = mStructureTab.add("Robot State", "").getEntry();
+		mCompressorCurrent = mStructureTab.add("Compressor Current", 0.0).getEntry();
+		mFrontClimb = mStructureTab.add("Front Climb", "").getEntry();
+		mRearClimb = mStructureTab.add("Rear Climb", "").getEntry();
+
 		mFrontClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kFrontClimbSolenoidChannel);
 		mRearClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kRearClimbSolenoidChannel);
 
@@ -46,13 +56,11 @@ public class Superstructure extends Subsystem {
 
 	@Override
 	public void outputTelemetry(double timestamp) {
-		SmartDashboard.putString("Robot State", Robot.mMatchState.toString());
-		SmartDashboard.putNumber("Compressor Current", mCompressor.getCompressorCurrent());
-		if (mPDP.getVoltage() < 9.0) {
-			DriverStation.reportWarning("Low Battery Voltage", false);
-		}
-		SmartDashboard.putString("Front Climb", mFrontClimbState.toString());
-		SmartDashboard.putString("Rear Climb", mRearClimbState.toString());
+		mMatchState.setString(Robot.mMatchState.toString());
+		mRobotStateEntry.setString(mRobotState.toString());
+		mCompressorCurrent.setDouble(mCompressor.getCompressorCurrent());
+		mFrontClimb.setString(mFrontClimbState.toString());
+		mRearClimb.setString(mRearClimbState.toString());
 	}
 
 	public ClimbState getFrontClimbState() {
@@ -75,7 +83,6 @@ public class Superstructure extends Subsystem {
 
 	@Override
 	public void onMainLoop(double timestamp) {
-
 		switch (mRobotState) {
 			case PATH_FOLLOWING:
 				break;
@@ -94,15 +101,17 @@ public class Superstructure extends Subsystem {
 				break;
 
 		}
+	}
 
+	public void teleopInit(double timestamp) {
+		setRobotState(RobotState.TELEOP_DRIVE);
 	}
 
 	public RobotState getRobotState() {
 		return mRobotState;
 	}
 
-	public void setRobotState(RobotState state) {
-		Logger.logMarker("Switching to Robot State:" + mRobotState);
+	public synchronized void setRobotState(RobotState state) {
 		mRobotState = state;
 		switch (state) {
 			case TELEOP_DRIVE:
@@ -128,6 +137,7 @@ public class Superstructure extends Subsystem {
 				Logger.logErrorWithTrace("Unexpected robot state: " + mRobotState);
 				break;
 		}
+		Logger.logMarker("Switching to Robot State:" + mRobotState);
 	}
 
 	private void startVisionHatch() {

@@ -1,5 +1,8 @@
 package frc.robot.subsystems;
 
+import edu.wpi.first.networktables.NetworkTableEntry;
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.vision.LimeLight;
@@ -13,13 +16,19 @@ public class Vision extends Subsystem {
 
 	public static LimeLight mLimeLight;
 	public static MkPixy mPixy;
-	private boolean usePixy = true;
-
+	private boolean usePixy = false;
+	private ShuffleboardTab mVisionTab;
+	private NetworkTableEntry mLLX, mDist, mArea;
 
 	private Vision() {
+		mVisionTab = Shuffleboard.getTab("Vision");
+		mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
+		mDist = mVisionTab.add("Limelight Dist", 0.0).getEntry();
+		mArea = mVisionTab.add("Area", 0.0).getEntry();
+
 		mLimeLight = new LimeLight();
 		mLimeLight.setLEDMode(LedMode.kforceOn);
-		mLimeLight.setCamMode(CamMode.kdriver);
+		mLimeLight.setCamMode(CamMode.kvision);
 		mLimeLight.setStream(StreamType.kStandard);
 		mPixy = new MkPixy();
 	}
@@ -36,9 +45,9 @@ public class Vision extends Subsystem {
 			SmartDashboard.putNumber("Pixy Area", mPixy.getArea());
 			SmartDashboard.putBoolean("Pixy Limit Switch", mPixy.isCargoIntaked());
 		}
-		SmartDashboard.putNumber("Limelight X", mLimeLight.returnAverageTarget().getXOffset());
-		SmartDashboard.putNumber("Limelight Dist", mLimeLight.returnAverageTarget().getDistance());
-		SmartDashboard.putNumber("Limelight Area", mLimeLight.returnAverageTarget().getArea());
+		mLLX.setDouble(mLimeLight.returnAverageTarget().getXOffset());
+		mDist.setDouble(mLimeLight.returnAverageTarget().getDistance());
+		mArea.setDouble(mLimeLight.returnAverageTarget().getArea());
 	}
 
 	public void teleopInit(double timestamp) {

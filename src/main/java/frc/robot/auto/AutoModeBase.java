@@ -18,7 +18,7 @@ public abstract class AutoModeBase {
 		try {
 			routine();
 		} catch (AutoModeEndedException e) {
-			Superstructure.getInstance().setRobotState(RobotState.TELEOP_DRIVE);
+			//TODO Fix Superstructure.getInstance().setRobotState(RobotState.TELEOP_DRIVE);
 			Logger.logErrorWithTrace("AUTO MODE DONE!!!! ENDED EARLY!!!!");
 			return;
 		}

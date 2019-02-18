@@ -2,9 +2,11 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
+import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants;
 import frc.robot.Constants.DRIVE;
 import frc.robot.lib.drivers.MkGyro;
@@ -36,12 +38,22 @@ public class Drive extends Subsystem {
 	private boolean mOverrideTrajectory, mIsOnTarget = false;
 	private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
 	private double left_encoder_prev_distance_, right_encoder_prev_distance_, mDesiredTurnAngle = 0.0;
+	private ShuffleboardTab mDriveTab;
+	private NetworkTableEntry mState, mStatus, mFusedHeading, mXErr, mYErr, mThetaErr, mGyroHeading;
 
 	private Drive() {
+		mDriveTab = Shuffleboard.getTab("Drive");
+		mState = mDriveTab.add("Drive State", "").getEntry();
+		mStatus = mDriveTab.add("Drive Status", false).getEntry();
+		mFusedHeading = mDriveTab.add("NavX Fused Heading", 0.0).getEntry();
+		mXErr = mDriveTab.add("x err", 0.0).getEntry();
+		mYErr = mDriveTab.add("y err", 0.0).getEntry();
+		mThetaErr = mDriveTab.add("theta err", 0.0).getEntry();
+		mGyroHeading = mDriveTab.add("Gyro Heading", 0.0).getEntry();
 		mDriveControlState = DriveControlState.OPEN_LOOP;
 		mPeriodicIO = new PeriodicIO();
-		mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left_Drive);
-		mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right_Drive);
+		mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left_Dr, mDriveTab);
+		mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right_Dr, mDriveTab);
 		navX = new MkGyro(Port.kMXP);
 		mMotionPlanner = new DriveMotionPlanner();
 	}
@@ -60,7 +72,7 @@ public class Drive extends Subsystem {
 		mPeriodicIO.rightPos = mRightDrive.getPosition();
 		mPeriodicIO.leftVel = mLeftDrive.getSpeed();
 		mPeriodicIO.rightVel = mRightDrive.getSpeed();
-		mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(navX.getFusedHeading()).rotateBy(mGyroOffset);
+		mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(-navX.getAngle()).rotateBy(mGyroOffset);
 	}
 
 	/**
@@ -122,10 +134,11 @@ public class Drive extends Subsystem {
 	@Override
 	public synchronized void writePeriodicOutputs(double timestamp) {
 		if (mDriveControlState == DriveControlState.OPEN_LOOP) {
+			//mLeftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand * DRIVE.kMaxNativeVel, mPeriodicIO.brake_mode);
+			//mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand * DRIVE.kMaxNativeVel, mPeriodicIO.brake_mode);
 			mLeftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
 			mRightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
 		} else if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
-
 			mLeftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand, NeutralMode.Brake,
 					mPeriodicIO.left_feedforward + DRIVE.kDriveD * mPeriodicIO.left_accel / 1023.0);
 			mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, NeutralMode.Brake,
@@ -142,20 +155,18 @@ public class Drive extends Subsystem {
 	Update Shuffleboard and Log to CSV
 	 */
 	public synchronized void outputTelemetry(double timestamp) {
-		mLeftDrive.updateSmartDash(false);
-		mRightDrive.updateSmartDash(false);
-		SmartDashboard.putString("Drive State", mDriveControlState.toString());
-		SmartDashboard.putBoolean("Drivetrain Status", driveStatus());
-		SmartDashboard.putNumber("NavX Fused Heading", navX.getFusedHeading());
-
-		SmartDashboard.putNumber("x err", mPeriodicIO.error.getTranslation().x());
-		SmartDashboard.putNumber("y err", mPeriodicIO.error.getTranslation().y());
-		SmartDashboard.putNumber("theta err", mPeriodicIO.error.getRotation().getDegrees());
+		mLeftDrive.updateSmartDash(true);
+		mRightDrive.updateSmartDash(true);
+		mState.setString(mDriveControlState.toString());
+		mStatus.setBoolean(driveStatus());
+		mFusedHeading.setDouble(-navX.getAngle());
+		mXErr.setDouble(mPeriodicIO.error.getTranslation().x());
+		mYErr.setDouble(mPeriodicIO.error.getTranslation().y());
+		mThetaErr.setDouble(mPeriodicIO.error.getRotation().getDegrees());
 		if (getHeading() != null) {
-			SmartDashboard.putNumber("Gyro Heading", getHeading().getDegrees());
+			mGyroHeading.setDouble(getHeading().getDegrees());
 		}
 		if (mCSVWriter != null) {
-			Logger.logErrorWithTrace("ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			mCSVWriter.add(mPeriodicIO);
 			mCSVWriter.write();
 		}
@@ -278,7 +289,6 @@ public class Drive extends Subsystem {
 	public synchronized void setTrajectory(
 			TrajectoryIterator<TimedState<Pose2dWithCurvature>> trajectory) {
 		if (mMotionPlanner != null) {
-			Superstructure.getInstance().setRobotState(Superstructure.RobotState.PATH_FOLLOWING);
 			mOverrideTrajectory = false;
 			mMotionPlanner.reset();
 			mMotionPlanner.setTrajectory(trajectory);
@@ -304,7 +314,9 @@ public class Drive extends Subsystem {
 	}
 
 	public void teleopInit(double timestamp) {
-
+		if (mCSVWriter == null && Constants.LOG.kDriveCSVLogging) {
+			mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
+		}
 	}
 
 	public boolean checkSystem() {
@@ -350,7 +362,7 @@ public class Drive extends Subsystem {
 	 */
 	public synchronized void setHeading(Rotation2d heading) {
 		Logger.logMarker("SET HEADING: " + heading.getDegrees());
-		mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(navX.getFusedHeading()).inverse());
+		mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(-navX.getAngle()).inverse());
 		Logger.logMarker("Gyro offset: " + mGyroOffset.getDegrees());
 		mPeriodicIO.gyro_heading = heading;
 	}
@@ -370,6 +382,10 @@ public class Drive extends Subsystem {
 
 	public boolean isMotionMagicFinished() {
 		return mLeftDrive.getError() < DRIVE.kGoalPosTolerance && mRightDrive.getError() < DRIVE.kGoalPosTolerance;
+	}
+
+	public DriveControlState getDriveControlState() {
+		return mDriveControlState;
 	}
 
 	public enum DriveControlState {

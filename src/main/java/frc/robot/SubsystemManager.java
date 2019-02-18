@@ -7,6 +7,7 @@ import frc.robot.Constants.GENERAL;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.CrashTrackingRunnable;
 import frc.robot.paths.RobotState;
+import frc.robot.subsystems.Vision;
 import java.util.List;
 
 /**
@@ -38,16 +39,21 @@ public class SubsystemManager {
 	private final CrashTrackingRunnable limelightRunnable_ = new CrashTrackingRunnable() {
 		@Override
 		public void runCrashTracked() {
-			//Vision.mLimeLight.threadUpdate();
+			Vision.mLimeLight.threadUpdate();
 		}
 	};
 	private final CrashTrackingRunnable slowRunnable_ = new CrashTrackingRunnable() {
+		private boolean change = true;
+
 		@Override
 		public void runCrashTracked() {
 			if (running_) {
 				double now = Timer.getFPGATimestamp();
 				for (Subsystem subsystem : mAllSubsystems) {
-					subsystem.safetyCheck(now);
+					if (change) {
+						subsystem.safetyCheck(now);
+					}
+					change = !change;
 					subsystem.slowUpdate(now);
 				}
 			}
@@ -96,13 +102,11 @@ public class SubsystemManager {
 
 	public void mainLoop() {
 		double now = Timer.getFPGATimestamp();
-		/*for (Subsystem subsystem : mAllSubsystems) {
+		for (Subsystem subsystem : mAllSubsystems) {
 			subsystem.onMainLoop(timestamp_);
-		}*/
+		}
 		main_loop_dt_ = now - main_timestamp;
 		main_timestamp = now;
-
-		SmartDashboard.putNumber("Main loop Dt", main_loop_dt_ * 1e3);
 	}
 
 	public void checkSystem() {

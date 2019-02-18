@@ -2,8 +2,10 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
+import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.GENERAL;
@@ -22,10 +24,22 @@ public class CargoArm extends Subsystem {
 	private final MkTalon mIntakeTalon;
 	private boolean mDisCon, mArmSafety = false;
 	private double mStartDis, mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable = 0.0;
+	private ShuffleboardTab mCargoArmTab;
+	private ShuffleboardTab mIntakeRollersTab;
+	private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus, mRawError;
 
 	private CargoArm() {
-		mArmTalon = new MkTalon(CAN.kMasterCargoArmTalonID, CAN.kSlaveCargoArmVictorID, TalonLoc.Cargo_Arm);
-		mIntakeTalon = new MkTalon(CAN.kLeftCargoIntakeTalonID, CAN.kRightCargoIntakeVictorID, TalonLoc.Cargo_Intake);
+		mCargoArmTab = Shuffleboard.getTab("Cargo Arm");
+		mIntakeRollersTab = Shuffleboard.getTab("Intake Rollers");
+
+		mAbsPos = mCargoArmTab.add("Absolute Pos", 0.0).getEntry();
+		mControlMode = mCargoArmTab.add("Control Mode", "").getEntry();
+		mStatus = mCargoArmTab.add("Status", false).getEntry();
+		mDesiredState = mCargoArmTab.add("Desired State", "").getEntry();
+		mRawError = mCargoArmTab.add("Raw Error", 0.0).getEntry();
+
+		mArmTalon = new MkTalon(CAN.kMasterCargoArmTalonID, CAN.kSlaveCargoArmVictorID, TalonLoc.Cargo_Arm, mCargoArmTab);
+		mIntakeTalon = new MkTalon(CAN.kLeftCargoIntakeTalonID, CAN.kRightCargoIntakeVictorID, TalonLoc.Cargo_Intake, mIntakeRollersTab);
 	}
 
 	public static CargoArm getInstance() {
@@ -95,31 +109,31 @@ public class CargoArm extends Subsystem {
 	}
 
 	public synchronized void slowUpdate(double timestamp) {
-			if (mCargoArmControlState == CargoArmControlState.OPEN_LOOP) {
-				mArmTalon.set(ControlMode.PercentOutput, mOpenLoopSetpoint, NeutralMode.Brake);
-			} else if (mCargoArmControlState == CargoArmControlState.MOTION_MAGIC) {
-				if (mCargoArmState.equals(CargoArmState.ENABLE)) {
-					mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mArmPosEnable), NeutralMode.Brake);
-				} else {
-					double armFeed = MkMath.sin(mArmTalon.getPosition() + CARGO_ARM.kArmOffset) * CARGO_ARM.kFeedConstant;
-					mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mCargoArmState.state),
-							NeutralMode.Brake, -armFeed);
-				}
+		if (mCargoArmControlState == CargoArmControlState.OPEN_LOOP) {
+			mArmTalon.set(ControlMode.PercentOutput, mOpenLoopSetpoint, NeutralMode.Brake);
+		} else if (mCargoArmControlState == CargoArmControlState.MOTION_MAGIC) {
+			if (mCargoArmState.equals(CargoArmState.ENABLE)) {
+				mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mArmPosEnable), NeutralMode.Brake);
 			} else {
-				Logger.logErrorWithTrace("Unexpected Cargo Arm Control State: " + mCargoArmControlState);
+				double armFeed = MkMath.sin(mArmTalon.getPosition() + CARGO_ARM.kArmOffset) * CARGO_ARM.kFeedConstant;
+				mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mCargoArmState.state),
+						NeutralMode.Brake, -armFeed);
 			}
+		} else {
+			Logger.logErrorWithTrace("Unexpected Cargo Arm Control State: " + mCargoArmControlState);
+		}
 
-			mIntakeTalon.set(ControlMode.PercentOutput, mRollerSetpoint, NeutralMode.Brake);
+		mIntakeTalon.set(ControlMode.PercentOutput, mRollerSetpoint, NeutralMode.Brake);
 	}
 
 	@Override
 	public void outputTelemetry(double timestamp) {
 		mArmTalon.updateSmartDash(false);
-		SmartDashboard.putNumber("Cargo Abs Pos", mArmTalon.getAbsolutePosition());
-		SmartDashboard.putString("Cargo Arm Desired Position", mCargoArmState.toString());
-		SmartDashboard.putString("Cargo Arm Control Mode", mCargoArmControlState.toString());
-		SmartDashboard.putBoolean("Cargo Arm Status", mArmTalon.isEncoderConnected());
-		SmartDashboard.putNumber("Cargo Arm Error", mArmTalon.getError());
+		mAbsPos.setDouble(mArmTalon.getAbsolutePosition());
+		mDesiredState.setString(mCargoArmState.toString());
+		mControlMode.setString(mCargoArmControlState.toString());
+		mStatus.setBoolean(mArmTalon.isEncoderConnected());
+		mRawError.setDouble(MkMath.angleToNativeUnits(mArmTalon.getError()));
 	}
 
 	@Override
@@ -160,7 +174,7 @@ public class CargoArm extends Subsystem {
 		}
 	}
 
-	public void setIntakeRollers(double output) {
+	public synchronized void setIntakeRollers(double output) {
 		if (output == CARGO_ARM.INTAKE_IN_ROLLER_SPEED && Vision.mPixy.isCargoIntaked()) {
 			setArmState(CargoArmState.REVERSE_CARGOSHIP);
 		}
@@ -171,7 +185,7 @@ public class CargoArm extends Subsystem {
 		return mCargoArmControlState;
 	}
 
-	private void setArmControlState(CargoArmControlState state) {
+	private synchronized void setArmControlState(CargoArmControlState state) {
 		if (state == CargoArmControlState.MOTION_MAGIC && mCargoArmControlState != CargoArmControlState.MOTION_MAGIC) {
 			setEnable();
 		} else if (state == CargoArmControlState.OPEN_LOOP && mCargoArmControlState != CargoArmControlState.OPEN_LOOP) {

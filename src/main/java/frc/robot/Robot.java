@@ -8,6 +8,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import frc.robot.auto.modes.CharacterizeHighGearStraight;
 import frc.robot.auto.modes.TestPathMode;
 import frc.robot.lib.util.Logger;
 import frc.robot.paths.TrajectoryGenerator;
@@ -22,12 +23,7 @@ public class Robot extends TimedRobot {
 
 	public static MatchState mMatchState = MatchState.DISABLED;
 	private final SubsystemManager mSubsystemManager = new SubsystemManager(
-			Arrays.asList());
-	private static Drive mDrive = Drive.getInstance();
-	private static HatchArm mHatch = HatchArm.getInstance();
-	private static CargoArm mCargo = CargoArm.getInstance();
-	private static Superstructure mStructure = Superstructure.getInstance();
-	private static Vision mVision = Vision.getInstance();
+			Arrays.asList(Drive.getInstance(), HatchArm.getInstance(), CargoArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
 
 	public Robot() {
 		super(Constants.GENERAL.kLoopDt);
@@ -100,14 +96,25 @@ public class Robot extends TimedRobot {
 
 	@Override
 	public void autonomousPeriodic() {
-		mSubsystemManager.mainLoop();
-		Input.updateControlInput();
+		try {
+			mSubsystemManager.mainLoop();
+			//Input.updateControlInput();
+		} catch (Throwable t) {
+			Logger.logThrowableCrash(t);
+			throw t;
+		}
+
 	}
 
 	@Override
 	public void teleopPeriodic() {
-		mSubsystemManager.mainLoop();
-		Input.updateControlInput();
+		try {
+			mSubsystemManager.mainLoop();
+			Input.updateControlInput();
+		} catch (Throwable t) {
+			Logger.logThrowableCrash(t);
+			throw t;
+		}
 	}
 
 	@Override

@@ -2,9 +2,11 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
+import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.HATCH_ARM;
@@ -30,11 +32,24 @@ public class HatchArm extends Subsystem {
 	private double mOpenLoopSetpoint, mArmPosEnable = 0.0;
 	private MkTime mStartDis, mTransferTime, mMoveTime;
 	private boolean mHatchLimitTriggered = false;
+	private ShuffleboardTab mHatchArmTab;
+	private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus, mRawError, mMechState, mLimitTriggered, mSpearState, mRawPos;
 
 	private HatchArm() {
+		mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
+		mAbsPos = mHatchArmTab.add("Absolute Pos", 0.0).getEntry();
+		mControlMode = mHatchArmTab.add("Control Mode", "").getEntry();
+		mStatus = mHatchArmTab.add("Status", false).getEntry();
+		mDesiredState = mHatchArmTab.add("Desired State", "").getEntry();
+		mRawError = mHatchArmTab.add("Error (Deg)", 0.0).getEntry();
+		mSpearState = mHatchArmTab.add("Spear State", "").getEntry();
+		mMechState = mHatchArmTab.add("Mechanism State", "").getEntry();
+		mLimitTriggered = mHatchArmTab.add("Spear Limit", false).getEntry();
+		mRawPos = mHatchArmTab.add("Raw Pos", 0.0).getEntry();
+
 		mArmSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kHatchArmChannel);
 		mHatchSpearState = HatchSpearState.STOW;
-		mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kHatchLimitSwitchTalonID, TalonLoc.Hatch_Arm);
+		mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kHatchLimitSwitchTalonID, TalonLoc.Hatch_Arm, mHatchArmTab);
 		mStartDis = new MkTime();
 		mTransferTime = new MkTime();
 		mMoveTime = new MkTime();
@@ -122,14 +137,14 @@ public class HatchArm extends Subsystem {
 
 	public void outputTelemetry(double timestamp) {
 		mArmTalon.updateSmartDash(false);
-		SmartDashboard.putString("Hatch Arm Desired Position", mHatchIntakeState.toString());
-		SmartDashboard.putString("Hatch Arm Control Mode", mHatchIntakeControlState.toString());
-		SmartDashboard.putBoolean("Hatch Arm Status", mArmTalon.isEncoderConnected());
-		SmartDashboard.putNumber("Hatch Arm Abs", mArmTalon.getAbsolutePosition());
-		SmartDashboard.putString("Hatch Mech State", mHatchMechanismState.toString());
-		SmartDashboard.putNumber("Hatch Arm Raw Error", MkMath.angleToNativeUnits(mArmTalon.getError()));
-		SmartDashboard.putNumber("Hatch Arm Raw Pos", mArmTalon.masterTalon.getSelectedSensorPosition());
-		SmartDashboard.putBoolean("Hatch Limit Triggered", isHatchLimitTriggered());
+		mDesiredState.setString(mHatchIntakeState.toString());
+		mControlMode.setString(mHatchIntakeControlState.toString());
+		mStatus.setBoolean(mArmTalon.isEncoderConnected());
+		mAbsPos.setDouble(mArmTalon.getAbsolutePosition());
+		mMechState.setString(mHatchMechanismState.toString());
+		mRawError.setDouble(MkMath.angleToNativeUnits(mArmTalon.getError()));
+		mRawPos.setDouble(mArmTalon.masterTalon.getSelectedSensorPosition());
+		mLimitTriggered.setBoolean(isHatchLimitTriggered());
 	}
 
 	/**
@@ -139,53 +154,53 @@ public class HatchArm extends Subsystem {
 	 */
 	@Override
 	public synchronized void slowUpdate(double timestamp) {
-			mHatchLimitTriggered = mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
-			switch (mHatchMechanismState) {
-				case STOWED:
-				case SPEAR_STOW_ONLY:
-				case SPEAR_PLACE_ONLY:
-				case GROUND_INTAKE:
-				case PLACING:
-				case UNKNOWN:
-				case CLEAR_CARGO:
-				case VISION_CONTROL:
-					break;
-				case STATION_INTAKE:
-					if (isHatchLimitTriggered()) {
-						setHatchMechanismState(HatchMechanismState.STOWED);
-					}
-					break;
-				case TRANSFER:
-					if (mMoveTime.isDone()) {
-						setHatchIntakePosition(HatchIntakeState.TRANSFER_POINT);
-					}
-					if (isHatchLimitTriggered()) {
-						setHatchSpearState(HatchSpearState.STOW);
-						mTransferTime.start(0.125);
-					}
-					if (mTransferTime.isDone()) {
-						setHatchMechanismState(HatchMechanismState.STOWED);
-						mTransferTime.reset();
-						mArmTalon.masterTalon.configMotionCruiseVelocity((int) HATCH_ARM.kMotionMagicCruiseVel);
-					}
-					break;
-				default:
-					Logger.logErrorWithTrace("Unexpected Hatch Arm control state: " + mHatchMechanismState);
-					break;
-			}
-			if (mHatchIntakeControlState == HatchIntakeControlState.OPEN_LOOP) {
-				mArmTalon.set(ControlMode.PercentOutput, mOpenLoopSetpoint, NeutralMode.Brake);
-			} else if (mHatchIntakeControlState == HatchIntakeControlState.MOTION_MAGIC) {
-				if (mHatchIntakeState == HatchIntakeState.ENABLE) {
-					mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mArmPosEnable), NeutralMode.Brake);
-				} else {
-					mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mHatchIntakeState.state),
-							NeutralMode.Brake, 0.0);
+		mHatchLimitTriggered = mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
+		switch (mHatchMechanismState) {
+			case STOWED:
+			case SPEAR_STOW_ONLY:
+			case SPEAR_PLACE_ONLY:
+			case GROUND_INTAKE:
+			case PLACING:
+			case UNKNOWN:
+			case CLEAR_CARGO:
+			case VISION_CONTROL:
+				break;
+			case STATION_INTAKE:
+				if (isHatchLimitTriggered()) {
+					setHatchMechanismState(HatchMechanismState.STOWED);
 				}
+				break;
+			case TRANSFER:
+				if (mMoveTime.isDone()) {
+					setHatchIntakePosition(HatchIntakeState.TRANSFER_POINT);
+				}
+				if (isHatchLimitTriggered()) {
+					setHatchSpearState(HatchSpearState.STOW);
+					mTransferTime.start(0.125);
+				}
+				if (mTransferTime.isDone()) {
+					setHatchMechanismState(HatchMechanismState.STOWED);
+					mTransferTime.reset();
+					mArmTalon.masterTalon.configMotionCruiseVelocity((int) HATCH_ARM.kMotionMagicCruiseVel);
+				}
+				break;
+			default:
+				Logger.logErrorWithTrace("Unexpected Hatch Arm control state: " + mHatchMechanismState);
+				break;
+		}
+		if (mHatchIntakeControlState == HatchIntakeControlState.OPEN_LOOP) {
+			mArmTalon.set(ControlMode.PercentOutput, mOpenLoopSetpoint, NeutralMode.Brake);
+		} else if (mHatchIntakeControlState == HatchIntakeControlState.MOTION_MAGIC) {
+			if (mHatchIntakeState == HatchIntakeState.ENABLE) {
+				mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mArmPosEnable), NeutralMode.Brake);
 			} else {
-				Logger.logErrorWithTrace("Unexpected arm control state: " + mHatchIntakeControlState);
+				mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mHatchIntakeState.state),
+						NeutralMode.Brake, 0.0);
 			}
-			mArmSolenoid.set(mHatchSpearState.state);
+		} else {
+			Logger.logErrorWithTrace("Unexpected arm control state: " + mHatchIntakeControlState);
+		}
+		mArmSolenoid.set(mHatchSpearState.state);
 	}
 
 	@Override

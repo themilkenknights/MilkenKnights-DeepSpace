@@ -40,7 +40,7 @@ public final class Constants {
 		public static final double kSlowLooperDt = 0.02;
 		public static final double kLimelightLoopPeriod = 0.02;
 		public static final double kPixyLoopPeriod = 0.02;
-		public static final double kTelemetryDt = 0.2;
+		public static final double kTelemetryDt = 0.05;
 	}
 
 	/**
@@ -52,11 +52,11 @@ public final class Constants {
 		public static final int kPneumaticsControlModuleID = 0;
 		public static final int kPowerDistributionPanelID = 11;
 
-		public static final int kDriveLeftMasterTalonID = 5;
-		public static final int kDriveLeftSlaveVictorID = 4;
+		public static final int kDriveLeftMasterTalonID = 10;
+		public static final int kDriveLeftSlaveVictorID = 9;
 
-		public static final int kDriveRightMasterTalonID = 10;
-		public static final int kDriveRightSlaveVictorID = 9;
+		public static final int kDriveRightMasterTalonID = 5;
+		public static final int kDriveRightSlaveVictorID = 4;
 
 		public static final int kGroundHatchArmTalonID = 8;
 		public static final int kHatchLimitSwitchTalonID = 3;
@@ -78,13 +78,13 @@ public final class Constants {
 		public static final boolean KRightMasterInvert = true;
 		public static final boolean kRightSlaveInvert = true;
 
-		public static final boolean kLeftSensorInvert = false;
-		public static final boolean kRightSensorInvert = false;
+		public static final boolean kLeftSensorInvert = true;
+		public static final boolean kRightSensorInvert = true;
 
 		//Measured params
 		public static final double kEffectiveDriveWheelTrackWidthInches = 33.75; //Effective Wheelbase
-		public static final double kDriveWheelTrackWidthInches = 26.0;
-		public static final double kDriveWheelTrackRadiusMeters = Units.inches_to_meters(kDriveWheelTrackWidthInches / 2.0);
+		public static final double kDriveWheelTrackWidthInches = 22.45;
+		public static final double kDriveWheelTrackRadiusMeters = (kDriveWheelTrackWidthInches / 2.0) * 0.0254;
 		public static final double kWheelDiameter = 6.0;
 		public static final double kCircumference = kWheelDiameter * GENERAL.PI;
 		public static final double kDriveWheelRadiusInches = kWheelDiameter / 2.0;
@@ -92,12 +92,11 @@ public final class Constants {
 		//Tuned dynamics
 		//TODO Tune All Drive Params on Carpet
 		public static final double kRobotLinearInertia = 45.30; //Kg
-		public static final double kRobotAngularDrag = 6.0;  // N*m / (rad/sec)
-
-		public static final double kDriveVIntercept = 0.5603;  // V
-		public static final double kDriveKv = 0.24763;  // V per rad/s2
-		public static final double kDriveKa = 0.012;  // V per rad/s^
-		public static final double kDriveAngularKa = 0.00704;  // V per rad/s^ (found by turn in place)
+		public static final double kRobotAngularDrag = 10.0;  // N*m / (rad/sec)
+		public static final double kDriveVIntercept = 0.65;  // V
+		public static final double kDriveKv = 0.275;  // V per rad/s2
+		public static final double kDriveKa = 0.00575;  // V per rad/s^
+		public static final double kDriveAngularKa = 0.0065 ;  // V per rad/s^ (found by turn in place)
 		public static final double kRobotAngularInertia = (kDriveWheelTrackRadiusMeters * kDriveKa * kRobotLinearInertia) / (kDriveAngularKa);  // Kg m^2
 
 		//TODO Turn In Place Scrub Tuning
@@ -109,8 +108,8 @@ public final class Constants {
 		public static final double kPathMinLookaheadDistance = 24.0;  // inches
 
 		//Talon PID Constants
-		public static final double kMaxVel = 160.221;
-		public static final double kMaxNativeVel = 3481.6;
+		public static final double kMaxVel = 154.62;
+		public static final double kMaxNativeVel = 3370.0;
 		public static final double kMotionMagicCruiseNativeVel = kMaxNativeVel * 0.5;
 		public static final double kMotionMagicNativeAccel = kMotionMagicCruiseNativeVel * 0.5;
 		public static final double kLeftDriveF = 1023.0 / kMaxNativeVel;
@@ -181,7 +180,7 @@ public final class Constants {
 		public static final double ARM_F = (1023.0 / MAX_RAW_VEL);
 
 		public static final double ARM_FORWARD_LIMIT = 190.0;
-		public static final double ARM_REVERSE_LIMIT = 0.0;
+		public static final double ARM_REVERSE_LIMIT = -13.0;
 		public static final double MOTION_MAGIC_CRUISE_VEL = MAX_RAW_VEL;
 		public static final double MOTION_MAGIC_ACCEL = MAX_RAW_VEL * 10;
 		public static final double MAX_SAFE_CURRENT = 80;
@@ -226,7 +225,7 @@ public final class Constants {
 		public static final int kBookEnd_0 = kIsPracticeBot ? 5453 : 827;
 		public static final int kBookEnd_1 = kIsPracticeBot ? 3340 : 3790;
 		public static final boolean kCrossOverZero = kIsPracticeBot ? true : true;
-		public static final int kOffset = kIsPracticeBot ? -1294 : 0;
+		public static final int kOffset = kIsPracticeBot ? -1336 : 0;
 	}
 
 	public static class PNUEMATICS {
@@ -244,7 +243,7 @@ public final class Constants {
 
 	public static class LOG {
 
-		public static final boolean kDriveCSVLogging = false;
+		public static final boolean kDriveCSVLogging = true;
 	}
 
 

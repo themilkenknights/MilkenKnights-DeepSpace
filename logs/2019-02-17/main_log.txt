@@ -15,3 +15,1975 @@ fe1516c7-93ce-4b67-a0de-41888b778313, Set Hatch Spear to STOW, Sun Feb 17 12:23:
 6f6b1412-e2d6-4bf8-b212-a5c809228111, Teleop Init, Sun Feb 17 12:28:18 PST 2019
 6f6b1412-e2d6-4bf8-b212-a5c809228111, Disabled Init, Sun Feb 17 12:28:26 PST 2019
 6f6b1412-e2d6-4bf8-b212-a5c809228111, Set Hatch Spear to STOW, Sun Feb 17 12:28:26 PST 2019
+39d89b34-86e1-4bc0-84cd-93e14856e9b0, Robot Startup, Sun Feb 17 12:30:19 PST 2019
+39d89b34-86e1-4bc0-84cd-93e14856e9b0, Robot Init, Sun Feb 17 12:30:20 PST 2019
+39d89b34-86e1-4bc0-84cd-93e14856e9b0, Disabled Init, Sun Feb 17 12:30:20 PST 2019
+39d89b34-86e1-4bc0-84cd-93e14856e9b0, Set Hatch Spear to STOW, Sun Feb 17 12:30:20 PST 2019
+39d89b34-86e1-4bc0-84cd-93e14856e9b0, SET HEADING: 0.0, Sun Feb 17 12:30:20 PST 2019
+39d89b34-86e1-4bc0-84cd-93e14856e9b0, Gyro offset: -117.26000213623048, Sun Feb 17 12:30:20 PST 2019
+0dac8294-f1aa-4156-acb6-93b61c30f583, Robot Startup, Sun Feb 17 12:31:30 PST 2019
+0dac8294-f1aa-4156-acb6-93b61c30f583, Robot Init, Sun Feb 17 12:31:30 PST 2019
+0dac8294-f1aa-4156-acb6-93b61c30f583, Disabled Init, Sun Feb 17 12:31:30 PST 2019
+0dac8294-f1aa-4156-acb6-93b61c30f583, Set Hatch Spear to STOW, Sun Feb 17 12:31:30 PST 2019
+0dac8294-f1aa-4156-acb6-93b61c30f583, SET HEADING: 0.0, Sun Feb 17 12:31:31 PST 2019
+0dac8294-f1aa-4156-acb6-93b61c30f583, Gyro offset: -116.9000015258789, Sun Feb 17 12:31:31 PST 2019
+1d0467b9-0316-4692-9f5f-a8302b171d58, Robot Startup, Sun Feb 17 12:32:30 PST 2019
+1d0467b9-0316-4692-9f5f-a8302b171d58, Robot Init, Sun Feb 17 12:32:30 PST 2019
+1d0467b9-0316-4692-9f5f-a8302b171d58, Disabled Init, Sun Feb 17 12:32:30 PST 2019
+1d0467b9-0316-4692-9f5f-a8302b171d58, Set Hatch Spear to STOW, Sun Feb 17 12:32:30 PST 2019
+1d0467b9-0316-4692-9f5f-a8302b171d58, SET HEADING: 0.0, Sun Feb 17 12:32:30 PST 2019
+1d0467b9-0316-4692-9f5f-a8302b171d58, Gyro offset: -116.66999816894533, Sun Feb 17 12:32:31 PST 2019
+1d0467b9-0316-4692-9f5f-a8302b171d58, Teleop Init, Sun Feb 17 12:32:33 PST 2019
+1d0467b9-0316-4692-9f5f-a8302b171d58, Disabled Init, Sun Feb 17 12:32:41 PST 2019
+1d0467b9-0316-4692-9f5f-a8302b171d58, Set Hatch Spear to STOW, Sun Feb 17 12:32:41 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, Robot Startup, Sun Feb 17 12:32:55 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, Robot Init, Sun Feb 17 12:32:55 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, Disabled Init, Sun Feb 17 12:32:55 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, Set Hatch Spear to STOW, Sun Feb 17 12:32:56 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, SET HEADING: 0.0, Sun Feb 17 12:32:56 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, Gyro offset: -117.0999984741211, Sun Feb 17 12:32:56 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, Teleop Init, Sun Feb 17 12:32:57 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, Disabled Init, Sun Feb 17 12:32:59 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, Set Hatch Spear to STOW, Sun Feb 17 12:32:59 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, Teleop Init, Sun Feb 17 12:33:06 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, Disabled Init, Sun Feb 17 12:33:10 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, Set Hatch Spear to STOW, Sun Feb 17 12:33:10 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, Teleop Init, Sun Feb 17 12:33:29 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, Disabled Init, Sun Feb 17 12:33:30 PST 2019
+98fd1a44-debc-4ba6-9631-dbfec989eca9, Set Hatch Spear to STOW, Sun Feb 17 12:33:30 PST 2019
+a779bc49-e277-4e4a-abc8-1e9410285730, Robot Startup, Sun Feb 17 12:34:09 PST 2019
+a779bc49-e277-4e4a-abc8-1e9410285730, Robot Init, Sun Feb 17 12:34:09 PST 2019
+a779bc49-e277-4e4a-abc8-1e9410285730, Disabled Init, Sun Feb 17 12:34:09 PST 2019
+a779bc49-e277-4e4a-abc8-1e9410285730, Set Hatch Spear to STOW, Sun Feb 17 12:34:10 PST 2019
+a779bc49-e277-4e4a-abc8-1e9410285730, SET HEADING: 0.0, Sun Feb 17 12:34:10 PST 2019
+a779bc49-e277-4e4a-abc8-1e9410285730, Gyro offset: -116.70999908447267, Sun Feb 17 12:34:10 PST 2019
+a779bc49-e277-4e4a-abc8-1e9410285730, Teleop Init, Sun Feb 17 12:34:17 PST 2019
+a779bc49-e277-4e4a-abc8-1e9410285730, Disabled Init, Sun Feb 17 12:34:36 PST 2019
+a779bc49-e277-4e4a-abc8-1e9410285730, Set Hatch Spear to STOW, Sun Feb 17 12:34:36 PST 2019
+726ff00a-d068-4875-be5d-c639bf913751, Robot Startup, Sun Feb 17 12:35:53 PST 2019
+726ff00a-d068-4875-be5d-c639bf913751, Robot Init, Sun Feb 17 12:35:53 PST 2019
+726ff00a-d068-4875-be5d-c639bf913751, Disabled Init, Sun Feb 17 12:35:53 PST 2019
+726ff00a-d068-4875-be5d-c639bf913751, Teleop Init, Sun Feb 17 12:35:53 PST 2019
+726ff00a-d068-4875-be5d-c639bf913751, SET HEADING: 0.0, Sun Feb 17 12:35:54 PST 2019
+726ff00a-d068-4875-be5d-c639bf913751, Gyro offset: -116.44999694824219, Sun Feb 17 12:35:54 PST 2019
+726ff00a-d068-4875-be5d-c639bf913751, Disabled Init, Sun Feb 17 12:36:22 PST 2019
+092d280f-b409-4130-a731-1991fe6e9349, Robot Startup, Sun Feb 17 12:36:44 PST 2019
+092d280f-b409-4130-a731-1991fe6e9349, Robot Init, Sun Feb 17 12:36:44 PST 2019
+092d280f-b409-4130-a731-1991fe6e9349, Disabled Init, Sun Feb 17 12:36:44 PST 2019
+092d280f-b409-4130-a731-1991fe6e9349, SET HEADING: 0.0, Sun Feb 17 12:36:45 PST 2019
+092d280f-b409-4130-a731-1991fe6e9349, Gyro offset: -116.40000152587893, Sun Feb 17 12:36:45 PST 2019
+b57d15f5-4a31-468b-b4d0-74c541980309, Robot Startup, Sun Feb 17 15:02:31 PST 2019
+b57d15f5-4a31-468b-b4d0-74c541980309, Robot Init, Sun Feb 17 15:02:32 PST 2019
+b57d15f5-4a31-468b-b4d0-74c541980309, Disabled Init, Sun Feb 17 15:02:32 PST 2019
+b57d15f5-4a31-468b-b4d0-74c541980309, Set Hatch Spear to STOW, Sun Feb 17 15:02:32 PST 2019
+b57d15f5-4a31-468b-b4d0-74c541980309, SET HEADING: 0.0, Sun Feb 17 15:02:33 PST 2019
+b57d15f5-4a31-468b-b4d0-74c541980309, Gyro offset: 5.390014648437483, Sun Feb 17 15:02:33 PST 2019
+9a50425f-58d3-49a1-b774-afc09801f1a4, Robot Startup, Sun Feb 17 15:03:11 PST 2019
+9a50425f-58d3-49a1-b774-afc09801f1a4, Robot Init, Sun Feb 17 15:03:11 PST 2019
+9a50425f-58d3-49a1-b774-afc09801f1a4, Disabled Init, Sun Feb 17 15:03:11 PST 2019
+9a50425f-58d3-49a1-b774-afc09801f1a4, Set Hatch Spear to STOW, Sun Feb 17 15:03:12 PST 2019
+9a50425f-58d3-49a1-b774-afc09801f1a4, SET HEADING: 0.0, Sun Feb 17 15:03:12 PST 2019
+9a50425f-58d3-49a1-b774-afc09801f1a4, Gyro offset: 5.549987792968768, Sun Feb 17 15:03:12 PST 2019
+561fadf9-8049-4e70-9469-a78fffca5163, Robot Startup, Sun Feb 17 15:11:01 PST 2019
+561fadf9-8049-4e70-9469-a78fffca5163, Robot Init, Sun Feb 17 15:11:01 PST 2019
+561fadf9-8049-4e70-9469-a78fffca5163, Disabled Init, Sun Feb 17 15:11:01 PST 2019
+561fadf9-8049-4e70-9469-a78fffca5163, Set Hatch Spear to STOW, Sun Feb 17 15:11:01 PST 2019
+ba24eba3-5d0d-4a6c-8da9-80ee5ac24822, Robot Startup, Sun Feb 17 15:11:14 PST 2019
+ba24eba3-5d0d-4a6c-8da9-80ee5ac24822, Robot Init, Sun Feb 17 15:11:14 PST 2019
+ba24eba3-5d0d-4a6c-8da9-80ee5ac24822, Disabled Init, Sun Feb 17 15:11:14 PST 2019
+ba24eba3-5d0d-4a6c-8da9-80ee5ac24822, Set Hatch Spear to STOW, Sun Feb 17 15:11:15 PST 2019
+ba24eba3-5d0d-4a6c-8da9-80ee5ac24822, SET HEADING: 0.0, Sun Feb 17 15:11:15 PST 2019
+ba24eba3-5d0d-4a6c-8da9-80ee5ac24822, Gyro offset: 7.880004882812516, Sun Feb 17 15:11:15 PST 2019
+8ded8f38-ccad-46cb-ad90-79f36e9de3f5, Robot Startup, Sun Feb 17 15:12:04 PST 2019
+8ded8f38-ccad-46cb-ad90-79f36e9de3f5, Robot Init, Sun Feb 17 15:12:04 PST 2019
+8ded8f38-ccad-46cb-ad90-79f36e9de3f5, Disabled Init, Sun Feb 17 15:12:04 PST 2019
+8ded8f38-ccad-46cb-ad90-79f36e9de3f5, Set Hatch Spear to STOW, Sun Feb 17 15:12:04 PST 2019
+8ded8f38-ccad-46cb-ad90-79f36e9de3f5, SET HEADING: 0.0, Sun Feb 17 15:12:05 PST 2019
+8ded8f38-ccad-46cb-ad90-79f36e9de3f5, Gyro offset: 8.160003662109403, Sun Feb 17 15:12:05 PST 2019
+d9850617-c0a1-477a-ba34-467d3d45dea5, Robot Startup, Sun Feb 17 15:12:17 PST 2019
+d9850617-c0a1-477a-ba34-467d3d45dea5, Robot Init, Sun Feb 17 15:12:17 PST 2019
+d9850617-c0a1-477a-ba34-467d3d45dea5, Disabled Init, Sun Feb 17 15:12:17 PST 2019
+d9850617-c0a1-477a-ba34-467d3d45dea5, Set Hatch Spear to STOW, Sun Feb 17 15:12:18 PST 2019
+d9850617-c0a1-477a-ba34-467d3d45dea5, SET HEADING: 0.0, Sun Feb 17 15:12:18 PST 2019
+d9850617-c0a1-477a-ba34-467d3d45dea5, Gyro offset: 8.170013427734368, Sun Feb 17 15:12:18 PST 2019
+699ce346-665f-49dc-833f-df74916856cd, Robot Startup, Sun Feb 17 15:12:56 PST 2019
+699ce346-665f-49dc-833f-df74916856cd, Robot Init, Sun Feb 17 15:12:56 PST 2019
+699ce346-665f-49dc-833f-df74916856cd, Disabled Init, Sun Feb 17 15:12:57 PST 2019
+699ce346-665f-49dc-833f-df74916856cd, Set Hatch Spear to STOW, Sun Feb 17 15:12:57 PST 2019
+699ce346-665f-49dc-833f-df74916856cd, SET HEADING: 0.0, Sun Feb 17 15:12:57 PST 2019
+699ce346-665f-49dc-833f-df74916856cd, Gyro offset: 8.329986572265653, Sun Feb 17 15:12:57 PST 2019
+79171273-e6f3-4c18-8297-ae5007069bff, Robot Startup, Sun Feb 17 15:13:22 PST 2019
+79171273-e6f3-4c18-8297-ae5007069bff, Robot Init, Sun Feb 17 15:13:22 PST 2019
+79171273-e6f3-4c18-8297-ae5007069bff, Disabled Init, Sun Feb 17 15:13:22 PST 2019
+79171273-e6f3-4c18-8297-ae5007069bff, Set Hatch Spear to STOW, Sun Feb 17 15:13:22 PST 2019
+79171273-e6f3-4c18-8297-ae5007069bff, SET HEADING: 0.0, Sun Feb 17 15:13:23 PST 2019
+79171273-e6f3-4c18-8297-ae5007069bff, Gyro offset: 8.489990234375028, Sun Feb 17 15:13:23 PST 2019
+77fae95d-c484-4e14-97dc-0f74b703429e, Robot Startup, Sun Feb 17 15:25:29 PST 2019
+77fae95d-c484-4e14-97dc-0f74b703429e, Robot Init, Sun Feb 17 15:25:29 PST 2019
+77fae95d-c484-4e14-97dc-0f74b703429e, Disabled Init, Sun Feb 17 15:25:29 PST 2019
+77fae95d-c484-4e14-97dc-0f74b703429e, Set Hatch Spear to STOW, Sun Feb 17 15:25:29 PST 2019
+77fae95d-c484-4e14-97dc-0f74b703429e, SET HEADING: 0.0, Sun Feb 17 15:25:30 PST 2019
+77fae95d-c484-4e14-97dc-0f74b703429e, Gyro offset: 11.80999755859375, Sun Feb 17 15:25:30 PST 2019
+b64aac1f-d0ef-47a9-b48b-4218722220df, Robot Startup, Sun Feb 17 15:26:15 PST 2019
+b64aac1f-d0ef-47a9-b48b-4218722220df, Robot Init, Sun Feb 17 15:26:16 PST 2019
+b64aac1f-d0ef-47a9-b48b-4218722220df, Disabled Init, Sun Feb 17 15:26:16 PST 2019
+b64aac1f-d0ef-47a9-b48b-4218722220df, Set Hatch Spear to STOW, Sun Feb 17 15:26:16 PST 2019
+b64aac1f-d0ef-47a9-b48b-4218722220df, SET HEADING: 0.0, Sun Feb 17 15:26:16 PST 2019
+b64aac1f-d0ef-47a9-b48b-4218722220df, Gyro offset: 11.910003662109371, Sun Feb 17 15:26:16 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, Robot Startup, Sun Feb 17 15:45:57 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, Robot Init, Sun Feb 17 15:45:57 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, Disabled Init, Sun Feb 17 15:45:57 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, Set Hatch Spear to STOW, Sun Feb 17 15:45:57 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, SET HEADING: 0.0, Sun Feb 17 15:45:58 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, Gyro offset: 17.359985351562504, Sun Feb 17 15:45:58 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, Teleop Init, Sun Feb 17 15:46:03 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, Disabled Init, Sun Feb 17 15:46:05 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, Set Hatch Spear to STOW, Sun Feb 17 15:46:05 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, Teleop Init, Sun Feb 17 15:46:05 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, Disabled Init, Sun Feb 17 15:46:17 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, Set Hatch Spear to STOW, Sun Feb 17 15:46:17 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, Teleop Init, Sun Feb 17 15:46:20 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, Disabled Init, Sun Feb 17 15:47:04 PST 2019
+36366543-ad97-4f0c-a6b8-bcc3dc4c9ea4, Set Hatch Spear to STOW, Sun Feb 17 15:47:04 PST 2019
+69dcb7bf-5e3c-4aea-978b-3a3fb53d071a, Robot Startup, Sun Feb 17 15:48:55 PST 2019
+69dcb7bf-5e3c-4aea-978b-3a3fb53d071a, Robot Init, Sun Feb 17 15:48:55 PST 2019
+69dcb7bf-5e3c-4aea-978b-3a3fb53d071a, Disabled Init, Sun Feb 17 15:48:55 PST 2019
+69dcb7bf-5e3c-4aea-978b-3a3fb53d071a, Set Hatch Spear to STOW, Sun Feb 17 15:48:55 PST 2019
+69dcb7bf-5e3c-4aea-978b-3a3fb53d071a, SET HEADING: 0.0, Sun Feb 17 15:48:56 PST 2019
+69dcb7bf-5e3c-4aea-978b-3a3fb53d071a, Gyro offset: 125.5399932861328, Sun Feb 17 15:48:56 PST 2019
+69dcb7bf-5e3c-4aea-978b-3a3fb53d071a, Teleop Init, Sun Feb 17 15:49:00 PST 2019
+69dcb7bf-5e3c-4aea-978b-3a3fb53d071a, Disabled Init, Sun Feb 17 15:49:01 PST 2019
+69dcb7bf-5e3c-4aea-978b-3a3fb53d071a, Set Hatch Spear to STOW, Sun Feb 17 15:49:01 PST 2019
+69dcb7bf-5e3c-4aea-978b-3a3fb53d071a, Teleop Init, Sun Feb 17 15:49:06 PST 2019
+69dcb7bf-5e3c-4aea-978b-3a3fb53d071a, Disabled Init, Sun Feb 17 15:49:07 PST 2019
+69dcb7bf-5e3c-4aea-978b-3a3fb53d071a, Set Hatch Spear to STOW, Sun Feb 17 15:49:07 PST 2019
+b184bb5c-cd61-4c44-82ea-758cfcd13a20, Robot Startup, Sun Feb 17 15:49:31 PST 2019
+b184bb5c-cd61-4c44-82ea-758cfcd13a20, Robot Init, Sun Feb 17 15:49:31 PST 2019
+b184bb5c-cd61-4c44-82ea-758cfcd13a20, Disabled Init, Sun Feb 17 15:49:32 PST 2019
+b184bb5c-cd61-4c44-82ea-758cfcd13a20, Set Hatch Spear to STOW, Sun Feb 17 15:49:32 PST 2019
+b184bb5c-cd61-4c44-82ea-758cfcd13a20, SET HEADING: 0.0, Sun Feb 17 15:49:32 PST 2019
+b184bb5c-cd61-4c44-82ea-758cfcd13a20, Gyro offset: 125.55000305175781, Sun Feb 17 15:49:32 PST 2019
+b184bb5c-cd61-4c44-82ea-758cfcd13a20, Teleop Init, Sun Feb 17 15:49:38 PST 2019
+b184bb5c-cd61-4c44-82ea-758cfcd13a20, Disabled Init, Sun Feb 17 15:49:43 PST 2019
+b184bb5c-cd61-4c44-82ea-758cfcd13a20, Set Hatch Spear to STOW, Sun Feb 17 15:49:44 PST 2019
+afed826d-bf46-46cc-a5b0-ae80f0f2b9f5, Robot Startup, Sun Feb 17 15:50:21 PST 2019
+afed826d-bf46-46cc-a5b0-ae80f0f2b9f5, Robot Init, Sun Feb 17 15:50:21 PST 2019
+afed826d-bf46-46cc-a5b0-ae80f0f2b9f5, Disabled Init, Sun Feb 17 15:50:21 PST 2019
+afed826d-bf46-46cc-a5b0-ae80f0f2b9f5, Set Hatch Spear to STOW, Sun Feb 17 15:50:22 PST 2019
+afed826d-bf46-46cc-a5b0-ae80f0f2b9f5, SET HEADING: 0.0, Sun Feb 17 15:50:22 PST 2019
+afed826d-bf46-46cc-a5b0-ae80f0f2b9f5, Gyro offset: 126.1699981689453, Sun Feb 17 15:50:22 PST 2019
+afed826d-bf46-46cc-a5b0-ae80f0f2b9f5, Teleop Init, Sun Feb 17 15:50:23 PST 2019
+afed826d-bf46-46cc-a5b0-ae80f0f2b9f5, Disabled Init, Sun Feb 17 15:50:24 PST 2019
+afed826d-bf46-46cc-a5b0-ae80f0f2b9f5, Set Hatch Spear to STOW, Sun Feb 17 15:50:24 PST 2019
+e02d89a4-3bd8-487c-8af2-b0b2a3aee769, Robot Startup, Sun Feb 17 15:51:01 PST 2019
+e02d89a4-3bd8-487c-8af2-b0b2a3aee769, Robot Init, Sun Feb 17 15:51:01 PST 2019
+e02d89a4-3bd8-487c-8af2-b0b2a3aee769, Disabled Init, Sun Feb 17 15:51:01 PST 2019
+e02d89a4-3bd8-487c-8af2-b0b2a3aee769, Set Hatch Spear to STOW, Sun Feb 17 15:51:01 PST 2019
+e02d89a4-3bd8-487c-8af2-b0b2a3aee769, SET HEADING: 0.0, Sun Feb 17 15:51:01 PST 2019
+e02d89a4-3bd8-487c-8af2-b0b2a3aee769, Gyro offset: 126.38000488281251, Sun Feb 17 15:51:01 PST 2019
+032ac7f3-6846-4e1b-aaa3-ee874b63c814, Robot Startup, Sun Feb 17 15:52:25 PST 2019
+032ac7f3-6846-4e1b-aaa3-ee874b63c814, Robot Init, Sun Feb 17 15:52:25 PST 2019
+032ac7f3-6846-4e1b-aaa3-ee874b63c814, Disabled Init, Sun Feb 17 15:52:26 PST 2019
+032ac7f3-6846-4e1b-aaa3-ee874b63c814, Set Hatch Spear to STOW, Sun Feb 17 15:52:26 PST 2019
+032ac7f3-6846-4e1b-aaa3-ee874b63c814, SET HEADING: 0.0, Sun Feb 17 15:52:27 PST 2019
+032ac7f3-6846-4e1b-aaa3-ee874b63c814, Gyro offset: 126.78999328613283, Sun Feb 17 15:52:27 PST 2019
+032ac7f3-6846-4e1b-aaa3-ee874b63c814, Teleop Init, Sun Feb 17 15:52:50 PST 2019
+032ac7f3-6846-4e1b-aaa3-ee874b63c814, Disabled Init, Sun Feb 17 15:52:58 PST 2019
+032ac7f3-6846-4e1b-aaa3-ee874b63c814, Set Hatch Spear to STOW, Sun Feb 17 15:52:58 PST 2019
+3a18b418-f2f0-4f79-9754-acbbaef4b9b7, Robot Startup, Sun Feb 17 15:53:11 PST 2019
+3a18b418-f2f0-4f79-9754-acbbaef4b9b7, Robot Init, Sun Feb 17 15:53:11 PST 2019
+3a18b418-f2f0-4f79-9754-acbbaef4b9b7, Disabled Init, Sun Feb 17 15:53:12 PST 2019
+3a18b418-f2f0-4f79-9754-acbbaef4b9b7, Set Hatch Spear to STOW, Sun Feb 17 15:53:12 PST 2019
+3a18b418-f2f0-4f79-9754-acbbaef4b9b7, Teleop Init, Sun Feb 17 15:53:12 PST 2019
+3a18b418-f2f0-4f79-9754-acbbaef4b9b7, SET HEADING: 0.0, Sun Feb 17 15:53:13 PST 2019
+3a18b418-f2f0-4f79-9754-acbbaef4b9b7, Gyro offset: 99.05999755859376, Sun Feb 17 15:53:13 PST 2019
+3a18b418-f2f0-4f79-9754-acbbaef4b9b7, Disabled Init, Sun Feb 17 15:53:17 PST 2019
+3a18b418-f2f0-4f79-9754-acbbaef4b9b7, Set Hatch Spear to STOW, Sun Feb 17 15:53:17 PST 2019
+aeb28fe8-6e47-4ee3-9e11-89500f1649a8, Robot Startup, Sun Feb 17 15:53:57 PST 2019
+aeb28fe8-6e47-4ee3-9e11-89500f1649a8, Robot Init, Sun Feb 17 15:53:57 PST 2019
+aeb28fe8-6e47-4ee3-9e11-89500f1649a8, Disabled Init, Sun Feb 17 15:53:57 PST 2019
+aeb28fe8-6e47-4ee3-9e11-89500f1649a8, Set Hatch Spear to STOW, Sun Feb 17 15:53:57 PST 2019
+aeb28fe8-6e47-4ee3-9e11-89500f1649a8, SET HEADING: 0.0, Sun Feb 17 15:53:57 PST 2019
+aeb28fe8-6e47-4ee3-9e11-89500f1649a8, Gyro offset: 99.42999267578128, Sun Feb 17 15:53:57 PST 2019
+88ee444a-50ac-4f82-96f9-4d18cf8a9ad0, Robot Startup, Sun Feb 17 15:54:51 PST 2019
+88ee444a-50ac-4f82-96f9-4d18cf8a9ad0, Robot Init, Sun Feb 17 15:54:51 PST 2019
+88ee444a-50ac-4f82-96f9-4d18cf8a9ad0, Disabled Init, Sun Feb 17 15:54:51 PST 2019
+88ee444a-50ac-4f82-96f9-4d18cf8a9ad0, Set Hatch Spear to STOW, Sun Feb 17 15:54:52 PST 2019
+88ee444a-50ac-4f82-96f9-4d18cf8a9ad0, SET HEADING: 0.0, Sun Feb 17 15:54:52 PST 2019
+88ee444a-50ac-4f82-96f9-4d18cf8a9ad0, Gyro offset: 99.60998535156253, Sun Feb 17 15:54:52 PST 2019
+adf3d0a8-a3e7-4f0b-b9c3-29715bda84fc, Robot Startup, Sun Feb 17 15:55:32 PST 2019
+adf3d0a8-a3e7-4f0b-b9c3-29715bda84fc, Robot Init, Sun Feb 17 15:55:32 PST 2019
+adf3d0a8-a3e7-4f0b-b9c3-29715bda84fc, Disabled Init, Sun Feb 17 15:55:32 PST 2019
+adf3d0a8-a3e7-4f0b-b9c3-29715bda84fc, Set Hatch Spear to STOW, Sun Feb 17 15:55:32 PST 2019
+adf3d0a8-a3e7-4f0b-b9c3-29715bda84fc, SET HEADING: 0.0, Sun Feb 17 15:55:32 PST 2019
+adf3d0a8-a3e7-4f0b-b9c3-29715bda84fc, Gyro offset: 99.73001098632814, Sun Feb 17 15:55:32 PST 2019
+44d42e3e-6874-4795-ad4a-5d892597ec8e, Robot Startup, Sun Feb 17 15:56:34 PST 2019
+44d42e3e-6874-4795-ad4a-5d892597ec8e, Robot Init, Sun Feb 17 15:56:34 PST 2019
+44d42e3e-6874-4795-ad4a-5d892597ec8e, Disabled Init, Sun Feb 17 15:56:34 PST 2019
+44d42e3e-6874-4795-ad4a-5d892597ec8e, Set Hatch Spear to STOW, Sun Feb 17 15:56:34 PST 2019
+44d42e3e-6874-4795-ad4a-5d892597ec8e, SET HEADING: 0.0, Sun Feb 17 15:56:34 PST 2019
+44d42e3e-6874-4795-ad4a-5d892597ec8e, Gyro offset: 99.989990234375, Sun Feb 17 15:56:34 PST 2019
+12066f1c-d578-48cf-8b0c-7f02d4d1b96f, Robot Startup, Sun Feb 17 15:59:28 PST 2019
+12066f1c-d578-48cf-8b0c-7f02d4d1b96f, Robot Init, Sun Feb 17 15:59:28 PST 2019
+12066f1c-d578-48cf-8b0c-7f02d4d1b96f, Disabled Init, Sun Feb 17 15:59:28 PST 2019
+12066f1c-d578-48cf-8b0c-7f02d4d1b96f, Set Hatch Spear to STOW, Sun Feb 17 15:59:28 PST 2019
+12066f1c-d578-48cf-8b0c-7f02d4d1b96f, SET HEADING: 0.0, Sun Feb 17 15:59:29 PST 2019
+12066f1c-d578-48cf-8b0c-7f02d4d1b96f, Gyro offset: 100.79000854492188, Sun Feb 17 15:59:29 PST 2019
+12066f1c-d578-48cf-8b0c-7f02d4d1b96f, Teleop Init, Sun Feb 17 15:59:29 PST 2019
+00098002-c1ef-450c-b338-a0225a2f412f, Teleop Init, Sun Feb 17 16:01:47 PST 2019
+37642125-abc8-4ab7-b9d7-3ec8beebf6fa, Robot Startup, Sun Feb 17 16:02:29 PST 2019
+37642125-abc8-4ab7-b9d7-3ec8beebf6fa, Robot Init, Sun Feb 17 16:02:29 PST 2019
+37642125-abc8-4ab7-b9d7-3ec8beebf6fa, Disabled Init, Sun Feb 17 16:02:30 PST 2019
+37642125-abc8-4ab7-b9d7-3ec8beebf6fa, Set Hatch Spear to STOW, Sun Feb 17 16:02:30 PST 2019
+37642125-abc8-4ab7-b9d7-3ec8beebf6fa, SET HEADING: 0.0, Sun Feb 17 16:02:30 PST 2019
+37642125-abc8-4ab7-b9d7-3ec8beebf6fa, Gyro offset: -81.01000213623047, Sun Feb 17 16:02:30 PST 2019
+37642125-abc8-4ab7-b9d7-3ec8beebf6fa, Teleop Init, Sun Feb 17 16:02:31 PST 2019
+37642125-abc8-4ab7-b9d7-3ec8beebf6fa, Disabled Init, Sun Feb 17 16:02:52 PST 2019
+37642125-abc8-4ab7-b9d7-3ec8beebf6fa, Set Hatch Spear to STOW, Sun Feb 17 16:02:52 PST 2019
+409159c6-222a-4727-8ae3-f9d197353a1e, Robot Startup, Sun Feb 17 16:03:06 PST 2019
+409159c6-222a-4727-8ae3-f9d197353a1e, Robot Init, Sun Feb 17 16:03:06 PST 2019
+409159c6-222a-4727-8ae3-f9d197353a1e, Disabled Init, Sun Feb 17 16:03:06 PST 2019
+409159c6-222a-4727-8ae3-f9d197353a1e, Set Hatch Spear to STOW, Sun Feb 17 16:03:06 PST 2019
+409159c6-222a-4727-8ae3-f9d197353a1e, SET HEADING: 0.0, Sun Feb 17 16:03:06 PST 2019
+409159c6-222a-4727-8ae3-f9d197353a1e, Gyro offset: -94.80999755859375, Sun Feb 17 16:03:06 PST 2019
+409159c6-222a-4727-8ae3-f9d197353a1e, Teleop Init, Sun Feb 17 16:03:30 PST 2019
+409159c6-222a-4727-8ae3-f9d197353a1e, Disabled Init, Sun Feb 17 16:03:52 PST 2019
+409159c6-222a-4727-8ae3-f9d197353a1e, Set Hatch Spear to STOW, Sun Feb 17 16:03:52 PST 2019
+2a9eae2f-6495-49c6-91f0-69ff936f945b, Robot Startup, Sun Feb 17 16:04:06 PST 2019
+2a9eae2f-6495-49c6-91f0-69ff936f945b, Robot Init, Sun Feb 17 16:04:06 PST 2019
+2a9eae2f-6495-49c6-91f0-69ff936f945b, Disabled Init, Sun Feb 17 16:04:06 PST 2019
+2a9eae2f-6495-49c6-91f0-69ff936f945b, Set Hatch Spear to STOW, Sun Feb 17 16:04:06 PST 2019
+2a9eae2f-6495-49c6-91f0-69ff936f945b, SET HEADING: 0.0, Sun Feb 17 16:04:06 PST 2019
+2a9eae2f-6495-49c6-91f0-69ff936f945b, Gyro offset: -9.210000038146973, Sun Feb 17 16:04:07 PST 2019
+2a9eae2f-6495-49c6-91f0-69ff936f945b, Teleop Init, Sun Feb 17 16:04:09 PST 2019
+2a9eae2f-6495-49c6-91f0-69ff936f945b, Disabled Init, Sun Feb 17 16:04:28 PST 2019
+2a9eae2f-6495-49c6-91f0-69ff936f945b, Set Hatch Spear to STOW, Sun Feb 17 16:04:28 PST 2019
+66afbf99-31b5-4fc6-bfa4-3e87d3e1ab31, Robot Startup, Sun Feb 17 16:05:07 PST 2019
+66afbf99-31b5-4fc6-bfa4-3e87d3e1ab31, Robot Init, Sun Feb 17 16:05:07 PST 2019
+66afbf99-31b5-4fc6-bfa4-3e87d3e1ab31, Disabled Init, Sun Feb 17 16:05:07 PST 2019
+66afbf99-31b5-4fc6-bfa4-3e87d3e1ab31, Set Hatch Spear to STOW, Sun Feb 17 16:05:07 PST 2019
+66afbf99-31b5-4fc6-bfa4-3e87d3e1ab31, SET HEADING: 0.0, Sun Feb 17 16:05:07 PST 2019
+66afbf99-31b5-4fc6-bfa4-3e87d3e1ab31, Gyro offset: -9.4399995803833, Sun Feb 17 16:05:07 PST 2019
+66afbf99-31b5-4fc6-bfa4-3e87d3e1ab31, Teleop Init, Sun Feb 17 16:05:20 PST 2019
+66afbf99-31b5-4fc6-bfa4-3e87d3e1ab31, Disabled Init, Sun Feb 17 16:05:37 PST 2019
+66afbf99-31b5-4fc6-bfa4-3e87d3e1ab31, Set Hatch Spear to STOW, Sun Feb 17 16:05:37 PST 2019
+7936ae68-2c6b-4711-a5db-77ddd1e58fda, Robot Startup, Sun Feb 17 16:05:53 PST 2019
+7936ae68-2c6b-4711-a5db-77ddd1e58fda, Robot Init, Sun Feb 17 16:05:53 PST 2019
+7936ae68-2c6b-4711-a5db-77ddd1e58fda, Disabled Init, Sun Feb 17 16:05:53 PST 2019
+7936ae68-2c6b-4711-a5db-77ddd1e58fda, Set Hatch Spear to STOW, Sun Feb 17 16:05:53 PST 2019
+7936ae68-2c6b-4711-a5db-77ddd1e58fda, SET HEADING: 0.0, Sun Feb 17 16:05:53 PST 2019
+7936ae68-2c6b-4711-a5db-77ddd1e58fda, Gyro offset: -8.149999618530275, Sun Feb 17 16:05:53 PST 2019
+7936ae68-2c6b-4711-a5db-77ddd1e58fda, Teleop Init, Sun Feb 17 16:06:18 PST 2019
+7936ae68-2c6b-4711-a5db-77ddd1e58fda, Disabled Init, Sun Feb 17 16:06:35 PST 2019
+7936ae68-2c6b-4711-a5db-77ddd1e58fda, Set Hatch Spear to STOW, Sun Feb 17 16:06:35 PST 2019
+37c23b6c-45a0-4abb-8c15-fad49a220b81, Robot Startup, Sun Feb 17 16:08:52 PST 2019
+37c23b6c-45a0-4abb-8c15-fad49a220b81, Robot Init, Sun Feb 17 16:08:52 PST 2019
+37c23b6c-45a0-4abb-8c15-fad49a220b81, Disabled Init, Sun Feb 17 16:08:52 PST 2019
+37c23b6c-45a0-4abb-8c15-fad49a220b81, Set Hatch Spear to STOW, Sun Feb 17 16:08:52 PST 2019
+37c23b6c-45a0-4abb-8c15-fad49a220b81, SET HEADING: 0.0, Sun Feb 17 16:08:52 PST 2019
+37c23b6c-45a0-4abb-8c15-fad49a220b81, Gyro offset: 93.61000061035156, Sun Feb 17 16:08:52 PST 2019
+37c23b6c-45a0-4abb-8c15-fad49a220b81, Teleop Init, Sun Feb 17 16:08:53 PST 2019
+37c23b6c-45a0-4abb-8c15-fad49a220b81, Disabled Init, Sun Feb 17 16:09:31 PST 2019
+37c23b6c-45a0-4abb-8c15-fad49a220b81, Set Hatch Spear to STOW, Sun Feb 17 16:09:31 PST 2019
+37c23b6c-45a0-4abb-8c15-fad49a220b81, Teleop Init, Sun Feb 17 16:10:02 PST 2019
+37c23b6c-45a0-4abb-8c15-fad49a220b81, Disabled Init, Sun Feb 17 16:10:15 PST 2019
+37c23b6c-45a0-4abb-8c15-fad49a220b81, Set Hatch Spear to STOW, Sun Feb 17 16:10:15 PST 2019
+8aaa4412-addd-4204-bd8b-24a42b78b0c9, Robot Startup, Sun Feb 17 16:10:29 PST 2019
+8aaa4412-addd-4204-bd8b-24a42b78b0c9, Robot Init, Sun Feb 17 16:10:29 PST 2019
+8aaa4412-addd-4204-bd8b-24a42b78b0c9, Disabled Init, Sun Feb 17 16:10:29 PST 2019
+8aaa4412-addd-4204-bd8b-24a42b78b0c9, Set Hatch Spear to STOW, Sun Feb 17 16:10:30 PST 2019
+8aaa4412-addd-4204-bd8b-24a42b78b0c9, SET HEADING: 0.0, Sun Feb 17 16:10:30 PST 2019
+8aaa4412-addd-4204-bd8b-24a42b78b0c9, Gyro offset: -88.74999999999999, Sun Feb 17 16:10:30 PST 2019
+8aaa4412-addd-4204-bd8b-24a42b78b0c9, Teleop Init, Sun Feb 17 16:10:30 PST 2019
+8aaa4412-addd-4204-bd8b-24a42b78b0c9, Disabled Init, Sun Feb 17 16:10:55 PST 2019
+8aaa4412-addd-4204-bd8b-24a42b78b0c9, Set Hatch Spear to STOW, Sun Feb 17 16:10:55 PST 2019
+8aaa4412-addd-4204-bd8b-24a42b78b0c9, Teleop Init, Sun Feb 17 16:11:07 PST 2019
+8aaa4412-addd-4204-bd8b-24a42b78b0c9, Disabled Init, Sun Feb 17 16:11:15 PST 2019
+8aaa4412-addd-4204-bd8b-24a42b78b0c9, Set Hatch Spear to STOW, Sun Feb 17 16:11:15 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, Robot Startup, Sun Feb 17 16:11:54 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, Robot Init, Sun Feb 17 16:11:54 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, Disabled Init, Sun Feb 17 16:11:55 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, Set Hatch Spear to STOW, Sun Feb 17 16:11:55 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, SET HEADING: 0.0, Sun Feb 17 16:11:55 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, Gyro offset: -76.47000122070314, Sun Feb 17 16:11:55 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, Teleop Init, Sun Feb 17 16:11:56 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, Disabled Init, Sun Feb 17 16:12:01 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, Set Hatch Spear to STOW, Sun Feb 17 16:12:01 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, Auto Init, Sun Feb 17 16:12:02 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, SET HEADING: 0.0, Sun Feb 17 16:12:02 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, Gyro offset: -76.48999023437503, Sun Feb 17 16:12:02 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, SET HEADING: 0.0, Sun Feb 17 16:12:02 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, Gyro offset: -76.48999023437503, Sun Feb 17 16:12:02 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:12:03 PST 2019
+47ef862d-237a-45b8-9439-6fd15cf0fc57, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:12:03 PST 2019
+95a5ca8f-2b32-4d76-aaa4-25dfb076ef9a, Robot Startup, Sun Feb 17 16:13:00 PST 2019
+95a5ca8f-2b32-4d76-aaa4-25dfb076ef9a, Robot Init, Sun Feb 17 16:13:01 PST 2019
+95a5ca8f-2b32-4d76-aaa4-25dfb076ef9a, Disabled Init, Sun Feb 17 16:13:01 PST 2019
+95a5ca8f-2b32-4d76-aaa4-25dfb076ef9a, Set Hatch Spear to STOW, Sun Feb 17 16:13:01 PST 2019
+95a5ca8f-2b32-4d76-aaa4-25dfb076ef9a, SET HEADING: 0.0, Sun Feb 17 16:13:01 PST 2019
+95a5ca8f-2b32-4d76-aaa4-25dfb076ef9a, Gyro offset: -76.70999145507815, Sun Feb 17 16:13:01 PST 2019
+95a5ca8f-2b32-4d76-aaa4-25dfb076ef9a, Auto Init, Sun Feb 17 16:13:02 PST 2019
+95a5ca8f-2b32-4d76-aaa4-25dfb076ef9a, SET HEADING: 0.0, Sun Feb 17 16:13:02 PST 2019
+95a5ca8f-2b32-4d76-aaa4-25dfb076ef9a, Gyro offset: -76.72000122070312, Sun Feb 17 16:13:02 PST 2019
+95a5ca8f-2b32-4d76-aaa4-25dfb076ef9a, SET HEADING: 0.0, Sun Feb 17 16:13:02 PST 2019
+95a5ca8f-2b32-4d76-aaa4-25dfb076ef9a, Gyro offset: -76.72000122070312, Sun Feb 17 16:13:02 PST 2019
+95a5ca8f-2b32-4d76-aaa4-25dfb076ef9a, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:13:03 PST 2019
+95a5ca8f-2b32-4d76-aaa4-25dfb076ef9a, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:13:03 PST 2019
+779c4bb3-2bdc-447c-a627-f0556bba1b6a, Robot Startup, Sun Feb 17 16:15:46 PST 2019
+779c4bb3-2bdc-447c-a627-f0556bba1b6a, Robot Init, Sun Feb 17 16:15:46 PST 2019
+779c4bb3-2bdc-447c-a627-f0556bba1b6a, Disabled Init, Sun Feb 17 16:15:46 PST 2019
+779c4bb3-2bdc-447c-a627-f0556bba1b6a, Set Hatch Spear to STOW, Sun Feb 17 16:15:46 PST 2019
+779c4bb3-2bdc-447c-a627-f0556bba1b6a, SET HEADING: 0.0, Sun Feb 17 16:15:46 PST 2019
+779c4bb3-2bdc-447c-a627-f0556bba1b6a, Gyro offset: -77.79000854492188, Sun Feb 17 16:15:46 PST 2019
+779c4bb3-2bdc-447c-a627-f0556bba1b6a, Auto Init, Sun Feb 17 16:15:47 PST 2019
+779c4bb3-2bdc-447c-a627-f0556bba1b6a, SET HEADING: 0.0, Sun Feb 17 16:15:47 PST 2019
+779c4bb3-2bdc-447c-a627-f0556bba1b6a, Gyro offset: -77.79000854492188, Sun Feb 17 16:15:47 PST 2019
+779c4bb3-2bdc-447c-a627-f0556bba1b6a, SET HEADING: 0.0, Sun Feb 17 16:15:47 PST 2019
+779c4bb3-2bdc-447c-a627-f0556bba1b6a, Gyro offset: -77.79000854492188, Sun Feb 17 16:15:47 PST 2019
+779c4bb3-2bdc-447c-a627-f0556bba1b6a, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:15:48 PST 2019
+779c4bb3-2bdc-447c-a627-f0556bba1b6a, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:15:48 PST 2019
+779c4bb3-2bdc-447c-a627-f0556bba1b6a, Disabled Init, Sun Feb 17 16:15:54 PST 2019
+36f7eb08-ce56-4163-923d-3f337f11b26d, Robot Startup, Sun Feb 17 16:21:41 PST 2019
+36f7eb08-ce56-4163-923d-3f337f11b26d, Robot Init, Sun Feb 17 16:21:41 PST 2019
+36f7eb08-ce56-4163-923d-3f337f11b26d, Disabled Init, Sun Feb 17 16:21:41 PST 2019
+36f7eb08-ce56-4163-923d-3f337f11b26d, Set Hatch Spear to STOW, Sun Feb 17 16:21:41 PST 2019
+36f7eb08-ce56-4163-923d-3f337f11b26d, SET HEADING: 0.0, Sun Feb 17 16:21:41 PST 2019
+36f7eb08-ce56-4163-923d-3f337f11b26d, Gyro offset: -79.39001464843751, Sun Feb 17 16:21:42 PST 2019
+36f7eb08-ce56-4163-923d-3f337f11b26d, Auto Init, Sun Feb 17 16:21:42 PST 2019
+36f7eb08-ce56-4163-923d-3f337f11b26d, SET HEADING: 0.0, Sun Feb 17 16:21:42 PST 2019
+36f7eb08-ce56-4163-923d-3f337f11b26d, Gyro offset: -79.39001464843751, Sun Feb 17 16:21:42 PST 2019
+36f7eb08-ce56-4163-923d-3f337f11b26d, SET HEADING: 0.0, Sun Feb 17 16:21:42 PST 2019
+36f7eb08-ce56-4163-923d-3f337f11b26d, Gyro offset: -79.39001464843751, Sun Feb 17 16:21:42 PST 2019
+36f7eb08-ce56-4163-923d-3f337f11b26d, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:21:43 PST 2019
+36f7eb08-ce56-4163-923d-3f337f11b26d, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:21:43 PST 2019
+36f7eb08-ce56-4163-923d-3f337f11b26d, Disabled Init, Sun Feb 17 16:21:46 PST 2019
+8a1c23da-4ff9-4ed5-bb30-77d8582f4eeb, Robot Startup, Sun Feb 17 16:23:16 PST 2019
+8a1c23da-4ff9-4ed5-bb30-77d8582f4eeb, Robot Init, Sun Feb 17 16:23:16 PST 2019
+8a1c23da-4ff9-4ed5-bb30-77d8582f4eeb, Disabled Init, Sun Feb 17 16:23:17 PST 2019
+8a1c23da-4ff9-4ed5-bb30-77d8582f4eeb, Set Hatch Spear to STOW, Sun Feb 17 16:23:17 PST 2019
+8a1c23da-4ff9-4ed5-bb30-77d8582f4eeb, SET HEADING: 0.0, Sun Feb 17 16:23:17 PST 2019
+8a1c23da-4ff9-4ed5-bb30-77d8582f4eeb, Gyro offset: -79.80999755859375, Sun Feb 17 16:23:17 PST 2019
+8a1c23da-4ff9-4ed5-bb30-77d8582f4eeb, Auto Init, Sun Feb 17 16:23:18 PST 2019
+8a1c23da-4ff9-4ed5-bb30-77d8582f4eeb, SET HEADING: 0.0, Sun Feb 17 16:23:18 PST 2019
+8a1c23da-4ff9-4ed5-bb30-77d8582f4eeb, Gyro offset: -79.82000732421876, Sun Feb 17 16:23:18 PST 2019
+8a1c23da-4ff9-4ed5-bb30-77d8582f4eeb, SET HEADING: 0.0, Sun Feb 17 16:23:18 PST 2019
+8a1c23da-4ff9-4ed5-bb30-77d8582f4eeb, Gyro offset: -79.82000732421876, Sun Feb 17 16:23:18 PST 2019
+8a1c23da-4ff9-4ed5-bb30-77d8582f4eeb, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:23:19 PST 2019
+8a1c23da-4ff9-4ed5-bb30-77d8582f4eeb, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:23:19 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Robot Startup, Sun Feb 17 16:24:13 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Robot Init, Sun Feb 17 16:24:13 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Disabled Init, Sun Feb 17 16:24:13 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Set Hatch Spear to STOW, Sun Feb 17 16:24:13 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, SET HEADING: 0.0, Sun Feb 17 16:24:13 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Gyro offset: -80.07998657226561, Sun Feb 17 16:24:13 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Auto Init, Sun Feb 17 16:24:14 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, SET HEADING: 0.0, Sun Feb 17 16:24:14 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Gyro offset: -80.07998657226561, Sun Feb 17 16:24:14 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, SET HEADING: 0.0, Sun Feb 17 16:24:14 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Gyro offset: -80.07998657226561, Sun Feb 17 16:24:14 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:24:15 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:24:15 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, SET HEADING: -0.0, Sun Feb 17 16:24:15 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Gyro offset: -80.07998657226561, Sun Feb 17 16:24:15 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:24:15 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Switching to open loop, Sun Feb 17 16:24:15 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Trajectory finished, Sun Feb 17 16:24:15 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Auto mode done, Sun Feb 17 16:24:15 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Disabled Init, Sun Feb 17 16:24:15 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Set Hatch Spear to STOW, Sun Feb 17 16:24:15 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Auto Init, Sun Feb 17 16:24:20 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, SET HEADING: 0.0, Sun Feb 17 16:24:20 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Gyro offset: -80.26998901367189, Sun Feb 17 16:24:20 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, SET HEADING: 0.0, Sun Feb 17 16:24:20 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Gyro offset: -80.26998901367189, Sun Feb 17 16:24:20 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:24:20 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:24:20 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, SET HEADING: -0.0, Sun Feb 17 16:24:20 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Gyro offset: -80.27999877929686, Sun Feb 17 16:24:20 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 16:24:20 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Switching to open loop, Sun Feb 17 16:24:20 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Trajectory finished, Sun Feb 17 16:24:20 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Auto mode done, Sun Feb 17 16:24:20 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Disabled Init, Sun Feb 17 16:24:22 PST 2019
+cc3c115f-a739-4ce0-ab39-f80cc73afe07, Set Hatch Spear to STOW, Sun Feb 17 16:24:22 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Robot Startup, Sun Feb 17 16:24:46 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Robot Init, Sun Feb 17 16:24:46 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Disabled Init, Sun Feb 17 16:24:46 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Set Hatch Spear to STOW, Sun Feb 17 16:24:46 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, SET HEADING: 0.0, Sun Feb 17 16:24:46 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Gyro offset: -80.49999999999999, Sun Feb 17 16:24:46 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Auto Init, Sun Feb 17 16:24:49 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, SET HEADING: 0.0, Sun Feb 17 16:24:49 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Gyro offset: -80.48999023437503, Sun Feb 17 16:24:49 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, SET HEADING: 0.0, Sun Feb 17 16:24:49 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Gyro offset: -80.48999023437503, Sun Feb 17 16:24:49 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:24:50 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:24:50 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, SET HEADING: -0.0, Sun Feb 17 16:24:50 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Gyro offset: -80.49999999999999, Sun Feb 17 16:24:50 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:24:50 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Switching to open loop, Sun Feb 17 16:24:51 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Trajectory finished, Sun Feb 17 16:24:51 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Auto mode done, Sun Feb 17 16:24:51 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Disabled Init, Sun Feb 17 16:24:52 PST 2019
+6e3b5ef0-1de4-4e76-81e6-201fbe807acb, Set Hatch Spear to STOW, Sun Feb 17 16:24:52 PST 2019
+ffa280b6-57ea-4c6d-b230-47f8679cd820, SigNotUpdated, Sun Feb 17 16:25:09 PST 2019
+ffa280b6-57ea-4c6d-b230-47f8679cd820, Robot Startup, Sun Feb 17 16:25:15 PST 2019
+ffa280b6-57ea-4c6d-b230-47f8679cd820, Robot Init, Sun Feb 17 16:25:15 PST 2019
+ffa280b6-57ea-4c6d-b230-47f8679cd820, Disabled Init, Sun Feb 17 16:25:15 PST 2019
+ffa280b6-57ea-4c6d-b230-47f8679cd820, Set Hatch Spear to STOW, Sun Feb 17 16:25:15 PST 2019
+ffa280b6-57ea-4c6d-b230-47f8679cd820, SET HEADING: 0.0, Sun Feb 17 16:25:16 PST 2019
+ffa280b6-57ea-4c6d-b230-47f8679cd820, Gyro offset: -80.70999145507811, Sun Feb 17 16:25:16 PST 2019
+dbb4dc51-222f-4c46-9f48-58ffabc84513, Robot Startup, Sun Feb 17 16:25:34 PST 2019
+dbb4dc51-222f-4c46-9f48-58ffabc84513, Robot Init, Sun Feb 17 16:25:35 PST 2019
+dbb4dc51-222f-4c46-9f48-58ffabc84513, Disabled Init, Sun Feb 17 16:25:35 PST 2019
+dbb4dc51-222f-4c46-9f48-58ffabc84513, Set Hatch Spear to STOW, Sun Feb 17 16:25:35 PST 2019
+dbb4dc51-222f-4c46-9f48-58ffabc84513, SET HEADING: 0.0, Sun Feb 17 16:25:35 PST 2019
+dbb4dc51-222f-4c46-9f48-58ffabc84513, Gyro offset: -80.75000000000003, Sun Feb 17 16:25:35 PST 2019
+dbb4dc51-222f-4c46-9f48-58ffabc84513, Auto Init, Sun Feb 17 16:25:36 PST 2019
+dbb4dc51-222f-4c46-9f48-58ffabc84513, SET HEADING: 0.0, Sun Feb 17 16:25:37 PST 2019
+dbb4dc51-222f-4c46-9f48-58ffabc84513, Gyro offset: -80.77999877929688, Sun Feb 17 16:25:37 PST 2019
+dbb4dc51-222f-4c46-9f48-58ffabc84513, SET HEADING: 0.0, Sun Feb 17 16:25:37 PST 2019
+dbb4dc51-222f-4c46-9f48-58ffabc84513, Gyro offset: -80.77999877929688, Sun Feb 17 16:25:37 PST 2019
+dbb4dc51-222f-4c46-9f48-58ffabc84513, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:25:37 PST 2019
+dbb4dc51-222f-4c46-9f48-58ffabc84513, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:25:37 PST 2019
+a11321fe-23cd-413b-80c3-58ae5c2e0f16, Robot Startup, Sun Feb 17 16:27:26 PST 2019
+a11321fe-23cd-413b-80c3-58ae5c2e0f16, Robot Init, Sun Feb 17 16:27:26 PST 2019
+a11321fe-23cd-413b-80c3-58ae5c2e0f16, Disabled Init, Sun Feb 17 16:27:26 PST 2019
+a11321fe-23cd-413b-80c3-58ae5c2e0f16, Set Hatch Spear to STOW, Sun Feb 17 16:27:26 PST 2019
+a11321fe-23cd-413b-80c3-58ae5c2e0f16, SET HEADING: 0.0, Sun Feb 17 16:27:27 PST 2019
+a11321fe-23cd-413b-80c3-58ae5c2e0f16, Gyro offset: -81.2799987792969, Sun Feb 17 16:27:27 PST 2019
+a11321fe-23cd-413b-80c3-58ae5c2e0f16, Auto Init, Sun Feb 17 16:27:28 PST 2019
+a11321fe-23cd-413b-80c3-58ae5c2e0f16, SET HEADING: 0.0, Sun Feb 17 16:27:28 PST 2019
+a11321fe-23cd-413b-80c3-58ae5c2e0f16, Gyro offset: -81.29000854492186, Sun Feb 17 16:27:28 PST 2019
+a11321fe-23cd-413b-80c3-58ae5c2e0f16, SET HEADING: 0.0, Sun Feb 17 16:27:28 PST 2019
+a11321fe-23cd-413b-80c3-58ae5c2e0f16, Gyro offset: -81.29000854492186, Sun Feb 17 16:27:28 PST 2019
+a11321fe-23cd-413b-80c3-58ae5c2e0f16, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:27:28 PST 2019
+a11321fe-23cd-413b-80c3-58ae5c2e0f16, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:27:28 PST 2019
+a11321fe-23cd-413b-80c3-58ae5c2e0f16, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:27:29 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, Robot Startup, Sun Feb 17 16:28:19 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, Robot Init, Sun Feb 17 16:28:19 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, Disabled Init, Sun Feb 17 16:28:19 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, Set Hatch Spear to STOW, Sun Feb 17 16:28:19 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, SET HEADING: 0.0, Sun Feb 17 16:28:19 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, Gyro offset: -81.70999145507815, Sun Feb 17 16:28:19 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, Auto Init, Sun Feb 17 16:28:21 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, SET HEADING: 0.0, Sun Feb 17 16:28:21 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, Gyro offset: -81.70999145507815, Sun Feb 17 16:28:21 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, SET HEADING: 0.0, Sun Feb 17 16:28:21 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, Gyro offset: -81.70999145507815, Sun Feb 17 16:28:21 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:28:21 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:28:21 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:28:21 PST 2019
+795e7f4d-f6c4-462d-8fef-82043ae7c1b1, Disabled Init, Sun Feb 17 16:28:25 PST 2019
+43f86a27-0014-4f0b-ac44-7b09ae9e3ca2, Robot Startup, Sun Feb 17 16:28:57 PST 2019
+43f86a27-0014-4f0b-ac44-7b09ae9e3ca2, Robot Init, Sun Feb 17 16:28:57 PST 2019
+43f86a27-0014-4f0b-ac44-7b09ae9e3ca2, Disabled Init, Sun Feb 17 16:28:57 PST 2019
+43f86a27-0014-4f0b-ac44-7b09ae9e3ca2, Set Hatch Spear to STOW, Sun Feb 17 16:28:57 PST 2019
+43f86a27-0014-4f0b-ac44-7b09ae9e3ca2, SET HEADING: 0.0, Sun Feb 17 16:28:57 PST 2019
+43f86a27-0014-4f0b-ac44-7b09ae9e3ca2, Gyro offset: -81.8900146484375, Sun Feb 17 16:28:57 PST 2019
+43f86a27-0014-4f0b-ac44-7b09ae9e3ca2, Auto Init, Sun Feb 17 16:28:58 PST 2019
+43f86a27-0014-4f0b-ac44-7b09ae9e3ca2, SET HEADING: 0.0, Sun Feb 17 16:28:58 PST 2019
+43f86a27-0014-4f0b-ac44-7b09ae9e3ca2, Gyro offset: -81.8900146484375, Sun Feb 17 16:28:58 PST 2019
+43f86a27-0014-4f0b-ac44-7b09ae9e3ca2, SET HEADING: 0.0, Sun Feb 17 16:28:58 PST 2019
+43f86a27-0014-4f0b-ac44-7b09ae9e3ca2, Gyro offset: -81.8900146484375, Sun Feb 17 16:28:58 PST 2019
+43f86a27-0014-4f0b-ac44-7b09ae9e3ca2, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:28:59 PST 2019
+43f86a27-0014-4f0b-ac44-7b09ae9e3ca2, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:28:59 PST 2019
+43f86a27-0014-4f0b-ac44-7b09ae9e3ca2, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:28:59 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Robot Startup, Sun Feb 17 16:29:32 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Robot Init, Sun Feb 17 16:29:33 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Disabled Init, Sun Feb 17 16:29:33 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Set Hatch Spear to STOW, Sun Feb 17 16:29:33 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, SET HEADING: 0.0, Sun Feb 17 16:29:33 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Gyro offset: -82.01000976562501, Sun Feb 17 16:29:33 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Auto Init, Sun Feb 17 16:29:34 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, SET HEADING: 0.0, Sun Feb 17 16:29:34 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Gyro offset: -82.01000976562501, Sun Feb 17 16:29:34 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, SET HEADING: 0.0, Sun Feb 17 16:29:34 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Gyro offset: -82.01000976562501, Sun Feb 17 16:29:34 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:29:35 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:29:35 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:29:35 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, SET HEADING: -0.0, Sun Feb 17 16:29:35 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Gyro offset: -82.0299987792969, Sun Feb 17 16:29:35 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Switching to open loop, Sun Feb 17 16:29:36 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Trajectory finished, Sun Feb 17 16:29:36 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Auto mode done, Sun Feb 17 16:29:36 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Disabled Init, Sun Feb 17 16:29:43 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Set Hatch Spear to STOW, Sun Feb 17 16:29:43 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Auto Init, Sun Feb 17 16:29:43 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, SET HEADING: 0.0, Sun Feb 17 16:29:43 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Gyro offset: -82.01998901367189, Sun Feb 17 16:29:43 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, SET HEADING: 0.0, Sun Feb 17 16:29:43 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Gyro offset: -82.01998901367189, Sun Feb 17 16:29:43 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:29:43 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:29:43 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 16:29:43 PST 2019
+f1d0b1aa-d19f-4f9b-ad2e-b82c82394282, Disabled Init, Sun Feb 17 16:29:48 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Robot Startup, Sun Feb 17 16:30:05 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Robot Init, Sun Feb 17 16:30:05 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Disabled Init, Sun Feb 17 16:30:05 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Set Hatch Spear to STOW, Sun Feb 17 16:30:05 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, SET HEADING: 0.0, Sun Feb 17 16:30:06 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Gyro offset: -82.10000610351562, Sun Feb 17 16:30:06 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Auto Init, Sun Feb 17 16:30:07 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, SET HEADING: 0.0, Sun Feb 17 16:30:07 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Gyro offset: -82.11999511718751, Sun Feb 17 16:30:07 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, SET HEADING: 0.0, Sun Feb 17 16:30:07 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Gyro offset: -82.11999511718751, Sun Feb 17 16:30:07 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:30:08 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Starting trajectory! (length=0.5581563056514381), Sun Feb 17 16:30:08 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:30:08 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, SET HEADING: -0.0, Sun Feb 17 16:30:08 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Gyro offset: -82.13000488281253, Sun Feb 17 16:30:08 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Switching to open loop, Sun Feb 17 16:30:09 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Trajectory finished, Sun Feb 17 16:30:09 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Auto mode done, Sun Feb 17 16:30:09 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Disabled Init, Sun Feb 17 16:30:09 PST 2019
+ad9ab0d5-5392-4b6c-a77f-017f267a1289, Set Hatch Spear to STOW, Sun Feb 17 16:30:09 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Robot Startup, Sun Feb 17 16:30:43 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Robot Init, Sun Feb 17 16:30:43 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Disabled Init, Sun Feb 17 16:30:43 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Set Hatch Spear to STOW, Sun Feb 17 16:30:44 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, SET HEADING: 0.0, Sun Feb 17 16:30:44 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Gyro offset: -81.6300048828125, Sun Feb 17 16:30:44 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Auto Init, Sun Feb 17 16:30:44 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, SET HEADING: 0.0, Sun Feb 17 16:30:44 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Gyro offset: -81.61999511718749, Sun Feb 17 16:30:44 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, SET HEADING: 0.0, Sun Feb 17 16:30:44 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Gyro offset: -81.61999511718749, Sun Feb 17 16:30:44 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:30:45 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Starting trajectory! (length=0.6177340017907115), Sun Feb 17 16:30:45 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:30:45 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, SET HEADING: -0.0, Sun Feb 17 16:30:45 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Gyro offset: -81.6300048828125, Sun Feb 17 16:30:45 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Switching to open loop, Sun Feb 17 16:30:46 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Trajectory finished, Sun Feb 17 16:30:46 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Auto mode done, Sun Feb 17 16:30:46 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Disabled Init, Sun Feb 17 16:31:34 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Set Hatch Spear to STOW, Sun Feb 17 16:31:34 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Teleop Init, Sun Feb 17 16:31:37 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Disabled Init, Sun Feb 17 16:31:40 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Set Hatch Spear to STOW, Sun Feb 17 16:31:40 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Teleop Init, Sun Feb 17 16:31:41 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Disabled Init, Sun Feb 17 16:31:42 PST 2019
+43081564-e3e7-49c0-85fd-510c963c8428, Set Hatch Spear to STOW, Sun Feb 17 16:31:42 PST 2019
+ff62114b-a744-4501-b3c6-0f847fbedd54, Robot Startup, Sun Feb 17 16:31:55 PST 2019
+ff62114b-a744-4501-b3c6-0f847fbedd54, Robot Init, Sun Feb 17 16:31:55 PST 2019
+ff62114b-a744-4501-b3c6-0f847fbedd54, Disabled Init, Sun Feb 17 16:31:56 PST 2019
+ff62114b-a744-4501-b3c6-0f847fbedd54, Set Hatch Spear to STOW, Sun Feb 17 16:31:56 PST 2019
+ff62114b-a744-4501-b3c6-0f847fbedd54, SET HEADING: 0.0, Sun Feb 17 16:31:56 PST 2019
+ff62114b-a744-4501-b3c6-0f847fbedd54, Gyro offset: -79.6700134277344, Sun Feb 17 16:31:56 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Robot Startup, Sun Feb 17 16:32:53 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Robot Init, Sun Feb 17 16:32:53 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Disabled Init, Sun Feb 17 16:32:54 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:32:54 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, SET HEADING: 0.0, Sun Feb 17 16:32:54 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Gyro offset: -80.00000000000003, Sun Feb 17 16:32:54 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Teleop Init, Sun Feb 17 16:32:55 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:32:55 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:32:55 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Disabled Init, Sun Feb 17 16:32:56 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:32:56 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Teleop Init, Sun Feb 17 16:32:57 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:32:57 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:32:58 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Disabled Init, Sun Feb 17 16:32:59 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:32:59 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Teleop Init, Sun Feb 17 16:33:01 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:33:01 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:33:01 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Disabled Init, Sun Feb 17 16:33:11 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:33:11 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Teleop Init, Sun Feb 17 16:33:16 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:33:16 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:33:16 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Disabled Init, Sun Feb 17 16:33:40 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:33:40 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Teleop Init, Sun Feb 17 16:34:07 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:34:07 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:34:07 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Failed to set Arm State: Manual Override Enabled, Sun Feb 17 16:34:07 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, [Joystick] 1	 [Button]9	 Pressed ( Ground Intake Toggle (Stow/Ground) Button ), Sun Feb 17 16:34:31 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:34:31 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, [Joystick] 1	 [Button]9	 Pressed ( Ground Intake Toggle (Stow/Ground) Button ), Sun Feb 17 16:34:31 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:34:31 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, [Joystick] 1	 [Button]9	 Pressed ( Ground Intake Toggle (Stow/Ground) Button ), Sun Feb 17 16:34:32 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:34:32 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, [Joystick] 1	 [Button]2	 Pressed ( Cargo Arm Manual Mode Button ), Sun Feb 17 16:34:35 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, [Joystick] 1	 [Button]2	 Pressed ( Cargo Arm Manual Mode Button ), Sun Feb 17 16:34:41 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Disabled Init, Sun Feb 17 16:34:46 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:34:46 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Teleop Init, Sun Feb 17 16:35:01 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:35:01 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:35:01 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Disabled Init, Sun Feb 17 16:35:06 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:35:06 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Teleop Init, Sun Feb 17 16:35:07 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:35:07 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:35:07 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Disabled Init, Sun Feb 17 16:35:09 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:35:09 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Teleop Init, Sun Feb 17 16:35:10 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:35:10 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:35:10 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Disabled Init, Sun Feb 17 16:35:11 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:35:11 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Teleop Init, Sun Feb 17 16:35:39 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:35:39 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:35:39 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Disabled Init, Sun Feb 17 16:35:40 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:35:40 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Teleop Init, Sun Feb 17 16:35:55 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:35:55 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:35:55 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, [Joystick] 1	 [Button]9	 Pressed ( Ground Intake Toggle (Stow/Ground) Button ), Sun Feb 17 16:35:56 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:35:56 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, [Joystick] 1	 [Button]9	 Pressed ( Ground Intake Toggle (Stow/Ground) Button ), Sun Feb 17 16:35:56 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:35:56 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, [Joystick] 1	 [Button]9	 Pressed ( Ground Intake Toggle (Stow/Ground) Button ), Sun Feb 17 16:35:57 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:35:57 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, [Joystick] 1	 [Button]9	 Pressed ( Ground Intake Toggle (Stow/Ground) Button ), Sun Feb 17 16:36:01 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:36:01 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Disabled Init, Sun Feb 17 16:36:04 PST 2019
+3f4a0274-00dd-4ba6-9eb5-5ea3fdbe5f86, Set Hatch Spear to STOW, Sun Feb 17 16:36:04 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Robot Startup, Sun Feb 17 16:36:29 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Robot Init, Sun Feb 17 16:36:30 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Disabled Init, Sun Feb 17 16:36:30 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Set Hatch Spear to STOW, Sun Feb 17 16:36:30 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, SET HEADING: 0.0, Sun Feb 17 16:36:30 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Gyro offset: 95.69000244140625, Sun Feb 17 16:36:30 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Teleop Init, Sun Feb 17 16:36:32 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:36:32 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Set Hatch Spear to STOW, Sun Feb 17 16:36:32 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, [Joystick] 1	 [Button]9	 Pressed ( Ground Intake Toggle (Stow/Ground) Button ), Sun Feb 17 16:36:34 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Set Hatch Spear to STOW, Sun Feb 17 16:36:34 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, [Joystick] 1	 [Button]9	 Pressed ( Ground Intake Toggle (Stow/Ground) Button ), Sun Feb 17 16:36:35 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Set Hatch Spear to STOW, Sun Feb 17 16:36:35 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Disabled Init, Sun Feb 17 16:36:37 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Set Hatch Spear to STOW, Sun Feb 17 16:36:37 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Teleop Init, Sun Feb 17 16:36:38 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:36:38 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Set Hatch Spear to STOW, Sun Feb 17 16:36:38 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, [Joystick] 1	 [Button]2	 Pressed ( Cargo Arm Manual Mode Button ), Sun Feb 17 16:36:45 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, [Joystick] 1	 [Button]11	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Sun Feb 17 16:38:01 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Set Hatch Spear to PLACE, Sun Feb 17 16:38:01 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Disabled Init, Sun Feb 17 16:38:15 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Set Hatch Spear to STOW, Sun Feb 17 16:38:15 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Teleop Init, Sun Feb 17 16:38:19 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:38:19 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Set Hatch Spear to STOW, Sun Feb 17 16:38:19 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Failed to set Arm State: Manual Override Enabled, Sun Feb 17 16:38:19 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Failed to set Arm State: Arm Safety Enabled, Sun Feb 17 16:38:19 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, [Joystick] 1	 [Button]11	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Sun Feb 17 16:38:20 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Set Hatch Spear to PLACE, Sun Feb 17 16:38:20 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Disabled Init, Sun Feb 17 16:38:23 PST 2019
+8b85a9c1-8209-4689-a887-a7557d3bb541, Set Hatch Spear to STOW, Sun Feb 17 16:38:23 PST 2019
+21b306d9-7c8f-4fa9-a96c-f1f5d7a41652, Robot Startup, Sun Feb 17 16:39:16 PST 2019
+21b306d9-7c8f-4fa9-a96c-f1f5d7a41652, Robot Init, Sun Feb 17 16:39:16 PST 2019
+21b306d9-7c8f-4fa9-a96c-f1f5d7a41652, Disabled Init, Sun Feb 17 16:39:16 PST 2019
+21b306d9-7c8f-4fa9-a96c-f1f5d7a41652, Set Hatch Spear to STOW, Sun Feb 17 16:39:16 PST 2019
+21b306d9-7c8f-4fa9-a96c-f1f5d7a41652, SET HEADING: 0.0, Sun Feb 17 16:39:16 PST 2019
+21b306d9-7c8f-4fa9-a96c-f1f5d7a41652, Gyro offset: 95.02999877929688, Sun Feb 17 16:39:16 PST 2019
+e0993a24-5f94-478d-aa73-2e7bf4f67579, Robot Startup, Sun Feb 17 16:39:43 PST 2019
+e0993a24-5f94-478d-aa73-2e7bf4f67579, Robot Init, Sun Feb 17 16:39:43 PST 2019
+e0993a24-5f94-478d-aa73-2e7bf4f67579, Disabled Init, Sun Feb 17 16:39:43 PST 2019
+e0993a24-5f94-478d-aa73-2e7bf4f67579, Set Hatch Spear to STOW, Sun Feb 17 16:39:43 PST 2019
+e0993a24-5f94-478d-aa73-2e7bf4f67579, SET HEADING: 0.0, Sun Feb 17 16:39:44 PST 2019
+e0993a24-5f94-478d-aa73-2e7bf4f67579, Gyro offset: 94.9800033569336, Sun Feb 17 16:39:44 PST 2019
+e0993a24-5f94-478d-aa73-2e7bf4f67579, Auto Init, Sun Feb 17 16:39:44 PST 2019
+e0993a24-5f94-478d-aa73-2e7bf4f67579, SET HEADING: 0.0, Sun Feb 17 16:39:44 PST 2019
+e0993a24-5f94-478d-aa73-2e7bf4f67579, Gyro offset: 94.98999786376953, Sun Feb 17 16:39:44 PST 2019
+e0993a24-5f94-478d-aa73-2e7bf4f67579, SET HEADING: 0.0, Sun Feb 17 16:39:44 PST 2019
+e0993a24-5f94-478d-aa73-2e7bf4f67579, Gyro offset: 94.98999786376953, Sun Feb 17 16:39:44 PST 2019
+e0993a24-5f94-478d-aa73-2e7bf4f67579, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:39:45 PST 2019
+e0993a24-5f94-478d-aa73-2e7bf4f67579, Starting trajectory! (length=0.6177340017907115), Sun Feb 17 16:39:45 PST 2019
+e0993a24-5f94-478d-aa73-2e7bf4f67579, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:39:45 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, Robot Startup, Sun Feb 17 16:40:22 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, Robot Init, Sun Feb 17 16:40:22 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, Disabled Init, Sun Feb 17 16:40:23 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, Set Hatch Spear to STOW, Sun Feb 17 16:40:23 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, SET HEADING: 0.0, Sun Feb 17 16:40:23 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, Gyro offset: 94.73999786376953, Sun Feb 17 16:40:23 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, Auto Init, Sun Feb 17 16:40:24 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, SET HEADING: 0.0, Sun Feb 17 16:40:24 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, Gyro offset: 94.75, Sun Feb 17 16:40:24 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, SET HEADING: 0.0, Sun Feb 17 16:40:24 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, Gyro offset: 94.75, Sun Feb 17 16:40:24 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:40:24 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, Starting trajectory! (length=0.6177340017907115), Sun Feb 17 16:40:24 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:40:24 PST 2019
+12ccf02f-68b0-424c-b53f-7e2998a1d407, Disabled Init, Sun Feb 17 16:40:26 PST 2019
+75e159da-fb88-4c6f-980a-daafddae070c, Robot Startup, Sun Feb 17 16:41:21 PST 2019
+75e159da-fb88-4c6f-980a-daafddae070c, Robot Init, Sun Feb 17 16:41:21 PST 2019
+75e159da-fb88-4c6f-980a-daafddae070c, Disabled Init, Sun Feb 17 16:41:21 PST 2019
+75e159da-fb88-4c6f-980a-daafddae070c, Set Hatch Spear to STOW, Sun Feb 17 16:41:21 PST 2019
+75e159da-fb88-4c6f-980a-daafddae070c, SET HEADING: 0.0, Sun Feb 17 16:41:22 PST 2019
+75e159da-fb88-4c6f-980a-daafddae070c, Gyro offset: 94.66000366210938, Sun Feb 17 16:41:22 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, Robot Startup, Sun Feb 17 16:41:48 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, Robot Init, Sun Feb 17 16:41:48 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, Disabled Init, Sun Feb 17 16:41:48 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, Set Hatch Spear to STOW, Sun Feb 17 16:41:48 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, SET HEADING: 0.0, Sun Feb 17 16:41:48 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, Gyro offset: 94.5199966430664, Sun Feb 17 16:41:48 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, Auto Init, Sun Feb 17 16:41:50 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, SET HEADING: 0.0, Sun Feb 17 16:41:50 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, Gyro offset: 94.5, Sun Feb 17 16:41:50 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, SET HEADING: 0.0, Sun Feb 17 16:41:50 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, Gyro offset: 94.5, Sun Feb 17 16:41:50 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:41:51 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, Starting trajectory! (length=0.6177340017907115), Sun Feb 17 16:41:51 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:41:51 PST 2019
+735d2903-8504-4a7c-a7c4-0630959c00ee, Disabled Init, Sun Feb 17 16:41:52 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Robot Startup, Sun Feb 17 16:42:26 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Robot Init, Sun Feb 17 16:42:26 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Disabled Init, Sun Feb 17 16:42:27 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Set Hatch Spear to STOW, Sun Feb 17 16:42:27 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, SET HEADING: 0.0, Sun Feb 17 16:42:27 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Gyro offset: 94.29000091552734, Sun Feb 17 16:42:27 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Auto Init, Sun Feb 17 16:42:28 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, SET HEADING: 0.0, Sun Feb 17 16:42:28 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Gyro offset: 94.2699966430664, Sun Feb 17 16:42:28 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, SET HEADING: 0.0, Sun Feb 17 16:42:28 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Gyro offset: 94.2699966430664, Sun Feb 17 16:42:28 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:42:29 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Starting trajectory! (length=0.6177340017907115), Sun Feb 17 16:42:29 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:42:29 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, SET HEADING: -0.0, Sun Feb 17 16:42:29 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Gyro offset: 94.26000213623047, Sun Feb 17 16:42:29 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Switching to open loop, Sun Feb 17 16:42:30 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Trajectory finished, Sun Feb 17 16:42:30 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Auto mode done, Sun Feb 17 16:42:30 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Disabled Init, Sun Feb 17 16:42:31 PST 2019
+6a7db371-173a-4992-91d1-3abeec634765, Set Hatch Spear to STOW, Sun Feb 17 16:42:31 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Robot Startup, Sun Feb 17 16:43:56 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Robot Init, Sun Feb 17 16:43:56 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Disabled Init, Sun Feb 17 16:43:57 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Set Hatch Spear to STOW, Sun Feb 17 16:43:57 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, SET HEADING: 0.0, Sun Feb 17 16:43:57 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Gyro offset: 140.63999938964844, Sun Feb 17 16:43:57 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Auto Init, Sun Feb 17 16:43:59 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, SET HEADING: 0.0, Sun Feb 17 16:43:59 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Gyro offset: 140.64999389648438, Sun Feb 17 16:43:59 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, SET HEADING: 0.0, Sun Feb 17 16:43:59 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Gyro offset: 140.64999389648438, Sun Feb 17 16:43:59 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:43:59 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Starting trajectory! (length=0.6177340017907115), Sun Feb 17 16:43:59 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:43:59 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Set Hatch Spear to STOW, Sun Feb 17 16:43:59 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, SET HEADING: -0.0, Sun Feb 17 16:43:59 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Gyro offset: 140.63999938964844, Sun Feb 17 16:43:59 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, AUTO MODE DONE!!!! ENDED EARLY!!!!, Sun Feb 17 16:43:59 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Disabled Init, Sun Feb 17 16:44:06 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Switching to open loop, Sun Feb 17 16:44:06 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Set Hatch Spear to STOW, Sun Feb 17 16:44:06 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Auto Init, Sun Feb 17 16:44:07 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, SET HEADING: 0.0, Sun Feb 17 16:44:07 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Gyro offset: -172.16000366210938, Sun Feb 17 16:44:07 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, SET HEADING: 0.0, Sun Feb 17 16:44:07 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Gyro offset: -172.16000366210938, Sun Feb 17 16:44:07 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:44:07 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Starting trajectory! (length=0.6177340017907115), Sun Feb 17 16:44:07 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:44:07 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Set Hatch Spear to STOW, Sun Feb 17 16:44:07 PST 2019
+52c2ae39-07ec-4b03-91ef-53a7f722c37f, Disabled Init, Sun Feb 17 16:44:10 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Robot Startup, Sun Feb 17 16:44:54 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Robot Init, Sun Feb 17 16:44:54 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Disabled Init, Sun Feb 17 16:44:54 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Set Hatch Spear to STOW, Sun Feb 17 16:44:55 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, SET HEADING: 0.0, Sun Feb 17 16:44:55 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Gyro offset: -172.4100036621094, Sun Feb 17 16:44:55 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Auto Init, Sun Feb 17 16:44:55 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, SET HEADING: 0.0, Sun Feb 17 16:44:55 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Gyro offset: -172.42999267578125, Sun Feb 17 16:44:55 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, SET HEADING: 0.0, Sun Feb 17 16:44:55 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Gyro offset: -172.42999267578125, Sun Feb 17 16:44:55 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:44:56 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Starting trajectory! (length=0.7844645405527363), Sun Feb 17 16:44:56 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:44:56 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Set Hatch Spear to STOW, Sun Feb 17 16:44:56 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, SET HEADING: -0.0, Sun Feb 17 16:44:56 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Gyro offset: -172.46000671386722, Sun Feb 17 16:44:56 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, AUTO MODE DONE!!!! ENDED EARLY!!!!, Sun Feb 17 16:44:56 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Disabled Init, Sun Feb 17 16:45:11 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Switching to open loop, Sun Feb 17 16:45:11 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Set Hatch Spear to STOW, Sun Feb 17 16:45:11 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Teleop Init, Sun Feb 17 16:45:20 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:45:20 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Set Hatch Spear to STOW, Sun Feb 17 16:45:20 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Disabled Init, Sun Feb 17 16:45:41 PST 2019
+61f4c296-62a0-46e4-a672-8b304069b95b, Set Hatch Spear to STOW, Sun Feb 17 16:45:41 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Robot Startup, Sun Feb 17 16:46:10 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Robot Init, Sun Feb 17 16:46:10 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Disabled Init, Sun Feb 17 16:46:10 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Set Hatch Spear to STOW, Sun Feb 17 16:46:10 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, SET HEADING: 0.0, Sun Feb 17 16:46:11 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Gyro offset: -92.22000122070314, Sun Feb 17 16:46:11 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Auto Init, Sun Feb 17 16:46:11 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, SET HEADING: 0.0, Sun Feb 17 16:46:11 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Gyro offset: -92.23001098632815, Sun Feb 17 16:46:11 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, SET HEADING: 0.0, Sun Feb 17 16:46:11 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Gyro offset: -92.23001098632815, Sun Feb 17 16:46:11 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:46:12 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Starting trajectory! (length=0.967908163458939), Sun Feb 17 16:46:12 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:46:12 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Set Hatch Spear to STOW, Sun Feb 17 16:46:12 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, SET HEADING: -0.0, Sun Feb 17 16:46:12 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Gyro offset: -92.23001098632815, Sun Feb 17 16:46:12 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, AUTO MODE DONE!!!! ENDED EARLY!!!!, Sun Feb 17 16:46:12 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Disabled Init, Sun Feb 17 16:46:21 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Switching to open loop, Sun Feb 17 16:46:21 PST 2019
+1bb3e39c-9e3b-4222-a8ee-d68948578024, Set Hatch Spear to STOW, Sun Feb 17 16:46:21 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Robot Startup, Sun Feb 17 16:46:53 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Robot Init, Sun Feb 17 16:46:53 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Disabled Init, Sun Feb 17 16:46:53 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Set Hatch Spear to STOW, Sun Feb 17 16:46:53 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, SET HEADING: 0.0, Sun Feb 17 16:46:53 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Gyro offset: -90.83999633789064, Sun Feb 17 16:46:53 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Auto Init, Sun Feb 17 16:46:54 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, SET HEADING: 0.0, Sun Feb 17 16:46:54 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Gyro offset: -90.83999633789064, Sun Feb 17 16:46:54 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, SET HEADING: 0.0, Sun Feb 17 16:46:54 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Gyro offset: -90.83999633789064, Sun Feb 17 16:46:54 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:46:55 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Starting trajectory! (length=0.9613406389911041), Sun Feb 17 16:46:55 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:46:55 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Set Hatch Spear to STOW, Sun Feb 17 16:46:55 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, SET HEADING: -0.0, Sun Feb 17 16:46:55 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Gyro offset: -90.85000610351565, Sun Feb 17 16:46:55 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, AUTO MODE DONE!!!! ENDED EARLY!!!!, Sun Feb 17 16:46:55 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Disabled Init, Sun Feb 17 16:47:03 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Switching to open loop, Sun Feb 17 16:47:03 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Set Hatch Spear to STOW, Sun Feb 17 16:47:03 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Auto Init, Sun Feb 17 16:47:08 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, SET HEADING: 0.0, Sun Feb 17 16:47:08 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Gyro offset: -92.08999633789065, Sun Feb 17 16:47:08 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, SET HEADING: 0.0, Sun Feb 17 16:47:08 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Gyro offset: -92.08999633789065, Sun Feb 17 16:47:08 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:47:08 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Starting trajectory! (length=0.9613406389911041), Sun Feb 17 16:47:08 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:47:08 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Set Hatch Spear to STOW, Sun Feb 17 16:47:08 PST 2019
+6cebc5a5-9141-47d3-b0f5-d6f33570c810, Disabled Init, Sun Feb 17 16:47:10 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, Robot Startup, Sun Feb 17 16:47:38 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, Robot Init, Sun Feb 17 16:47:38 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, Disabled Init, Sun Feb 17 16:47:39 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, Set Hatch Spear to STOW, Sun Feb 17 16:47:39 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, SET HEADING: 0.0, Sun Feb 17 16:47:39 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, Gyro offset: -92.260009765625, Sun Feb 17 16:47:39 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, Auto Init, Sun Feb 17 16:47:40 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, SET HEADING: 0.0, Sun Feb 17 16:47:40 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, Gyro offset: -92.26998901367188, Sun Feb 17 16:47:40 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, SET HEADING: 0.0, Sun Feb 17 16:47:40 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, Gyro offset: -92.26998901367188, Sun Feb 17 16:47:40 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:47:40 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, Starting trajectory! (length=0.9613406389911041), Sun Feb 17 16:47:40 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:47:40 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, Set Hatch Spear to STOW, Sun Feb 17 16:47:40 PST 2019
+331db636-aa11-45cb-a128-3dca23a2a434, Disabled Init, Sun Feb 17 16:47:43 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, Robot Startup, Sun Feb 17 16:48:01 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, Robot Init, Sun Feb 17 16:48:01 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, Disabled Init, Sun Feb 17 16:48:01 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, Set Hatch Spear to STOW, Sun Feb 17 16:48:01 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, SET HEADING: 0.0, Sun Feb 17 16:48:01 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, Gyro offset: -92.2900085449219, Sun Feb 17 16:48:01 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, Auto Init, Sun Feb 17 16:48:08 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, SET HEADING: 0.0, Sun Feb 17 16:48:08 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, Gyro offset: -92.32998657226562, Sun Feb 17 16:48:08 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, SET HEADING: 0.0, Sun Feb 17 16:48:08 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, Gyro offset: -92.32998657226562, Sun Feb 17 16:48:08 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:48:09 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, Starting trajectory! (length=0.9613406389911041), Sun Feb 17 16:48:09 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:48:09 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, Set Hatch Spear to STOW, Sun Feb 17 16:48:09 PST 2019
+bce71300-3a60-4092-b09f-0d624cbaa5e5, Disabled Init, Sun Feb 17 16:48:12 PST 2019
+2ef5ea3f-e521-4187-a8f5-11df9019d771, Robot Startup, Sun Feb 17 16:49:22 PST 2019
+2ef5ea3f-e521-4187-a8f5-11df9019d771, Robot Init, Sun Feb 17 16:49:22 PST 2019
+2ef5ea3f-e521-4187-a8f5-11df9019d771, Disabled Init, Sun Feb 17 16:49:22 PST 2019
+2ef5ea3f-e521-4187-a8f5-11df9019d771, Set Hatch Spear to STOW, Sun Feb 17 16:49:22 PST 2019
+2ef5ea3f-e521-4187-a8f5-11df9019d771, SET HEADING: 0.0, Sun Feb 17 16:49:22 PST 2019
+2ef5ea3f-e521-4187-a8f5-11df9019d771, Gyro offset: -92.54000854492189, Sun Feb 17 16:49:22 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Robot Startup, Sun Feb 17 16:49:42 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Robot Init, Sun Feb 17 16:49:43 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Disabled Init, Sun Feb 17 16:49:43 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Set Hatch Spear to STOW, Sun Feb 17 16:49:43 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, SET HEADING: 0.0, Sun Feb 17 16:49:43 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Gyro offset: -92.64001464843751, Sun Feb 17 16:49:43 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Teleop Init, Sun Feb 17 16:50:05 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:50:05 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Set Hatch Spear to STOW, Sun Feb 17 16:50:06 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Disabled Init, Sun Feb 17 16:50:33 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Set Hatch Spear to STOW, Sun Feb 17 16:50:33 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Auto Init, Sun Feb 17 16:50:55 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, SET HEADING: 0.0, Sun Feb 17 16:50:55 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Gyro offset: 0.25, Sun Feb 17 16:50:55 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, SET HEADING: 0.0, Sun Feb 17 16:50:56 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Gyro offset: 0.25999999046325684, Sun Feb 17 16:50:56 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:56 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:50:57 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:58 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:58 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:58 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:58 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:58 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:58 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:59 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:59 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:59 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:59 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:59 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:59 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:59 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:50:59 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:51:00 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:51:00 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:51:00 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:51:00 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:51:00 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:51:00 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:51:00 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:51:00 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:51:01 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:51:01 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:51:01 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, ERROR IN DRIVE CSV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, Sun Feb 17 16:51:01 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Disabled Init, Sun Feb 17 16:51:01 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, Set Hatch Spear to STOW, Sun Feb 17 16:51:01 PST 2019
+fc70f13b-059e-4c1f-b152-3e980d0ed169, AUTO MODE DONE!!!! ENDED EARLY!!!!, Sun Feb 17 16:51:01 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Robot Startup, Sun Feb 17 16:51:35 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Robot Init, Sun Feb 17 16:51:35 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Disabled Init, Sun Feb 17 16:51:35 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Set Hatch Spear to STOW, Sun Feb 17 16:51:35 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, SET HEADING: 0.0, Sun Feb 17 16:51:35 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Gyro offset: 0.10000000149011612, Sun Feb 17 16:51:35 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Auto Init, Sun Feb 17 16:51:36 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, SET HEADING: 0.0, Sun Feb 17 16:51:36 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Gyro offset: 0.10000000149011612, Sun Feb 17 16:51:36 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, SET HEADING: 0.0, Sun Feb 17 16:51:36 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Gyro offset: 0.10000000149011612, Sun Feb 17 16:51:36 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:51:37 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, ks: 0.7596752155539747, Sun Feb 17 16:51:57 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, kv: 0.24779977454339516, Sun Feb 17 16:51:57 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, ka: 0.0038375509807543396, Sun Feb 17 16:51:57 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, DONEEEEE, Sun Feb 17 16:51:57 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Auto mode done, Sun Feb 17 16:51:57 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Disabled Init, Sun Feb 17 16:53:37 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Set Hatch Spear to STOW, Sun Feb 17 16:53:37 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Teleop Init, Sun Feb 17 16:54:41 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 16:54:41 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Set Hatch Spear to STOW, Sun Feb 17 16:54:41 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Disabled Init, Sun Feb 17 16:55:00 PST 2019
+a6afce78-0932-4fdf-a9ab-ec9fd73f596d, Set Hatch Spear to STOW, Sun Feb 17 16:55:00 PST 2019
+febc0589-26be-474a-9364-84e35877a521, Robot Startup, Sun Feb 17 16:55:21 PST 2019
+febc0589-26be-474a-9364-84e35877a521, Robot Init, Sun Feb 17 16:55:21 PST 2019
+febc0589-26be-474a-9364-84e35877a521, Disabled Init, Sun Feb 17 16:55:21 PST 2019
+febc0589-26be-474a-9364-84e35877a521, Set Hatch Spear to STOW, Sun Feb 17 16:55:21 PST 2019
+febc0589-26be-474a-9364-84e35877a521, SET HEADING: 0.0, Sun Feb 17 16:55:22 PST 2019
+febc0589-26be-474a-9364-84e35877a521, Gyro offset: 37.880001068115234, Sun Feb 17 16:55:22 PST 2019
+febc0589-26be-474a-9364-84e35877a521, Auto Init, Sun Feb 17 16:57:43 PST 2019
+febc0589-26be-474a-9364-84e35877a521, SET HEADING: 0.0, Sun Feb 17 16:57:43 PST 2019
+febc0589-26be-474a-9364-84e35877a521, Gyro offset: 29.469999313354496, Sun Feb 17 16:57:43 PST 2019
+febc0589-26be-474a-9364-84e35877a521, SET HEADING: 0.0, Sun Feb 17 16:57:44 PST 2019
+febc0589-26be-474a-9364-84e35877a521, Gyro offset: 29.469999313354496, Sun Feb 17 16:57:44 PST 2019
+febc0589-26be-474a-9364-84e35877a521, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 16:57:44 PST 2019
+febc0589-26be-474a-9364-84e35877a521, ks: 0.6828533979753494, Sun Feb 17 16:58:30 PST 2019
+febc0589-26be-474a-9364-84e35877a521, kv: 0.30548578507379015, Sun Feb 17 16:58:30 PST 2019
+febc0589-26be-474a-9364-84e35877a521, ka: 0.005531060651906171, Sun Feb 17 16:58:30 PST 2019
+febc0589-26be-474a-9364-84e35877a521, DONEEEEE, Sun Feb 17 16:58:30 PST 2019
+febc0589-26be-474a-9364-84e35877a521, Auto mode done, Sun Feb 17 16:58:30 PST 2019
+febc0589-26be-474a-9364-84e35877a521, Disabled Init, Sun Feb 17 16:58:33 PST 2019
+febc0589-26be-474a-9364-84e35877a521, Set Hatch Spear to STOW, Sun Feb 17 16:58:33 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, Robot Startup, Sun Feb 17 17:00:32 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, Robot Init, Sun Feb 17 17:00:32 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, Disabled Init, Sun Feb 17 17:00:32 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, Set Hatch Spear to STOW, Sun Feb 17 17:00:32 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, SET HEADING: 0.0, Sun Feb 17 17:00:32 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, Gyro offset: 30.989999771118164, Sun Feb 17 17:00:32 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, Auto Init, Sun Feb 17 17:00:32 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, SET HEADING: 0.0, Sun Feb 17 17:00:32 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, Gyro offset: 30.999999999999993, Sun Feb 17 17:00:32 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, SET HEADING: 0.0, Sun Feb 17 17:00:33 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, Gyro offset: 30.999999999999993, Sun Feb 17 17:00:33 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:00:33 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, Disabled Init, Sun Feb 17 17:00:55 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, AUTO MODE DONE!!!! ENDED EARLY!!!!, Sun Feb 17 17:00:55 PST 2019
+caf2ca4d-2f4e-44b1-8599-d16f4e874051, Set Hatch Spear to STOW, Sun Feb 17 17:00:55 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, Robot Startup, Sun Feb 17 17:01:25 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, Robot Init, Sun Feb 17 17:01:25 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, Disabled Init, Sun Feb 17 17:01:25 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, Set Hatch Spear to STOW, Sun Feb 17 17:01:25 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, SET HEADING: 0.0, Sun Feb 17 17:01:25 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, Gyro offset: 40.229999542236335, Sun Feb 17 17:01:25 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, Auto Init, Sun Feb 17 17:01:25 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, SET HEADING: 0.0, Sun Feb 17 17:01:25 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, Gyro offset: 40.22000122070313, Sun Feb 17 17:01:25 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, SET HEADING: 0.0, Sun Feb 17 17:01:26 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, Gyro offset: 40.229999542236335, Sun Feb 17 17:01:26 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:01:27 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, ks: 0.2205414231432546, Sun Feb 17 17:01:45 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, kv: 2.4489565778168116, Sun Feb 17 17:01:45 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, ka: 0.1273934659762692, Sun Feb 17 17:01:45 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, DONEEEEE, Sun Feb 17 17:01:45 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, Auto mode done, Sun Feb 17 17:01:45 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, Disabled Init, Sun Feb 17 17:01:46 PST 2019
+60aeeb26-f257-4a44-b70c-05aacc55a04c, Set Hatch Spear to STOW, Sun Feb 17 17:01:46 PST 2019
+c8eb876a-5d67-48cc-a8d8-9d92410e2a73, Robot Startup, Sun Feb 17 17:02:31 PST 2019
+c8eb876a-5d67-48cc-a8d8-9d92410e2a73, Robot Init, Sun Feb 17 17:02:31 PST 2019
+c8eb876a-5d67-48cc-a8d8-9d92410e2a73, Disabled Init, Sun Feb 17 17:02:31 PST 2019
+c8eb876a-5d67-48cc-a8d8-9d92410e2a73, Set Hatch Spear to STOW, Sun Feb 17 17:02:32 PST 2019
+c8eb876a-5d67-48cc-a8d8-9d92410e2a73, SET HEADING: 0.0, Sun Feb 17 17:02:32 PST 2019
+c8eb876a-5d67-48cc-a8d8-9d92410e2a73, Gyro offset: 120.59999847412108, Sun Feb 17 17:02:32 PST 2019
+a3a9d216-8363-403f-b356-a1c6e36a73e3, Robot Startup, Sun Feb 17 17:02:53 PST 2019
+a3a9d216-8363-403f-b356-a1c6e36a73e3, Robot Init, Sun Feb 17 17:02:53 PST 2019
+a3a9d216-8363-403f-b356-a1c6e36a73e3, Disabled Init, Sun Feb 17 17:02:53 PST 2019
+a3a9d216-8363-403f-b356-a1c6e36a73e3, Set Hatch Spear to STOW, Sun Feb 17 17:02:54 PST 2019
+a3a9d216-8363-403f-b356-a1c6e36a73e3, SET HEADING: 0.0, Sun Feb 17 17:02:54 PST 2019
+a3a9d216-8363-403f-b356-a1c6e36a73e3, Gyro offset: 120.38999938964844, Sun Feb 17 17:02:54 PST 2019
+76fd8b4f-7ab5-4836-ace0-88e5dcc4a9cc, Robot Startup, Sun Feb 17 17:07:15 PST 2019
+76fd8b4f-7ab5-4836-ace0-88e5dcc4a9cc, Robot Init, Sun Feb 17 17:07:15 PST 2019
+76fd8b4f-7ab5-4836-ace0-88e5dcc4a9cc, Disabled Init, Sun Feb 17 17:07:15 PST 2019
+76fd8b4f-7ab5-4836-ace0-88e5dcc4a9cc, Set Hatch Spear to STOW, Sun Feb 17 17:07:15 PST 2019
+76fd8b4f-7ab5-4836-ace0-88e5dcc4a9cc, SET HEADING: 0.0, Sun Feb 17 17:07:15 PST 2019
+76fd8b4f-7ab5-4836-ace0-88e5dcc4a9cc, Gyro offset: 119.41999816894531, Sun Feb 17 17:07:15 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Robot Startup, Sun Feb 17 17:10:53 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Robot Init, Sun Feb 17 17:10:53 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Disabled Init, Sun Feb 17 17:10:53 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Set Hatch Spear to STOW, Sun Feb 17 17:10:53 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, SET HEADING: 0.0, Sun Feb 17 17:10:53 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Gyro offset: -0.6300048828125083, Sun Feb 17 17:10:53 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Teleop Init, Sun Feb 17 17:10:56 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 17:10:56 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Set Hatch Spear to STOW, Sun Feb 17 17:10:56 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Disabled Init, Sun Feb 17 17:11:08 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Set Hatch Spear to STOW, Sun Feb 17 17:11:08 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Auto Init, Sun Feb 17 17:11:58 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, SET HEADING: 0.0, Sun Feb 17 17:11:58 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Gyro offset: -99.1400146484375, Sun Feb 17 17:11:59 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, SET HEADING: 0.0, Sun Feb 17 17:12:00 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Gyro offset: -99.20001220703125, Sun Feb 17 17:12:00 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:12:00 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Disabled Init, Sun Feb 17 17:12:14 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, Set Hatch Spear to STOW, Sun Feb 17 17:12:14 PST 2019
+b1e0da2e-c8f2-4942-ab74-13dd06bcee5e, AUTO MODE DONE!!!! ENDED EARLY!!!!, Sun Feb 17 17:12:14 PST 2019
+31e1990e-47f9-4ebb-af84-d007519b029c, Robot Startup, Sun Feb 17 17:12:28 PST 2019
+31e1990e-47f9-4ebb-af84-d007519b029c, Robot Init, Sun Feb 17 17:12:28 PST 2019
+31e1990e-47f9-4ebb-af84-d007519b029c, Disabled Init, Sun Feb 17 17:12:29 PST 2019
+31e1990e-47f9-4ebb-af84-d007519b029c, Set Hatch Spear to STOW, Sun Feb 17 17:12:29 PST 2019
+31e1990e-47f9-4ebb-af84-d007519b029c, SET HEADING: 0.0, Sun Feb 17 17:12:29 PST 2019
+31e1990e-47f9-4ebb-af84-d007519b029c, Gyro offset: -99.66000366210938, Sun Feb 17 17:12:29 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, Robot Startup, Sun Feb 17 17:13:00 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, Robot Init, Sun Feb 17 17:13:00 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, Disabled Init, Sun Feb 17 17:13:00 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, Set Hatch Spear to STOW, Sun Feb 17 17:13:00 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, SET HEADING: 0.0, Sun Feb 17 17:13:00 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, Gyro offset: -99.85998535156253, Sun Feb 17 17:13:00 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, Auto Init, Sun Feb 17 17:13:00 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, SET HEADING: 0.0, Sun Feb 17 17:13:00 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, Gyro offset: -99.85998535156253, Sun Feb 17 17:13:00 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, SET HEADING: 0.0, Sun Feb 17 17:13:01 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, Gyro offset: -99.85998535156253, Sun Feb 17 17:13:01 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:13:02 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, ks: 0.5452421735860156, Sun Feb 17 17:13:19 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, kv: 0.34249702381559977, Sun Feb 17 17:13:19 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, ka: 0.006341706432402328, Sun Feb 17 17:13:19 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, DONEEEEE, Sun Feb 17 17:13:19 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, Auto mode done, Sun Feb 17 17:13:19 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, Disabled Init, Sun Feb 17 17:13:22 PST 2019
+d8d42644-4482-4ba1-9515-d92646f8763e, Set Hatch Spear to STOW, Sun Feb 17 17:13:22 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, Robot Startup, Sun Feb 17 17:15:30 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, Robot Init, Sun Feb 17 17:15:30 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, Disabled Init, Sun Feb 17 17:15:30 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, Set Hatch Spear to STOW, Sun Feb 17 17:15:31 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, SET HEADING: 0.0, Sun Feb 17 17:15:31 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, Gyro offset: -100.14999389648438, Sun Feb 17 17:15:31 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, Auto Init, Sun Feb 17 17:15:31 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, SET HEADING: 0.0, Sun Feb 17 17:15:31 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, Gyro offset: -100.1400146484375, Sun Feb 17 17:15:31 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, SET HEADING: 0.0, Sun Feb 17 17:15:32 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, Gyro offset: -100.1400146484375, Sun Feb 17 17:15:32 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:15:33 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, ks: 0.8161198136073294, Sun Feb 17 17:16:03 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, kv: 0.44988599884329616, Sun Feb 17 17:16:03 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, ka: 0.005425693833346484, Sun Feb 17 17:16:03 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, DONEEEEE, Sun Feb 17 17:16:03 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, Auto mode done, Sun Feb 17 17:16:03 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, Disabled Init, Sun Feb 17 17:16:05 PST 2019
+9667600e-bd9a-42a6-9150-5a1156bcb899, Set Hatch Spear to STOW, Sun Feb 17 17:16:05 PST 2019
+efcd86f7-f5c0-477a-b077-5e3d3c1119e9, Robot Startup, Sun Feb 17 17:17:25 PST 2019
+efcd86f7-f5c0-477a-b077-5e3d3c1119e9, Robot Init, Sun Feb 17 17:17:25 PST 2019
+efcd86f7-f5c0-477a-b077-5e3d3c1119e9, Disabled Init, Sun Feb 17 17:17:26 PST 2019
+efcd86f7-f5c0-477a-b077-5e3d3c1119e9, Set Hatch Spear to STOW, Sun Feb 17 17:17:26 PST 2019
+efcd86f7-f5c0-477a-b077-5e3d3c1119e9, SET HEADING: 0.0, Sun Feb 17 17:17:26 PST 2019
+efcd86f7-f5c0-477a-b077-5e3d3c1119e9, Gyro offset: 122.34999847412111, Sun Feb 17 17:17:26 PST 2019
+e393f675-ea47-4144-af09-e0e2db3cece9, Robot Startup, Sun Feb 17 17:18:26 PST 2019
+e393f675-ea47-4144-af09-e0e2db3cece9, Robot Init, Sun Feb 17 17:18:26 PST 2019
+e393f675-ea47-4144-af09-e0e2db3cece9, Disabled Init, Sun Feb 17 17:18:26 PST 2019
+e393f675-ea47-4144-af09-e0e2db3cece9, Set Hatch Spear to STOW, Sun Feb 17 17:18:26 PST 2019
+e393f675-ea47-4144-af09-e0e2db3cece9, SET HEADING: 0.0, Sun Feb 17 17:18:26 PST 2019
+e393f675-ea47-4144-af09-e0e2db3cece9, Gyro offset: 122.08999633789065, Sun Feb 17 17:18:26 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Robot Startup, Sun Feb 17 17:18:45 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Robot Init, Sun Feb 17 17:18:45 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Disabled Init, Sun Feb 17 17:18:45 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Set Hatch Spear to STOW, Sun Feb 17 17:18:45 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, SET HEADING: 0.0, Sun Feb 17 17:18:46 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Gyro offset: 122.0, Sun Feb 17 17:18:46 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Auto Init, Sun Feb 17 17:18:47 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, SET HEADING: 0.0, Sun Feb 17 17:18:47 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Gyro offset: 121.98999786376953, Sun Feb 17 17:18:47 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, SET HEADING: 0.0, Sun Feb 17 17:18:47 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Gyro offset: 121.97000122070314, Sun Feb 17 17:18:47 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:18:47 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Disabled Init, Sun Feb 17 17:18:51 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Set Hatch Spear to STOW, Sun Feb 17 17:18:51 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, AUTO MODE DONE!!!! ENDED EARLY!!!!, Sun Feb 17 17:18:51 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Teleop Init, Sun Feb 17 17:19:03 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 17:19:03 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Set Hatch Spear to STOW, Sun Feb 17 17:19:03 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Disabled Init, Sun Feb 17 17:19:08 PST 2019
+eb73d8e1-d347-41c2-8586-5494516c312a, Set Hatch Spear to STOW, Sun Feb 17 17:19:08 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, Robot Startup, Sun Feb 17 17:19:22 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, Robot Init, Sun Feb 17 17:19:22 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, Disabled Init, Sun Feb 17 17:19:22 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, Set Hatch Spear to STOW, Sun Feb 17 17:19:23 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, SET HEADING: 0.0, Sun Feb 17 17:19:23 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, Gyro offset: 22.959999084472656, Sun Feb 17 17:19:23 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, Auto Init, Sun Feb 17 17:19:23 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, SET HEADING: 0.0, Sun Feb 17 17:19:23 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, Gyro offset: 22.979999542236328, Sun Feb 17 17:19:23 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, SET HEADING: 0.0, Sun Feb 17 17:19:23 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, Gyro offset: 23.0, Sun Feb 17 17:19:23 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:19:24 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, Disabled Init, Sun Feb 17 17:19:42 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, AUTO MODE DONE!!!! ENDED EARLY!!!!, Sun Feb 17 17:19:42 PST 2019
+0126cc5b-2374-491c-a234-e4a2f587ff6c, Set Hatch Spear to STOW, Sun Feb 17 17:19:42 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, Robot Startup, Sun Feb 17 17:20:04 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, Robot Init, Sun Feb 17 17:20:04 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, Disabled Init, Sun Feb 17 17:20:04 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, Set Hatch Spear to STOW, Sun Feb 17 17:20:05 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, SET HEADING: 0.0, Sun Feb 17 17:20:05 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, Gyro offset: -154.08999633789065, Sun Feb 17 17:20:05 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, Auto Init, Sun Feb 17 17:20:05 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, SET HEADING: 0.0, Sun Feb 17 17:20:05 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, Gyro offset: -154.08999633789065, Sun Feb 17 17:20:05 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, SET HEADING: 0.0, Sun Feb 17 17:20:05 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, Gyro offset: -154.08999633789065, Sun Feb 17 17:20:05 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:20:06 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, Starting trajectory! (length=0.6363961030678927), Sun Feb 17 17:20:06 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 17:20:06 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, Set Hatch Spear to STOW, Sun Feb 17 17:20:07 PST 2019
+eee6fa9b-a159-401f-b1f2-2c6a806ca0c0, Disabled Init, Sun Feb 17 17:20:12 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, Robot Startup, Sun Feb 17 17:22:15 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, Robot Init, Sun Feb 17 17:22:15 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, Disabled Init, Sun Feb 17 17:22:16 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, Set Hatch Spear to STOW, Sun Feb 17 17:22:16 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, SET HEADING: 0.0, Sun Feb 17 17:22:16 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, Gyro offset: -154.61999511718753, Sun Feb 17 17:22:16 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, Auto Init, Sun Feb 17 17:22:17 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, SET HEADING: 0.0, Sun Feb 17 17:22:17 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, Gyro offset: -154.61999511718753, Sun Feb 17 17:22:17 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, SET HEADING: 0.0, Sun Feb 17 17:22:17 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, Gyro offset: -154.61999511718753, Sun Feb 17 17:22:17 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:22:18 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, Starting trajectory! (length=0.6363961030678927), Sun Feb 17 17:22:18 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 17:22:18 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, Set Hatch Spear to STOW, Sun Feb 17 17:22:18 PST 2019
+4c367d3c-da7a-4d71-8d08-d9bc10b1bc1b, Disabled Init, Sun Feb 17 17:22:21 PST 2019
+55922a58-ec00-4b8a-a8f4-6245ce5bc10c, Robot Startup, Sun Feb 17 17:23:39 PST 2019
+55922a58-ec00-4b8a-a8f4-6245ce5bc10c, Robot Init, Sun Feb 17 17:23:39 PST 2019
+55922a58-ec00-4b8a-a8f4-6245ce5bc10c, Disabled Init, Sun Feb 17 17:23:39 PST 2019
+55922a58-ec00-4b8a-a8f4-6245ce5bc10c, Set Hatch Spear to STOW, Sun Feb 17 17:23:39 PST 2019
+55922a58-ec00-4b8a-a8f4-6245ce5bc10c, SET HEADING: 0.0, Sun Feb 17 17:23:40 PST 2019
+55922a58-ec00-4b8a-a8f4-6245ce5bc10c, Gyro offset: -154.91999816894534, Sun Feb 17 17:23:40 PST 2019
+55922a58-ec00-4b8a-a8f4-6245ce5bc10c, Teleop Init, Sun Feb 17 17:23:40 PST 2019
+55922a58-ec00-4b8a-a8f4-6245ce5bc10c, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 17:23:40 PST 2019
+55922a58-ec00-4b8a-a8f4-6245ce5bc10c, Set Hatch Spear to STOW, Sun Feb 17 17:23:40 PST 2019
+55922a58-ec00-4b8a-a8f4-6245ce5bc10c, Disabled Init, Sun Feb 17 17:23:56 PST 2019
+55922a58-ec00-4b8a-a8f4-6245ce5bc10c, Set Hatch Spear to STOW, Sun Feb 17 17:23:56 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Robot Startup, Sun Feb 17 17:24:43 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Robot Init, Sun Feb 17 17:24:43 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Disabled Init, Sun Feb 17 17:24:44 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Set Hatch Spear to STOW, Sun Feb 17 17:24:44 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, SET HEADING: 0.0, Sun Feb 17 17:24:44 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Gyro offset: 73.5199966430664, Sun Feb 17 17:24:44 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Teleop Init, Sun Feb 17 17:24:59 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 17:25:00 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Set Hatch Spear to STOW, Sun Feb 17 17:25:01 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Disabled Init, Sun Feb 17 17:25:12 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Set Hatch Spear to STOW, Sun Feb 17 17:25:12 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Auto Init, Sun Feb 17 17:25:32 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, SET HEADING: 0.0, Sun Feb 17 17:25:32 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Gyro offset: 77.12999725341797, Sun Feb 17 17:25:32 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, SET HEADING: 0.0, Sun Feb 17 17:25:32 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Gyro offset: 77.12999725341797, Sun Feb 17 17:25:32 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:25:32 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Starting trajectory! (length=0.6363961030678927), Sun Feb 17 17:25:32 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 17:25:32 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Set Hatch Spear to STOW, Sun Feb 17 17:25:32 PST 2019
+e6140cac-093a-45df-a8f8-10e6acce4758, Disabled Init, Sun Feb 17 17:25:37 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, Robot Startup, Sun Feb 17 17:26:18 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, Robot Init, Sun Feb 17 17:26:19 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, Disabled Init, Sun Feb 17 17:26:19 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, Set Hatch Spear to STOW, Sun Feb 17 17:26:19 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, SET HEADING: 0.0, Sun Feb 17 17:26:19 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, Gyro offset: 77.1500015258789, Sun Feb 17 17:26:19 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, Auto Init, Sun Feb 17 17:26:20 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, SET HEADING: 0.0, Sun Feb 17 17:26:20 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, Gyro offset: 77.1500015258789, Sun Feb 17 17:26:20 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, SET HEADING: 0.0, Sun Feb 17 17:26:20 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, Gyro offset: 77.1500015258789, Sun Feb 17 17:26:20 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:26:21 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, Starting trajectory! (length=1.9999999999999998), Sun Feb 17 17:26:21 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 17:26:21 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, Set Hatch Spear to STOW, Sun Feb 17 17:26:22 PST 2019
+7039c62c-b7d4-42d9-97b8-9e4565b8baa5, Disabled Init, Sun Feb 17 17:26:47 PST 2019
+8205ace0-1767-42fe-a181-47ac5303a928, Robot Startup, Sun Feb 17 17:28:08 PST 2019
+8205ace0-1767-42fe-a181-47ac5303a928, Robot Init, Sun Feb 17 17:28:08 PST 2019
+8205ace0-1767-42fe-a181-47ac5303a928, Disabled Init, Sun Feb 17 17:28:08 PST 2019
+8205ace0-1767-42fe-a181-47ac5303a928, Set Hatch Spear to STOW, Sun Feb 17 17:28:09 PST 2019
+8205ace0-1767-42fe-a181-47ac5303a928, SET HEADING: 0.0, Sun Feb 17 17:28:09 PST 2019
+8205ace0-1767-42fe-a181-47ac5303a928, Gyro offset: 76.75, Sun Feb 17 17:28:09 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, Robot Startup, Sun Feb 17 17:32:12 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, Robot Init, Sun Feb 17 17:32:12 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, Disabled Init, Sun Feb 17 17:32:12 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, Set Hatch Spear to STOW, Sun Feb 17 17:32:12 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, SET HEADING: 0.0, Sun Feb 17 17:32:12 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, Gyro offset: 75.7300033569336, Sun Feb 17 17:32:12 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, Auto Init, Sun Feb 17 17:32:17 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, SET HEADING: 0.0, Sun Feb 17 17:32:17 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, Gyro offset: 75.73999786376953, Sun Feb 17 17:32:17 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, SET HEADING: 0.0, Sun Feb 17 17:32:18 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, Gyro offset: 75.7300033569336, Sun Feb 17 17:32:18 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:32:18 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, Starting trajectory! (length=1.9999999999999998), Sun Feb 17 17:32:18 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 17:32:18 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, Set Hatch Spear to STOW, Sun Feb 17 17:32:19 PST 2019
+d4e5a288-961d-4985-bbd6-10e3003bc486, Disabled Init, Sun Feb 17 17:32:20 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Robot Startup, Sun Feb 17 17:33:51 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Robot Init, Sun Feb 17 17:33:51 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Disabled Init, Sun Feb 17 17:33:52 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Set Hatch Spear to STOW, Sun Feb 17 17:33:52 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, SET HEADING: 0.0, Sun Feb 17 17:33:52 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Gyro offset: 75.33000183105469, Sun Feb 17 17:33:52 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Auto Init, Sun Feb 17 17:33:56 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, SET HEADING: 0.0, Sun Feb 17 17:33:56 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Gyro offset: 75.29000091552734, Sun Feb 17 17:33:56 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, SET HEADING: 0.0, Sun Feb 17 17:33:57 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Gyro offset: 75.26000213623047, Sun Feb 17 17:33:57 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:33:58 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Starting trajectory! (length=1.9999999999999998), Sun Feb 17 17:33:58 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 17:33:58 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, SET HEADING: 0.0, Sun Feb 17 17:33:58 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Gyro offset: 75.23999786376953, Sun Feb 17 17:33:58 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Disabled Init, Sun Feb 17 17:33:59 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Switching to open loop, Sun Feb 17 17:33:59 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, AUTO MODE DONE!!!! ENDED EARLY!!!!, Sun Feb 17 17:33:59 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Set Hatch Spear to STOW, Sun Feb 17 17:33:59 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Teleop Init, Sun Feb 17 17:34:02 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Set Hatch Spear to STOW, Sun Feb 17 17:34:02 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 17:34:02 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Disabled Init, Sun Feb 17 17:34:08 PST 2019
+0646e747-c445-40d7-b3c3-7f218d47d44a, Set Hatch Spear to STOW, Sun Feb 17 17:34:08 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Robot Startup, Sun Feb 17 17:34:26 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Robot Init, Sun Feb 17 17:34:26 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Disabled Init, Sun Feb 17 17:34:27 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Set Hatch Spear to STOW, Sun Feb 17 17:34:27 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, SET HEADING: 0.0, Sun Feb 17 17:34:27 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Gyro offset: 31.270000457763675, Sun Feb 17 17:34:27 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Auto Init, Sun Feb 17 17:34:27 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, SET HEADING: 0.0, Sun Feb 17 17:34:27 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Gyro offset: 31.270000457763675, Sun Feb 17 17:34:27 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, SET HEADING: 0.0, Sun Feb 17 17:34:28 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Gyro offset: 31.270000457763675, Sun Feb 17 17:34:28 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:34:29 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Starting trajectory! (length=1.9999999999999998), Sun Feb 17 17:34:29 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 17:34:29 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, SET HEADING: 0.0, Sun Feb 17 17:34:29 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Gyro offset: 31.250000000000004, Sun Feb 17 17:34:29 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Switching to open loop, Sun Feb 17 17:34:31 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Trajectory finished, Sun Feb 17 17:34:31 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Auto mode done, Sun Feb 17 17:34:31 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Disabled Init, Sun Feb 17 17:34:41 PST 2019
+2759016b-b914-4216-a235-33c9872d99c9, Set Hatch Spear to STOW, Sun Feb 17 17:34:41 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Robot Startup, Sun Feb 17 17:39:10 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Robot Init, Sun Feb 17 17:39:10 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Disabled Init, Sun Feb 17 17:39:10 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Set Hatch Spear to STOW, Sun Feb 17 17:39:10 PST 2019
+971fd626-be07-437f-a801-9062047e0578, SET HEADING: 0.0, Sun Feb 17 17:39:11 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Gyro offset: 29.819999694824222, Sun Feb 17 17:39:11 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Auto Init, Sun Feb 17 17:39:11 PST 2019
+971fd626-be07-437f-a801-9062047e0578, SET HEADING: 0.0, Sun Feb 17 17:39:11 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Gyro offset: 29.809999465942386, Sun Feb 17 17:39:11 PST 2019
+971fd626-be07-437f-a801-9062047e0578, SET HEADING: 0.0, Sun Feb 17 17:39:12 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Gyro offset: 29.790000915527344, Sun Feb 17 17:39:12 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:39:12 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Starting trajectory! (length=1.096096971726759), Sun Feb 17 17:39:12 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 17:39:12 PST 2019
+971fd626-be07-437f-a801-9062047e0578, SET HEADING: 0.0, Sun Feb 17 17:39:14 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Gyro offset: 29.75, Sun Feb 17 17:39:14 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Switching to open loop, Sun Feb 17 17:39:15 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Trajectory finished, Sun Feb 17 17:39:15 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Auto mode done, Sun Feb 17 17:39:15 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Disabled Init, Sun Feb 17 17:39:18 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Set Hatch Spear to STOW, Sun Feb 17 17:39:18 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Auto Init, Sun Feb 17 17:39:19 PST 2019
+971fd626-be07-437f-a801-9062047e0578, SET HEADING: 0.0, Sun Feb 17 17:39:19 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Gyro offset: 29.040000915527347, Sun Feb 17 17:39:19 PST 2019
+971fd626-be07-437f-a801-9062047e0578, SET HEADING: 0.0, Sun Feb 17 17:39:19 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Gyro offset: 29.040000915527347, Sun Feb 17 17:39:19 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:39:19 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Starting trajectory! (length=1.096096971726759), Sun Feb 17 17:39:19 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 17:39:19 PST 2019
+971fd626-be07-437f-a801-9062047e0578, Disabled Init, Sun Feb 17 17:39:21 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Robot Startup, Sun Feb 17 17:39:45 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Robot Init, Sun Feb 17 17:39:45 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Disabled Init, Sun Feb 17 17:39:45 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Set Hatch Spear to STOW, Sun Feb 17 17:39:45 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, SET HEADING: 0.0, Sun Feb 17 17:39:45 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Gyro offset: 28.82999992370606, Sun Feb 17 17:39:45 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Auto Init, Sun Feb 17 17:39:46 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, SET HEADING: 0.0, Sun Feb 17 17:39:46 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Gyro offset: 28.840000152587894, Sun Feb 17 17:39:46 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, SET HEADING: 0.0, Sun Feb 17 17:39:47 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Gyro offset: 28.82999992370606, Sun Feb 17 17:39:47 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:39:47 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Starting trajectory! (length=1.096096971726759), Sun Feb 17 17:39:47 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 17:39:48 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, SET HEADING: 0.0, Sun Feb 17 17:39:49 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Gyro offset: 28.79999923706055, Sun Feb 17 17:39:49 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Switching to open loop, Sun Feb 17 17:39:50 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Trajectory finished, Sun Feb 17 17:39:50 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Auto mode done, Sun Feb 17 17:39:50 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Disabled Init, Sun Feb 17 17:39:55 PST 2019
+30709b64-64dc-4e40-85f0-b838400a4b8b, Set Hatch Spear to STOW, Sun Feb 17 17:39:55 PST 2019
+a13552ff-e000-4123-97fe-be4b8120b0f2, Robot Startup, Sun Feb 17 17:40:26 PST 2019
+a13552ff-e000-4123-97fe-be4b8120b0f2, Robot Init, Sun Feb 17 17:40:26 PST 2019
+a13552ff-e000-4123-97fe-be4b8120b0f2, Disabled Init, Sun Feb 17 17:40:26 PST 2019
+a13552ff-e000-4123-97fe-be4b8120b0f2, Set Hatch Spear to STOW, Sun Feb 17 17:40:26 PST 2019
+a13552ff-e000-4123-97fe-be4b8120b0f2, SET HEADING: 0.0, Sun Feb 17 17:40:26 PST 2019
+a13552ff-e000-4123-97fe-be4b8120b0f2, Gyro offset: 28.90999984741211, Sun Feb 17 17:40:26 PST 2019
+a13552ff-e000-4123-97fe-be4b8120b0f2, Teleop Init, Sun Feb 17 17:40:27 PST 2019
+a13552ff-e000-4123-97fe-be4b8120b0f2, Set Hatch Spear to STOW, Sun Feb 17 17:40:27 PST 2019
+a13552ff-e000-4123-97fe-be4b8120b0f2, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 17:40:27 PST 2019
+a13552ff-e000-4123-97fe-be4b8120b0f2, Disabled Init, Sun Feb 17 17:40:33 PST 2019
+a13552ff-e000-4123-97fe-be4b8120b0f2, Set Hatch Spear to STOW, Sun Feb 17 17:40:33 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Robot Startup, Sun Feb 17 17:40:46 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Robot Init, Sun Feb 17 17:40:47 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Disabled Init, Sun Feb 17 17:40:47 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Set Hatch Spear to STOW, Sun Feb 17 17:40:47 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, SET HEADING: 0.0, Sun Feb 17 17:40:47 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Gyro offset: 27.700000762939453, Sun Feb 17 17:40:47 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Auto Init, Sun Feb 17 17:40:48 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, SET HEADING: 0.0, Sun Feb 17 17:40:48 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Gyro offset: 27.700000762939453, Sun Feb 17 17:40:48 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, SET HEADING: 0.0, Sun Feb 17 17:40:48 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Gyro offset: 27.700000762939453, Sun Feb 17 17:40:48 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:40:49 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Starting trajectory! (length=1.0986988450978499), Sun Feb 17 17:40:49 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 17:40:49 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, SET HEADING: 0.0, Sun Feb 17 17:40:49 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Gyro offset: 27.700000762939453, Sun Feb 17 17:40:49 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Switching to open loop, Sun Feb 17 17:40:51 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Trajectory finished, Sun Feb 17 17:40:51 PST 2019
+de0a956b-417d-4df3-baba-a1f80836a875, Auto mode done, Sun Feb 17 17:40:51 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Robot Startup, Sun Feb 17 17:41:32 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Robot Init, Sun Feb 17 17:41:32 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Disabled Init, Sun Feb 17 17:41:32 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Set Hatch Spear to STOW, Sun Feb 17 17:41:32 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, SET HEADING: 0.0, Sun Feb 17 17:41:32 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Gyro offset: 14.050000190734865, Sun Feb 17 17:41:32 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Auto Init, Sun Feb 17 17:41:33 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, SET HEADING: 0.0, Sun Feb 17 17:41:33 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Gyro offset: 14.039999961853027, Sun Feb 17 17:41:33 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, SET HEADING: 0.0, Sun Feb 17 17:41:34 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Gyro offset: 14.02999973297119, Sun Feb 17 17:41:34 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:41:34 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Starting trajectory! (length=1.4326885353123509), Sun Feb 17 17:41:34 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 17:41:35 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, SET HEADING: 0.0, Sun Feb 17 17:41:35 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Gyro offset: 14.020000457763674, Sun Feb 17 17:41:35 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Switching to open loop, Sun Feb 17 17:41:37 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Trajectory finished, Sun Feb 17 17:41:37 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Auto mode done, Sun Feb 17 17:41:37 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Disabled Init, Sun Feb 17 17:41:48 PST 2019
+58dca1cf-b0d0-482b-b02f-fdb9c8c44a78, Set Hatch Spear to STOW, Sun Feb 17 17:41:48 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Robot Startup, Sun Feb 17 17:42:39 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Robot Init, Sun Feb 17 17:42:39 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Disabled Init, Sun Feb 17 17:42:39 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Set Hatch Spear to STOW, Sun Feb 17 17:42:39 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, SET HEADING: 0.0, Sun Feb 17 17:42:39 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Gyro offset: 3.4400000572204594, Sun Feb 17 17:42:39 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Auto Init, Sun Feb 17 17:42:40 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, SET HEADING: 0.0, Sun Feb 17 17:42:40 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Gyro offset: 3.4400000572204594, Sun Feb 17 17:42:40 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, SET HEADING: 0.0, Sun Feb 17 17:42:40 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Gyro offset: 3.4400000572204594, Sun Feb 17 17:42:40 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:42:41 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Starting trajectory! (length=1.4283641758999832), Sun Feb 17 17:42:41 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 17:42:41 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, SET HEADING: 0.0, Sun Feb 17 17:42:42 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Gyro offset: 3.4200000762939453, Sun Feb 17 17:42:42 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Switching to open loop, Sun Feb 17 17:42:43 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Trajectory finished, Sun Feb 17 17:42:43 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Auto mode done, Sun Feb 17 17:42:43 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Disabled Init, Sun Feb 17 17:42:52 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Set Hatch Spear to STOW, Sun Feb 17 17:42:52 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Teleop Init, Sun Feb 17 17:43:20 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Set Hatch Spear to STOW, Sun Feb 17 17:43:20 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 17:43:20 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Disabled Init, Sun Feb 17 17:43:25 PST 2019
+3e291462-9141-4d2c-96e5-161c80fc5081, Set Hatch Spear to STOW, Sun Feb 17 17:43:25 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Robot Startup, Sun Feb 17 17:45:05 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Robot Init, Sun Feb 17 17:45:05 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Disabled Init, Sun Feb 17 17:45:05 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Set Hatch Spear to STOW, Sun Feb 17 17:45:05 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, SET HEADING: 0.0, Sun Feb 17 17:45:05 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Gyro offset: 21.5, Sun Feb 17 17:45:05 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Auto Init, Sun Feb 17 17:45:06 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, SET HEADING: 0.0, Sun Feb 17 17:45:06 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Gyro offset: 21.5, Sun Feb 17 17:45:06 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, SET HEADING: 0.0, Sun Feb 17 17:45:07 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Gyro offset: 21.5, Sun Feb 17 17:45:07 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:45:07 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Starting trajectory! (length=1.096096971726759), Sun Feb 17 17:45:07 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 17:45:07 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, SET HEADING: 0.0, Sun Feb 17 17:45:08 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Gyro offset: 21.489999771118164, Sun Feb 17 17:45:08 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Switching to open loop, Sun Feb 17 17:45:09 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Trajectory finished, Sun Feb 17 17:45:09 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Auto mode done, Sun Feb 17 17:45:09 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Disabled Init, Sun Feb 17 17:45:16 PST 2019
+186092cc-22a6-46c2-8e3c-8699a4a9b4ca, Set Hatch Spear to STOW, Sun Feb 17 17:45:16 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Robot Startup, Sun Feb 17 17:46:04 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Robot Init, Sun Feb 17 17:46:04 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Disabled Init, Sun Feb 17 17:46:04 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Set Hatch Spear to STOW, Sun Feb 17 17:46:04 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, SET HEADING: 0.0, Sun Feb 17 17:46:05 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Gyro offset: 20.870000839233402, Sun Feb 17 17:46:05 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Auto Init, Sun Feb 17 17:46:05 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, SET HEADING: 0.0, Sun Feb 17 17:46:05 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Gyro offset: 20.860000610351562, Sun Feb 17 17:46:05 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, SET HEADING: 0.0, Sun Feb 17 17:46:05 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Gyro offset: 20.850000381469727, Sun Feb 17 17:46:05 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:46:06 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Starting trajectory! (length=1.096096971726759), Sun Feb 17 17:46:06 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 17:46:06 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, SET HEADING: 0.0, Sun Feb 17 17:46:07 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Gyro offset: 20.809999465942383, Sun Feb 17 17:46:07 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Switching to open loop, Sun Feb 17 17:46:08 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Trajectory finished, Sun Feb 17 17:46:08 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Auto mode done, Sun Feb 17 17:46:08 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Disabled Init, Sun Feb 17 17:46:12 PST 2019
+605a89c3-945e-4f19-88f1-0ebfac9f18b5, Set Hatch Spear to STOW, Sun Feb 17 17:46:12 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Robot Startup, Sun Feb 17 17:46:41 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Robot Init, Sun Feb 17 17:46:41 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Disabled Init, Sun Feb 17 17:46:41 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Set Hatch Spear to STOW, Sun Feb 17 17:46:41 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, SET HEADING: 0.0, Sun Feb 17 17:46:41 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Gyro offset: 20.90999984741211, Sun Feb 17 17:46:41 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Auto Init, Sun Feb 17 17:46:42 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, SET HEADING: 0.0, Sun Feb 17 17:46:42 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Gyro offset: 20.90999984741211, Sun Feb 17 17:46:42 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, SET HEADING: 0.0, Sun Feb 17 17:46:42 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Gyro offset: 20.899999618530273, Sun Feb 17 17:46:42 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:46:43 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Starting trajectory! (length=1.1719405169767878), Sun Feb 17 17:46:43 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 17:46:43 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, SET HEADING: 0.0, Sun Feb 17 17:46:44 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Gyro offset: 20.870000839233402, Sun Feb 17 17:46:44 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Switching to open loop, Sun Feb 17 17:46:45 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Trajectory finished, Sun Feb 17 17:46:45 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Auto mode done, Sun Feb 17 17:46:45 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Disabled Init, Sun Feb 17 17:47:17 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Set Hatch Spear to STOW, Sun Feb 17 17:47:17 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Teleop Init, Sun Feb 17 17:49:31 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Set Hatch Spear to STOW, Sun Feb 17 17:49:31 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 17:49:31 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Disabled Init, Sun Feb 17 17:49:37 PST 2019
+3e6e7489-cd77-46d2-900d-a6c4f5d9d6b9, Set Hatch Spear to STOW, Sun Feb 17 17:49:37 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Robot Startup, Sun Feb 17 17:49:55 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Robot Init, Sun Feb 17 17:49:55 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Disabled Init, Sun Feb 17 17:49:55 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Set Hatch Spear to STOW, Sun Feb 17 17:49:55 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, SET HEADING: 0.0, Sun Feb 17 17:49:55 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Gyro offset: 41.77000045776367, Sun Feb 17 17:49:55 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Auto Init, Sun Feb 17 17:49:56 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, SET HEADING: 0.0, Sun Feb 17 17:49:56 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Gyro offset: 41.77000045776367, Sun Feb 17 17:49:56 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, SET HEADING: 0.0, Sun Feb 17 17:49:57 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Gyro offset: 41.77000045776367, Sun Feb 17 17:49:57 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 17:49:57 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Starting trajectory! (length=1.450152319310326), Sun Feb 17 17:49:57 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 17:49:57 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, SET HEADING: 0.0, Sun Feb 17 17:49:58 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Gyro offset: 41.75, Sun Feb 17 17:49:58 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Switching to open loop, Sun Feb 17 17:50:00 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Trajectory finished, Sun Feb 17 17:50:00 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Auto mode done, Sun Feb 17 17:50:00 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Disabled Init, Sun Feb 17 17:50:15 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Set Hatch Spear to STOW, Sun Feb 17 17:50:15 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Teleop Init, Sun Feb 17 18:05:42 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Set Hatch Spear to STOW, Sun Feb 17 18:05:42 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 18:05:42 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Disabled Init, Sun Feb 17 18:05:46 PST 2019
+05543518-9857-4d38-85d3-62ccb17b628d, Set Hatch Spear to STOW, Sun Feb 17 18:05:46 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Robot Startup, Sun Feb 17 18:06:03 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Robot Init, Sun Feb 17 18:06:03 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Disabled Init, Sun Feb 17 18:06:04 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Set Hatch Spear to STOW, Sun Feb 17 18:06:04 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, SET HEADING: 0.0, Sun Feb 17 18:06:04 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Gyro offset: 26.65999984741211, Sun Feb 17 18:06:04 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Auto Init, Sun Feb 17 18:06:30 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, SET HEADING: 0.0, Sun Feb 17 18:06:30 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Gyro offset: 26.57999992370605, Sun Feb 17 18:06:30 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, SET HEADING: 0.0, Sun Feb 17 18:06:31 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Gyro offset: 26.569999694824222, Sun Feb 17 18:06:31 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:06:31 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Starting trajectory! (length=1.450152319310326), Sun Feb 17 18:06:32 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:06:32 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, SET HEADING: 0.0, Sun Feb 17 18:06:32 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Gyro offset: 26.540000915527344, Sun Feb 17 18:06:32 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Switching to open loop, Sun Feb 17 18:06:34 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Trajectory finished, Sun Feb 17 18:06:34 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Auto mode done, Sun Feb 17 18:06:34 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Disabled Init, Sun Feb 17 18:06:36 PST 2019
+eaf34852-7781-4905-90ab-9226dfc5cea0, Set Hatch Spear to STOW, Sun Feb 17 18:06:36 PST 2019
+0a6aaaf6-8f41-4a54-8cf3-202bc97b382b, Robot Startup, Sun Feb 17 18:08:55 PST 2019
+0a6aaaf6-8f41-4a54-8cf3-202bc97b382b, Robot Init, Sun Feb 17 18:08:55 PST 2019
+0a6aaaf6-8f41-4a54-8cf3-202bc97b382b, Disabled Init, Sun Feb 17 18:08:55 PST 2019
+0a6aaaf6-8f41-4a54-8cf3-202bc97b382b, Set Hatch Spear to STOW, Sun Feb 17 18:08:55 PST 2019
+0a6aaaf6-8f41-4a54-8cf3-202bc97b382b, SET HEADING: 0.0, Sun Feb 17 18:08:55 PST 2019
+0a6aaaf6-8f41-4a54-8cf3-202bc97b382b, Gyro offset: -11.42001342773437, Sun Feb 17 18:08:55 PST 2019
+0a6aaaf6-8f41-4a54-8cf3-202bc97b382b, Teleop Init, Sun Feb 17 18:08:56 PST 2019
+0a6aaaf6-8f41-4a54-8cf3-202bc97b382b, Set Hatch Spear to STOW, Sun Feb 17 18:08:56 PST 2019
+0a6aaaf6-8f41-4a54-8cf3-202bc97b382b, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 18:08:56 PST 2019
+0a6aaaf6-8f41-4a54-8cf3-202bc97b382b, Disabled Init, Sun Feb 17 18:09:03 PST 2019
+0a6aaaf6-8f41-4a54-8cf3-202bc97b382b, Set Hatch Spear to STOW, Sun Feb 17 18:09:03 PST 2019
+1f9a0d5d-a0f6-448a-b29f-2fbe16187b2d, Robot Startup, Sun Feb 17 18:10:03 PST 2019
+1f9a0d5d-a0f6-448a-b29f-2fbe16187b2d, Robot Init, Sun Feb 17 18:10:03 PST 2019
+1f9a0d5d-a0f6-448a-b29f-2fbe16187b2d, Disabled Init, Sun Feb 17 18:10:03 PST 2019
+1f9a0d5d-a0f6-448a-b29f-2fbe16187b2d, Set Hatch Spear to STOW, Sun Feb 17 18:10:03 PST 2019
+1f9a0d5d-a0f6-448a-b29f-2fbe16187b2d, SET HEADING: 0.0, Sun Feb 17 18:10:04 PST 2019
+1f9a0d5d-a0f6-448a-b29f-2fbe16187b2d, Gyro offset: -12.010009765624996, Sun Feb 17 18:10:04 PST 2019
+1f9a0d5d-a0f6-448a-b29f-2fbe16187b2d, Teleop Init, Sun Feb 17 18:10:11 PST 2019
+1f9a0d5d-a0f6-448a-b29f-2fbe16187b2d, Set Hatch Spear to STOW, Sun Feb 17 18:10:12 PST 2019
+1f9a0d5d-a0f6-448a-b29f-2fbe16187b2d, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 18:10:12 PST 2019
+1f9a0d5d-a0f6-448a-b29f-2fbe16187b2d, Disabled Init, Sun Feb 17 18:10:46 PST 2019
+1f9a0d5d-a0f6-448a-b29f-2fbe16187b2d, Set Hatch Spear to STOW, Sun Feb 17 18:10:46 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Robot Startup, Sun Feb 17 18:11:18 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Robot Init, Sun Feb 17 18:11:18 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Disabled Init, Sun Feb 17 18:11:18 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Set Hatch Spear to STOW, Sun Feb 17 18:11:18 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, SET HEADING: 0.0, Sun Feb 17 18:11:18 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Gyro offset: -158.55999755859378, Sun Feb 17 18:11:18 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Teleop Init, Sun Feb 17 18:11:20 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Set Hatch Spear to STOW, Sun Feb 17 18:11:21 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 18:11:21 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Disabled Init, Sun Feb 17 18:11:22 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Set Hatch Spear to STOW, Sun Feb 17 18:11:23 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Teleop Init, Sun Feb 17 18:12:05 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Set Hatch Spear to STOW, Sun Feb 17 18:12:05 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 18:12:05 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Disabled Init, Sun Feb 17 18:12:10 PST 2019
+c6c86985-1394-4ddb-bcff-d053425a4347, Set Hatch Spear to STOW, Sun Feb 17 18:12:10 PST 2019
+622e77eb-b139-458d-8bd5-0e440b3fd3aa, Robot Startup, Sun Feb 17 18:13:28 PST 2019
+622e77eb-b139-458d-8bd5-0e440b3fd3aa, Robot Init, Sun Feb 17 18:13:29 PST 2019
+622e77eb-b139-458d-8bd5-0e440b3fd3aa, Disabled Init, Sun Feb 17 18:13:29 PST 2019
+622e77eb-b139-458d-8bd5-0e440b3fd3aa, Set Hatch Spear to STOW, Sun Feb 17 18:13:29 PST 2019
+622e77eb-b139-458d-8bd5-0e440b3fd3aa, SET HEADING: 0.0, Sun Feb 17 18:13:29 PST 2019
+622e77eb-b139-458d-8bd5-0e440b3fd3aa, Gyro offset: -160.25999450683594, Sun Feb 17 18:13:29 PST 2019
+71a07fa0-4643-4777-87c6-bb17048e7c39, Robot Startup, Sun Feb 17 18:14:20 PST 2019
+71a07fa0-4643-4777-87c6-bb17048e7c39, Robot Init, Sun Feb 17 18:14:20 PST 2019
+71a07fa0-4643-4777-87c6-bb17048e7c39, Disabled Init, Sun Feb 17 18:14:20 PST 2019
+71a07fa0-4643-4777-87c6-bb17048e7c39, Set Hatch Spear to STOW, Sun Feb 17 18:14:21 PST 2019
+71a07fa0-4643-4777-87c6-bb17048e7c39, SET HEADING: 0.0, Sun Feb 17 18:14:21 PST 2019
+71a07fa0-4643-4777-87c6-bb17048e7c39, Gyro offset: -160.49000549316406, Sun Feb 17 18:14:21 PST 2019
+71a07fa0-4643-4777-87c6-bb17048e7c39, Teleop Init, Sun Feb 17 18:14:38 PST 2019
+71a07fa0-4643-4777-87c6-bb17048e7c39, Set Hatch Spear to STOW, Sun Feb 17 18:14:40 PST 2019
+71a07fa0-4643-4777-87c6-bb17048e7c39, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 18:14:40 PST 2019
+71a07fa0-4643-4777-87c6-bb17048e7c39, Disabled Init, Sun Feb 17 18:15:33 PST 2019
+71a07fa0-4643-4777-87c6-bb17048e7c39, Set Hatch Spear to STOW, Sun Feb 17 18:15:33 PST 2019
+6addf6dd-b837-43a9-9be9-631035dc878f, Robot Startup, Sun Feb 17 18:19:08 PST 2019
+6addf6dd-b837-43a9-9be9-631035dc878f, Robot Init, Sun Feb 17 18:19:08 PST 2019
+6addf6dd-b837-43a9-9be9-631035dc878f, Disabled Init, Sun Feb 17 18:19:08 PST 2019
+6addf6dd-b837-43a9-9be9-631035dc878f, Set Hatch Spear to STOW, Sun Feb 17 18:19:08 PST 2019
+6addf6dd-b837-43a9-9be9-631035dc878f, SET HEADING: 0.0, Sun Feb 17 18:19:08 PST 2019
+6addf6dd-b837-43a9-9be9-631035dc878f, Gyro offset: 75.58000183105469, Sun Feb 17 18:19:09 PST 2019
+347de52a-bf0d-4fa2-a198-f26ae29a51a4, Robot Startup, Sun Feb 17 18:22:16 PST 2019
+347de52a-bf0d-4fa2-a198-f26ae29a51a4, Robot Init, Sun Feb 17 18:22:16 PST 2019
+347de52a-bf0d-4fa2-a198-f26ae29a51a4, Disabled Init, Sun Feb 17 18:22:17 PST 2019
+347de52a-bf0d-4fa2-a198-f26ae29a51a4, Set Hatch Spear to STOW, Sun Feb 17 18:22:17 PST 2019
+347de52a-bf0d-4fa2-a198-f26ae29a51a4, SET HEADING: 0.0, Sun Feb 17 18:22:17 PST 2019
+347de52a-bf0d-4fa2-a198-f26ae29a51a4, Gyro offset: 74.80000305175781, Sun Feb 17 18:22:17 PST 2019
+347de52a-bf0d-4fa2-a198-f26ae29a51a4, Teleop Init, Sun Feb 17 18:22:17 PST 2019
+347de52a-bf0d-4fa2-a198-f26ae29a51a4, Set Hatch Spear to STOW, Sun Feb 17 18:22:19 PST 2019
+347de52a-bf0d-4fa2-a198-f26ae29a51a4, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 18:22:19 PST 2019
+347de52a-bf0d-4fa2-a198-f26ae29a51a4, Disabled Init, Sun Feb 17 18:22:24 PST 2019
+347de52a-bf0d-4fa2-a198-f26ae29a51a4, Set Hatch Spear to STOW, Sun Feb 17 18:22:24 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Robot Startup, Sun Feb 17 18:22:38 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Robot Init, Sun Feb 17 18:22:38 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Disabled Init, Sun Feb 17 18:22:38 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Set Hatch Spear to STOW, Sun Feb 17 18:22:38 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, SET HEADING: 0.0, Sun Feb 17 18:22:38 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Gyro offset: 14.149999618530272, Sun Feb 17 18:22:38 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Auto Init, Sun Feb 17 18:22:51 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, SET HEADING: 0.0, Sun Feb 17 18:22:51 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Gyro offset: 14.340000152587892, Sun Feb 17 18:22:51 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, SET HEADING: 0.0, Sun Feb 17 18:22:51 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Gyro offset: 14.329999923706056, Sun Feb 17 18:22:51 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:22:52 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Starting trajectory! (length=1.450152319310326), Sun Feb 17 18:22:52 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:22:52 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, SET HEADING: 0.0, Sun Feb 17 18:22:53 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Gyro offset: 14.300000190734863, Sun Feb 17 18:22:53 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Switching to open loop, Sun Feb 17 18:22:54 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Trajectory finished, Sun Feb 17 18:22:54 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Auto mode done, Sun Feb 17 18:22:54 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Disabled Init, Sun Feb 17 18:22:55 PST 2019
+c19ec523-ebf0-46d7-9972-dca3c3f8c595, Set Hatch Spear to STOW, Sun Feb 17 18:22:55 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, Robot Startup, Sun Feb 17 18:24:06 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, Robot Init, Sun Feb 17 18:24:06 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, Disabled Init, Sun Feb 17 18:24:06 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, Set Hatch Spear to STOW, Sun Feb 17 18:24:06 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, SET HEADING: 0.0, Sun Feb 17 18:24:06 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, Gyro offset: -23.630004882812504, Sun Feb 17 18:24:06 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, Auto Init, Sun Feb 17 18:24:07 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, SET HEADING: 0.0, Sun Feb 17 18:24:07 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, Gyro offset: -23.640014648437518, Sun Feb 17 18:24:07 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, SET HEADING: 0.0, Sun Feb 17 18:24:09 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, Gyro offset: -23.67001342773437, Sun Feb 17 18:24:09 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:24:09 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, Starting trajectory! (length=1.096096971726759), Sun Feb 17 18:24:09 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:24:09 PST 2019
+ae49f98e-3fed-41c8-837a-aa43dcbf9274, Disabled Init, Sun Feb 17 18:24:15 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Robot Startup, Sun Feb 17 18:24:54 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Robot Init, Sun Feb 17 18:24:54 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Disabled Init, Sun Feb 17 18:24:54 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Set Hatch Spear to STOW, Sun Feb 17 18:24:54 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, SET HEADING: 0.0, Sun Feb 17 18:24:54 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Gyro offset: -23.809997558593768, Sun Feb 17 18:24:54 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Auto Init, Sun Feb 17 18:24:57 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, SET HEADING: 0.0, Sun Feb 17 18:24:57 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Gyro offset: -23.839996337890618, Sun Feb 17 18:24:57 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, SET HEADING: 0.0, Sun Feb 17 18:24:57 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Gyro offset: -23.850006103515632, Sun Feb 17 18:24:57 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:24:58 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Starting trajectory! (length=1.096096971726759), Sun Feb 17 18:24:58 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:24:58 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, SET HEADING: 0.0, Sun Feb 17 18:24:59 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Gyro offset: -23.880004882812486, Sun Feb 17 18:24:59 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Switching to open loop, Sun Feb 17 18:25:00 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Trajectory finished, Sun Feb 17 18:25:00 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Auto mode done, Sun Feb 17 18:25:00 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Disabled Init, Sun Feb 17 18:25:02 PST 2019
+c39cb462-ccbe-49ee-ba86-5d5c09c17922, Set Hatch Spear to STOW, Sun Feb 17 18:25:02 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Robot Startup, Sun Feb 17 18:25:43 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Robot Init, Sun Feb 17 18:25:43 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Disabled Init, Sun Feb 17 18:25:43 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Set Hatch Spear to STOW, Sun Feb 17 18:25:43 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, SET HEADING: 0.0, Sun Feb 17 18:25:43 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Gyro offset: -23.29000854492186, Sun Feb 17 18:25:43 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Auto Init, Sun Feb 17 18:25:46 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, SET HEADING: 0.0, Sun Feb 17 18:25:46 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Gyro offset: -23.30999755859375, Sun Feb 17 18:25:46 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, SET HEADING: 0.0, Sun Feb 17 18:25:47 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Gyro offset: -23.320007324218764, Sun Feb 17 18:25:47 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:25:48 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Starting trajectory! (length=1.096096971726759), Sun Feb 17 18:25:48 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:25:48 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, SET HEADING: -0.0, Sun Feb 17 18:25:49 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Gyro offset: -23.350006103515614, Sun Feb 17 18:25:49 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Switching to open loop, Sun Feb 17 18:25:50 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Trajectory finished, Sun Feb 17 18:25:50 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Auto mode done, Sun Feb 17 18:25:50 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Disabled Init, Sun Feb 17 18:25:51 PST 2019
+1e458121-5268-478a-974d-4d0727d9ccf9, Set Hatch Spear to STOW, Sun Feb 17 18:25:51 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, Robot Startup, Sun Feb 17 18:26:22 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, Robot Init, Sun Feb 17 18:26:22 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, Disabled Init, Sun Feb 17 18:26:22 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, Set Hatch Spear to STOW, Sun Feb 17 18:26:23 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, SET HEADING: 0.0, Sun Feb 17 18:26:23 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, Gyro offset: -23.38000488281252, Sun Feb 17 18:26:23 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, Auto Init, Sun Feb 17 18:26:23 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, SET HEADING: 0.0, Sun Feb 17 18:26:23 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, Gyro offset: -23.38000488281252, Sun Feb 17 18:26:23 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, SET HEADING: 0.0, Sun Feb 17 18:26:25 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, Gyro offset: -23.399993896484403, Sun Feb 17 18:26:25 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:26:25 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, Starting trajectory! (length=1.096096971726759), Sun Feb 17 18:26:25 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:26:25 PST 2019
+4d63dc1f-4a09-4cf5-a825-aecab4b47869, Disabled Init, Sun Feb 17 18:26:29 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, Robot Startup, Sun Feb 17 18:28:51 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, Robot Init, Sun Feb 17 18:28:51 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, Disabled Init, Sun Feb 17 18:28:51 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, Set Hatch Spear to STOW, Sun Feb 17 18:28:51 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, SET HEADING: 0.0, Sun Feb 17 18:28:52 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, Gyro offset: -24.17999267578126, Sun Feb 17 18:28:52 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, Auto Init, Sun Feb 17 18:28:52 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, SET HEADING: 0.0, Sun Feb 17 18:28:52 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, Gyro offset: -24.160003662109375, Sun Feb 17 18:28:52 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, SET HEADING: 0.0, Sun Feb 17 18:28:54 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, Gyro offset: -24.209991455078114, Sun Feb 17 18:28:54 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:28:55 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, Starting trajectory! (length=1.096096971726759), Sun Feb 17 18:28:55 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:28:55 PST 2019
+416e3c6b-d26c-4a24-8b66-dc0d36b2aa94, Disabled Init, Sun Feb 17 18:28:58 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, SigNotUpdated, Sun Feb 17 18:29:37 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Robot Startup, Sun Feb 17 18:29:43 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Robot Init, Sun Feb 17 18:29:43 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Disabled Init, Sun Feb 17 18:29:43 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Set Hatch Spear to STOW, Sun Feb 17 18:29:44 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, SET HEADING: 0.0, Sun Feb 17 18:29:44 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Gyro offset: -24.47000122070311, Sun Feb 17 18:29:44 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Auto Init, Sun Feb 17 18:31:16 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, SET HEADING: 0.0, Sun Feb 17 18:31:16 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Gyro offset: -24.959991455078118, Sun Feb 17 18:31:16 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, SET HEADING: 0.0, Sun Feb 17 18:31:17 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Gyro offset: -24.980010986328146, Sun Feb 17 18:31:17 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:31:18 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Starting trajectory! (length=1.1468263824624654), Sun Feb 17 18:31:18 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:31:18 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, SET HEADING: 0.0, Sun Feb 17 18:31:19 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Gyro offset: -25.019989013671875, Sun Feb 17 18:31:19 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Switching to open loop, Sun Feb 17 18:31:20 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Trajectory finished, Sun Feb 17 18:31:20 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Auto mode done, Sun Feb 17 18:31:20 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Disabled Init, Sun Feb 17 18:31:21 PST 2019
+0770f9ef-368c-4e75-b4ec-d704509ae43f, Set Hatch Spear to STOW, Sun Feb 17 18:31:21 PST 2019
+dc711679-d6f0-4a14-b7ba-02178a847110, Robot Startup, Sun Feb 17 18:31:46 PST 2019
+dc711679-d6f0-4a14-b7ba-02178a847110, Robot Init, Sun Feb 17 18:31:47 PST 2019
+dc711679-d6f0-4a14-b7ba-02178a847110, Disabled Init, Sun Feb 17 18:31:47 PST 2019
+dc711679-d6f0-4a14-b7ba-02178a847110, Set Hatch Spear to STOW, Sun Feb 17 18:31:47 PST 2019
+dc711679-d6f0-4a14-b7ba-02178a847110, SET HEADING: 0.0, Sun Feb 17 18:31:47 PST 2019
+dc711679-d6f0-4a14-b7ba-02178a847110, Gyro offset: -34.690002441406236, Sun Feb 17 18:31:47 PST 2019
+ce847a70-bef2-4468-8c72-1496fa8757c9, Robot Startup, Sun Feb 17 18:41:21 PST 2019
+ce847a70-bef2-4468-8c72-1496fa8757c9, Robot Init, Sun Feb 17 18:41:21 PST 2019
+ce847a70-bef2-4468-8c72-1496fa8757c9, Disabled Init, Sun Feb 17 18:41:21 PST 2019
+ce847a70-bef2-4468-8c72-1496fa8757c9, Set Hatch Spear to STOW, Sun Feb 17 18:41:21 PST 2019
+ce847a70-bef2-4468-8c72-1496fa8757c9, SET HEADING: 0.0, Sun Feb 17 18:41:22 PST 2019
+ce847a70-bef2-4468-8c72-1496fa8757c9, Gyro offset: -37.0, Sun Feb 17 18:41:22 PST 2019
+ce847a70-bef2-4468-8c72-1496fa8757c9, Teleop Init, Sun Feb 17 18:45:32 PST 2019
+ce847a70-bef2-4468-8c72-1496fa8757c9, Set Hatch Spear to STOW, Sun Feb 17 18:45:33 PST 2019
+ce847a70-bef2-4468-8c72-1496fa8757c9, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 18:45:33 PST 2019
+ce847a70-bef2-4468-8c72-1496fa8757c9, Disabled Init, Sun Feb 17 18:45:42 PST 2019
+ce847a70-bef2-4468-8c72-1496fa8757c9, Set Hatch Spear to STOW, Sun Feb 17 18:45:42 PST 2019
+4a45c310-6264-44e5-835f-030f6f1af825, Robot Startup, Sun Feb 17 18:46:13 PST 2019
+4a45c310-6264-44e5-835f-030f6f1af825, Robot Init, Sun Feb 17 18:46:13 PST 2019
+4a45c310-6264-44e5-835f-030f6f1af825, Disabled Init, Sun Feb 17 18:46:13 PST 2019
+4a45c310-6264-44e5-835f-030f6f1af825, Set Hatch Spear to STOW, Sun Feb 17 18:46:13 PST 2019
+4a45c310-6264-44e5-835f-030f6f1af825, SET HEADING: 0.0, Sun Feb 17 18:46:14 PST 2019
+4a45c310-6264-44e5-835f-030f6f1af825, Gyro offset: -37.529998779296875, Sun Feb 17 18:46:14 PST 2019
+4a45c310-6264-44e5-835f-030f6f1af825, Teleop Init, Sun Feb 17 18:46:14 PST 2019
+4a45c310-6264-44e5-835f-030f6f1af825, Set Hatch Spear to STOW, Sun Feb 17 18:46:16 PST 2019
+4a45c310-6264-44e5-835f-030f6f1af825, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 18:46:16 PST 2019
+4a45c310-6264-44e5-835f-030f6f1af825, Disabled Init, Sun Feb 17 18:46:25 PST 2019
+4a45c310-6264-44e5-835f-030f6f1af825, Set Hatch Spear to STOW, Sun Feb 17 18:46:25 PST 2019
+7a63deee-9180-4a1f-86f6-d15722e9ff00, SigNotUpdated, Sun Feb 17 18:47:09 PST 2019
+7a63deee-9180-4a1f-86f6-d15722e9ff00, Robot Startup, Sun Feb 17 18:47:14 PST 2019
+7a63deee-9180-4a1f-86f6-d15722e9ff00, Robot Init, Sun Feb 17 18:47:14 PST 2019
+7a63deee-9180-4a1f-86f6-d15722e9ff00, Disabled Init, Sun Feb 17 18:47:14 PST 2019
+7a63deee-9180-4a1f-86f6-d15722e9ff00, Set Hatch Spear to STOW, Sun Feb 17 18:47:15 PST 2019
+7a63deee-9180-4a1f-86f6-d15722e9ff00, SET HEADING: 0.0, Sun Feb 17 18:47:15 PST 2019
+7a63deee-9180-4a1f-86f6-d15722e9ff00, Gyro offset: 178.1600036621094, Sun Feb 17 18:47:15 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, Robot Startup, Sun Feb 17 18:51:01 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, Robot Init, Sun Feb 17 18:51:02 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, Disabled Init, Sun Feb 17 18:51:02 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, Set Hatch Spear to STOW, Sun Feb 17 18:51:02 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, SET HEADING: 0.0, Sun Feb 17 18:51:02 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, Gyro offset: 179.19000244140628, Sun Feb 17 18:51:02 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, Auto Init, Sun Feb 17 18:51:02 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, SET HEADING: 0.0, Sun Feb 17 18:51:03 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, Gyro offset: 179.19000244140628, Sun Feb 17 18:51:03 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, SET HEADING: 0.0, Sun Feb 17 18:51:04 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, Gyro offset: 0.029998779296874997, Sun Feb 17 18:51:04 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:51:05 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, Starting trajectory! (length=1.1719405169767878), Sun Feb 17 18:51:05 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:51:05 PST 2019
+4fb07b73-8e3e-4d21-9aa9-bf4d5bfcc4e8, Disabled Init, Sun Feb 17 18:51:10 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, SigNotUpdated, Sun Feb 17 18:51:35 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, Robot Startup, Sun Feb 17 18:51:41 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, Robot Init, Sun Feb 17 18:51:41 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, Disabled Init, Sun Feb 17 18:51:41 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, Set Hatch Spear to STOW, Sun Feb 17 18:51:41 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, SET HEADING: 0.0, Sun Feb 17 18:51:41 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, Gyro offset: 179.4600067138672, Sun Feb 17 18:51:41 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, Auto Init, Sun Feb 17 18:51:42 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, SET HEADING: 0.0, Sun Feb 17 18:51:42 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, Gyro offset: 179.4600067138672, Sun Feb 17 18:51:42 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, SET HEADING: 0.0, Sun Feb 17 18:51:43 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, Gyro offset: 0.037994384765625, Sun Feb 17 18:51:43 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:51:44 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, Starting trajectory! (length=1.1468263824624654), Sun Feb 17 18:51:44 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:51:44 PST 2019
+88943e39-9114-4d1f-b67d-a7a78376b56f, Disabled Init, Sun Feb 17 18:51:51 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Robot Startup, Sun Feb 17 18:53:34 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Robot Init, Sun Feb 17 18:53:34 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Disabled Init, Sun Feb 17 18:53:34 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Set Hatch Spear to STOW, Sun Feb 17 18:53:34 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, SET HEADING: 0.0, Sun Feb 17 18:53:34 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Gyro offset: -0.05000000074505806, Sun Feb 17 18:53:34 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Auto Init, Sun Feb 17 18:53:51 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, SET HEADING: 0.0, Sun Feb 17 18:53:51 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Gyro offset: 0.029999999329447746, Sun Feb 17 18:53:51 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, SET HEADING: 0.0, Sun Feb 17 18:53:51 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Gyro offset: 0.0, Sun Feb 17 18:53:51 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:53:52 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Starting trajectory! (length=1.1468263824624654), Sun Feb 17 18:53:52 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:53:52 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, SET HEADING: 0.0, Sun Feb 17 18:53:53 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Gyro offset: 0.009999999776482582, Sun Feb 17 18:53:53 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Switching to open loop, Sun Feb 17 18:53:54 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Trajectory finished, Sun Feb 17 18:53:54 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Auto mode done, Sun Feb 17 18:53:54 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Disabled Init, Sun Feb 17 18:54:07 PST 2019
+3c47317b-f717-4eca-9cc9-0bd5ddbaab7b, Set Hatch Spear to STOW, Sun Feb 17 18:54:07 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Robot Startup, Sun Feb 17 18:54:36 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Robot Init, Sun Feb 17 18:54:36 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Disabled Init, Sun Feb 17 18:54:37 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Set Hatch Spear to STOW, Sun Feb 17 18:54:37 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, SET HEADING: 0.0, Sun Feb 17 18:54:37 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Gyro offset: 107.29000091552734, Sun Feb 17 18:54:37 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Auto Init, Sun Feb 17 18:54:51 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, SET HEADING: 0.0, Sun Feb 17 18:54:51 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Gyro offset: 107.52999877929689, Sun Feb 17 18:54:51 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, SET HEADING: 0.0, Sun Feb 17 18:54:52 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Gyro offset: -0.008001709356904032, Sun Feb 17 18:54:52 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:54:52 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Starting trajectory! (length=1.096096971726759), Sun Feb 17 18:54:52 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:54:52 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, SET HEADING: 0.0, Sun Feb 17 18:54:53 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Gyro offset: -0.008001709356904032, Sun Feb 17 18:54:53 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Switching to open loop, Sun Feb 17 18:54:54 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Trajectory finished, Sun Feb 17 18:54:54 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Auto mode done, Sun Feb 17 18:54:54 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Disabled Init, Sun Feb 17 18:55:05 PST 2019
+60a6d243-6655-476c-9cd5-3c78ab6f65ee, Set Hatch Spear to STOW, Sun Feb 17 18:55:05 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Robot Startup, Sun Feb 17 18:55:34 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Robot Init, Sun Feb 17 18:55:34 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Disabled Init, Sun Feb 17 18:55:35 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Set Hatch Spear to STOW, Sun Feb 17 18:55:35 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, SET HEADING: 0.0, Sun Feb 17 18:55:35 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Gyro offset: 107.4000015258789, Sun Feb 17 18:55:35 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Auto Init, Sun Feb 17 18:55:35 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, SET HEADING: 0.0, Sun Feb 17 18:55:35 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Gyro offset: 107.41000366210938, Sun Feb 17 18:55:35 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, SET HEADING: 0.0, Sun Feb 17 18:55:36 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Gyro offset: 0.0, Sun Feb 17 18:55:36 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:55:37 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Starting trajectory! (length=1.0986988450978499), Sun Feb 17 18:55:37 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:55:37 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, SET HEADING: 0.0, Sun Feb 17 18:55:37 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Gyro offset: 0.01999664306640625, Sun Feb 17 18:55:37 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Switching to open loop, Sun Feb 17 18:55:39 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Trajectory finished, Sun Feb 17 18:55:39 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Auto mode done, Sun Feb 17 18:55:39 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Disabled Init, Sun Feb 17 18:55:41 PST 2019
+6c9e8ae0-150b-4910-9795-dfae54278d4e, Set Hatch Spear to STOW, Sun Feb 17 18:55:41 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, Robot Startup, Sun Feb 17 18:56:30 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, Robot Init, Sun Feb 17 18:56:31 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, Disabled Init, Sun Feb 17 18:56:31 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, SET HEADING: 0.0, Sun Feb 17 18:56:31 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, Gyro offset: 103.0800018310547, Sun Feb 17 18:56:31 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, Set Hatch Spear to STOW, Sun Feb 17 18:56:31 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, Auto Init, Sun Feb 17 18:56:31 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, SET HEADING: 0.0, Sun Feb 17 18:56:31 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, Gyro offset: 103.08999633789062, Sun Feb 17 18:56:31 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, SET HEADING: 0.0, Sun Feb 17 18:56:33 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, Gyro offset: 0.010002136230468752, Sun Feb 17 18:56:33 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:56:33 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, Starting trajectory! (length=1.1468263824624654), Sun Feb 17 18:56:33 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:56:33 PST 2019
+879d9b36-a079-441b-a952-c8bfd2dbb9e7, Disabled Init, Sun Feb 17 18:56:46 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Robot Startup, Sun Feb 17 18:57:02 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Robot Init, Sun Feb 17 18:57:02 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Disabled Init, Sun Feb 17 18:57:02 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Set Hatch Spear to STOW, Sun Feb 17 18:57:02 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, SET HEADING: 0.0, Sun Feb 17 18:57:03 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Gyro offset: 103.27999877929688, Sun Feb 17 18:57:03 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Auto Init, Sun Feb 17 18:57:07 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, SET HEADING: 0.0, Sun Feb 17 18:57:07 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Gyro offset: 103.29000091552734, Sun Feb 17 18:57:07 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, SET HEADING: 0.0, Sun Feb 17 18:57:07 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Gyro offset: 0.0, Sun Feb 17 18:57:07 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 18:57:09 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Starting trajectory! (length=1.1468263824624654), Sun Feb 17 18:57:09 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 18:57:09 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, SET HEADING: 0.0, Sun Feb 17 18:57:09 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Gyro offset: 0.010002136230468752, Sun Feb 17 18:57:09 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Switching to open loop, Sun Feb 17 18:57:10 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Trajectory finished, Sun Feb 17 18:57:10 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Auto mode done, Sun Feb 17 18:57:10 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Disabled Init, Sun Feb 17 18:57:21 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Set Hatch Spear to STOW, Sun Feb 17 18:57:21 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Teleop Init, Sun Feb 17 18:57:22 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Set Hatch Spear to STOW, Sun Feb 17 18:57:22 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 18:57:22 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Disabled Init, Sun Feb 17 18:57:24 PST 2019
+9bde7a52-03ae-4680-8c83-a25af11be3b1, Set Hatch Spear to STOW, Sun Feb 17 18:57:24 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Robot Startup, Sun Feb 17 18:57:37 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Robot Init, Sun Feb 17 18:57:37 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Disabled Init, Sun Feb 17 18:57:38 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Set Hatch Spear to STOW, Sun Feb 17 18:57:38 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, SET HEADING: 0.0, Sun Feb 17 18:57:38 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Gyro offset: -153.97000122070312, Sun Feb 17 18:57:38 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Teleop Init, Sun Feb 17 18:57:40 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Set Hatch Spear to STOW, Sun Feb 17 18:57:41 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 18:57:41 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Disabled Init, Sun Feb 17 18:58:54 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Set Hatch Spear to STOW, Sun Feb 17 18:58:54 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Teleop Init, Sun Feb 17 18:59:40 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Set Hatch Spear to STOW, Sun Feb 17 18:59:40 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 18:59:40 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Disabled Init, Sun Feb 17 18:59:56 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Set Hatch Spear to STOW, Sun Feb 17 18:59:56 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Teleop Init, Sun Feb 17 19:00:12 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Set Hatch Spear to STOW, Sun Feb 17 19:00:12 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 19:00:12 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Disabled Init, Sun Feb 17 19:00:39 PST 2019
+efaec4e4-687c-4c13-a895-4883e5081a11, Set Hatch Spear to STOW, Sun Feb 17 19:00:39 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, Robot Startup, Sun Feb 17 19:03:18 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, Robot Init, Sun Feb 17 19:03:18 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, Disabled Init, Sun Feb 17 19:03:18 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, Set Hatch Spear to STOW, Sun Feb 17 19:03:18 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, SET HEADING: 0.0, Sun Feb 17 19:03:18 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, Gyro offset: 176.11000061035156, Sun Feb 17 19:03:18 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, Auto Init, Sun Feb 17 19:03:20 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, SET HEADING: 0.0, Sun Feb 17 19:03:20 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, Gyro offset: 176.1199951171875, Sun Feb 17 19:03:20 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, SET HEADING: 0.0, Sun Feb 17 19:03:22 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, Gyro offset: -0.0099945068359375, Sun Feb 17 19:03:22 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 19:03:22 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, Starting trajectory! (length=1.1468263824624654), Sun Feb 17 19:03:22 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 19:03:22 PST 2019
+39313273-9238-42fc-9c5a-2949a018ab42, Disabled Init, Sun Feb 17 19:03:24 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Robot Startup, Sun Feb 17 19:03:41 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Robot Init, Sun Feb 17 19:03:42 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Disabled Init, Sun Feb 17 19:03:42 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Set Hatch Spear to STOW, Sun Feb 17 19:03:42 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, SET HEADING: 0.0, Sun Feb 17 19:03:42 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Gyro offset: 175.94000244140625, Sun Feb 17 19:03:42 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Auto Init, Sun Feb 17 19:03:42 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, SET HEADING: 0.0, Sun Feb 17 19:03:42 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Gyro offset: 175.92999267578125, Sun Feb 17 19:03:42 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, SET HEADING: 0.0, Sun Feb 17 19:03:43 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Gyro offset: 0.0, Sun Feb 17 19:03:43 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Alliance: Red Match Number: 0 Match Type: None, Sun Feb 17 19:03:44 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Starting trajectory! (length=1.1468263824624654), Sun Feb 17 19:03:44 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Switching to Robot State:PATH_FOLLOWING, Sun Feb 17 19:03:44 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, SET HEADING: 0.0, Sun Feb 17 19:03:44 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Gyro offset: 0.0, Sun Feb 17 19:03:44 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Switching to open loop, Sun Feb 17 19:03:46 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Trajectory finished, Sun Feb 17 19:03:46 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Auto mode done, Sun Feb 17 19:03:46 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Disabled Init, Sun Feb 17 19:04:09 PST 2019
+1581927b-9d40-455c-a60f-13587f4aa623, Set Hatch Spear to STOW, Sun Feb 17 19:04:09 PST 2019
+ebf86949-5bcc-4382-b332-8aa49a11f040, Robot Startup, Sun Feb 17 19:04:34 PST 2019
+ebf86949-5bcc-4382-b332-8aa49a11f040, Robot Init, Sun Feb 17 19:04:34 PST 2019
+ebf86949-5bcc-4382-b332-8aa49a11f040, Disabled Init, Sun Feb 17 19:04:34 PST 2019
+ebf86949-5bcc-4382-b332-8aa49a11f040, Set Hatch Spear to STOW, Sun Feb 17 19:04:34 PST 2019
+ebf86949-5bcc-4382-b332-8aa49a11f040, SET HEADING: 0.0, Sun Feb 17 19:04:34 PST 2019
+ebf86949-5bcc-4382-b332-8aa49a11f040, Gyro offset: 158.0399932861328, Sun Feb 17 19:04:35 PST 2019
+ebf86949-5bcc-4382-b332-8aa49a11f040, Teleop Init, Sun Feb 17 19:04:35 PST 2019
+ebf86949-5bcc-4382-b332-8aa49a11f040, Set Hatch Spear to STOW, Sun Feb 17 19:04:36 PST 2019
+ebf86949-5bcc-4382-b332-8aa49a11f040, Switching to Robot State:TELEOP_DRIVE, Sun Feb 17 19:04:36 PST 2019
+ebf86949-5bcc-4382-b332-8aa49a11f040, Disabled Init, Sun Feb 17 19:04:45 PST 2019
+ebf86949-5bcc-4382-b332-8aa49a11f040, Set Hatch Spear to STOW, Sun Feb 17 19:04:45 PST 2019

@@ -23,8 +23,8 @@ public class Logger {
 	}
 
 	public static synchronized void logMarker(String mark) {
-		//logMarker(mark, null);
-		//System.out.println(mark);
+		logMarker(mark, null);
+		System.out.println(mark);
 	}
 
 	public static void logRobotInit() {
@@ -49,13 +49,13 @@ public class Logger {
 	}
 
 	public static synchronized void logError(String mark) {
-	//	logMarker(mark, null);
-		//DriverStation.reportError(mark, false);
+		logMarker(mark, null);
+		DriverStation.reportError(mark, false);
 	}
 
 	public static synchronized void logErrorWithTrace(String mark) {
-		//logMarker(mark, null);
-		//DriverStation.reportError(mark, true);
+		logMarker(mark, null);
+		DriverStation.reportError(mark, true);
 	}
 
 	public static synchronized void logThrowableCrash(Throwable throwable) {
