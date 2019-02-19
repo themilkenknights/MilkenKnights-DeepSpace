@@ -1,19 +1,12 @@
 package frc.robot.subsystems;
 
 import edu.wpi.cscore.HttpCamera;
-import edu.wpi.cscore.MjpegServer;
-import edu.wpi.cscore.UsbCamera;
-import edu.wpi.cscore.VideoMode;
-import edu.wpi.cscore.VideoSource;
-import edu.wpi.cscore.VideoSource.Kind;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.BuiltInWidgets;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
-import edu.wpi.first.wpilibj.shuffleboard.WidgetType;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.Constants;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.vision.LimeLight;
 import frc.robot.lib.vision.LimeLightControlMode.CamMode;
@@ -39,7 +32,7 @@ public class Vision extends Subsystem {
 		//mVisionTab.add(camera).withWidget(BuiltInWidgets.kCameraStream).withSize(2,2);
 		HttpCamera httpCamera = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
 		CameraServer.getInstance().addCamera(httpCamera);
-		mVisionTab.add(httpCamera).withWidget(BuiltInWidgets.kCameraStream).withSize(2,2);
+		mVisionTab.add(httpCamera).withWidget(BuiltInWidgets.kCameraStream).withSize(2, 2);
 		//TODO Fix Shuffleboard Stream Config
 		mLimeLight = new LimeLight();
 		mLimeLight.setLEDMode(LedMode.kforceOn);
@@ -71,11 +64,6 @@ public class Vision extends Subsystem {
 
 	public void autonomousInit(double timestamp) {
 		mLimeLight.setLEDMode(LedMode.kforceOn);
-	}
-
-	@Override
-	public void onMainLoop(double timestamp) {
-
 	}
 
 	@Override

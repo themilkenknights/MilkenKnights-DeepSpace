@@ -19,7 +19,6 @@ import frc.robot.auto.modes.SimpleHatchVision;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
-import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.HatchArm.HatchMechanismState;
 
 public class Superstructure extends Subsystem {
@@ -84,7 +83,7 @@ public class Superstructure extends Subsystem {
 	}
 
 	@Override
-	public void onMainLoop(double timestamp) {
+	public void onQuickLoop(double timestamp) {
 		switch (mRobotState) {
 			case PATH_FOLLOWING:
 				break;

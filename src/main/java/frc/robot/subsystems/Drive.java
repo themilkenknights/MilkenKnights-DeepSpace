@@ -380,7 +380,6 @@ public class Drive extends Subsystem {
 	/**
 	 * TODO Verify that GetFusedHeading works in place of getAngle
 	 * GetAngle goes past 360 while get fused heading wraps around to zero
-	 * @return
 	 */
 	public double getNavXHeading() {
 		return -navX.getAngle();

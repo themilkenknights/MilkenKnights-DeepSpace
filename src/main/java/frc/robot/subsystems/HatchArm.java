@@ -154,7 +154,7 @@ public class HatchArm extends Subsystem {
 	 * @param timestamp Time in seconds since code start
 	 */
 	@Override
-	public synchronized void slowUpdate(double timestamp) {
+	public synchronized void onQuickLoop(double timestamp) {
 		mHatchLimitTriggered = mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
 		switch (mHatchMechanismState) {
 			case STOWED:

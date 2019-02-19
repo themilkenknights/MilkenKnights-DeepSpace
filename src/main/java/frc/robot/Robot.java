@@ -8,14 +8,12 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
-import frc.robot.auto.modes.CharacterizeHighGearStraight;
 import frc.robot.auto.modes.TestPathMode;
 import frc.robot.lib.util.Logger;
 import frc.robot.paths.TrajectoryGenerator;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
-import frc.robot.subsystems.HatchArm.HatchSpearState;
 import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Vision;
 import java.util.Arrays;
@@ -27,7 +25,7 @@ public class Robot extends TimedRobot {
 			Arrays.asList(Drive.getInstance(), HatchArm.getInstance(), CargoArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
 
 	public Robot() {
-		super(Constants.GENERAL.kLoopDt);
+		super(Constants.GENERAL.kMainLoopDt);
 		Logger.logRobotConstruction();
 	}
 
@@ -99,7 +97,6 @@ public class Robot extends TimedRobot {
 	public void autonomousPeriodic() {
 		try {
 			mSubsystemManager.mainLoop();
-			//Input.updateControlInput();
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;
@@ -111,7 +108,6 @@ public class Robot extends TimedRobot {
 	public void teleopPeriodic() {
 		try {
 			mSubsystemManager.mainLoop();
-			Input.updateControlInput();
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;

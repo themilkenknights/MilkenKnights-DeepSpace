@@ -109,7 +109,7 @@ public class CargoArm extends Subsystem {
 		}
 	}
 
-	public synchronized void slowUpdate(double timestamp) {
+	public synchronized void onQuickLoop(double timestamp) {
 		if (mCargoArmControlState == CargoArmControlState.OPEN_LOOP) {
 			mArmTalon.set(ControlMode.PercentOutput, mOpenLoopSetpoint, NeutralMode.Brake);
 		} else if (mCargoArmControlState == CargoArmControlState.MOTION_MAGIC) {
