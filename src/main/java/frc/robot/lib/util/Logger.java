@@ -22,11 +22,6 @@ public class Logger {
 		logMarker("Robot Startup");
 	}
 
-	public static synchronized void logMarker(String mark) {
-		logMarker(mark, null);
-		System.out.println(mark);
-	}
-
 	public static void logRobotInit() {
 		String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 		boolean test = new File("/media/sda1/" + dateStamp1 + "/").mkdirs();
@@ -51,6 +46,11 @@ public class Logger {
 	public static synchronized void logError(String mark) {
 		logMarker(mark, null);
 		DriverStation.reportError(mark, false);
+	}
+
+	public static synchronized void logMarker(String mark) {
+		logMarker(mark, null);
+		System.out.println(mark);
 	}
 
 	public static synchronized void logErrorWithTrace(String mark) {

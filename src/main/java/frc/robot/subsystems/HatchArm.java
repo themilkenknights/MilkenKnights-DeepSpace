@@ -103,10 +103,11 @@ public class HatchArm extends Subsystem {
 			}
 		}
 
+		/* TODO Fix
 		if (mArmTalon.getCurrent() > HATCH_ARM.kMaxSafeCurrent) {
 			Logger.logErrorWithTrace("Unsafe Current on Hatch" + mArmTalon.getCurrent() + " Amps");
 			enableSafety(true);
-		}
+		}*/
 	}
 
 	private void setEnable() {

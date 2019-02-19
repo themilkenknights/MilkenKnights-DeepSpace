@@ -4,6 +4,7 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.Solenoid;
+import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.AutoChooser;
@@ -47,6 +48,7 @@ public class Superstructure extends Subsystem {
 		mRearClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kRearClimbSolenoidChannel);
 
 		mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
+		LiveWindow.disableTelemetry(mPDP);
 		mCompressor = new Compressor(CAN.kPneumaticsControlModuleID);
 	}
 
@@ -118,7 +120,6 @@ public class Superstructure extends Subsystem {
 				AutoChooser.disableAuto();
 				mDrive.setOpenLoop(DriveSignal.BRAKE);
 				mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
-				mCargo.setArmState(CargoArmState.REVERSE_CARGOSHIP);
 				break;
 			case VISION_INTAKE_STATION:
 			case VISION_PLACING:

@@ -15,6 +15,7 @@ import frc.robot.paths.TrajectoryGenerator;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
+import frc.robot.subsystems.HatchArm.HatchSpearState;
 import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Vision;
 import java.util.Arrays;

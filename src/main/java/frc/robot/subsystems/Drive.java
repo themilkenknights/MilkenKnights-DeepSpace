@@ -43,17 +43,17 @@ public class Drive extends Subsystem {
 
 	private Drive() {
 		mDriveTab = Shuffleboard.getTab("Drive");
-		mState = mDriveTab.add("Drive State", "").getEntry();
-		mStatus = mDriveTab.add("Drive Status", false).getEntry();
-		mFusedHeading = mDriveTab.add("NavX Fused Heading", 0.0).getEntry();
+		mState = mDriveTab.add("State", "").getEntry();
+		mStatus = mDriveTab.add("Status", false).getEntry();
+		mFusedHeading = mDriveTab.add("Fused Heading", 0.0).getEntry();
 		mXErr = mDriveTab.add("x err", 0.0).getEntry();
 		mYErr = mDriveTab.add("y err", 0.0).getEntry();
 		mThetaErr = mDriveTab.add("theta err", 0.0).getEntry();
 		mGyroHeading = mDriveTab.add("Gyro Heading", 0.0).getEntry();
 		mDriveControlState = DriveControlState.OPEN_LOOP;
 		mPeriodicIO = new PeriodicIO();
-		mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left_Dr, mDriveTab);
-		mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right_Dr, mDriveTab);
+		mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left, mDriveTab);
+		mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right, mDriveTab);
 		navX = new MkGyro(Port.kMXP);
 		mMotionPlanner = new DriveMotionPlanner();
 	}
@@ -68,11 +68,11 @@ public class Drive extends Subsystem {
 	@Override
 	public synchronized void readPeriodicInputs(double timestamp) {
 		mPeriodicIO.timestamp = Timer.getFPGATimestamp();
+		mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(-navX.getAngle()).rotateBy(mGyroOffset);
 		mPeriodicIO.leftPos = mLeftDrive.getPosition();
 		mPeriodicIO.rightPos = mRightDrive.getPosition();
 		mPeriodicIO.leftVel = mLeftDrive.getSpeed();
 		mPeriodicIO.rightVel = mRightDrive.getSpeed();
-		mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(-navX.getAngle()).rotateBy(mGyroOffset);
 	}
 
 	/**
@@ -321,6 +321,7 @@ public class Drive extends Subsystem {
 
 	public boolean checkSystem() {
 		boolean driveCheck = mLeftDrive.checkSystem() & mRightDrive.checkSystem();
+		driveCheck &= mRightDrive.checkDriveDeltas();
 		if (driveCheck) {
 			Logger.logMarker("Drive Test Success");
 		}
@@ -372,8 +373,17 @@ public class Drive extends Subsystem {
 	 *
 	 * @return current fused heading from navX
 	 */
-	public double getFusedHeading() {
+	public double getHeadingDeg() {
 		return mPeriodicIO.gyro_heading.getDegrees();
+	}
+
+	/**
+	 * TODO Verify that GetFusedHeading works in place of getAngle
+	 * GetAngle goes past 360 while get fused heading wraps around to zero
+	 * @return
+	 */
+	public double getNavXHeading() {
+		return -navX.getAngle();
 	}
 
 	public double getYaw() {

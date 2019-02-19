@@ -28,7 +28,7 @@ public class TurnInPlace implements Action {
 
 	@Override
 	public void start() {
-		double mGoalTurnAngle = MkMath.normalAbsoluteAngleDegrees(Drive.getInstance().getFusedHeading() + angleDelta);
+		double mGoalTurnAngle = MkMath.normalAbsoluteAngleDegrees(Drive.getInstance().getHeadingDeg() + angleDelta);
 		Drive.getInstance().setTurnInPlaceHeading(mGoalTurnAngle);
 	}
 }

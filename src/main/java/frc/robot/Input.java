@@ -88,7 +88,7 @@ public class Input {
 			double turn = (-driverJoystick.getRawAxis(0));
 			LimelightTarget target = mVision.getAverageTarget();
 			double mSteer = target.getArea() > 1000 && target.isValidTarget() && mVisionAssist ? DRIVE.kVisionDriverTurnP * target.getXOffset() : 0.0;
-			DriveSignal controlSig = DriveHelper.cheesyDrive(forward, -turn, true);
+			DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
 			mDrive.setOpenLoop(controlSig);
 		}
 
@@ -107,8 +107,6 @@ public class Input {
 				mCargo.setArmState(CargoArmState.INTAKE);
 			} else if (operatorJoystick.getPOV() == 180) {
 				mCargo.setArmState(CargoArmState.REVERSE_CARGOSHIP);
-			} else if (mCargoRocketLevelTwo.isPressed()) {
-				mCargo.setArmState(CargoArmState.REVERSE_ROCKET_LEVEL_TWO);
 			} else if (mCargoRocketLevelTwo.isPressed()) {
 				mCargo.setArmState(CargoArmState.REVERSE_ROCKET_LEVEL_TWO);
 			} else if (operatorJoystick.getPOV() == 90) {

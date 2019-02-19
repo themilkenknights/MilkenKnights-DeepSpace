@@ -1,5 +1,7 @@
 package frc.robot.auto;
 
+import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.lib.util.CrashTrackingRunnable;
 
 /**
@@ -27,13 +29,25 @@ public class AutoModeExecutor {
 		return m_auto_mode;
 	}
 
+	private double timestamp_ = 0;
+	private double dt_ = 0;
+	private int i = 0;
+
 	public void setAutoMode(AutoModeBase new_auto_mode) {
 		m_auto_mode = new_auto_mode;
 		m_thread = new Thread(new CrashTrackingRunnable() {
 			@Override
 			public void runCrashTracked() {
 				if (m_auto_mode != null) {
+					double now = Timer.getFPGATimestamp();
 					m_auto_mode.run();
+					dt_ = now - timestamp_;
+					timestamp_ = now;
+					if (i == 10) {
+						SmartDashboard.putNumber("Auto Mode Dt", dt_);
+						i = 0;
+					}
+					i++;
 				}
 			}
 		});

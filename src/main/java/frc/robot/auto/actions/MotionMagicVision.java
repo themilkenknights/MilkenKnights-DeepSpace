@@ -37,9 +37,9 @@ public class MotionMagicVision implements Action {
 		double mDist = target.getDistance();
 		if (mDist > 20.0 && target.isValidTarget()) {
 			double vel = (mLastVisionState.getTarget().getXOffset() - target.getXOffset()) / (Timer.getFPGATimestamp() - lastTime);
-			double mSteer = DRIVE.kVisionTurnP * -(Drive.getInstance().getYaw() - (targetYaw + initYaw)) + vel * DRIVE.kVisionTurnP * 8;
+			double mSteer = 0.03 * ((targetYaw)) + vel * DRIVE.kVisionTurnP * 8 * 0.0;
 			DriveSignal mSig = Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
-			mLastVisionState = new VisionState(mSig, target, Drive.getInstance().getFusedHeading());
+			mLastVisionState = new VisionState(mSig, target, Drive.getInstance().getHeadingDeg());
 		} else {
 			double mSteer = DRIVE.kVisionTurnP * 0 * (mLastVisionState.getTarget().getXOffset() - /*Math.abs(mLastVisionState.getYaw() - Drive.getInstance().getYaw())*/ 0);
 			Drive.getInstance().updateMotionMagicPositionSetpoint(mLastVisionState.getDriveSignal(), new DriveSignal(mSteer, -mSteer));

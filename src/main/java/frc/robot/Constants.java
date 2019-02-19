@@ -37,9 +37,9 @@ public final class Constants {
 		public static final double kMotorSafetyTimer = 0.05;
 		public static final double kLoopDt = 0.02;
 		public static final double kLooperDt = 0.02;
-		public static final double kSlowLooperDt = 0.02;
-		public static final double kLimelightLoopPeriod = 0.02;
-		public static final double kPixyLoopPeriod = 0.02;
+		public static final double kSlowLooperDt = 0.025;
+		public static final double kLimelightLoopPeriod = 0.01;
+		public static final double kPixyLoopPeriod = 0.01;
 		public static final double kTelemetryDt = 0.05;
 	}
 
@@ -146,9 +146,8 @@ public final class Constants {
 
 	public static class TEST {
 
-		public static final double kMinDriveTestPos = 200;
-		public static final double kMinDriveTestVel = 140;
-		public static final double kMinDriveTestCurrent = 5;
+		public static final double kMinDriveTestPos = 180;
+		public static final double kMinDriveTestVel = 60;
 		public static final double kDriveCurrentEpsilon = 2.0;
 		public static final double kDriveVelEpsilon = 2.0;
 		public static final double kDrivePosEpsilon = 2.0;
@@ -193,6 +192,7 @@ public final class Constants {
 
 		public static final double kArmOffset = -48.4;
 		public static final double kFeedConstant = 0.20;
+
 
 		public static final int kBookEnd_0 = kIsPracticeBot ? 4192 : -2078;
 		public static final int kBookEnd_1 = kIsPracticeBot ? 1993 : 3790;
@@ -243,7 +243,7 @@ public final class Constants {
 
 	public static class LOG {
 
-		public static final boolean kDriveCSVLogging = true;
+		public static final boolean kDriveCSVLogging = false;
 	}
 
 

@@ -1,7 +1,11 @@
 package frc.robot;
 
+import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.shuffleboard.BuiltInWidgets;
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants.GENERAL;
 import frc.robot.lib.structure.Subsystem;
@@ -9,6 +13,7 @@ import frc.robot.lib.util.CrashTrackingRunnable;
 import frc.robot.paths.RobotState;
 import frc.robot.subsystems.Vision;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Used to reset, start, stop, and update all subsystems at once
@@ -24,11 +29,9 @@ public class SubsystemManager {
 	private final double kPeriod = GENERAL.kLooperDt;
 	private final double kSlowPeriod = GENERAL.kSlowLooperDt;
 	private final double kTelemetryPeriod = GENERAL.kTelemetryDt;
-	private double main_timestamp = 0;
-	private double timestamp_ = 0;
-	private double dt_ = 0;
-	private double main_loop_dt_ = 0;
 	private boolean running_;
+	private ShuffleboardTab mLoopsTab;
+	private NetworkTableEntry mMain, mFast, mSlow, mTelemetry, mLL;
 
 	private final CrashTrackingRunnable pixyRunnable_ = new CrashTrackingRunnable() {
 		@Override
@@ -36,12 +39,20 @@ public class SubsystemManager {
 			//MkPixy.pixyUpdate();
 		}
 	};
+	private double lltimestamp_ = 0;
+	private double lldt_ = 0;
 	private final CrashTrackingRunnable limelightRunnable_ = new CrashTrackingRunnable() {
 		@Override
 		public void runCrashTracked() {
+			double now = Timer.getFPGATimestamp();
 			Vision.mLimeLight.threadUpdate();
+			lldt_ = now - lltimestamp_;
+			lltimestamp_ = now;
 		}
 	};
+
+	private double slowtimestamp_ = 0;
+	private double slowdt_ = 0;
 	private final CrashTrackingRunnable slowRunnable_ = new CrashTrackingRunnable() {
 		private boolean change = true;
 
@@ -51,15 +62,19 @@ public class SubsystemManager {
 				double now = Timer.getFPGATimestamp();
 				for (Subsystem subsystem : mAllSubsystems) {
 					if (change) {
-						subsystem.safetyCheck(now);
+						//subsystem.safetyCheck(now);
 					}
 					change = !change;
 					subsystem.slowUpdate(now);
 				}
+				slowdt_ = now - slowtimestamp_;
+				slowtimestamp_ = now;
 			}
 		}
 	};
 
+	private double timestamp_ = 0;
+	private double dt_ = 0;
 	private final CrashTrackingRunnable runnable_ = new CrashTrackingRunnable() {
 		@Override
 		public void runCrashTracked() {
@@ -75,17 +90,23 @@ public class SubsystemManager {
 			}
 		}
 	};
-
+	private double telemetrytimestamp_ = 0;
+	private double telemetrydt_ = 0;
 	private final CrashTrackingRunnable telemetryRunnable_ = new CrashTrackingRunnable() {
 		@Override
 		public void runCrashTracked() {
 			double now = Timer.getFPGATimestamp();
 			for (Subsystem subsystem : mAllSubsystems) {
 				subsystem.outputTelemetry(now);
-				RobotState.getInstance().outputToSmartDashboard();
-				SmartDashboard.putNumber("Main loop Dt", main_loop_dt_ * 1e3);
-				SmartDashboard.putNumber("looper_dt", dt_ * 1e3);
 			}
+			RobotState.getInstance().outputToSmartDashboard();
+			mMain.setDouble(main_loop_dt_ * 1e3);
+			mFast.setDouble(dt_ * 1e3);
+			mSlow.setDouble(slowdt_ * 1e3);
+			mTelemetry.setDouble(telemetrydt_ * 1e3);
+			mLL.setDouble(lldt_ * 1e3);
+			telemetrydt_ = now - telemetrytimestamp_;
+			telemetrytimestamp_ = now;
 		}
 	};
 
@@ -98,8 +119,17 @@ public class SubsystemManager {
 		slow_notifier_ = new Notifier(slowRunnable_);
 		telemetry_notifier_ = new Notifier(telemetryRunnable_);
 		running_ = false;
+
+		mLoopsTab = Shuffleboard.getTab("Loops");
+		mMain = mLoopsTab.add("Main", 0.0)/*.withWidget(BuiltInWidgets.kGraph).withProperties(Map.of("Visible Time", 5))*/.getEntry();
+		mFast = mLoopsTab.add("Fast", 0.0)/*.withWidget(BuiltInWidgets.kGraph).withProperties(Map.of("Visible Time", 5))*/.getEntry();
+		mSlow = mLoopsTab.add("Slow", 0.0)/*.withWidget(BuiltInWidgets.kGraph).withProperties(Map.of("Visible Time", 5))*/.getEntry();
+		mTelemetry = mLoopsTab.add("Telemetry", 0.0)/*.withWidget(BuiltInWidgets.kGraph).withProperties(Map.of("Visible Time", 5))*/.getEntry();
+		mLL = mLoopsTab.add("Limelight", 0.0)/*.withWidget(BuiltInWidgets.kGraph).withProperties(Map.of("Visible Time", 5))*/.getEntry();
 	}
 
+	private double main_loop_dt_ = 0;
+	private double main_timestamp = 0;
 	public void mainLoop() {
 		double now = Timer.getFPGATimestamp();
 		for (Subsystem subsystem : mAllSubsystems) {
