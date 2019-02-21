@@ -7,18 +7,16 @@ import frc.robot.paths.TrajectoryGenerator;
 
 public class TestPathMode extends AutoModeBase {
 
-	private static final TrajectoryGenerator mTrajectoryGenerator = TrajectoryGenerator.getInstance();
-	private final boolean mStartedLeft;
-	private DriveTrajectory mSideStartToNearScale;
+    private static final TrajectoryGenerator mTrajectoryGenerator = TrajectoryGenerator.getInstance();
+    private final boolean mStartedLeft;
+    private DriveTrajectory mSideStartToNearScale;
 
-	public TestPathMode(boolean robotStartedOnLeft) {
-		mStartedLeft = robotStartedOnLeft;
-		mSideStartToNearScale = new DriveTrajectory(
-				mTrajectoryGenerator.getTrajectorySet().testPath.get(mStartedLeft), true, false);
-	}
+    public TestPathMode(boolean robotStartedOnLeft) {
+        mStartedLeft = robotStartedOnLeft;
+        mSideStartToNearScale = new DriveTrajectory(mTrajectoryGenerator.getTrajectorySet().testPath.get(mStartedLeft), true, false);
+    }
 
-	@Override
-	protected void routine() throws AutoModeEndedException {
-		runAction(mSideStartToNearScale);
-	}
+    @Override protected void routine() throws AutoModeEndedException {
+        runAction(mSideStartToNearScale);
+    }
 }

@@ -16,129 +16,118 @@ import java.util.List;
 
 public class TrajectoryGenerator {
 
-	// CRITICAL POSES
-	// Origin is the center of the robot when the robot is placed against the middle of the alliance station wall.
-	// +x is towards the center of the field.
-	// +y is to the left.
-	// ALL POSES DEFINED FOR THE CASE THAT ROBOT STARTS ON RIGHT! (mirrored about +x axis for LEFT)
-	public static final Pose2d kStartPose = new Pose2d(0.0, 0.0, Rotation2d.fromDegrees(0.0));
-	private static final double kMaxCentripetalAccel = 110.0;
-	private static final double kMaxVoltage = 12.0;
-	private static final double kMaxAccel = 100.0;
-	private static final double kMaxVel = 110.0;
-	private static TrajectoryGenerator mInstance = new TrajectoryGenerator();
-	private final DriveMotionPlanner mMotionPlanner;
-	private TrajectorySet mTrajectorySet = null;
-	private VisionTrajectorySet mVisionTrajectorySet = null;
+    // CRITICAL POSES
+    // Origin is the center of the robot when the robot is placed against the middle of the alliance station wall.
+    // +x is towards the center of the field.
+    // +y is to the left.
+    // ALL POSES DEFINED FOR THE CASE THAT ROBOT STARTS ON RIGHT! (mirrored about +x axis for LEFT)
+    public static final Pose2d kStartPose = new Pose2d(0.0, 0.0, Rotation2d.fromDegrees(0.0));
+    private static final double kMaxCentripetalAccel = 110.0;
+    private static final double kMaxVoltage = 12.0;
+    private static final double kMaxAccel = 100.0;
+    private static final double kMaxVel = 110.0;
+    private static TrajectoryGenerator mInstance = new TrajectoryGenerator();
+    private final DriveMotionPlanner mMotionPlanner;
+    private TrajectorySet mTrajectorySet = null;
+    private VisionTrajectorySet mVisionTrajectorySet = null;
 
-	private TrajectoryGenerator() {
-		mMotionPlanner = new DriveMotionPlanner();
-	}
+    private TrajectoryGenerator() {
+        mMotionPlanner = new DriveMotionPlanner();
+    }
 
-	public static TrajectoryGenerator getInstance() {
-		return mInstance;
-	}
+    public static TrajectoryGenerator getInstance() {
+        return mInstance;
+    }
 
-	public void generateTrajectories() {
-		if (mTrajectorySet == null) {
-			System.out.println("Generating trajectories...");
-			mTrajectorySet = new TrajectorySet();
-			System.out.println("Finished trajectory generation");
-		}
-	}
+    public void generateTrajectories() {
+        if (mTrajectorySet == null) {
+            System.out.println("Generating trajectories...");
+            mTrajectorySet = new TrajectorySet();
+            System.out.println("Finished trajectory generation");
+        }
+    }
 
-	public TrajectorySet getTrajectorySet() {
-		return mTrajectorySet;
-	}
+    public TrajectorySet getTrajectorySet() {
+        return mTrajectorySet;
+    }
 
-	public Trajectory<TimedState<Pose2dWithCurvature>> generateTrajectory(boolean reversed,
-			final List<Pose2d> waypoints,
-			final List<TimingConstraint<Pose2dWithCurvature>> constraints, double max_vel,
-			// inches/s
-			double max_accel,  // inches/s^2
-			double max_voltage) {
-		return mMotionPlanner
-				.generateTrajectory(reversed, waypoints, constraints, max_vel, max_accel, max_voltage);
-	}
+    public Trajectory<TimedState<Pose2dWithCurvature>> generateTrajectory(boolean reversed, final List<Pose2d> waypoints,
+        final List<TimingConstraint<Pose2dWithCurvature>> constraints, double max_vel,
+        // inches/s
+        double max_accel,  // inches/s^2
+        double max_voltage) {
+        return mMotionPlanner.generateTrajectory(reversed, waypoints, constraints, max_vel, max_accel, max_voltage);
+    }
 
-	public Trajectory<TimedState<Pose2dWithCurvature>> generateTrajectory(boolean reversed,
-			final List<Pose2d> waypoints,
-			final List<TimingConstraint<Pose2dWithCurvature>> constraints, double start_vel,  // inches/s
-			double end_vel,  // inches/s
-			double max_vel,  // inches/s
-			double max_accel,  // inches/s^2
-			double max_voltage) {
-		return mMotionPlanner
-				.generateTrajectory(reversed, waypoints, constraints, start_vel, end_vel, max_vel,
-						max_accel, max_voltage);
-	}
+    public Trajectory<TimedState<Pose2dWithCurvature>> generateTrajectory(boolean reversed, final List<Pose2d> waypoints,
+        final List<TimingConstraint<Pose2dWithCurvature>> constraints, double start_vel,  // inches/s
+        double end_vel,  // inches/s
+        double max_vel,  // inches/s
+        double max_accel,  // inches/s^2
+        double max_voltage) {
+        return mMotionPlanner.generateTrajectory(reversed, waypoints, constraints, start_vel, end_vel, max_vel, max_accel, max_voltage);
+    }
 
-	public void generateVisionTrajectories(Pose2d endPose) {
-		if (mVisionTrajectorySet == null) {
-			System.out.println("Generating trajectories...");
-			mVisionTrajectorySet = new VisionTrajectorySet(endPose);
-			System.out.println("Finished trajectory generation");
-		}
-	}
+    public void generateVisionTrajectories(Pose2d endPose) {
+        if (mVisionTrajectorySet == null) {
+            System.out.println("Generating trajectories...");
+            mVisionTrajectorySet = new VisionTrajectorySet(endPose);
+            System.out.println("Finished trajectory generation");
+        }
+    }
 
-	public VisionTrajectorySet getVisionTrajectorySet() {
-		return mVisionTrajectorySet;
-	}
+    public VisionTrajectorySet getVisionTrajectorySet() {
+        return mVisionTrajectorySet;
+    }
 
-	public class TrajectorySet {
+    public class TrajectorySet {
 
-		public final MirroredTrajectory testPath;
+        public final MirroredTrajectory testPath;
 
-		private TrajectorySet() {
-			testPath = new MirroredTrajectory(getTestPath());
-		}
+        private TrajectorySet() {
+            testPath = new MirroredTrajectory(getTestPath());
+        }
 
-		private Trajectory<TimedState<Pose2dWithCurvature>> getTestPath() {
-			List<Pose2d> waypoints = new ArrayList<>();
-			waypoints.add(kStartPose);
-			waypoints.add(kStartPose.transformBy(new Pose2d(new Translation2d(30.0, 0.0), Rotation2d.fromDegrees(10.0))));
-			return generateTrajectory(false, waypoints,
-					Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel,
-					kMaxAccel,
-					kMaxVoltage);
-		}
+        private Trajectory<TimedState<Pose2dWithCurvature>> getTestPath() {
+            List<Pose2d> waypoints = new ArrayList<>();
+            waypoints.add(kStartPose);
+            waypoints.add(kStartPose.transformBy(new Pose2d(new Translation2d(30.0, 0.0), Rotation2d.fromDegrees(10.0))));
+            return generateTrajectory(false, waypoints, Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel, kMaxAccel, kMaxVoltage);
+        }
 
-		public class MirroredTrajectory {
+        public class MirroredTrajectory {
 
-			public final Trajectory<TimedState<Pose2dWithCurvature>> left;
-			public final Trajectory<TimedState<Pose2dWithCurvature>> right;
+            public final Trajectory<TimedState<Pose2dWithCurvature>> left;
+            public final Trajectory<TimedState<Pose2dWithCurvature>> right;
 
-			public MirroredTrajectory(Trajectory<TimedState<Pose2dWithCurvature>> right) {
-				this.right = right;
-				this.left = TrajectoryUtil.mirrorTimed(right);
-			}
+            public MirroredTrajectory(Trajectory<TimedState<Pose2dWithCurvature>> right) {
+                this.right = right;
+                this.left = TrajectoryUtil.mirrorTimed(right);
+            }
 
-			public Trajectory<TimedState<Pose2dWithCurvature>> get(boolean left) {
-				return left ? this.left : this.right;
-			}
-		}
-	}
+            public Trajectory<TimedState<Pose2dWithCurvature>> get(boolean left) {
+                return left ? this.left : this.right;
+            }
+        }
+    }
 
 
-	public class VisionTrajectorySet {
+    public class VisionTrajectorySet {
 
-		public final Trajectory<TimedState<Pose2dWithCurvature>> visionTraj;
+        public final Trajectory<TimedState<Pose2dWithCurvature>> visionTraj;
 
-		private VisionTrajectorySet(Pose2d endPose) {
-			visionTraj = getTraj(endPose);
-		}
+        private VisionTrajectorySet(Pose2d endPose) {
+            visionTraj = getTraj(endPose);
+        }
 
-		private Trajectory<TimedState<Pose2dWithCurvature>> getTraj(Pose2d endPose) {
-			List<Pose2d> waypoints = new ArrayList<>();
-			Pose2d startPose = RobotState.getInstance().getPredictedFieldToVehicle(Timer.getFPGATimestamp() + 0.05);
-			waypoints.add(startPose);
-			waypoints.add(startPose.transformBy(endPose));
-			System.out.println("Start: " + startPose);
-			System.out.println("End: " + startPose.transformBy(endPose));
-			return generateTrajectory(true, waypoints,
-					Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel,
-					kMaxAccel,
-					kMaxVoltage);
-		}
-	}
+        private Trajectory<TimedState<Pose2dWithCurvature>> getTraj(Pose2d endPose) {
+            List<Pose2d> waypoints = new ArrayList<>();
+            Pose2d startPose = RobotState.getInstance().getPredictedFieldToVehicle(Timer.getFPGATimestamp() + 0.05);
+            waypoints.add(startPose);
+            waypoints.add(startPose.transformBy(endPose));
+            System.out.println("Start: " + startPose);
+            System.out.println("End: " + startPose.transformBy(endPose));
+            return generateTrajectory(true, waypoints, Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel, kMaxAccel, kMaxVoltage);
+        }
+    }
 }

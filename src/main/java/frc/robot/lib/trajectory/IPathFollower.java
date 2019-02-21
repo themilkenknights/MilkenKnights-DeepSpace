@@ -5,7 +5,7 @@ import frc.robot.lib.geometry.Twist2d;
 
 public interface IPathFollower {
 
-	Twist2d steer(Pose2d current_pose);
+    Twist2d steer(Pose2d current_pose);
 
-	boolean isDone();
+    boolean isDone();
 }

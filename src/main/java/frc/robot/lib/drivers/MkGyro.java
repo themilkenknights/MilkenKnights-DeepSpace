@@ -6,9 +6,9 @@ import frc.robot.Constants.DRIVE;
 
 public class MkGyro extends AHRS {
 
-	public MkGyro(SPI.Port spi_port_id) {
-		super(spi_port_id, DRIVE.kNavXUpdateRate);
-	}
+    public MkGyro(SPI.Port spi_port_id) {
+        super(spi_port_id, DRIVE.kNavXUpdateRate);
+    }
 
 /*	@Override
 	public double getFusedHeading() {

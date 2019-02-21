@@ -5,23 +5,23 @@ package frc.robot.lib.util;
  */
 public class MinTimeBoolean {
 
-	private LatchedBoolean mLatchedBoolean;
-	private double mMinTime;
-	private double mRisingEdgeTime;
+    private LatchedBoolean mLatchedBoolean;
+    private double mMinTime;
+    private double mRisingEdgeTime;
 
-	public MinTimeBoolean(double minTime) {
-		mLatchedBoolean = new LatchedBoolean();
-		mMinTime = minTime;
-		mRisingEdgeTime = Double.NaN;
-	}
+    public MinTimeBoolean(double minTime) {
+        mLatchedBoolean = new LatchedBoolean();
+        mMinTime = minTime;
+        mRisingEdgeTime = Double.NaN;
+    }
 
-	public boolean update(boolean value, double timestamp) {
-		if (mLatchedBoolean.update(value)) {
-			mRisingEdgeTime = timestamp;
-		}
-		if (!value && !Double.isNaN(mRisingEdgeTime) && (timestamp - mRisingEdgeTime < mMinTime)) {
-			return true;
-		}
-		return value;
-	}
+    public boolean update(boolean value, double timestamp) {
+        if (mLatchedBoolean.update(value)) {
+            mRisingEdgeTime = timestamp;
+        }
+        if (!value && !Double.isNaN(mRisingEdgeTime) && (timestamp - mRisingEdgeTime < mMinTime)) {
+            return true;
+        }
+        return value;
+    }
 }

@@ -11,35 +11,31 @@ import frc.robot.subsystems.Vision;
 
 public class MotionMagicPixy implements Action {
 
-	private MkTime expirationTimer;
+    private MkTime expirationTimer;
 
-	public MotionMagicPixy() {
-		expirationTimer = new MkTime();
-	}
+    public MotionMagicPixy() {
+        expirationTimer = new MkTime();
+    }
 
-	@Override
-	public boolean isFinished() {
-		return expirationTimer.isDone() || Vision.getInstance().getPixyTarget().isCargoIntaked();
-	}
+    @Override public boolean isFinished() {
+        return expirationTimer.isDone() || Vision.getInstance().getPixyTarget().isCargoIntaked();
+    }
 
-	@Override
-	public void update() {
-		double mDist = VISION.kPixyAreaToDistVisionMap.getInterpolated(new InterpolatingDouble((Vision.getInstance().getPixyTarget().getArea()))).value;
-		if (mDist > 5.0 && mDist < 60) {
-			double mSteer = DRIVE.kPixyKp * Vision.getInstance().getPixyTarget().getYaw();
-			Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
-		} else {
-			Drive.getInstance().setOpenLoop(new DriveSignal(-0.3, -0.3));
-		}
-	}
+    @Override public void update() {
+        double mDist = VISION.kPixyAreaToDistVisionMap.getInterpolated(new InterpolatingDouble((Vision.getInstance().getPixyTarget().getArea()))).value;
+        if (mDist > 5.0 && mDist < 60) {
+            double mSteer = DRIVE.kPixyKp * Vision.getInstance().getPixyTarget().getYaw();
+            Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
+        } else {
+            Drive.getInstance().setOpenLoop(new DriveSignal(-0.3, -0.3));
+        }
+    }
 
-	@Override
-	public void done() {
+    @Override public void done() {
 
-	}
+    }
 
-	@Override
-	public void start() {
-		expirationTimer.start(5.0);
-	}
+    @Override public void start() {
+        expirationTimer.start(5.0);
+    }
 }

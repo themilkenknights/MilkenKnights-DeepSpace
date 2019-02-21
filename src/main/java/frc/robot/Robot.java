@@ -20,95 +20,87 @@ import java.util.Arrays;
 
 public class Robot extends TimedRobot {
 
-	public static MatchState mMatchState = MatchState.DISABLED;
-	private final SubsystemManager mSubsystemManager = new SubsystemManager(
-			Arrays.asList(Drive.getInstance(), HatchArm.getInstance(), CargoArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
+    public static MatchState mMatchState = MatchState.DISABLED;
+    private final SubsystemManager mSubsystemManager =
+        new SubsystemManager(Arrays.asList(Drive.getInstance(), HatchArm.getInstance(), CargoArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
 
-	public Robot() {
-		super(Constants.GENERAL.kMainLoopDt);
-		Logger.logRobotConstruction();
-	}
+    public Robot() {
+        super(Constants.GENERAL.kMainLoopDt);
+        Logger.logRobotConstruction();
+    }
 
-	@Override
-	public void robotInit() {
-		try {
-			Logger.logRobotInit();
-			TrajectoryGenerator.getInstance().generateTrajectories();
-			Shuffleboard.startRecording();
-		} catch (Throwable t) {
-			Logger.logThrowableCrash(t);
-			throw t;
-		}
-	}
+    @Override public void robotInit() {
+        try {
+            Logger.logRobotInit();
+            TrajectoryGenerator.getInstance().generateTrajectories();
+            Shuffleboard.startRecording();
+        } catch (Throwable t) {
+            Logger.logThrowableCrash(t);
+            throw t;
+        }
+    }
 
-	@Override
-	public void disabledInit() {
-		try {
-			Logger.logDisabledInit();
-			mMatchState = MatchState.DISABLED;
-			AutoChooser.disableAuto();
-			mSubsystemManager.stop();
-		} catch (Throwable t) {
-			Logger.logThrowableCrash(t);
-			throw t;
-		}
-	}
+    @Override public void disabledInit() {
+        try {
+            Logger.logDisabledInit();
+            mMatchState = MatchState.DISABLED;
+            AutoChooser.disableAuto();
+            mSubsystemManager.stop();
+        } catch (Throwable t) {
+            Logger.logThrowableCrash(t);
+            throw t;
+        }
+    }
 
-	@Override
-	public void autonomousInit() {
-		try {
-			Logger.logAutoInit();
-			mMatchState = MatchState.AUTO;
-			mSubsystemManager.startAuto();
-			AutoChooser.startAuto(new TestPathMode(false));
-		} catch (Throwable t) {
-			Logger.logThrowableCrash(t);
-			throw t;
-		}
-	}
+    @Override public void autonomousInit() {
+        try {
+            Logger.logAutoInit();
+            mMatchState = MatchState.AUTO;
+            mSubsystemManager.startAuto();
+            AutoChooser.startAuto(new TestPathMode(false));
+        } catch (Throwable t) {
+            Logger.logThrowableCrash(t);
+            throw t;
+        }
+    }
 
-	@Override
-	public void teleopInit() {
-		try {
-			Logger.logTeleopInit();
-			mMatchState = MatchState.TELEOP;
-			mSubsystemManager.startTeleop();
-		} catch (Throwable t) {
-			Logger.logThrowableCrash(t);
-			throw t;
-		}
-	}
+    @Override public void teleopInit() {
+        try {
+            Logger.logTeleopInit();
+            mMatchState = MatchState.TELEOP;
+            mSubsystemManager.startTeleop();
+        } catch (Throwable t) {
+            Logger.logThrowableCrash(t);
+            throw t;
+        }
+    }
 
-	@Override
-	public void testInit() {
-		try {
-			mMatchState = MatchState.TEST;
-			mSubsystemManager.startAuto();
-			Logger.logMarker("Starting check systems.");
-			mSubsystemManager.checkSystem();
-			mSubsystemManager.stop();
-		} catch (Throwable t) {
-			Logger.logThrowableCrash(t);
-			throw t;
-		}
-	}
+    @Override public void testInit() {
+        try {
+            mMatchState = MatchState.TEST;
+            mSubsystemManager.startAuto();
+            Logger.logMarker("Starting check systems.");
+            mSubsystemManager.checkSystem();
+            mSubsystemManager.stop();
+        } catch (Throwable t) {
+            Logger.logThrowableCrash(t);
+            throw t;
+        }
+    }
 
-	@Override
-	public void autonomousPeriodic() {
-		mSubsystemManager.perioidicUpdate();
-	}
+    @Override public void autonomousPeriodic() {
+        mSubsystemManager.perioidicUpdate();
+    }
 
-	@Override
-	public void teleopPeriodic() {
-		mSubsystemManager.perioidicUpdate();
-	}
+    @Override public void teleopPeriodic() {
+        mSubsystemManager.perioidicUpdate();
+    }
 
-	@Override
-	public void testPeriodic() {
-		mSubsystemManager.perioidicUpdate();
-	}
+    @Override public void testPeriodic() {
+        mSubsystemManager.perioidicUpdate();
+    }
 
-	public enum MatchState {
-		AUTO, TELEOP, DISABLED, TEST
-	}
+    public enum MatchState {
+        AUTO, TELEOP, DISABLED, TEST
+    }
 }

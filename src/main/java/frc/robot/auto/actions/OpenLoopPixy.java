@@ -8,24 +8,20 @@ import frc.robot.subsystems.Vision;
 public class OpenLoopPixy implements Action {
 
 
-	@Override
-	public boolean isFinished() {
-		return Vision.getInstance().getPixyTarget().isCargoIntaked();
-	}
+    @Override public boolean isFinished() {
+        return Vision.getInstance().getPixyTarget().isCargoIntaked();
+    }
 
-	@Override
-	public void update() {
-		double turn = Vision.getInstance().getPixyTarget().getYaw() * Constants.DRIVE.kPixyKp;
-		Drive.getInstance().setOpenLoop(new DriveSignal(-0.3 + turn, -0.3 - turn));
-	}
+    @Override public void update() {
+        double turn = Vision.getInstance().getPixyTarget().getYaw() * Constants.DRIVE.kPixyKp;
+        Drive.getInstance().setOpenLoop(new DriveSignal(-0.3 + turn, -0.3 - turn));
+    }
 
-	@Override
-	public void done() {
+    @Override public void done() {
 
-	}
+    }
 
-	@Override
-	public void start() {
+    @Override public void start() {
 
-	}
+    }
 }

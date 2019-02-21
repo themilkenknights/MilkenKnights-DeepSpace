@@ -10,37 +10,37 @@ package frc.robot.lib.structure;
  */
 public abstract class Subsystem {
 
-	// Optional design pattern for caching periodic reads to avoid hammering the HAL/CAN.
-	public synchronized void readPeriodicInputs(double timestamp) {
-	}
+    // Optional design pattern for caching periodic reads to avoid hammering the HAL/CAN.
+    public synchronized void readPeriodicInputs(double timestamp) {
+    }
 
-	public synchronized void onQuickLoop(double timestamp) {
+    public synchronized void onQuickLoop(double timestamp) {
 
-	}
+    }
 
-	// Optional design pattern for caching periodic writes to avoid hammering the HAL/CAN.
-	public synchronized void writePeriodicOutputs(double timestamp) {
-	}
+    // Optional design pattern for caching periodic writes to avoid hammering the HAL/CAN.
+    public synchronized void writePeriodicOutputs(double timestamp) {
+    }
 
-	/**
-	 * Method for sanity checks with a slow update period
-	 */
-	public synchronized void safetyCheck(double timestamp) {
-	}
+    /**
+     * Method for sanity checks with a slow update period
+     */
+    public synchronized void safetyCheck(double timestamp) {
+    }
 
-	public synchronized void slowUpdate(double timestamp) {
-	}
+    public synchronized void slowUpdate(double timestamp) {
+    }
 
-	/**
-	 * Method to log data or send to Shuffleboard
-	 */
-	public abstract void outputTelemetry(double timestamp);
+    /**
+     * Method to log data or send to Shuffleboard
+     */
+    public abstract void outputTelemetry(double timestamp);
 
-	public abstract void teleopInit(double timestamp);
+    public abstract void teleopInit(double timestamp);
 
-	public abstract void autonomousInit(double timestamp);
+    public abstract void autonomousInit(double timestamp);
 
-	public abstract void onStop(double timestamp);
+    public abstract void onStop(double timestamp);
 
-	public abstract boolean checkSystem();
+    public abstract boolean checkSystem();
 }
