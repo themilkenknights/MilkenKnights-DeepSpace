@@ -37,7 +37,7 @@ public class CargoArm extends Subsystem {
         mRawError = mCargoArmTab.add("Raw Error", 0.0).getEntry();
 
         mArmTalon = new MkTalon(CAN.kMasterCargoArmTalonID, CAN.kSlaveCargoArmVictorID, TalonLoc.Cargo_Arm, mCargoArmTab);
-        mIntakeTalon = new MkTalon(CAN.kLeftCargoIntakeTalonID, CAN.kRightCargoIntakeVictorID, TalonLoc.Cargo_Intake, mIntakeRollersTab);
+        mIntakeTalon = new MkTalon(CAN.kLeftCargoIntakeTalonID, CAN.kRightCargoIntakeTalonID, TalonLoc.Cargo_Intake, mIntakeRollersTab);
     }
 
     public static CargoArm getInstance() {

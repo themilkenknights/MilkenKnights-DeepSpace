@@ -48,7 +48,7 @@ public class HatchArm extends Subsystem {
 
         mArmSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kHatchArmChannel);
         mHatchSpearState = HatchSpearState.STOW;
-        mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kHatchLimitSwitchTalonID, TalonLoc.Hatch_Arm, mHatchArmTab);
+        mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kHatchReverseLimitSwitchTalonID, TalonLoc.Hatch_Arm, mHatchArmTab);
         mStartDis = new MkTime();
         mTransferTime = new MkTime();
         mMoveTime = new MkTime();

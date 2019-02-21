@@ -45,9 +45,7 @@ public class Vision extends Subsystem {
         mDist = mVisionTab.add("Limelight Dist", 0.0).getEntry();
         mArea = mVisionTab.add("Area", 0.0).getEntry();
         mLimeLight = new LimeLight();
-        mLimeLight.setLEDMode(LedMode.kforceOn);
-        mLimeLight.setCamMode(CamMode.kvision);
-        mLimeLight.setStream(StreamType.kPiPMain);
+        configLimelightVision();
         mPixy = new MkPixy();
     }
 
@@ -67,12 +65,18 @@ public class Vision extends Subsystem {
         mArea.setDouble(mLimeLight.returnAverageTarget().getArea());
     }
 
-    public void teleopInit(double timestamp) {
+    private void configLimelightVision() {
         mLimeLight.setLEDMode(LedMode.kforceOn);
+        mLimeLight.setCamMode(CamMode.kvision);
+        mLimeLight.setStream(StreamType.kPiPMain);
+    }
+
+    public void teleopInit(double timestamp) {
+        configLimelightVision();
     }
 
     public void autonomousInit(double timestamp) {
-        mLimeLight.setLEDMode(LedMode.kforceOn);
+        configLimelightVision();
     }
 
     public void updateLimelight() {
