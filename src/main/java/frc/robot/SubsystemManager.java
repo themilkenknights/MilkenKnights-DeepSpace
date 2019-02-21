@@ -16,39 +16,29 @@ public class SubsystemManager {
 
 	private final List<Subsystem> mAllSubsystems;
 	private final Notifier notifier_;
-	private final Notifier _pixyUpdate;
-	private final Notifier _limelightUpdate;
 	private double timestamp_ = 0;
 	private boolean running_;
-	private DeltaTime mainDt, slowDt, fastDt, llDt, pixyDt, telemetryDt;
+	private final Object taskRunningLock_ = new Object();
+	private DeltaTime mainDt, fastDt;
 
 	public SubsystemManager(List<Subsystem> allSubsystems) {
 		mAllSubsystems = allSubsystems;
 
 		notifier_ = new Notifier(runnable_);
-		_pixyUpdate = new Notifier(pixyRunnable_);
-		_limelightUpdate = new Notifier(limelightRunnable_);
 		running_ = false;
 
 		mainDt = new DeltaTime("Main", 5);
 		fastDt = new DeltaTime("Fast", 5);
-		llDt = new DeltaTime("Limelight", 5);
-		pixyDt = new DeltaTime("Pixy", 5);
-	}
-
-
-	public void mainLoop() {
-		double now = mainDt.start();
-		for (Subsystem subsystem : mAllSubsystems) {
-			subsystem.onMainLoop(now);
-		}
-		mainDt.updateDt();
 	}
 
 	public void checkSystem() {
 		for (Subsystem subsystem : mAllSubsystems) {
 			subsystem.checkSystem();
 		}
+	}
+
+	public void perioidicUpdate() {
+		mainDt.updateDt();
 	}
 
 	public synchronized void startAuto() {
@@ -63,8 +53,6 @@ public class SubsystemManager {
 
 		}
 		notifier_.startPeriodic(GENERAL.kFastLooperDt);
-		_pixyUpdate.startPeriodic(GENERAL.kPixyLoopPeriod);
-		_limelightUpdate.startPeriodic(GENERAL.kLimelightLoopPeriod);
 	}
 
 	public synchronized void startTeleop() {
@@ -78,8 +66,7 @@ public class SubsystemManager {
 
 		}
 		notifier_.startPeriodic(GENERAL.kFastLooperDt);
-		_pixyUpdate.startPeriodic(GENERAL.kPixyLoopPeriod);
-		_limelightUpdate.startPeriodic(GENERAL.kLimelightLoopPeriod);
+
 	}
 
 	public synchronized void stop() {
@@ -89,8 +76,6 @@ public class SubsystemManager {
 
 		}
 		notifier_.stop();
-		_pixyUpdate.startPeriodic(GENERAL.kPixyLoopPeriod);
-		_limelightUpdate.startPeriodic(GENERAL.kLimelightLoopPeriod);
 
 		timestamp_ = Timer.getFPGATimestamp();
 		for (Subsystem subsystem : mAllSubsystems) {
@@ -98,46 +83,31 @@ public class SubsystemManager {
 		}
 	}
 
-	private final CrashTrackingRunnable pixyRunnable_ = new CrashTrackingRunnable() {
-		@Override
-		public void runCrashTracked() {
-			pixyDt.start();
-			//MkPixy.pixyUpdate();
-			pixyDt.updateDt();
-		}
-	};
-
-	private final CrashTrackingRunnable limelightRunnable_ = new CrashTrackingRunnable() {
-		@Override
-		public void runCrashTracked() {
-			llDt.start();
-			Vision.mLimeLight.threadUpdate();
-			llDt.updateDt();
-		}
-	};
-
 	private final CrashTrackingRunnable runnable_ = new CrashTrackingRunnable() {
 		private int count = 0;
 
 		@Override
 		public void runCrashTracked() {
-			if (running_) {
-				double now = fastDt.start();
-				for (Subsystem subsystem : mAllSubsystems) {
-					Input.updateControlInput();
-					subsystem.readPeriodicInputs(now);
-					subsystem.onQuickLoop(now);
-					subsystem.writePeriodicOutputs(now);
-					subsystem.safetyCheck(now);
-					if (count == 5) {
-						subsystem.slowUpdate(now);
-						subsystem.outputTelemetry(now);
-						count = 0;
+			synchronized (taskRunningLock_) {
+				if (running_) {
+					double now = fastDt.updateDt();
+					for (Subsystem subsystem : mAllSubsystems) {
+						Input.updateControlInput();
+						subsystem.readPeriodicInputs(now);
+						subsystem.onQuickLoop(now);
+						subsystem.writePeriodicOutputs(now);
+						subsystem.safetyCheck(now);
+						if (count == 5) {
+							subsystem.slowUpdate(now);
+							subsystem.outputTelemetry(now);
+							count = 0;
+						}
+						count++;
+						Vision.getInstance().updateLimelight();
+						Vision.getInstance().updatePixy();
 					}
-					count++;
+					timestamp_ = now;
 				}
-				timestamp_ = now;
-				fastDt.updateDt();
 			}
 		}
 	};

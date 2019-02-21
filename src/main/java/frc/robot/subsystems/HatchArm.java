@@ -32,11 +32,10 @@ public class HatchArm extends Subsystem {
 	private double mOpenLoopSetpoint, mArmPosEnable = 0.0;
 	private MkTime mStartDis, mTransferTime, mMoveTime;
 	private boolean mHatchLimitTriggered = false;
-	private ShuffleboardTab mHatchArmTab;
 	private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus, mRawError, mMechState, mLimitTriggered, mSpearState, mRawPos;
 
 	private HatchArm() {
-		mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
+		ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
 		mAbsPos = mHatchArmTab.add("Absolute Pos", 0.0).getEntry();
 		mControlMode = mHatchArmTab.add("Control Mode", "").getEntry();
 		mStatus = mHatchArmTab.add("Status", false).getEntry();

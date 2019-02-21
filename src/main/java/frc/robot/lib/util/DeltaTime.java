@@ -7,7 +7,7 @@ import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 
 public class DeltaTime {
 
-	private double initTime = 0.0;
+	private double lastTime = 0.0;
 	private int loopsTillUpdate, count;
 	private NetworkTableEntry mEntry;
 
@@ -17,17 +17,16 @@ public class DeltaTime {
 		count = 0;
 	}
 
-	public double start() {
-		initTime = Timer.getFPGATimestamp();
-		return initTime;
-	}
-
-	public void updateDt() {
+	public double updateDt() {
+		double now = Timer.getFPGATimestamp();
+		double dt = lastTime - now;
+		lastTime = now;
 		if (count == loopsTillUpdate) {
-			mEntry.setDouble((Timer.getFPGATimestamp() - initTime) * 1e3);
+			mEntry.setDouble(dt * 1e3);
 			count = 0;
 		}
 		count++;
+		return now;
 	}
 
 }

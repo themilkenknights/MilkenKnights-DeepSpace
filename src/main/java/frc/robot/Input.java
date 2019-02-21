@@ -68,8 +68,6 @@ public class Input {
 						|| currentRobotState == RobotState.VISION_PLACING;
 
 		if (isVisionState && (Math.abs(driverJoystick.getRawAxis(0)) > 0.35)) {
-			Logger.logErrorWithTrace("AHHHHHHHHHHHHHHHHHHHHHHH");
-			//TODO Remove
 			mStructure.setRobotState(RobotState.TELEOP_DRIVE);
 		} else if (toggleDriverVisionAssist.isPressed()) {
 			mVisionAssist = !mVisionAssist;
@@ -86,7 +84,7 @@ public class Input {
 		if (currentRobotState == RobotState.TELEOP_DRIVE) {
 			double forward = (-driverJoystick.getRawAxis(2) + driverJoystick.getRawAxis(3));
 			double turn = (-driverJoystick.getRawAxis(0));
-			LimelightTarget target = mVision.getAverageTarget();
+			LimelightTarget target = mVision.getLimelightTarget();
 			double mSteer = target.getArea() > 1000 && target.isValidTarget() && mVisionAssist ? DRIVE.kVisionDriverTurnP * target.getXOffset() : 0.0;
 			DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
 			mDrive.setOpenLoop(controlSig);

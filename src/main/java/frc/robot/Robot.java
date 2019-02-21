@@ -95,28 +95,17 @@ public class Robot extends TimedRobot {
 
 	@Override
 	public void autonomousPeriodic() {
-		try {
-			mSubsystemManager.mainLoop();
-		} catch (Throwable t) {
-			Logger.logThrowableCrash(t);
-			throw t;
-		}
-
+		mSubsystemManager.perioidicUpdate();
 	}
 
 	@Override
 	public void teleopPeriodic() {
-		try {
-			mSubsystemManager.mainLoop();
-		} catch (Throwable t) {
-			Logger.logThrowableCrash(t);
-			throw t;
-		}
+		mSubsystemManager.perioidicUpdate();
 	}
 
 	@Override
 	public void testPeriodic() {
-		mSubsystemManager.mainLoop();
+		mSubsystemManager.perioidicUpdate();
 	}
 
 	public enum MatchState {

@@ -19,14 +19,14 @@ public class MotionMagicPixy implements Action {
 
 	@Override
 	public boolean isFinished() {
-		return expirationTimer.isDone() || Vision.mPixy.isCargoIntaked();
+		return expirationTimer.isDone() || Vision.getInstance().getPixyTarget().isCargoIntaked();
 	}
 
 	@Override
 	public void update() {
-		double mDist = VISION.kPixyAreaToDistVisionMap.getInterpolated(new InterpolatingDouble((Vision.mPixy.getArea()))).value;
+		double mDist = VISION.kPixyAreaToDistVisionMap.getInterpolated(new InterpolatingDouble((Vision.getInstance().getPixyTarget().getArea()))).value;
 		if (mDist > 5.0 && mDist < 60) {
-			double mSteer = DRIVE.kVisionTurnP * Vision.mPixy.getX();
+			double mSteer = DRIVE.kPixyKp * Vision.getInstance().getPixyTarget().getYaw();
 			Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
 		} else {
 			Drive.getInstance().setOpenLoop(new DriveSignal(-0.3, -0.3));

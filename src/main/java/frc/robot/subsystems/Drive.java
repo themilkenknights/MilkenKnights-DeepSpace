@@ -81,21 +81,20 @@ public class Drive extends Subsystem {
 	 * @param timestamp In Seconds Since Code Start
 	 */
 	@Override
-	public void onQuickLoop(double timestamp) {
-		synchronized (Drive.this) {
-			stateEstimator(timestamp);
-			switch (mDriveControlState) {
-				case OPEN_LOOP:
-				case MOTION_MAGIC:
-					break;
-				case PATH_FOLLOWING:
-					updatePathFollower();
-					break;
-				default:
-					Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
-					break;
-			}
+	public synchronized void onQuickLoop(double timestamp) {
+		stateEstimator(timestamp);
+		switch (mDriveControlState) {
+			case OPEN_LOOP:
+			case MOTION_MAGIC:
+				break;
+			case PATH_FOLLOWING:
+				updatePathFollower();
+				break;
+			default:
+				Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
+				break;
 		}
+
 	}
 
 	/*

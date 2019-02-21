@@ -25,7 +25,6 @@ public class Superstructure extends Subsystem {
 
 	private static Drive mDrive = Drive.getInstance();
 	private static HatchArm mHatch = HatchArm.getInstance();
-	private static CargoArm mCargo = CargoArm.getInstance();
 	private PowerDistributionPanel mPDP;
 	private Compressor mCompressor;
 	private RobotState mRobotState = RobotState.TELEOP_DRIVE;
@@ -83,7 +82,7 @@ public class Superstructure extends Subsystem {
 	}
 
 	@Override
-	public void onQuickLoop(double timestamp) {
+	public synchronized void onQuickLoop(double timestamp) {
 		switch (mRobotState) {
 			case PATH_FOLLOWING:
 				break;
@@ -108,6 +107,11 @@ public class Superstructure extends Subsystem {
 		setRobotState(RobotState.TELEOP_DRIVE);
 	}
 
+	@Override
+	public void autonomousInit(double timestamp) {
+
+	}
+
 	public RobotState getRobotState() {
 		return mRobotState;
 	}
@@ -123,11 +127,11 @@ public class Superstructure extends Subsystem {
 			case VISION_INTAKE_STATION:
 			case VISION_PLACING:
 				mDrive.setOpenLoop(DriveSignal.BRAKE);
-				mRobotState = Vision.getInstance().getAverageTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
+				mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
 				startVisionHatch();
 				break;
 			case VISION_CARGO_OUTTAKE:
-				mRobotState = Vision.getInstance().getAverageTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
+				mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
 				startVisionCargo();
 			case VISION_CARGO_INTAKE:
 				startVisionCargoIntake();
@@ -142,7 +146,7 @@ public class Superstructure extends Subsystem {
 
 	private void startVisionHatch() {
 		mHatch.setHatchMechanismState(mRobotState == RobotState.VISION_INTAKE_STATION ? HatchMechanismState.STATION_INTAKE : HatchMechanismState.PLACING);
-		//AutoChooser.startAuto(new PathTrackTarget(Vision.getInstance().getAverageTarget().getDeltaPose()));
+		//AutoChooser.startAuto(new PathTrackTarget(Vision.getInstance().getLimelightTarget().getDeltaPose()));
 		AutoChooser.startAuto(new SimpleHatchVision());
 	}
 
@@ -165,7 +169,7 @@ public class Superstructure extends Subsystem {
 
 	@Override
 	public boolean checkSystem() {
-		return mCompressor.getCompressorCurrent() > 0.0 && mPDP.getTotalCurrent() > 0.0;
+		return mCompressor.getCompressorCurrent() > 0.0 && mPDP.getTotalCurrent() > 0.0 && mPDP.getVoltage() > 0.0;
 	}
 
 	public enum ClimbState {

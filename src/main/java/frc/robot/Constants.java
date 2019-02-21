@@ -20,7 +20,6 @@ import frc.robot.lib.util.Units;
  * -X is Hatch Arm/Battery Forward
  * +Y is Left (Hatch Arm/Battery Forward)
  * -Y is Right (Hatch Arm/Battery Forward)
- * TODO Fix the orientation to match path gen/follower
  */
 public final class Constants {
 
@@ -89,7 +88,7 @@ public final class Constants {
 
 		//Tuned dynamics
 		//TODO Tune All Drive Params on Carpet
-		public static final double kRobotLinearInertia = 45.30; //Kg
+		public static final double kRobotLinearInertia = 45.94891; //Kg
 		public static final double kRobotAngularDrag = 10.0;  // N*m / (rad/sec)
 		public static final double kDriveVIntercept = 0.65;  // V
 		public static final double kDriveKv = 0.275;  // V per rad/s2
@@ -130,6 +129,8 @@ public final class Constants {
 		public static final double kGoalVelTolerance = 5.0; // inches per second
 
 		public static final byte kNavXUpdateRate = (byte) 200;
+
+		public static final double kPixyKp = 0.045;
 	}
 
 

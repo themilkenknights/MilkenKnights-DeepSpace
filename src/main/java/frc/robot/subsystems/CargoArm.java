@@ -24,13 +24,12 @@ public class CargoArm extends Subsystem {
 	private final MkTalon mIntakeTalon;
 	private boolean mDisCon, mArmSafety = false;
 	private double mStartDis, mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable = 0.0;
-	private ShuffleboardTab mCargoArmTab;
 	private ShuffleboardTab mIntakeRollersTab;
 	private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus, mRawError;
 
 	private CargoArm() {
-		mCargoArmTab = Shuffleboard.getTab("Cargo Arm");
-		mIntakeRollersTab = Shuffleboard.getTab("Intake Rollers");
+		ShuffleboardTab mCargoArmTab = Shuffleboard.getTab("Cargo Arm");
+		ShuffleboardTab mIntakeRollersTab = Shuffleboard.getTab("Intake Rollers");
 
 		mAbsPos = mCargoArmTab.add("Absolute Pos", 0.0).getEntry();
 		mControlMode = mCargoArmTab.add("Control Mode", "").getEntry();
@@ -176,7 +175,7 @@ public class CargoArm extends Subsystem {
 	}
 
 	public synchronized void setIntakeRollers(double output) {
-		if (output == CARGO_ARM.INTAKE_IN_ROLLER_SPEED && Vision.mPixy.isCargoIntaked()) {
+		if (output == CARGO_ARM.INTAKE_IN_ROLLER_SPEED && Vision.getInstance().getPixyTarget().isCargoIntaked()) {
 			setArmState(CargoArmState.REVERSE_CARGOSHIP);
 		}
 		mRollerSetpoint = output;

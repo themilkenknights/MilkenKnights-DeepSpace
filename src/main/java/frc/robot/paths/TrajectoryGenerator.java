@@ -96,7 +96,7 @@ public class TrajectoryGenerator {
 		private Trajectory<TimedState<Pose2dWithCurvature>> getTestPath() {
 			List<Pose2d> waypoints = new ArrayList<>();
 			waypoints.add(kStartPose);
-			waypoints.add(kStartPose.transformBy(new Pose2d(new Translation2d(30.0, 10), Rotation2d.fromDegrees(10.0))));
+			waypoints.add(kStartPose.transformBy(new Pose2d(new Translation2d(30.0, 0.0), Rotation2d.fromDegrees(10.0))));
 			return generateTrajectory(false, waypoints,
 					Arrays.asList(new CentripetalAccelerationConstraint(kMaxCentripetalAccel)), kMaxVel,
 					kMaxAccel,

@@ -333,7 +333,7 @@ public class LimeLight {
 		return y;
 	}
 
-	public synchronized void threadUpdate() {
+	public void getUpdate() {
 		try {
 			if (i == 10) {
 				resetPilelineLatency();

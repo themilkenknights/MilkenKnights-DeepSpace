@@ -33,7 +33,7 @@ public class MotionMagicVision implements Action {
 
 	@Override
 	public void update() {
-		LimelightTarget target = Vision.getInstance().getAverageTarget();
+		LimelightTarget target = Vision.getInstance().getLimelightTarget();
 		double mDist = target.getDistance();
 		if (mDist > 20.0 && target.isValidTarget()) {
 			double vel = (mLastVisionState.getTarget().getXOffset() - target.getXOffset()) / (Timer.getFPGATimestamp() - lastTime);
@@ -55,7 +55,7 @@ public class MotionMagicVision implements Action {
 	public void start() {
 		expirationTimer.start(5.0);
 		lastTime = Timer.getFPGATimestamp();
-		targetYaw = Vision.getInstance().getAverageTarget().getXOffset();
+		targetYaw = Vision.getInstance().getLimelightTarget().getXOffset();
 		initYaw = Drive.getInstance().getYaw();
 	}
 }
