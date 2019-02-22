@@ -7,6 +7,7 @@ import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.InvertType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
+import com.ctre.phoenix.motorcontrol.StatusFrame;
 import com.ctre.phoenix.motorcontrol.StatusFrameEnhanced;
 import com.ctre.phoenix.motorcontrol.VelocityMeasPeriod;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
@@ -87,31 +88,27 @@ public class MkTalon {
         lastNeutralMode = NeutralMode.Brake;
         lastOutput = Double.NaN;
         CTRE(masterTalon.configFactoryDefault(kLong));
-        CTRE(masterTalon.configAllSettings(new TalonSRXConfiguration()));
+        CTRE(masterTalon.configAllSettings(CONFIG.kConfigs.get(mSide)));
         CTRE(masterTalon.clearStickyFaults(kLong));
         masterTalon.selectProfileSlot(kSlot, kSlot);
         masterTalon.setNeutralMode(NeutralMode.Brake);
         masterTalon.enableVoltageCompensation(true);
         switch (mSide) {
             case Left:
-                CTRE(masterTalon.configAllSettings(CONFIG.kTalonDriveConfigs.get(mSide), kLong));
                 masterTalon.setInverted(Constants.DRIVE.kLeftMasterInvert);
                 slaveVictor.setInverted(Constants.DRIVE.kLeftSlaveInvert);
                 masterTalon.setSensorPhase(Constants.DRIVE.kLeftSensorInvert);
                 break;
             case Right:
-                CTRE(masterTalon.configAllSettings(CONFIG.kTalonDriveConfigs.get(mSide), kLong));
                 masterTalon.setInverted(Constants.DRIVE.KRightMasterInvert);
                 slaveVictor.setInverted(Constants.DRIVE.kRightSlaveInvert);
                 masterTalon.setSensorPhase(Constants.DRIVE.kRightSensorInvert);
                 break;
             case Cargo_Arm:
-                CTRE(masterTalon.configAllSettings(CONFIG.kArmConfigs.get(mSide), kLong));
                 masterTalon.setInverted(CARGO_ARM.ARM_MASTER_DIRECTION);
                 masterTalon.setSensorPhase(CARGO_ARM.ARM_SENSOR_PHASE);
                 break;
             case Hatch_Arm:
-                CTRE(masterTalon.configAllSettings(CONFIG.kArmConfigs.get(mSide), kLong));
                 masterTalon.setSensorPhase(HATCH_ARM.ARM_SENSOR_PHASE);
                 masterTalon.setInverted(HATCH_ARM.ARM_MASTER_DIRECTION);
                 break;
@@ -124,8 +121,12 @@ public class MkTalon {
                 break;
         }
         switch (mSide) {
-            case Left:
             case Right:
+                CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_12_Feedback1, 10, kLong));
+                CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_13_Base_PIDF0, 10, kLong));
+                CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_14_Turn_PIDF1, 10, kLong));
+                CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_10_Targets, 10, kLong));
+            case Left:
                 CTRE(masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kLong));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 5, kLong));
@@ -159,40 +160,6 @@ public class MkTalon {
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 1000, kLong));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 1000, kLong));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 1000, kLong));
-                break;
-            default:
-                Logger.logError("Unknown Side");
-                break;
-        }
-
-        switch (mSide) {
-            case Left:
-                break;
-            case Right:
-                break;
-            case Cargo_Arm:
-                break;
-            case Hatch_Arm:
-                CTRE(slaveTalon.configAllSettings(new TalonSRXConfiguration()));
-                CTRE(slaveTalon.configFactoryDefault(kLong));
-                CTRE(slaveTalon.clearStickyFaults(kLong));
-                CTRE(slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 10));
-                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kLong));
-                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 500, kLong));
-                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 500, kLong));
-                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 500, kLong));
-                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 500, kLong));
-                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 500, kLong));
-                slaveTalon.setNeutralMode(NeutralMode.Brake);
-                CTRE(slaveTalon.configNominalOutputForward(0, kLong));
-                CTRE(slaveTalon.configNominalOutputReverse(0, kLong));
-                CTRE(slaveTalon.configPeakOutputForward(GENERAL.kMaxNominalOutput, kLong));
-                CTRE(slaveTalon.configPeakOutputReverse(-GENERAL.kMaxNominalOutput, kLong));
-                CTRE(slaveTalon.configVoltageCompSaturation(12.0, kLong));
-                slaveTalon.enableVoltageCompensation(true);
-                CTRE(slaveTalon.configVoltageMeasurementFilter(32, kLong));
-                break;
-            case Cargo_Intake:
                 break;
             default:
                 Logger.logError("Unknown Side");

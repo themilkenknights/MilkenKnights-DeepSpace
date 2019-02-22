@@ -299,29 +299,17 @@ public final class Constants {
 
 
     public static class CONFIG {
-        public static final Map<TalonLoc, TalonSRXConfiguration> kTalonDriveConfigs = new HashMap<TalonLoc, TalonSRXConfiguration>();
-        public static final Map<TalonLoc, TalonSRXConfiguration> kArmConfigs = new HashMap<TalonLoc, TalonSRXConfiguration>();
         public static final Map<TalonLoc, TalonSRXConfiguration> kConfigs = new HashMap<TalonLoc, TalonSRXConfiguration>();
 
         static {
-            kTalonDriveConfigs.put(TalonLoc.Left, new TalonSRXConfiguration());
-            kTalonDriveConfigs.put(TalonLoc.Right, new TalonSRXConfiguration());
-            kArmConfigs.put(TalonLoc.Cargo_Arm, new TalonSRXConfiguration());
-            kArmConfigs.put(TalonLoc.Hatch_Arm, new TalonSRXConfiguration());
-
             kConfigs.put(TalonLoc.Left, new TalonSRXConfiguration());
             kConfigs.put(TalonLoc.Right, new TalonSRXConfiguration());
             kConfigs.put(TalonLoc.Cargo_Arm, new TalonSRXConfiguration());
             kConfigs.put(TalonLoc.Hatch_Arm, new TalonSRXConfiguration());
             kConfigs.put(TalonLoc.Cargo_Intake, new TalonSRXConfiguration());
-
             for (TalonLoc loc : kConfigs.keySet()) {
                 TalonSRXConfiguration tal = kConfigs.get(loc);
                 if (loc == TalonLoc.Left || loc == TalonLoc.Right) {
-                    tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
-                    tal.primaryPID.selectedFeedbackCoefficient = 1.0;
-                    tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.Analog;
-                    tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0;
                     tal.forwardLimitSwitchSource = LimitSwitchSource.Deactivated;
                     tal.reverseLimitSwitchSource = LimitSwitchSource.Deactivated;
                     tal.sum0Term = FeedbackDevice.CTRE_MagEncoder_Relative;
@@ -351,7 +339,7 @@ public final class Constants {
                     tal.slot1.kP = 0.1;
                     tal.slot1.kI = 0.0;
                     tal.slot1.kD = 0.0;
-                    tal.slot1.kF = 454.000000;
+                    tal.slot1.kF = 0.0;
                     tal.slot1.integralZone = 100;
                     tal.slot1.allowableClosedloopError = 200;
                     tal.slot1.maxIntegralAccumulator = 91.000000;
@@ -376,10 +364,6 @@ public final class Constants {
                     tal.slot3.closedLoopPeakOutput = 0.129032;
                     tal.slot3.closedLoopPeriod = 1;
                     tal.auxPIDPolarity = false;
-                    tal.remoteFilter0.remoteSensorDeviceID = 22;
-                    tal.remoteFilter0.remoteSensorSource = RemoteSensorSource.GadgeteerPigeon_Roll;
-                    tal.remoteFilter1.remoteSensorDeviceID = 41;
-                    tal.remoteFilter1.remoteSensorSource = RemoteSensorSource.GadgeteerPigeon_Yaw;
                     tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.5);
                     tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.5);
                     tal.motionCurveStrength = 6;
@@ -408,12 +392,32 @@ public final class Constants {
                     tal.motionCurveStrength = 6;
                     tal.slot0.closedLoopPeakOutput = 1.0;
                     tal.slot0.closedLoopPeriod = 1;
+                } else if (loc == TalonLoc.Cargo_Intake) {
+                    tal.peakOutputForward = 1.0;
+                    tal.peakOutputReverse = -1.0;
+                    tal.neutralDeadband = 0.0;
+                    tal.voltageCompSaturation = 12.0;
+                    tal.voltageMeasurementFilter = 32;
                 }
 
                 if (loc == TalonLoc.Left) {
-
+                    tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
+                    tal.primaryPID.selectedFeedbackCoefficient = 1.0;
                 } else if (loc == TalonLoc.Right) {
+                    tal.remoteFilter0.remoteSensorDeviceID = CAN.kDriveLeftMasterTalonID;
+                    tal.remoteFilter0.remoteSensorSource = RemoteSensorSource.TalonSRX_SelectedSensor;
 
+                    tal.remoteFilter1.remoteSensorDeviceID = CAN.kRightCargoIntakeTalonID;
+                    tal.remoteFilter1.remoteSensorSource = RemoteSensorSource.GadgeteerPigeon_Yaw;
+
+                    tal.sum0Term = FeedbackDevice.RemoteSensor0;
+                    tal.sum1Term = FeedbackDevice.CTRE_MagEncoder_Relative;
+
+                    tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
+                    tal.primaryPID.selectedFeedbackCoefficient = 0.50;
+
+                    tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
+                    tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0;
                 } else if (loc == TalonLoc.Cargo_Arm) {
                     tal.reverseLimitSwitchDeviceID = CAN.kLeftCargoIntakeTalonID;
                     tal.forwardSoftLimitThreshold = 0;
