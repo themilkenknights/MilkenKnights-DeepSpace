@@ -32,14 +32,14 @@ public class SubsystemManager {
                         subsystem.onQuickLoop(now);
                         subsystem.writePeriodicOutputs(now);
                         subsystem.safetyCheck(now);
+                        subsystem.outputTelemetry(now);
                         if (count == 5) {
                             subsystem.slowUpdate(now);
-                            subsystem.outputTelemetry(now);
                             count = 0;
                         }
                         count++;
-                        Vision.getInstance().updateLimelight();
-                        Vision.getInstance().updatePixy();
+                     //   Vision.getInstance().updateLimelight();
+                       // Vision.getInstance().updatePixy();
                     }
                     timestamp_ = now;
                 }

@@ -75,11 +75,11 @@ public class CargoArm extends Subsystem {
                 }
             }
 
-            /*
-             * TODO Fix if (mArmTalon.getCurrent() > CARGO_ARM.MAX_SAFE_CURRENT) {
-             * Logger.logError("Unsafe Current on Cargo " + mArmTalon.getCurrent() +
-             * " Amps"); setArmControlState(CargoArmControlState.OPEN_LOOP); }
-             */
+
+            if (mArmTalon.getCurrent() > CARGO_ARM.MAX_SAFE_CURRENT) {
+              Logger.logError("Unsafe Current on Cargo " + mArmTalon.getCurrent() +
+              " Amps"); setArmControlState(CargoArmControlState.OPEN_LOOP); }
+
         }
     }
 

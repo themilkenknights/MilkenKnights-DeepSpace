@@ -29,12 +29,12 @@ public class Vision extends Subsystem {
         ShuffleboardTab dashboardTab = Shuffleboard.getTab("Dash");
 
         UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
-        dashboardTab.add(camera).withWidget(BuiltInWidgets.kCameraStream).withWidget(BuiltInWidgets.kNumberSlider).withPosition(1, 1)
+        dashboardTab.add(camera).withWidget(BuiltInWidgets.kCameraStream).withPosition(1, 1).withSize(4,4)
             .withProperties(Map.of("Show Crosshair", true, "Show Controls", false));// specify widget properties here
 
         HttpCamera httpCamera = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
         CameraServer.getInstance().addCamera(httpCamera);
-        dashboardTab.add(httpCamera).withWidget(BuiltInWidgets.kCameraStream).withWidget(BuiltInWidgets.kNumberSlider).withPosition(4, 1)
+        dashboardTab.add(httpCamera).withWidget(BuiltInWidgets.kCameraStream).withPosition(5, 1).withSize(5,4)
             .withProperties(Map.of("Show Crosshair", true, "Show Controls", false));// specify widget properties here
 
         Shuffleboard.selectTab("Dash");
@@ -46,8 +46,8 @@ public class Vision extends Subsystem {
         mArea = mVisionTab.add("Area", 0.0).getEntry();
         mLimeLight = new LimeLight();
         mLimeLight.setLEDMode(LedMode.kforceOn);
-        mLimeLight.setCamMode(CamMode.kvision);
-        mLimeLight.setStream(StreamType.kPiPMain);
+        mLimeLight.setCamMode(CamMode.kdriver);
+        mLimeLight.setStream(StreamType.kPiPSecondary);
         mPixy = new MkPixy();
     }
 
