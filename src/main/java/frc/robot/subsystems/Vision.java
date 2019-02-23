@@ -89,7 +89,7 @@ public class Vision extends Subsystem {
 	}
 
 	public synchronized LimelightTarget getAverageTarget() {
-		return mLimeLight.returnAverageTarget();
+		return mLimeLight.returnLastTarget();
 	}
 
 	private static class InstanceHolder {

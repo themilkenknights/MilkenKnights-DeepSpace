@@ -68,11 +68,11 @@ public class Drive extends Subsystem {
 	@Override
 	public synchronized void readPeriodicInputs(double timestamp) {
 		mPeriodicIO.timestamp = Timer.getFPGATimestamp();
-		mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(-navX.getAngle()).rotateBy(mGyroOffset);
 		mPeriodicIO.leftPos = mLeftDrive.getPosition();
 		mPeriodicIO.rightPos = mRightDrive.getPosition();
 		mPeriodicIO.leftVel = mLeftDrive.getSpeed();
 		mPeriodicIO.rightVel = mRightDrive.getSpeed();
+		mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(getNavXHeading()).rotateBy(mGyroOffset);
 	}
 
 	/**
@@ -363,7 +363,7 @@ public class Drive extends Subsystem {
 	 */
 	public synchronized void setHeading(Rotation2d heading) {
 		Logger.logMarker("SET HEADING: " + heading.getDegrees());
-		mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(-navX.getAngle()).inverse());
+		mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(getNavXHeading()).inverse());
 		Logger.logMarker("Gyro offset: " + mGyroOffset.getDegrees());
 		mPeriodicIO.gyro_heading = heading;
 	}

@@ -217,11 +217,6 @@ public class MkTalon {
 			CTRE(slaveTalon.clearStickyFaults(kLong));
 			CTRE(slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 10));
 			CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kLong));
-			CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 500, kLong));
-			CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 500, kLong));
-			CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 500, kLong));
-			CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 500, kLong));
-			CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 500, kLong));
 			slaveTalon.setNeutralMode(NeutralMode.Brake);
 			CTRE(slaveTalon.configNominalOutputForward(0, kLong));
 			CTRE(slaveTalon.configNominalOutputReverse(0, kLong));
