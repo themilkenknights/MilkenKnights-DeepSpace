@@ -32,12 +32,10 @@ public final class Constants {
         public static final int kLongCANTimeoutMs = 100; //Use for constructors, not while enabled
         public static final double PI = 3.14159265359;
         public static final double kTicksPerRev = 4096.0;
-        public static final double kMaxNominalOutput = 0.5;
+        public static final double kMaxNominalOutput = 0.45;
         public static final double kMotorSafetyTimer = 0.05;
         public static final double kMainLoopDt = 0.02;
-        public static final double kFastLooperDt = 0.01 ;
-        public static final double kLimelightLoopPeriod = 0.01;
-        public static final double kPixyLoopPeriod = 0.01;
+        public static final double kFastLooperDt = 0.02;
     }
 
 
@@ -256,8 +254,6 @@ public final class Constants {
 
         public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> kAreaToDistVisionMap = new InterpolatingTreeMap<>();
 
-        public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> kPixyAreaToDistVisionMap = new InterpolatingTreeMap<>();
-
         static {
             VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(12400.0), new InterpolatingDouble(15.9));
             VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(9362.0), new InterpolatingDouble(20.16));
@@ -267,10 +263,6 @@ public final class Constants {
             VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(2155.0), new InterpolatingDouble(57.44));
             VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1464.0), new InterpolatingDouble(73.35));
             VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(980.0), new InterpolatingDouble(94.09));
-
-            VISION.kPixyAreaToDistVisionMap.put(new InterpolatingDouble(3783.0), new InterpolatingDouble(46.75));
-            VISION.kPixyAreaToDistVisionMap.put(new InterpolatingDouble(2517.0), new InterpolatingDouble(57.4));
-            VISION.kPixyAreaToDistVisionMap.put(new InterpolatingDouble(1960.0), new InterpolatingDouble(65.5));
         }
 
     }

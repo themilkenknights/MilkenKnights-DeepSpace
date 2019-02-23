@@ -88,8 +88,8 @@ public class MkTalon {
         lastControlMode = ControlMode.PercentOutput;
         lastNeutralMode = NeutralMode.Brake;
         lastOutput = Double.NaN;
-        CTRE(masterTalon.configAllSettings(new TalonSRXConfiguration()));
         CTRE(masterTalon.configFactoryDefault(kLong));
+        CTRE(masterTalon.configAllSettings(new TalonSRXConfiguration()));
         CTRE(masterTalon.clearStickyFaults(kLong));
         masterTalon.selectProfileSlot(kSlot, kSlot);
         masterTalon.setNeutralMode(NeutralMode.Brake);
@@ -134,8 +134,8 @@ public class MkTalon {
                 CTRE(masterTalon.configReverseSoftLimitThreshold((int) MkMath.angleToNativeUnits(CARGO_ARM.ARM_REVERSE_LIMIT), kLong));
                 CTRE(masterTalon.configForwardSoftLimitEnable(true, kLong));
                 CTRE(masterTalon.configReverseSoftLimitEnable(true, kLong));
-                CTRE(masterTalon
-                    .configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kLeftCargoIntakeTalonID, kLong));
+                CTRE(masterTalon.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kLeftCargoIntakeTalonID, kLong));
+                CTRE(masterTalon.configLimitSwitchDisableNeutralOnLOS(true, kLong));
                 break;
             case Hatch_Arm:
                 masterTalon.setSensorPhase(HATCH_ARM.ARM_SENSOR_PHASE);
@@ -152,8 +152,8 @@ public class MkTalon {
                 CTRE(masterTalon.configReverseSoftLimitThreshold((int) MkMath.angleToNativeUnits(HATCH_ARM.ARM_REVERSE_LIMIT), kLong));
                 CTRE(masterTalon.configForwardSoftLimitEnable(true, kLong));
                 CTRE(masterTalon.configReverseSoftLimitEnable(true, kLong));
-                CTRE(masterTalon
-                    .configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kHatchLimitSwitchTalonID, kLong));
+                CTRE(masterTalon.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kHatchLimitSwitchTalonID, kLong));
+                CTRE(masterTalon.configLimitSwitchDisableNeutralOnLOS(true, kLong));
                 break;
             case Cargo_Intake:
                 masterTalon.setInverted(CARGO_ARM.LEFT_INTAKE_DIRECTION);
