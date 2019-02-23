@@ -12,12 +12,11 @@ import frc.robot.subsystems.Superstructure.RobotState;
 
 public class SimpleCargoOuttake extends AutoModeBase {
 
-	@Override
-	protected void routine() throws AutoModeEndedException {
-		runAction(new MotionMagicVision(false));
-		runAction(new RollerAction(CARGO_ARM.ROCKET_LEVEL_ONE_INTAKE_OUT_ROLLER_SPEED, 1.0));
-		runAction(new MotionMagicBlind(-20.0, -20.0));
-		runAction(new TurnInPlace(180.0));
-		Superstructure.getInstance().setRobotState(RobotState.TELEOP_DRIVE);
-	}
+    @Override protected void routine() throws AutoModeEndedException {
+        runAction(new MotionMagicVision(false));
+        runAction(new RollerAction(CARGO_ARM.ROCKET_LEVEL_ONE_INTAKE_OUT_ROLLER_SPEED, 1.0));
+        runAction(new MotionMagicBlind(-20.0, -20.0));
+        runAction(new TurnInPlace(180.0));
+        Superstructure.getInstance().setRobotState(RobotState.TELEOP_DRIVE);
+    }
 }
