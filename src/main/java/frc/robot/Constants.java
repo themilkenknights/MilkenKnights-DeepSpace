@@ -222,10 +222,10 @@ public final class Constants {
 
         public static final double kMaxSafeCurrent = 150;
 
-        public static final int kBookEnd_0 = kIsPracticeBot ? 5453 : 827;
-        public static final int kBookEnd_1 = kIsPracticeBot ? 3340 : 3790;
+        public static final int kBookEnd_0 = kIsPracticeBot ? 1997 : 827;
+        public static final int kBookEnd_1 = kIsPracticeBot ? -90 : 3790; //97
         public static final boolean kCrossOverZero = kIsPracticeBot ? true : true;
-        public static final int kOffset = kIsPracticeBot ? -1336 : 0;
+        public static final int kOffset = kIsPracticeBot ? -1997 : 0;
     }
 
 

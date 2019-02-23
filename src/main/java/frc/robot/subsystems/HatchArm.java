@@ -33,7 +33,7 @@ public class HatchArm extends Subsystem {
     private MkTime mStartDis, mTransferTime, mMoveTime;
     private boolean mHatchLimitTriggered = false;
     private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus, mRawError, mMechState, mLimitTriggered, mSpearState, mRawPos;
-
+    private int i = 0;
     private HatchArm() {
         ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
         mAbsPos = mHatchArmTab.add("Absolute Pos", 0.0).getEntry();
@@ -77,7 +77,7 @@ public class HatchArm extends Subsystem {
     }
 
     @Override public void safetyCheck(double timestamp) {
-        if (!mArmTalon.isEncoderConnected()) {
+       if (!mArmTalon.isEncoderConnected()) {
             if (mDisCon) {
                 if (mStartDis.isDone()) {
                     enableSafety(true);
@@ -98,12 +98,10 @@ public class HatchArm extends Subsystem {
                 enableSafety(false);
             }
         }
-
-		/* TODO Fix
 		if (mArmTalon.getCurrent() > HATCH_ARM.kMaxSafeCurrent) {
 			Logger.logErrorWithTrace("Unsafe Current on Hatch" + mArmTalon.getCurrent() + " Amps");
 			enableSafety(true);
-		}*/
+		}
     }
 
     private void setEnable() {
@@ -133,6 +131,8 @@ public class HatchArm extends Subsystem {
 
 
     public void outputTelemetry(double timestamp) {
+
+    System.out.println("Abs Pos: " + mArmTalon.getAbsolutePosition() + " Raw Pos " + mArmTalon.masterTalon.getSelectedSensorPosition() + " pos " + mArmTalon.getPosition());
         mArmTalon.updateSmartDash(false);
         mDesiredState.setString(mHatchIntakeState.toString());
         mControlMode.setString(mHatchIntakeControlState.toString());
@@ -150,7 +150,7 @@ public class HatchArm extends Subsystem {
      * @param timestamp Time in seconds since code start
      */
     @Override public synchronized void onQuickLoop(double timestamp) {
-        mHatchLimitTriggered = mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
+        mHatchLimitTriggered = false;// mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
         switch (mHatchMechanismState) {
             case STOWED:
             case SPEAR_STOW_ONLY:
