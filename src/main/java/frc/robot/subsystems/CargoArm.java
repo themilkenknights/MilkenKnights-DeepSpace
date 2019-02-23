@@ -6,6 +6,7 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.GENERAL;
@@ -18,7 +19,7 @@ import frc.robot.lib.util.Logger;
 
 public class CargoArm extends Subsystem {
 
-    private static CargoArmControlState mCargoArmControlState = CargoArmControlState.MOTION_MAGIC;
+    private static CargoArmControlState mCargoArmControlState = CargoArmControlState.OPEN_LOOP;
     private static CargoArmState mCargoArmState = CargoArmState.ENABLE;
     private final MkTalon mArmTalon;
     private final MkTalon mIntakeTalon;
@@ -130,6 +131,7 @@ public class CargoArm extends Subsystem {
         mControlMode.setString(mCargoArmControlState.toString());
         mStatus.setBoolean(mArmTalon.isEncoderConnected());
         mRawError.setDouble(MkMath.angleToNativeUnits(mArmTalon.getError()));
+        SmartDashboard.putNumber("Raw Cargo Pos", mArmTalon.masterTalon.getSelectedSensorPosition());
     }
 
     @Override public void teleopInit(double timestamp) {
