@@ -22,7 +22,7 @@ public class MotionMagicPixy implements Action {
     }
 
     @Override public void update() {
-        double mDist = VISION.kPixyAreaToDistVisionMap.getInterpolated(new InterpolatingDouble((Vision.getInstance().getPixyTarget().getArea()))).value;
+        double mDist = 0.0; //TODO fix
         if (mDist > 5.0 && mDist < 60) {
             double mSteer = DRIVE.kPixyKp * Vision.getInstance().getPixyTarget().getYaw();
             Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));

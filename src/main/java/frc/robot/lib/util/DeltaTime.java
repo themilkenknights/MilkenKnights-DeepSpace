@@ -19,7 +19,7 @@ public class DeltaTime {
 
     public double updateDt() {
         double now = Timer.getFPGATimestamp();
-        double dt = lastTime - now;
+        double dt = now - lastTime;
         lastTime = now;
         if (count == loopsTillUpdate) {
             mEntry.setDouble(dt * 1e3);
