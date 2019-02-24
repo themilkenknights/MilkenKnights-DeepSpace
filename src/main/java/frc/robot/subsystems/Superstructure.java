@@ -17,7 +17,6 @@ import frc.robot.auto.modes.CargoVisionIntake;
 import frc.robot.auto.modes.SimpleCargoOuttake;
 import frc.robot.auto.modes.SimpleHatchVision;
 import frc.robot.lib.structure.Subsystem;
-import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.HatchArm.HatchMechanismState;
 
@@ -121,8 +120,7 @@ public class Superstructure extends Subsystem {
         switch (state) {
             case TELEOP_DRIVE:
                 AutoChooser.disableAuto();
-                mDrive.setOpenLoop(DriveSignal.BRAKE);
-                mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
+                mDrive.configTeleopDrive();
                 break;
             case VISION_INTAKE_STATION:
             case VISION_PLACING:
@@ -143,10 +141,9 @@ public class Superstructure extends Subsystem {
     }
 
     private void startVisionHatch() {
-        mDrive.setOpenLoop(DriveSignal.BRAKE);
+        mDrive.configHatchVision();
         mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
         mHatch.setHatchMechanismState(mRobotState == RobotState.VISION_INTAKE_STATION ? HatchMechanismState.STATION_INTAKE : HatchMechanismState.PLACING);
-        //AutoChooser.startAuto(new PathTrackTarget(Vision.getInstance().getLimelightTarget().getDeltaPose()));
         AutoChooser.startAuto(new SimpleHatchVision());
     }
 
@@ -157,7 +154,6 @@ public class Superstructure extends Subsystem {
 
 
     private void startVisionCargoIntake() {
-
         AutoChooser.startAuto(new CargoVisionIntake());
     }
 

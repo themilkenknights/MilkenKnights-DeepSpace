@@ -40,7 +40,7 @@ public final class Constants {
         public static final int kLongCANTimeoutMs = 100; //Use for constructors, not while enabled
         public static final double PI = 3.14159265359;
         public static final double kTicksPerRev = 4096.0;
-        public static final double kMaxNominalOutput = 0.45;
+        public static final double kMaxNominalOutput = 1.0;
         public static final double kMotorSafetyTimer = 0.05;
         public static final double kMainLoopDt = 0.02;
         public static final double kFastLooperDt = 0.02;
@@ -54,6 +54,7 @@ public final class Constants {
     public static class CAN {
 
         public static final int kPneumaticsControlModuleID = 0;
+
         public static final int kPowerDistributionPanelID = 11;
 
         //SRX Mag Encoder for Left Drive
@@ -116,6 +117,9 @@ public final class Constants {
         public static final double kDriveKa = 0.00575;  // V per rad/s^
         public static final double kDriveAngularKa = 0.0065;  // V per rad/s^ (found by turn in place)
         public static final double kRobotAngularInertia = (kDriveWheelTrackRadiusMeters * kDriveKa * kRobotLinearInertia) / (kDriveAngularKa);  // Kg m^2
+
+        public static final double kDriveKp = 7 * (0.1 * 1023.0) / (700);
+        public static final double kDriveKd = 3 * kDriveKp;
 
         //TODO Turn In Place Scrub Tuning
         public static final double kTrackScrubFactor = 0.95;
@@ -269,9 +273,9 @@ public final class Constants {
     public static class CONFIG {
         public static final int kPIDPrimary = 0;
         public static final int kPIDAuxilliaryTurn = 1;
-        public static final int kNormalSlot = 0;
-        public static final int kDistanceSlot = 1;
-        public static final int kTurningSlot = 2;
+
+        public static final int kDistanceSlot = 0;
+        public static final int kTurningSlot = 1;
 
         public static final Map<TalonLoc, TalonSRXConfiguration> kConfigs = new HashMap<TalonLoc, TalonSRXConfiguration>();
 
@@ -307,26 +311,18 @@ public final class Constants {
                     tal.velocityMeasurementWindow = 8;
 
                     //General Velocity/Motion Magic
-                    tal.slot0.kP = 7 * (0.1 * 1023.0) / (700);
-                    tal.slot0.kI = 0.0;
-                    tal.slot0.kD = 3 * tal.slot0.kP;
+                    tal.slot0.kP = DRIVE.kDriveKp;
+                    tal.slot0.kD = DRIVE.kDriveKd;
                     tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
-
-                    //Motion Magic Distance
-                    tal.slot1.kP = 7 * (0.1 * 1023.0) / (700);
-                    tal.slot1.kI = 0.0;
-                    tal.slot1.kD = 3 * tal.slot0.kP;
-                    tal.slot1.kF = 1023.0 / DRIVE.kMaxNativeVel;
-                    tal.slot1.integralZone = 100;
-                    tal.slot1.closedLoopPeakOutput = 0.5;
+                    tal.slot0.closedLoopPeakOutput = 0.5;
 
                     //Motion Magic Turning
-                    tal.slot2.kP = 2.0;
-                    tal.slot2.kI = 0.0;
-                    tal.slot2.kD = 4.0;
-                    tal.slot2.kF = 1023.0 / DRIVE.kMaxNativeVel;
-                    tal.slot2.integralZone = 200;
-                    tal.slot2.closedLoopPeakOutput = 1.0;
+                    tal.slot1.kP = 2.0;
+                    tal.slot1.kI = 0.0;
+                    tal.slot1.kD = 4.0;
+                    tal.slot1.kF = 1023.0 / DRIVE.kMaxNativeVel;
+                    tal.slot1.integralZone = 200;
+                    tal.slot1.closedLoopPeakOutput = 1.0;
 
                     tal.auxPIDPolarity = false;
                     tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.5);
