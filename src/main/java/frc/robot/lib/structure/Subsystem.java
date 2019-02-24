@@ -14,6 +14,10 @@ public abstract class Subsystem {
     public synchronized void readPeriodicInputs(double timestamp) {
     }
 
+    /**
+     *
+     * @param timestamp Time in seconds since code start
+     */
     public synchronized void onQuickLoop(double timestamp) {
 
     }

@@ -31,11 +31,14 @@ public class Superstructure extends Subsystem {
     private Solenoid mFrontClimbSolenoid, mRearClimbSolenoid;
     private ClimbState mRearClimbState = ClimbState.RETRACTED;
     private ClimbState mFrontClimbState = ClimbState.RETRACTED;
-    private ShuffleboardTab mStructureTab;
     private NetworkTableEntry mMatchState, mRobotStateEntry, mCompressorCurrent, mFrontClimb, mRearClimb;
 
+    /**
+     * Stores PDP, Compressor, General Robot Data, and Climb Actuators.
+     * Acts as the high-level controller that changes calls the lower-level subsystems.
+     */
     private Superstructure() {
-        mStructureTab = Shuffleboard.getTab("Superstructure");
+        ShuffleboardTab mStructureTab = Shuffleboard.getTab("Superstructure");
         mMatchState = mStructureTab.add("Match State", "").getEntry();
         mRobotStateEntry = mStructureTab.add("Robot State", "").getEntry();
         mCompressorCurrent = mStructureTab.add("Compressor Current", 0.0).getEntry();
@@ -123,8 +126,6 @@ public class Superstructure extends Subsystem {
                 break;
             case VISION_INTAKE_STATION:
             case VISION_PLACING:
-                mDrive.setOpenLoop(DriveSignal.BRAKE);
-                mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
                 startVisionHatch();
                 break;
             case VISION_CARGO_OUTTAKE:
@@ -142,6 +143,8 @@ public class Superstructure extends Subsystem {
     }
 
     private void startVisionHatch() {
+        mDrive.setOpenLoop(DriveSignal.BRAKE);
+        mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
         mHatch.setHatchMechanismState(mRobotState == RobotState.VISION_INTAKE_STATION ? HatchMechanismState.STATION_INTAKE : HatchMechanismState.PLACING);
         //AutoChooser.startAuto(new PathTrackTarget(Vision.getInstance().getLimelightTarget().getDeltaPose()));
         AutoChooser.startAuto(new SimpleHatchVision());

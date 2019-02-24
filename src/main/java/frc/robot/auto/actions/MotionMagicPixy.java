@@ -2,9 +2,7 @@ package frc.robot.auto.actions;
 
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import frc.robot.Constants.DRIVE;
-import frc.robot.Constants.VISION;
 import frc.robot.lib.util.DriveSignal;
-import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.MkTime;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.Vision;

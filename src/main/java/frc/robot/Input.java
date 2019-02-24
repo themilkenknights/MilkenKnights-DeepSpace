@@ -116,21 +116,21 @@ public class Input {
         }
 
         if (mIntakeRollerIn.isHeld()) {
-            mCargo.setIntakeRollers(CARGO_ARM.INTAKE_IN_ROLLER_SPEED);
+            mCargo.setIntakeRollers(CARGO_ARM.kIntakeRollerInSpeed);
         } else if (mIntakeRollerOut.isHeld()) {
             switch (mCargo.getArmState()) {
                 case INTAKE:
                 case ENABLE:
-                    mCargo.setIntakeRollers(CARGO_ARM.DEFAULT_INTAKE_ROLLER_OUT_SPEED);
+                    mCargo.setIntakeRollers(CARGO_ARM.kDefaultIntakeRollerOutSpeed);
                     break;
                 case FORWARD_ROCKET_LEVEL_ONE:
-                    mCargo.setIntakeRollers(CARGO_ARM.ROCKET_LEVEL_ONE_INTAKE_OUT_ROLLER_SPEED);
+                    mCargo.setIntakeRollers(CARGO_ARM.kRocketLevelOneOutSpeed);
                     break;
                 case REVERSE_ROCKET_LEVEL_TWO:
-                    mCargo.setIntakeRollers(CARGO_ARM.ROCKET_LEVEL_TWO_OUT_ROLLER_SPEED);
+                    mCargo.setIntakeRollers(CARGO_ARM.kRocketLevelTwoOutSpeed);
                     break;
                 case REVERSE_CARGOSHIP:
-                    mCargo.setIntakeRollers(CARGO_ARM.CARGOSHIP_INTAKE_OUT_ROLLER_SPEED);
+                    mCargo.setIntakeRollers(CARGO_ARM.kCargoShipIntakeRollerOut);
                     break;
                 default:
                     Logger.logError("Unexpected Cargo Arm State");

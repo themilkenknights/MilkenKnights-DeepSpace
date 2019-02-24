@@ -1,6 +1,7 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.networktables.NetworkTableEntry;
@@ -41,11 +42,10 @@ public class Drive extends Subsystem {
     private boolean mOverrideTrajectory, mIsOnTarget = false;
     private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
     private double left_encoder_prev_distance_, right_encoder_prev_distance_, mDesiredTurnAngle = 0.0;
-    private ShuffleboardTab mDriveTab;
     private NetworkTableEntry mState, mStatus, mFusedHeading, mXErr, mYErr, mThetaErr, mGyroHeading;
 
     private Drive() {
-        mDriveTab = Shuffleboard.getTab("Drive");
+        ShuffleboardTab mDriveTab = Shuffleboard.getTab("Drive");
         mState = mDriveTab.add("State", "").getEntry();
         mStatus = mDriveTab.add("Status", false).getEntry();
         mFusedHeading = mDriveTab.add("Fused Heading", 0.0).getEntry();
@@ -74,8 +74,8 @@ public class Drive extends Subsystem {
         mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(-navX.getAngle()).rotateBy(mGyroOffset);
         mPeriodicIO.leftPos = mLeftDrive.getPosition();
         mPeriodicIO.rightPos = mRightDrive.getPosition();
-        mPeriodicIO.leftVel = mLeftDrive.getSpeed();
-        mPeriodicIO.rightVel = mRightDrive.getSpeed();
+        mPeriodicIO.leftVel = mLeftDrive.getVelocity();
+        mPeriodicIO.rightVel = mRightDrive.getVelocity();
     }
 
     /**
@@ -140,23 +140,23 @@ public class Drive extends Subsystem {
             mRightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
         } else if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
             mLeftDrive
-                .set(ControlMode.Velocity, mPeriodicIO.left_demand, NeutralMode.Brake, mPeriodicIO.left_feedforward + DRIVE.kDriveD * mPeriodicIO.left_accel / 1023.0);
+                .set(ControlMode.Velocity, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward + DRIVE.kDriveD * mPeriodicIO.left_accel / 1023.0,  NeutralMode.Brake);
             mRightDrive
-                .set(ControlMode.Velocity, mPeriodicIO.right_demand, NeutralMode.Brake, mPeriodicIO.right_feedforward + DRIVE.kDriveD * mPeriodicIO.right_accel / 1023.0);
+                .set(ControlMode.Velocity, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward + DRIVE.kDriveD * mPeriodicIO.right_accel / 1023.0, NeutralMode.Brake);
         } else if (mDriveControlState == DriveControlState.MOTION_MAGIC) {
-            mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, mPeriodicIO.brake_mode, mPeriodicIO.left_feedforward);
-            mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, mPeriodicIO.brake_mode, mPeriodicIO.right_feedforward);
+            mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward, mPeriodicIO.brake_mode);
+            mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward, mPeriodicIO.brake_mode);
         } else {
             Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
         }
     }
 
-    /*
-    Update Shuffleboard and Log to CSV
+    /**
+     * Update Shuffleboard and Log to CSV
      */
     public synchronized void outputTelemetry(double timestamp) {
-        mLeftDrive.updateSmartDash(true);
-        mRightDrive.updateSmartDash(true);
+        mLeftDrive.updateShuffleboard();
+        mRightDrive.updateShuffleboard();
         mState.setString(mDriveControlState.toString());
         mStatus.setBoolean(driveStatus());
         mFusedHeading.setDouble(-navX.getAngle());
@@ -172,8 +172,8 @@ public class Drive extends Subsystem {
         }
     }
 
-    /*
-    Stop robot and save log
+    /**
+     * Stop drive motors and save log to CSV File
      */
     @Override public void onStop(double timestamp) {
         setOpenLoop(DriveSignal.BRAKE);
@@ -183,7 +183,9 @@ public class Drive extends Subsystem {
         }
     }
 
-    /* Controls Drivetrain in PercentOutput Mode (no closed loop control) */
+    /**
+     * Controls Drive motors in PercentOutput Mode (No closed loop control)
+     */
     public synchronized void setOpenLoop(DriveSignal signal) {
         if (mDriveControlState != DriveControlState.OPEN_LOOP) {
             Logger.logMarker("Switching to open loop");
@@ -221,7 +223,7 @@ public class Drive extends Subsystem {
     /**
      * Calculate position deltas and read gyro angle to update odometry information.
      *
-     * @param timestamp Current FPGA Time
+     * @param timestamp Current FPGA Time since code start
      */
     private synchronized void stateEstimator(double timestamp) {
         final double left_distance = mPeriodicIO.leftPos;
@@ -253,6 +255,9 @@ public class Drive extends Subsystem {
         mPeriodicIO.brake_mode = signal.getBrakeMode();
     }
 
+    /**
+     * @param angle Desired relative angle in degrees to turn to.
+     */
     public synchronized void setTurnInPlaceHeading(double angle) {
         mDesiredTurnAngle = angle;
         updateTurnToHeading();
@@ -280,7 +285,7 @@ public class Drive extends Subsystem {
     }
 
     /**
-     * Pass the trajectory to the drive motion planner
+     * Passes the trajectory to the drive motion planner and configures drive control state
      */
     public synchronized void setTrajectory(TrajectoryIterator<TimedState<Pose2dWithCurvature>> trajectory) {
         if (mMotionPlanner != null) {
@@ -297,6 +302,7 @@ public class Drive extends Subsystem {
     @Override public void autonomousInit(double timestamp) {
         RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
         navX.zeroYaw();
+        mPigeon.setFusedHeading(0.0);
         left_encoder_prev_distance_ = 0;
         right_encoder_prev_distance_ = 0;
         if (mCSVWriter == null && Constants.LOG.kDriveCSVLogging) {
@@ -363,20 +369,10 @@ public class Drive extends Subsystem {
     }
 
     /**
-     * TODO Ensure this returns the correct angle {@link #updateTurnToHeading()}
-     *
      * @return current fused heading from navX
      */
     public double getHeadingDeg() {
         return mPeriodicIO.gyro_heading.getDegrees();
-    }
-
-    /**
-     * TODO Verify that GetFusedHeading works in place of getAngle
-     * GetAngle goes past 360 while get fused heading wraps around to zero
-     */
-    public double getNavXHeading() {
-        return -navX.getAngle();
     }
 
     public double getYaw() {
@@ -385,10 +381,6 @@ public class Drive extends Subsystem {
 
     public boolean isMotionMagicFinished() {
         return mLeftDrive.getError() < DRIVE.kGoalPosTolerance && mRightDrive.getError() < DRIVE.kGoalPosTolerance;
-    }
-
-    public DriveControlState getDriveControlState() {
-        return mDriveControlState;
     }
 
     public enum DriveControlState {

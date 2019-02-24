@@ -11,6 +11,6 @@ import java.util.Arrays;
 public class CargoVisionIntake extends AutoModeBase {
 
     @Override protected void routine() throws AutoModeEndedException {
-        runAction(new ParallelAction(Arrays.asList(new OpenLoopPixy(), new RollerAction(CARGO_ARM.INTAKE_IN_ROLLER_SPEED, 10.0))));
+        runAction(new ParallelAction(Arrays.asList(new OpenLoopPixy(), new RollerAction(CARGO_ARM.kIntakeRollerInSpeed, 10.0))));
     }
 }

@@ -18,6 +18,8 @@ import java.util.UUID;
 public class Logger {
 
     private static final UUID RUN_INSTANCE_UUID = UUID.randomUUID();
+    private static String lastOutput = "";
+    private static String lastCrashOutput = "";
 
     public static void logRobotConstruction() {
         logMarker("Robot Startup");
@@ -64,38 +66,46 @@ public class Logger {
     }
 
     private static synchronized void logMarker(String mark, Throwable nullableException) {
-        String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-        try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 + "/main_log.txt", true))) {
-            writer.print(RUN_INSTANCE_UUID.toString());
-            writer.print(", ");
-            writer.print(mark);
-            writer.print(", ");
-            writer.print(new Date().toString());
-            if (nullableException != null) {
+        if (!lastOutput.equals(mark)) {
+            String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+            try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 + "/main_log.txt", true))) {
+                writer.print(RUN_INSTANCE_UUID.toString());
                 writer.print(", ");
-                nullableException.printStackTrace(writer);
+                writer.print(mark);
+                writer.print(", ");
+                writer.print(new Date().toString());
+                if (nullableException != null) {
+                    writer.print(", ");
+                    nullableException.printStackTrace(writer);
+                }
+                writer.println();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            writer.println();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } else {
+            lastOutput = mark;
         }
     }
 
     private static synchronized void logCrashMarker(String mark, Throwable nullableException) {
-        String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-        try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 + "/crash_log.txt", true))) {
-            writer.print(RUN_INSTANCE_UUID.toString());
-            writer.print(", ");
-            writer.print(mark);
-            writer.print(", ");
-            writer.print(new Date().toString());
-            if (nullableException != null) {
+        if (!lastCrashOutput.equals(mark)) {
+            String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+            try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 + "/crash_log.txt", true))) {
+                writer.print(RUN_INSTANCE_UUID.toString());
                 writer.print(", ");
-                nullableException.printStackTrace(writer);
+                writer.print(mark);
+                writer.print(", ");
+                writer.print(new Date().toString());
+                if (nullableException != null) {
+                    writer.print(", ");
+                    nullableException.printStackTrace(writer);
+                }
+                writer.println();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            writer.println();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } else {
+            lastCrashOutput = mark;
         }
     }
 }

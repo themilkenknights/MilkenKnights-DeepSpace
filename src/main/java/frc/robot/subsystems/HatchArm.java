@@ -26,14 +26,14 @@ public class HatchArm extends Subsystem {
     private static HatchMechanismState mHatchMechanismState = HatchMechanismState.UNKNOWN;
 
     private final MkTalon mArmTalon;
-    private HatchSpearState mHatchSpearState;
-    private Solenoid mArmSolenoid;
-    private boolean mDisCon = false;
-    private double mOpenLoopSetpoint, mArmPosEnable = 0.0;
+    private HatchSpearState mSpearState;
+    private Solenoid mSpearSolenoid;
+    private boolean mKetteringDisCon = false;
+    private double mKetteringOpenLoopSetpoint, mKetteringPosEnable = 0.0;
     private MkTime mStartDis, mTransferTime, mMoveTime;
-    private boolean mHatchLimitTriggered = false;
-    private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus, mRawError, mMechState, mLimitTriggered, mSpearState, mRawPos;
-    private int i = 0;
+    private boolean mSpearLimitTriggered = false;
+    private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus, mRawError, mMechState, mLimitTriggered, mSpearStateTab, mRawPos;
+
     private HatchArm() {
         ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
         mAbsPos = mHatchArmTab.add("Absolute Pos", 0.0).getEntry();
@@ -41,14 +41,14 @@ public class HatchArm extends Subsystem {
         mStatus = mHatchArmTab.add("Status", false).getEntry();
         mDesiredState = mHatchArmTab.add("Desired State", "").getEntry();
         mRawError = mHatchArmTab.add("Error (Deg)", 0.0).getEntry();
-        mSpearState = mHatchArmTab.add("Spear State", "").getEntry();
+        mSpearStateTab = mHatchArmTab.add("Spear State", "").getEntry();
         mMechState = mHatchArmTab.add("Mechanism State", "").getEntry();
         mLimitTriggered = mHatchArmTab.add("Spear Limit", false).getEntry();
         mRawPos = mHatchArmTab.add("Raw Pos", 0.0).getEntry();
 
-        mArmSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kHatchArmChannel);
-        mHatchSpearState = HatchSpearState.STOW;
-        mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kHatchReverseLimitSwitchTalonID, TalonLoc.Hatch_Arm, mHatchArmTab);
+        mSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kHatchArmChannel);
+        mSpearState = HatchSpearState.STOW;
+        mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kKetteringReverseLimitSwitchTalonID, TalonLoc.Hatch_Arm, mHatchArmTab);
         mStartDis = new MkTime();
         mTransferTime = new MkTime();
         mMoveTime = new MkTime();
@@ -61,56 +61,48 @@ public class HatchArm extends Subsystem {
     @Override public void teleopInit(double timestamp) {
         mArmTalon.zeroEncoder();
         setEnable();
-        if (mArmTalon.getZer() > GENERAL.kTicksPerRev) {
-            Logger.logMarker("Hatch Arm Absolution Position > 4096");
-            enableSafety(true);
-        }
     }
 
     @Override public void autonomousInit(double timestamp) {
         mArmTalon.zeroEncoder();
         setEnable();
-        if (mArmTalon.getZer() > GENERAL.kTicksPerRev) {
-            Logger.logMarker("Hatch Arm Absolution Position > 4096");
-            enableSafety(true);
-        }
     }
 
     @Override public void safetyCheck(double timestamp) {
-       if (!mArmTalon.isEncoderConnected()) {
-            if (mDisCon) {
+        if (!mArmTalon.isEncoderConnected()) {
+            if (mKetteringDisCon) {
                 if (mStartDis.isDone()) {
                     enableSafety(true);
-                    mDisCon = false;
+                    mKetteringDisCon = false;
                     mStartDis.reset();
                 }
             } else {
-                mDisCon = true;
+                mKetteringDisCon = true;
                 mStartDis.start(0.3);
             }
             Logger.logErrorWithTrace("Hatch Arm Encoder Not Connected");
         } else {
-            if (mDisCon) {
-                mDisCon = false;
+            if (mKetteringDisCon) {
+                mKetteringDisCon = false;
                 mStartDis.reset();
                 mArmTalon.zeroEncoder();
                 Timer.delay(0.05);
                 enableSafety(false);
             }
         }
-		if (mArmTalon.getCurrent() > HATCH_ARM.kMaxSafeCurrent) {
-			Logger.logErrorWithTrace("Unsafe Current on Hatch" + mArmTalon.getCurrent() + " Amps");
-			enableSafety(true);
-		}
+        if (mArmTalon.getCurrent() > HATCH_ARM.kMaxSafeCurrent) {
+            Logger.logErrorWithTrace("Unsafe Current on Hatch" + mArmTalon.getCurrent() + " Amps");
+            enableSafety(true);
+        }
     }
 
     private void setEnable() {
-        mArmPosEnable = mArmTalon.getPosition();
+        mKetteringPosEnable = mArmTalon.getPosition();
         mHatchIntakeState = HatchIntakeState.ENABLE;
     }
 
     public boolean isHatchLimitTriggered() {
-        return mHatchLimitTriggered;
+        return mSpearLimitTriggered;
     }
 
     /**
@@ -131,26 +123,23 @@ public class HatchArm extends Subsystem {
 
 
     public void outputTelemetry(double timestamp) {
-
-    System.out.println("Abs Pos: " + mArmTalon.getAbsolutePosition() + " Raw Pos " + mArmTalon.masterTalon.getSelectedSensorPosition() + " pos " + mArmTalon.getPosition());
-        mArmTalon.updateSmartDash(false);
+        mArmTalon.updateShuffleboard();
         mDesiredState.setString(mHatchIntakeState.toString());
         mControlMode.setString(mHatchIntakeControlState.toString());
         mStatus.setBoolean(mArmTalon.isEncoderConnected());
-        mAbsPos.setDouble(mArmTalon.getAbsolutePosition());
+        mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
         mMechState.setString(mHatchMechanismState.toString());
-        mRawError.setDouble(MkMath.angleToNativeUnits(mArmTalon.getError()));
+        mRawError.setDouble(MkMath.degreesToNativeUnits(mArmTalon.getError()));
         mRawPos.setDouble(mArmTalon.masterTalon.getSelectedSensorPosition());
         mLimitTriggered.setBoolean(isHatchLimitTriggered());
+        mSpearStateTab.setString(mSpearState.toString());
     }
 
     /**
-     * Updated from mEnabledLoop in Robot.java
-     *
      * @param timestamp Time in seconds since code start
      */
     @Override public synchronized void onQuickLoop(double timestamp) {
-        mHatchLimitTriggered = false;// mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
+        mSpearLimitTriggered = mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
         switch (mHatchMechanismState) {
             case STOWED:
             case SPEAR_STOW_ONLY:
@@ -185,17 +174,17 @@ public class HatchArm extends Subsystem {
                 break;
         }
         if (mHatchIntakeControlState == HatchIntakeControlState.OPEN_LOOP) {
-            mArmTalon.set(ControlMode.PercentOutput, mOpenLoopSetpoint, NeutralMode.Brake);
+            mArmTalon.set(ControlMode.PercentOutput, mKetteringOpenLoopSetpoint, NeutralMode.Brake);
         } else if (mHatchIntakeControlState == HatchIntakeControlState.MOTION_MAGIC) {
             if (mHatchIntakeState == HatchIntakeState.ENABLE) {
-                mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mArmPosEnable), NeutralMode.Brake);
+                mArmTalon.set(ControlMode.MotionMagic, MkMath.degreesToNativeUnits(mKetteringPosEnable), NeutralMode.Brake);
             } else {
-                mArmTalon.set(ControlMode.MotionMagic, MkMath.angleToNativeUnits(mHatchIntakeState.state), NeutralMode.Brake, 0.0);
+                mArmTalon.set(ControlMode.MotionMagic, MkMath.degreesToNativeUnits(mHatchIntakeState.state), NeutralMode.Brake);
             }
         } else {
             Logger.logErrorWithTrace("Unexpected arm control state: " + mHatchIntakeControlState);
         }
-        mArmSolenoid.set(mHatchSpearState.state);
+        mSpearSolenoid.set(mSpearState.state);
     }
 
     @Override public void onStop(double timestamp) {
@@ -221,14 +210,14 @@ public class HatchArm extends Subsystem {
         if (state == HatchIntakeControlState.MOTION_MAGIC && mHatchIntakeControlState != HatchIntakeControlState.MOTION_MAGIC) {
             setEnable();
         } else if (state == HatchIntakeControlState.OPEN_LOOP && mHatchIntakeControlState != HatchIntakeControlState.OPEN_LOOP) {
-            mOpenLoopSetpoint = 0.0;
+            mKetteringOpenLoopSetpoint = 0.0;
         }
         mHatchIntakeControlState = state;
     }
 
     public synchronized void setOpenLoop(double output) {
         if (mHatchIntakeControlState == HatchIntakeControlState.OPEN_LOOP) {
-            mOpenLoopSetpoint = output;
+            mKetteringOpenLoopSetpoint = output;
         } else {
             Logger.logErrorWithTrace("Failed to set Hatch Arm Open Loop Ouput: Arm Override Not Enabled");
         }
@@ -243,14 +232,14 @@ public class HatchArm extends Subsystem {
     }
 
     public HatchSpearState getHatchSpearState() {
-        return mHatchSpearState;
+        return mSpearState;
     }
 
     /*
      * Move Hatch Arm to Stow or Place
      */
     public synchronized void setHatchSpearState(HatchSpearState armState) {
-        mHatchSpearState = armState;
+        mSpearState = armState;
         Logger.logMarker("Set Hatch Spear to " + armState.toString());
     }
 
@@ -308,16 +297,14 @@ public class HatchArm extends Subsystem {
     }
 
     public enum HatchIntakeControlState {
-        MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all
-        // circumstances
+        MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all circumstances
         OPEN_LOOP // Direct PercentVBus control of the arm as a failsafe
     }
 
 
     public enum HatchIntakeState {
         ENABLE(0), // State directly after robot is enabled (not mapped to a specific angle)
-        INTAKE_POINT(177.9), TRANSFER_POINT(55.0), // Outtakes into the switch on the backside of the robot
-        CLEAR_CARGO_POINT(130.0), STOW_POINT(0.0);
+        INTAKE_POINT(177.9), TRANSFER_POINT(55.0), CLEAR_CARGO_POINT(130.0), STOW_POINT(0.0);
 
         public final double state;
 
@@ -328,7 +315,8 @@ public class HatchArm extends Subsystem {
 
 
     /**
-     * The state of the pnuematic spear that places and intakes the Hatches. The default state should always be stowed on power off.
+     * The state of the pneumatic spear that places and intakes the Hatches.
+     * The default state should always be stowed on power off.
      */
     public enum HatchSpearState {PLACE(HATCH_ARM.kHatchArmPlaceState), STOW(!HATCH_ARM.kHatchArmPlaceState);
         public final boolean state;

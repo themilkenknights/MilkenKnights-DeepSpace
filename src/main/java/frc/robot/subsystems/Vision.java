@@ -1,7 +1,6 @@
 package frc.robot.subsystems;
 
 import edu.wpi.cscore.HttpCamera;
-import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.BuiltInWidgets;
@@ -27,19 +26,14 @@ public class Vision extends Subsystem {
 
     private Vision() {
         ShuffleboardTab dashboardTab = Shuffleboard.getTab("Dash");
-
-        UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
+        /* UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
         dashboardTab.add(camera).withWidget(BuiltInWidgets.kCameraStream).withPosition(1, 1).withSize(4,4)
-            .withProperties(Map.of("Show Crosshair", true, "Show Controls", false));// specify widget properties here
-
+            .withProperties(Map.of("Show Crosshair", true, "Show Controls", false));// specify widget properties here */
         HttpCamera httpCamera = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
         CameraServer.getInstance().addCamera(httpCamera);
-        dashboardTab.add(httpCamera).withWidget(BuiltInWidgets.kCameraStream).withPosition(5, 1).withSize(5,4)
+        dashboardTab.add(httpCamera).withWidget(BuiltInWidgets.kCameraStream).withPosition(5, 1).withSize(5, 4)
             .withProperties(Map.of("Show Crosshair", true, "Show Controls", false));// specify widget properties here
-
         Shuffleboard.selectTab("Dash");
-        //TODO Fix Shuffleboard Stream Config
-
         ShuffleboardTab mVisionTab = Shuffleboard.getTab("Vision");
         mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
         mDist = mVisionTab.add("Limelight Dist", 0.0).getEntry();
@@ -92,7 +86,6 @@ public class Vision extends Subsystem {
     }
 
     @Override public void onStop(double timestamp) {
-
     }
 
     @Override public boolean checkSystem() {

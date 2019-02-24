@@ -6,7 +6,6 @@ import frc.robot.Constants.GENERAL;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.CrashTrackingRunnable;
 import frc.robot.lib.util.DeltaTime;
-import frc.robot.subsystems.Vision;
 import java.util.List;
 
 /**
@@ -24,8 +23,8 @@ public class SubsystemManager {
 
         @Override public void runCrashTracked() {
             synchronized (taskRunningLock_) {
+                double now = fastDt.updateDt();
                 if (running_) {
-                    double now = fastDt.updateDt();
                     for (Subsystem subsystem : mAllSubsystems) {
                         Input.updateControlInput();
                         subsystem.readPeriodicInputs(now);
@@ -38,11 +37,19 @@ public class SubsystemManager {
                             count = 0;
                         }
                         count++;
-                     //   Vision.getInstance().updateLimelight();
-                       // Vision.getInstance().updatePixy();
+
                     }
-                    timestamp_ = now;
+                   /* Vision.getInstance().updateLimelight();
+                    Vision.getInstance().updatePixy(); */
+
+                } else {
+                    for (Subsystem subsystem : mAllSubsystems) {
+                        subsystem.outputTelemetry(now);
+                    }
+                    /*Vision.getInstance().updateLimelight();
+                    Vision.getInstance().updatePixy(); */
                 }
+                timestamp_ = now;
             }
         }
     };
@@ -68,7 +75,7 @@ public class SubsystemManager {
         mainDt.updateDt();
     }
 
-    public synchronized void startAuto() {
+    public void startAuto() {
         double now = Timer.getFPGATimestamp();
         for (Subsystem subsystem : mAllSubsystems) {
             subsystem.autonomousInit(now);
@@ -82,7 +89,7 @@ public class SubsystemManager {
         notifier_.startPeriodic(GENERAL.kFastLooperDt);
     }
 
-    public synchronized void startTeleop() {
+    public void startTeleop() {
         double now = Timer.getFPGATimestamp();
         for (Subsystem subsystem : mAllSubsystems) {
             subsystem.teleopInit(now);
@@ -93,10 +100,9 @@ public class SubsystemManager {
 
         }
         notifier_.startPeriodic(GENERAL.kFastLooperDt);
-
     }
 
-    public synchronized void stop() {
+    public void stop() {
         if (running_) {
             System.out.println("Stopping loops");
             running_ = false;

@@ -56,7 +56,7 @@ public class MkMath {
         return java.lang.Math.sin(java.lang.Math.toRadians(deg));
     }
 
-    public static double angleToNativeUnits(double ang) {
+    public static double degreesToNativeUnits(double ang) {
         return (ang / 360.0) * 4096.0;
     }
 
