@@ -2,12 +2,14 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
+import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants;
+import frc.robot.Constants.CAN;
 import frc.robot.Constants.DRIVE;
 import frc.robot.lib.drivers.MkGyro;
 import frc.robot.lib.drivers.MkTalon;
@@ -30,6 +32,7 @@ import frc.robot.paths.RobotState;
 public class Drive extends Subsystem {
 
     private final MkTalon mLeftDrive, mRightDrive;
+    private final PigeonIMU mPigeon;
     private final MkGyro navX;
     public PeriodicIO mPeriodicIO;
     public DriveControlState mDriveControlState;
@@ -54,6 +57,7 @@ public class Drive extends Subsystem {
         mPeriodicIO = new PeriodicIO();
         mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left, mDriveTab);
         mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right, mDriveTab);
+        mPigeon = new PigeonIMU(CAN.kRightCargoIntakeTalonID);
         navX = new MkGyro(Port.kMXP);
         mMotionPlanner = new DriveMotionPlanner();
     }

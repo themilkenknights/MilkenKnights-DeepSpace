@@ -1,7 +1,16 @@
 package frc.robot;
 
+import com.ctre.phoenix.motorcontrol.FeedbackDevice;
+import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
+import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
+import com.ctre.phoenix.motorcontrol.RemoteSensorSource;
+import com.ctre.phoenix.motorcontrol.VelocityMeasPeriod;
+import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
+import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.InterpolatingTreeMap;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Unless otherwise noted by raw/native/RPM, all position unites are in inches and degrees
@@ -48,21 +57,34 @@ public final class Constants {
         public static final int kPneumaticsControlModuleID = 0;
         public static final int kPowerDistributionPanelID = 11;
 
+        //SRX Mag Encoder for Left Drive
         public static final int kDriveLeftMasterTalonID = 10;
+
+        //Empty
         public static final int kDriveLeftSlaveVictorID = 9;
 
+        //SRX Mag Encoder for Right Drive
         public static final int kDriveRightMasterTalonID = 5;
+
+        //Empty
         public static final int kDriveRightSlaveVictorID = 4;
 
         public static final int kGroundHatchArmTalonID = 8;
-        public static final int kHatchLimitSwitchTalonID = 3;
 
+        //Kettering Reverse Limit
+        public static final int kHatchReverseLimitSwitchTalonID = 3;
+
+        //SRX Mag Encoder for Cargo Arm
         public static final int kMasterCargoArmTalonID = 7;
+
+        //Empty
         public static final int kSlaveCargoArmVictorID = 2;
 
+        //Used for Cargo Reverse Limit Switch and Spear Limit
         public static final int kLeftCargoIntakeTalonID = 1;
-        public static final int kRightCargoIntakeVictorID = 6;
 
+        //Used for Pigeon IMU
+        public static final int kRightCargoIntakeTalonID = 6;
     }
 
 
@@ -268,4 +290,156 @@ public final class Constants {
     }
 
 
+    public static class CONFIG {
+        public static final Map<TalonLoc, TalonSRXConfiguration> kConfigs = new HashMap<TalonLoc, TalonSRXConfiguration>();
+
+        static {
+            kConfigs.put(TalonLoc.Left, new TalonSRXConfiguration());
+            kConfigs.put(TalonLoc.Right, new TalonSRXConfiguration());
+            kConfigs.put(TalonLoc.Cargo_Arm, new TalonSRXConfiguration());
+            kConfigs.put(TalonLoc.Hatch_Arm, new TalonSRXConfiguration());
+            kConfigs.put(TalonLoc.Cargo_Intake, new TalonSRXConfiguration());
+            for (TalonLoc loc : kConfigs.keySet()) {
+                TalonSRXConfiguration tal = kConfigs.get(loc);
+                if (loc == TalonLoc.Left || loc == TalonLoc.Right) {
+                    tal.forwardLimitSwitchSource = LimitSwitchSource.Deactivated;
+                    tal.reverseLimitSwitchSource = LimitSwitchSource.Deactivated;
+                    tal.sum0Term = FeedbackDevice.CTRE_MagEncoder_Relative;
+                    tal.sum1Term = FeedbackDevice.RemoteSensor0;
+                    tal.diff0Term = FeedbackDevice.RemoteSensor1;
+                    tal.diff1Term = FeedbackDevice.PulseWidthEncodedPosition;
+                    tal.peakOutputForward = 1.0;
+                    tal.peakOutputReverse = -1.0;
+                    tal.neutralDeadband = 0.0;
+                    tal.voltageCompSaturation = 12.0;
+                    tal.voltageMeasurementFilter = 32;
+                    tal.velocityMeasurementPeriod = VelocityMeasPeriod.Period_25Ms;
+                    tal.velocityMeasurementWindow = 8;
+                    tal.forwardLimitSwitchNormal = LimitSwitchNormal.Disabled;
+                    tal.reverseLimitSwitchNormal = LimitSwitchNormal.Disabled;
+                    tal.forwardSoftLimitEnable = false;
+                    tal.reverseSoftLimitEnable = false;
+                    tal.slot0.kP = 7 * (0.1 * 1023.0) / (700);
+                    tal.slot0.kI = 0.0;
+                    tal.slot0.kD = 3 * tal.slot0.kP;
+                    tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
+                    tal.slot0.integralZone = 100;
+                    tal.slot0.allowableClosedloopError = 1;
+                    tal.slot0.maxIntegralAccumulator = 0.0;
+                    tal.slot0.closedLoopPeakOutput = 1.0;
+                    tal.slot0.closedLoopPeriod = 1;
+                    tal.slot1.kP = 0.1;
+                    tal.slot1.kI = 0.0;
+                    tal.slot1.kD = 0.0;
+                    tal.slot1.kF = 0.0;
+                    tal.slot1.integralZone = 100;
+                    tal.slot1.allowableClosedloopError = 200;
+                    tal.slot1.maxIntegralAccumulator = 91.000000;
+                    tal.slot1.closedLoopPeakOutput = 0.5;
+                    tal.slot1.closedLoopPeriod = 1;
+                    tal.slot2.kP = 2.0;
+                    tal.slot2.kI = 0.0;
+                    tal.slot2.kD = 4.0;
+                    tal.slot2.kF = 6.323232;
+                    tal.slot2.integralZone = 200;
+                    tal.slot2.allowableClosedloopError = 343;
+                    tal.slot2.maxIntegralAccumulator = 334.000000;
+                    tal.slot2.closedLoopPeakOutput = 1.0;
+                    tal.slot2.closedLoopPeriod = 1;
+                    tal.slot3.kP = 34.000000;
+                    tal.slot3.kI = 32.000000;
+                    tal.slot3.kD = 436.000000;
+                    tal.slot3.kF = 0.343430;
+                    tal.slot3.integralZone = 2323;
+                    tal.slot3.allowableClosedloopError = 543;
+                    tal.slot3.maxIntegralAccumulator = 687.000000;
+                    tal.slot3.closedLoopPeakOutput = 0.129032;
+                    tal.slot3.closedLoopPeriod = 1;
+                    tal.auxPIDPolarity = false;
+                    tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.5);
+                    tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.5);
+                    tal.motionCurveStrength = 6;
+                    tal.feedbackNotContinuous = false;
+                    tal.remoteSensorClosedLoopDisableNeutralOnLOS = false;
+                    tal.limitSwitchDisableNeutralOnLOS = true;
+                    tal.softLimitDisableNeutralOnLOS = false;
+                } else if (loc == TalonLoc.Cargo_Arm || loc == TalonLoc.Hatch_Arm) {
+                    tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
+                    tal.forwardLimitSwitchSource = LimitSwitchSource.Deactivated;
+                    tal.reverseLimitSwitchSource = LimitSwitchSource.RemoteTalonSRX;
+                    tal.reverseLimitSwitchNormal = LimitSwitchNormal.NormallyOpen;
+                    tal.peakOutputForward = 1.0;
+                    tal.peakOutputReverse = -1.0;
+                    tal.neutralDeadband = 0.0;
+                    tal.voltageCompSaturation = 12.0;
+                    tal.voltageMeasurementFilter = 32;
+                    tal.velocityMeasurementPeriod = VelocityMeasPeriod.Period_25Ms;
+                    tal.velocityMeasurementWindow = 8;
+                    tal.forwardSoftLimitEnable = true;
+                    tal.reverseSoftLimitEnable = true;
+                    tal.feedbackNotContinuous = false;
+                    tal.remoteSensorClosedLoopDisableNeutralOnLOS = false;
+                    tal.limitSwitchDisableNeutralOnLOS = true;
+                    tal.softLimitDisableNeutralOnLOS = false;
+                    tal.motionCurveStrength = 6;
+                    tal.slot0.closedLoopPeakOutput = 1.0;
+                    tal.slot0.closedLoopPeriod = 1;
+                } else if (loc == TalonLoc.Cargo_Intake) {
+                    tal.peakOutputForward = 1.0;
+                    tal.peakOutputReverse = -1.0;
+                    tal.neutralDeadband = 0.0;
+                    tal.voltageCompSaturation = 12.0;
+                    tal.voltageMeasurementFilter = 32;
+                }
+
+                if (loc == TalonLoc.Left) {
+                    tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
+                    tal.primaryPID.selectedFeedbackCoefficient = 1.0;
+                } else if (loc == TalonLoc.Right) {
+                    tal.remoteFilter0.remoteSensorDeviceID = CAN.kDriveLeftMasterTalonID;
+                    tal.remoteFilter0.remoteSensorSource = RemoteSensorSource.TalonSRX_SelectedSensor;
+
+                    tal.remoteFilter1.remoteSensorDeviceID = CAN.kRightCargoIntakeTalonID;
+                    tal.remoteFilter1.remoteSensorSource = RemoteSensorSource.GadgeteerPigeon_Yaw;
+
+                    tal.sum0Term = FeedbackDevice.RemoteSensor0;
+                    tal.sum1Term = FeedbackDevice.CTRE_MagEncoder_Relative;
+
+                    tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
+                    tal.primaryPID.selectedFeedbackCoefficient = 0.50;
+
+                    tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
+                    tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0;
+                } else if (loc == TalonLoc.Cargo_Arm) {
+                    tal.reverseLimitSwitchDeviceID = CAN.kLeftCargoIntakeTalonID;
+                    tal.forwardSoftLimitThreshold = 0;
+                    tal.reverseSoftLimitThreshold = 0;
+                    tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.5);
+                    tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.5);
+                    tal.slot0.kP = 7 * (0.1 * 1023.0) / (700);
+                    tal.slot0.kI = 0.0;
+                    tal.slot0.kD = 3 * tal.slot0.kP;
+                    tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
+                    tal.slot0.integralZone = 100;
+                    tal.slot0.allowableClosedloopError = 1;
+                    tal.slot0.maxIntegralAccumulator = 0.0;
+                } else if (loc == TalonLoc.Hatch_Arm) {
+                    tal.reverseLimitSwitchDeviceID = CAN.kHatchReverseLimitSwitchTalonID;
+                    tal.forwardSoftLimitThreshold = 0;
+                    tal.reverseSoftLimitThreshold = 0;
+                    tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.5);
+                    tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.5);
+                    tal.slot0.kP = 7 * (0.1 * 1023.0) / (700);
+                    tal.slot0.kI = 0.0;
+                    tal.slot0.kD = 3 * tal.slot0.kP;
+                    tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
+                    tal.slot0.integralZone = 100;
+                    tal.slot0.allowableClosedloopError = 1;
+                    tal.slot0.maxIntegralAccumulator = 0.0;
+                } else if (loc == TalonLoc.Cargo_Intake) {
+
+                }
+            }
+        }
+    }
 }

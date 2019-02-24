@@ -6,9 +6,8 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.InvertType;
-import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
-import com.ctre.phoenix.motorcontrol.RemoteLimitSwitchSource;
+import com.ctre.phoenix.motorcontrol.StatusFrame;
 import com.ctre.phoenix.motorcontrol.StatusFrameEnhanced;
 import com.ctre.phoenix.motorcontrol.VelocityMeasPeriod;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
@@ -20,8 +19,8 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
-import frc.robot.Constants.CAN;
 import frc.robot.Constants.CARGO_ARM;
+import frc.robot.Constants.CONFIG;
 import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.HATCH_ARM;
 import frc.robot.Constants.TEST;
@@ -89,71 +88,29 @@ public class MkTalon {
         lastNeutralMode = NeutralMode.Brake;
         lastOutput = Double.NaN;
         CTRE(masterTalon.configFactoryDefault(kLong));
-        CTRE(masterTalon.configAllSettings(new TalonSRXConfiguration()));
+        CTRE(masterTalon.configAllSettings(CONFIG.kConfigs.get(mSide)));
         CTRE(masterTalon.clearStickyFaults(kLong));
         masterTalon.selectProfileSlot(kSlot, kSlot);
         masterTalon.setNeutralMode(NeutralMode.Brake);
-        CTRE(masterTalon.configNominalOutputForward(0.0, kLong));
-        CTRE(masterTalon.configNominalOutputReverse(0.0, kLong));
-        CTRE(masterTalon.configPeakOutputForward(GENERAL.kMaxNominalOutput, kLong));
-        CTRE(masterTalon.configPeakOutputReverse(-GENERAL.kMaxNominalOutput, kLong));
-        CTRE(masterTalon.configVoltageCompSaturation(12.0, kLong));
-        CTRE(masterTalon.configVoltageMeasurementFilter(32, kLong));
         masterTalon.enableVoltageCompensation(true);
-        CTRE(masterTalon.configNeutralDeadband(0.0, kLong));
-        CTRE(masterTalon.configClosedloopRamp(0.0, kLong));
-        CTRE(masterTalon.configMotionSCurveStrength(4, kLong));
         switch (mSide) {
             case Left:
-                CTRE(masterTalon.config_kF(kSlot, Constants.DRIVE.kLeftDriveF, kLong));
                 masterTalon.setInverted(Constants.DRIVE.kLeftMasterInvert);
                 slaveVictor.setInverted(Constants.DRIVE.kLeftSlaveInvert);
                 masterTalon.setSensorPhase(Constants.DRIVE.kLeftSensorInvert);
                 break;
             case Right:
-                CTRE(masterTalon.config_kF(kSlot, Constants.DRIVE.kRightDriveF, kLong));
                 masterTalon.setInverted(Constants.DRIVE.KRightMasterInvert);
                 slaveVictor.setInverted(Constants.DRIVE.kRightSlaveInvert);
                 masterTalon.setSensorPhase(Constants.DRIVE.kRightSensorInvert);
                 break;
             case Cargo_Arm:
-                masterTalon.setSensorPhase(CARGO_ARM.ARM_SENSOR_PHASE);
                 masterTalon.setInverted(CARGO_ARM.ARM_MASTER_DIRECTION);
-                CTRE(masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, kSlot, kLong));
-                CTRE(masterTalon.configFeedbackNotContinuous(false, kLong));
-                CTRE(masterTalon.config_kF(kSlot, CARGO_ARM.ARM_F, kLong));
-                CTRE(masterTalon.config_kP(kSlot, CARGO_ARM.ARM_P, kLong));
-                CTRE(masterTalon.config_kI(kSlot, CARGO_ARM.ARM_I, kLong));
-                CTRE(masterTalon.config_kD(kSlot, CARGO_ARM.ARM_D, kLong));
-                CTRE(masterTalon.config_IntegralZone(kSlot, 114, kLong));
-                CTRE(masterTalon.configAllowableClosedloopError(kSlot, 6, kLong));
-                CTRE(masterTalon.configMaxIntegralAccumulator(kSlot, 5000, kLong));
-                CTRE(masterTalon.configMotionCruiseVelocity((int) CARGO_ARM.MOTION_MAGIC_CRUISE_VEL, kLong));
-                CTRE(masterTalon.configMotionAcceleration((int) CARGO_ARM.MOTION_MAGIC_ACCEL, kLong));
-                CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.angleToNativeUnits(CARGO_ARM.ARM_FORWARD_LIMIT), kLong));
-                CTRE(masterTalon.configReverseSoftLimitThreshold((int) MkMath.angleToNativeUnits(CARGO_ARM.ARM_REVERSE_LIMIT), kLong));
-                CTRE(masterTalon.configForwardSoftLimitEnable(true, kLong));
-                CTRE(masterTalon.configReverseSoftLimitEnable(true, kLong));
-                CTRE(masterTalon.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kLeftCargoIntakeTalonID, kLong));
-                CTRE(masterTalon.configLimitSwitchDisableNeutralOnLOS(true, kLong));
+                masterTalon.setSensorPhase(CARGO_ARM.ARM_SENSOR_PHASE);
                 break;
             case Hatch_Arm:
                 masterTalon.setSensorPhase(HATCH_ARM.ARM_SENSOR_PHASE);
                 masterTalon.setInverted(HATCH_ARM.ARM_MASTER_DIRECTION);
-                CTRE(masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, kSlot, kLong));
-                CTRE(masterTalon.configFeedbackNotContinuous(false, kLong));
-                CTRE(masterTalon.config_kF(kSlot, HATCH_ARM.ARM_F, kLong));
-                CTRE(masterTalon.config_kP(kSlot, HATCH_ARM.ARM_P, kLong));
-                CTRE(masterTalon.config_kI(kSlot, HATCH_ARM.ARM_I, kLong));
-                CTRE(masterTalon.config_kD(kSlot, HATCH_ARM.ARM_D, kLong));
-                CTRE(masterTalon.configMotionCruiseVelocity((int) HATCH_ARM.kMotionMagicCruiseVel, kLong));
-                CTRE(masterTalon.configMotionAcceleration((int) HATCH_ARM.kMotionMagicAccel, kLong));
-                CTRE(masterTalon.configForwardSoftLimitThreshold((int) MkMath.angleToNativeUnits(HATCH_ARM.ARM_FORWARD_LIMIT), kLong));
-                CTRE(masterTalon.configReverseSoftLimitThreshold((int) MkMath.angleToNativeUnits(HATCH_ARM.ARM_REVERSE_LIMIT), kLong));
-                CTRE(masterTalon.configForwardSoftLimitEnable(true, kLong));
-                CTRE(masterTalon.configReverseSoftLimitEnable(true, kLong));
-                CTRE(masterTalon.configReverseLimitSwitchSource(RemoteLimitSwitchSource.RemoteTalonSRX, LimitSwitchNormal.NormallyOpen, CAN.kHatchLimitSwitchTalonID, kLong));
-                CTRE(masterTalon.configLimitSwitchDisableNeutralOnLOS(true, kLong));
                 break;
             case Cargo_Intake:
                 masterTalon.setInverted(CARGO_ARM.LEFT_INTAKE_DIRECTION);
@@ -164,15 +121,12 @@ public class MkTalon {
                 break;
         }
         switch (mSide) {
-            case Left:
             case Right:
-                CTRE(masterTalon.config_kP(kSlot, Constants.DRIVE.kDriveP, kLong));
-                CTRE(masterTalon.config_kI(kSlot, Constants.DRIVE.kDriveI, kLong));
-                CTRE(masterTalon.config_kD(kSlot, Constants.DRIVE.kDriveD, kLong));
-                CTRE(masterTalon.configMotionCruiseVelocity((int) Constants.DRIVE.kMotionMagicCruiseNativeVel, kLong));
-                CTRE(masterTalon.configMotionAcceleration((int) Constants.DRIVE.kMotionMagicNativeAccel, kLong));
-                CTRE(masterTalon.configVelocityMeasurementPeriod(VelocityMeasPeriod.Period_50Ms, kLong));
-                CTRE(masterTalon.configVelocityMeasurementWindow(1, kLong));
+                CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_12_Feedback1, 10, kLong));
+                CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_13_Base_PIDF0, 10, kLong));
+                CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_14_Turn_PIDF1, 10, kLong));
+                CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_10_Targets, 10, kLong));
+            case Left:
                 CTRE(masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kLong));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 5, kLong));
@@ -213,25 +167,31 @@ public class MkTalon {
         }
 
         //Set Slave Talons/Victors
-        if (mSide == TalonLoc.Hatch_Arm) {
-            CTRE(slaveTalon.configAllSettings(new TalonSRXConfiguration()));
+        if (mSide == TalonLoc.Hatch_Arm || mSide == TalonLoc.Cargo_Intake) {
             CTRE(slaveTalon.configFactoryDefault(kLong));
+            CTRE(slaveTalon.configAllSettings(new TalonSRXConfiguration()));
             CTRE(slaveTalon.clearStickyFaults(kLong));
-            CTRE(slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 10));
-            CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kLong));
-            CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 500, kLong));
-            CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 500, kLong));
-            CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 500, kLong));
-            CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 500, kLong));
-            CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 500, kLong));
             slaveTalon.setNeutralMode(NeutralMode.Brake);
-            CTRE(slaveTalon.configNominalOutputForward(0, kLong));
-            CTRE(slaveTalon.configNominalOutputReverse(0, kLong));
-            CTRE(slaveTalon.configPeakOutputForward(GENERAL.kMaxNominalOutput, kLong));
-            CTRE(slaveTalon.configPeakOutputReverse(-GENERAL.kMaxNominalOutput, kLong));
             CTRE(slaveTalon.configVoltageCompSaturation(12.0, kLong));
             slaveTalon.enableVoltageCompensation(true);
             CTRE(slaveTalon.configVoltageMeasurementFilter(32, kLong));
+            if (mSide == TalonLoc.Hatch_Arm) {
+                CTRE(slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 50));
+                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kLong));
+                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 500, kLong));
+                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 500, kLong));
+                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 500, kLong));
+                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 500, kLong));
+                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 500, kLong));
+            } else if (mSide == TalonLoc.Cargo_Intake) {
+                CTRE(slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 20));
+                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 500, kLong));
+                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 500, kLong));
+                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 500, kLong));
+                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 500, kLong));
+                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_11_UartGadgeteer, 5, kLong));
+                CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 500, kLong));
+            }
         } else {
             CTRE(slaveVictor.configAllSettings(new VictorSPXConfiguration()));
             CTRE(slaveVictor.configFactoryDefault(kLong));
