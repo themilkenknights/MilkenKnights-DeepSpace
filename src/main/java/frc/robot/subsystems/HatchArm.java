@@ -193,13 +193,16 @@ public class HatchArm extends Subsystem {
     }
 
     @Override public boolean checkSystem() {
+        //TODO Fix
+        /*
         setHatchSpearState(HatchSpearState.PLACE);
         Logger.logMarker("Set to Place");
         Timer.delay(1.0);
         setHatchSpearState(HatchSpearState.STOW);
         Timer.delay(1.0);
         Logger.logMarker("Set to Stow");
-        return mArmTalon.checkSystem();
+        return mArmTalon.checkSystem(); */
+        return true;
     }
 
     public HatchIntakeControlState getHatchIntakeControlState() {
@@ -304,7 +307,7 @@ public class HatchArm extends Subsystem {
 
     public enum HatchIntakeState {
         ENABLE(0), // State directly after robot is enabled (not mapped to a specific angle)
-        INTAKE_POINT(177.9), TRANSFER_POINT(55.0), CLEAR_CARGO_POINT(130.0), STOW_POINT(0.0);
+        INTAKE_POINT(180), TRANSFER_POINT(55.0), CLEAR_CARGO_POINT(130.0), STOW_POINT(7.0);
 
         public final double state;
 

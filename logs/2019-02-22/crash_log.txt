@@ -1,0 +1,8 @@
+bb151545-baca-4a29-9a92-3e5b98998d62, Exception, Fri Feb 22 16:14:56 PST 2019, java.lang.NullPointerException
+	at frc.robot.subsystems.CargoArm.setIntakeRollers(CargoArm.java:170)
+	at frc.robot.Input.updateControlInput(Input.java:119)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:30)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
