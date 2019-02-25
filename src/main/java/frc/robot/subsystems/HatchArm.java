@@ -252,6 +252,7 @@ public class HatchArm extends Subsystem {
         } else if (state == HatchMechanismState.TRANSFER) {
             mArmTalon.masterTalon.configMotionCruiseVelocity((int) HATCH_ARM.kMotionMagicCruiseVel / 10);
         }
+        mHatchMechanismState = state;
         switch (state) {
             case TRANSFER:
                 setHatchSpearState(HatchSpearState.PLACE);
@@ -292,7 +293,6 @@ public class HatchArm extends Subsystem {
                 Logger.logErrorWithTrace("Unexpected Hatch Mechanism: " + mHatchMechanismState);
                 break;
         }
-        mHatchMechanismState = state;
     }
 
     public enum HatchIntakeControlState {

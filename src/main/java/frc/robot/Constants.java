@@ -335,17 +335,6 @@ public final class Constants {
                 } else if (loc == TalonLoc.Right) {
                     tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
                     tal.primaryPID.selectedFeedbackCoefficient = 1.0;
-                    /*
-                    tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
-                    tal.primaryPID.selectedFeedbackCoefficient = 0.50;
-                    tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
-                    tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0;
-                    tal.remoteFilter0.remoteSensorDeviceID = CAN.kDriveLeftMasterTalonID;
-                    tal.remoteFilter0.remoteSensorSource = RemoteSensorSource.TalonSRX_SelectedSensor;
-                    tal.remoteFilter1.remoteSensorDeviceID = CAN.kRightCargoIntakeTalonID;
-                    tal.remoteFilter1.remoteSensorSource = RemoteSensorSource.GadgeteerPigeon_Yaw;
-                    tal.sum0Term = FeedbackDevice.RemoteSensor0;
-                    tal.sum1Term = FeedbackDevice.CTRE_MagEncoder_Relative; */
                 } else if (loc == TalonLoc.Cargo_Arm) {
                     tal.reverseLimitSwitchDeviceID = CAN.kLeftCargoIntakeTalonID;
                     tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(190);

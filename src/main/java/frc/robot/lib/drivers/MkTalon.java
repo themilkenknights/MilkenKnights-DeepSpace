@@ -28,7 +28,6 @@ import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.HatchArm;
 import frc.robot.subsystems.HatchArm.HatchMechanismState;
-import java.sql.Time;
 import java.util.ArrayList;
 
 public class MkTalon {
@@ -124,6 +123,8 @@ public class MkTalon {
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_13_Base_PIDF0, 10, kLong));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_14_Turn_PIDF1, 10, kLong));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_10_Targets, 10, kLong));
+                masterTalon.selectProfileSlot(CONFIG.kDistanceSlot, CONFIG.kPIDPrimary);
+                masterTalon.selectProfileSlot(CONFIG.kTurningSlot, CONFIG.kPIDAuxilliaryTurn);
             case Left:
                 CTRE(masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kLong));

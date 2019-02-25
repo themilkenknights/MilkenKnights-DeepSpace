@@ -4,18 +4,14 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
-import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants;
-import frc.robot.Constants.CAN;
 import frc.robot.Constants.CONFIG;
 import frc.robot.Constants.DRIVE;
-import frc.robot.Constants.GENERAL;
-import frc.robot.lib.drivers.CT;
 import frc.robot.lib.drivers.MkGyro;
 import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
@@ -289,8 +285,6 @@ public class Drive extends Subsystem {
     }
 
     public void configHatchVision() {
-        mRightDrive.masterTalon.selectProfileSlot(CONFIG.kDistanceSlot, CONFIG.kPIDPrimary);
-        mRightDrive.masterTalon.selectProfileSlot(CONFIG.kTurningSlot, CONFIG.kPIDAuxilliaryTurn);
         mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 0.5, 0);
         mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.SensorSum, CONFIG.kPIDPrimary, 0);
         mRightDrive.masterTalon.configSelectedFeedbackCoefficient(0.5, CONFIG.kPIDPrimary, 0);
@@ -298,8 +292,8 @@ public class Drive extends Subsystem {
 
     public void configTeleopDrive() {
         mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 1.0, 0);
-        mRightDrive.masterTalon.configSelectedFeedbackCoefficient(1.0, CONFIG.kPIDPrimary, 0);
         mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, CONFIG.kPIDPrimary, 0);
+        mRightDrive.masterTalon.configSelectedFeedbackCoefficient(1.0, CONFIG.kPIDPrimary, 0);
         setOpenLoop(DriveSignal.BRAKE);
     }
 
@@ -384,9 +378,9 @@ public class Drive extends Subsystem {
      * Zero all pigeon values
      */
     private void zeroPigeon() {
-      //  CT.RE(mPigeon.setFusedHeading(0, GENERAL.kLongCANTimeoutMs));
-     //   CT.RE(mPigeon.setYaw(0, GENERAL.kLongCANTimeoutMs));
-      //  CT.RE(mPigeon.setAccumZAngle(0, GENERAL.kLongCANTimeoutMs));
+        //  CT.RE(mPigeon.setFusedHeading(0, GENERAL.kLongCANTimeoutMs));
+        //   CT.RE(mPigeon.setYaw(0, GENERAL.kLongCANTimeoutMs));
+        //  CT.RE(mPigeon.setAccumZAngle(0, GENERAL.kLongCANTimeoutMs));
     }
 
     /**

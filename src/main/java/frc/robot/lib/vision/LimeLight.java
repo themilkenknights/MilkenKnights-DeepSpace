@@ -80,7 +80,7 @@ public class LimeLight {
     }
 
     public synchronized void updateTarget() {
-        mTarget = new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(), getVertLength(), getCaptureTime(), getCamTran());
+        mTarget = new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(), getVertLength(), getCaptureTime());
         mThrottleAverage.addNumber(mTarget);
     }
 
