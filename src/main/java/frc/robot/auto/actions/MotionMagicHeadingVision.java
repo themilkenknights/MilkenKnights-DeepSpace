@@ -16,6 +16,7 @@ public class MotionMagicHeadingVision implements Action {
 
     @Override public void update() {
         LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
+        
     }
 
     @Override public void done() {

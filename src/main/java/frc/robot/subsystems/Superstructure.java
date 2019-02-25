@@ -122,7 +122,7 @@ public class Superstructure extends Subsystem {
         switch (state) {
             case TELEOP_DRIVE:
                 AutoChooser.disableAuto();
-                mDrive.configTeleopDrive();
+                mDrive.configNormalDrive();
                 break;
             case VISION_INTAKE_STATION:
             case VISION_PLACING:

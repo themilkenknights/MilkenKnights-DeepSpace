@@ -15,13 +15,13 @@
 
 - Left Stick (X axis) Turn
 
-- A Button Quick Turn
+- A Vision Hatch Outtake
 
-- X Button Toggle Forward Climb Solenoids
+- B Vision Cargo Outtake
 
-- B Button Toggle Rear Climb Solenoids
+- X Vision HP Intake
 
-- Y Button Toggle Vision Aim Assist
+- Y Auto Climb
 
 ## Operator Button Map
 
@@ -29,30 +29,30 @@
 
 - 2 (Thumb Button) Toggle Manual Cargo Arm Open Loop
 
-- 3 Vision HP Intake
+- 3 Hatch Spear Toggle
 
-- 4 Vision Hatch Place
+- 4 Hatch Spear HP Intake (Limit Switch Enabled)
 
 - 5 Roller Intake
 
 - 6 Roller Outtake
 
-- 7 Stow All Button
+- 7 Zero Cargo Arm
 
-- 8 Ground Intake Clear Cargo Setpoint
+- 8 Zero Kettering Intake
 
-- 9 Ground Intake Toggle (Stowed/Ground Setpoints)
+- 9 Stop Auto Action
 
-- 10 Ground Intake Transfer Hatch
+- 10 Defense Mpde
 
-- 11 Hatch Spear Toggle (Place/Stow)
+- 11 Ground Intake Toggle (Stowed/Ground Setpoints)
 
-- 12 Hatch Spear HP Intake (Limit Switch Enabled)
+- 12 Ground Intake Transfer Hatch
 
-- POV UP Cargo Arm Reverse Rocket Setpoint
+- POV UP Cargo Rocket Level One
 
-- POV DOWN Cargo Arm Reverse Cargoship Setpoint
+- POV DOWN Cargo Rocket Level Two
 
-- POV LEFT Cargo Arm Intake Setpoint
+- POV LEFT Cargo Intake Setpoint
 
-- POV RIGHT Cargo Vision Auto Start (Based on current Cargo Arm Setpoint)
+- POV RIGHT Cargo Reverse Cargoship

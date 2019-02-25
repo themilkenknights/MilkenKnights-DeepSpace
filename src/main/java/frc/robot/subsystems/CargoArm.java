@@ -22,7 +22,7 @@ public class CargoArm extends Subsystem {
     private static CargoArmControlState mCargoArmControlState = CargoArmControlState.MOTION_MAGIC;
     private static CargoArmState mCargoArmState = CargoArmState.ENABLE;
     private final MkTalon mArmTalon;
-    private final MkTalon mIntakeTalon;
+    public final MkTalon mIntakeTalon; //TODO Fix
     private boolean mDisCon, mArmSafety = false;
     private double mStartDis, mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable = 0.0;
     private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus, mRawError;
