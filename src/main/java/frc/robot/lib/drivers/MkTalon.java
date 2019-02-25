@@ -296,7 +296,7 @@ public class MkTalon {
     }
 
     /**
-     * Update shuffleboard tab for mechanism with latest values
+     * Update shuffleboard with latest values
      */
     public synchronized void updateShuffleboard() {
         mVel.setDouble(getVelocity());
