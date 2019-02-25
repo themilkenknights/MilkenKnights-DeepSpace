@@ -8,6 +8,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import frc.robot.auto.modes.ClimbLevel2Mode;
 import frc.robot.auto.modes.TestPathMode;
 import frc.robot.lib.util.Logger;
 import frc.robot.paths.TrajectoryGenerator;
@@ -57,7 +58,7 @@ public class Robot extends TimedRobot {
             Logger.logAutoInit();
             mMatchState = MatchState.AUTO;
             mSubsystemManager.startAuto();
-            AutoChooser.startAuto(new TestPathMode(false));
+            AutoChooser.startAuto(new ClimbLevel2Mode());
         } catch (Throwable t) {
             Logger.logThrowableCrash(t);
             throw t;

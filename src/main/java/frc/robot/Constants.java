@@ -309,7 +309,7 @@ public final class Constants {
                     tal.slot0.kP = DRIVE.kDriveKp;
                     tal.slot0.kD = DRIVE.kDriveKd;
                     tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
-                    tal.slot0.closedLoopPeakOutput = 0.5;
+                    tal.slot0.closedLoopPeakOutput = 1.0;
                     //Motion Magic Turning
                     tal.slot1.kP = 2.0;
                     tal.slot1.kI = 0.0;
@@ -333,6 +333,9 @@ public final class Constants {
                     tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
                     tal.primaryPID.selectedFeedbackCoefficient = 1.0;
                 } else if (loc == TalonLoc.Right) {
+                    tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
+                    tal.primaryPID.selectedFeedbackCoefficient = 1.0;
+                    /*
                     tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
                     tal.primaryPID.selectedFeedbackCoefficient = 0.50;
                     tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
@@ -342,7 +345,7 @@ public final class Constants {
                     tal.remoteFilter1.remoteSensorDeviceID = CAN.kRightCargoIntakeTalonID;
                     tal.remoteFilter1.remoteSensorSource = RemoteSensorSource.GadgeteerPigeon_Yaw;
                     tal.sum0Term = FeedbackDevice.RemoteSensor0;
-                    tal.sum1Term = FeedbackDevice.CTRE_MagEncoder_Relative;
+                    tal.sum1Term = FeedbackDevice.CTRE_MagEncoder_Relative; */
                 } else if (loc == TalonLoc.Cargo_Arm) {
                     tal.reverseLimitSwitchDeviceID = CAN.kLeftCargoIntakeTalonID;
                     tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(190);

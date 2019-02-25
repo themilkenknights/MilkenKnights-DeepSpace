@@ -30,7 +30,7 @@ public class Input {
 
     private static final MkJoystickButton toggleDriverVisionAssist = driverJoystick.getButton(4, "Driver Vision Assist");
     private static final MkJoystickButton mRearClimb = driverJoystick.getButton(2, "Climb Rear");
-    private static final MkJoystickButton mForwardClimb = driverJoystick.getButton(3, "Climb Climb");
+    private static final MkJoystickButton mForwardClimb = driverJoystick.getButton(3, "Climb Front");
 
     private static final MkJoystickButton mVisionStationIntakeButton = operatorJoystick.getButton(3, "Vision Hatch HP Intake");
     private static final MkJoystickButton mVisionPlaceButton = operatorJoystick.getButton(4, "Vision Place Hatch Button");
