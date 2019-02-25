@@ -2,9 +2,6 @@ package frc.robot.subsystems;
 
 import edu.wpi.cscore.HttpCamera;
 import edu.wpi.cscore.MjpegServer;
-import edu.wpi.cscore.UsbCamera;
-import edu.wpi.cscore.VideoMode.PixelFormat;
-import edu.wpi.cscore.VideoSource.ConnectionStrategy;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.BuiltInWidgets;
@@ -35,11 +32,11 @@ public class Vision extends Subsystem {
     private Vision() {
         ShuffleboardTab dashboardTab = Shuffleboard.getTab("Dash");
         LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
-        //cargoCam = CameraServer.getInstance().startAutomaticCapture(0);
-       // cargoCam.setConnectVerbose(0);
-       // server = CameraServer.getInstance().addSwitchedCamera("Toggle Cam");
-        //server.setSource(LLFeed);
-        dashboardTab.add(LLFeed).withWidget(BuiltInWidgets.kCameraStream).withPosition(1, 1).withSize(5, 4)
+        cargoCam = CameraServer.getInstance().startAutomaticCapture(0);
+        cargoCam.setConnectVerbose(0);
+        server = CameraServer.getInstance().addSwitchedCamera("Toggle Cam");
+        server.setSource(LLFeed);
+        dashboardTab.add(server.getSource()).withWidget(BuiltInWidgets.kCameraStream).withPosition(1, 1).withSize(5, 4)
             .withProperties(Map.of("Show Crosshair", true, "Show Controls", false));// specify widget properties here
         Shuffleboard.selectTab("Dash");
         ShuffleboardTab mVisionTab = Shuffleboard.getTab("Vision");
@@ -83,18 +80,14 @@ public class Vision extends Subsystem {
 
     public void configHatchStream() {
         if (cameraStream != 0) {
-            LLFeed.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
-           // cargoCam.setConnectionStrategy(ConnectionStrategy.kForceClose);
-            //server.setSource(LLFeed);
+            server.setSource(LLFeed);
             cameraStream = 0;
         }
     }
 
     public void configCargoStream() {
         if (cameraStream != 1) {
-           // cargoCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
-            //LLFeed.setConnectionStrategy(ConnectionStrategy.kForceClose);
-           // server.setSource(cargoCam);
+            server.setSource(cargoCam);
             cameraStream = 1;
         }
     }
