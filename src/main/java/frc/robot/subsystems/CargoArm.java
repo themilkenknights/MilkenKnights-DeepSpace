@@ -19,7 +19,7 @@ import frc.robot.lib.util.Logger;
 
 public class CargoArm extends Subsystem {
 
-    private static CargoArmControlState mCargoArmControlState = CargoArmControlState.OPEN_LOOP;
+    private static CargoArmControlState mCargoArmControlState = CargoArmControlState.MOTION_MAGIC;
     private static CargoArmState mCargoArmState = CargoArmState.ENABLE;
     private final MkTalon mArmTalon;
     private final MkTalon mIntakeTalon;
@@ -153,7 +153,12 @@ public class CargoArm extends Subsystem {
     }
 
     @Override public boolean checkSystem() {
-        return mArmTalon.checkSystem();
+        //TODO Fix return mArmTalon.checkSystem();
+        return true;
+    }
+
+    public boolean spearLimit(){
+        return mIntakeTalon.masterTalon.getSensorCollection().isFwdLimitSwitchClosed();
     }
 
     public synchronized void setOpenLoop(double output) {

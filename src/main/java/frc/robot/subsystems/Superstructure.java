@@ -96,6 +96,8 @@ public class Superstructure extends Subsystem {
                 break;
             case VISION_CARGO_OUTTAKE:
                 break;
+            case AUTO_CLIMB:
+                break;
             default:
                 Logger.logErrorWithTrace("Unexpected robot state: " + mRobotState);
                 break;
@@ -132,6 +134,7 @@ public class Superstructure extends Subsystem {
             case VISION_CARGO_INTAKE:
                 startVisionCargoIntake();
             case PATH_FOLLOWING:
+            case AUTO_CLIMB:
                 break;
             default:
                 Logger.logErrorWithTrace("Unexpected robot state: " + mRobotState);
@@ -177,7 +180,7 @@ public class Superstructure extends Subsystem {
 
 
     public enum RobotState {
-        PATH_FOLLOWING, TELEOP_DRIVE, VISION_INTAKE_STATION, VISION_PLACING, VISION_CARGO_INTAKE, VISION_CARGO_OUTTAKE
+        PATH_FOLLOWING, TELEOP_DRIVE, VISION_INTAKE_STATION, VISION_PLACING, VISION_CARGO_INTAKE, VISION_CARGO_OUTTAKE, AUTO_CLIMB
     }
 
 

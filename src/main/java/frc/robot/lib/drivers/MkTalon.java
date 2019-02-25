@@ -28,6 +28,7 @@ import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.HatchArm;
 import frc.robot.subsystems.HatchArm.HatchMechanismState;
+import java.sql.Time;
 import java.util.ArrayList;
 
 public class MkTalon {
@@ -53,7 +54,7 @@ public class MkTalon {
      */
     public MkTalon(int master, int slave, TalonLoc mSide, ShuffleboardTab mTab) {
         masterTalon = new TalonSRX(master);
-        if (mSide == TalonLoc.Hatch_Arm) {
+        if (mSide == TalonLoc.Hatch_Arm || mSide == TalonLoc.Cargo_Intake) {
             slaveVictor = null;
             slaveTalon = new TalonSRX(slave);
         } else {
@@ -87,7 +88,7 @@ public class MkTalon {
         lastOutput = Double.NaN;
         CTRE(masterTalon.clearStickyFaults(kLong));
         CTRE(masterTalon.configFactoryDefault(kLong));
-        CTRE(masterTalon.configAllSettings(CONFIG.kConfigs.get(mSide)));
+        CTRE(masterTalon.configAllSettings(CONFIG.kConfigs.get(mSide), 200));
         masterTalon.setNeutralMode(NeutralMode.Brake);
         masterTalon.enableVoltageCompensation(true);
         switch (mSide) {
@@ -111,7 +112,7 @@ public class MkTalon {
                 break;
             case Cargo_Intake:
                 masterTalon.setInverted(CARGO_ARM.kLeftIntakeDirection);
-                slaveVictor.setInverted(CARGO_ARM.kRightIntakeDirection);
+                slaveTalon.setInverted(CARGO_ARM.kRightIntakeDirection);
                 break;
             default:
                 Logger.logError("Unknown Side");
@@ -146,7 +147,7 @@ public class MkTalon {
                 break;
             case Cargo_Intake:
                 CTRE(masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 10));
-                CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 10, kLong));
+                CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 2, kLong));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 1000, kLong));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 1000, kLong));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 1000, kLong));
@@ -296,7 +297,7 @@ public class MkTalon {
     }
 
     /**
-     * Update shuffleboard tab for mechanism with latest values
+     * Update shuffleboard with latest values
      */
     public synchronized void updateShuffleboard() {
         mVel.setDouble(getVelocity());
@@ -419,45 +420,57 @@ public class MkTalon {
             case Right:
                 CTRE(masterTalon.configFactoryDefault(kLong));
                 CTRE(slaveVictor.configFactoryDefault(kLong));
-                double mCur, mVel, mPos = 0.0;
                 zeroEncoder();
+                masterTalon.setNeutralMode(NeutralMode.Coast);
+                slaveVictor.setNeutralMode(NeutralMode.Coast);
+                double mCur, mVel, mPos;
+
+                masterTalon.set(ControlMode.PercentOutput, 0.0);
                 slaveVictor.set(ControlMode.PercentOutput, 1.0);
-                Timer.delay(4.0);
+
+                Timer.delay(3.0);
+
                 mVel = getVelocity();
-                mCur = getCurrent();
                 mPos = getPosition();
+
                 slaveVictor.set(ControlMode.PercentOutput, 0.0);
-                CTRE(masterTalon.configFactoryDefault(kLong));
-                CTRE(slaveVictor.configFactoryDefault(kLong));
-                currents.add(mCur);
+                masterTalon.set(ControlMode.PercentOutput, 0.0);
+
                 velocities.add(mVel);
                 positions.add(mPos);
+
                 if (mPos < TEST.kMinDriveTestPos || mVel < TEST.kMinDriveTestVel) {
                     Logger.logErrorWithTrace("FAILED - " + mSide.toString() + " Slave FAILED TO REACH REQUIRED SPEED OR POSITION");
-                    Logger.logMarker(mSide.toString() + " Slave Test Failed - Vel: " + getVelocity() + " Pos: " + getPosition());
+                    Logger.logMarker(mSide.toString() + " Slave Test Failed - Vel: " + mVel + " Pos: " + mPos);
                     check = false;
                 } else {
-                    Logger.logMarker(mSide.toString() + " Slave - Vel: " + getVelocity() + " Pos: " + getPosition());
+                    Logger.logMarker(mSide.toString() + " Slave - Vel: " + mVel + " Pos: " + mPos);
                 }
+
                 zeroEncoder();
-                Timer.delay(1.0);
+
+                slaveVictor.set(ControlMode.PercentOutput, 0.0);
                 masterTalon.set(ControlMode.PercentOutput, 1.0);
-                Timer.delay(4.0);
+
+                Timer.delay(3.0);
+
                 mVel = getVelocity();
                 mCur = getCurrent();
                 mPos = getPosition();
+
                 masterTalon.set(ControlMode.PercentOutput, 0.0);
-                CTRE(masterTalon.configFactoryDefault(kLong));
-                CTRE(slaveVictor.configFactoryDefault(kLong));
+                slaveVictor.set(ControlMode.PercentOutput, 0.0);
+
                 currents.add(mCur);
                 velocities.add(mVel);
                 positions.add(mPos);
+
                 if (mPos < TEST.kMinDriveTestPos || mVel < TEST.kMinDriveTestVel) {
                     Logger.logErrorWithTrace("FAILED - " + mSide.toString() + " Master FAILED TO REACH REQUIRED SPEED OR POSITION");
-                    Logger.logMarker(mSide.toString() + " Master Test Failed - Vel: " + getVelocity() + " Pos: " + getPosition());
+                    Logger.logMarker(mSide.toString() + " Master Test Failed - Vel: " + mVel + " Pos: " + mPos);
                     check = false;
                 } else {
-                    Logger.logMarker(mSide.toString() + " Master - Vel: " + getVelocity() + " Pos: " + getPosition());
+                    Logger.logMarker(mSide.toString() + " Master - Vel: " + mVel + " Pos: " + mPos);
                 }
                 break;
             case Cargo_Arm:

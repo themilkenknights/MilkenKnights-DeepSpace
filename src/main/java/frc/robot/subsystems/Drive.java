@@ -37,7 +37,7 @@ import frc.robot.paths.RobotState;
 public class Drive extends Subsystem {
 
     private final MkTalon mLeftDrive, mRightDrive;
-    private final PigeonIMU mPigeon;
+    //private final PigeonIMU mPigeon;
     private final MkGyro navX;
     public PeriodicIO mPeriodicIO;
     public DriveControlState mDriveControlState;
@@ -61,7 +61,7 @@ public class Drive extends Subsystem {
         mPeriodicIO = new PeriodicIO();
         mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left, mDriveTab);
         mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right, mDriveTab);
-        mPigeon = new PigeonIMU(CAN.kRightCargoIntakeTalonID);
+        //mPigeon = new PigeonIMU(CAN.kRightCargoIntakeTalonID);
         navX = new MkGyro(Port.kMXP);
         mMotionPlanner = new DriveMotionPlanner();
     }
@@ -384,9 +384,9 @@ public class Drive extends Subsystem {
      * Zero all pigeon values
      */
     private void zeroPigeon() {
-        CT.RE(mPigeon.setFusedHeading(0, GENERAL.kLongCANTimeoutMs));
-        CT.RE(mPigeon.setYaw(0, GENERAL.kLongCANTimeoutMs));
-        CT.RE(mPigeon.setAccumZAngle(0, GENERAL.kLongCANTimeoutMs));
+      //  CT.RE(mPigeon.setFusedHeading(0, GENERAL.kLongCANTimeoutMs));
+     //   CT.RE(mPigeon.setYaw(0, GENERAL.kLongCANTimeoutMs));
+      //  CT.RE(mPigeon.setAccumZAngle(0, GENERAL.kLongCANTimeoutMs));
     }
 
     /**

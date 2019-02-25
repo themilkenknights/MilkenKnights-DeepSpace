@@ -37,10 +37,10 @@ public final class Constants {
 
     public static class GENERAL {
         public static final int kMediumTimeoutMs = 0;
-        public static final int kLongCANTimeoutMs = 100; //Use for constructors, not while enabled
+        public static final int kLongCANTimeoutMs = 50; //Use for constructors, not while enabled
         public static final double PI = 3.14159265359;
-        public static final double kTicksPerRev = 4096.0;
         public static final double kMaxNominalOutput = 1.0;
+        public static final double kTicksPerRev = 4096.0;
         public static final double kMotorSafetyTimer = 0.05;
         public static final double kMainLoopDt = 0.02;
         public static final double kFastLooperDt = 0.02;
@@ -162,8 +162,8 @@ public final class Constants {
 
     public static class TEST {
 
-        public static final double kMinDriveTestPos = 180;
-        public static final double kMinDriveTestVel = 60;
+        public static final double kMinDriveTestPos = 410.0;
+        public static final double kMinDriveTestVel = 150.0;
         public static final double kDriveCurrentEpsilon = 2.0;
         public static final double kDriveVelEpsilon = 2.0;
         public static final double kDrivePosEpsilon = 2.0;
@@ -190,6 +190,7 @@ public final class Constants {
         public static final boolean kRightIntakeDirection = false;
 
         public static final double kMaxRawVel = 243.029333333;
+
 
         public static final double kMaxSafeCurrent = 80;
 
@@ -220,7 +221,7 @@ public final class Constants {
         public static final double kMaxRawVel = 3085.0;
 
         public static final double kMotionMagicCruiseVel = kMaxRawVel * 0.9;
-        public static final double kMotionMagicAccel = kMaxRawVel * 2;
+        public static final double kMotionMagicAccel = kMaxRawVel * 3;
 
         public static final double kMaxSafeCurrent = 150;
 
@@ -287,35 +288,28 @@ public final class Constants {
             kConfigs.put(TalonLoc.Cargo_Intake, new TalonSRXConfiguration());
             for (TalonLoc loc : kConfigs.keySet()) {
                 TalonSRXConfiguration tal = kConfigs.get(loc);
-
-                tal.peakOutputForward = 1.0;
-                tal.peakOutputReverse = -1.0;
+                tal.peakOutputForward = GENERAL.kMaxNominalOutput;
+                tal.peakOutputReverse = -GENERAL.kMaxNominalOutput;
                 tal.neutralDeadband = 0.0;
                 tal.voltageCompSaturation = 12.0;
                 tal.voltageMeasurementFilter = 32;
                 tal.neutralDeadband = 0.0;
-
                 tal.remoteSensorClosedLoopDisableNeutralOnLOS = true;
                 tal.limitSwitchDisableNeutralOnLOS = true;
                 tal.softLimitDisableNeutralOnLOS = true;
-                tal.motionCurveStrength = 6;
-
+                tal.motionCurveStrength = 4;
                 tal.forwardLimitSwitchSource = LimitSwitchSource.Deactivated;
                 tal.reverseLimitSwitchSource = LimitSwitchSource.Deactivated;
-
                 tal.forwardLimitSwitchNormal = LimitSwitchNormal.Disabled;
                 tal.reverseLimitSwitchNormal = LimitSwitchNormal.Disabled;
-
                 if (loc == TalonLoc.Left || loc == TalonLoc.Right) {
                     tal.velocityMeasurementPeriod = VelocityMeasPeriod.Period_25Ms;
                     tal.velocityMeasurementWindow = 8;
-
                     //General Velocity/Motion Magic
                     tal.slot0.kP = DRIVE.kDriveKp;
                     tal.slot0.kD = DRIVE.kDriveKd;
                     tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
-                    tal.slot0.closedLoopPeakOutput = 0.5;
-
+                    tal.slot0.closedLoopPeakOutput = 1.0;
                     //Motion Magic Turning
                     tal.slot1.kP = 2.0;
                     tal.slot1.kI = 0.0;
@@ -323,55 +317,63 @@ public final class Constants {
                     tal.slot1.kF = 1023.0 / DRIVE.kMaxNativeVel;
                     tal.slot1.integralZone = 200;
                     tal.slot1.closedLoopPeakOutput = 1.0;
-
                     tal.auxPIDPolarity = false;
                     tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.5);
                     tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.5);
                 } else if (loc == TalonLoc.Cargo_Arm || loc == TalonLoc.Hatch_Arm) {
                     tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
                     tal.reverseLimitSwitchSource = LimitSwitchSource.RemoteTalonSRX;
+                    tal.reverseLimitSwitchNormal = LimitSwitchNormal.NormallyOpen;
                     tal.forwardSoftLimitEnable = true;
                     tal.reverseSoftLimitEnable = true;
+                    tal.clearPositionOnLimitR = false;//TODO fix
                 }
 
                 if (loc == TalonLoc.Left) {
                     tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
                     tal.primaryPID.selectedFeedbackCoefficient = 1.0;
                 } else if (loc == TalonLoc.Right) {
+                    tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
+                    tal.primaryPID.selectedFeedbackCoefficient = 1.0;
+                    /*
                     tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
                     tal.primaryPID.selectedFeedbackCoefficient = 0.50;
-
                     tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
                     tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0;
-
                     tal.remoteFilter0.remoteSensorDeviceID = CAN.kDriveLeftMasterTalonID;
                     tal.remoteFilter0.remoteSensorSource = RemoteSensorSource.TalonSRX_SelectedSensor;
-
                     tal.remoteFilter1.remoteSensorDeviceID = CAN.kRightCargoIntakeTalonID;
                     tal.remoteFilter1.remoteSensorSource = RemoteSensorSource.GadgeteerPigeon_Yaw;
-
                     tal.sum0Term = FeedbackDevice.RemoteSensor0;
-                    tal.sum1Term = FeedbackDevice.CTRE_MagEncoder_Relative;
+                    tal.sum1Term = FeedbackDevice.CTRE_MagEncoder_Relative; */
                 } else if (loc == TalonLoc.Cargo_Arm) {
                     tal.reverseLimitSwitchDeviceID = CAN.kLeftCargoIntakeTalonID;
                     tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(190);
                     tal.reverseSoftLimitThreshold = 0;
-                    tal.motionCruiseVelocity = (int) (CARGO_ARM.kMaxRawVel * 0.5);
-                    tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.5);
-                    tal.slot0.kP = 7 * (0.1 * 1023.0) / (700);
-                    tal.slot0.kI = 0.0;
-                    tal.slot0.kD = 3 * tal.slot0.kP;
-                    tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
+                    tal.motionCruiseVelocity = (int) (CARGO_ARM.kMaxRawVel);
+                    tal.motionAcceleration = (int) (CARGO_ARM.kMaxRawVel * 10);
+                    tal.slot0.kP = (39.0 * ((0.1 * 1023.0) / (1600))); //7.5 deg or 1390 units
+                    tal.slot0.kI = tal.slot0.kP / 210;
+                    tal.slot0.kD = tal.slot0.kP * 40;
+                    tal.slot0.kF = 1023.0 / CARGO_ARM.kMaxRawVel;
+                    tal.slot0.integralZone = 200;
+                    tal.slot0.maxIntegralAccumulator = 300;
+                    tal.motionCurveStrength = 3;
                 } else if (loc == TalonLoc.Hatch_Arm) {
                     tal.reverseLimitSwitchDeviceID = CAN.kKetteringReverseLimitSwitchTalonID;
-                    tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(185);
+                    tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(188);
                     tal.reverseSoftLimitThreshold = 0;
-                    tal.motionCruiseVelocity = (int) HATCH_ARM.kMotionMagicCruiseVel;
-                    tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.5);
-                    tal.slot0.kP = 7 * (0.1 * 1023.0) / (700);
-                    tal.slot0.kI = 0.0;
-                    tal.slot0.kD = 3 * tal.slot0.kP;
-                    tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
+                    tal.motionCruiseVelocity = (int) (HATCH_ARM.kMotionMagicCruiseVel);
+                    tal.motionAcceleration = (int) (HATCH_ARM.kMotionMagicAccel);
+                    tal.slot0.kP = 30.0 * ((0.1 * 1023.0) / (1600)); //7.5 deg or 1390 units
+                    tal.slot0.kI =  (tal.slot0.kP / 500) * 0.0;
+                    tal.slot0.kD = tal.slot0.kP * 40;
+                    tal.slot0.kF = (1023.0 / Constants.HATCH_ARM.kMaxRawVel);
+                    tal.slot0.maxIntegralAccumulator = 0;
+                    tal.slot0.integralZone = 0;
+                    tal.motionCurveStrength = 7;
+                  //  tal.nominalOutputForward = 0.01;
+                   // tal.nominalOutputReverse = -0.01;
                 }
             }
         }

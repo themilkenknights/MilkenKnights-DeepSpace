@@ -1,0 +1,91 @@
+5fdb30a7-2294-48a3-96f4-1149862c7b64, Exception, Sun Feb 24 17:56:23 PST 2019, java.lang.NullPointerException
+	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:60)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:46)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+6a0f7d9e-a545-4052-86c6-2010a498a5fb, Exception, Sun Feb 24 18:00:07 PST 2019, java.lang.NullPointerException
+	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:60)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:46)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+188b2927-421a-447d-87fe-f8b73827df3d, Exception, Sun Feb 24 18:01:02 PST 2019, java.lang.NullPointerException
+	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:60)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:47)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+8a18966e-5d91-4d66-8212-5ef5867c78bd, Exception, Sun Feb 24 18:05:18 PST 2019, java.lang.NullPointerException
+	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:60)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:46)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+72fddb5c-dd7f-4250-9900-7f5ca90ba054, Exception, Sun Feb 24 18:05:47 PST 2019, java.lang.NullPointerException
+	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:60)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:46)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+87f026e4-a92c-4ac4-9d73-02a0b063e071, Exception, Sun Feb 24 18:06:05 PST 2019, java.lang.NullPointerException
+	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:60)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:46)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+af181a4d-ade1-41fb-8057-9846df19cc3c, Exception, Sun Feb 24 18:06:29 PST 2019, java.lang.NullPointerException
+	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:60)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:46)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+c6cd1825-1387-43cc-94b5-b94179d860e3, Exception, Sun Feb 24 18:08:25 PST 2019, java.lang.NullPointerException
+	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:60)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:46)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+cf6d14a9-2934-444a-8e48-6b1a47973da2, Exception, Sun Feb 24 18:09:09 PST 2019, java.lang.NullPointerException
+	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:60)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:45)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+c2a130e0-1f64-4908-9485-428b20beaa52, Exception, Sun Feb 24 18:15:58 PST 2019, java.lang.NullPointerException
+	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:60)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:45)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+b1c47b6c-c8f3-415d-8f0a-091b5c841695, Exception, Sun Feb 24 18:46:48 PST 2019, java.lang.NullPointerException
+	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:60)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:45)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+0be5902e-0585-49e0-9ac6-124ead31cb26, Exception, Sun Feb 24 18:47:37 PST 2019, java.lang.NullPointerException
+	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:60)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:46)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+13d076f8-42cb-4ade-b7f8-f0b49d86f196, Exception, Sun Feb 24 18:48:54 PST 2019, java.lang.NullPointerException
+	at frc.robot.subsystems.Vision.outputTelemetry(Vision.java:60)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:46)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+

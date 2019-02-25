@@ -12,7 +12,7 @@ public class MkPixy {
     private static final int blockSignature = 1;
     private static ArrayList<Block> blocks = null;
     private static Pixy2 pixy = null;
-    private static MkPixyTarget mTarget = null;
+    private static MkPixyTarget mTarget = new MkPixyTarget(0,0,false, 0);
     private static int PixyResult = 0;
 
 

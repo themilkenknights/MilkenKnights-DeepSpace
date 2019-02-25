@@ -30,15 +30,14 @@ public class SubsystemManager {
                         subsystem.readPeriodicInputs(now);
                         subsystem.onQuickLoop(now);
                         subsystem.writePeriodicOutputs(now);
-                        subsystem.safetyCheck(now);
-                        subsystem.outputTelemetry(now);
                         if (count == 5) {
                             subsystem.slowUpdate(now);
+                            subsystem.outputTelemetry(now);
+                            subsystem.safetyCheck(now);
                             count = 0;
                         }
-                        count++;
-
                     }
+                    count++;
                    /* Vision.getInstance().updateLimelight();
                     Vision.getInstance().updatePixy(); */
 
@@ -108,8 +107,7 @@ public class SubsystemManager {
             running_ = false;
 
         }
-        notifier_.stop();
-
+       // notifier_.stop();
         timestamp_ = Timer.getFPGATimestamp();
         for (Subsystem subsystem : mAllSubsystems) {
             subsystem.onStop(timestamp_);

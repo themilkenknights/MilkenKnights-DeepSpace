@@ -1,6 +1,7 @@
 package frc.robot.subsystems;
 
 import edu.wpi.cscore.HttpCamera;
+import edu.wpi.cscore.MjpegServer;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.BuiltInWidgets;
@@ -21,17 +22,21 @@ public class Vision extends Subsystem {
 
     private static MkPixy mPixy;
     private LimeLight mLimeLight;
-    private boolean usePixy = false;
+    private boolean usePixy = true;
     private NetworkTableEntry mLLX, mDist, mArea;
+    private MjpegServer server;
+    private HttpCamera LLFeed;
+    //private UsbCamera cargoCam;
+    private int cameraStream = 0;
 
     private Vision() {
         ShuffleboardTab dashboardTab = Shuffleboard.getTab("Dash");
-        /* UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
-        dashboardTab.add(camera).withWidget(BuiltInWidgets.kCameraStream).withPosition(1, 1).withSize(4,4)
-            .withProperties(Map.of("Show Crosshair", true, "Show Controls", false));// specify widget properties here */
-        HttpCamera httpCamera = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
-        CameraServer.getInstance().addCamera(httpCamera);
-        dashboardTab.add(httpCamera).withWidget(BuiltInWidgets.kCameraStream).withPosition(5, 1).withSize(5, 4)
+        LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
+        cargoCam = CameraServer.getInstance().startAutomaticCapture(0);
+        cargoCam.setConnectVerbose(0);
+        server = CameraServer.getInstance().addSwitchedCamera("Toggle Cam");
+        server.setSource(LLFeed);
+        dashboardTab.add(server.getSource()).withWidget(BuiltInWidgets.kCameraStream).withPosition(1, 1).withSize(5, 4)
             .withProperties(Map.of("Show Crosshair", true, "Show Controls", false));// specify widget properties here
         Shuffleboard.selectTab("Dash");
         ShuffleboardTab mVisionTab = Shuffleboard.getTab("Vision");
@@ -62,7 +67,7 @@ public class Vision extends Subsystem {
     private void configLimelightVision() {
         mLimeLight.setLEDMode(LedMode.kforceOn);
         mLimeLight.setCamMode(CamMode.kvision);
-        mLimeLight.setStream(StreamType.kPiPMain);
+        mLimeLight.setStream(StreamType.kStandard);
     }
 
     public void teleopInit(double timestamp) {
@@ -71,6 +76,20 @@ public class Vision extends Subsystem {
 
     public void autonomousInit(double timestamp) {
         configLimelightVision();
+    }
+
+    public void configHatchStream() {
+        if (cameraStream != 0) {
+            server.setSource(LLFeed);
+            cameraStream = 0;
+        }
+    }
+
+    public void configCargoStream() {
+        if (cameraStream != 1) {
+            server.setSource(cargoCam);
+            cameraStream = 1;
+        }
     }
 
     public void updateLimelight() {

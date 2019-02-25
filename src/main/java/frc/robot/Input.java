@@ -30,7 +30,7 @@ public class Input {
 
     private static final MkJoystickButton toggleDriverVisionAssist = driverJoystick.getButton(4, "Driver Vision Assist");
     private static final MkJoystickButton mRearClimb = driverJoystick.getButton(2, "Climb Rear");
-    private static final MkJoystickButton mForwardClimb = driverJoystick.getButton(3, "Climb Climb");
+    private static final MkJoystickButton mForwardClimb = driverJoystick.getButton(3, "Climb Front");
 
     private static final MkJoystickButton mVisionStationIntakeButton = operatorJoystick.getButton(3, "Vision Hatch HP Intake");
     private static final MkJoystickButton mVisionPlaceButton = operatorJoystick.getButton(4, "Vision Place Hatch Button");
@@ -68,12 +68,15 @@ public class Input {
             mStructure.setRobotState(RobotState.TELEOP_DRIVE);
         } else if (toggleDriverVisionAssist.isPressed()) {
             mVisionAssist = !mVisionAssist;
+            mVision.configHatchStream();
         }
 
         if (mCargoArmManual.isPressed()) {
             mCargo.enableSafety(!mCargo.getSafetyState());
+            mVision.configCargoStream();
         } else if (operatorJoystick.getTriggerPressed()) {
             mHatch.enableSafety(mHatch.getHatchIntakeControlState() == HatchIntakeControlState.MOTION_MAGIC);
+            mVision.configHatchStream();
         }
 
         currentRobotState = mStructure.getRobotState();
@@ -98,12 +101,16 @@ public class Input {
         } else if (mCargo.getArmControlState() == CargoArmControlState.MOTION_MAGIC) {
             if (operatorJoystick.getPOV() == 0) {
                 mCargo.setArmState(CargoArmState.FORWARD_ROCKET_LEVEL_ONE);
+                mVision.configCargoStream();
             } else if (operatorJoystick.getPOV() == 270) {
                 mCargo.setArmState(CargoArmState.INTAKE);
+                mVision.configCargoStream();
             } else if (operatorJoystick.getPOV() == 180) {
                 mCargo.setArmState(CargoArmState.REVERSE_CARGOSHIP);
+                mVision.configCargoStream();
             } else if (mCargoRocketLevelTwo.isPressed()) {
                 mCargo.setArmState(CargoArmState.REVERSE_ROCKET_LEVEL_TWO);
+                mVision.configCargoStream();
             } else if (operatorJoystick.getPOV() == 90) {
                 if (mCargo.getArmState() == CargoArmState.REVERSE_CARGOSHIP || mCargo.getArmState() == CargoArmState.FORWARD_ROCKET_LEVEL_ONE) {
                     mStructure.setRobotState(RobotState.VISION_CARGO_OUTTAKE);
@@ -112,11 +119,13 @@ public class Input {
                 } else {
                     Logger.logError("Failed to run Cargo Auto Mode");
                 }
+                mVision.configCargoStream();
             }
         }
 
         if (mIntakeRollerIn.isHeld()) {
             mCargo.setIntakeRollers(CARGO_ARM.kIntakeRollerInSpeed);
+            mVision.configCargoStream();
         } else if (mIntakeRollerOut.isHeld()) {
             switch (mCargo.getArmState()) {
                 case INTAKE:
@@ -136,6 +145,7 @@ public class Input {
                     Logger.logError("Unexpected Cargo Arm State");
                     break;
             }
+            mVision.configCargoStream();
         } else {
             mCargo.setIntakeRollers(0.0);
         }
@@ -154,10 +164,13 @@ public class Input {
 
         if (mVisionStationIntakeButton.isPressed()) {
             mStructure.setRobotState(RobotState.VISION_INTAKE_STATION);
+            mVision.configHatchStream();
         } else if (mVisionPlaceButton.isPressed()) {
             mStructure.setRobotState(RobotState.VISION_PLACING);
+            mVision.configHatchStream();
         } else if (mTransferButton.isPressed()) {
             mHatch.setHatchMechanismState(HatchMechanismState.TRANSFER);
+            mVision.configHatchStream();
         } else if (mGroundIntakeToggleButton.isPressed()) {
             mHatch.setHatchMechanismState(mHatch.getHatchMechanismState() == HatchMechanismState.GROUND_INTAKE ? HatchMechanismState.STOWED : HatchMechanismState.GROUND_INTAKE);
         } else if (mSpearTogglePlaceStow.isPressed()) {
@@ -166,8 +179,10 @@ public class Input {
             } else {
                 mHatch.setHatchMechanismState(HatchMechanismState.SPEAR_STOW_ONLY);
             }
+            mVision.configHatchStream();
         } else if (mSpearIntake.isPressed()) {
             mHatch.setHatchMechanismState(HatchMechanismState.STATION_INTAKE);
+            mVision.configHatchStream();
         } else if (mStowAllButton.isPressed()) {
             mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
             mCargo.setArmState(CargoArmState.REVERSE_CARGOSHIP);
