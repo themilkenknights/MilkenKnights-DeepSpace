@@ -162,8 +162,8 @@ public final class Constants {
 
     public static class TEST {
 
-        public static final double kMinDriveTestPos = 180;
-        public static final double kMinDriveTestVel = 60;
+        public static final double kMinDriveTestPos = 410.0;
+        public static final double kMinDriveTestVel = 150.0;
         public static final double kDriveCurrentEpsilon = 2.0;
         public static final double kDriveVelEpsilon = 2.0;
         public static final double kDrivePosEpsilon = 2.0;
@@ -216,7 +216,7 @@ public final class Constants {
         public static final boolean kHatchArmPlaceState = true;
 
         public static final boolean kHatchArmSensorPhase = true;
-        public static final boolean kHatchArmMasterDirection = false;
+        public static final boolean kHatchArmMasterDirection = true;
 
         public static final double kMaxRawVel = 3085.0;
 
@@ -369,6 +369,8 @@ public final class Constants {
                     tal.slot0.maxIntegralAccumulator = 0;
                     tal.slot0.integralZone = 0;
                     tal.motionCurveStrength = 7;
+                  //  tal.nominalOutputForward = 0.01;
+                   // tal.nominalOutputReverse = -0.01;
                 }
             }
         }
