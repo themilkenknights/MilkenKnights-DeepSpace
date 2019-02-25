@@ -33,22 +33,22 @@ public class MovingAverage {
 
         for (LimelightTarget target : targets) {
             validTarget = target.isValidTarget() && validTarget;
-            totalX += target.getXOffset();
+            totalX += target.getYaw();
             totalY += target.getYOffset();
             totalHoriz += target.getHorizLength();
             totalVert += target.getVertLength();
             totalCaptureTime += target.getCaptureTime();
-            for (int i = 0; i < poseArray.length; i++) {
+        /*    for (int i = 0; i < poseArray.length; i++) {
                 poseArray[i] = target.getPoseArray()[i];
-            }
+            } */
         }
-        double[] finalPoseArray = new double[6];
+      /*  double[] finalPoseArray = new double[6];
         for (int i = 0; i < poseArray.length; i++) {
             finalPoseArray[i] = poseArray[i] / targets.size();
-        }
+        } */
         LimelightTarget avgTarget =
             new LimelightTarget(validTarget, totalX / targets.size(), totalY / targets.size(), totalHoriz / targets.size(), totalVert / targets.size(),
-                totalCaptureTime / targets.size(), finalPoseArray);
+                totalCaptureTime / targets.size());
         return avgTarget;
     }
 

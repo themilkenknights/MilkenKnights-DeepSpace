@@ -33,13 +33,12 @@ public class MotionMagicVision implements Action {
         LimelightTarget target = Vision.getInstance().getLimelightTarget();
         double mDist = target.getDistance();
         if (mDist > 20.0 && target.isValidTarget()) {
-            double vel = (mLastVisionState.getTarget().getXOffset() - target.getXOffset()) / (Timer.getFPGATimestamp() - lastTime);
+            double vel = (mLastVisionState.getTarget().getYaw() - target.getYaw()) / (Timer.getFPGATimestamp() - lastTime);
             double mSteer = 0.03 * ((targetYaw)) + vel * DRIVE.kVisionTurnP * 8 * 0.0;
             DriveSignal mSig = Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
             mLastVisionState = new VisionState(mSig, target, Drive.getInstance().getHeadingDeg());
         } else {
-            double mSteer =
-                DRIVE.kVisionTurnP * 0 * (mLastVisionState.getTarget().getXOffset() - /* Math.abs(mLastVisionState.getYaw() - Drive.getInstance().getYaw()) */ 0);
+            double mSteer = DRIVE.kVisionTurnP * 0 * (mLastVisionState.getTarget().getYaw() - /* Math.abs(mLastVisionState.getYaw() - Drive.getInstance().getYaw()) */ 0);
             Drive.getInstance().updateMotionMagicPositionSetpoint(mLastVisionState.getDriveSignal(), new DriveSignal(mSteer, -mSteer));
         }
     }
@@ -51,7 +50,7 @@ public class MotionMagicVision implements Action {
     @Override public void start() {
         expirationTimer.start(5.0);
         lastTime = Timer.getFPGATimestamp();
-        targetYaw = Vision.getInstance().getLimelightTarget().getXOffset();
+        targetYaw = Vision.getInstance().getLimelightTarget().getYaw();
         initYaw = Drive.getInstance().getYaw();
     }
 }

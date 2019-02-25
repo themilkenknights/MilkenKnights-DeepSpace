@@ -6,12 +6,10 @@ import frc.robot.subsystems.Drive;
 
 public class MotionMagicBlind implements Action {
 
-    private double leftDist;
-    private double rightDist;
+    private double dist;
 
-    public MotionMagicBlind(double leftDist, double rightDist) {
-        this.leftDist = leftDist;
-        this.rightDist = rightDist;
+    public MotionMagicBlind(double dist) {
+        this.dist = dist;
     }
 
     @Override public boolean isFinished() {
@@ -27,6 +25,6 @@ public class MotionMagicBlind implements Action {
     }
 
     @Override public void start() {
-        Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(leftDist, rightDist, NeutralMode.Brake), DriveSignal.BRAKE);
+        Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(dist, dist, NeutralMode.Brake), DriveSignal.BRAKE);
     }
 }

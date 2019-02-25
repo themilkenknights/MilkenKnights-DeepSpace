@@ -15,7 +15,7 @@ public class SimpleCargoOuttake extends AutoModeBase {
     @Override protected void routine() throws AutoModeEndedException {
         runAction(new MotionMagicVision(false));
         runAction(new RollerAction(CARGO_ARM.kRocketLevelOneOutSpeed, 1.0));
-        runAction(new MotionMagicBlind(-20.0, -20.0));
+        runAction(new MotionMagicBlind(-20.0));
         runAction(new TurnInPlace(180.0));
         Superstructure.getInstance().setRobotState(RobotState.TELEOP_DRIVE);
     }

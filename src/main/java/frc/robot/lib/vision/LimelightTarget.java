@@ -1,9 +1,6 @@
 package frc.robot.lib.vision;
 
 import frc.robot.Constants.VISION;
-import frc.robot.lib.geometry.Pose2d;
-import frc.robot.lib.geometry.Rotation2d;
-import frc.robot.lib.geometry.Translation2d;
 import frc.robot.lib.util.InterpolatingDouble;
 
 public class LimelightTarget {
@@ -15,7 +12,7 @@ public class LimelightTarget {
     private double area; //Pixel area of bounding box
     private double captureTime; //Capture Time in Sec (Timer.FPGA)
     private double distance;
-//   private double[] poseArray;
+    //   private double[] poseArray;
     //private Pose2d deltaPose;
     private double horizLength;
     private double vertLength;
@@ -45,7 +42,7 @@ public class LimelightTarget {
         return validTarget;
     }
 
-    public double getXOffset() {
+    public double getYaw() {
         return xOffset;
     }
 

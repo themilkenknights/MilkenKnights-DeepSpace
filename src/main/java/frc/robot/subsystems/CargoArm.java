@@ -21,9 +21,9 @@ public class CargoArm extends Subsystem {
 
     private static CargoArmControlState mCargoArmControlState = CargoArmControlState.MOTION_MAGIC;
     private static CargoArmState mCargoArmState = CargoArmState.ENABLE;
-    private final MkTalon mArmTalon;
     public final MkTalon mIntakeTalon; //TODO Fix
-    private boolean mDisCon, mArmSafety = false;
+    private final MkTalon mArmTalon;
+    private boolean mDisCon = false;
     private double mStartDis, mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable = 0.0;
     private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus, mRawError;
 
@@ -76,7 +76,6 @@ public class CargoArm extends Subsystem {
                 }
             }
 
-
             if (mArmTalon.getCurrent() > CARGO_ARM.kMaxSafeCurrent) {
                 Logger.logError("Unsafe Current on Cargo " + mArmTalon.getCurrent() + " Amps");
                 setArmControlState(CargoArmControlState.OPEN_LOOP);
@@ -88,28 +87,6 @@ public class CargoArm extends Subsystem {
     private void setEnable() {
         mArmPosEnable = mArmTalon.getPosition();
         mCargoArmState = CargoArmState.ENABLE;
-    }
-
-    /**
-     * Configures Soft Limits and Control Mode.
-     * Soft limits and open loop mode are the safety/backup state.
-     *
-     * @param mode False for normal operation. True for safety mode.
-     */
-    public void enableSafety(boolean mode) {
-        if (mode) {
-            CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(false, GENERAL.kMediumTimeoutMs));
-            CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(false, GENERAL.kMediumTimeoutMs));
-            setArmControlState(CargoArmControlState.OPEN_LOOP);
-            mArmSafety = true;
-
-        } else {
-            CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
-            CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(true, GENERAL.kMediumTimeoutMs));
-            setEnable();
-            setArmControlState(CargoArmControlState.MOTION_MAGIC);
-            mArmSafety = false;
-        }
     }
 
     public synchronized void onQuickLoop(double timestamp) {
@@ -139,13 +116,11 @@ public class CargoArm extends Subsystem {
     }
 
     @Override public void teleopInit(double timestamp) {
-        mArmTalon.zeroEncoder();
-        setEnable();
+        zeroEncoder();
     }
 
     @Override public void autonomousInit(double timestamp) {
-        mArmTalon.zeroEncoder();
-        setEnable();
+        zeroEncoder();
     }
 
     @Override public void onStop(double timestamp) {
@@ -157,16 +132,18 @@ public class CargoArm extends Subsystem {
         return true;
     }
 
-    public boolean spearLimit(){
+    public boolean spearLimit() {
         return mIntakeTalon.masterTalon.getSensorCollection().isFwdLimitSwitchClosed();
     }
 
     public synchronized void setOpenLoop(double output) {
-        if (mArmSafety && mCargoArmControlState == CargoArmControlState.OPEN_LOOP) {
-            mOpenLoopSetpoint = output;
-        } else {
-            Logger.logErrorWithTrace("Failed to set Hatch Arm Open Loop Ouput: Arm Safety Not Enabled");
+        if (mCargoArmControlState != CargoArmControlState.OPEN_LOOP) {
+            Logger.logMarker("Switching to Cargo Arm Open Loop");
+            setArmControlState(CargoArmControlState.OPEN_LOOP);
+            CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
+            CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
         }
+        mOpenLoopSetpoint = output;
     }
 
     public synchronized void setIntakeRollers(double output) {
@@ -194,16 +171,18 @@ public class CargoArm extends Subsystem {
     }
 
     public synchronized void setArmState(CargoArmState state) {
-        if (!mArmSafety) {
+        if (mCargoArmControlState != CargoArmControlState.OPEN_LOOP) {
+            Logger.logMarker("Switching to Cargo Arm Motion Magic");
             setArmControlState(CargoArmControlState.MOTION_MAGIC);
-            mCargoArmState = state;
-        } else {
-            Logger.logErrorWithTrace("Failed to set Arm State: Arm Safety Enabled");
+            CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(true, GENERAL.kShortTimeoutMs));
+            CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(true, GENERAL.kShortTimeoutMs));
         }
+        mCargoArmState = state;
     }
 
-    public boolean getSafetyState() {
-        return mArmSafety;
+    public void zeroEncoder() {
+        mArmTalon.zeroEncoder();
+        setEnable();
     }
 
     public enum CargoArmControlState {
@@ -215,7 +194,7 @@ public class CargoArm extends Subsystem {
 
     public enum CargoArmState {
         ENABLE(0.0), // State directly after robot is enabled (not mapped to a specific angle)
-        INTAKE(177.0), FORWARD_ROCKET_LEVEL_ONE(125.0), REVERSE_CARGOSHIP(11.0), REVERSE_ROCKET_LEVEL_TWO(30.0);
+        INTAKE(177.0), FORWARD_ROCKET_LEVEL_ONE(125.0), REVERSE_CARGOSHIP(11.0), FORWARD_ROCKET_LEVEL_TWO(30.0);
 
         public final double state;
 

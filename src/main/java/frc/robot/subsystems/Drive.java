@@ -6,14 +6,12 @@ import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.FollowerType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.sensors.PigeonIMU;
-import com.ctre.phoenix.sensors.PigeonIMUConfiguration;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants;
-import frc.robot.Constants.CAN;
 import frc.robot.Constants.CONFIG;
 import frc.robot.Constants.DRIVE;
 import frc.robot.Constants.GENERAL;
@@ -274,8 +272,7 @@ public class Drive extends Subsystem {
      * @param dist Distance in Inches to Drive (Motion Magic)
      * @param angle Angle to serve to using Pigeon
      */
-    private synchronized void setVisionSetpoint(double dist, double angle) {
-
+    public synchronized void setVisionSetpoint(double dist, double angle) {
         if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
             Logger.logMarker("Switching to Pigeon Servo");
             configHatchVision();
@@ -318,7 +315,7 @@ public class Drive extends Subsystem {
             DriveSignal.BRAKE);
     }
 
-    public void configHatchVision() {
+    private void configHatchVision() {
         if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
             mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 0.5, 0);
             mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.SensorSum, CONFIG.kPIDPrimary, 0);
@@ -327,7 +324,7 @@ public class Drive extends Subsystem {
         }
     }
 
-    public void configNormalDrive() {
+    private void configNormalDrive() {
         if (mDriveControlState == DriveControlState.PIGEON_SERVO) {
             mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 1.0, 0);
             mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, CONFIG.kPIDPrimary, 0);
@@ -414,15 +411,6 @@ public class Drive extends Subsystem {
     }
 
     /**
-     * Zero all pigeon values
-     */
-    private void zeroPigeon() {
-        CT.RE(mPigeon.setFusedHeading(0, GENERAL.kLongCANTimeoutMs));
-        CT.RE(mPigeon.setYaw(0, GENERAL.kLongCANTimeoutMs));
-        CT.RE(mPigeon.setAccumZAngle(0, GENERAL.kLongCANTimeoutMs));
-    }
-
-    /**
      * Zero heading by adding a software offset
      */
     public synchronized void setHeading(Rotation2d heading) {
@@ -430,6 +418,15 @@ public class Drive extends Subsystem {
         mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(-navX.getAngle()).inverse());
         Logger.logMarker("Gyro offset: " + mGyroOffset.getDegrees());
         mPeriodicIO.gyro_heading = heading;
+    }
+
+    /**
+     * Zero all pigeon values
+     */
+    private void zeroPigeon() {
+        CT.RE(mPigeon.setFusedHeading(0, GENERAL.kLongCANTimeoutMs));
+        CT.RE(mPigeon.setYaw(0, GENERAL.kLongCANTimeoutMs));
+        CT.RE(mPigeon.setAccumZAngle(0, GENERAL.kLongCANTimeoutMs));
     }
 
     /**

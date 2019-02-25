@@ -14,8 +14,10 @@ import frc.robot.Constants.PNUEMATICS;
 import frc.robot.Constants.SUPERSTRUCTURE;
 import frc.robot.Robot;
 import frc.robot.auto.modes.CargoVisionIntake;
+import frc.robot.auto.modes.ClimbLevel2Mode;
+import frc.robot.auto.modes.HatchIntakeVisionPigeon;
+import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
 import frc.robot.auto.modes.SimpleCargoOuttake;
-import frc.robot.auto.modes.SimpleHatchVision;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.HatchArm.HatchMechanismState;
@@ -85,17 +87,11 @@ public class Superstructure extends Subsystem {
     @Override public synchronized void onQuickLoop(double timestamp) {
         switch (mRobotState) {
             case PATH_FOLLOWING:
-                break;
             case TELEOP_DRIVE:
-                break;
-            case VISION_INTAKE_STATION:
-            case VISION_PLACING:
-                //updateVisionHatch();
-                break;
+            case HATCH_VISION_INTAKE:
+            case HATCH_VISION_OUTTAKE:
             case VISION_CARGO_INTAKE:
-                break;
             case VISION_CARGO_OUTTAKE:
-                break;
             case AUTO_CLIMB:
                 break;
             default:
@@ -110,7 +106,7 @@ public class Superstructure extends Subsystem {
     }
 
     @Override public void autonomousInit(double timestamp) {
-
+        setRobotState(RobotState.TELEOP_DRIVE);
     }
 
     public RobotState getRobotState() {
@@ -122,19 +118,20 @@ public class Superstructure extends Subsystem {
         switch (state) {
             case TELEOP_DRIVE:
                 AutoChooser.disableAuto();
-                mDrive.configNormalDrive();
                 break;
-            case VISION_INTAKE_STATION:
-            case VISION_PLACING:
-                startVisionHatch();
+            case HATCH_VISION_INTAKE:
+                startVisionCargoIntake();
+            case HATCH_VISION_OUTTAKE:
+                startVisionHatchOuttake();
                 break;
             case VISION_CARGO_OUTTAKE:
-                mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
-                startVisionCargo();
+                startVisionCargoOuttake();
             case VISION_CARGO_INTAKE:
                 startVisionCargoIntake();
             case PATH_FOLLOWING:
+                break;
             case AUTO_CLIMB:
+                startAutoClimb();
                 break;
             default:
                 Logger.logErrorWithTrace("Unexpected robot state: " + mRobotState);
@@ -143,14 +140,18 @@ public class Superstructure extends Subsystem {
         Logger.logMarker("Switching to Robot State:" + mRobotState);
     }
 
-    private void startVisionHatch() {
-        mDrive.configHatchVision();
+    private void startVisionHatchOuttake() {
         mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
-        mHatch.setHatchMechanismState(mRobotState == RobotState.VISION_INTAKE_STATION ? HatchMechanismState.STATION_INTAKE : HatchMechanismState.PLACING);
-        AutoChooser.startAuto(new SimpleHatchVision());
+        AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
     }
 
-    private void startVisionCargo() {
+    private void startVisionHatchIntake() {
+        mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
+        AutoChooser.startAuto(new HatchIntakeVisionPigeon());
+    }
+
+    private void startVisionCargoOuttake() {
+        mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
         mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
         AutoChooser.startAuto(new SimpleCargoOuttake());
     }
@@ -158,6 +159,10 @@ public class Superstructure extends Subsystem {
 
     private void startVisionCargoIntake() {
         AutoChooser.startAuto(new CargoVisionIntake());
+    }
+
+    private void startAutoClimb() {
+        AutoChooser.startAuto(new ClimbLevel2Mode());
     }
 
     @Override public void onStop(double timestamp) {
@@ -180,7 +185,7 @@ public class Superstructure extends Subsystem {
 
 
     public enum RobotState {
-        PATH_FOLLOWING, TELEOP_DRIVE, VISION_INTAKE_STATION, VISION_PLACING, VISION_CARGO_INTAKE, VISION_CARGO_OUTTAKE, AUTO_CLIMB
+        PATH_FOLLOWING, TELEOP_DRIVE, HATCH_VISION_INTAKE, HATCH_VISION_OUTTAKE, VISION_CARGO_INTAKE, VISION_CARGO_OUTTAKE, AUTO_CLIMB
     }
 
 

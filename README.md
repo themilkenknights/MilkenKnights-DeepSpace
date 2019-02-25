@@ -37,13 +37,13 @@
 
 - 6 Roller Outtake
 
-- 7 Zero Cargo Arm
+- 7 Unmapped
 
-- 8 Zero Kettering Intake
+- 8 Zero Arms
 
 - 9 Stop Auto Action
 
-- 10 Defense Mpde
+- 10 Defense Mode
 
 - 11 Ground Intake Toggle (Stowed/Ground Setpoints)
 

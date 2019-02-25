@@ -60,7 +60,7 @@ public class Vision extends Subsystem {
             SmartDashboard.putBoolean("Pixy Limit Switch", mPixy.getLatestTarget().isCargoIntaked());
             SmartDashboard.putBoolean("Pixy State", mPixy.getLatestTarget().isTargetAcquired());
         }
-        mLLX.setDouble(mLimeLight.returnAverageTarget().getXOffset());
+        mLLX.setDouble(mLimeLight.returnAverageTarget().getYaw());
         mDist.setDouble(mLimeLight.returnAverageTarget().getDistance());
         mArea.setDouble(mLimeLight.returnAverageTarget().getArea());
     }

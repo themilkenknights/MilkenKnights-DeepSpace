@@ -3,7 +3,6 @@ package frc.robot;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
 import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
-import com.ctre.phoenix.motorcontrol.RemoteSensorSource;
 import com.ctre.phoenix.motorcontrol.VelocityMeasPeriod;
 import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
@@ -36,7 +35,7 @@ public final class Constants {
 
 
     public static class GENERAL {
-        public static final int kMediumTimeoutMs = 0;
+        public static final int kShortTimeoutMs = 0;
         public static final int kLongCANTimeoutMs = 50; //Use for constructors, not while enabled
         public static final double PI = 3.14159265359;
         public static final double kMaxNominalOutput = 1.0;
@@ -355,14 +354,14 @@ public final class Constants {
                     tal.motionCruiseVelocity = (int) (HATCH_ARM.kMotionMagicCruiseVel);
                     tal.motionAcceleration = (int) (HATCH_ARM.kMotionMagicAccel);
                     tal.slot0.kP = 30.0 * ((0.1 * 1023.0) / (1600)); //7.5 deg or 1390 units
-                    tal.slot0.kI =  (tal.slot0.kP / 500) * 0.0;
+                    tal.slot0.kI = (tal.slot0.kP / 500) * 0.0;
                     tal.slot0.kD = tal.slot0.kP * 40;
                     tal.slot0.kF = (1023.0 / Constants.HATCH_ARM.kMaxRawVel);
                     tal.slot0.maxIntegralAccumulator = 0;
                     tal.slot0.integralZone = 0;
                     tal.motionCurveStrength = 7;
-                  //  tal.nominalOutputForward = 0.01;
-                   // tal.nominalOutputReverse = -0.01;
+                    //  tal.nominalOutputForward = 0.01;
+                    // tal.nominalOutputReverse = -0.01;
                 }
             }
         }

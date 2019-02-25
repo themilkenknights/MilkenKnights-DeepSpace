@@ -15,7 +15,6 @@ public abstract class Subsystem {
     }
 
     /**
-     *
      * @param timestamp Time in seconds since code start
      */
     public synchronized void onQuickLoop(double timestamp) {
