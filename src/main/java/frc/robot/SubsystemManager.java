@@ -107,12 +107,11 @@ public class SubsystemManager {
             running_ = false;
 
         }
-
+       // notifier_.stop();
         timestamp_ = Timer.getFPGATimestamp();
         for (Subsystem subsystem : mAllSubsystems) {
             subsystem.onStop(timestamp_);
         }
-        notifier_.startPeriodic(GENERAL.kFastLooperDt);
     }
 
 }

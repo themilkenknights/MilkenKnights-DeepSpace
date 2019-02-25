@@ -25,7 +25,7 @@ public class Vision extends Subsystem {
 
     private static MkPixy mPixy;
     private LimeLight mLimeLight;
-    private boolean usePixy = false;
+    private boolean usePixy = true;
     private NetworkTableEntry mLLX, mDist, mArea;
     private MjpegServer server;
     private HttpCamera LLFeed;
@@ -37,9 +37,9 @@ public class Vision extends Subsystem {
         LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
         //cargoCam = CameraServer.getInstance().startAutomaticCapture(0);
        // cargoCam.setConnectVerbose(0);
-        server = CameraServer.getInstance().addSwitchedCamera("Toggle Cam");
-        server.setSource(LLFeed);
-        dashboardTab.add(server.getSource()).withWidget(BuiltInWidgets.kCameraStream).withPosition(1, 1).withSize(5, 4)
+       // server = CameraServer.getInstance().addSwitchedCamera("Toggle Cam");
+        //server.setSource(LLFeed);
+        dashboardTab.add(LLFeed).withWidget(BuiltInWidgets.kCameraStream).withPosition(1, 1).withSize(5, 4)
             .withProperties(Map.of("Show Crosshair", true, "Show Controls", false));// specify widget properties here
         Shuffleboard.selectTab("Dash");
         ShuffleboardTab mVisionTab = Shuffleboard.getTab("Vision");
@@ -70,7 +70,7 @@ public class Vision extends Subsystem {
     private void configLimelightVision() {
         mLimeLight.setLEDMode(LedMode.kforceOn);
         mLimeLight.setCamMode(CamMode.kvision);
-        mLimeLight.setStream(StreamType.kPiPSecondary);
+        mLimeLight.setStream(StreamType.kStandard);
     }
 
     public void teleopInit(double timestamp) {
@@ -85,7 +85,7 @@ public class Vision extends Subsystem {
         if (cameraStream != 0) {
             LLFeed.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
            // cargoCam.setConnectionStrategy(ConnectionStrategy.kForceClose);
-            server.setSource(LLFeed);
+            //server.setSource(LLFeed);
             cameraStream = 0;
         }
     }

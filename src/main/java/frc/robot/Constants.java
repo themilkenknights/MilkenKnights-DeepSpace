@@ -215,7 +215,7 @@ public final class Constants {
 
         public static final boolean kHatchArmPlaceState = true;
 
-        public static final boolean kHatchArmSensorPhase = true;
+        public static final boolean kHatchArmSensorPhase = false;
         public static final boolean kHatchArmMasterDirection = true;
 
         public static final double kMaxRawVel = 3085.0;

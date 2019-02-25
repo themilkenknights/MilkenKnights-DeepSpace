@@ -157,6 +157,10 @@ public class CargoArm extends Subsystem {
         return true;
     }
 
+    public boolean spearLimit(){
+        return mIntakeTalon.masterTalon.getSensorCollection().isFwdLimitSwitchClosed();
+    }
+
     public synchronized void setOpenLoop(double output) {
         if (mArmSafety && mCargoArmControlState == CargoArmControlState.OPEN_LOOP) {
             mOpenLoopSetpoint = output;

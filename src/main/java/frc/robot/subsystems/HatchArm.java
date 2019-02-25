@@ -139,7 +139,7 @@ public class HatchArm extends Subsystem {
      * @param timestamp Time in seconds since code start
      */
     @Override public synchronized void onQuickLoop(double timestamp) {
-        mSpearLimitTriggered = mArmTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
+        mSpearLimitTriggered = CargoArm.getInstance().spearLimit();
         switch (mHatchMechanismState) {
             case STOWED:
             case SPEAR_STOW_ONLY:
@@ -160,13 +160,9 @@ public class HatchArm extends Subsystem {
                     setHatchIntakePosition(HatchIntakeState.TRANSFER_POINT);
                 }
                 if (isHatchLimitTriggered()) {
-                    setHatchSpearState(HatchSpearState.STOW);
-                    mTransferTime.start(0.125);
-                }
-                if (mTransferTime.isDone()) {
-                    setHatchMechanismState(HatchMechanismState.STOWED);
-                    mTransferTime.reset();
                     mArmTalon.masterTalon.configMotionCruiseVelocity((int) HATCH_ARM.kMotionMagicCruiseVel);
+                    setHatchSpearState(HatchSpearState.STOW);
+                    setHatchMechanismState(HatchMechanismState.STOWED);
                 }
                 break;
             default:
@@ -307,7 +303,7 @@ public class HatchArm extends Subsystem {
 
     public enum HatchIntakeState {
         ENABLE(0), // State directly after robot is enabled (not mapped to a specific angle)
-        INTAKE_POINT(180), TRANSFER_POINT(55.0), CLEAR_CARGO_POINT(130.0), STOW_POINT(7.0);
+        INTAKE_POINT(180), TRANSFER_POINT(60.0), CLEAR_CARGO_POINT(130.0), STOW_POINT(7.0);
 
         public final double state;
 

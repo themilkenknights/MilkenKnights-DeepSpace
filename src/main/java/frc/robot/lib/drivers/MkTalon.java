@@ -147,7 +147,7 @@ public class MkTalon {
                 break;
             case Cargo_Intake:
                 CTRE(masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 10));
-                CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 10, kLong));
+                CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 2, kLong));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 1000, kLong));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 1000, kLong));
                 CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 1000, kLong));
