@@ -159,7 +159,7 @@ public class Input {
         } else if (mTransferButton.isPressed()) {
             mHatch.setHatchMechanismState(HatchMechanismState.TRANSFER);
         } else if (mGroundIntakeToggleButton.isPressed()) {
-            mHatch.setHatchMechanismState(mHatch.getHatchMechanismState() == HatchMechanismState.STOWED ? HatchMechanismState.GROUND_INTAKE : HatchMechanismState.STOWED);
+            mHatch.setHatchMechanismState(mHatch.getHatchMechanismState() == HatchMechanismState.GROUND_INTAKE ? HatchMechanismState.STOWED : HatchMechanismState.GROUND_INTAKE);
         } else if (mSpearTogglePlaceStow.isPressed()) {
             if (mHatch.getHatchSpearState() == HatchSpearState.STOW) {
                 mHatch.setHatchMechanismState(HatchMechanismState.SPEAR_PLACE_ONLY);
