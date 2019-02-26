@@ -444,12 +444,13 @@ public class Drive extends Subsystem {
      * Negative is Left (Counterclockwise)
      * Positive is Right (Clockwise)
      * From -180 to 180 deg
+     * //TODO Verify Method Is Correct With Pigeon
      */
     public double getHeadingNormalized() {
         if (mPeriodicIO.gyro_heading.getDegrees() < 180.0) {
             return -mPeriodicIO.gyro_heading.getDegrees();
         } else {
-            return 180 - ((mPeriodicIO.gyro_heading.getDegrees() - 180);
+            return 180 - (mPeriodicIO.gyro_heading.getDegrees() - 180);
         }
     }
 
