@@ -161,11 +161,11 @@ public final class Constants {
 
     public static class TEST {
 
-        public static final double kMinDriveTestPos = 410.0;
-        public static final double kMinDriveTestVel = 150.0;
-        public static final double kDriveCurrentEpsilon = 2.0;
-        public static final double kDriveVelEpsilon = 2.0;
-        public static final double kDrivePosEpsilon = 2.0;
+        public static final double kMinDriveTestPos = 420.0;
+        public static final double kMinDriveTestVel = 145.0;
+        public static final double kDriveCurrentEpsilon = 3.0;
+        public static final double kDriveVelEpsilon = 1.5;
+        public static final double kDrivePosEpsilon = 3.0;
 
         public static final double kMinCargoArmTestVel = 140;
         public static final double kMinCargoArmTestPos = 140;

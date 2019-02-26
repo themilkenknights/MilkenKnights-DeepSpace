@@ -17,6 +17,7 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.CONFIG;
+import frc.robot.Constants.DRIVE;
 import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.HATCH_ARM;
 import frc.robot.Constants.TEST;
@@ -382,7 +383,7 @@ public class MkTalon {
         if (currents.size() > 0) {
             Double average = currents.stream().mapToDouble(val -> val).average().getAsDouble();
             if (!Util.allCloseTo(currents, average, TEST.kDriveCurrentEpsilon)) {
-                Logger.logErrorWithTrace(mSide.toString() + " Currents varied!!!!!!!!!!!");
+                Logger.logErrorWithTrace("Drive Currents varied!!!!!!!!!!!");
                 check = true;
             }
         }
@@ -390,7 +391,7 @@ public class MkTalon {
         if (positions.size() > 0) {
             Double average = positions.stream().mapToDouble(val -> val).average().getAsDouble();
             if (!Util.allCloseTo(positions, average, TEST.kDrivePosEpsilon)) {
-                Logger.logErrorWithTrace(mSide.toString() + " Positions varied!!!!!!!!");
+                Logger.logErrorWithTrace("Drive Positions varied!!!!!!!!");
                 check = true;
             }
         }
@@ -398,7 +399,7 @@ public class MkTalon {
         if (velocities.size() > 0) {
             Double average = velocities.stream().mapToDouble(val -> val).average().getAsDouble();
             if (!Util.allCloseTo(velocities, average, TEST.kDriveVelEpsilon)) {
-                Logger.logErrorWithTrace(mSide.toString() + " Velocities varied!!!!!!!!");
+                Logger.logErrorWithTrace("Drive Velocities varied!!!!!!!!");
                 check = false;
             }
         }
@@ -419,23 +420,36 @@ public class MkTalon {
         switch (mSide) {
             case Left:
             case Right:
+                MkTime timer = new MkTime();
                 CTRE(masterTalon.configFactoryDefault(kLong));
                 CTRE(slaveVictor.configFactoryDefault(kLong));
+                if(mSide == TalonLoc.Left){
+                    masterTalon.setInverted(DRIVE.kLeftMasterInvert);
+                    masterTalon.setSensorPhase(DRIVE.kLeftSensorInvert);
+                    slaveVictor.setInverted(DRIVE.kLeftSlaveInvert);
+                } else{
+                    masterTalon.setInverted(DRIVE.KRightMasterInvert);
+                    masterTalon.setSensorPhase(DRIVE.kRightSensorInvert);
+                    slaveVictor.setInverted(DRIVE.kRightSlaveInvert);
+                }
                 zeroEncoder();
                 masterTalon.setNeutralMode(NeutralMode.Coast);
                 slaveVictor.setNeutralMode(NeutralMode.Coast);
                 double mCur, mVel, mPos;
 
-                masterTalon.set(ControlMode.PercentOutput, 0.0);
-                slaveVictor.set(ControlMode.PercentOutput, 1.0);
-
-                Timer.delay(3.0);
+                timer.start(3.0);
+                while(!timer.isDone()){
+                    masterTalon.set(ControlMode.PercentOutput, 0.0);
+                    slaveVictor.set(ControlMode.PercentOutput, 1.0);
+                }
 
                 mVel = getVelocity();
                 mPos = getPosition();
 
                 slaveVictor.set(ControlMode.PercentOutput, 0.0);
                 masterTalon.set(ControlMode.PercentOutput, 0.0);
+
+                timer.reset();
 
                 velocities.add(mVel);
                 positions.add(mPos);
@@ -448,12 +462,15 @@ public class MkTalon {
                     Logger.logMarker(mSide.toString() + " Slave - Vel: " + mVel + " Pos: " + mPos);
                 }
 
+                Timer.delay(2.0);
+
                 zeroEncoder();
 
-                slaveVictor.set(ControlMode.PercentOutput, 0.0);
-                masterTalon.set(ControlMode.PercentOutput, 1.0);
-
-                Timer.delay(3.0);
+                timer.start(3.0);
+                while(!timer.isDone()){
+                    masterTalon.set(ControlMode.PercentOutput, 1.0);
+                    slaveVictor.set(ControlMode.PercentOutput, 0.0);
+                }
 
                 mVel = getVelocity();
                 mCur = getCurrent();
@@ -461,6 +478,8 @@ public class MkTalon {
 
                 masterTalon.set(ControlMode.PercentOutput, 0.0);
                 slaveVictor.set(ControlMode.PercentOutput, 0.0);
+
+                timer.reset();
 
                 currents.add(mCur);
                 velocities.add(mVel);
@@ -473,9 +492,9 @@ public class MkTalon {
                 } else {
                     Logger.logMarker(mSide.toString() + " Master - Vel: " + mVel + " Pos: " + mPos);
                 }
+                resetConfig();
                 break;
             case Cargo_Arm:
-                ArrayList<Double> mcurrents = new ArrayList<>();
                 ArrayList<Double> mvelocities = new ArrayList<>();
                 ArrayList<Double> mpositions = new ArrayList<>();
                 if (!isEncoderConnected()) {
@@ -485,7 +504,7 @@ public class MkTalon {
                 for (CargoArmState state : CargoArmState.values()) {
                     if (state != CargoArmState.ENABLE) {
                         CargoArm.getInstance().setArmState(state);
-                        CargoArm.getInstance().setIntakeRollers(-0.25);
+                        CargoArm.getInstance().setIntakeRollers(-0.5);
                         Timer.delay(2.0);
                     }
                 }
@@ -494,16 +513,27 @@ public class MkTalon {
                 CargoArm.getInstance().setArmState(CargoArmState.INTAKE);
                 CargoArm.getInstance().setIntakeRollers(0.0);
                 Timer.delay(1.0);
-                masterTalon.set(ControlMode.PercentOutput, 0.0);
-                slaveVictor.set(ControlMode.PercentOutput, -0.3);
-                Timer.delay(1.0);
+
+                MkTime time = new MkTime();
+
+                time.start(2.0);
+
+                while(!time.isDone()){
+                    masterTalon.set(ControlMode.PercentOutput, 0.0);
+                    slaveVictor.set(ControlMode.PercentOutput, -0.4);
+                }
+
                 double current = getCurrent();
                 double vel = getVelocity();
                 double pos = getPosition();
-                mcurrents.add(current);
+
+                masterTalon.set(ControlMode.PercentOutput, 0.0);
+                slaveVictor.set(ControlMode.PercentOutput, 0.0);
+                time.reset();
+
                 mvelocities.add(vel);
                 mpositions.add(pos);
-                if (vel < TEST.kMinCargoArmTestVel || pos > TEST.kMinCargoArmTestPos || current > TEST.kMinCargoArmTestCurrent) {
+                if (vel < TEST.kMinCargoArmTestVel || pos < TEST.kMinCargoArmTestPos) {
                     Logger.logErrorWithTrace("FAILED - " + mSide.toString() + "Cargo Arm Slave FAILED TO REACH REQUIRED SPEED OR POSITION");
                     Logger.logMarker(mSide.toString() + " Slave Test Failed - Vel: " + vel + " Pos: " + pos + " Current: " + current);
                     check = false;
@@ -512,32 +542,34 @@ public class MkTalon {
                 }
 
                 Timer.delay(1.0);
+
                 CargoArm.getInstance().setArmState(CargoArmState.INTAKE);
                 CargoArm.getInstance().setIntakeRollers(0.0);
+
                 Timer.delay(1.0);
-                masterTalon.set(ControlMode.PercentOutput, -0.3);
-                slaveVictor.set(ControlMode.PercentOutput, 0.0);
-                Timer.delay(1.0);
-                current = getCurrent();
-                vel = getVelocity();
-                pos = getPosition();
-                mcurrents.add(current);
-                mvelocities.add(vel);
-                mpositions.add(pos);
-                if (vel < TEST.kMinCargoArmTestVel || pos > TEST.kMinCargoArmTestPos || current > TEST.kMinCargoArmTestCurrent) {
-                    Logger.logErrorWithTrace("FAILED - " + mSide.toString() + "Cargo Arm Master FAILED TO REACH REQUIRED SPEED OR POSITION");
-                    Logger.logMarker(mSide.toString() + " Master Test Failed - Vel: " + vel + " Pos: " + pos + " Current: " + current);
-                    check = false;
-                } else {
-                    Logger.logMarker(mSide.toString() + " Master - Vel: " + vel + " Pos: " + pos + " Current: " + current);
+
+                time.start(2.0);
+
+                while(!time.isDone()){
+                    masterTalon.set(ControlMode.PercentOutput, -0.4);
+                    slaveVictor.set(ControlMode.PercentOutput, 0.0);
                 }
 
-                if (mcurrents.size() > 0) {
-                    Double average = mcurrents.stream().mapToDouble(val -> val).average().getAsDouble();
-                    if (!Util.allCloseTo(mcurrents, average, TEST.kCargoArmCurrentEpsilon)) {
-                        Logger.logErrorWithTrace(mSide.toString() + " Currents varied!!!!!!!!!!!");
-                        check = false;
-                    }
+                vel = getVelocity();
+                pos = getPosition();
+
+                masterTalon.set(ControlMode.PercentOutput, 0.0);
+                slaveVictor.set(ControlMode.PercentOutput, 0.0);
+                time.reset();
+
+                mvelocities.add(vel);
+                mpositions.add(pos);
+                if (vel < TEST.kMinCargoArmTestVel || pos > TEST.kMinCargoArmTestPos) {
+                    Logger.logErrorWithTrace("FAILED - " + mSide.toString() + "Cargo Arm Slave FAILED TO REACH REQUIRED SPEED OR POSITION");
+                    Logger.logMarker(mSide.toString() + " Master Test Failed - Vel: " + vel + " Pos: " + pos);
+                    check = false;
+                } else {
+                    Logger.logMarker(mSide.toString() + " Master - Vel: " + vel + " Pos: " + pos);
                 }
 
                 if (mpositions.size() > 0) {

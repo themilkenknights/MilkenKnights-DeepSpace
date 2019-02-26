@@ -128,8 +128,7 @@ public class CargoArm extends Subsystem {
     }
 
     @Override public boolean checkSystem() {
-        //TODO Fix return mArmTalon.checkSystem();
-        return true;
+        return mArmTalon.checkSystem();
     }
 
     public boolean spearLimit() {
@@ -138,7 +137,6 @@ public class CargoArm extends Subsystem {
 
     public synchronized void setOpenLoop(double output) {
         if (mCargoArmControlState != CargoArmControlState.OPEN_LOOP) {
-            Logger.logMarker("Switching to Cargo Arm Open Loop");
             setArmControlState(CargoArmControlState.OPEN_LOOP);
             CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
             CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
@@ -160,8 +158,10 @@ public class CargoArm extends Subsystem {
     private synchronized void setArmControlState(CargoArmControlState state) {
         if (state == CargoArmControlState.MOTION_MAGIC && mCargoArmControlState != CargoArmControlState.MOTION_MAGIC) {
             setEnable();
+            Logger.logMarker("Switching to Cargo Arm Motion Magic");
         } else if (state == CargoArmControlState.OPEN_LOOP && mCargoArmControlState != CargoArmControlState.OPEN_LOOP) {
             mOpenLoopSetpoint = 0.0;
+            Logger.logMarker("Switching to Cargo Arm Open Loop");
         }
         mCargoArmControlState = state;
     }
@@ -171,8 +171,7 @@ public class CargoArm extends Subsystem {
     }
 
     public synchronized void setArmState(CargoArmState state) {
-        if (mCargoArmControlState != CargoArmControlState.OPEN_LOOP) {
-            Logger.logMarker("Switching to Cargo Arm Motion Magic");
+        if (mCargoArmControlState != CargoArmControlState.MOTION_MAGIC) {
             setArmControlState(CargoArmControlState.MOTION_MAGIC);
             CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(true, GENERAL.kShortTimeoutMs));
             CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(true, GENERAL.kShortTimeoutMs));
@@ -194,7 +193,10 @@ public class CargoArm extends Subsystem {
 
     public enum CargoArmState {
         ENABLE(0.0), // State directly after robot is enabled (not mapped to a specific angle)
-        INTAKE(177.0), FORWARD_ROCKET_LEVEL_ONE(125.0), REVERSE_CARGOSHIP(11.0), FORWARD_ROCKET_LEVEL_TWO(30.0);
+        INTAKE(177.0),
+        FORWARD_ROCKET_LEVEL_ONE(125.0),
+        FORWARD_ROCKET_LEVEL_TWO(115.0),
+        REVERSE_CARGOSHIP(11.0);
 
         public final double state;
 

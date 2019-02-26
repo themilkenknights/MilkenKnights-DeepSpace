@@ -39,9 +39,9 @@ public class MkJoystickButton {
      * Returns true when the button is released.
      */
     public boolean isReleased() {
-        final boolean isPressed = lastState && joystick.getRawButton(rawButton);
+        final boolean isReleased = lastState && !joystick.getRawButton(rawButton);
         update();
-        return isPressed;
+        return isReleased;
     }
 
     /**

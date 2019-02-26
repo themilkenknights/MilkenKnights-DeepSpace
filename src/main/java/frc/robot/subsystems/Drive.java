@@ -37,7 +37,7 @@ import frc.robot.paths.RobotState;
 public class Drive extends Subsystem {
 
     private final MkTalon mLeftDrive, mRightDrive;
-    private final PigeonIMU mPigeon;
+    //private final PigeonIMU mPigeon;
     private final MkGyro navX;
     public PeriodicIO mPeriodicIO;
     public DriveControlState mDriveControlState;
@@ -61,8 +61,8 @@ public class Drive extends Subsystem {
         mPeriodicIO = new PeriodicIO();
         mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left, mDriveTab);
         mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right, mDriveTab);
-        mPigeon = new PigeonIMU(CargoArm.getInstance().mIntakeTalon.slaveTalon);
-        mPigeon.configFactoryDefault(GENERAL.kLongCANTimeoutMs);
+        //mPigeon = new PigeonIMU(CargoArm.getInstance().mIntakeTalon.slaveTalon);
+        //mPigeon.configFactoryDefault(GENERAL.kLongCANTimeoutMs);
         navX = new MkGyro(Port.kMXP);
         mMotionPlanner = new DriveMotionPlanner();
     }
@@ -76,7 +76,7 @@ public class Drive extends Subsystem {
      */
     @Override public synchronized void readPeriodicInputs(double timestamp) {
         mPeriodicIO.timestamp = Timer.getFPGATimestamp();
-        mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(mPigeon.getFusedHeading()).rotateBy(mGyroOffset);
+       // mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(mPigeon.getFusedHeading()).rotateBy(mGyroOffset);
         mPeriodicIO.leftPos = mLeftDrive.getPosition();
         mPeriodicIO.rightPos = mRightDrive.getPosition();
         mPeriodicIO.leftVel = mLeftDrive.getVelocity();
@@ -167,7 +167,7 @@ public class Drive extends Subsystem {
         mRightDrive.updateShuffleboard();
         mState.setString(mDriveControlState.toString());
         mStatus.setBoolean(driveStatus());
-        mFusedHeading.setDouble(mPigeon.getFusedHeading());
+        //mFusedHeading.setDouble(mPigeon.getFusedHeading());
         mXErr.setDouble(mPeriodicIO.error.getTranslation().x());
         mYErr.setDouble(mPeriodicIO.error.getTranslation().y());
         mThetaErr.setDouble(mPeriodicIO.error.getRotation().getDegrees());
@@ -282,7 +282,7 @@ public class Drive extends Subsystem {
         mPeriodicIO.left_demand = 0.0;
         mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist + mPeriodicIO.rightPos);
         mPeriodicIO.left_feedforward = 0.0;
-        mPeriodicIO.right_feedforward = mPigeon.getFusedHeading() - angle;
+        //mPeriodicIO.right_feedforward = mPigeon.getFusedHeading() - angle;
         mPeriodicIO.brake_mode = NeutralMode.Brake;
     }
 
@@ -424,9 +424,9 @@ public class Drive extends Subsystem {
      * Zero all pigeon values
      */
     private void zeroPigeon() {
-        CT.RE(mPigeon.setFusedHeading(0, GENERAL.kLongCANTimeoutMs));
-        CT.RE(mPigeon.setYaw(0, GENERAL.kLongCANTimeoutMs));
-        CT.RE(mPigeon.setAccumZAngle(0, GENERAL.kLongCANTimeoutMs));
+       // CT.RE(mPigeon.setFusedHeading(0, GENERAL.kLongCANTimeoutMs));
+       // CT.RE(mPigeon.setYaw(0, GENERAL.kLongCANTimeoutMs));
+       // CT.RE(mPigeon.setAccumZAngle(0, GENERAL.kLongCANTimeoutMs));
     }
 
     /**

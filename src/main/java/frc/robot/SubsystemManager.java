@@ -6,6 +6,7 @@ import frc.robot.Constants.GENERAL;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.CrashTrackingRunnable;
 import frc.robot.lib.util.DeltaTime;
+import frc.robot.subsystems.Vision;
 import java.util.List;
 
 /**
@@ -38,15 +39,15 @@ public class SubsystemManager {
                         }
                     }
                     count++;
-                   /* Vision.getInstance().updateLimelight();
-                    Vision.getInstance().updatePixy(); */
+                   Vision.getInstance().updateLimelight();
+                    /*  Vision.getInstance().updatePixy(); */
 
                 } else {
                     for (Subsystem subsystem : mAllSubsystems) {
                         subsystem.outputTelemetry(now);
                     }
-                    /*Vision.getInstance().updateLimelight();
-                    Vision.getInstance().updatePixy(); */
+                   Vision.getInstance().updateLimelight();
+                    /*   Vision.getInstance().updatePixy(); */
                 }
                 timestamp_ = now;
             }

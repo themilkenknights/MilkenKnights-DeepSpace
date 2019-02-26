@@ -72,7 +72,7 @@ public class Input {
             mStructure.setRobotState(RobotState.TELEOP_DRIVE);
         }
 
-        if (mZeroArms.isReleased()) {
+        if (mZeroArms.isPressed()) {
             mCargo.zeroEncoder();
             mHatch.zeroEncoder();
         }
@@ -86,11 +86,11 @@ public class Input {
             mVision.configHatchStream();
         }
 
-        if (mCargoArmManual.isReleased()) {
+        if (operatorJoystick.getRawButtonReleased(2)) {
             mCargo.setOpenLoop(0.0);
         }
 
-        if (operatorJoystick.getTriggerReleased()) {
+        if(operatorJoystick.getTriggerReleased()){
             mHatch.setOpenLoop(0.0);
         }
 
