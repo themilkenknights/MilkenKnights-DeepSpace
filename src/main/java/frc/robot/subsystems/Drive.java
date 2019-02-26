@@ -6,6 +6,7 @@ import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.FollowerType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.sensors.PigeonIMU;
+import com.ctre.phoenix.sensors.PigeonIMU_StatusFrame;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.Timer;
@@ -37,7 +38,7 @@ import frc.robot.paths.RobotState;
 public class Drive extends Subsystem {
 
     private final MkTalon mLeftDrive, mRightDrive;
-    //private final PigeonIMU mPigeon;
+    private final PigeonIMU mPigeon;
     private final MkGyro navX;
     public PeriodicIO mPeriodicIO;
     public DriveControlState mDriveControlState;
@@ -61,8 +62,11 @@ public class Drive extends Subsystem {
         mPeriodicIO = new PeriodicIO();
         mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left, mDriveTab);
         mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right, mDriveTab);
-        //mPigeon = new PigeonIMU(CargoArm.getInstance().mIntakeTalon.slaveTalon);
-        //mPigeon.configFactoryDefault(GENERAL.kLongCANTimeoutMs);
+        mPigeon = new PigeonIMU(CargoArm.getInstance().mIntakeTalon.slaveTalon);
+        CT.RE(mPigeon.configFactoryDefault(GENERAL.kLongCANTimeoutMs));
+        CT.RE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_1_General, 10, GENERAL.kLongCANTimeoutMs));
+        CT.RE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_9_SixDeg_YPR, 3, GENERAL.kLongCANTimeoutMs));
+        CT.RE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_6_SensorFusion, 3, GENERAL.kLongCANTimeoutMs));
         navX = new MkGyro(Port.kMXP);
         mMotionPlanner = new DriveMotionPlanner();
     }
@@ -76,7 +80,7 @@ public class Drive extends Subsystem {
      */
     @Override public synchronized void readPeriodicInputs(double timestamp) {
         mPeriodicIO.timestamp = Timer.getFPGATimestamp();
-       // mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(mPigeon.getFusedHeading()).rotateBy(mGyroOffset);
+        mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(mPigeon.getFusedHeading()).rotateBy(mGyroOffset);
         mPeriodicIO.leftPos = mLeftDrive.getPosition();
         mPeriodicIO.rightPos = mRightDrive.getPosition();
         mPeriodicIO.leftVel = mLeftDrive.getVelocity();
@@ -167,7 +171,7 @@ public class Drive extends Subsystem {
         mRightDrive.updateShuffleboard();
         mState.setString(mDriveControlState.toString());
         mStatus.setBoolean(driveStatus());
-        //mFusedHeading.setDouble(mPigeon.getFusedHeading());
+        mFusedHeading.setDouble(mPigeon.getFusedHeading());
         mXErr.setDouble(mPeriodicIO.error.getTranslation().x());
         mYErr.setDouble(mPeriodicIO.error.getTranslation().y());
         mThetaErr.setDouble(mPeriodicIO.error.getRotation().getDegrees());
@@ -272,7 +276,7 @@ public class Drive extends Subsystem {
      * @param dist Distance in Inches to Drive (Motion Magic)
      * @param angle Angle to serve to using Pigeon
      */
-    public synchronized void setVisionSetpoint(double dist, double angle) {
+    public synchronized void setDistanceAndAngle(double dist, double angle) {
         if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
             Logger.logMarker("Switching to Pigeon Servo");
             configHatchVision();
@@ -282,7 +286,7 @@ public class Drive extends Subsystem {
         mPeriodicIO.left_demand = 0.0;
         mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist + mPeriodicIO.rightPos);
         mPeriodicIO.left_feedforward = 0.0;
-        //mPeriodicIO.right_feedforward = mPigeon.getFusedHeading() - angle;
+        mPeriodicIO.right_feedforward = getHeadingNormalized() - angle;
         mPeriodicIO.brake_mode = NeutralMode.Brake;
     }
 
@@ -424,9 +428,9 @@ public class Drive extends Subsystem {
      * Zero all pigeon values
      */
     private void zeroPigeon() {
-       // CT.RE(mPigeon.setFusedHeading(0, GENERAL.kLongCANTimeoutMs));
-       // CT.RE(mPigeon.setYaw(0, GENERAL.kLongCANTimeoutMs));
-       // CT.RE(mPigeon.setAccumZAngle(0, GENERAL.kLongCANTimeoutMs));
+        CT.RE(mPigeon.setFusedHeading(0, GENERAL.kLongCANTimeoutMs));
+        CT.RE(mPigeon.setYaw(0, GENERAL.kLongCANTimeoutMs));
+        CT.RE(mPigeon.setAccumZAngle(0, GENERAL.kLongCANTimeoutMs));
     }
 
     /**
@@ -434,6 +438,20 @@ public class Drive extends Subsystem {
      */
     public double getHeadingDeg() {
         return mPeriodicIO.gyro_heading.getDegrees();
+    }
+
+    /**
+     * Negative is Left (Counterclockwise)
+     * Positive is Right (Clockwise)
+     * From -180 to 180 deg
+     * //TODO Verify Method Is Correct With Pigeon
+     */
+    public double getHeadingNormalized() {
+        if (mPeriodicIO.gyro_heading.getDegrees() < 180.0) {
+            return -mPeriodicIO.gyro_heading.getDegrees();
+        } else {
+            return 180 - (mPeriodicIO.gyro_heading.getDegrees() - 180);
+        }
     }
 
     public double getYaw() {

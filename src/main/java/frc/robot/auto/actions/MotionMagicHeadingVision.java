@@ -18,7 +18,7 @@ public class MotionMagicHeadingVision implements Action {
     @Override public void update() {
         LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
         if (mTarget.isValidTarget()) {
-            Drive.getInstance().setVisionSetpoint(mTarget.getDistance(), mTarget.getYaw());
+            Drive.getInstance().setDistanceAndAngle(mTarget.getDistance(), mTarget.getYaw());
         }
     }
 
