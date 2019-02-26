@@ -19,9 +19,8 @@ public class SubsystemManager {
     private final Object taskRunningLock_ = new Object();
     private double timestamp_ = 0;
     private boolean running_;
+    private int count = 0;
     private final CrashTrackingRunnable runnable_ = new CrashTrackingRunnable() {
-        private int count = 0;
-
         @Override public void runCrashTracked() {
             synchronized (taskRunningLock_) {
                 double now = fastDt.updateDt();
@@ -35,19 +34,21 @@ public class SubsystemManager {
                             subsystem.slowUpdate(now);
                             subsystem.outputTelemetry(now);
                             subsystem.safetyCheck(now);
-                            count = 0;
                         }
+                    }
+                    if(count == 5){
+                        count = 0;
                     }
                     count++;
                    Vision.getInstance().updateLimelight();
-                    /*  Vision.getInstance().updatePixy(); */
+                   Vision.getInstance().updatePixy();
 
                 } else {
                     for (Subsystem subsystem : mAllSubsystems) {
                         subsystem.outputTelemetry(now);
                     }
                    Vision.getInstance().updateLimelight();
-                    /*   Vision.getInstance().updatePixy(); */
+                    Vision.getInstance().updatePixy();
                 }
                 timestamp_ = now;
             }
@@ -108,11 +109,11 @@ public class SubsystemManager {
             running_ = false;
 
         }
-        // notifier_.stop();
         timestamp_ = Timer.getFPGATimestamp();
         for (Subsystem subsystem : mAllSubsystems) {
             subsystem.onStop(timestamp_);
         }
+        notifier_.startPeriodic(GENERAL.kFastLooperDt);
     }
 
 }

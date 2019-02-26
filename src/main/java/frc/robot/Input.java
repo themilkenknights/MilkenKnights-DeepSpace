@@ -1,5 +1,6 @@
 package frc.robot;
 
+import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.INPUT;
 import frc.robot.lib.drivers.MkJoystick;

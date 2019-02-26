@@ -79,6 +79,7 @@ public class CargoArm extends Subsystem {
             if (mArmTalon.getCurrent() > CARGO_ARM.kMaxSafeCurrent) {
                 Logger.logError("Unsafe Current on Cargo " + mArmTalon.getCurrent() + " Amps");
                 setArmControlState(CargoArmControlState.OPEN_LOOP);
+                setOpenLoop(0.0);
             }
 
         }
