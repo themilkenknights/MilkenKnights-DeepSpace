@@ -133,7 +133,7 @@ public class CargoArm extends Subsystem {
     }
 
     public boolean spearLimit() {
-        return mIntakeTalon.masterTalon.getSensorCollection().isFwdLimitSwitchClosed();
+        return mIntakeTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
     }
 
     public synchronized void setOpenLoop(double output) {

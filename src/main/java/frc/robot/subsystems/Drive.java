@@ -62,7 +62,7 @@ public class Drive extends Subsystem {
         mPeriodicIO = new PeriodicIO();
         mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left, mDriveTab);
         mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right, mDriveTab);
-        mPigeon = new PigeonIMU(CargoArm.getInstance().mIntakeTalon.slaveTalon);
+        mPigeon = new PigeonIMU(CargoArm.getInstance().mIntakeTalon.masterTalon);
         CT.RE(mPigeon.configFactoryDefault(GENERAL.kLongCANTimeoutMs));
         CT.RE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_1_General, 10, GENERAL.kLongCANTimeoutMs));
         CT.RE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_9_SixDeg_YPR, 3, GENERAL.kLongCANTimeoutMs));

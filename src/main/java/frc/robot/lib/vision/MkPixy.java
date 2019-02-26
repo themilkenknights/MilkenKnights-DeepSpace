@@ -22,6 +22,7 @@ public class MkPixy {
     }
 
     public void pixyUpdate() {
+    System.out.println(PixyResult);
         if (PixyResult == 0) {
             int updateStatus = pixy.getCCC().getBlocks(false, Pixy2CCC.CCC_SIG1, 10);
             if (updateStatus > 0) {

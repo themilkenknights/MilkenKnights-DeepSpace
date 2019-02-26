@@ -335,7 +335,7 @@ public final class Constants {
                     tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
                     tal.primaryPID.selectedFeedbackCoefficient = 1.0;
                 } else if (loc == TalonLoc.Cargo_Arm) {
-                    tal.reverseLimitSwitchDeviceID = CAN.kLeftCargoIntakeTalonID;
+                    tal.reverseLimitSwitchDeviceID = CAN.kRightCargoIntakeTalonID;
                     tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(190);
                     tal.reverseSoftLimitThreshold = 0;
                     tal.motionCruiseVelocity = (int) (CARGO_ARM.kMaxRawVel);
