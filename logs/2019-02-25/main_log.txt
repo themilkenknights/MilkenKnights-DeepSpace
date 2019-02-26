@@ -1,0 +1,1170 @@
+815741fd-bbc3-4b24-995e-c0a49064bd59, Robot Init on Practice Robot, Mon Feb 25 19:53:40 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Disabled Init, Mon Feb 25 19:53:41 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Set Hatch Spear to STOW, Mon Feb 25 19:53:41 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, SET HEADING: 0.0, Mon Feb 25 19:53:41 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Gyro offset: 19.739999771118164, Mon Feb 25 19:53:41 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, SET HEADING: 0.0, Mon Feb 25 19:53:41 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Gyro offset: 19.729999542236328, Mon Feb 25 19:53:41 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, SET HEADING: 0.0, Mon Feb 25 19:53:41 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Gyro offset: 0.0010000228649005296, Mon Feb 25 19:53:41 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 19:53:41 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Starting check systems., Mon Feb 25 19:53:41 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Left Slave - Vel: 151.8640980006885 Pos: 443.5996322023747, Mon Feb 25 19:53:45 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, FAILED - Left Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:53:48 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Left Master Test Failed - Vel: 0.0 Pos: 26.185052049209624, Mon Feb 25 19:53:48 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Right Slave - Vel: 151.95613684796166 Pos: 444.0966419776497, Mon Feb 25 19:53:51 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, FAILED - Right Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:53:54 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Right Master Test Failed - Vel: 0.0 Pos: 77.49670940398771, Mon Feb 25 19:53:54 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Right Positions varied!!!!!!!!, Mon Feb 25 19:53:55 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Right Velocities varied!!!!!!!!, Mon Feb 25 19:53:55 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, NavX Connected, Mon Feb 25 19:53:55 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Set Hatch Spear to STOW, Mon Feb 25 19:53:55 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Disabled Init, Mon Feb 25 19:53:55 PST 2019
+815741fd-bbc3-4b24-995e-c0a49064bd59, Set Hatch Spear to STOW, Mon Feb 25 19:53:55 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Robot Startup, Mon Feb 25 19:54:02 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Robot Init on Practice Robot, Mon Feb 25 19:54:02 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Disabled Init, Mon Feb 25 19:54:03 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Set Hatch Spear to STOW, Mon Feb 25 19:54:03 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, SET HEADING: 0.0, Mon Feb 25 19:54:05 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Gyro offset: 19.510000228881836, Mon Feb 25 19:54:05 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, SET HEADING: 0.0, Mon Feb 25 19:54:05 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Gyro offset: 19.510000228881836, Mon Feb 25 19:54:05 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, SET HEADING: 0.0, Mon Feb 25 19:54:05 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Gyro offset: 0.0, Mon Feb 25 19:54:05 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 19:54:05 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Starting check systems., Mon Feb 25 19:54:05 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Left Slave - Vel: 150.57555413886448 Pos: 443.01058357982663, Mon Feb 25 19:54:09 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, FAILED - Left Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:54:12 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Left Master Test Failed - Vel: 0.0 Pos: 20.21173086118254, Mon Feb 25 19:54:12 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, FAILED - Right Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:54:15 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Right Slave Test Failed - Vel: 0.0 Pos: 198.84072564890147, Mon Feb 25 19:54:15 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, FAILED - Right Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:54:18 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Right Master Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 19:54:18 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Right Positions varied!!!!!!!!, Mon Feb 25 19:54:18 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Right Velocities varied!!!!!!!!, Mon Feb 25 19:54:18 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, NavX Connected, Mon Feb 25 19:54:18 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Set Hatch Spear to STOW, Mon Feb 25 19:54:18 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Disabled Init, Mon Feb 25 19:54:19 PST 2019
+a05e7a22-4484-4015-9e21-b3a018ec776a, Set Hatch Spear to STOW, Mon Feb 25 19:54:19 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Robot Startup, Mon Feb 25 19:55:16 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Robot Init on Practice Robot, Mon Feb 25 19:55:16 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Disabled Init, Mon Feb 25 19:55:16 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Set Hatch Spear to STOW, Mon Feb 25 19:55:17 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, SET HEADING: 0.0, Mon Feb 25 19:55:17 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Gyro offset: 19.170000076293945, Mon Feb 25 19:55:17 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, SET HEADING: 0.0, Mon Feb 25 19:55:17 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Gyro offset: 19.170000076293945, Mon Feb 25 19:55:17 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, SET HEADING: 0.0, Mon Feb 25 19:55:17 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Gyro offset: 0.0, Mon Feb 25 19:55:17 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 19:55:17 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Starting check systems., Mon Feb 25 19:55:17 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, FAILED - Left Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:55:20 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Left Slave Test Failed - Vel: 148.78079661703816 Pos: 436.4252040574331, Mon Feb 25 19:55:21 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, FAILED - Left Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:55:24 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Left Master Test Failed - Vel: 0.0 Pos: 34.31208226342829, Mon Feb 25 19:55:24 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, FAILED - Right Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:55:27 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Right Slave Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 19:55:27 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, FAILED - Right Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:55:30 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Right Master Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 19:55:30 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Right Positions varied!!!!!!!!, Mon Feb 25 19:55:30 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Right Velocities varied!!!!!!!!, Mon Feb 25 19:55:30 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, NavX Connected, Mon Feb 25 19:55:30 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Set Hatch Spear to STOW, Mon Feb 25 19:55:31 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Disabled Init, Mon Feb 25 19:55:31 PST 2019
+836f6bd9-5d6a-4dde-9ad7-35b9ef58e6b3, Set Hatch Spear to STOW, Mon Feb 25 19:55:31 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Robot Startup, Mon Feb 25 19:56:26 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Robot Init on Practice Robot, Mon Feb 25 19:56:26 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Disabled Init, Mon Feb 25 19:56:26 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Set Hatch Spear to STOW, Mon Feb 25 19:56:26 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, SET HEADING: 0.0, Mon Feb 25 19:56:27 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Gyro offset: 18.700000762939453, Mon Feb 25 19:56:27 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, SET HEADING: 0.0, Mon Feb 25 19:56:27 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Gyro offset: 18.700000762939453, Mon Feb 25 19:56:27 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, SET HEADING: 0.0, Mon Feb 25 19:56:27 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Gyro offset: 0.0, Mon Feb 25 19:56:27 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 19:56:27 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Starting check systems., Mon Feb 25 19:56:27 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Left Slave - Vel: 151.40390376432276 Pos: 444.5200206751062, Mon Feb 25 19:56:31 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, FAILED - Left Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:56:34 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Left Master Test Failed - Vel: 45.55922940020655 Pos: 404.0459375867409, Mon Feb 25 19:56:34 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, FAILED - Right Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:56:37 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Right Slave Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 19:56:37 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, FAILED - Right Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:56:40 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Right Master Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 19:56:40 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Right Positions varied!!!!!!!!, Mon Feb 25 19:56:40 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Right Velocities varied!!!!!!!!, Mon Feb 25 19:56:40 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, NavX Connected, Mon Feb 25 19:56:40 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Set Hatch Spear to STOW, Mon Feb 25 19:56:41 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Disabled Init, Mon Feb 25 19:56:41 PST 2019
+e27ae604-a300-4419-adb6-edf468e5c5fd, Set Hatch Spear to STOW, Mon Feb 25 19:56:41 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Robot Startup, Mon Feb 25 19:57:04 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Robot Init on Practice Robot, Mon Feb 25 19:57:04 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Disabled Init, Mon Feb 25 19:57:04 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Set Hatch Spear to STOW, Mon Feb 25 19:57:05 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, SET HEADING: 0.0, Mon Feb 25 19:57:05 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Gyro offset: 18.610000610351566, Mon Feb 25 19:57:05 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, SET HEADING: 0.0, Mon Feb 25 19:57:05 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Gyro offset: 18.610000610351566, Mon Feb 25 19:57:05 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, SET HEADING: 0.0, Mon Feb 25 19:57:05 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Gyro offset: 0.0, Mon Feb 25 19:57:05 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 19:57:05 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Starting check systems., Mon Feb 25 19:57:05 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Left Slave - Vel: 152.8305058970565 Pos: 444.98021491147193, Mon Feb 25 19:57:09 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, FAILED - Left Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:57:12 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Left Master Test Failed - Vel: 0.0 Pos: 22.278002982464635, Mon Feb 25 19:57:12 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, FAILED - Right Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:57:15 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Right Slave Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 19:57:15 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, FAILED - Right Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:57:18 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Right Master Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 19:57:18 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Right Positions varied!!!!!!!!, Mon Feb 25 19:57:18 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Right Velocities varied!!!!!!!!, Mon Feb 25 19:57:18 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, NavX Connected, Mon Feb 25 19:57:18 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Set Hatch Spear to STOW, Mon Feb 25 19:57:19 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Disabled Init, Mon Feb 25 19:57:19 PST 2019
+a8dc26aa-644d-4455-b93a-d86a13cbe623, Set Hatch Spear to STOW, Mon Feb 25 19:57:19 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Robot Startup, Mon Feb 25 19:57:44 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Robot Init on Practice Robot, Mon Feb 25 19:57:45 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Disabled Init, Mon Feb 25 19:57:45 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Set Hatch Spear to STOW, Mon Feb 25 19:57:45 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, SET HEADING: 0.0, Mon Feb 25 19:57:51 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Gyro offset: 18.32999992370606, Mon Feb 25 19:57:51 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, SET HEADING: 0.0, Mon Feb 25 19:57:51 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Gyro offset: 18.32999992370606, Mon Feb 25 19:57:51 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, SET HEADING: 0.0, Mon Feb 25 19:57:51 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Gyro offset: 0.0, Mon Feb 25 19:57:51 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 19:57:51 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Starting check systems., Mon Feb 25 19:57:51 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, FAILED - Left Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:57:54 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Left Slave Test Failed - Vel: 0.0 Pos: 21.863828169735484, Mon Feb 25 19:57:55 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, FAILED - Left Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:57:58 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Left Master Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 19:57:58 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, FAILED - Right Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:58:01 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Right Slave Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 19:58:01 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, FAILED - Right Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:58:04 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Right Master Test Failed - Vel: 0.0 Pos: 1.4450099021883693, Mon Feb 25 19:58:04 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Right Positions varied!!!!!!!!, Mon Feb 25 19:58:05 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, NavX Connected, Mon Feb 25 19:58:05 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Set Hatch Spear to STOW, Mon Feb 25 19:58:05 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Disabled Init, Mon Feb 25 19:58:05 PST 2019
+b9733af9-8fa0-44d4-8b28-4539f6fd3c78, Set Hatch Spear to STOW, Mon Feb 25 19:58:05 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Robot Startup, Mon Feb 25 19:59:42 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Robot Init on Practice Robot, Mon Feb 25 19:59:42 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Disabled Init, Mon Feb 25 19:59:42 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Set Hatch Spear to STOW, Mon Feb 25 19:59:42 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, SET HEADING: 0.0, Mon Feb 25 19:59:43 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Gyro offset: 17.86000061035156, Mon Feb 25 19:59:43 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, SET HEADING: 0.0, Mon Feb 25 19:59:43 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Gyro offset: 17.86000061035156, Mon Feb 25 19:59:43 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, SET HEADING: 0.0, Mon Feb 25 19:59:43 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Gyro offset: 0.0, Mon Feb 25 19:59:43 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 19:59:43 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Starting check systems., Mon Feb 25 19:59:43 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, FAILED - Left Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:59:51 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Left Slave Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 19:59:51 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, FAILED - Left Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 19:59:54 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Left Master Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 19:59:54 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, FAILED - Right Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:00:02 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Right Slave Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 20:00:02 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, FAILED - Right Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:00:05 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Right Master Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 20:00:05 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, NavX Connected, Mon Feb 25 20:00:06 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Set Hatch Spear to STOW, Mon Feb 25 20:00:06 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Disabled Init, Mon Feb 25 20:00:06 PST 2019
+1f3a781e-50d2-4ad2-9761-9d47a63c11da, Set Hatch Spear to STOW, Mon Feb 25 20:00:06 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Robot Startup, Mon Feb 25 20:03:36 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Robot Init on Practice Robot, Mon Feb 25 20:03:36 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Disabled Init, Mon Feb 25 20:03:36 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Set Hatch Spear to STOW, Mon Feb 25 20:03:36 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, SET HEADING: 0.0, Mon Feb 25 20:03:42 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Gyro offset: 16.690000534057617, Mon Feb 25 20:03:42 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, SET HEADING: 0.0, Mon Feb 25 20:03:42 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Gyro offset: 16.690000534057617, Mon Feb 25 20:03:42 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, SET HEADING: 0.0, Mon Feb 25 20:03:42 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Gyro offset: 0.0040000914596021175, Mon Feb 25 20:03:42 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:03:42 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Starting check systems., Mon Feb 25 20:03:42 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Left Slave - Vel: 153.47477782796852 Pos: 444.56604009874275, Mon Feb 25 20:03:46 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, FAILED - Left Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:03:49 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Left Master Test Failed - Vel: 45.329132282023686 Pos: 397.19824734961895, Mon Feb 25 20:03:49 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, FAILED - Right Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:03:52 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Right Slave Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 20:03:52 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, FAILED - Right Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:03:55 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Right Master Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 20:03:55 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Right Positions varied!!!!!!!!, Mon Feb 25 20:03:55 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Right Velocities varied!!!!!!!!, Mon Feb 25 20:03:55 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, NavX Connected, Mon Feb 25 20:03:56 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Set Hatch Spear to STOW, Mon Feb 25 20:03:56 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Disabled Init, Mon Feb 25 20:03:56 PST 2019
+4a6d8200-fa1c-4c63-875c-668aaa336605, Set Hatch Spear to STOW, Mon Feb 25 20:03:56 PST 2019
+809fd610-44cc-40bd-93dd-90dadea9a57f, Robot Startup, Mon Feb 25 20:04:31 PST 2019
+809fd610-44cc-40bd-93dd-90dadea9a57f, Robot Init on Practice Robot, Mon Feb 25 20:04:31 PST 2019
+809fd610-44cc-40bd-93dd-90dadea9a57f, Disabled Init, Mon Feb 25 20:04:32 PST 2019
+809fd610-44cc-40bd-93dd-90dadea9a57f, Set Hatch Spear to STOW, Mon Feb 25 20:04:32 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Robot Startup, Mon Feb 25 20:06:48 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Robot Init on Practice Robot, Mon Feb 25 20:06:48 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Disabled Init, Mon Feb 25 20:06:48 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Set Hatch Spear to STOW, Mon Feb 25 20:06:48 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, SET HEADING: 0.0, Mon Feb 25 20:06:55 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Gyro offset: 15.739999771118164, Mon Feb 25 20:06:55 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, SET HEADING: 0.0, Mon Feb 25 20:06:55 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Gyro offset: 15.739999771118164, Mon Feb 25 20:06:55 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, SET HEADING: 0.0, Mon Feb 25 20:06:55 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Gyro offset: -0.010000228881835938, Mon Feb 25 20:06:56 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:06:56 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Starting check systems., Mon Feb 25 20:06:56 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Left Slave - Vel: 150.29943759704503 Pos: 440.84306872654406, Mon Feb 25 20:06:59 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, FAILED - Left Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:07:04 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Left Master Test Failed - Vel: 149.97730163158903 Pos: 456.659944630434, Mon Feb 25 20:07:04 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Right Slave - Vel: 152.55438935523708 Pos: 439.81223363708483, Mon Feb 25 20:07:07 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, FAILED - Right Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:07:11 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Right Master Test Failed - Vel: 149.37904912431358 Pos: 508.58826226194213, Mon Feb 25 20:07:11 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Right Positions varied!!!!!!!!, Mon Feb 25 20:07:12 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Right Velocities varied!!!!!!!!, Mon Feb 25 20:07:12 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, NavX Connected, Mon Feb 25 20:07:12 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Set Hatch Spear to STOW, Mon Feb 25 20:07:12 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Disabled Init, Mon Feb 25 20:07:13 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Set Hatch Spear to STOW, Mon Feb 25 20:07:13 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, SET HEADING: 0.0, Mon Feb 25 20:08:40 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Gyro offset: -0.42999935150146484, Mon Feb 25 20:08:40 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, SET HEADING: 0.0, Mon Feb 25 20:08:40 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Gyro offset: 0.0, Mon Feb 25 20:08:40 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:08:40 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Starting check systems., Mon Feb 25 20:08:40 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, FAILED - Left Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:08:43 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Left Slave Test Failed - Vel: 18.40776945462891 Pos: 368.7122241185807, Mon Feb 25 20:08:43 PST 2019
+a89f6f77-4c7a-4dc7-b90c-bfd922eef85e, Left Master - Vel: 150.29943759704503 Pos: 438.71236941217074, Mon Feb 25 20:08:48 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Robot Startup, Mon Feb 25 20:08:57 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Robot Init on Practice Robot, Mon Feb 25 20:08:57 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Disabled Init, Mon Feb 25 20:08:58 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Set Hatch Spear to STOW, Mon Feb 25 20:08:58 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Teleop Init, Mon Feb 25 20:08:59 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:08:59 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, SET HEADING: 0.0, Mon Feb 25 20:09:00 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Gyro offset: 15.289999961853027, Mon Feb 25 20:09:00 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Disabled Init, Mon Feb 25 20:09:15 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Set Hatch Spear to STOW, Mon Feb 25 20:09:15 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Teleop Init, Mon Feb 25 20:09:38 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:09:38 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Disabled Init, Mon Feb 25 20:09:53 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Set Hatch Spear to STOW, Mon Feb 25 20:09:53 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Teleop Init, Mon Feb 25 20:10:08 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:10:08 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Disabled Init, Mon Feb 25 20:10:37 PST 2019
+ad64afa0-df91-47fd-9c93-5add60d1b65d, Set Hatch Spear to STOW, Mon Feb 25 20:10:37 PST 2019
+fe3b8d62-598b-43cb-b6a4-1d30ce244cbd, Robot Startup, Mon Feb 25 20:12:11 PST 2019
+fe3b8d62-598b-43cb-b6a4-1d30ce244cbd, Robot Init on Practice Robot, Mon Feb 25 20:12:12 PST 2019
+fe3b8d62-598b-43cb-b6a4-1d30ce244cbd, Disabled Init, Mon Feb 25 20:12:12 PST 2019
+fe3b8d62-598b-43cb-b6a4-1d30ce244cbd, Set Hatch Spear to STOW, Mon Feb 25 20:12:12 PST 2019
+fe3b8d62-598b-43cb-b6a4-1d30ce244cbd, Teleop Init, Mon Feb 25 20:12:20 PST 2019
+fe3b8d62-598b-43cb-b6a4-1d30ce244cbd, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:12:20 PST 2019
+fe3b8d62-598b-43cb-b6a4-1d30ce244cbd, SET HEADING: 0.0, Mon Feb 25 20:12:20 PST 2019
+fe3b8d62-598b-43cb-b6a4-1d30ce244cbd, Gyro offset: 19.43000030517578, Mon Feb 25 20:12:20 PST 2019
+fe3b8d62-598b-43cb-b6a4-1d30ce244cbd, Disabled Init, Mon Feb 25 20:12:21 PST 2019
+fe3b8d62-598b-43cb-b6a4-1d30ce244cbd, Set Hatch Spear to STOW, Mon Feb 25 20:12:21 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Robot Startup, Mon Feb 25 20:12:30 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Robot Init on Practice Robot, Mon Feb 25 20:12:30 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Disabled Init, Mon Feb 25 20:12:30 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Set Hatch Spear to STOW, Mon Feb 25 20:12:30 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Teleop Init, Mon Feb 25 20:12:35 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:12:35 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, SET HEADING: 0.0, Mon Feb 25 20:12:35 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Gyro offset: 19.31999969482422, Mon Feb 25 20:12:35 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Disabled Init, Mon Feb 25 20:12:45 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Set Hatch Spear to STOW, Mon Feb 25 20:12:45 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Teleop Init, Mon Feb 25 20:13:24 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:13:24 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Disabled Init, Mon Feb 25 20:13:34 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Set Hatch Spear to STOW, Mon Feb 25 20:13:34 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Teleop Init, Mon Feb 25 20:13:57 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:13:57 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Disabled Init, Mon Feb 25 20:14:04 PST 2019
+925bdad0-3814-42b1-9fa6-a63da7e91745, Set Hatch Spear to STOW, Mon Feb 25 20:14:04 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Robot Startup, Mon Feb 25 20:14:42 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Robot Init on Practice Robot, Mon Feb 25 20:14:42 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Disabled Init, Mon Feb 25 20:14:42 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Set Hatch Spear to STOW, Mon Feb 25 20:14:42 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Teleop Init, Mon Feb 25 20:14:45 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:14:45 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, SET HEADING: 0.0, Mon Feb 25 20:14:45 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Gyro offset: 18.3700008392334, Mon Feb 25 20:14:45 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Disabled Init, Mon Feb 25 20:14:46 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Set Hatch Spear to STOW, Mon Feb 25 20:14:47 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, SET HEADING: 0.0, Mon Feb 25 20:14:48 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Gyro offset: 18.360000610351566, Mon Feb 25 20:14:48 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, SET HEADING: 0.0, Mon Feb 25 20:14:48 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Gyro offset: 0.0, Mon Feb 25 20:14:48 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:14:48 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Starting check systems., Mon Feb 25 20:14:48 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Left Slave - Vel: 151.95613684796166 Pos: 445.16889454838184, Mon Feb 25 20:14:52 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, FAILED - Left Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:14:57 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Left Master Test Failed - Vel: 0.0 Pos: 247.2531593145755, Mon Feb 25 20:14:57 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, FAILED - Right Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:15:00 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Right Slave Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 20:15:00 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, FAILED - Right Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:15:04 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Right Master Test Failed - Vel: 0.0 Pos: 0.0, Mon Feb 25 20:15:04 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Right Positions varied!!!!!!!!, Mon Feb 25 20:15:05 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Right Velocities varied!!!!!!!!, Mon Feb 25 20:15:05 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, NavX Connected, Mon Feb 25 20:15:05 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Set Hatch Spear to STOW, Mon Feb 25 20:15:05 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Disabled Init, Mon Feb 25 20:15:05 PST 2019
+061e0bf9-d5ea-4030-beb3-7616f3fafab2, Set Hatch Spear to STOW, Mon Feb 25 20:15:05 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Robot Startup, Mon Feb 25 20:15:40 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Robot Init on Practice Robot, Mon Feb 25 20:15:41 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Disabled Init, Mon Feb 25 20:15:41 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Set Hatch Spear to STOW, Mon Feb 25 20:15:41 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, SET HEADING: 0.0, Mon Feb 25 20:15:42 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Gyro offset: 18.059999465942383, Mon Feb 25 20:15:42 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, SET HEADING: 0.0, Mon Feb 25 20:15:42 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Gyro offset: 18.059999465942383, Mon Feb 25 20:15:42 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, SET HEADING: 0.0, Mon Feb 25 20:15:42 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Gyro offset: 0.0, Mon Feb 25 20:15:42 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:15:42 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Starting check systems., Mon Feb 25 20:15:42 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Left Slave - Vel: 151.58798145886905 Pos: 444.4141760007421, Mon Feb 25 20:15:46 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Left Master - Vel: 151.95613684796166 Pos: 441.4965445421834, Mon Feb 25 20:15:51 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Right Slave - Vel: 151.08176779886676 Pos: 437.8287964783486, Mon Feb 25 20:15:54 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, FAILED - Right Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:15:59 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Right Master Test Failed - Vel: 23.469906054651858 Pos: 378.20603121480553, Mon Feb 25 20:15:59 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Right Currents varied!!!!!!!!!!!, Mon Feb 25 20:15:59 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Right Positions varied!!!!!!!!, Mon Feb 25 20:15:59 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Right Velocities varied!!!!!!!!, Mon Feb 25 20:15:59 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, NavX Connected, Mon Feb 25 20:15:59 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Set Hatch Spear to STOW, Mon Feb 25 20:15:59 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Disabled Init, Mon Feb 25 20:15:59 PST 2019
+27469b76-271c-49c6-a839-7aa7c55790c3, Set Hatch Spear to STOW, Mon Feb 25 20:15:59 PST 2019
+df256ff6-4194-47f4-8b6a-46f18c234713, Robot Startup, Mon Feb 25 20:16:28 PST 2019
+df256ff6-4194-47f4-8b6a-46f18c234713, Robot Init on Practice Robot, Mon Feb 25 20:16:28 PST 2019
+df256ff6-4194-47f4-8b6a-46f18c234713, Disabled Init, Mon Feb 25 20:16:28 PST 2019
+df256ff6-4194-47f4-8b6a-46f18c234713, Set Hatch Spear to STOW, Mon Feb 25 20:16:28 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Robot Startup, Mon Feb 25 20:23:56 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Robot Init on Practice Robot, Mon Feb 25 20:23:56 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Disabled Init, Mon Feb 25 20:23:56 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Set Hatch Spear to STOW, Mon Feb 25 20:23:57 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, SET HEADING: 0.0, Mon Feb 25 20:23:57 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Gyro offset: 15.970000267028807, Mon Feb 25 20:23:57 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, SET HEADING: 0.0, Mon Feb 25 20:23:57 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Gyro offset: 15.970000267028807, Mon Feb 25 20:23:57 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, SET HEADING: 0.0, Mon Feb 25 20:23:57 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Gyro offset: 0.0, Mon Feb 25 20:23:57 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:23:57 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Starting check systems., Mon Feb 25 20:23:57 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Left Slave - Vel: 152.27827281341763 Pos: 444.3727585194692, Mon Feb 25 20:24:01 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Left Master - Vel: 152.41633108432737 Pos: 440.7556318216346, Mon Feb 25 20:24:06 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Right Slave - Vel: 151.81807857705192 Pos: 439.32902968890085, Mon Feb 25 20:24:09 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Right Master - Vel: 150.89769010432047 Pos: 438.79060243235296, Mon Feb 25 20:24:14 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Right Positions varied!!!!!!!!, Mon Feb 25 20:24:15 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Drive Test Success, Mon Feb 25 20:24:15 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, NavX Connected, Mon Feb 25 20:24:15 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Set Hatch Spear to STOW, Mon Feb 25 20:24:15 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Disabled Init, Mon Feb 25 20:31:22 PST 2019
+adce16ed-bb8a-4d40-89a9-24a9b4ff7862, Set Hatch Spear to STOW, Mon Feb 25 20:31:22 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Robot Startup, Mon Feb 25 20:32:26 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Robot Init on Practice Robot, Mon Feb 25 20:32:27 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Disabled Init, Mon Feb 25 20:32:27 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Set Hatch Spear to STOW, Mon Feb 25 20:32:27 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, SET HEADING: 0.0, Mon Feb 25 20:32:30 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Gyro offset: 13.65999984741211, Mon Feb 25 20:32:30 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, SET HEADING: 0.0, Mon Feb 25 20:32:30 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Gyro offset: 13.65999984741211, Mon Feb 25 20:32:30 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, SET HEADING: 0.0, Mon Feb 25 20:32:30 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Gyro offset: 0.0, Mon Feb 25 20:32:30 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:32:30 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Starting check systems., Mon Feb 25 20:32:30 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Left Slave - Vel: 151.35788434068618 Pos: 439.37965105490105, Mon Feb 25 20:32:34 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Left Master - Vel: 150.25341817340848 Pos: 438.54669948707914, Mon Feb 25 20:32:39 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Right Slave - Vel: 150.80565125704734 Pos: 437.6631265532569, Mon Feb 25 20:32:42 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Right Master - Vel: 150.25341817340848 Pos: 437.4422333198014, Mon Feb 25 20:32:47 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Drive Test Success, Mon Feb 25 20:32:48 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, NavX Connected, Mon Feb 25 20:32:48 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Set Hatch Spear to STOW, Mon Feb 25 20:32:48 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Disabled Init, Mon Feb 25 20:34:23 PST 2019
+3147771c-cf7a-4136-afcc-3db7197f5c48, Set Hatch Spear to STOW, Mon Feb 25 20:34:23 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Robot Startup, Mon Feb 25 20:34:51 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Robot Init on Practice Robot, Mon Feb 25 20:34:51 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Disabled Init, Mon Feb 25 20:34:51 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Set Hatch Spear to STOW, Mon Feb 25 20:34:51 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, SET HEADING: 0.0, Mon Feb 25 20:34:53 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Gyro offset: 12.989999771118164, Mon Feb 25 20:34:53 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, SET HEADING: 0.0, Mon Feb 25 20:34:53 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Gyro offset: 12.989999771118164, Mon Feb 25 20:34:53 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, SET HEADING: 0.0, Mon Feb 25 20:34:53 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Gyro offset: 0.0, Mon Feb 25 20:34:53 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:34:53 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Starting check systems., Mon Feb 25 20:34:53 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, FAILED - Left Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:34:56 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Left Slave Test Failed - Vel: 149.97730163158903 Pos: 439.3888549396284, Mon Feb 25 20:34:56 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, FAILED - Left Master FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:35:01 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Left Master Test Failed - Vel: 149.28701027704045 Pos: 437.9668547492583, Mon Feb 25 20:35:01 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Right Slave - Vel: 151.21982606977647 Pos: 436.95902937161736, Mon Feb 25 20:35:05 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Right Master - Vel: 150.16137932613532 Pos: 440.04693269763135, Mon Feb 25 20:35:10 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, NavX Connected, Mon Feb 25 20:35:10 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Set Hatch Spear to STOW, Mon Feb 25 20:35:10 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Disabled Init, Mon Feb 25 20:35:11 PST 2019
+1a3ec3ea-a9f3-4308-97cb-4d3e1b5f1b01, Set Hatch Spear to STOW, Mon Feb 25 20:35:11 PST 2019
+c4cc7fd3-5e4b-4d85-b356-b0783c7dc132, Robot Startup, Mon Feb 25 20:36:01 PST 2019
+c4cc7fd3-5e4b-4d85-b356-b0783c7dc132, Robot Init on Practice Robot, Mon Feb 25 20:36:01 PST 2019
+c4cc7fd3-5e4b-4d85-b356-b0783c7dc132, Disabled Init, Mon Feb 25 20:36:01 PST 2019
+c4cc7fd3-5e4b-4d85-b356-b0783c7dc132, Set Hatch Spear to STOW, Mon Feb 25 20:36:02 PST 2019
+c4cc7fd3-5e4b-4d85-b356-b0783c7dc132, Teleop Init, Mon Feb 25 20:36:03 PST 2019
+c4cc7fd3-5e4b-4d85-b356-b0783c7dc132, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:36:03 PST 2019
+c4cc7fd3-5e4b-4d85-b356-b0783c7dc132, SET HEADING: 0.0, Mon Feb 25 20:36:03 PST 2019
+c4cc7fd3-5e4b-4d85-b356-b0783c7dc132, Gyro offset: 12.880000114440918, Mon Feb 25 20:36:03 PST 2019
+c4cc7fd3-5e4b-4d85-b356-b0783c7dc132, Disabled Init, Mon Feb 25 20:36:49 PST 2019
+c4cc7fd3-5e4b-4d85-b356-b0783c7dc132, Set Hatch Spear to STOW, Mon Feb 25 20:36:49 PST 2019
+14c61636-a1bf-4a7d-ac8b-54b493851b2c, Robot Startup, Mon Feb 25 20:40:38 PST 2019
+14c61636-a1bf-4a7d-ac8b-54b493851b2c, Robot Init on Practice Robot, Mon Feb 25 20:40:38 PST 2019
+14c61636-a1bf-4a7d-ac8b-54b493851b2c, Disabled Init, Mon Feb 25 20:40:39 PST 2019
+14c61636-a1bf-4a7d-ac8b-54b493851b2c, Set Hatch Spear to STOW, Mon Feb 25 20:40:39 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Robot Startup, Mon Feb 25 20:47:36 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Robot Init on Practice Robot, Mon Feb 25 20:47:36 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Disabled Init, Mon Feb 25 20:47:37 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Set Hatch Spear to STOW, Mon Feb 25 20:47:37 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, SET HEADING: 0.0, Mon Feb 25 20:47:54 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Gyro offset: 8.750000000000002, Mon Feb 25 20:47:54 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, SET HEADING: 0.0, Mon Feb 25 20:47:54 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Gyro offset: 8.750000000000002, Mon Feb 25 20:47:54 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, SET HEADING: 0.0, Mon Feb 25 20:47:54 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Gyro offset: 0.0, Mon Feb 25 20:47:54 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:47:54 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Starting check systems., Mon Feb 25 20:47:54 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Left Slave - Vel: 151.54196203523247 Pos: 439.0575150894451, Mon Feb 25 20:47:58 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Left Master - Vel: 150.6675929861376 Pos: 434.8145242301531, Mon Feb 25 20:48:03 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Right Slave - Vel: 151.35788434068618 Pos: 436.75654390761645, Mon Feb 25 20:48:06 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Right Master - Vel: 150.0233210552256 Pos: 437.58489353307476, Mon Feb 25 20:48:11 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Drive Test Success, Mon Feb 25 20:48:12 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, NavX Connected, Mon Feb 25 20:48:12 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Switching to Cargo Arm Motion Magic, Mon Feb 25 20:48:12 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Switching to Cargo Arm Motion Magic, Mon Feb 25 20:48:14 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Switching to Cargo Arm Motion Magic, Mon Feb 25 20:48:16 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Switching to Cargo Arm Motion Magic, Mon Feb 25 20:48:18 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Switching to Cargo Arm Motion Magic, Mon Feb 25 20:48:21 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, FAILED - Cargo_ArmCargo Arm Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:48:24 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Cargo_Arm Slave Test Failed - Vel: -24.609375 Pos: 123.22265625 Current: 0.125, Mon Feb 25 20:48:25 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Switching to Cargo Arm Motion Magic, Mon Feb 25 20:48:26 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, FAILED - Cargo_ArmCargo Arm Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:48:29 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Cargo_Arm Master Test Failed - Vel: -29.8828125 Pos: 114.697265625 Current: 0.125, Mon Feb 25 20:48:29 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Cargo_Arm Positions varied!!!!!!!!, Mon Feb 25 20:48:29 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Cargo_Arm Velocities varied!!!!!!!!, Mon Feb 25 20:48:29 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Set Hatch Spear to STOW, Mon Feb 25 20:48:29 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Disabled Init, Mon Feb 25 20:48:31 PST 2019
+bc34ed15-7f15-48cc-b74e-66bf6dd1d72d, Set Hatch Spear to STOW, Mon Feb 25 20:48:31 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Robot Startup, Mon Feb 25 20:51:08 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Robot Init on Practice Robot, Mon Feb 25 20:51:08 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Disabled Init, Mon Feb 25 20:51:08 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Set Hatch Spear to STOW, Mon Feb 25 20:51:09 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, SET HEADING: 0.0, Mon Feb 25 20:51:21 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Gyro offset: 8.109999656677244, Mon Feb 25 20:51:21 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, SET HEADING: 0.0, Mon Feb 25 20:51:21 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Gyro offset: 8.109999656677244, Mon Feb 25 20:51:21 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, SET HEADING: 0.0, Mon Feb 25 20:51:21 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Gyro offset: 9.999275207519531E-4, Mon Feb 25 20:51:21 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:51:21 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Starting check systems., Mon Feb 25 20:51:21 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Left Slave - Vel: 149.7472045134062 Pos: 439.0299034352631, Mon Feb 25 20:51:25 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Left Master - Vel: 150.0233210552256 Pos: 436.88539829379886, Mon Feb 25 20:51:30 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Right Slave - Vel: 150.06934047886216 Pos: 437.1062915272544, Mon Feb 25 20:51:33 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Right Master - Vel: 150.71361240977419 Pos: 437.2259420287095, Mon Feb 25 20:51:38 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Drive Test Success, Mon Feb 25 20:51:39 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, NavX Connected, Mon Feb 25 20:51:39 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Switching to Cargo Arm Motion Magic, Mon Feb 25 20:51:39 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Switching to Cargo Arm Motion Magic, Mon Feb 25 20:51:41 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Switching to Cargo Arm Motion Magic, Mon Feb 25 20:51:43 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Switching to Cargo Arm Motion Magic, Mon Feb 25 20:51:45 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Switching to Cargo Arm Motion Magic, Mon Feb 25 20:51:48 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, FAILED - Cargo_ArmCargo Arm Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:51:51 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Cargo_Arm Slave Test Failed - Vel: -24.609375 Pos: 120.9375 Current: 0.125, Mon Feb 25 20:51:52 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Switching to Cargo Arm Motion Magic, Mon Feb 25 20:51:53 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, FAILED - Cargo_ArmCargo Arm Slave FAILED TO REACH REQUIRED SPEED OR POSITION, Mon Feb 25 20:51:56 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Cargo_Arm Master Test Failed - Vel: 0.0 Pos: 169.716796875, Mon Feb 25 20:51:56 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Cargo_Arm Positions varied!!!!!!!!, Mon Feb 25 20:51:56 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Cargo_Arm Velocities varied!!!!!!!!, Mon Feb 25 20:51:56 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Set Hatch Spear to STOW, Mon Feb 25 20:51:56 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Disabled Init, Mon Feb 25 20:51:56 PST 2019
+8e8ebba6-8aef-4d90-8ca1-4f779a993516, Set Hatch Spear to STOW, Mon Feb 25 20:51:56 PST 2019
+f644d010-8d02-44dc-b05f-49b507445321, SigNotUpdated, Mon Feb 25 20:52:19 PST 2019
+f644d010-8d02-44dc-b05f-49b507445321, Robot Startup, Mon Feb 25 20:52:20 PST 2019
+f644d010-8d02-44dc-b05f-49b507445321, Robot Init on Practice Robot, Mon Feb 25 20:52:20 PST 2019
+f644d010-8d02-44dc-b05f-49b507445321, Disabled Init, Mon Feb 25 20:52:20 PST 2019
+f644d010-8d02-44dc-b05f-49b507445321, Set Hatch Spear to STOW, Mon Feb 25 20:52:20 PST 2019
+ef87bdc6-6e08-4511-ac25-9b4ee52ebf25, Robot Startup, Mon Feb 25 20:53:32 PST 2019
+ef87bdc6-6e08-4511-ac25-9b4ee52ebf25, Robot Init on Practice Robot, Mon Feb 25 20:53:33 PST 2019
+ef87bdc6-6e08-4511-ac25-9b4ee52ebf25, Disabled Init, Mon Feb 25 20:53:34 PST 2019
+ef87bdc6-6e08-4511-ac25-9b4ee52ebf25, Set Hatch Spear to STOW, Mon Feb 25 20:53:34 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Robot Startup, Mon Feb 25 20:53:45 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Robot Init on Practice Robot, Mon Feb 25 20:53:45 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Disabled Init, Mon Feb 25 20:53:46 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Set Hatch Spear to STOW, Mon Feb 25 20:53:46 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Teleop Init, Mon Feb 25 20:53:50 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:53:50 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, SET HEADING: 0.0, Mon Feb 25 20:53:50 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Gyro offset: -7.880000114440916, Mon Feb 25 20:53:50 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Switching to Hatch Arm Open Loop, Mon Feb 25 20:53:55 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Switching to Cargo Arm Open Loop, Mon Feb 25 20:53:57 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Disabled Init, Mon Feb 25 20:54:15 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Set Hatch Spear to STOW, Mon Feb 25 20:54:15 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Teleop Init, Mon Feb 25 20:54:20 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:54:20 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Disabled Init, Mon Feb 25 20:54:22 PST 2019
+3b72d1b0-92de-45a9-a637-80b67979204d, Set Hatch Spear to STOW, Mon Feb 25 20:54:22 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Robot Startup, Mon Feb 25 20:54:32 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Robot Init on Practice Robot, Mon Feb 25 20:54:32 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Disabled Init, Mon Feb 25 20:54:32 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Set Hatch Spear to STOW, Mon Feb 25 20:54:33 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Teleop Init, Mon Feb 25 20:55:30 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:55:30 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, SET HEADING: 0.0, Mon Feb 25 20:55:30 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Gyro offset: -8.659999847412111, Mon Feb 25 20:55:30 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Disabled Init, Mon Feb 25 20:55:30 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Set Hatch Spear to STOW, Mon Feb 25 20:55:30 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Teleop Init, Mon Feb 25 20:55:32 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:55:32 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Switching to Hatch Arm Open Loop, Mon Feb 25 20:55:36 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Disabled Init, Mon Feb 25 20:55:41 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Set Hatch Spear to STOW, Mon Feb 25 20:55:41 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Teleop Init, Mon Feb 25 20:55:54 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:55:54 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Switching to Cargo Arm Open Loop, Mon Feb 25 20:55:55 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Disabled Init, Mon Feb 25 20:56:00 PST 2019
+894a9111-5a64-4386-8bc4-130cdcea87f1, Set Hatch Spear to STOW, Mon Feb 25 20:56:00 PST 2019
+0dfa0bba-c8c9-4d0c-b173-02e1fe142573, Robot Startup, Mon Feb 25 20:56:26 PST 2019
+0dfa0bba-c8c9-4d0c-b173-02e1fe142573, Robot Init on Practice Robot, Mon Feb 25 20:56:26 PST 2019
+0dfa0bba-c8c9-4d0c-b173-02e1fe142573, Disabled Init, Mon Feb 25 20:56:26 PST 2019
+0dfa0bba-c8c9-4d0c-b173-02e1fe142573, Set Hatch Spear to STOW, Mon Feb 25 20:56:26 PST 2019
+0dfa0bba-c8c9-4d0c-b173-02e1fe142573, Teleop Init, Mon Feb 25 20:56:28 PST 2019
+0dfa0bba-c8c9-4d0c-b173-02e1fe142573, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:56:28 PST 2019
+0dfa0bba-c8c9-4d0c-b173-02e1fe142573, SET HEADING: 0.0, Mon Feb 25 20:56:28 PST 2019
+0dfa0bba-c8c9-4d0c-b173-02e1fe142573, Gyro offset: -9.050000190734863, Mon Feb 25 20:56:28 PST 2019
+0dfa0bba-c8c9-4d0c-b173-02e1fe142573, Switching to Cargo Arm Open Loop, Mon Feb 25 20:56:30 PST 2019
+0dfa0bba-c8c9-4d0c-b173-02e1fe142573, Disabled Init, Mon Feb 25 20:56:40 PST 2019
+0dfa0bba-c8c9-4d0c-b173-02e1fe142573, Set Hatch Spear to STOW, Mon Feb 25 20:56:40 PST 2019
+607ea5ad-31aa-4961-a562-0f49e362f83c, Robot Startup, Mon Feb 25 20:57:57 PST 2019
+607ea5ad-31aa-4961-a562-0f49e362f83c, Robot Init on Practice Robot, Mon Feb 25 20:57:57 PST 2019
+607ea5ad-31aa-4961-a562-0f49e362f83c, Disabled Init, Mon Feb 25 20:57:58 PST 2019
+607ea5ad-31aa-4961-a562-0f49e362f83c, Set Hatch Spear to STOW, Mon Feb 25 20:57:58 PST 2019
+607ea5ad-31aa-4961-a562-0f49e362f83c, Teleop Init, Mon Feb 25 20:58:10 PST 2019
+607ea5ad-31aa-4961-a562-0f49e362f83c, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 20:58:10 PST 2019
+607ea5ad-31aa-4961-a562-0f49e362f83c, SET HEADING: 0.0, Mon Feb 25 20:58:10 PST 2019
+607ea5ad-31aa-4961-a562-0f49e362f83c, Gyro offset: -9.680000305175781, Mon Feb 25 20:58:10 PST 2019
+607ea5ad-31aa-4961-a562-0f49e362f83c, Switching to Cargo Arm Open Loop, Mon Feb 25 20:58:11 PST 2019
+607ea5ad-31aa-4961-a562-0f49e362f83c, Disabled Init, Mon Feb 25 20:58:14 PST 2019
+607ea5ad-31aa-4961-a562-0f49e362f83c, Set Hatch Spear to STOW, Mon Feb 25 20:58:14 PST 2019
+9cc628dc-d68c-42ca-8bd7-bd9bfdf7b1ef, Robot Startup, Mon Feb 25 20:59:53 PST 2019
+9cc628dc-d68c-42ca-8bd7-bd9bfdf7b1ef, Robot Init on Practice Robot, Mon Feb 25 20:59:53 PST 2019
+9cc628dc-d68c-42ca-8bd7-bd9bfdf7b1ef, Disabled Init, Mon Feb 25 20:59:53 PST 2019
+9cc628dc-d68c-42ca-8bd7-bd9bfdf7b1ef, Set Hatch Spear to STOW, Mon Feb 25 20:59:53 PST 2019
+9cc628dc-d68c-42ca-8bd7-bd9bfdf7b1ef, Teleop Init, Mon Feb 25 21:01:41 PST 2019
+9cc628dc-d68c-42ca-8bd7-bd9bfdf7b1ef, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:01:41 PST 2019
+9cc628dc-d68c-42ca-8bd7-bd9bfdf7b1ef, Switching to Hatch Arm Open Loop, Mon Feb 25 21:01:42 PST 2019
+9cc628dc-d68c-42ca-8bd7-bd9bfdf7b1ef, SET HEADING: 0.0, Mon Feb 25 21:01:42 PST 2019
+9cc628dc-d68c-42ca-8bd7-bd9bfdf7b1ef, Gyro offset: -8.760000228881838, Mon Feb 25 21:01:42 PST 2019
+9cc628dc-d68c-42ca-8bd7-bd9bfdf7b1ef, Switching to Cargo Arm Open Loop, Mon Feb 25 21:01:43 PST 2019
+9cc628dc-d68c-42ca-8bd7-bd9bfdf7b1ef, Disabled Init, Mon Feb 25 21:01:45 PST 2019
+9cc628dc-d68c-42ca-8bd7-bd9bfdf7b1ef, Set Hatch Spear to STOW, Mon Feb 25 21:01:45 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, Robot Startup, Mon Feb 25 21:03:25 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, Robot Init on Practice Robot, Mon Feb 25 21:03:25 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, Disabled Init, Mon Feb 25 21:03:25 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, Set Hatch Spear to STOW, Mon Feb 25 21:03:25 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, Teleop Init, Mon Feb 25 21:03:28 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:03:28 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, SET HEADING: 0.0, Mon Feb 25 21:03:29 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, Gyro offset: -9.220000267028809, Mon Feb 25 21:03:29 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, Switching to Cargo Arm Open Loop, Mon Feb 25 21:03:29 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, Disabled Init, Mon Feb 25 21:03:35 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, Set Hatch Spear to STOW, Mon Feb 25 21:03:35 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, Teleop Init, Mon Feb 25 21:03:42 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:03:42 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, Disabled Init, Mon Feb 25 21:03:50 PST 2019
+dba7ab2a-0217-4275-ae48-952a16a11ee5, Set Hatch Spear to STOW, Mon Feb 25 21:03:50 PST 2019
+313a0566-b483-4d32-af3f-0dbe5844d238, Robot Startup, Mon Feb 25 21:05:12 PST 2019
+313a0566-b483-4d32-af3f-0dbe5844d238, Robot Init on Practice Robot, Mon Feb 25 21:05:12 PST 2019
+313a0566-b483-4d32-af3f-0dbe5844d238, Disabled Init, Mon Feb 25 21:05:12 PST 2019
+313a0566-b483-4d32-af3f-0dbe5844d238, Set Hatch Spear to STOW, Mon Feb 25 21:05:12 PST 2019
+313a0566-b483-4d32-af3f-0dbe5844d238, Teleop Init, Mon Feb 25 21:05:16 PST 2019
+313a0566-b483-4d32-af3f-0dbe5844d238, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:05:16 PST 2019
+313a0566-b483-4d32-af3f-0dbe5844d238, SET HEADING: 0.0, Mon Feb 25 21:05:16 PST 2019
+313a0566-b483-4d32-af3f-0dbe5844d238, Gyro offset: -11.300000190734865, Mon Feb 25 21:05:16 PST 2019
+313a0566-b483-4d32-af3f-0dbe5844d238, Switching to Cargo Arm Open Loop, Mon Feb 25 21:05:18 PST 2019
+313a0566-b483-4d32-af3f-0dbe5844d238, Disabled Init, Mon Feb 25 21:05:26 PST 2019
+313a0566-b483-4d32-af3f-0dbe5844d238, Set Hatch Spear to STOW, Mon Feb 25 21:05:26 PST 2019
+370d50cb-6dfc-4feb-8766-6d7ab441f05c, Robot Startup, Mon Feb 25 21:06:40 PST 2019
+370d50cb-6dfc-4feb-8766-6d7ab441f05c, Robot Init on Practice Robot, Mon Feb 25 21:06:41 PST 2019
+370d50cb-6dfc-4feb-8766-6d7ab441f05c, Disabled Init, Mon Feb 25 21:06:41 PST 2019
+370d50cb-6dfc-4feb-8766-6d7ab441f05c, Set Hatch Spear to STOW, Mon Feb 25 21:06:41 PST 2019
+ac20a974-1de4-4134-8d28-7136cb125f46, Robot Startup, Mon Feb 25 21:07:02 PST 2019
+ac20a974-1de4-4134-8d28-7136cb125f46, Robot Init on Practice Robot, Mon Feb 25 21:07:02 PST 2019
+ac20a974-1de4-4134-8d28-7136cb125f46, Disabled Init, Mon Feb 25 21:07:02 PST 2019
+ac20a974-1de4-4134-8d28-7136cb125f46, Set Hatch Spear to STOW, Mon Feb 25 21:07:02 PST 2019
+ac20a974-1de4-4134-8d28-7136cb125f46, Teleop Init, Mon Feb 25 21:07:03 PST 2019
+ac20a974-1de4-4134-8d28-7136cb125f46, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:07:04 PST 2019
+ac20a974-1de4-4134-8d28-7136cb125f46, SET HEADING: 0.0, Mon Feb 25 21:07:04 PST 2019
+ac20a974-1de4-4134-8d28-7136cb125f46, Gyro offset: -11.890000343322754, Mon Feb 25 21:07:04 PST 2019
+ac20a974-1de4-4134-8d28-7136cb125f46, Switching to Cargo Arm Open Loop, Mon Feb 25 21:07:05 PST 2019
+ac20a974-1de4-4134-8d28-7136cb125f46, Disabled Init, Mon Feb 25 21:07:12 PST 2019
+ac20a974-1de4-4134-8d28-7136cb125f46, Set Hatch Spear to STOW, Mon Feb 25 21:07:12 PST 2019
+d81b8d83-b35a-449e-9e52-a39bc7a3af41, Robot Startup, Mon Feb 25 21:08:14 PST 2019
+d81b8d83-b35a-449e-9e52-a39bc7a3af41, Robot Init on Practice Robot, Mon Feb 25 21:08:14 PST 2019
+d81b8d83-b35a-449e-9e52-a39bc7a3af41, Disabled Init, Mon Feb 25 21:08:14 PST 2019
+d81b8d83-b35a-449e-9e52-a39bc7a3af41, Set Hatch Spear to STOW, Mon Feb 25 21:08:15 PST 2019
+d81b8d83-b35a-449e-9e52-a39bc7a3af41, Teleop Init, Mon Feb 25 21:08:17 PST 2019
+d81b8d83-b35a-449e-9e52-a39bc7a3af41, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:08:17 PST 2019
+d81b8d83-b35a-449e-9e52-a39bc7a3af41, SET HEADING: 0.0, Mon Feb 25 21:08:17 PST 2019
+d81b8d83-b35a-449e-9e52-a39bc7a3af41, Gyro offset: -12.21000003814697, Mon Feb 25 21:08:17 PST 2019
+d81b8d83-b35a-449e-9e52-a39bc7a3af41, Switching to Cargo Arm Open Loop, Mon Feb 25 21:08:17 PST 2019
+d81b8d83-b35a-449e-9e52-a39bc7a3af41, Disabled Init, Mon Feb 25 21:08:39 PST 2019
+d81b8d83-b35a-449e-9e52-a39bc7a3af41, Set Hatch Spear to STOW, Mon Feb 25 21:08:39 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Robot Startup, Mon Feb 25 21:10:13 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Robot Init on Practice Robot, Mon Feb 25 21:10:14 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Disabled Init, Mon Feb 25 21:10:14 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Set Hatch Spear to STOW, Mon Feb 25 21:10:14 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Teleop Init, Mon Feb 25 21:10:19 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:10:19 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, SET HEADING: 0.0, Mon Feb 25 21:10:19 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Gyro offset: -13.350000381469728, Mon Feb 25 21:10:19 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Switching to Cargo Arm Open Loop, Mon Feb 25 21:10:20 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Disabled Init, Mon Feb 25 21:11:39 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Set Hatch Spear to STOW, Mon Feb 25 21:11:39 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Teleop Init, Mon Feb 25 21:11:46 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:11:46 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Disabled Init, Mon Feb 25 21:11:51 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Set Hatch Spear to STOW, Mon Feb 25 21:11:51 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Teleop Init, Mon Feb 25 21:12:02 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:12:02 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Disabled Init, Mon Feb 25 21:12:11 PST 2019
+bec15ca7-12ee-41a1-a607-4f9c8d742cc4, Set Hatch Spear to STOW, Mon Feb 25 21:12:11 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, Robot Startup, Mon Feb 25 21:12:59 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, Robot Init on Practice Robot, Mon Feb 25 21:12:59 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, Disabled Init, Mon Feb 25 21:12:59 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, Set Hatch Spear to STOW, Mon Feb 25 21:12:59 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, Teleop Init, Mon Feb 25 21:13:07 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:13:07 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, SET HEADING: 0.0, Mon Feb 25 21:13:07 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, Gyro offset: -14.329999923706056, Mon Feb 25 21:13:08 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, Switching to Cargo Arm Open Loop, Mon Feb 25 21:13:09 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, Disabled Init, Mon Feb 25 21:13:17 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, Set Hatch Spear to STOW, Mon Feb 25 21:13:17 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, Teleop Init, Mon Feb 25 21:13:48 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:13:48 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, Disabled Init, Mon Feb 25 21:14:04 PST 2019
+c004ace8-8227-436a-9c3a-20dcbed15c3c, Set Hatch Spear to STOW, Mon Feb 25 21:14:04 PST 2019
+c0b722b0-05c9-4efa-999f-b49ca0166f50, Robot Startup, Mon Feb 25 21:14:13 PST 2019
+c0b722b0-05c9-4efa-999f-b49ca0166f50, Robot Init on Practice Robot, Mon Feb 25 21:14:13 PST 2019
+c0b722b0-05c9-4efa-999f-b49ca0166f50, Disabled Init, Mon Feb 25 21:14:13 PST 2019
+c0b722b0-05c9-4efa-999f-b49ca0166f50, Set Hatch Spear to STOW, Mon Feb 25 21:14:13 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, Robot Startup, Mon Feb 25 21:14:48 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, Robot Init on Practice Robot, Mon Feb 25 21:14:48 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, Disabled Init, Mon Feb 25 21:14:49 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, Set Hatch Spear to STOW, Mon Feb 25 21:14:49 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, Teleop Init, Mon Feb 25 21:14:57 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:14:57 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, SET HEADING: 0.0, Mon Feb 25 21:14:58 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, Gyro offset: -14.800000190734863, Mon Feb 25 21:14:58 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, Switching to Cargo Arm Open Loop, Mon Feb 25 21:14:59 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Mon Feb 25 21:15:19 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, Set Hatch Spear to PLACE, Mon Feb 25 21:15:19 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Mon Feb 25 21:15:20 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, Set Hatch Spear to STOW, Mon Feb 25 21:15:20 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Mon Feb 25 21:15:21 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, Set Hatch Spear to PLACE, Mon Feb 25 21:15:21 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Mon Feb 25 21:15:23 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, Set Hatch Spear to STOW, Mon Feb 25 21:15:23 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, Disabled Init, Mon Feb 25 21:15:26 PST 2019
+9b9f7c44-332a-4fbc-8615-5e7bcc29a28c, Set Hatch Spear to STOW, Mon Feb 25 21:15:26 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Robot Startup, Mon Feb 25 21:16:57 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Robot Init on Practice Robot, Mon Feb 25 21:16:57 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Disabled Init, Mon Feb 25 21:16:57 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Set Hatch Spear to STOW, Mon Feb 25 21:16:58 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Teleop Init, Mon Feb 25 21:17:07 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:17:07 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, SET HEADING: 0.0, Mon Feb 25 21:17:07 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Gyro offset: -15.859999656677248, Mon Feb 25 21:17:07 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:08 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:08 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:08 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:08 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:08 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:08 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:08 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:08 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:08 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:08 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:09 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:09 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:09 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:09 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:09 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:09 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:09 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:09 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:09 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:09 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:09 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:09 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:09 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:09 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:10 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:10 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:10 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:10 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:10 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:10 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:10 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:10 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:10 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:11 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:11 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:11 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:11 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:12 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:16 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:19 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:19 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:19 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:19 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:19 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:19 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:19 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:19 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:19 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:19 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:19 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:17:19 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Disabled Init, Mon Feb 25 21:17:21 PST 2019
+424d233e-6676-4458-ad7b-13912f213359, Set Hatch Spear to STOW, Mon Feb 25 21:17:21 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, Robot Startup, Mon Feb 25 21:18:54 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, Robot Init on Practice Robot, Mon Feb 25 21:18:54 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, Disabled Init, Mon Feb 25 21:18:54 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, Set Hatch Spear to STOW, Mon Feb 25 21:18:54 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, Teleop Init, Mon Feb 25 21:18:57 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:18:57 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, SET HEADING: 0.0, Mon Feb 25 21:18:57 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, Gyro offset: -17.47999954223633, Mon Feb 25 21:18:57 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, Disabled Init, Mon Feb 25 21:19:09 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, Set Hatch Spear to STOW, Mon Feb 25 21:19:09 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, Teleop Init, Mon Feb 25 21:19:35 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:19:35 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, Switching to Cargo Arm Open Loop, Mon Feb 25 21:19:38 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, Disabled Init, Mon Feb 25 21:19:44 PST 2019
+e010d261-609f-416e-a422-37bd6c170187, Set Hatch Spear to STOW, Mon Feb 25 21:19:44 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, SigNotUpdated, Mon Feb 25 21:23:39 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Robot Startup, Mon Feb 25 21:23:40 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Robot Init on Practice Robot, Mon Feb 25 21:23:40 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Disabled Init, Mon Feb 25 21:23:40 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Set Hatch Spear to STOW, Mon Feb 25 21:23:40 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Teleop Init, Mon Feb 25 21:23:42 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:23:42 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, SET HEADING: 0.0, Mon Feb 25 21:23:42 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Gyro offset: -18.92000007629395, Mon Feb 25 21:23:42 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Switching to Cargo Arm Open Loop, Mon Feb 25 21:23:42 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Disabled Init, Mon Feb 25 21:23:51 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Set Hatch Spear to STOW, Mon Feb 25 21:23:51 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Teleop Init, Mon Feb 25 21:24:08 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:24:08 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Disabled Init, Mon Feb 25 21:24:14 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Set Hatch Spear to STOW, Mon Feb 25 21:24:14 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Teleop Init, Mon Feb 25 21:26:18 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:26:18 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Disabled Init, Mon Feb 25 21:26:21 PST 2019
+cfce846d-3c28-4d78-977c-b73b8fc674c1, Set Hatch Spear to STOW, Mon Feb 25 21:26:21 PST 2019
+ca010b0e-7b0f-496a-ac95-74f2cba1d87d, Robot Startup, Mon Feb 25 21:27:23 PST 2019
+ca010b0e-7b0f-496a-ac95-74f2cba1d87d, Robot Init on Practice Robot, Mon Feb 25 21:27:23 PST 2019
+ca010b0e-7b0f-496a-ac95-74f2cba1d87d, Disabled Init, Mon Feb 25 21:27:23 PST 2019
+ca010b0e-7b0f-496a-ac95-74f2cba1d87d, Set Hatch Spear to STOW, Mon Feb 25 21:27:24 PST 2019
+ca010b0e-7b0f-496a-ac95-74f2cba1d87d, Teleop Init, Mon Feb 25 21:27:28 PST 2019
+ca010b0e-7b0f-496a-ac95-74f2cba1d87d, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:27:28 PST 2019
+ca010b0e-7b0f-496a-ac95-74f2cba1d87d, SET HEADING: 0.0, Mon Feb 25 21:27:28 PST 2019
+ca010b0e-7b0f-496a-ac95-74f2cba1d87d, Gyro offset: -20.360000610351562, Mon Feb 25 21:27:28 PST 2019
+ca010b0e-7b0f-496a-ac95-74f2cba1d87d, Switching to Cargo Arm Open Loop, Mon Feb 25 21:27:34 PST 2019
+ca010b0e-7b0f-496a-ac95-74f2cba1d87d, Disabled Init, Mon Feb 25 21:27:49 PST 2019
+ca010b0e-7b0f-496a-ac95-74f2cba1d87d, Set Hatch Spear to STOW, Mon Feb 25 21:27:49 PST 2019
+833e0c54-36b3-4676-90a3-c83ab9b9fac4, Robot Startup, Mon Feb 25 21:28:29 PST 2019
+833e0c54-36b3-4676-90a3-c83ab9b9fac4, Robot Init on Practice Robot, Mon Feb 25 21:28:30 PST 2019
+833e0c54-36b3-4676-90a3-c83ab9b9fac4, Disabled Init, Mon Feb 25 21:28:30 PST 2019
+833e0c54-36b3-4676-90a3-c83ab9b9fac4, Set Hatch Spear to STOW, Mon Feb 25 21:28:30 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Robot Startup, Mon Feb 25 21:28:51 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Robot Init on Practice Robot, Mon Feb 25 21:28:51 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Disabled Init, Mon Feb 25 21:28:51 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Set Hatch Spear to STOW, Mon Feb 25 21:28:51 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Teleop Init, Mon Feb 25 21:28:52 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:28:52 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, SET HEADING: 0.0, Mon Feb 25 21:28:52 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Gyro offset: -20.98999977111816, Mon Feb 25 21:28:52 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Switching to Cargo Arm Open Loop, Mon Feb 25 21:28:56 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:28:57 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Switching to Cargo Arm Open Loop, Mon Feb 25 21:28:59 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:29:00 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Switching to Cargo Arm Open Loop, Mon Feb 25 21:29:02 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:29:03 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Switching to Cargo Arm Open Loop, Mon Feb 25 21:29:06 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:29:08 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Switching to Cargo Arm Open Loop, Mon Feb 25 21:29:13 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Switching to Cargo Arm Motion Magic, Mon Feb 25 21:29:17 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Disabled Init, Mon Feb 25 21:29:22 PST 2019
+eb1d8962-3442-4e86-bf12-22ccef47d204, Set Hatch Spear to STOW, Mon Feb 25 21:29:22 PST 2019
+1ba76863-5f5e-4005-872e-16ec09f57950, Robot Startup, Mon Feb 25 21:29:54 PST 2019
+1ba76863-5f5e-4005-872e-16ec09f57950, Robot Init on Practice Robot, Mon Feb 25 21:29:54 PST 2019
+1ba76863-5f5e-4005-872e-16ec09f57950, Disabled Init, Mon Feb 25 21:29:54 PST 2019
+1ba76863-5f5e-4005-872e-16ec09f57950, Set Hatch Spear to STOW, Mon Feb 25 21:29:54 PST 2019
+1ba76863-5f5e-4005-872e-16ec09f57950, Teleop Init, Mon Feb 25 21:34:32 PST 2019
+1ba76863-5f5e-4005-872e-16ec09f57950, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:34:32 PST 2019
+1ba76863-5f5e-4005-872e-16ec09f57950, SET HEADING: 0.0, Mon Feb 25 21:34:32 PST 2019
+1ba76863-5f5e-4005-872e-16ec09f57950, Gyro offset: -47.59000015258789, Mon Feb 25 21:34:32 PST 2019
+1ba76863-5f5e-4005-872e-16ec09f57950, Disabled Init, Mon Feb 25 21:35:02 PST 2019
+1ba76863-5f5e-4005-872e-16ec09f57950, Set Hatch Spear to STOW, Mon Feb 25 21:35:02 PST 2019
+1ba76863-5f5e-4005-872e-16ec09f57950, Teleop Init, Mon Feb 25 21:35:25 PST 2019
+1ba76863-5f5e-4005-872e-16ec09f57950, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:35:25 PST 2019
+3de07b1d-be5c-444e-9190-fc7943e3ecb2, Teleop Init, Mon Feb 25 21:37:06 PST 2019
+3de07b1d-be5c-444e-9190-fc7943e3ecb2, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:37:06 PST 2019
+3de07b1d-be5c-444e-9190-fc7943e3ecb2, SET HEADING: 0.0, Mon Feb 25 21:37:06 PST 2019
+3de07b1d-be5c-444e-9190-fc7943e3ecb2, Gyro offset: -0.18000000715255737, Mon Feb 25 21:37:06 PST 2019
+3de07b1d-be5c-444e-9190-fc7943e3ecb2, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Mon Feb 25 21:37:09 PST 2019
+3de07b1d-be5c-444e-9190-fc7943e3ecb2, Set Hatch Spear to PLACE, Mon Feb 25 21:37:09 PST 2019
+3de07b1d-be5c-444e-9190-fc7943e3ecb2, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Mon Feb 25 21:37:10 PST 2019
+3de07b1d-be5c-444e-9190-fc7943e3ecb2, Set Hatch Spear to STOW, Mon Feb 25 21:37:10 PST 2019
+3de07b1d-be5c-444e-9190-fc7943e3ecb2, Disabled Init, Mon Feb 25 21:37:11 PST 2019
+3de07b1d-be5c-444e-9190-fc7943e3ecb2, Set Hatch Spear to STOW, Mon Feb 25 21:37:11 PST 2019
+3de07b1d-be5c-444e-9190-fc7943e3ecb2, Teleop Init, Mon Feb 25 21:37:20 PST 2019
+3de07b1d-be5c-444e-9190-fc7943e3ecb2, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:37:20 PST 2019
+3de07b1d-be5c-444e-9190-fc7943e3ecb2, Disabled Init, Mon Feb 25 21:37:24 PST 2019
+3de07b1d-be5c-444e-9190-fc7943e3ecb2, Set Hatch Spear to STOW, Mon Feb 25 21:37:24 PST 2019
+2d125b69-2f90-475e-b812-8d91bfefef0f, Teleop Init, Mon Feb 25 21:39:43 PST 2019
+2d125b69-2f90-475e-b812-8d91bfefef0f, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:39:43 PST 2019
+2d125b69-2f90-475e-b812-8d91bfefef0f, SET HEADING: 0.0, Mon Feb 25 21:39:43 PST 2019
+2d125b69-2f90-475e-b812-8d91bfefef0f, Gyro offset: -0.17000000178813934, Mon Feb 25 21:39:43 PST 2019
+2d125b69-2f90-475e-b812-8d91bfefef0f, Disabled Init, Mon Feb 25 21:40:06 PST 2019
+2d125b69-2f90-475e-b812-8d91bfefef0f, Set Hatch Spear to STOW, Mon Feb 25 21:40:06 PST 2019
+2d125b69-2f90-475e-b812-8d91bfefef0f, Teleop Init, Mon Feb 25 21:40:06 PST 2019
+2d125b69-2f90-475e-b812-8d91bfefef0f, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:40:06 PST 2019
+2d125b69-2f90-475e-b812-8d91bfefef0f, Disabled Init, Mon Feb 25 21:40:33 PST 2019
+2d125b69-2f90-475e-b812-8d91bfefef0f, Set Hatch Spear to STOW, Mon Feb 25 21:40:33 PST 2019
+2d125b69-2f90-475e-b812-8d91bfefef0f, Teleop Init, Mon Feb 25 21:43:51 PST 2019
+2d125b69-2f90-475e-b812-8d91bfefef0f, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:43:51 PST 2019
+2d125b69-2f90-475e-b812-8d91bfefef0f, Disabled Init, Mon Feb 25 21:44:14 PST 2019
+2d125b69-2f90-475e-b812-8d91bfefef0f, Set Hatch Spear to STOW, Mon Feb 25 21:44:14 PST 2019
+76834398-e57d-4668-841d-d4229e9001cf, Robot Startup, Mon Feb 25 21:46:12 PST 2019
+76834398-e57d-4668-841d-d4229e9001cf, Robot Init on Practice Robot, Mon Feb 25 21:46:13 PST 2019
+76834398-e57d-4668-841d-d4229e9001cf, Disabled Init, Mon Feb 25 21:46:13 PST 2019
+76834398-e57d-4668-841d-d4229e9001cf, Set Hatch Spear to STOW, Mon Feb 25 21:46:13 PST 2019
+76834398-e57d-4668-841d-d4229e9001cf, Teleop Init, Mon Feb 25 21:46:16 PST 2019
+76834398-e57d-4668-841d-d4229e9001cf, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 21:46:16 PST 2019
+76834398-e57d-4668-841d-d4229e9001cf, SET HEADING: 0.0, Mon Feb 25 21:46:16 PST 2019
+76834398-e57d-4668-841d-d4229e9001cf, Gyro offset: -135.08999633789062, Mon Feb 25 21:46:16 PST 2019
+76834398-e57d-4668-841d-d4229e9001cf, Disabled Init, Mon Feb 25 21:51:26 PST 2019
+76834398-e57d-4668-841d-d4229e9001cf, Set Hatch Spear to STOW, Mon Feb 25 21:51:26 PST 2019
+c99861f9-c1e4-4122-9a51-4f91603532bc, Robot Startup, Mon Feb 25 22:11:36 PST 2019
+c99861f9-c1e4-4122-9a51-4f91603532bc, Robot Init on Practice Robot, Mon Feb 25 22:11:36 PST 2019
+c99861f9-c1e4-4122-9a51-4f91603532bc, Disabled Init, Mon Feb 25 22:11:37 PST 2019
+c99861f9-c1e4-4122-9a51-4f91603532bc, Set Hatch Spear to STOW, Mon Feb 25 22:11:37 PST 2019
+c99861f9-c1e4-4122-9a51-4f91603532bc, Teleop Init, Mon Feb 25 22:12:03 PST 2019
+c99861f9-c1e4-4122-9a51-4f91603532bc, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:12:03 PST 2019
+c99861f9-c1e4-4122-9a51-4f91603532bc, Disabled Init, Mon Feb 25 22:12:03 PST 2019
+c99861f9-c1e4-4122-9a51-4f91603532bc, Set Hatch Spear to STOW, Mon Feb 25 22:12:03 PST 2019
+c99861f9-c1e4-4122-9a51-4f91603532bc, SET HEADING: 0.0, Mon Feb 25 22:12:03 PST 2019
+c99861f9-c1e4-4122-9a51-4f91603532bc, Gyro offset: -1.9900000095367427, Mon Feb 25 22:12:03 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Robot Startup, Mon Feb 25 22:12:56 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Robot Init on Practice Robot, Mon Feb 25 22:12:56 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Disabled Init, Mon Feb 25 22:12:57 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Set Hatch Spear to STOW, Mon Feb 25 22:12:57 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Teleop Init, Mon Feb 25 22:13:35 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:13:35 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, SET HEADING: 0.0, Mon Feb 25 22:13:35 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Gyro offset: -4.139999866485596, Mon Feb 25 22:13:35 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Disabled Init, Mon Feb 25 22:13:36 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Set Hatch Spear to STOW, Mon Feb 25 22:13:36 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Teleop Init, Mon Feb 25 22:14:57 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:14:57 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Disabled Init, Mon Feb 25 22:14:58 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Set Hatch Spear to STOW, Mon Feb 25 22:14:58 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Teleop Init, Mon Feb 25 22:15:17 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:15:17 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Disabled Init, Mon Feb 25 22:15:17 PST 2019
+6fccbf7d-3f97-426e-9bee-7c1bf8c5f33b, Set Hatch Spear to STOW, Mon Feb 25 22:15:17 PST 2019
+ea34ddb0-7ad4-4b7f-8b13-46456384e8b4, Robot Startup, Mon Feb 25 22:18:10 PST 2019
+ea34ddb0-7ad4-4b7f-8b13-46456384e8b4, Robot Init on Practice Robot, Mon Feb 25 22:18:10 PST 2019
+ea34ddb0-7ad4-4b7f-8b13-46456384e8b4, Disabled Init, Mon Feb 25 22:18:10 PST 2019
+ea34ddb0-7ad4-4b7f-8b13-46456384e8b4, Set Hatch Spear to STOW, Mon Feb 25 22:18:10 PST 2019
+ea34ddb0-7ad4-4b7f-8b13-46456384e8b4, Teleop Init, Mon Feb 25 22:18:45 PST 2019
+ea34ddb0-7ad4-4b7f-8b13-46456384e8b4, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:18:45 PST 2019
+ea34ddb0-7ad4-4b7f-8b13-46456384e8b4, SET HEADING: 0.0, Mon Feb 25 22:18:45 PST 2019
+ea34ddb0-7ad4-4b7f-8b13-46456384e8b4, Gyro offset: -3.650000095367431, Mon Feb 25 22:18:45 PST 2019
+ea34ddb0-7ad4-4b7f-8b13-46456384e8b4, Disabled Init, Mon Feb 25 22:18:46 PST 2019
+ea34ddb0-7ad4-4b7f-8b13-46456384e8b4, Set Hatch Spear to STOW, Mon Feb 25 22:18:46 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Robot Startup, Mon Feb 25 22:20:28 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Robot Init on Practice Robot, Mon Feb 25 22:20:28 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Disabled Init, Mon Feb 25 22:20:28 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Set Hatch Spear to STOW, Mon Feb 25 22:20:29 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Teleop Init, Mon Feb 25 22:20:35 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:20:35 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, SET HEADING: 0.0, Mon Feb 25 22:20:35 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Gyro offset: -3.150000095367432, Mon Feb 25 22:20:35 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Disabled Init, Mon Feb 25 22:20:41 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Set Hatch Spear to STOW, Mon Feb 25 22:20:41 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Teleop Init, Mon Feb 25 22:20:42 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:20:42 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Disabled Init, Mon Feb 25 22:20:44 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Set Hatch Spear to STOW, Mon Feb 25 22:20:44 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Teleop Init, Mon Feb 25 22:20:45 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:20:45 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Disabled Init, Mon Feb 25 22:20:47 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Set Hatch Spear to STOW, Mon Feb 25 22:20:47 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Teleop Init, Mon Feb 25 22:21:11 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:21:11 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Disabled Init, Mon Feb 25 22:21:14 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Set Hatch Spear to STOW, Mon Feb 25 22:21:14 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Teleop Init, Mon Feb 25 22:21:15 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:21:15 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Disabled Init, Mon Feb 25 22:21:25 PST 2019
+1d10d266-a466-46a1-bcba-5e0f37cd791a, Set Hatch Spear to STOW, Mon Feb 25 22:21:25 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, Robot Startup, Mon Feb 25 22:23:02 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, Robot Init on Practice Robot, Mon Feb 25 22:23:03 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, Disabled Init, Mon Feb 25 22:23:03 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, Set Hatch Spear to STOW, Mon Feb 25 22:23:03 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, Teleop Init, Mon Feb 25 22:23:05 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:23:05 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, SET HEADING: 0.0, Mon Feb 25 22:23:05 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, Gyro offset: -0.4000000059604645, Mon Feb 25 22:23:05 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, Switching to Cargo Arm Open Loop, Mon Feb 25 22:23:07 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, Disabled Init, Mon Feb 25 22:23:18 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, Set Hatch Spear to STOW, Mon Feb 25 22:23:18 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, Teleop Init, Mon Feb 25 22:24:20 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:24:20 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, Disabled Init, Mon Feb 25 22:24:30 PST 2019
+e60c5645-8808-4d03-ae02-8637ff421758, Set Hatch Spear to STOW, Mon Feb 25 22:24:30 PST 2019
+73a84e74-a3d6-4c99-95ce-e566dd5fa6e5, Robot Startup, Mon Feb 25 22:27:04 PST 2019
+73a84e74-a3d6-4c99-95ce-e566dd5fa6e5, Robot Init on Practice Robot, Mon Feb 25 22:27:04 PST 2019
+73a84e74-a3d6-4c99-95ce-e566dd5fa6e5, Disabled Init, Mon Feb 25 22:27:05 PST 2019
+73a84e74-a3d6-4c99-95ce-e566dd5fa6e5, Set Hatch Spear to STOW, Mon Feb 25 22:27:05 PST 2019
+73a84e74-a3d6-4c99-95ce-e566dd5fa6e5, Teleop Init, Mon Feb 25 22:29:45 PST 2019
+73a84e74-a3d6-4c99-95ce-e566dd5fa6e5, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:29:46 PST 2019
+73a84e74-a3d6-4c99-95ce-e566dd5fa6e5, SET HEADING: 0.0, Mon Feb 25 22:29:46 PST 2019
+73a84e74-a3d6-4c99-95ce-e566dd5fa6e5, Gyro offset: -3.6900000572204594, Mon Feb 25 22:29:46 PST 2019
+73a84e74-a3d6-4c99-95ce-e566dd5fa6e5, Disabled Init, Mon Feb 25 22:30:10 PST 2019
+73a84e74-a3d6-4c99-95ce-e566dd5fa6e5, Set Hatch Spear to STOW, Mon Feb 25 22:30:10 PST 2019
+aab35d3a-1aa7-4626-8b8e-39559594401c, Robot Startup, Mon Feb 25 22:31:33 PST 2019
+aab35d3a-1aa7-4626-8b8e-39559594401c, Robot Init on Practice Robot, Mon Feb 25 22:31:33 PST 2019
+aab35d3a-1aa7-4626-8b8e-39559594401c, Disabled Init, Mon Feb 25 22:31:33 PST 2019
+aab35d3a-1aa7-4626-8b8e-39559594401c, Set Hatch Spear to STOW, Mon Feb 25 22:31:33 PST 2019
+aab35d3a-1aa7-4626-8b8e-39559594401c, Teleop Init, Mon Feb 25 22:31:38 PST 2019
+aab35d3a-1aa7-4626-8b8e-39559594401c, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:31:38 PST 2019
+aab35d3a-1aa7-4626-8b8e-39559594401c, SET HEADING: 0.0, Mon Feb 25 22:31:38 PST 2019
+aab35d3a-1aa7-4626-8b8e-39559594401c, Gyro offset: 51.150001525878906, Mon Feb 25 22:31:38 PST 2019
+08f7714c-7ff3-4af6-8b46-c35df6344ef0, Robot Startup, Mon Feb 25 22:32:45 PST 2019
+08f7714c-7ff3-4af6-8b46-c35df6344ef0, Robot Init on Practice Robot, Mon Feb 25 22:32:45 PST 2019
+08f7714c-7ff3-4af6-8b46-c35df6344ef0, Disabled Init, Mon Feb 25 22:32:45 PST 2019
+08f7714c-7ff3-4af6-8b46-c35df6344ef0, Set Hatch Spear to STOW, Mon Feb 25 22:32:45 PST 2019
+08f7714c-7ff3-4af6-8b46-c35df6344ef0, Teleop Init, Mon Feb 25 22:32:55 PST 2019
+08f7714c-7ff3-4af6-8b46-c35df6344ef0, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:32:55 PST 2019
+08f7714c-7ff3-4af6-8b46-c35df6344ef0, SET HEADING: 0.0, Mon Feb 25 22:32:56 PST 2019
+08f7714c-7ff3-4af6-8b46-c35df6344ef0, Gyro offset: 9.199999809265137, Mon Feb 25 22:32:56 PST 2019
+08f7714c-7ff3-4af6-8b46-c35df6344ef0, Disabled Init, Mon Feb 25 22:32:59 PST 2019
+08f7714c-7ff3-4af6-8b46-c35df6344ef0, Set Hatch Spear to STOW, Mon Feb 25 22:32:59 PST 2019
+da2b3b76-63d7-476c-8895-90129ec6c8ae, Robot Startup, Mon Feb 25 22:36:30 PST 2019
+da2b3b76-63d7-476c-8895-90129ec6c8ae, Robot Init on Practice Robot, Mon Feb 25 22:36:30 PST 2019
+da2b3b76-63d7-476c-8895-90129ec6c8ae, Disabled Init, Mon Feb 25 22:36:30 PST 2019
+da2b3b76-63d7-476c-8895-90129ec6c8ae, Set Hatch Spear to STOW, Mon Feb 25 22:36:31 PST 2019
+da2b3b76-63d7-476c-8895-90129ec6c8ae, Teleop Init, Mon Feb 25 22:36:34 PST 2019
+da2b3b76-63d7-476c-8895-90129ec6c8ae, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:36:34 PST 2019
+da2b3b76-63d7-476c-8895-90129ec6c8ae, SET HEADING: 0.0, Mon Feb 25 22:36:34 PST 2019
+da2b3b76-63d7-476c-8895-90129ec6c8ae, Gyro offset: -34.50000000000001, Mon Feb 25 22:36:34 PST 2019
+da2b3b76-63d7-476c-8895-90129ec6c8ae, Disabled Init, Mon Feb 25 22:36:34 PST 2019
+da2b3b76-63d7-476c-8895-90129ec6c8ae, Set Hatch Spear to STOW, Mon Feb 25 22:36:34 PST 2019
+da2b3b76-63d7-476c-8895-90129ec6c8ae, Teleop Init, Mon Feb 25 22:38:33 PST 2019
+da2b3b76-63d7-476c-8895-90129ec6c8ae, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:38:33 PST 2019
+da2b3b76-63d7-476c-8895-90129ec6c8ae, Disabled Init, Mon Feb 25 22:38:46 PST 2019
+da2b3b76-63d7-476c-8895-90129ec6c8ae, Set Hatch Spear to STOW, Mon Feb 25 22:38:46 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Robot Startup, Mon Feb 25 22:39:30 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Robot Init on Practice Robot, Mon Feb 25 22:39:30 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Disabled Init, Mon Feb 25 22:39:30 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Set Hatch Spear to STOW, Mon Feb 25 22:39:30 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Teleop Init, Mon Feb 25 22:39:31 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:39:31 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, SET HEADING: 0.0, Mon Feb 25 22:39:31 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Gyro offset: -35.36000061035156, Mon Feb 25 22:39:32 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Disabled Init, Mon Feb 25 22:39:43 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Set Hatch Spear to STOW, Mon Feb 25 22:39:43 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Teleop Init, Mon Feb 25 22:39:47 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:39:47 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Disabled Init, Mon Feb 25 22:39:53 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Set Hatch Spear to STOW, Mon Feb 25 22:39:53 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Teleop Init, Mon Feb 25 22:39:57 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:39:57 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Disabled Init, Mon Feb 25 22:40:00 PST 2019
+a978f39f-b801-43d1-8074-b3cfc7f99d53, Set Hatch Spear to STOW, Mon Feb 25 22:40:00 PST 2019
+a9abaf32-2476-47ca-9534-f30db5b9ea1b, Robot Startup, Mon Feb 25 22:40:47 PST 2019
+a9abaf32-2476-47ca-9534-f30db5b9ea1b, Robot Init on Practice Robot, Mon Feb 25 22:40:47 PST 2019
+a9abaf32-2476-47ca-9534-f30db5b9ea1b, Disabled Init, Mon Feb 25 22:40:47 PST 2019
+a9abaf32-2476-47ca-9534-f30db5b9ea1b, Set Hatch Spear to STOW, Mon Feb 25 22:40:47 PST 2019
+a9abaf32-2476-47ca-9534-f30db5b9ea1b, Teleop Init, Mon Feb 25 22:40:48 PST 2019
+a9abaf32-2476-47ca-9534-f30db5b9ea1b, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:40:48 PST 2019
+a9abaf32-2476-47ca-9534-f30db5b9ea1b, SET HEADING: 0.0, Mon Feb 25 22:40:48 PST 2019
+a9abaf32-2476-47ca-9534-f30db5b9ea1b, Gyro offset: -35.97999954223633, Mon Feb 25 22:40:48 PST 2019
+a9abaf32-2476-47ca-9534-f30db5b9ea1b, Disabled Init, Mon Feb 25 22:40:53 PST 2019
+a9abaf32-2476-47ca-9534-f30db5b9ea1b, Set Hatch Spear to STOW, Mon Feb 25 22:40:53 PST 2019
+bef2328a-25f3-4e54-839e-9ac9262bf532, Robot Startup, Mon Feb 25 22:41:30 PST 2019
+bef2328a-25f3-4e54-839e-9ac9262bf532, Robot Init on Practice Robot, Mon Feb 25 22:41:31 PST 2019
+bef2328a-25f3-4e54-839e-9ac9262bf532, Disabled Init, Mon Feb 25 22:41:31 PST 2019
+bef2328a-25f3-4e54-839e-9ac9262bf532, Set Hatch Spear to STOW, Mon Feb 25 22:41:31 PST 2019
+bef2328a-25f3-4e54-839e-9ac9262bf532, Teleop Init, Mon Feb 25 22:41:33 PST 2019
+bef2328a-25f3-4e54-839e-9ac9262bf532, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:41:33 PST 2019
+bef2328a-25f3-4e54-839e-9ac9262bf532, SET HEADING: 0.0, Mon Feb 25 22:41:34 PST 2019
+bef2328a-25f3-4e54-839e-9ac9262bf532, Gyro offset: -36.220001220703125, Mon Feb 25 22:41:34 PST 2019
+bef2328a-25f3-4e54-839e-9ac9262bf532, Disabled Init, Mon Feb 25 22:41:35 PST 2019
+bef2328a-25f3-4e54-839e-9ac9262bf532, Set Hatch Spear to STOW, Mon Feb 25 22:41:35 PST 2019
+d1788771-1ff5-465f-bcce-1496c2ca175f, Robot Startup, Mon Feb 25 22:44:08 PST 2019
+d1788771-1ff5-465f-bcce-1496c2ca175f, Robot Init on Practice Robot, Mon Feb 25 22:44:08 PST 2019
+d1788771-1ff5-465f-bcce-1496c2ca175f, Disabled Init, Mon Feb 25 22:44:08 PST 2019
+d1788771-1ff5-465f-bcce-1496c2ca175f, Set Hatch Spear to STOW, Mon Feb 25 22:44:09 PST 2019
+d1788771-1ff5-465f-bcce-1496c2ca175f, Teleop Init, Mon Feb 25 22:44:11 PST 2019
+d1788771-1ff5-465f-bcce-1496c2ca175f, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:44:11 PST 2019
+d1788771-1ff5-465f-bcce-1496c2ca175f, SET HEADING: 0.0, Mon Feb 25 22:44:11 PST 2019
+d1788771-1ff5-465f-bcce-1496c2ca175f, Gyro offset: -36.7400016784668, Mon Feb 25 22:44:11 PST 2019
+d1788771-1ff5-465f-bcce-1496c2ca175f, Disabled Init, Mon Feb 25 22:44:13 PST 2019
+d1788771-1ff5-465f-bcce-1496c2ca175f, Set Hatch Spear to STOW, Mon Feb 25 22:44:13 PST 2019
+5d25dcfa-92e5-4022-bf2e-0c1b5265a78f, Robot Startup, Mon Feb 25 22:44:47 PST 2019
+5d25dcfa-92e5-4022-bf2e-0c1b5265a78f, Robot Init on Practice Robot, Mon Feb 25 22:44:47 PST 2019
+5d25dcfa-92e5-4022-bf2e-0c1b5265a78f, Disabled Init, Mon Feb 25 22:44:48 PST 2019
+5d25dcfa-92e5-4022-bf2e-0c1b5265a78f, Set Hatch Spear to STOW, Mon Feb 25 22:44:48 PST 2019
+5d25dcfa-92e5-4022-bf2e-0c1b5265a78f, Teleop Init, Mon Feb 25 22:44:49 PST 2019
+5d25dcfa-92e5-4022-bf2e-0c1b5265a78f, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:44:49 PST 2019
+5d25dcfa-92e5-4022-bf2e-0c1b5265a78f, SET HEADING: 0.0, Mon Feb 25 22:44:49 PST 2019
+5d25dcfa-92e5-4022-bf2e-0c1b5265a78f, Gyro offset: -36.849998474121094, Mon Feb 25 22:44:49 PST 2019
+5d25dcfa-92e5-4022-bf2e-0c1b5265a78f, Disabled Init, Mon Feb 25 22:44:50 PST 2019
+5d25dcfa-92e5-4022-bf2e-0c1b5265a78f, Set Hatch Spear to STOW, Mon Feb 25 22:44:50 PST 2019
+8f01ada7-8525-4a61-8e20-2d585dc5860b, Robot Startup, Mon Feb 25 22:46:02 PST 2019
+8f01ada7-8525-4a61-8e20-2d585dc5860b, Robot Init on Practice Robot, Mon Feb 25 22:46:03 PST 2019
+8f01ada7-8525-4a61-8e20-2d585dc5860b, Disabled Init, Mon Feb 25 22:46:03 PST 2019
+8f01ada7-8525-4a61-8e20-2d585dc5860b, Set Hatch Spear to STOW, Mon Feb 25 22:46:03 PST 2019
+8f01ada7-8525-4a61-8e20-2d585dc5860b, Teleop Init, Mon Feb 25 22:46:03 PST 2019
+8f01ada7-8525-4a61-8e20-2d585dc5860b, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:46:03 PST 2019
+8f01ada7-8525-4a61-8e20-2d585dc5860b, SET HEADING: 0.0, Mon Feb 25 22:46:03 PST 2019
+8f01ada7-8525-4a61-8e20-2d585dc5860b, Gyro offset: -36.970001220703125, Mon Feb 25 22:46:03 PST 2019
+8f01ada7-8525-4a61-8e20-2d585dc5860b, Disabled Init, Mon Feb 25 22:46:07 PST 2019
+8f01ada7-8525-4a61-8e20-2d585dc5860b, Set Hatch Spear to STOW, Mon Feb 25 22:46:07 PST 2019
+f33806ff-e2fa-48aa-bc14-4fb95b88ff9f, Robot Startup, Mon Feb 25 22:46:39 PST 2019
+f33806ff-e2fa-48aa-bc14-4fb95b88ff9f, Robot Init on Practice Robot, Mon Feb 25 22:46:39 PST 2019
+f33806ff-e2fa-48aa-bc14-4fb95b88ff9f, Disabled Init, Mon Feb 25 22:46:39 PST 2019
+f33806ff-e2fa-48aa-bc14-4fb95b88ff9f, Set Hatch Spear to STOW, Mon Feb 25 22:46:40 PST 2019
+81ebbbd3-4e9b-411d-aa50-9d624ab44d4e, Robot Startup, Mon Feb 25 22:53:04 PST 2019
+81ebbbd3-4e9b-411d-aa50-9d624ab44d4e, Robot Init on Practice Robot, Mon Feb 25 22:53:04 PST 2019
+81ebbbd3-4e9b-411d-aa50-9d624ab44d4e, Disabled Init, Mon Feb 25 22:53:04 PST 2019
+81ebbbd3-4e9b-411d-aa50-9d624ab44d4e, Set Hatch Spear to STOW, Mon Feb 25 22:53:04 PST 2019
+81ebbbd3-4e9b-411d-aa50-9d624ab44d4e, Teleop Init, Mon Feb 25 22:53:13 PST 2019
+81ebbbd3-4e9b-411d-aa50-9d624ab44d4e, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:53:13 PST 2019
+81ebbbd3-4e9b-411d-aa50-9d624ab44d4e, SET HEADING: 0.0, Mon Feb 25 22:53:13 PST 2019
+81ebbbd3-4e9b-411d-aa50-9d624ab44d4e, Gyro offset: -38.91999816894531, Mon Feb 25 22:53:13 PST 2019
+81ebbbd3-4e9b-411d-aa50-9d624ab44d4e, Disabled Init, Mon Feb 25 22:53:14 PST 2019
+81ebbbd3-4e9b-411d-aa50-9d624ab44d4e, Set Hatch Spear to STOW, Mon Feb 25 22:53:14 PST 2019
+b4bf557c-13c1-466d-8a6e-1232b3a3c1af, Robot Startup, Mon Feb 25 22:56:29 PST 2019
+b4bf557c-13c1-466d-8a6e-1232b3a3c1af, Robot Init on Practice Robot, Mon Feb 25 22:56:29 PST 2019
+b4bf557c-13c1-466d-8a6e-1232b3a3c1af, Disabled Init, Mon Feb 25 22:56:29 PST 2019
+b4bf557c-13c1-466d-8a6e-1232b3a3c1af, Set Hatch Spear to STOW, Mon Feb 25 22:56:29 PST 2019
+b4bf557c-13c1-466d-8a6e-1232b3a3c1af, Teleop Init, Mon Feb 25 22:56:34 PST 2019
+b4bf557c-13c1-466d-8a6e-1232b3a3c1af, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 22:56:34 PST 2019
+b4bf557c-13c1-466d-8a6e-1232b3a3c1af, SET HEADING: 0.0, Mon Feb 25 22:56:35 PST 2019
+b4bf557c-13c1-466d-8a6e-1232b3a3c1af, Gyro offset: -40.150001525878906, Mon Feb 25 22:56:35 PST 2019
+b4bf557c-13c1-466d-8a6e-1232b3a3c1af, Disabled Init, Mon Feb 25 22:56:35 PST 2019
+b4bf557c-13c1-466d-8a6e-1232b3a3c1af, Set Hatch Spear to STOW, Mon Feb 25 22:56:35 PST 2019
+08973ce5-b182-4425-baaf-d112ea6cecce, Robot Startup, Mon Feb 25 22:57:21 PST 2019
+08973ce5-b182-4425-baaf-d112ea6cecce, Robot Init on Practice Robot, Mon Feb 25 22:57:21 PST 2019
+08973ce5-b182-4425-baaf-d112ea6cecce, Disabled Init, Mon Feb 25 22:57:22 PST 2019
+08973ce5-b182-4425-baaf-d112ea6cecce, Set Hatch Spear to STOW, Mon Feb 25 22:57:22 PST 2019
+08973ce5-b182-4425-baaf-d112ea6cecce, Teleop Init, Mon Feb 25 23:02:09 PST 2019
+08973ce5-b182-4425-baaf-d112ea6cecce, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 23:02:09 PST 2019
+08973ce5-b182-4425-baaf-d112ea6cecce, SET HEADING: 0.0, Mon Feb 25 23:02:10 PST 2019
+08973ce5-b182-4425-baaf-d112ea6cecce, Gyro offset: 0.7500000000000001, Mon Feb 25 23:02:10 PST 2019
+08973ce5-b182-4425-baaf-d112ea6cecce, Disabled Init, Mon Feb 25 23:02:11 PST 2019
+08973ce5-b182-4425-baaf-d112ea6cecce, Set Hatch Spear to STOW, Mon Feb 25 23:02:11 PST 2019
+bd743edf-e2a2-45ab-90c5-06fa77d78d20, Robot Startup, Mon Feb 25 23:02:40 PST 2019
+bd743edf-e2a2-45ab-90c5-06fa77d78d20, Robot Init on Practice Robot, Mon Feb 25 23:02:41 PST 2019
+bd743edf-e2a2-45ab-90c5-06fa77d78d20, Disabled Init, Mon Feb 25 23:02:41 PST 2019
+bd743edf-e2a2-45ab-90c5-06fa77d78d20, Set Hatch Spear to STOW, Mon Feb 25 23:02:41 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Robot Startup, Mon Feb 25 23:03:59 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Robot Init on Practice Robot, Mon Feb 25 23:03:59 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Disabled Init, Mon Feb 25 23:03:59 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Set Hatch Spear to STOW, Mon Feb 25 23:04:00 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Teleop Init, Mon Feb 25 23:04:02 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 23:04:02 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, SET HEADING: 0.0, Mon Feb 25 23:04:02 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Gyro offset: 0.4399999976158142, Mon Feb 25 23:04:02 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Disabled Init, Mon Feb 25 23:04:03 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Set Hatch Spear to STOW, Mon Feb 25 23:04:03 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Teleop Init, Mon Feb 25 23:04:11 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 23:04:11 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Disabled Init, Mon Feb 25 23:04:12 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Set Hatch Spear to STOW, Mon Feb 25 23:04:12 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Teleop Init, Mon Feb 25 23:04:17 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Switching to Robot State:TELEOP_DRIVE, Mon Feb 25 23:04:17 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Disabled Init, Mon Feb 25 23:04:18 PST 2019
+7495dc11-e5a9-4864-a412-694cc92c5221, Set Hatch Spear to STOW, Mon Feb 25 23:04:18 PST 2019
+e224031f-f2b8-41e7-8b05-cef09f0064e2, Robot Startup, Mon Feb 25 23:04:54 PST 2019
+e224031f-f2b8-41e7-8b05-cef09f0064e2, Robot Init on Practice Robot, Mon Feb 25 23:04:54 PST 2019
+e224031f-f2b8-41e7-8b05-cef09f0064e2, Disabled Init, Mon Feb 25 23:04:55 PST 2019
+e224031f-f2b8-41e7-8b05-cef09f0064e2, Set Hatch Spear to STOW, Mon Feb 25 23:04:55 PST 2019
+427f4a5c-b342-4131-b4fa-0df82b9d6335, Robot Startup, Mon Feb 25 23:17:21 PST 2019
+427f4a5c-b342-4131-b4fa-0df82b9d6335, Robot Init on Practice Robot, Mon Feb 25 23:17:21 PST 2019
+427f4a5c-b342-4131-b4fa-0df82b9d6335, Disabled Init, Mon Feb 25 23:17:21 PST 2019
+427f4a5c-b342-4131-b4fa-0df82b9d6335, Set Hatch Spear to STOW, Mon Feb 25 23:17:21 PST 2019
+b1080806-5397-4a1c-88cf-10c79b066311, Robot Startup, Mon Feb 25 23:19:23 PST 2019
+b1080806-5397-4a1c-88cf-10c79b066311, Robot Init on Practice Robot, Mon Feb 25 23:19:23 PST 2019
+b1080806-5397-4a1c-88cf-10c79b066311, Disabled Init, Mon Feb 25 23:19:23 PST 2019
+b1080806-5397-4a1c-88cf-10c79b066311, Set Hatch Spear to STOW, Mon Feb 25 23:19:23 PST 2019
+9cd5d155-6d8f-487d-bb6f-e11af791a7b3, Robot Startup, Mon Feb 25 23:21:32 PST 2019
+9cd5d155-6d8f-487d-bb6f-e11af791a7b3, Robot Init on Practice Robot, Mon Feb 25 23:21:33 PST 2019
+9cd5d155-6d8f-487d-bb6f-e11af791a7b3, Disabled Init, Mon Feb 25 23:21:33 PST 2019
+9cd5d155-6d8f-487d-bb6f-e11af791a7b3, Set Hatch Spear to STOW, Mon Feb 25 23:21:33 PST 2019
+800beb94-ebb3-4f8e-a9b8-6ccdf12c713f, Robot Startup, Mon Feb 25 23:21:58 PST 2019
+800beb94-ebb3-4f8e-a9b8-6ccdf12c713f, Robot Init on Practice Robot, Mon Feb 25 23:21:58 PST 2019
+800beb94-ebb3-4f8e-a9b8-6ccdf12c713f, Disabled Init, Mon Feb 25 23:21:58 PST 2019
+800beb94-ebb3-4f8e-a9b8-6ccdf12c713f, Set Hatch Spear to STOW, Mon Feb 25 23:21:58 PST 2019
+fa4c6f4c-02a5-4ed0-a9b6-7a96f4de2f1e, SigNotUpdated, Mon Feb 25 23:22:49 PST 2019
+fa4c6f4c-02a5-4ed0-a9b6-7a96f4de2f1e, Robot Startup, Mon Feb 25 23:22:55 PST 2019
+fa4c6f4c-02a5-4ed0-a9b6-7a96f4de2f1e, Robot Init on Practice Robot, Mon Feb 25 23:22:55 PST 2019
+fa4c6f4c-02a5-4ed0-a9b6-7a96f4de2f1e, Disabled Init, Mon Feb 25 23:22:55 PST 2019
+fa4c6f4c-02a5-4ed0-a9b6-7a96f4de2f1e, Set Hatch Spear to STOW, Mon Feb 25 23:22:56 PST 2019
+5700b24d-62f0-4fe7-8bad-b8c3433e31fc, Robot Startup, Mon Feb 25 23:26:47 PST 2019
+5700b24d-62f0-4fe7-8bad-b8c3433e31fc, Robot Init on Practice Robot, Mon Feb 25 23:26:47 PST 2019
+5700b24d-62f0-4fe7-8bad-b8c3433e31fc, Disabled Init, Mon Feb 25 23:26:47 PST 2019
+5700b24d-62f0-4fe7-8bad-b8c3433e31fc, Set Hatch Spear to STOW, Mon Feb 25 23:26:47 PST 2019
+20b0e5e5-8071-4878-a2ab-95fb88e9d678, Robot Startup, Mon Feb 25 23:27:49 PST 2019
+20b0e5e5-8071-4878-a2ab-95fb88e9d678, Robot Init on Practice Robot, Mon Feb 25 23:27:49 PST 2019
+20b0e5e5-8071-4878-a2ab-95fb88e9d678, Disabled Init, Mon Feb 25 23:27:50 PST 2019
+20b0e5e5-8071-4878-a2ab-95fb88e9d678, Set Hatch Spear to STOW, Mon Feb 25 23:27:50 PST 2019
+76043e37-d5c1-47b9-a876-6f0d63e0764d, Robot Startup, Mon Feb 25 23:31:00 PST 2019
+76043e37-d5c1-47b9-a876-6f0d63e0764d, Robot Init on Practice Robot, Mon Feb 25 23:31:01 PST 2019
+76043e37-d5c1-47b9-a876-6f0d63e0764d, Disabled Init, Mon Feb 25 23:31:01 PST 2019
+76043e37-d5c1-47b9-a876-6f0d63e0764d, Set Hatch Spear to STOW, Mon Feb 25 23:31:01 PST 2019
+3622323d-1230-4de6-8a84-d57b31ad929f, Robot Startup, Mon Feb 25 23:55:20 PST 2019
+3622323d-1230-4de6-8a84-d57b31ad929f, Robot Init on Practice Robot, Mon Feb 25 23:55:20 PST 2019
+3622323d-1230-4de6-8a84-d57b31ad929f, Disabled Init, Mon Feb 25 23:55:20 PST 2019
+3622323d-1230-4de6-8a84-d57b31ad929f, Set Hatch Spear to STOW, Mon Feb 25 23:55:21 PST 2019
