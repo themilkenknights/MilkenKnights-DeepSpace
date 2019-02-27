@@ -16,6 +16,7 @@ import frc.robot.subsystems.HatchArm;
 import frc.robot.subsystems.HatchArm.HatchMechanismState;
 import frc.robot.subsystems.HatchArm.HatchSpearState;
 import frc.robot.subsystems.Superstructure;
+import frc.robot.subsystems.Superstructure.ClimbState;
 import frc.robot.subsystems.Superstructure.RobotState;
 import frc.robot.subsystems.Vision;
 
@@ -33,7 +34,9 @@ public class Input {
 
     private static final MkJoystickButton mCargoVisionOuttake = driverJoystick.getButton(2, "Vision Cargo Outtake");
 
-    private static final MkJoystickButton mHatchVisionIntake = driverJoystick.getButton(3, "Climb Front");
+    private static final MkJoystickButton mHatchVisionIntake = driverJoystick.getButton(3, "Vision Hatch Intake");
+    private static final MkJoystickButton mFrontClimb = driverJoystick.getButton(5, "Climb Front");
+    private static final MkJoystickButton mRearClimb = driverJoystick.getButton(6, "Climb Rear");
 
 
     //Trigger is Kettering Manual while held
@@ -48,9 +51,11 @@ public class Input {
 
     private static final MkJoystickButton mIntakeRollerOut = operatorJoystick.getButton(6, "Intake Roller Out Fast");
 
-    private static final MkJoystickButton mZeroArms = operatorJoystick.getButton(8, "Zero Arm Encoders");
+    private static final MkJoystickButton disableSoftLimit = operatorJoystick.getButton(8, "Disable Soft Limit");
 
-    private static final MkJoystickButton mStopAuto = operatorJoystick.getButton(10, "Stop Auto");
+    private static final MkJoystickButton mZeroArms = operatorJoystick.getButton(7, "Zero Arm Encoders");
+
+    private static final MkJoystickButton mStopAuto = operatorJoystick.getButton(9, "Stop Auto");
 
     private static final MkJoystickButton mStowAllButton = operatorJoystick.getButton(10, "Defense Mode - Stow All");
 
@@ -69,7 +74,7 @@ public class Input {
     public static void updateControlInput() {
         RobotState currentRobotState = mStructure.getRobotState();
         boolean isVisionState = currentRobotState == RobotState.VISION_CARGO_INTAKE || currentRobotState == RobotState.VISION_CARGO_OUTTAKE
-            || currentRobotState == RobotState.HATCH_VISION_INTAKE || currentRobotState == RobotState.HATCH_VISION_OUTTAKE;
+            || currentRobotState == RobotState.HATCH_VISION_INTAKE || currentRobotState == RobotState.HATCH_VISION_OUTTAKE || currentRobotState == RobotState.AUTO_CLIMB || currentRobotState == RobotState.PATH_FOLLOWING;
 
 
         if (isVisionState && mStopAuto.isPressed()) {
@@ -79,6 +84,11 @@ public class Input {
         if (mZeroArms.isPressed()) {
             mCargo.zeroEncoder();
             mHatch.zeroEncoder();
+        }
+
+        if(disableSoftLimit.isPressed()){
+mCargo.toggleSoftLimit();
+mHatch.toggleSoftLimit();
         }
 
         if (mCargoArmManual.isHeld()) {
@@ -99,6 +109,14 @@ public class Input {
         }
 
         currentRobotState = mStructure.getRobotState();
+
+        if(mAutoClimb.isPressed()){
+            mStructure.setRobotState(RobotState.AUTO_CLIMB);
+        } else if(mFrontClimb.isPressed()){
+            mStructure.setFrontClimbState(mStructure.getFrontClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
+        }else if(mRearClimb.isPressed()){
+            mStructure.setRearClimbState(mStructure.getRearClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
+        }
 
         if (currentRobotState == RobotState.TELEOP_DRIVE) {
             double forward = (-driverJoystick.getRawAxis(2) + driverJoystick.getRawAxis(3));

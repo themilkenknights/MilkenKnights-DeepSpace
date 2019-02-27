@@ -141,12 +141,18 @@ public class Superstructure extends Subsystem {
     }
 
     private void startVisionHatchOuttake() {
-        mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
+        /*if(!Vision.getInstance().getLimelightTarget().isValidTarget()){
+            setRobotState(RobotState.TELEOP_DRIVE);
+            Logger.logMarker("Limelight target not valid");
+        } */
         AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
     }
 
     private void startVisionHatchIntake() {
-        mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
+        if(!Vision.getInstance().getLimelightTarget().isValidTarget()){
+            setRobotState(RobotState.TELEOP_DRIVE);
+            Logger.logMarker("Limelight target not valid");
+        }
         AutoChooser.startAuto(new HatchIntakeVisionPigeon());
     }
 

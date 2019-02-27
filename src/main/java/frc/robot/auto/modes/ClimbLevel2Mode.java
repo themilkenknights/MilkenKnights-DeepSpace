@@ -17,18 +17,17 @@ public class ClimbLevel2Mode extends AutoModeBase {
     @Override protected void routine() throws AutoModeEndedException {
         runAction(new CargoArmSetpoint(CargoArmState.INTAKE));
         runAction(new ActuateFrontSolenoids(ClimbState.LOWERED));
-        runAction(new WaitAction(0.7));
+        runAction(new WaitAction(1.0));
         runAction(new MotionMagicBlind(13));
-        runAction(new WaitAction(0.6));
+        runAction(new WaitAction(1.0));
         runAction(new CargoArmSetpoint(CargoArmState.REVERSE_CARGOSHIP));
         runAction(new ActuateRearSolenoids(ClimbState.LOWERED));
         runAction(new ActuateFrontSolenoids(ClimbState.RETRACTED));
-        runAction(new WaitAction(0.9));
+        runAction(new WaitAction(1.7));
         runAction(new MotionMagicBlind(13));
-        runAction(new WaitAction(0.9));
+        runAction(new WaitAction(1.0));
         runAction(new ActuateRearSolenoids(ClimbState.RETRACTED));
-        runAction(new WaitAction(0.5));
+        runAction(new WaitAction(0.7));
         runAction(new MotionMagicBlind(14));
-        runAction(new SetSuperstructure(RobotState.TELEOP_DRIVE));
     }
 }

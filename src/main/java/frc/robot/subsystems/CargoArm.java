@@ -3,6 +3,7 @@ package frc.robot.subsystems;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
+import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
@@ -24,6 +25,7 @@ public class CargoArm extends Subsystem {
     public final MkTalon mIntakeTalon; //TODO Fix
     private final MkTalon mArmTalon;
     private boolean mDisCon = false;
+    private boolean mSoftLimitState = true;
     private double mStartDis, mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable = 0.0;
     private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus, mRawError;
 
@@ -85,6 +87,10 @@ public class CargoArm extends Subsystem {
         }
     }
 
+    public PigeonIMU getmPigeon(){
+        return mIntakeTalon.mPigeon;
+    }
+
     private void setEnable() {
         mArmPosEnable = mArmTalon.getPosition();
         mCargoArmState = CargoArmState.ENABLE;
@@ -139,8 +145,6 @@ public class CargoArm extends Subsystem {
     public synchronized void setOpenLoop(double output) {
         if (mCargoArmControlState != CargoArmControlState.OPEN_LOOP) {
             setArmControlState(CargoArmControlState.OPEN_LOOP);
-            CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
-            CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
         }
         mOpenLoopSetpoint = output;
     }
@@ -174,8 +178,6 @@ public class CargoArm extends Subsystem {
     public synchronized void setArmState(CargoArmState state) {
         if (mCargoArmControlState != CargoArmControlState.MOTION_MAGIC) {
             setArmControlState(CargoArmControlState.MOTION_MAGIC);
-            CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(true, GENERAL.kShortTimeoutMs));
-            CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(true, GENERAL.kShortTimeoutMs));
         }
         mCargoArmState = state;
     }
@@ -183,6 +185,12 @@ public class CargoArm extends Subsystem {
     public void zeroEncoder() {
         mArmTalon.zeroEncoder();
         setEnable();
+    }
+
+    public void toggleSoftLimit(){
+        CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(!mSoftLimitState, GENERAL.kShortTimeoutMs));
+        CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(!mSoftLimitState, GENERAL.kShortTimeoutMs));
+        mSoftLimitState = !mSoftLimitState;
     }
 
     public enum CargoArmControlState {

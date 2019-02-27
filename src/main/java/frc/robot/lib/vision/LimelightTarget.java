@@ -75,7 +75,7 @@ public class LimelightTarget {
     } */
 
     @Override public String toString() {
-        return "X:" + xOffset + ", Y: " + yOffset + ", Area:" + area + ", Dt: " + captureTime + " Distance: " + distance;
+        return "X:" + xOffset + ", Y: " + yOffset + ", Area:" + area + ", Dt: " + captureTime + " Distance: " + distance + " Valid: " + validTarget;
     }
 }
 

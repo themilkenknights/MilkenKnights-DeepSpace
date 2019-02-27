@@ -12,14 +12,15 @@ public class MotionMagicHeadingVision implements Action {
     }
 
     @Override public boolean isFinished() {
-        return Drive.getInstance().isMotionMagicFinished() || HatchArm.getInstance().isHatchLimitTriggered();
+        //return Drive.getInstance().isMotionMagicFinished() || HatchArm.getInstance().isHatchLimitTriggered();
+       return false;
     }
 
     @Override public void update() {
-        LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
+       /* LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
         if (mTarget.isValidTarget()) {
             Drive.getInstance().setDistanceAndAngle(mTarget.getDistance(), mTarget.getYaw());
-        }
+        } */
     }
 
     @Override public void done() {
@@ -27,6 +28,10 @@ public class MotionMagicHeadingVision implements Action {
     }
 
     @Override public void start() {
-
+        //LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
+        //if (mTarget.isValidTarget()) {
+         //   Drive.getInstance().setDistanceAndAngle(mTarget.getDistance(), mTarget.getYaw());
+        //}
+        Drive.getInstance().setDistanceAndAngle(30,15);
     }
 }

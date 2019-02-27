@@ -3,6 +3,7 @@ package frc.robot.subsystems;
 import edu.wpi.cscore.HttpCamera;
 import edu.wpi.cscore.MjpegServer;
 import edu.wpi.cscore.UsbCamera;
+import edu.wpi.cscore.VideoSource.ConnectionStrategy;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.BuiltInWidgets;
@@ -23,7 +24,7 @@ public class Vision extends Subsystem {
 
     private static MkPixy mPixy;
     private LimeLight mLimeLight;
-    private boolean usePixy = true;
+    private boolean usePixy = false;
     private NetworkTableEntry mLLX, mDist, mArea;
     private MjpegServer server;
     private HttpCamera LLFeed;
@@ -82,6 +83,7 @@ public class Vision extends Subsystem {
     public void configHatchStream() {
         if (cameraStream != 0) {
             server.setSource(LLFeed);
+            cargoCam.setConnectionStrategy(ConnectionStrategy.kForceClose);
             cameraStream = 0;
         }
     }
@@ -89,6 +91,7 @@ public class Vision extends Subsystem {
     public void configCargoStream() {
         if (cameraStream != 1) {
             server.setSource(cargoCam);
+            LLFeed.setConnectionStrategy(ConnectionStrategy.kForceClose);
             cameraStream = 1;
         }
     }

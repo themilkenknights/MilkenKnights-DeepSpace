@@ -14,9 +14,9 @@ import frc.robot.subsystems.Superstructure.RobotState;
 public class HatchIntakeVisionPigeon extends AutoModeBase {
     @Override protected void routine() throws AutoModeEndedException {
         runAction(new MotionMagicHeadingVision());
-        runAction(new SetHatchArmState(HatchMechanismState.STOWED));
+     /*   runAction(new SetHatchArmState(HatchMechanismState.STOWED));
         runAction(new MotionMagicBlind(-30.0));
         runAction(new CargoArmSetpoint(CargoArmState.INTAKE));
-        runAction(new SetSuperstructure(RobotState.TELEOP_DRIVE));
+        runAction(new SetSuperstructure(RobotState.TELEOP_DRIVE)); */
     }
 }
