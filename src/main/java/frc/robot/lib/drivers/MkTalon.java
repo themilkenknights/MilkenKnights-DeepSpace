@@ -508,8 +508,8 @@ public class MkTalon {
                         Timer.delay(2.0);
                     }
                 }
-
-                Timer.delay(1.0);
+                double current, vel, pos = 0.0;
+               /* Timer.delay(1.0);
                 CargoArm.getInstance().setArmState(CargoArmState.INTAKE);
                 CargoArm.getInstance().setIntakeRollers(0.0);
                 Timer.delay(1.0);
@@ -587,7 +587,7 @@ public class MkTalon {
                         check = false;
                     }
                 }
-
+                    */
                 break;
             case Hatch_Arm:
                 if (!isEncoderConnected()) {
@@ -614,6 +614,53 @@ public class MkTalon {
                 }
 
                 break;
+            case Cargo_Intake:
+                MkTime newTime = new MkTime();
+                CargoArm.getInstance().setArmState(CargoArmState.REVERSE_CARGOSHIP);
+                Timer.delay(3.0);
+                CargoArm.getInstance().setOpenLoop(0.0);
+                newTime.start(10.0);
+                while(!slaveTalon.getSensorCollection().isRevLimitSwitchClosed()){
+                    if(newTime.isDone()){
+                        Logger.logErrorWithTrace("Did not detect reverse cargo limit switch");
+                        check = false;
+                        break;
+                    }
+                }
+                newTime.reset();
+                if(slaveTalon.getSensorCollection().isRevLimitSwitchClosed()){
+                    Logger.logMarker("Cargo Reverse Limit Triggered");
+                }
+
+                HatchArm.getInstance().setHatchMechanismState(HatchMechanismState.GROUND_INTAKE);
+                Timer.delay(1.0);
+                HatchArm.getInstance().setOpenLoop(0.0);
+                newTime.start(10.0);
+                while(!HatchArm.getInstance().isKetteringReverseTriggered()){
+                    if(newTime.isDone()){
+                        Logger.logErrorWithTrace("Did not detect reverse kettering switch");
+                        check = false;
+                        break;
+                    }
+                }
+                newTime.reset();
+                if(HatchArm.getInstance().isKetteringReverseTriggered()){
+                    Logger.logMarker("Kettering Reverse Limit Triggered");
+                }
+
+                newTime.start(10.0);
+                while(!CargoArm.getInstance().spearLimit()){
+                    if(newTime.isDone()){
+                        Logger.logErrorWithTrace("Did not detect spear switch (Fwd)");
+                        check = false;
+                        break;
+                    }
+                }
+                newTime.reset();
+                if(HatchArm.getInstance().isKetteringReverseTriggered()){
+                    Logger.logMarker("Spear Limit Triggered (Fwd)");
+                    check = false;
+                }
             default:
                 Logger.logError("Can't Check System!!!");
                 break;

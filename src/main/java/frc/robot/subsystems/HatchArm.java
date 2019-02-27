@@ -101,6 +101,10 @@ public class HatchArm extends Subsystem {
         return mSpearLimitTriggered;
     }
 
+    public boolean isKetteringReverseTriggered(){
+        return mArmTalon.slaveTalon.getSensorCollection().isRevLimitSwitchClosed();
+    }
+
 
     public void outputTelemetry(double timestamp) {
         mArmTalon.updateShuffleboard();
@@ -127,7 +131,6 @@ public class HatchArm extends Subsystem {
             case GROUND_INTAKE:
             case PLACING:
             case UNKNOWN:
-            case CLEAR_CARGO:
             case VISION_CONTROL:
                 break;
             case STATION_INTAKE:
@@ -269,10 +272,6 @@ public class HatchArm extends Subsystem {
             case SPEAR_PLACE_ONLY:
                 setHatchSpearState(HatchSpearState.PLACE);
                 break;
-            case CLEAR_CARGO:
-                setHatchIntakePosition(mKetteringSetpoint.CLEAR_CARGO_POINT);
-                setHatchSpearState(HatchSpearState.STOW);
-                break;
             default:
                 Logger.logErrorWithTrace("Unexpected Hatch Mechanism: " + mHatchMechanismState);
                 break;
@@ -292,7 +291,7 @@ public class HatchArm extends Subsystem {
 
     public enum mKetteringSetpoint {
         ENABLE(0), // State directly after robot is enabled (not mapped to a specific angle)
-        INTAKE_POINT(180), TRANSFER_POINT(60.0), CLEAR_CARGO_POINT(130.0), STOW_POINT(7.0);
+        INTAKE_POINT(180), TRANSFER_POINT(60.0), STOW_POINT(7.0);
 
         public final double state;
 
@@ -315,7 +314,7 @@ public class HatchArm extends Subsystem {
 
 
     public enum HatchMechanismState {
-        GROUND_INTAKE, TRANSFER, STATION_INTAKE, STOWED, PLACING, UNKNOWN, VISION_CONTROL, SPEAR_STOW_ONLY, SPEAR_PLACE_ONLY, CLEAR_CARGO
+        GROUND_INTAKE, TRANSFER, STATION_INTAKE, STOWED, PLACING, UNKNOWN, VISION_CONTROL, SPEAR_STOW_ONLY, SPEAR_PLACE_ONLY
     }
 
 

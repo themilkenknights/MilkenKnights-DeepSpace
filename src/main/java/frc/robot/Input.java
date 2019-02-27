@@ -58,6 +58,8 @@ public class Input {
 
     private static final MkJoystickButton mTransferButton = operatorJoystick.getButton(12, "Transfer Hatch Button");
 
+    //private static final boolean operatorJoystickConnected = false;
+
     private static Drive mDrive = Drive.getInstance();
     private static HatchArm mHatch = HatchArm.getInstance();
     private static CargoArm mCargo = CargoArm.getInstance();
@@ -68,6 +70,7 @@ public class Input {
         RobotState currentRobotState = mStructure.getRobotState();
         boolean isVisionState = currentRobotState == RobotState.VISION_CARGO_INTAKE || currentRobotState == RobotState.VISION_CARGO_OUTTAKE
             || currentRobotState == RobotState.HATCH_VISION_INTAKE || currentRobotState == RobotState.HATCH_VISION_OUTTAKE;
+
 
         if (isVisionState && mStopAuto.isPressed()) {
             mStructure.setRobotState(RobotState.TELEOP_DRIVE);

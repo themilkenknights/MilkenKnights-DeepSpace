@@ -6,6 +6,7 @@ import frc.robot.Constants.GENERAL;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.CrashTrackingRunnable;
 import frc.robot.lib.util.DeltaTime;
+import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.Vision;
 import java.util.List;
 
@@ -34,6 +35,7 @@ public class SubsystemManager {
                             subsystem.slowUpdate(now);
                             subsystem.outputTelemetry(now);
                             subsystem.safetyCheck(now);
+                            System.out.println("Raw: " + Drive.getInstance().getRawHeading() + " Normal: " + Drive.getInstance().getHeadingNormalized() + " Reg: " + Drive.getInstance().getHeadingDeg());
                         }
                     }
                     if(count == 5){

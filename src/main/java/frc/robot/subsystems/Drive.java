@@ -454,6 +454,10 @@ public class Drive extends Subsystem {
         }
     }
 
+    public double getRawHeading(){
+        return mPigeon.getFusedHeading();
+    }
+
     public double getYaw() {
         return navX.getYaw();
     }

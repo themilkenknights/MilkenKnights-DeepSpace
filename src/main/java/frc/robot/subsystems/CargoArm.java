@@ -129,7 +129,7 @@ public class CargoArm extends Subsystem {
     }
 
     @Override public boolean checkSystem() {
-        return mArmTalon.checkSystem();
+        return mArmTalon.checkSystem() && mIntakeTalon.checkSystem();
     }
 
     public boolean spearLimit() {
