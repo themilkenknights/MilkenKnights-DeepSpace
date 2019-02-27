@@ -141,6 +141,39 @@
               "_source0": "network_table:///SmartDashboard/Aux Vel",
               "_title": "Aux Vel"
             }
+          },
+          "3,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Main Target",
+              "_title": "Main Target"
+            }
+          },
+          "4,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Main Error",
+              "_title": "Main Error"
+            }
+          },
+          "5,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Main Pos",
+              "_title": "Main Pos"
+            }
           }
         }
       }
