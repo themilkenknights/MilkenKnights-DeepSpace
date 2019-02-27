@@ -40,7 +40,7 @@ public class Vision extends Subsystem {
         server.setSource(LLFeed);
         dashboardTab.add(server.getSource()).withWidget(BuiltInWidgets.kCameraStream).withPosition(1, 1).withSize(9, 4)
             .withProperties(Map.of("Show Crosshair", true, "Show Controls", false));// specify widget properties here
-        Shuffleboard.selectTab("Dash");
+        Shuffleboard.selectTab("Drive");
         ShuffleboardTab mVisionTab = Shuffleboard.getTab("Vision");
         mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
         mDist = mVisionTab.add("Limelight Dist", 0.0).getEntry();

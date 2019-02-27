@@ -89,7 +89,6 @@ public class Robot extends TimedRobot {
     @Override public void robotPeriodic() {
         try {
             mSubsystemManager.perioidicUpdate();
-            //System.out.println(Drive.getInstance().getPitch());
         } catch (Throwable t) {
             Logger.logThrowableCrash(t);
             throw t;

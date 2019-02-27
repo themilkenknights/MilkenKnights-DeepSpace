@@ -35,11 +35,11 @@ public class SubsystemManager {
                         if (count == 5) {
                             subsystem.slowUpdate(now);
                             subsystem.outputTelemetry(now);
-                            subsystem.safetyCheck(now);
+                           //TODO ENABLE subsystem.safetyCheck(now);
                             //System.out.println("Raw: " + Drive.getInstance().getRawHeading() + " Normal: " + Drive.getInstance().getHeadingNormalized() + " Reg: " + Drive.getInstance().getHeadingDeg());
                         }
                     }
-                    RobotState.getInstance().outputToSmartDashboard();
+                    //RobotState.getInstance().outputToSmartDashboard();
                     if(count == 5){
                         count = 0;
                     }
@@ -52,7 +52,7 @@ public class SubsystemManager {
                         subsystem.outputTelemetry(now);
                     }
                    Vision.getInstance().updateLimelight();
-                    RobotState.getInstance().outputToSmartDashboard();
+                   // RobotState.getInstance().outputToSmartDashboard();
                     // Vision.getInstance().updatePixy();
                 }
                 timestamp_ = now;

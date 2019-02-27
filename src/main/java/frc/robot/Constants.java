@@ -310,16 +310,20 @@ public final class Constants {
                     tal.slot0.kP = DRIVE.kDriveKp;
                     tal.slot0.kD = DRIVE.kDriveKd;
                     tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
-                    tal.slot0.closedLoopPeakOutput = 1.0;
+                    tal.slot0.closedLoopPeakOutput = 0.3;
+                    tal.slot0.allowableClosedloopError = 100;
                     //Motion Magic Turning
-                    tal.slot1.kP = 6.0;
-                    tal.slot1.kI = 0.0;
-                    tal.slot1.kD = 1.0;
+                    tal.slot1.kP = 4.4;
+                    tal.slot1.kI = 0.3;
+                    tal.slot1.kD = tal.slot1.kP * 34;
                     tal.slot1.kF = 1023.0 / DRIVE.kMaxNativeVel;
-                    tal.slot1.integralZone = 0;
-                    tal.slot1.closedLoopPeakOutput = 0.5;
+                    tal.slot1.integralZone = 100;
+                    tal.slot1.maxIntegralAccumulator = 50;
+                    tal.slot1.closedLoopPeakOutput = 0.7;
+                    tal.slot1.allowableClosedloopError = 10;
+                    //~3deg
                     tal.auxPIDPolarity = false;
-                    tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.5);
+                    tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.9);
                     tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.5);
                 } else if (loc == TalonLoc.Cargo_Arm || loc == TalonLoc.Hatch_Arm) {
                     tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
@@ -337,8 +341,8 @@ public final class Constants {
                  tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
                     tal.primaryPID.selectedFeedbackCoefficient = 1.0;
 
-                    tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
-                    tal.primaryPID.selectedFeedbackCoefficient = 0.50;
+                   /* tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
+                    tal.primaryPID.selectedFeedbackCoefficient = 0.50; */
 
                     tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
                     tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0;
@@ -353,7 +357,7 @@ public final class Constants {
                     tal.sum1Term = FeedbackDevice.CTRE_MagEncoder_Relative;
                 } else if (loc == TalonLoc.Cargo_Arm) {
                     tal.reverseLimitSwitchDeviceID = CAN.kRightCargoIntakeTalonID;
-                    tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(190);
+                    tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(180);
                     tal.reverseSoftLimitThreshold = 0;
                     tal.motionCruiseVelocity = (int) (CARGO_ARM.kMaxRawVel);
                     tal.motionAcceleration = (int) (CARGO_ARM.kMaxRawVel * 10);

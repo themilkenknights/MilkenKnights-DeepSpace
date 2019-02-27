@@ -120,7 +120,7 @@ public class Superstructure extends Subsystem {
                 AutoChooser.disableAuto();
                 break;
             case HATCH_VISION_INTAKE:
-                startVisionCargoIntake();
+                startVisionHatchIntake();
             case HATCH_VISION_OUTTAKE:
                 startVisionHatchOuttake();
                 break;

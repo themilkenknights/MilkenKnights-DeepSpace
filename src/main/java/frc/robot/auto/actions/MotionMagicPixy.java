@@ -20,7 +20,7 @@ public class MotionMagicPixy implements Action {
     }
 
     @Override public void update() {
-        double mDist = 0.0; //TODO fix
+        double mDist = 0.0;
         if (mDist > 5.0 && mDist < 60) {
             double mSteer = DRIVE.kPixyKp * Vision.getInstance().getPixyTarget().getYaw();
             Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
