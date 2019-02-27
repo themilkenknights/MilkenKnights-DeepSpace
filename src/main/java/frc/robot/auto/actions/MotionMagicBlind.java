@@ -7,12 +7,17 @@ import frc.robot.subsystems.Drive;
 public class MotionMagicBlind implements Action {
 
     private double dist;
+    private int i = 0;
 
     public MotionMagicBlind(double dist) {
         this.dist = dist;
     }
 
     @Override public boolean isFinished() {
+        if(i < 5){
+            i++;
+            return false;
+        }
         return Drive.getInstance().isMotionMagicFinished();
     }
 
