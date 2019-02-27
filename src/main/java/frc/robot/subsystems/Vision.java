@@ -38,7 +38,7 @@ public class Vision extends Subsystem {
         cargoCam.setConnectVerbose(0);
         server = CameraServer.getInstance().addSwitchedCamera("Toggle Cam");
         server.setSource(LLFeed);
-        dashboardTab.add(server.getSource()).withWidget(BuiltInWidgets.kCameraStream).withPosition(1, 1).withSize(5, 4)
+        dashboardTab.add(server.getSource()).withWidget(BuiltInWidgets.kCameraStream).withPosition(1, 1).withSize(9, 4)
             .withProperties(Map.of("Show Crosshair", true, "Show Controls", false));// specify widget properties here
         Shuffleboard.selectTab("Dash");
         ShuffleboardTab mVisionTab = Shuffleboard.getTab("Vision");
@@ -82,6 +82,7 @@ public class Vision extends Subsystem {
 
     public void configHatchStream() {
         if (cameraStream != 0) {
+            LLFeed.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
             server.setSource(LLFeed);
             cargoCam.setConnectionStrategy(ConnectionStrategy.kForceClose);
             cameraStream = 0;
@@ -90,6 +91,7 @@ public class Vision extends Subsystem {
 
     public void configCargoStream() {
         if (cameraStream != 1) {
+            cargoCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
             server.setSource(cargoCam);
             LLFeed.setConnectionStrategy(ConnectionStrategy.kForceClose);
             cameraStream = 1;

@@ -465,8 +465,9 @@ public class Drive extends Subsystem {
     }
 
     public double getPitch(){
-        //return mPigeon.getYawPitchRoll();
-        return 0.0;
+        double[]arr = new double[3];
+        CargoArm.getInstance().getmPigeon().getYawPitchRoll(arr);
+        return arr[2];
     }
 
 

@@ -5,13 +5,17 @@ import frc.robot.subsystems.Drive;
 public class WaitForAngle implements Action {
 
     private double angle;
-    public WaitForAngle(double angle){
+    private boolean mUp;
+    public WaitForAngle(double angle, boolean mUp){
         this.angle = angle;
+        this.mUp = mUp;
     }
 
     @Override public boolean isFinished() {
-      //  return Drive.getInstance().get
-        return false;
+        if(mUp){
+            return Drive.getInstance().getPitch() > angle;
+        }
+            return Drive.getInstance().getPitch() < angle;
     }
 
     @Override public void update() {

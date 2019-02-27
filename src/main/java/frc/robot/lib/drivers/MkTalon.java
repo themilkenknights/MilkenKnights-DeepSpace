@@ -74,11 +74,12 @@ public class MkTalon {
         resetConfig();
 
         if(mSide == TalonLoc.Cargo_Intake){
+            Timer.delay(1.0);
             mPigeon = new PigeonIMU(masterTalon);
-         //   CTRE(mPigeon.configFactoryDefault(100));
-         //   CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_1_General, 10, GENERAL.kLongCANTimeoutMs));
-         //   CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_9_SixDeg_YPR, 3, GENERAL.kLongCANTimeoutMs));
-         //   CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_6_SensorFusion, 3, GENERAL.kLongCANTimeoutMs));
+            CTRE(mPigeon.configFactoryDefault(100));
+            CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_1_General, 10, GENERAL.kLongCANTimeoutMs));
+            CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_9_SixDeg_YPR, 3, GENERAL.kLongCANTimeoutMs));
+            CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_6_SensorFusion, 3, GENERAL.kLongCANTimeoutMs));
         }
     }
 
