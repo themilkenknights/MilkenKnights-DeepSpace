@@ -87,7 +87,7 @@ public class CargoArm extends Subsystem {
         }
     }
 
-    public PigeonIMU getmPigeon(){
+    public PigeonIMU getmPigeon() {
         return mIntakeTalon.mPigeon;
     }
 
@@ -187,7 +187,7 @@ public class CargoArm extends Subsystem {
         setEnable();
     }
 
-    public void toggleSoftLimit(){
+    public void toggleSoftLimit() {
         CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(!mSoftLimitState, GENERAL.kShortTimeoutMs));
         CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(!mSoftLimitState, GENERAL.kShortTimeoutMs));
         mSoftLimitState = !mSoftLimitState;
@@ -202,10 +202,7 @@ public class CargoArm extends Subsystem {
 
     public enum CargoArmState {
         ENABLE(0.0), // State directly after robot is enabled (not mapped to a specific angle)
-        INTAKE(177.0),
-        FORWARD_ROCKET_LEVEL_ONE(125.0),
-        FORWARD_ROCKET_LEVEL_TWO(115.0),
-        REVERSE_CARGOSHIP(11.0);
+        INTAKE(177.0), FORWARD_ROCKET_LEVEL_ONE(125.0), FORWARD_ROCKET_LEVEL_TWO(115.0), REVERSE_CARGOSHIP(11.0);
 
         public final double state;
 

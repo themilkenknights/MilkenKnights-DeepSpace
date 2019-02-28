@@ -5,10 +5,7 @@ import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.FollowerType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
-import com.ctre.phoenix.sensors.PigeonIMU;
-import com.ctre.phoenix.sensors.PigeonIMU_StatusFrame;
 import edu.wpi.first.networktables.NetworkTableEntry;
-import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
@@ -305,7 +302,7 @@ public class Drive extends Subsystem {
         }
 
         mPeriodicIO.left_demand = 0.0;
-        mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist) +  mPeriodicIO.rightPos;
+        mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist) + mPeriodicIO.rightPos;
         mPeriodicIO.left_feedforward = 0.0;
         mPeriodicIO.right_feedforward = ((CargoArm.getInstance().getmPigeon().getFusedHeading() + angle) / 360.0) * 8192.0;
         mPeriodicIO.brake_mode = NeutralMode.Brake;
@@ -342,11 +339,11 @@ public class Drive extends Subsystem {
     }
 
     public void configHatchVision() {
-      if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
-            mRightDrive.masterTalon.setSelectedSensorPosition(0,0,0);
-            mLeftDrive.masterTalon.setSelectedSensorPosition(0,0,0);
+        if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
+            mRightDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
+            mLeftDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
             CargoArm.getInstance().getmPigeon().setFusedHeading(0);
-            left_encoder_prev_distance_= 0;
+            left_encoder_prev_distance_ = 0;
             right_encoder_prev_distance_ = 0;
             mPeriodicIO.rightPos = 0.0;
             mPeriodicIO.leftPos = 0.0;
@@ -364,9 +361,9 @@ public class Drive extends Subsystem {
             mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 1.0, 0);
             mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, CONFIG.kPIDPrimary, 0);
             mRightDrive.masterTalon.configSelectedFeedbackCoefficient(1.0, CONFIG.kPIDPrimary, 0);
-            mRightDrive.masterTalon.setSelectedSensorPosition(0,0,0);
-            mLeftDrive.masterTalon.setSelectedSensorPosition(0,0,0);
-            left_encoder_prev_distance_= 0;
+            mRightDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
+            mLeftDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
+            left_encoder_prev_distance_ = 0;
             right_encoder_prev_distance_ = 0;
             mPeriodicIO.rightPos = 0.0;
             mPeriodicIO.leftPos = 0.0;
@@ -377,7 +374,7 @@ public class Drive extends Subsystem {
         }
     }
 
-    public boolean getRightPos(double dist){
+    public boolean getRightPos(double dist) {
         return Math.abs(mPeriodicIO.rightPos - dist) < 30;
     }
 
@@ -484,7 +481,7 @@ public class Drive extends Subsystem {
         CT.RE(CargoArm.getInstance().getmPigeon().setFusedHeading(0, GENERAL.kLongCANTimeoutMs));
         CT.RE(CargoArm.getInstance().getmPigeon().setYaw(0, GENERAL.kLongCANTimeoutMs));
         CT.RE(CargoArm.getInstance().getmPigeon().setAccumZAngle(0, GENERAL.kLongCANTimeoutMs));
-       // CT.RE(mRightDrive.masterTalon.setSelectedSensorPosition(0, CONFIG.kPIDAuxilliaryTurn, GENERAL.kLongCANTimeoutMs));
+        // CT.RE(mRightDrive.masterTalon.setSelectedSensorPosition(0, CONFIG.kPIDAuxilliaryTurn, GENERAL.kLongCANTimeoutMs));
         //mPigeon.set
     }
 
@@ -492,14 +489,15 @@ public class Drive extends Subsystem {
      * Left is Positive
      * Right is Negative
      * (180 - -180)
+     *
      * @return current fused heading from navX
      */
     public double getHeadingDeg() {
         return mPeriodicIO.gyro_heading.getDegrees();
     }
 
-    public double getPitch(){
-        double[]arr = new double[3];
+    public double getPitch() {
+        double[] arr = new double[3];
         CargoArm.getInstance().getmPigeon().getYawPitchRoll(arr);
         return arr[2];
     }
@@ -513,8 +511,9 @@ public class Drive extends Subsystem {
         return Math.abs(mLeftDrive.getError()) < DRIVE.kGoalPosTolerance && Math.abs(mRightDrive.getError()) < DRIVE.kGoalPosTolerance;
     }
 
-    public boolean isVisionFinished(){
-        return ((Math.abs(MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getSelectedSensorPosition(0) - mRightDrive.masterTalon.getClosedLoopTarget(0)))) < 2.5) && ((Math.abs(((mRightDrive.masterTalon.getSelectedSensorPosition(1) - mRightDrive.masterTalon.getClosedLoopTarget(1)) / 8192.0) * 360.0)) < 2.0);
+    public boolean isVisionFinished() {
+        return ((Math.abs(MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getSelectedSensorPosition(0) - mRightDrive.masterTalon.getClosedLoopTarget(0)))) < 2.5) && (
+            (Math.abs(((mRightDrive.masterTalon.getSelectedSensorPosition(1) - mRightDrive.masterTalon.getClosedLoopTarget(1)) / 8192.0) * 360.0)) < 2.0);
     }
 
     public enum DriveControlState {

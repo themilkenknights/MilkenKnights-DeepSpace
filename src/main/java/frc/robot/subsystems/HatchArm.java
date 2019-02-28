@@ -102,13 +102,13 @@ public class HatchArm extends Subsystem {
         return mSpearLimitTriggered;
     }
 
-    public void toggleSoftLimit(){
+    public void toggleSoftLimit() {
         CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(!mSoftLimitState, GENERAL.kShortTimeoutMs));
         CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(!mSoftLimitState, GENERAL.kShortTimeoutMs));
         mSoftLimitState = !mSoftLimitState;
     }
 
-    public boolean isKetteringReverseTriggered(){
+    public boolean isKetteringReverseTriggered() {
         return mArmTalon.slaveTalon.getSensorCollection().isRevLimitSwitchClosed();
     }
 
@@ -288,6 +288,7 @@ public class HatchArm extends Subsystem {
         MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all circumstances
         OPEN_LOOP // Direct PercentVBus control of the arm as a failsafe
     }
+
 
     public enum mKetteringSetpoint {
         ENABLE(0), // State directly after robot is enabled (not mapped to a specific angle)

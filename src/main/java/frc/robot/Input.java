@@ -1,6 +1,5 @@
 package frc.robot;
 
-import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.INPUT;
 import frc.robot.lib.drivers.MkJoystick;
@@ -74,7 +73,8 @@ public class Input {
     public static void updateControlInput() {
         RobotState currentRobotState = mStructure.getRobotState();
         boolean isVisionState = currentRobotState == RobotState.VISION_CARGO_INTAKE || currentRobotState == RobotState.VISION_CARGO_OUTTAKE
-            || currentRobotState == RobotState.HATCH_VISION_INTAKE || currentRobotState == RobotState.HATCH_VISION_OUTTAKE || currentRobotState == RobotState.AUTO_CLIMB || currentRobotState == RobotState.PATH_FOLLOWING;
+            || currentRobotState == RobotState.HATCH_VISION_INTAKE || currentRobotState == RobotState.HATCH_VISION_OUTTAKE || currentRobotState == RobotState.AUTO_CLIMB
+            || currentRobotState == RobotState.PATH_FOLLOWING;
 
 
         if (isVisionState && mStopAuto.isPressed()) {
@@ -86,9 +86,9 @@ public class Input {
             mHatch.zeroEncoder();
         }
 
-        if(disableSoftLimit.isPressed()){
-mCargo.toggleSoftLimit();
-mHatch.toggleSoftLimit();
+        if (disableSoftLimit.isPressed()) {
+            mCargo.toggleSoftLimit();
+            mHatch.toggleSoftLimit();
         }
 
         if (mCargoArmManual.isHeld()) {
@@ -104,17 +104,17 @@ mHatch.toggleSoftLimit();
             mCargo.setOpenLoop(0.0);
         }
 
-        if(operatorJoystick.getTriggerReleased()){
+        if (operatorJoystick.getTriggerReleased()) {
             mHatch.setOpenLoop(0.0);
         }
 
         currentRobotState = mStructure.getRobotState();
 
-        if(mAutoClimb.isPressed()){
+        if (mAutoClimb.isPressed()) {
             mStructure.setRobotState(RobotState.AUTO_CLIMB);
-        } else if(mFrontClimb.isPressed()){
+        } else if (mFrontClimb.isPressed()) {
             mStructure.setFrontClimbState(mStructure.getFrontClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
-        }else if(mRearClimb.isPressed()){
+        } else if (mRearClimb.isPressed()) {
             mStructure.setRearClimbState(mStructure.getRearClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
         }
 

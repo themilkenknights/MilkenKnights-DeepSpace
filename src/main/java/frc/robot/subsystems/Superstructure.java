@@ -149,7 +149,7 @@ public class Superstructure extends Subsystem {
     }
 
     private void startVisionHatchIntake() {
-        if(!Vision.getInstance().getLimelightTarget().isValidTarget()){
+        if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
             setRobotState(RobotState.TELEOP_DRIVE);
             Logger.logMarker("Limelight target not valid");
         }

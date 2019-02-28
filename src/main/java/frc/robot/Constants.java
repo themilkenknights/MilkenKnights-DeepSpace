@@ -338,7 +338,7 @@ public final class Constants {
                     tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
                     tal.primaryPID.selectedFeedbackCoefficient = 1.0;
                 } else if (loc == TalonLoc.Right) {
-                 tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
+                    tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
                     tal.primaryPID.selectedFeedbackCoefficient = 1.0;
 
                    /* tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;

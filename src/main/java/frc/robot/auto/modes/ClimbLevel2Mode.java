@@ -6,12 +6,10 @@ import frc.robot.auto.actions.ActuateFrontSolenoids;
 import frc.robot.auto.actions.ActuateRearSolenoids;
 import frc.robot.auto.actions.CargoArmSetpoint;
 import frc.robot.auto.actions.MotionMagicBlind;
-import frc.robot.auto.actions.SetSuperstructure;
 import frc.robot.auto.actions.WaitAction;
 import frc.robot.auto.actions.WaitForAngle;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Superstructure.ClimbState;
-import frc.robot.subsystems.Superstructure.RobotState;
 
 public class ClimbLevel2Mode extends AutoModeBase {
 

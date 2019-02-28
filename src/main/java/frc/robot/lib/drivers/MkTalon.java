@@ -40,9 +40,9 @@ public class MkTalon {
     private static ArrayList<Double> positions = new ArrayList<>();
     public final TalonSRX masterTalon, slaveTalon;
     public final VictorSPX slaveVictor;
-    public PigeonIMU mPigeon;
     private final int kLong = GENERAL.kLongCANTimeoutMs;
     private final double motorTimer = GENERAL.kMotorSafetyTimer;
+    public PigeonIMU mPigeon;
     private TalonLoc mSide;
     private ControlMode lastControlMode = null;
     private double lastOutput, lastArbFeed = Double.NaN;
@@ -73,7 +73,7 @@ public class MkTalon {
         }
         resetConfig();
 
-        if(mSide == TalonLoc.Cargo_Intake){
+        if (mSide == TalonLoc.Cargo_Intake) {
             Timer.delay(1.0);
             mPigeon = new PigeonIMU(masterTalon);
             CTRE(mPigeon.configFactoryDefault(100));
@@ -320,7 +320,7 @@ public class MkTalon {
         mOutput.setDouble(masterTalon.getMotorOutputPercent());
     }
 
-    public PigeonIMU getmPigeon(){
+    public PigeonIMU getmPigeon() {
         return mPigeon;
     }
 
@@ -439,11 +439,11 @@ public class MkTalon {
                 MkTime timer = new MkTime();
                 CTRE(masterTalon.configFactoryDefault(kLong));
                 CTRE(slaveVictor.configFactoryDefault(kLong));
-                if(mSide == TalonLoc.Left){
+                if (mSide == TalonLoc.Left) {
                     masterTalon.setInverted(DRIVE.kLeftMasterInvert);
                     masterTalon.setSensorPhase(DRIVE.kLeftSensorInvert);
                     slaveVictor.setInverted(DRIVE.kLeftSlaveInvert);
-                } else{
+                } else {
                     masterTalon.setInverted(DRIVE.KRightMasterInvert);
                     masterTalon.setSensorPhase(DRIVE.kRightSensorInvert);
                     slaveVictor.setInverted(DRIVE.kRightSlaveInvert);
@@ -454,7 +454,7 @@ public class MkTalon {
                 double mCur, mVel, mPos;
 
                 timer.start(3.0);
-                while(!timer.isDone()){
+                while (!timer.isDone()) {
                     masterTalon.set(ControlMode.PercentOutput, 0.0);
                     slaveVictor.set(ControlMode.PercentOutput, 1.0);
                 }
@@ -483,7 +483,7 @@ public class MkTalon {
                 zeroEncoder();
 
                 timer.start(3.0);
-                while(!timer.isDone()){
+                while (!timer.isDone()) {
                     masterTalon.set(ControlMode.PercentOutput, 1.0);
                     slaveVictor.set(ControlMode.PercentOutput, 0.0);
                 }
@@ -636,15 +636,15 @@ public class MkTalon {
                 Timer.delay(3.0);
                 CargoArm.getInstance().setOpenLoop(0.0);
                 newTime.start(15.0);
-                while(!slaveTalon.getSensorCollection().isRevLimitSwitchClosed()){
-                    if(newTime.isDone()){
+                while (!slaveTalon.getSensorCollection().isRevLimitSwitchClosed()) {
+                    if (newTime.isDone()) {
                         Logger.logErrorWithTrace("Did not detect reverse cargo limit switch");
                         check = false;
                         break;
                     }
                 }
                 newTime.reset();
-                if(slaveTalon.getSensorCollection().isRevLimitSwitchClosed()){
+                if (slaveTalon.getSensorCollection().isRevLimitSwitchClosed()) {
                     Logger.logMarker("Cargo Reverse Limit Triggered");
                 }
 
@@ -653,28 +653,28 @@ public class MkTalon {
                 Timer.delay(1.0);
                 HatchArm.getInstance().setOpenLoop(0.0);
                 newTime.start(15.0);
-                while(!HatchArm.getInstance().isKetteringReverseTriggered()){
-                    if(newTime.isDone()){
+                while (!HatchArm.getInstance().isKetteringReverseTriggered()) {
+                    if (newTime.isDone()) {
                         Logger.logErrorWithTrace("Did not detect reverse kettering switch");
                         check = false;
                         break;
                     }
                 }
                 newTime.reset();
-                if(HatchArm.getInstance().isKetteringReverseTriggered()){
+                if (HatchArm.getInstance().isKetteringReverseTriggered()) {
                     Logger.logMarker("Kettering Reverse Limit Triggered");
                 }
 
                 newTime.start(10.0);
-                while(!CargoArm.getInstance().spearLimit()){
-                    if(newTime.isDone()){
+                while (!CargoArm.getInstance().spearLimit()) {
+                    if (newTime.isDone()) {
                         Logger.logErrorWithTrace("Did not detect spear switch (Fwd)");
                         check = false;
                         break;
                     }
                 }
                 newTime.reset();
-                if(HatchArm.getInstance().isKetteringReverseTriggered()){
+                if (HatchArm.getInstance().isKetteringReverseTriggered()) {
                     Logger.logMarker("Spear Limit Triggered (Fwd)");
                     check = false;
                 }

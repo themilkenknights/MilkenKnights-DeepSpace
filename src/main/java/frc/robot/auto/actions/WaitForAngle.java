@@ -6,16 +6,17 @@ public class WaitForAngle implements Action {
 
     private double angle;
     private boolean mUp;
-    public WaitForAngle(double angle, boolean mUp){
+
+    public WaitForAngle(double angle, boolean mUp) {
         this.angle = angle;
         this.mUp = mUp;
     }
 
     @Override public boolean isFinished() {
-        if(mUp){
+        if (mUp) {
             return Drive.getInstance().getPitch() > angle;
         }
-            return Drive.getInstance().getPitch() < angle;
+        return Drive.getInstance().getPitch() < angle;
     }
 
     @Override public void update() {

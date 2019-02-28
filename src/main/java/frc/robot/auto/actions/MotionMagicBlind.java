@@ -14,7 +14,7 @@ public class MotionMagicBlind implements Action {
     }
 
     @Override public boolean isFinished() {
-        if(i < 5){
+        if (i < 5) {
             i++;
             return false;
         }
