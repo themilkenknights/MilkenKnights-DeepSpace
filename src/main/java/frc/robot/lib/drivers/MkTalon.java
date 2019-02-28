@@ -179,11 +179,7 @@ public class MkTalon {
         if (mSide == TalonLoc.Hatch_Arm || mSide == TalonLoc.Cargo_Intake) {
             CTRE(slaveTalon.clearStickyFaults(kShort));
             CTRE(slaveTalon.configFactoryDefault(kLong));
-            CTRE(slaveTalon.configVoltageCompSaturation(12.0, kShort));
-            CTRE(slaveTalon.configVoltageMeasurementFilter(32, kShort));
-            CTRE(slaveTalon.configNeutralDeadband(0.0, kShort));
-            CTRE(slaveTalon.configPeakOutputForward(GENERAL.kMaxNominalOutput, kShort));
-            CTRE(slaveTalon.configPeakOutputReverse(-GENERAL.kMaxNominalOutput, kShort));
+            CTRE(slaveTalon.configAllSettings(CONFIG.kConfigs.get(mSide)));
             slaveTalon.enableVoltageCompensation(true);
             slaveTalon.setNeutralMode(NeutralMode.Brake);
             if (mSide == TalonLoc.Hatch_Arm) {
@@ -220,7 +216,6 @@ public class MkTalon {
         if (mSide == TalonLoc.Cargo_Arm) {
             slaveVictor.setInverted(InvertType.OpposeMaster);
         }
-
 
         Faults talonFaults = new Faults();
         CTRE(masterTalon.getFaults(talonFaults));

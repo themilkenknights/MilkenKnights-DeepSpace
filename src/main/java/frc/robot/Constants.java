@@ -37,7 +37,7 @@ public final class Constants {
 
     public static class GENERAL {
         public static final int kShortTimeoutMs = 0;
-        public static final int kLongCANTimeoutMs = 50; //Use for constructors, not while enabled
+        public static final int kLongCANTimeoutMs = 50;
         public static final double PI = 3.14159265359;
         public static final double kMaxNominalOutput = 1.0;
         public static final double kTicksPerRev = 4096.0;
@@ -303,23 +303,23 @@ public final class Constants {
                 tal.forwardLimitSwitchNormal = LimitSwitchNormal.Disabled;
                 tal.reverseLimitSwitchNormal = LimitSwitchNormal.Disabled;
                 if (loc == TalonLoc.Left || loc == TalonLoc.Right) {
-                    tal.motionCurveStrength = 8;
+                    tal.motionCurveStrength = 7;
                     tal.velocityMeasurementPeriod = VelocityMeasPeriod.Period_25Ms;
                     tal.velocityMeasurementWindow = 8;
                     //General Velocity/Motion Magic
                     tal.slot0.kP = DRIVE.kDriveKp;
                     tal.slot0.kD = DRIVE.kDriveKd;
                     tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
-                    tal.slot0.closedLoopPeakOutput = 0.3;
+                    tal.slot0.closedLoopPeakOutput = 0.4;
                     tal.slot0.allowableClosedloopError = 100;
                     //Motion Magic Turning
                     tal.slot1.kP = 4.4;
-                    tal.slot1.kI = 0.3;
+                    tal.slot1.kI = 0.2;
                     tal.slot1.kD = tal.slot1.kP * 34;
                     tal.slot1.kF = 1023.0 / DRIVE.kMaxNativeVel;
                     tal.slot1.integralZone = 100;
                     tal.slot1.maxIntegralAccumulator = 50;
-                    tal.slot1.closedLoopPeakOutput = 0.7;
+                    tal.slot1.closedLoopPeakOutput = 0.8;
                     tal.slot1.allowableClosedloopError = 10;
                     //~3deg
                     tal.auxPIDPolarity = false;
@@ -357,7 +357,7 @@ public final class Constants {
                     tal.sum1Term = FeedbackDevice.CTRE_MagEncoder_Relative;
                 } else if (loc == TalonLoc.Cargo_Arm) {
                     tal.reverseLimitSwitchDeviceID = CAN.kRightCargoIntakeTalonID;
-                    tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(180);
+                    tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(188);
                     tal.reverseSoftLimitThreshold = 0;
                     tal.motionCruiseVelocity = (int) (CARGO_ARM.kMaxRawVel);
                     tal.motionAcceleration = (int) (CARGO_ARM.kMaxRawVel * 10);
@@ -380,9 +380,7 @@ public final class Constants {
                     tal.slot0.kF = (1023.0 / Constants.HATCH_ARM.kMaxRawVel);
                     tal.slot0.maxIntegralAccumulator = 0;
                     tal.slot0.integralZone = 0;
-                    tal.motionCurveStrength = 7;
-                    //  tal.nominalOutputForward = 0.01;
-                    // tal.nominalOutputReverse = -0.01;
+                    tal.motionCurveStrength = 8;
                 }
             }
         }
