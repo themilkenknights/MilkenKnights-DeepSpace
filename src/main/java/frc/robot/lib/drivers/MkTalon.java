@@ -74,7 +74,6 @@ public class MkTalon {
         resetConfig();
 
         if (mSide == TalonLoc.Cargo_Intake) {
-            Timer.delay(1.0);
             mPigeon = new PigeonIMU(masterTalon);
             CTRE(mPigeon.configFactoryDefault(100));
             CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_1_General, 10, GENERAL.kLongCANTimeoutMs));
