@@ -69,6 +69,35 @@ public class Drive extends Subsystem {
     }
 
     /**
+     * Update Shuffleboard and Log to CSV
+     */
+    public synchronized void outputTelemetry(double timestamp) {
+        mLeftDrive.updateShuffleboard();
+        mRightDrive.updateShuffleboard();
+        mState.setString(mDriveControlState.toString());
+        mStatus.setBoolean(driveStatus());
+        mFusedHeading.setDouble(CargoArm.getInstance().getmPigeon().getFusedHeading());
+        mXErr.setDouble(mPeriodicIO.error.getTranslation().x());
+        mYErr.setDouble(mPeriodicIO.error.getTranslation().y());
+        mThetaErr.setDouble(mPeriodicIO.error.getRotation().getDegrees());
+        if (getHeading() != null) {
+            mGyroHeading.setDouble(getHeading().getDegrees());
+        }
+        if (mCSVWriter != null) {
+            mCSVWriter.add(mPeriodicIO);
+            mCSVWriter.write();
+        }
+        SmartDashboard.putNumber("Avg Dist", (mPeriodicIO.leftPos + mPeriodicIO.rightPos) / 2);
+        SmartDashboard.putNumber("Aux Error", mRightDrive.masterTalon.getClosedLoopError(1));
+        SmartDashboard.putNumber("Aux Target", mRightDrive.masterTalon.getClosedLoopTarget(1));
+        SmartDashboard.putNumber("Aux Pos", mRightDrive.masterTalon.getSelectedSensorPosition(1));
+        SmartDashboard.putNumber("Aux Vel", mRightDrive.masterTalon.getSelectedSensorVelocity(1));
+        SmartDashboard.putNumber("Main Target", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopTarget(0)));
+        SmartDashboard.putNumber("Main Error", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopError(0)));
+        SmartDashboard.putNumber("Main Pos", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getSelectedSensorPosition(0)));
+    }
+
+    /**
      * Step 1: Read inputs from Talon and NavX
      */
     @Override public synchronized void readPeriodicInputs(double timestamp) {
@@ -102,35 +131,6 @@ public class Drive extends Subsystem {
 
     }
 
-    /*
-    Update path setpoints and parameters
-     */
-    private synchronized void updatePathFollower() {
-        if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
-            final double now = Timer.getFPGATimestamp();
-
-            DriveMotionPlanner.Output output = mMotionPlanner.update(now, RobotState.getInstance().getFieldToVehicle(now));
-
-            // DriveSignal signal = new DriveSignal(demand.left_feedforward_voltage / 12.0, demand.right_feedforward_voltage / 12.0);
-
-            mPeriodicIO.error = mMotionPlanner.error();
-            mPeriodicIO.path_setpoint = mMotionPlanner.setpoint();
-
-            if (!mOverrideTrajectory) {
-                setVelocity(new DriveSignal(MkMath.radiansPerSecondToTicksPer100ms(output.left_velocity), MkMath.radiansPerSecondToTicksPer100ms(output.right_velocity)),
-                    new DriveSignal(output.left_feedforward_voltage / 12.0, output.right_feedforward_voltage / 12.0));
-
-                mPeriodicIO.left_accel = MkMath.radiansPerSecondToTicksPer100ms(output.left_accel) / 1000.0;
-                mPeriodicIO.right_accel = MkMath.radiansPerSecondToTicksPer100ms(output.right_accel) / 1000.0;
-            } else {
-                setVelocity(DriveSignal.BRAKE, DriveSignal.BRAKE);
-                mPeriodicIO.left_accel = mPeriodicIO.right_accel = 0.0;
-            }
-        } else {
-            Logger.logError("Drive is not in path following state");
-        }
-    }
-
     /**
      * Write setpoints to Talons and Victors left_demand and right_demand are always in Talon Native Units or Talon Native Units Per 100ms left_feedforward and
      * right_feedforward are in Percent Output [-1,1] and are added to the Talon SRX Closed Loop Output
@@ -157,32 +157,32 @@ public class Drive extends Subsystem {
     }
 
     /**
-     * Update Shuffleboard and Log to CSV
+     * Update path setpoints and parameters
      */
-    public synchronized void outputTelemetry(double timestamp) {
-        mLeftDrive.updateShuffleboard();
-        mRightDrive.updateShuffleboard();
-        mState.setString(mDriveControlState.toString());
-        mStatus.setBoolean(driveStatus());
-        mFusedHeading.setDouble(CargoArm.getInstance().getmPigeon().getFusedHeading());
-        mXErr.setDouble(mPeriodicIO.error.getTranslation().x());
-        mYErr.setDouble(mPeriodicIO.error.getTranslation().y());
-        mThetaErr.setDouble(mPeriodicIO.error.getRotation().getDegrees());
-        if (getHeading() != null) {
-            mGyroHeading.setDouble(getHeading().getDegrees());
+    private synchronized void updatePathFollower() {
+        if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
+            final double now = Timer.getFPGATimestamp();
+
+            DriveMotionPlanner.Output output = mMotionPlanner.update(now, RobotState.getInstance().getFieldToVehicle(now));
+
+            // DriveSignal signal = new DriveSignal(demand.left_feedforward_voltage / 12.0, demand.right_feedforward_voltage / 12.0);
+
+            mPeriodicIO.error = mMotionPlanner.error();
+            mPeriodicIO.path_setpoint = mMotionPlanner.setpoint();
+
+            if (!mOverrideTrajectory) {
+                setVelocity(new DriveSignal(MkMath.radiansPerSecondToTicksPer100ms(output.left_velocity), MkMath.radiansPerSecondToTicksPer100ms(output.right_velocity)),
+                    new DriveSignal(output.left_feedforward_voltage / 12.0, output.right_feedforward_voltage / 12.0));
+
+                mPeriodicIO.left_accel = MkMath.radiansPerSecondToTicksPer100ms(output.left_accel) / 1000.0;
+                mPeriodicIO.right_accel = MkMath.radiansPerSecondToTicksPer100ms(output.right_accel) / 1000.0;
+            } else {
+                setVelocity(DriveSignal.BRAKE, DriveSignal.BRAKE);
+                mPeriodicIO.left_accel = mPeriodicIO.right_accel = 0.0;
+            }
+        } else {
+            Logger.logError("Drive is not in path following state");
         }
-        if (mCSVWriter != null) {
-            mCSVWriter.add(mPeriodicIO);
-            mCSVWriter.write();
-        }
-        SmartDashboard.putNumber("Avg Dist", (mPeriodicIO.leftPos + mPeriodicIO.rightPos) / 2);
-        SmartDashboard.putNumber("Aux Error", mRightDrive.masterTalon.getClosedLoopError(1));
-        SmartDashboard.putNumber("Aux Target", mRightDrive.masterTalon.getClosedLoopTarget(1));
-        SmartDashboard.putNumber("Aux Pos", mRightDrive.masterTalon.getSelectedSensorPosition(1));
-        SmartDashboard.putNumber("Aux Vel", mRightDrive.masterTalon.getSelectedSensorVelocity(1));
-        SmartDashboard.putNumber("Main Target", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopTarget(0)));
-        SmartDashboard.putNumber("Main Error", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopError(0)));
-        SmartDashboard.putNumber("Main Pos", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getSelectedSensorPosition(0)));
     }
 
     /**
@@ -217,6 +217,28 @@ public class Drive extends Subsystem {
     }
 
     /**
+     * Controls Drivetrain in Closed-loop velocity Mode Method sets Talons in Native Units per 100ms
+     *
+     * @param signal An object that contains left and right velocities (inches per sec)
+     */
+    private synchronized void setVelocity(DriveSignal signal, DriveSignal feedforward) {
+        if (mDriveControlState != DriveControlState.PATH_FOLLOWING) {
+            Logger.logMarker("Switching to Velocity");
+            mPeriodicIO.left_demand = 0.0;
+            mPeriodicIO.right_demand = 0.0;
+            mPeriodicIO.left_feedforward = 0.0;
+            mPeriodicIO.right_feedforward = 0.0;
+            configNormalDrive();
+            mDriveControlState = DriveControlState.PATH_FOLLOWING;
+        }
+        mPeriodicIO.left_demand = signal.getLeft();
+        mPeriodicIO.right_demand = signal.getRight();
+        mPeriodicIO.left_feedforward = feedforward.getLeft();
+        mPeriodicIO.right_feedforward = feedforward.getRight();
+        mPeriodicIO.brake_mode = signal.getBrakeMode();
+    }
+
+    /**
      * @param signal Left/Right Position in inches
      * @param feedforward Left/Right arbitrary feedforward (Percent Output, [-1,1])
      */
@@ -245,46 +267,6 @@ public class Drive extends Subsystem {
     }
 
     /**
-     * Calculate position deltas and read gyro angle to update odometry information.
-     *
-     * @param timestamp Current FPGA Time since code start
-     */
-    private synchronized void stateEstimator(double timestamp) {
-        final double left_distance = mPeriodicIO.leftPos;
-        final double right_distance = mPeriodicIO.rightPos;
-        final double delta_left = left_distance - left_encoder_prev_distance_;
-        final double delta_right = right_distance - right_encoder_prev_distance_;
-        final Rotation2d gyro_angle = getHeading();
-        final Twist2d odometry_velocity = RobotState.getInstance().generateOdometryFromSensors(delta_left, delta_right, gyro_angle);
-        final Twist2d predicted_velocity = Kinematics.forwardKinematics(mPeriodicIO.leftVel, mPeriodicIO.leftVel);
-        RobotState.getInstance().addObservations(timestamp, odometry_velocity, predicted_velocity);
-        left_encoder_prev_distance_ = left_distance;
-        right_encoder_prev_distance_ = right_distance;
-    }
-
-    /**
-     * Controls Drivetrain in Closed-loop velocity Mode Method sets Talons in Native Units per 100ms
-     *
-     * @param signal An object that contains left and right velocities (inches per sec)
-     */
-    private synchronized void setVelocity(DriveSignal signal, DriveSignal feedforward) {
-        if (mDriveControlState != DriveControlState.PATH_FOLLOWING) {
-            Logger.logMarker("Switching to Velocity");
-            mPeriodicIO.left_demand = 0.0;
-            mPeriodicIO.right_demand = 0.0;
-            mPeriodicIO.left_feedforward = 0.0;
-            mPeriodicIO.right_feedforward = 0.0;
-            configNormalDrive();
-            mDriveControlState = DriveControlState.PATH_FOLLOWING;
-        }
-        mPeriodicIO.left_demand = signal.getLeft();
-        mPeriodicIO.right_demand = signal.getRight();
-        mPeriodicIO.left_feedforward = feedforward.getLeft();
-        mPeriodicIO.right_feedforward = feedforward.getRight();
-        mPeriodicIO.brake_mode = signal.getBrakeMode();
-    }
-
-    /**
      * Use Limelight to find Distance and Angle. Drive and turn to target using primary and aux PID on Talons
      *
      * @param dist Distance in Inches to Drive (Motion Magic)
@@ -307,14 +289,6 @@ public class Drive extends Subsystem {
         mPeriodicIO.right_feedforward = ((CargoArm.getInstance().getmPigeon().getFusedHeading() + angle) / 360.0) * 8192.0;
         mPeriodicIO.brake_mode = NeutralMode.Brake;
         System.out.println("!!!!!!!!!!!!!!!!!" + mPeriodicIO.right_feedforward);
-    }
-
-    /**
-     * @param angle Desired relative angle in degrees to turn to.
-     */
-    public synchronized void setTurnInPlaceHeading(double angle) {
-        mDesiredTurnAngle = angle;
-        updateTurnToHeading();
     }
 
     /**
@@ -374,7 +348,18 @@ public class Drive extends Subsystem {
         }
     }
 
-    public boolean getRightPos(double dist) {
+    /**
+     * @param angle Desired relative angle in degrees to turn to.
+     */
+    public synchronized void setTurnInPlaceHeading(double angle) {
+        mDesiredTurnAngle = angle;
+        updateTurnToHeading();
+    }
+
+    /**
+     * @return The distance from the target when servoing with the Pigeon
+     */
+    public boolean getVisionServoError(double dist) {
         return Math.abs(mPeriodicIO.rightPos - dist) < 30;
     }
 
@@ -473,7 +458,6 @@ public class Drive extends Subsystem {
         mPeriodicIO.gyro_heading = heading;
     }
 
-
     /**
      * Zero all pigeon values
      */
@@ -481,14 +465,12 @@ public class Drive extends Subsystem {
         CT.RE(CargoArm.getInstance().getmPigeon().setFusedHeading(0, GENERAL.kLongCANTimeoutMs));
         CT.RE(CargoArm.getInstance().getmPigeon().setYaw(0, GENERAL.kLongCANTimeoutMs));
         CT.RE(CargoArm.getInstance().getmPigeon().setAccumZAngle(0, GENERAL.kLongCANTimeoutMs));
-        // CT.RE(mRightDrive.masterTalon.setSelectedSensorPosition(0, CONFIG.kPIDAuxilliaryTurn, GENERAL.kLongCANTimeoutMs));
-        //mPigeon.set
     }
 
     /**
      * Left is Positive
      * Right is Negative
-     * (180 - -180)
+     * (180 to -180)
      *
      * @return current fused heading from navX
      */
@@ -496,12 +478,14 @@ public class Drive extends Subsystem {
         return mPeriodicIO.gyro_heading.getDegrees();
     }
 
+    /**
+     * @return Pitch from the Pigeon IMU [-90 to 90deg]
+     */
     public double getPitch() {
         double[] arr = new double[3];
         CargoArm.getInstance().getmPigeon().getYawPitchRoll(arr);
         return arr[2];
     }
-
 
     public double getYaw() {
         return navX.getYaw();
@@ -514,6 +498,24 @@ public class Drive extends Subsystem {
     public boolean isVisionFinished() {
         return ((Math.abs(MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getSelectedSensorPosition(0) - mRightDrive.masterTalon.getClosedLoopTarget(0)))) < 2.5) && (
             (Math.abs(((mRightDrive.masterTalon.getSelectedSensorPosition(1) - mRightDrive.masterTalon.getClosedLoopTarget(1)) / 8192.0) * 360.0)) < 2.0);
+    }
+
+    /**
+     * Calculate position deltas and read gyro angle to update odometry information.
+     *
+     * @param timestamp Current FPGA Time since code start
+     */
+    private synchronized void stateEstimator(double timestamp) {
+        final double left_distance = mPeriodicIO.leftPos;
+        final double right_distance = mPeriodicIO.rightPos;
+        final double delta_left = left_distance - left_encoder_prev_distance_;
+        final double delta_right = right_distance - right_encoder_prev_distance_;
+        final Rotation2d gyro_angle = getHeading();
+        final Twist2d odometry_velocity = RobotState.getInstance().generateOdometryFromSensors(delta_left, delta_right, gyro_angle);
+        final Twist2d predicted_velocity = Kinematics.forwardKinematics(mPeriodicIO.leftVel, mPeriodicIO.leftVel);
+        RobotState.getInstance().addObservations(timestamp, odometry_velocity, predicted_velocity);
+        left_encoder_prev_distance_ = left_distance;
+        right_encoder_prev_distance_ = right_distance;
     }
 
     public enum DriveControlState {

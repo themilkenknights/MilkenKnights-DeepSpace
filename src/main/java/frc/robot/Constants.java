@@ -32,7 +32,7 @@ import java.util.Map;
  */
 public final class Constants {
 
-    public static final boolean kIsPracticeBot = true;
+    public static final boolean kIsPracticeBot = false;
 
 
     public static class GENERAL {

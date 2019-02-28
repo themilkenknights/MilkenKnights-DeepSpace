@@ -22,7 +22,7 @@ public class MotionMagicHeadingVision implements Action {
     }
 
     @Override public void update() {
-        if (Drive.getInstance().getRightPos(dist)) {
+        if (Drive.getInstance().getVisionServoError(dist)) {
             HatchArm.getInstance().setHatchMechanismState(HatchMechanismState.SPEAR_PLACE_ONLY);
         }
        /* LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
