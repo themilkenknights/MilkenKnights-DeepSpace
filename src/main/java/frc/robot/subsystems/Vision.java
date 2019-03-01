@@ -23,7 +23,7 @@ import java.util.Map;
 
 public class Vision extends Subsystem {
 
-    private static MkPixy mPixy;
+   // private static MkPixy mPixy;
     private LimeLight mLimeLight;
     private boolean usePixy = false;
     private NetworkTableEntry mLLX, mDist, mArea;
@@ -54,7 +54,7 @@ public class Vision extends Subsystem {
         mArea = mVisionTab.add("Area", 0.0).getEntry();
         mLimeLight = new LimeLight();
         configDriverVision();
-        mPixy = new MkPixy();
+       // mPixy = new MkPixy();
     }
 
     public static Vision getInstance() {
@@ -62,12 +62,12 @@ public class Vision extends Subsystem {
     }
 
     @Override public void outputTelemetry(double timestamp) {
-        if (usePixy) {
+       /* if (usePixy) {
             SmartDashboard.putNumber("Pixy Yaw", mPixy.getLatestTarget().getYaw());
             SmartDashboard.putNumber("Pixy Area", mPixy.getLatestTarget().getArea());
             SmartDashboard.putBoolean("Pixy Limit Switch", mPixy.getLatestTarget().isCargoIntaked());
             SmartDashboard.putBoolean("Pixy State", mPixy.getLatestTarget().isTargetAcquired());
-        }
+        } */
         mLLX.setDouble(mLimeLight.returnAverageTarget().getYaw());
         mDist.setDouble(mLimeLight.returnAverageTarget().getDistance());
         mArea.setDouble(mLimeLight.returnAverageTarget().getArea());
@@ -114,11 +114,12 @@ public class Vision extends Subsystem {
     }
 
     public void updatePixy() {
-        mPixy.pixyUpdate();
+      //  mPixy.pixyUpdate();
     }
 
     public MkPixyTarget getPixyTarget() {
-        return mPixy.getLatestTarget();
+        //return mPixy.getLatestTarget();
+        return new MkPixyTarget(0,0,false, 0.0);
     }
 
     @Override public void onStop(double timestamp) {

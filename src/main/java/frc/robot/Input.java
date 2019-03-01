@@ -77,8 +77,9 @@ public class Input {
             || currentRobotState == RobotState.PATH_FOLLOWING;
 
 
-        if (isVisionState && mStopAuto.isPressed()) {
+        if (mStopAuto.isPressed()) {
             mStructure.setRobotState(RobotState.TELEOP_DRIVE);
+            Drive.getInstance().setOpenLoop(DriveSignal.BRAKE);
         }
 
         if (mZeroArms.isPressed()) {
