@@ -3,6 +3,7 @@ package frc.robot.subsystems;
 import edu.wpi.cscore.HttpCamera;
 import edu.wpi.cscore.MjpegServer;
 import edu.wpi.cscore.UsbCamera;
+import edu.wpi.cscore.VideoMode.PixelFormat;
 import edu.wpi.cscore.VideoSource.ConnectionStrategy;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableEntry;
@@ -27,26 +28,32 @@ public class Vision extends Subsystem {
     private boolean usePixy = false;
     private NetworkTableEntry mLLX, mDist, mArea;
     private MjpegServer server;
-    private HttpCamera LLFeed;
+    //private HttpCamera LLFeed;
+    private UsbCamera hatchCam;
     private UsbCamera cargoCam;
     private int cameraStream = 0;
 
     private Vision() {
         ShuffleboardTab dashboardTab = Shuffleboard.getTab("Dash");
-        LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
-        cargoCam = CameraServer.getInstance().startAutomaticCapture(0);
+        //LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
+        cargoCam = CameraServer.getInstance().startAutomaticCapture(1);
+       // cargoCam.setVideoMode(PixelFormat.kMJPEG, 320, 240, 20);
         cargoCam.setConnectVerbose(0);
+        hatchCam = CameraServer.getInstance().startAutomaticCapture(0);
+      //  hatchCam.setVideoMode(PixelFormat.kMJPEG, 320, 240, 20);
+        hatchCam.setConnectVerbose(0);
         server = CameraServer.getInstance().addSwitchedCamera("Toggle Cam");
-        server.setSource(LLFeed);
+        server.setSource(cargoCam);
+        server.setSource(hatchCam);
         dashboardTab.add(server.getSource()).withWidget(BuiltInWidgets.kCameraStream).withPosition(1, 1).withSize(9, 4)
             .withProperties(Map.of("Show Crosshair", true, "Show Controls", false));// specify widget properties here
-        Shuffleboard.selectTab("Drive");
+        Shuffleboard.selectTab("Dash");
         ShuffleboardTab mVisionTab = Shuffleboard.getTab("Vision");
         mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
         mDist = mVisionTab.add("Limelight Dist", 0.0).getEntry();
         mArea = mVisionTab.add("Area", 0.0).getEntry();
         mLimeLight = new LimeLight();
-        configLimelightVision();
+        configDriverVision();
         mPixy = new MkPixy();
     }
 
@@ -66,10 +73,14 @@ public class Vision extends Subsystem {
         mArea.setDouble(mLimeLight.returnAverageTarget().getArea());
     }
 
-    private void configLimelightVision() {
+    public void configLimelightVision() {
         mLimeLight.setLEDMode(LedMode.kforceOn);
         mLimeLight.setCamMode(CamMode.kvision);
         mLimeLight.setStream(StreamType.kStandard);
+    }
+
+    public void configDriverVision(){
+       mLimeLight.setLEDMode(LedMode.kforceOff);
     }
 
     public void teleopInit(double timestamp) {
@@ -82,18 +93,18 @@ public class Vision extends Subsystem {
 
     public void configHatchStream() {
         if (cameraStream != 0) {
-            LLFeed.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
-            server.setSource(LLFeed);
+            hatchCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
+            server.setSource(hatchCam);
             cargoCam.setConnectionStrategy(ConnectionStrategy.kForceClose);
             cameraStream = 0;
         }
     }
 
     public void configCargoStream() {
-        if (cameraStream != 1) {
-            cargoCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
+      if (cameraStream != 1) {
+           cargoCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
             server.setSource(cargoCam);
-            LLFeed.setConnectionStrategy(ConnectionStrategy.kForceClose);
+            hatchCam.setConnectionStrategy(ConnectionStrategy.kForceClose);
             cameraStream = 1;
         }
     }

@@ -198,6 +198,12 @@ public class MkTalon {
                 CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 500, kShort));
                 CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 500, kShort));
                 CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 500, kShort));
+                slaveTalon.follow(masterTalon);
+            }
+            Faults victorFaults = new Faults();
+            CTRE(slaveTalon.getFaults(victorFaults));
+            if(victorFaults.hasAnyFault()){
+                Logger.logErrorWithTrace(victorFaults.toString());
             }
         } else {
             CTRE(slaveVictor.clearStickyFaults(kShort));
@@ -211,6 +217,11 @@ public class MkTalon {
             slaveVictor.setNeutralMode(NeutralMode.Brake);
             slaveVictor.setControlFramePeriod(ControlFrame.Control_3_General, 5);
             slaveVictor.follow(masterTalon);
+            Faults victorFaults = new Faults();
+            CTRE(slaveVictor.getFaults(victorFaults));
+            if(victorFaults.hasAnyFault()){
+                Logger.logErrorWithTrace(victorFaults.toString());
+            }
         }
 
         if (mSide == TalonLoc.Cargo_Arm) {
@@ -223,12 +234,6 @@ public class MkTalon {
             Logger.logErrorWithTrace(talonFaults.toString());
         }
 
-
-        Faults victorFaults = new Faults();
-        CTRE(slaveTalon.getFaults(victorFaults));
-        if(victorFaults.hasAnyFault()){
-            Logger.logErrorWithTrace(victorFaults.toString());
-        }
 
         motorSafetyTimer.start(motorTimer);
     }

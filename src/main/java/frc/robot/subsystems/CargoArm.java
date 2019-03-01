@@ -202,7 +202,7 @@ public class CargoArm extends Subsystem {
 
     public enum CargoArmState {
         ENABLE(0.0), // State directly after robot is enabled (not mapped to a specific angle)
-        INTAKE(177.0), FORWARD_ROCKET_LEVEL_ONE(125.0), FORWARD_ROCKET_LEVEL_TWO(115.0), REVERSE_CARGOSHIP(11.0);
+        INTAKE(187.0), FORWARD_ROCKET_LEVEL_ONE(135.0), FORWARD_ROCKET_LEVEL_TWO(115.0), REVERSE_CARGOSHIP(21.0);
 
         public final double state;
 

@@ -118,6 +118,7 @@ public class Superstructure extends Subsystem {
         switch (state) {
             case TELEOP_DRIVE:
                 AutoChooser.disableAuto();
+                Vision.getInstance().configDriverVision();
                 break;
             case HATCH_VISION_INTAKE:
                 startVisionHatchIntake();
@@ -141,6 +142,7 @@ public class Superstructure extends Subsystem {
     }
 
     private void startVisionHatchOuttake() {
+        Vision.getInstance().configLimelightVision();
         /*if(!Vision.getInstance().getLimelightTarget().isValidTarget()){
             setRobotState(RobotState.TELEOP_DRIVE);
             Logger.logMarker("Limelight target not valid");
@@ -149,6 +151,7 @@ public class Superstructure extends Subsystem {
     }
 
     private void startVisionHatchIntake() {
+        Vision.getInstance().configLimelightVision();
         if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
             setRobotState(RobotState.TELEOP_DRIVE);
             Logger.logMarker("Limelight target not valid");
@@ -157,6 +160,7 @@ public class Superstructure extends Subsystem {
     }
 
     private void startVisionCargoOuttake() {
+        Vision.getInstance().configLimelightVision();
         mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
         mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
         AutoChooser.startAuto(new SimpleCargoOuttake());
@@ -164,6 +168,7 @@ public class Superstructure extends Subsystem {
 
 
     private void startVisionCargoIntake() {
+        Vision.getInstance().configLimelightVision();
         AutoChooser.startAuto(new CargoVisionIntake());
     }
 

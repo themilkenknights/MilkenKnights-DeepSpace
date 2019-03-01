@@ -29,6 +29,7 @@ import frc.robot.lib.trajectory.TrajectoryIterator;
 import frc.robot.lib.trajectory.timing.TimedState;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
+import frc.robot.lib.util.MkTime;
 import frc.robot.lib.util.ReflectingCSVWriter;
 import frc.robot.paths.DriveMotionPlanner;
 import frc.robot.paths.Kinematics;
@@ -37,7 +38,7 @@ import frc.robot.paths.RobotState;
 public class Drive extends Subsystem {
 
     private final MkTalon mLeftDrive, mRightDrive;
-    private final MkGyro navX;
+    //private final MkGyro navX;
     public PeriodicIO mPeriodicIO;
     public DriveControlState mDriveControlState;
     private DriveMotionPlanner mMotionPlanner;
@@ -60,7 +61,7 @@ public class Drive extends Subsystem {
         mPeriodicIO = new PeriodicIO();
         mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left, mDriveTab);
         mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right, mDriveTab);
-        navX = new MkGyro(Port.kMXP);
+        //navX = new MkGyro(Port.kMXP);
         mMotionPlanner = new DriveMotionPlanner();
     }
 
@@ -88,14 +89,19 @@ public class Drive extends Subsystem {
             mCSVWriter.write();
         }
         SmartDashboard.putNumber("Avg Dist", (mPeriodicIO.leftPos + mPeriodicIO.rightPos) / 2);
-        SmartDashboard.putNumber("Aux Error", mRightDrive.masterTalon.getClosedLoopError(1));
-        SmartDashboard.putNumber("Aux Target", mRightDrive.masterTalon.getClosedLoopTarget(1));
+        //SmartDashboard.putNumber("Aux Error", mRightDrive.masterTalon.getClosedLoopError(1));
+        //SmartDashboard.putNumber("Aux Target", mRightDrive.masterTalon.getClosedLoopTarget(1));
         SmartDashboard.putNumber("Aux Pos", mRightDrive.masterTalon.getSelectedSensorPosition(1));
         SmartDashboard.putNumber("Aux Vel", mRightDrive.masterTalon.getSelectedSensorVelocity(1));
-        SmartDashboard.putNumber("Main Target", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopTarget(0)));
+       // SmartDashboard.putNumber("Main Target", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopTarget(0)));
         SmartDashboard.putNumber("Main Error", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopError(0)));
         SmartDashboard.putNumber("Main Pos", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getSelectedSensorPosition(0)));
     }
+
+    /*public void hatchStop(){
+        time.start(0.5);
+        setOpenLoop(DriveSignal.BRAKE);
+    } */
 
     /**
      * Step 1: Read inputs from Talon and NavX
@@ -383,7 +389,7 @@ public class Drive extends Subsystem {
         right_encoder_prev_distance_ = 0;
         mLeftDrive.masterTalon.setSelectedSensorPosition(0);
         mRightDrive.masterTalon.setSelectedSensorPosition(0);
-        navX.zeroYaw();
+        //navX.zeroYaw();
         zeroPigeon();
         RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
         setHeading(Rotation2d.identity());
@@ -397,7 +403,7 @@ public class Drive extends Subsystem {
         right_encoder_prev_distance_ = 0;
         mLeftDrive.masterTalon.setSelectedSensorPosition(0);
         mRightDrive.masterTalon.setSelectedSensorPosition(0);
-        navX.zeroYaw();
+        //navX.zeroYaw();
         zeroPigeon();
         RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
         setHeading(Rotation2d.identity());
@@ -412,12 +418,12 @@ public class Drive extends Subsystem {
         if (driveCheck) {
             Logger.logMarker("Drive Test Success");
         }
-        if (!navX.isConnected()) {
+        /*if (!navX.isConnected()) {
             Logger.logErrorWithTrace("FAILED - NAVX DISCONNECTED");
             driveCheck = false;
         } else {
             Logger.logMarker("NavX Connected");
-        }
+        } */
         mLeftDrive.resetConfig();
         mRightDrive.resetConfig();
         return driveCheck;
@@ -437,7 +443,7 @@ public class Drive extends Subsystem {
      * @return If both SRX Mag Encoders and the NavX is connected
      */
     private synchronized boolean driveStatus() {
-        return mLeftDrive.isEncoderConnected() && mRightDrive.isEncoderConnected() && navX.isConnected();
+        return mLeftDrive.isEncoderConnected() && mRightDrive.isEncoderConnected();
     }
 
     public synchronized boolean isTurnDone() {
@@ -488,7 +494,8 @@ public class Drive extends Subsystem {
     }
 
     public double getYaw() {
-        return navX.getYaw();
+        //return navX.getYaw();
+        return 0.0;
     }
 
     public boolean isMotionMagicFinished() {

@@ -16,8 +16,10 @@ import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.structure.Subsystem;
+import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTime;
+import frc.robot.subsystems.Superstructure.RobotState;
 
 public class HatchArm extends Subsystem {
 
@@ -143,6 +145,9 @@ public class HatchArm extends Subsystem {
             case STATION_INTAKE:
                 if (isHatchLimitTriggered()) {
                     setHatchMechanismState(HatchMechanismState.STOWED);
+                    if(Superstructure.getInstance().getRobotState() == RobotState.TELEOP_DRIVE){
+                        Drive.getInstance().setOpenLoop(new DriveSignal(-0.4, -0.4));
+                    }
                 }
                 break;
             case TRANSFER:
@@ -292,7 +297,7 @@ public class HatchArm extends Subsystem {
 
     public enum mKetteringSetpoint {
         ENABLE(0), // State directly after robot is enabled (not mapped to a specific angle)
-        INTAKE_POINT(180), TRANSFER_POINT(60.0), STOW_POINT(7.0);
+        INTAKE_POINT(178.75), TRANSFER_POINT(60.0), STOW_POINT(7.0);
 
         public final double state;
 

@@ -195,7 +195,7 @@ public final class Constants {
         public static final double kMaxSafeCurrent = 80;
 
         public static final double kIntakeRollerInSpeed = -0.40;
-        public static final double kCargoShipIntakeRollerOut = 0.3;
+        public static final double kCargoShipIntakeRollerOut = 0.5;
         public static final double kRocketLevelOneOutSpeed = 0.3;
         public static final double kRocketLevelTwoOutSpeed = 0.3;
         public static final double kDefaultIntakeRollerOutSpeed = 0.3;
@@ -204,10 +204,10 @@ public final class Constants {
         public static final double kFeedConstant = 0.20;
 
 
-        public static final int kBookEnd_0 = kIsPracticeBot ? 4192 : -2078;
-        public static final int kBookEnd_1 = kIsPracticeBot ? 1993 : 3790;
-        public static final boolean kCrossOverZero = !kIsPracticeBot;
-        public static final int kOffset = kIsPracticeBot ? -4192 : 0;
+        public static final int kBookEnd_0 = kIsPracticeBot ? 4192 : 3086;
+        public static final int kBookEnd_1 = kIsPracticeBot ? 1993 : 919;
+        public static final boolean kCrossOverZero = false;
+        public static final int kOffset = kIsPracticeBot ? -4192 : -3086;
     }
 
 
@@ -225,10 +225,10 @@ public final class Constants {
 
         public static final double kMaxSafeCurrent = 150;
 
-        public static final int kBookEnd_0 = kIsPracticeBot ? 1997 : 827;
-        public static final int kBookEnd_1 = kIsPracticeBot ? -90 : 3790; //97
+        public static final int kBookEnd_0 = kIsPracticeBot ? 1997 : 853;
+        public static final int kBookEnd_1 = kIsPracticeBot ? -90 : -1131;
         public static final boolean kCrossOverZero = kIsPracticeBot ? true : true;
-        public static final int kOffset = kIsPracticeBot ? -1997 : 0;
+        public static final int kOffset = kIsPracticeBot ? -1997 : -853;
     }
 
 
@@ -236,8 +236,8 @@ public final class Constants {
 
 
         public static final int kHatchArmChannel = 0;
-        public static final int kFrontClimbSolenoidChannel = 1;
-        public static final int kRearClimbSolenoidChannel = 2;
+        public static final int kFrontClimbSolenoidChannel = 2;
+        public static final int kRearClimbSolenoidChannel = 1;
     }
 
 
@@ -314,7 +314,7 @@ public final class Constants {
                     tal.slot0.allowableClosedloopError = 100;
                     //Motion Magic Turning
                     tal.slot1.kP = 4.4;
-                    tal.slot1.kI = 0.2;
+                    tal.slot1.kI = 0.15;
                     tal.slot1.kD = tal.slot1.kP * 34;
                     tal.slot1.kF = 1023.0 / DRIVE.kMaxNativeVel;
                     tal.slot1.integralZone = 100;
@@ -357,8 +357,8 @@ public final class Constants {
                     tal.sum1Term = FeedbackDevice.CTRE_MagEncoder_Relative;
                 } else if (loc == TalonLoc.Cargo_Arm) {
                     tal.reverseLimitSwitchDeviceID = CAN.kRightCargoIntakeTalonID;
-                    tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(188);
-                    tal.reverseSoftLimitThreshold = 0;
+                    tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(195);
+                    tal.reverseSoftLimitThreshold = (int) 9.0;
                     tal.motionCruiseVelocity = (int) (CARGO_ARM.kMaxRawVel);
                     tal.motionAcceleration = (int) (CARGO_ARM.kMaxRawVel * 10);
                     tal.slot0.kP = (39.0 * ((0.1 * 1023.0) / (1600))); //7.5 deg or 1390 units
@@ -370,7 +370,7 @@ public final class Constants {
                     tal.motionCurveStrength = 3;
                 } else if (loc == TalonLoc.Hatch_Arm) {
                     tal.reverseLimitSwitchDeviceID = CAN.kKetteringReverseLimitSwitchTalonID;
-                    tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(188);
+                    tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(179);
                     tal.reverseSoftLimitThreshold = 0;
                     tal.motionCruiseVelocity = (int) (HATCH_ARM.kMotionMagicCruiseVel);
                     tal.motionAcceleration = (int) (HATCH_ARM.kMotionMagicAccel);
