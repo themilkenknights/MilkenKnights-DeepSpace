@@ -34,7 +34,9 @@ public class Input {
     private static final MkJoystickButton mCargoVisionOuttake = driverJoystick.getButton(2, "Vision Cargo Outtake");
 
     private static final MkJoystickButton mHatchVisionIntake = driverJoystick.getButton(3, "Vision Hatch Intake");
+
     private static final MkJoystickButton mFrontClimb = driverJoystick.getButton(5, "Climb Front");
+
     private static final MkJoystickButton mRearClimb = driverJoystick.getButton(6, "Climb Rear");
 
 
@@ -50,7 +52,7 @@ public class Input {
 
     private static final MkJoystickButton mIntakeRollerOut = operatorJoystick.getButton(6, "Intake Roller Out Fast");
 
-    private static final MkJoystickButton disableSoftLimit = operatorJoystick.getButton(8, "Disable Soft Limit");
+    private static final MkJoystickButton disableSoftLimit = operatorJoystick.getButton(8, "Disable Soft Limit && Toggle Vision");
 
     private static final MkJoystickButton mZeroArms = operatorJoystick.getButton(7, "Zero Arm Encoders");
 
@@ -88,8 +90,8 @@ public class Input {
         }
 
         if (disableSoftLimit.isPressed()) {
-            //mCargo.toggleSoftLimit();
-            //mHatch.toggleSoftLimit();
+            mCargo.toggleSoftLimit();
+            mHatch.toggleSoftLimit();
             mVision.toggleVision();
         }
 
@@ -97,7 +99,7 @@ public class Input {
             mCargo.setOpenLoop(MkMath.handleDeadband(-operatorJoystick.getRawAxis(1), INPUT.kOperatorDeadband));
             mVision.configCargoStream();
         } else if (operatorJoystick.getTrigger()) {
-            double movement = -operatorJoystick.getRawAxis(1) / 1.5;
+            double movement = -operatorJoystick.getRawAxis(1) / 1.3;
             mHatch.setOpenLoop(MkMath.handleDeadband(Math.pow(movement, 3), INPUT.kOperatorDeadband));
             mVision.configHatchStream();
         }
