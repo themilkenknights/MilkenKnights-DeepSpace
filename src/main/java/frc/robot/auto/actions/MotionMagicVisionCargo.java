@@ -7,17 +7,15 @@ import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
 import frc.robot.subsystems.HatchArm.HatchMechanismState;
 import frc.robot.subsystems.HatchArm.HatchSpearState;
-import frc.robot.subsystems.Superstructure;
-import frc.robot.subsystems.Superstructure.RobotState;
 import frc.robot.subsystems.Vision;
 
-public class MotionMagicHeadingVision implements Action {
+public class MotionMagicVisionCargo implements Action {
 
     private MkTime timer = new MkTime();
     private double initAngle, dist = 0.0;
     private MkTime downTimer = new MkTime();
 
-    public MotionMagicHeadingVision() {
+    public MotionMagicVisionCargo() {
 
     }
 
@@ -27,10 +25,10 @@ public class MotionMagicHeadingVision implements Action {
     }
 
     @Override public void update() {
-        if (Drive.getInstance().getVisionServoError(dist) && (HatchArm.getInstance().getHatchSpearState() != HatchSpearState.PLACE)) {
+    /*    if (Drive.getInstance().getVisionServoError(dist) && (HatchArm.getInstance().getHatchSpearState() != HatchSpearState.PLACE)) {
             HatchArm.getInstance().setHatchMechanismState(HatchMechanismState.SPEAR_PLACE_ONLY);
             downTimer.start(0.5);
-        }
+        } */
        /* LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
         if (mTarget.isValidTarget()) {
             Drive.getInstance().setDistanceAndAngle(mTarget.getDistance(), initAngle);
@@ -38,7 +36,7 @@ public class MotionMagicHeadingVision implements Action {
     }
 
     @Override public void done() {
-        Superstructure.getInstance().setRobotState(RobotState.TELEOP_DRIVE);
+        Drive.getInstance().setOpenLoop(DriveSignal.BRAKE);
     }
 
     @Override public void start() {

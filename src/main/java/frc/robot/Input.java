@@ -88,8 +88,9 @@ public class Input {
         }
 
         if (disableSoftLimit.isPressed()) {
-            mCargo.toggleSoftLimit();
-            mHatch.toggleSoftLimit();
+            //mCargo.toggleSoftLimit();
+            //mHatch.toggleSoftLimit();
+            mVision.toggleVision();
         }
 
         if (mCargoArmManual.isHeld()) {

@@ -197,7 +197,7 @@ public final class Constants {
         public static final double kIntakeRollerInSpeed = -0.40;
         public static final double kCargoShipIntakeRollerOut = 0.5;
         public static final double kRocketLevelOneOutSpeed = 0.3;
-        public static final double kRocketLevelTwoOutSpeed = 0.3;
+        public static final double kRocketLevelTwoOutSpeed = 0.70;
         public static final double kDefaultIntakeRollerOutSpeed = 0.3;
 
         public static final double kArmOffset = -48.4;
@@ -221,7 +221,7 @@ public final class Constants {
         public static final double kMaxRawVel = 3085.0;
 
         public static final double kMotionMagicCruiseVel = kMaxRawVel * 0.9;
-        public static final double kMotionMagicAccel = kMaxRawVel * 3;
+        public static final double kMotionMagicAccel = kMaxRawVel * 5;
 
         public static final double kMaxSafeCurrent = 150;
 
@@ -313,12 +313,12 @@ public final class Constants {
                     tal.slot0.closedLoopPeakOutput = 0.4;
                     tal.slot0.allowableClosedloopError = 100;
                     //Motion Magic Turning
-                    tal.slot1.kP = 4.4;
-                    tal.slot1.kI = 0.15;
-                    tal.slot1.kD = tal.slot1.kP * 34;
-                    tal.slot1.kF = 1023.0 / DRIVE.kMaxNativeVel;
+                    tal.slot1.kP = 2.4;
+                    tal.slot1.kI = 0.00;
+                    tal.slot1.kD = tal.slot1.kP * 23.0;
+                    tal.slot1.kF = 1023.0 / 13653.0;
                     tal.slot1.integralZone = 100;
-                    tal.slot1.maxIntegralAccumulator = 50;
+                    tal.slot1.maxIntegralAccumulator = 20;
                     tal.slot1.closedLoopPeakOutput = 0.8;
                     tal.slot1.allowableClosedloopError = 10;
                     //~3deg
@@ -358,7 +358,7 @@ public final class Constants {
                 } else if (loc == TalonLoc.Cargo_Arm) {
                     tal.reverseLimitSwitchDeviceID = CAN.kRightCargoIntakeTalonID;
                     tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(195);
-                    tal.reverseSoftLimitThreshold = (int) 9.0;
+                    tal.reverseSoftLimitThreshold = (int) 14.0;
                     tal.motionCruiseVelocity = (int) (CARGO_ARM.kMaxRawVel);
                     tal.motionAcceleration = (int) (CARGO_ARM.kMaxRawVel * 10);
                     tal.slot0.kP = (39.0 * ((0.1 * 1023.0) / (1600))); //7.5 deg or 1390 units
@@ -376,11 +376,11 @@ public final class Constants {
                     tal.motionAcceleration = (int) (HATCH_ARM.kMotionMagicAccel);
                     tal.slot0.kP = 30.0 * ((0.1 * 1023.0) / (1600)); //7.5 deg or 1390 units
                     tal.slot0.kI = (tal.slot0.kP / 500) * 0.0;
-                    tal.slot0.kD = tal.slot0.kP * 40;
+                    tal.slot0.kD = tal.slot0.kP * 38.5;
                     tal.slot0.kF = (1023.0 / Constants.HATCH_ARM.kMaxRawVel);
                     tal.slot0.maxIntegralAccumulator = 0;
                     tal.slot0.integralZone = 0;
-                    tal.motionCurveStrength = 8;
+                    tal.motionCurveStrength = 7;
                 }
             }
         }

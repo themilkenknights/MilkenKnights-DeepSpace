@@ -26,35 +26,39 @@ public class Vision extends Subsystem {
    // private static MkPixy mPixy;
     private LimeLight mLimeLight;
     private boolean usePixy = false;
-    private NetworkTableEntry mLLX, mDist, mArea;
-    private MjpegServer server;
+    private NetworkTableEntry mLLX, mDist, mArea, mLED;
+  //  private MjpegServer server;
     //private HttpCamera LLFeed;
     private UsbCamera hatchCam;
-    private UsbCamera cargoCam;
+    //private UsbCamera cargoCam;
     private int cameraStream = 0;
+    private boolean isVision = false;
 
     private Vision() {
-        ShuffleboardTab dashboardTab = Shuffleboard.getTab("Dash");
+        //ShuffleboardTab dashboardTab = Shuffleboard.getTab("Dash");
         //LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
-        cargoCam = CameraServer.getInstance().startAutomaticCapture(1);
+       // cargoCam = CameraServer.getInstance().startAutomaticCapture(1);
        // cargoCam.setVideoMode(PixelFormat.kMJPEG, 320, 240, 20);
-        cargoCam.setConnectVerbose(0);
+       // cargoCam.setConnectVerbose(0);
         hatchCam = CameraServer.getInstance().startAutomaticCapture(0);
       //  hatchCam.setVideoMode(PixelFormat.kMJPEG, 320, 240, 20);
         hatchCam.setConnectVerbose(0);
-        server = CameraServer.getInstance().addSwitchedCamera("Toggle Cam");
-        server.setSource(cargoCam);
-        server.setSource(hatchCam);
-        dashboardTab.add(server.getSource()).withWidget(BuiltInWidgets.kCameraStream).withPosition(1, 1).withSize(9, 4)
+       // server = CameraServer.getInstance().addSwitchedCamera("Toggle Cam");
+        //server.setSource(cargoCam);
+        //server.setSource(hatchCam);
+      /*  dashboardTab.add(server.getSource()).withWidget(BuiltInWidgets.kCameraStream).withPosition(1, 1).withSize(9, 4)
             .withProperties(Map.of("Show Crosshair", true, "Show Controls", false));// specify widget properties here
-        Shuffleboard.selectTab("Dash");
+
+        Shuffleboard.selectTab("Dash");*/
         ShuffleboardTab mVisionTab = Shuffleboard.getTab("Vision");
         mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
         mDist = mVisionTab.add("Limelight Dist", 0.0).getEntry();
         mArea = mVisionTab.add("Area", 0.0).getEntry();
+        mLED = mVisionTab.add("LED State", true).getEntry();
         mLimeLight = new LimeLight();
         configDriverVision();
        // mPixy = new MkPixy();
+        mLimeLight.setLEDMode(LedMode.kforceOff);
     }
 
     public static Vision getInstance() {
@@ -71,42 +75,62 @@ public class Vision extends Subsystem {
         mLLX.setDouble(mLimeLight.returnAverageTarget().getYaw());
         mDist.setDouble(mLimeLight.returnAverageTarget().getDistance());
         mArea.setDouble(mLimeLight.returnAverageTarget().getArea());
+        mLED.setBoolean(mLimeLight.getLEDMode() != LedMode.kforceOff);
+        SmartDashboard.putNumber("Pipeline", mLimeLight.getPipelineInt());
     }
 
     public void configLimelightVision() {
+        mLimeLight.setPipeline(1);
         mLimeLight.setLEDMode(LedMode.kforceOn);
-        mLimeLight.setCamMode(CamMode.kvision);
-        mLimeLight.setStream(StreamType.kStandard);
+        isVision = true;
+       //TODO Enable  mLimeLight.setCamMode(CamMode.kvision);
+       // mLimeLight.setStream(StreamType.kStandard);
     }
 
     public void configDriverVision(){
-       mLimeLight.setLEDMode(LedMode.kforceOff);
+        mLimeLight.setPipeline(1);
+        mLimeLight.setLEDMode(LedMode.kforceOff);
+     isVision = false;
+    }
+
+    public void toggleVision(){
+        if(isVision){
+            mLimeLight.setLEDMode(LedMode.kforceOff);
+            isVision = false;
+        } else{
+            mLimeLight.setLEDMode(LedMode.kforceOn);
+            isVision = true;
+        }
     }
 
     public void teleopInit(double timestamp) {
-        configLimelightVision();
+        mLimeLight.setPipeline(1);
+        mLimeLight.setLEDMode(LedMode.kforceOff);
+        isVision = false;
     }
 
     public void autonomousInit(double timestamp) {
-        configLimelightVision();
+        mLimeLight.setPipeline(1);
+        mLimeLight.setLEDMode(LedMode.kforceOff);
+        isVision = false;
     }
 
     public void configHatchStream() {
-        if (cameraStream != 0) {
+       /* if (cameraStream != 0) {
             hatchCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
             server.setSource(hatchCam);
             cargoCam.setConnectionStrategy(ConnectionStrategy.kForceClose);
             cameraStream = 0;
-        }
+        } */
     }
 
     public void configCargoStream() {
-      if (cameraStream != 1) {
+    /*  if (cameraStream != 1) {
            cargoCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
             server.setSource(cargoCam);
             hatchCam.setConnectionStrategy(ConnectionStrategy.kForceClose);
             cameraStream = 1;
-        }
+        } */
     }
 
     public void updateLimelight() {
@@ -123,6 +147,7 @@ public class Vision extends Subsystem {
     }
 
     @Override public void onStop(double timestamp) {
+        configDriverVision();
     }
 
     @Override public boolean checkSystem() {
@@ -130,7 +155,7 @@ public class Vision extends Subsystem {
     }
 
     public synchronized LimelightTarget getLimelightTarget() {
-        return mLimeLight.returnAverageTarget();
+        return mLimeLight.returnLastTarget();
     }
 
     private static class InstanceHolder {

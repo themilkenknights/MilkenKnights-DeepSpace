@@ -93,9 +93,9 @@ public class Drive extends Subsystem {
         //SmartDashboard.putNumber("Aux Target", mRightDrive.masterTalon.getClosedLoopTarget(1));
        // SmartDashboard.putNumber("Aux Pos", mRightDrive.masterTalon.getSelectedSensorPosition(1));
         //SmartDashboard.putNumber("Aux Vel", mRightDrive.masterTalon.getSelectedSensorVelocity(1));
-        SmartDashboard.putNumber("Main Target", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopTarget(0)));
-        SmartDashboard.putNumber("Main Error", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopError(0)));
-        SmartDashboard.putNumber("Main Pos", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getSelectedSensorPosition(0)));
+//        /SmartDashboard.putNumber("Main Target", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopTarget(0)));
+        //SmartDashboard.putNumber("Main Error", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopError(0)));
+        //SmartDashboard.putNumber("Main Pos", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getSelectedSensorPosition(0)));
     }
 
     /**
@@ -185,7 +185,6 @@ public class Drive extends Subsystem {
             Logger.logError("Drive is not in path following state");
         }
     }
-
     /**
      * Stop drive motors and save log to CSV File
      */
@@ -361,7 +360,7 @@ public class Drive extends Subsystem {
      * @return The distance from the target when servoing with the Pigeon
      */
     public boolean getVisionServoError(double dist) {
-        return Math.abs(mPeriodicIO.rightPos - dist) < 30;
+        return Math.abs(mPeriodicIO.rightPos - dist) < 25;
     }
 
     /**
@@ -462,7 +461,7 @@ public class Drive extends Subsystem {
     /**
      * Zero all pigeon values
      */
-    private void zeroPigeon() {
+    public void zeroPigeon() {
         CT.RE(CargoArm.getInstance().getmPigeon().setFusedHeading(0, GENERAL.kLongCANTimeoutMs));
         CT.RE(CargoArm.getInstance().getmPigeon().setYaw(0, GENERAL.kLongCANTimeoutMs));
         CT.RE(CargoArm.getInstance().getmPigeon().setAccumZAngle(0, GENERAL.kLongCANTimeoutMs));
@@ -495,6 +494,10 @@ public class Drive extends Subsystem {
 
     public boolean isMotionMagicFinished() {
         return Math.abs(mLeftDrive.getError()) < DRIVE.kGoalPosTolerance && Math.abs(mRightDrive.getError()) < DRIVE.kGoalPosTolerance;
+    }
+
+    public boolean isVisionDone(){
+        return Math.abs(mRightDrive.getError()) < 2.5;
     }
 
     public boolean isVisionFinished() {

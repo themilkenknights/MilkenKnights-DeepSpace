@@ -4,6 +4,7 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.Solenoid;
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
@@ -20,6 +21,7 @@ import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
 import frc.robot.auto.modes.SimpleCargoOuttake;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
+import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.HatchArm.HatchMechanismState;
 
 public class Superstructure extends Subsystem {
@@ -143,6 +145,7 @@ public class Superstructure extends Subsystem {
 
     private void startVisionHatchOuttake() {
         Vision.getInstance().configLimelightVision();
+       // Timer.delay(0.5);
         /*if(!Vision.getInstance().getLimelightTarget().isValidTarget()){
             setRobotState(RobotState.TELEOP_DRIVE);
             Logger.logMarker("Limelight target not valid");
@@ -161,8 +164,10 @@ public class Superstructure extends Subsystem {
 
     private void startVisionCargoOuttake() {
         Vision.getInstance().configLimelightVision();
-        mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
+        Timer.delay(1.0);
+        //mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
         mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
+        CargoArm.getInstance().setArmState(CargoArmState.REVERSE_CARGOSHIP);
         AutoChooser.startAuto(new SimpleCargoOuttake());
     }
 
