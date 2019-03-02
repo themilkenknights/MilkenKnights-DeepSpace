@@ -4,9 +4,6 @@ import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.MkTime;
 import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.Drive;
-import frc.robot.subsystems.HatchArm;
-import frc.robot.subsystems.HatchArm.HatchMechanismState;
-import frc.robot.subsystems.HatchArm.HatchSpearState;
 import frc.robot.subsystems.Vision;
 
 public class MotionMagicVisionCargo implements Action {
@@ -21,7 +18,8 @@ public class MotionMagicVisionCargo implements Action {
 
     @Override public boolean isFinished() {
         //System.out.println("Hatch: " + HatchArm.getInstance().isHatchLimitTriggered() + " Place " + (HatchArm.getInstance().getHatchSpearState() == HatchSpearState.PLACE) + " Timer " +  downTimer.isDone());
-        return timer.isDone() || Drive.getInstance().isVisionFinished()/*|| (HatchArm.getInstance().isHatchLimitTriggered() && (HatchArm.getInstance().getHatchSpearState() == HatchSpearState.PLACE) && downTimer.isDone())*/;
+        return timer.isDone() || Drive.getInstance()
+            .isVisionFinished()/*|| (HatchArm.getInstance().isHatchLimitTriggered() && (HatchArm.getInstance().getHatchSpearState() == HatchSpearState.PLACE) && downTimer.isDone())*/;
     }
 
     @Override public void update() {

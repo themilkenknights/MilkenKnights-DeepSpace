@@ -150,7 +150,7 @@ public class HatchArm extends Subsystem {
             case STATION_INTAKE:
                 if (isHatchLimitTriggered()) {
                     setHatchMechanismState(HatchMechanismState.STOWED);
-                    if(Superstructure.getInstance().getRobotState() == RobotState.TELEOP_DRIVE){
+                    if (Superstructure.getInstance().getRobotState() == RobotState.TELEOP_DRIVE) {
                         Drive.getInstance().setOpenLoop(new DriveSignal(-0.4, -0.4));
                     }
                 }
@@ -159,7 +159,7 @@ public class HatchArm extends Subsystem {
                 if (mMoveTime.isDone() && second) {
                     setHatchIntakePosition(mKetteringSetpoint.TRANSFER_POINT);
                     second = false;
-                } else if(fastTime.isDone()){
+                } else if (fastTime.isDone()) {
                     setHatchMechanismState(HatchMechanismState.STOWED);
                     fastTime.reset();
                     second = true;
@@ -305,6 +305,7 @@ public class HatchArm extends Subsystem {
         MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all circumstances
         OPEN_LOOP // Direct PercentVBus control of the arm as a failsafe
     }
+
 
     public enum mKetteringSetpoint {
         ENABLE(0), // State directly after robot is enabled (not mapped to a specific angle)

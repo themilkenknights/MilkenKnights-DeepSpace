@@ -4,10 +4,6 @@ import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.shuffleboard.EventImportance;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import frc.robot.Constants;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
@@ -27,7 +23,7 @@ public class Logger {
 
     public static void logRobotInit() {
         String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-       // boolean test = new File("/media/sda1/" + dateStamp1 + "/").mkdirs();
+        // boolean test = new File("/media/sda1/" + dateStamp1 + "/").mkdirs();
         logMarker("Robot Init on " + (Constants.kIsPracticeBot ? "Practice" : "Competition") + " Robot");
     }
 

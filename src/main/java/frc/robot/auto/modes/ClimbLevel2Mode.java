@@ -5,7 +5,6 @@ import frc.robot.auto.AutoModeEndedException;
 import frc.robot.auto.actions.ActuateFrontSolenoids;
 import frc.robot.auto.actions.ActuateRearSolenoids;
 import frc.robot.auto.actions.CargoArmSetpoint;
-import frc.robot.auto.actions.MotionMagicAngle;
 import frc.robot.auto.actions.MotionMagicBlind;
 import frc.robot.auto.actions.WaitAction;
 import frc.robot.auto.actions.WaitForAngle;

@@ -1,6 +1,5 @@
 package frc.robot.auto.actions;
 
-import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.MkTime;
 import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.Drive;
@@ -23,7 +22,8 @@ public class MotionMagicHeadingVision implements Action {
 
     @Override public boolean isFinished() {
         //System.out.println("Hatch: " + HatchArm.getInstance().isHatchLimitTriggered() + " Place " + (HatchArm.getInstance().getHatchSpearState() == HatchSpearState.PLACE) + " Timer " +  downTimer.isDone());
-        return timer.isDone() || Drive.getInstance().isVisionFinished()/*|| (HatchArm.getInstance().isHatchLimitTriggered() && (HatchArm.getInstance().getHatchSpearState() == HatchSpearState.PLACE) && downTimer.isDone())*/;
+        return timer.isDone() || Drive.getInstance()
+            .isVisionFinished()/*|| (HatchArm.getInstance().isHatchLimitTriggered() && (HatchArm.getInstance().getHatchSpearState() == HatchSpearState.PLACE) && downTimer.isDone())*/;
     }
 
     @Override public void update() {

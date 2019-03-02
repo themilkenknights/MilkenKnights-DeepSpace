@@ -145,7 +145,7 @@ public class Superstructure extends Subsystem {
 
     private void startVisionHatchOuttake() {
         Vision.getInstance().configLimelightVision();
-       // Timer.delay(0.5);
+        // Timer.delay(0.5);
         /*if(!Vision.getInstance().getLimelightTarget().isValidTarget()){
             setRobotState(RobotState.TELEOP_DRIVE);
             Logger.logMarker("Limelight target not valid");

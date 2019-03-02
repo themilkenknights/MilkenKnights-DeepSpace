@@ -39,7 +39,6 @@ public class Input {
 
     private static final MkJoystickButton mRearClimb = driverJoystick.getButton(6, "Climb Rear");
 
-
     //Trigger is Kettering Manual while held
 
     private static final MkJoystickButton mCargoArmManual = operatorJoystick.getButton(2, "Cargo Arm Manual Mode");
