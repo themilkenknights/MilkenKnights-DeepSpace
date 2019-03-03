@@ -97,13 +97,13 @@ public class MkTalon {
         masterTalon.enableVoltageCompensation(true);
         switch (mSide) {
             case Left:
-                masterTalon.setInverted(Constants.DRIVE.kLeftMasterInvert);
-                slaveVictor.setInverted(Constants.DRIVE.kLeftSlaveInvert);
+                masterTalon.setInverted(Constants.DRIVE.kLeftInvert);
+                slaveVictor.setInverted(InvertType.FollowMaster);
                 masterTalon.setSensorPhase(Constants.DRIVE.kLeftSensorInvert);
                 break;
             case Right:
-                masterTalon.setInverted(Constants.DRIVE.KRightMasterInvert);
-                slaveVictor.setInverted(Constants.DRIVE.kRightSlaveInvert);
+                masterTalon.setInverted(Constants.DRIVE.KRightInvert);
+                slaveVictor.setInverted(InvertType.FollowMaster);
                 masterTalon.setSensorPhase(Constants.DRIVE.kRightSensorInvert);
                 break;
             case Cargo_Arm:
@@ -459,13 +459,13 @@ public class MkTalon {
                 CTRE(masterTalon.configFactoryDefault(kLong));
                 CTRE(slaveVictor.configFactoryDefault(kLong));
                 if (mSide == TalonLoc.Left) {
-                    masterTalon.setInverted(DRIVE.kLeftMasterInvert);
+                    masterTalon.setInverted(DRIVE.kLeftInvert);
                     masterTalon.setSensorPhase(DRIVE.kLeftSensorInvert);
-                    slaveVictor.setInverted(DRIVE.kLeftSlaveInvert);
+                    slaveVictor.setInverted(DRIVE.kLeftSensorInvert);
                 } else {
-                    masterTalon.setInverted(DRIVE.KRightMasterInvert);
+                    masterTalon.setInverted(DRIVE.KRightInvert);
                     masterTalon.setSensorPhase(DRIVE.kRightSensorInvert);
-                    slaveVictor.setInverted(DRIVE.kRightSlaveInvert);
+                    slaveVictor.setInverted(DRIVE.kLeftSensorInvert);
                 }
                 zeroEncoder();
                 masterTalon.setNeutralMode(NeutralMode.Coast);

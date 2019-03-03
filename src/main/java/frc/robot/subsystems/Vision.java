@@ -1,5 +1,7 @@
 package frc.robot.subsystems;
 
+import edu.wpi.cscore.HttpCamera;
+import edu.wpi.cscore.MjpegServer;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableEntry;
@@ -22,26 +24,19 @@ public class Vision extends Subsystem {
     private UsbCamera hatchCam;
     private int cameraStream = 0;
     private boolean isVision = false;
-    /*
-      private static MkPixy mPixy;
-      private MjpegServer server;
-      private HttpCamera LLFeed;
-      private UsbCamera cargoCam;
-     */
+    private MjpegServer server;
+    private HttpCamera LLFeed;
 
     private Vision() {
-        /*  */
         hatchCam = CameraServer.getInstance().startAutomaticCapture(0);
         hatchCam.setConnectVerbose(0);
-        /*
-        ShuffleboardTab dashboardTab = Shuffleboard.getTab("Dash");
+
         LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
-         cargoCam = CameraServer.getInstance().startAutomaticCapture(1);
-         cargoCam.setConnectVerbose(0);
+
         server = CameraServer.getInstance().addSwitchedCamera("Toggle Cam");
-        server.setSource(cargoCam);
+        server.setSource(LLFeed);
         server.setSource(hatchCam);
-        mPixy = new MkPixy();   */
+
         ShuffleboardTab mVisionTab = Shuffleboard.getTab("Vision");
         mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
         mDist = mVisionTab.add("Limelight Dist", 0.0).getEntry();
@@ -58,12 +53,6 @@ public class Vision extends Subsystem {
     }
 
     @Override public void outputTelemetry(double timestamp) {
-       /* if (usePixy) {
-            SmartDashboard.putNumber("Pixy Yaw", mPixy.getLatestTarget().getYaw());
-            SmartDashboard.putNumber("Pixy Area", mPixy.getLatestTarget().getArea());
-            SmartDashboard.putBoolean("Pixy Limit Switch", mPixy.getLatestTarget().isCargoIntaked());
-            SmartDashboard.putBoolean("Pixy State", mPixy.getLatestTarget().isTargetAcquired());
-        } */
         mLLX.setDouble(mLimeLight.returnAverageTarget().getYaw());
         mDist.setDouble(mLimeLight.returnAverageTarget().getDistance());
         mArea.setDouble(mLimeLight.returnAverageTarget().getArea());
@@ -123,10 +112,6 @@ public class Vision extends Subsystem {
 
     public void updateLimelight() {
         mLimeLight.getUpdate();
-    }
-
-    public void updatePixy() {
-        //  mPixy.pixyUpdate();
     }
 
     public MkPixyTarget getPixyTarget() {

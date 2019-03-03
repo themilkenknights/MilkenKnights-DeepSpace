@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.HATCH_ARM;
-import frc.robot.Constants.PNUEMATICS;
+import frc.robot.Constants.MISC;
 import frc.robot.lib.drivers.CT;
 import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
@@ -51,7 +51,7 @@ public class HatchArm extends Subsystem {
         mLimitTriggered = mHatchArmTab.add("Spear Limit", false).getEntry();
         mRawPos = mHatchArmTab.add("Raw Pos", 0.0).getEntry();
 
-        mSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kHatchArmChannel);
+        mSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchArmChannel);
         mSpearState = HatchSpearState.STOW;
         mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kKetteringReverseLimitSwitchTalonID, TalonLoc.Hatch_Arm, mHatchArmTab);
         mStartDis = new MkTime();

@@ -1,11 +1,8 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.DriverStation;
-import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeExecutor;
-import frc.robot.auto.modes.TestPathMode;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MatchData;
 
@@ -23,18 +20,6 @@ public class AutoChooser {
         mAutoModeExecuter = new AutoModeExecutor();
         mAutoModeExecuter.setAutoMode(base);
         mAutoModeExecuter.start();
-    }
-
-    public static AutoModeBase getAutoMode() {
-        double delay = SmartDashboard.getNumber("Auto Delay", 0.0);
-        if (delay > 0) {
-            Timer.delay(delay);
-        }
-        return getStraightMode();
-    }
-
-    private static AutoModeBase getStraightMode() {
-        return new TestPathMode(true);
     }
 
     private static void updateGameData() {

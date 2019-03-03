@@ -150,9 +150,6 @@ public class CargoArm extends Subsystem {
     }
 
     public synchronized void setIntakeRollers(double output) {
-        if (output == CARGO_ARM.kIntakeRollerInSpeed && Vision.getInstance().getPixyTarget().isCargoIntaked()) {
-            setArmState(CargoArmState.REVERSE_CARGOSHIP);
-        }
         mRollerSetpoint = output;
     }
 

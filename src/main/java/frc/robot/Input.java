@@ -73,9 +73,8 @@ public class Input {
 
     public static void updateControlInput() {
         RobotState currentRobotState = mStructure.getRobotState();
-        boolean isVisionState = currentRobotState == RobotState.VISION_CARGO_INTAKE || currentRobotState == RobotState.VISION_CARGO_OUTTAKE
-            || currentRobotState == RobotState.HATCH_VISION_INTAKE || currentRobotState == RobotState.HATCH_VISION_OUTTAKE || currentRobotState == RobotState.AUTO_CLIMB
-            || currentRobotState == RobotState.PATH_FOLLOWING;
+        boolean isVisionState = currentRobotState == RobotState.VISION_CARGO_OUTTAKE || currentRobotState == RobotState.HATCH_VISION_INTAKE
+            || currentRobotState == RobotState.HATCH_VISION_OUTTAKE || currentRobotState == RobotState.AUTO_CLIMB || currentRobotState == RobotState.PATH_FOLLOWING;
 
 
         if (mStopAuto.isPressed()) {
