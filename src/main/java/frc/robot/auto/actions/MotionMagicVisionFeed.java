@@ -11,7 +11,7 @@ import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
 import frc.robot.subsystems.Vision;
 
-public class MotionMagicVision implements Action {
+public class MotionMagicVisionFeed implements Action {
 
     private MkTime expirationTimer;
     private VisionState mLastVisionState = VisionState.EMPTY;
@@ -20,7 +20,7 @@ public class MotionMagicVision implements Action {
     private double targetYaw = 0.0;
     private double initYaw = 0.0;
 
-    public MotionMagicVision(boolean useLimit) {
+    public MotionMagicVisionFeed(boolean useLimit) {
         expirationTimer = new MkTime();
         this.useLimit = useLimit;
     }
@@ -51,6 +51,6 @@ public class MotionMagicVision implements Action {
         expirationTimer.start(5.0);
         lastTime = Timer.getFPGATimestamp();
         targetYaw = Vision.getInstance().getLimelightTarget().getYaw();
-        initYaw = Drive.getInstance().getYaw();
+        initYaw = Drive.getInstance().getHeadingDeg();
     }
 }

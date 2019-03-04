@@ -33,26 +33,19 @@ public class SubsystemManager {
                         if (count == 5) {
                             subsystem.slowUpdate(now);
                             subsystem.outputTelemetry(now);
-                            //TODO ENABLE subsystem.safetyCheck(now);
-                            //System.out.println("Raw: " + Drive.getInstance().getRawHeading() + " Normal: " + Drive.getInstance().getHeadingNormalized() + " Reg: " + Drive.getInstance().getHeadingDeg());
+                            subsystem.safetyCheck(now);
                         }
                     }
-                    //RobotState.getInstance().outputToSmartDashboard();
                     if (count == 5) {
                         count = 0;
                     }
                     count++;
-                    Vision.getInstance().updateLimelight();
-                    // Vision.getInstance().updatePixy();
-
                 } else {
                     for (Subsystem subsystem : mAllSubsystems) {
                         subsystem.outputTelemetry(now);
                     }
-                    Vision.getInstance().updateLimelight();
-                    // RobotState.getInstance().outputToSmartDashboard();
-                    // Vision.getInstance().updatePixy();
                 }
+                Vision.getInstance().updateLimelight();
                 timestamp_ = now;
             }
         }
@@ -86,7 +79,7 @@ public class SubsystemManager {
         }
 
         if (!running_) {
-            System.out.println("Starting Auto loops");
+            System.out.println("Starting Sandstorm (Auto)");
             running_ = true;
 
         }
@@ -99,7 +92,7 @@ public class SubsystemManager {
             subsystem.teleopInit(now);
         }
         if (!running_) {
-            System.out.println("Starting Teleop loops");
+            System.out.println("Starting Teleop");
             running_ = true;
 
         }
@@ -108,7 +101,7 @@ public class SubsystemManager {
 
     public void stop() {
         if (running_) {
-            System.out.println("Stopping loops");
+            System.out.println("Stopping");
             running_ = false;
 
         }

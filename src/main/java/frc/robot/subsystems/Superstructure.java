@@ -11,14 +11,10 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.AutoChooser;
 import frc.robot.Constants;
 import frc.robot.Constants.CAN;
-import frc.robot.Constants.PNUEMATICS;
-import frc.robot.Constants.SUPERSTRUCTURE;
+import frc.robot.Constants.MISC;
 import frc.robot.Robot;
-import frc.robot.auto.modes.CargoVisionIntake;
 import frc.robot.auto.modes.ClimbLevel2Mode;
-import frc.robot.auto.modes.HatchIntakeVisionPigeon;
 import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
-import frc.robot.auto.modes.SimpleCargoOuttake;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.CargoArm.CargoArmState;
@@ -26,7 +22,6 @@ import frc.robot.subsystems.HatchArm.HatchMechanismState;
 
 public class Superstructure extends Subsystem {
 
-    private static Drive mDrive = Drive.getInstance();
     private static HatchArm mHatch = HatchArm.getInstance();
     private PowerDistributionPanel mPDP;
     private Compressor mCompressor;
@@ -48,8 +43,8 @@ public class Superstructure extends Subsystem {
         mFrontClimb = mStructureTab.add("Front Climb", "").getEntry();
         mRearClimb = mStructureTab.add("Rear Climb", "").getEntry();
 
-        mFrontClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kFrontClimbSolenoidChannel);
-        mRearClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kRearClimbSolenoidChannel);
+        mFrontClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kFrontClimbSolenoidChannel);
+        mRearClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kRearClimbSolenoidChannel);
 
         mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
         LiveWindow.disableTelemetry(mPDP);
@@ -86,23 +81,6 @@ public class Superstructure extends Subsystem {
         mRearClimbSolenoid.set(state.state);
     }
 
-    @Override public synchronized void onQuickLoop(double timestamp) {
-        switch (mRobotState) {
-            case PATH_FOLLOWING:
-            case TELEOP_DRIVE:
-            case HATCH_VISION_INTAKE:
-            case HATCH_VISION_OUTTAKE:
-            case VISION_CARGO_INTAKE:
-            case VISION_CARGO_OUTTAKE:
-            case AUTO_CLIMB:
-                break;
-            default:
-                Logger.logErrorWithTrace("Unexpected robot state: " + mRobotState);
-                break;
-
-        }
-    }
-
     public void teleopInit(double timestamp) {
         setRobotState(RobotState.TELEOP_DRIVE);
     }
@@ -120,7 +98,7 @@ public class Superstructure extends Subsystem {
         switch (state) {
             case TELEOP_DRIVE:
                 AutoChooser.disableAuto();
-                Vision.getInstance().configDriverVision();
+                Vision.getInstance().disableLED();
                 break;
             case HATCH_VISION_INTAKE:
                 startVisionHatchIntake();
@@ -129,8 +107,6 @@ public class Superstructure extends Subsystem {
                 break;
             case VISION_CARGO_OUTTAKE:
                 startVisionCargoOuttake();
-            case VISION_CARGO_INTAKE:
-                startVisionCargoIntake();
             case PATH_FOLLOWING:
                 break;
             case AUTO_CLIMB:
@@ -144,37 +120,41 @@ public class Superstructure extends Subsystem {
     }
 
     private void startVisionHatchOuttake() {
-        Vision.getInstance().configLimelightVision();
-        // Timer.delay(0.5);
-        /*if(!Vision.getInstance().getLimelightTarget().isValidTarget()){
-            setRobotState(RobotState.TELEOP_DRIVE);
-            Logger.logMarker("Limelight target not valid");
-        } */
-        AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
-    }
-
-    private void startVisionHatchIntake() {
-        Vision.getInstance().configLimelightVision();
+        Vision.getInstance().enableLED();
+        Timer.delay(0.02);
+        Vision.getInstance().updateLimelight();
         if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
             setRobotState(RobotState.TELEOP_DRIVE);
             Logger.logMarker("Limelight target not valid");
+        } else {
+            AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
         }
-        AutoChooser.startAuto(new HatchIntakeVisionPigeon());
+    }
+
+    private void startVisionHatchIntake() {
+        Vision.getInstance().enableLED();
+        Timer.delay(0.02);
+        Vision.getInstance().updateLimelight();
+        if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
+            setRobotState(RobotState.TELEOP_DRIVE);
+            Logger.logMarker("Limelight target not valid");
+        } else {
+            AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
+        }
     }
 
     private void startVisionCargoOuttake() {
-        Vision.getInstance().configLimelightVision();
-        Timer.delay(1.0);
-        //mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
+        Vision.getInstance().enableLED();
+        Timer.delay(0.02);
         mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
         CargoArm.getInstance().setArmState(CargoArmState.REVERSE_CARGOSHIP);
-        AutoChooser.startAuto(new SimpleCargoOuttake());
-    }
-
-
-    private void startVisionCargoIntake() {
-        Vision.getInstance().configLimelightVision();
-        AutoChooser.startAuto(new CargoVisionIntake());
+        Vision.getInstance().updateLimelight();
+        if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
+            setRobotState(RobotState.TELEOP_DRIVE);
+            Logger.logMarker("Limelight target not valid");
+        } else {
+            AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
+        }
     }
 
     private void startAutoClimb() {
@@ -191,7 +171,7 @@ public class Superstructure extends Subsystem {
     }
 
     public enum ClimbState {
-        RETRACTED(SUPERSTRUCTURE.kClimbRetractedState), LOWERED(!SUPERSTRUCTURE.kClimbRetractedState);
+        RETRACTED(false), LOWERED(true);
         public final boolean state;
 
         ClimbState(final boolean state) {
@@ -201,7 +181,7 @@ public class Superstructure extends Subsystem {
 
 
     public enum RobotState {
-        PATH_FOLLOWING, TELEOP_DRIVE, HATCH_VISION_INTAKE, HATCH_VISION_OUTTAKE, VISION_CARGO_INTAKE, VISION_CARGO_OUTTAKE, AUTO_CLIMB
+        PATH_FOLLOWING, TELEOP_DRIVE, HATCH_VISION_INTAKE, HATCH_VISION_OUTTAKE, VISION_CARGO_OUTTAKE, AUTO_CLIMB
     }
 
 

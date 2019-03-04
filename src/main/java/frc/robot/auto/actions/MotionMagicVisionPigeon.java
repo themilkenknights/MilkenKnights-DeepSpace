@@ -1,0 +1,83 @@
+package frc.robot.auto.actions;
+
+import frc.robot.lib.util.Logger;
+import frc.robot.lib.util.MkTime;
+import frc.robot.lib.vision.LimelightTarget;
+import frc.robot.subsystems.Drive;
+import frc.robot.subsystems.HatchArm;
+import frc.robot.subsystems.HatchArm.HatchMechanismState;
+import frc.robot.subsystems.HatchArm.HatchSpearState;
+import frc.robot.subsystems.Superstructure;
+import frc.robot.subsystems.Superstructure.RobotState;
+import frc.robot.subsystems.Vision;
+
+public class MotionMagicVisionPigeon implements Action {
+
+    private MkTime timer = new MkTime();
+    private double lastDist, lastAngle = 0.0;
+    private MkTime downTimer = new MkTime();
+    private VisionServoGoal goal;
+
+    public MotionMagicVisionPigeon(VisionServoGoal goal) {
+        this.goal = goal;
+    }
+
+    /**
+     * Exit tracking if it is taking too long or if the tracking is finished
+     * or if the arm is down for a specified time and the limit switch is triggered.
+     */
+    @Override public boolean isFinished() {
+        return timer.isDone() || Drive.getInstance().isVisionFinished(lastDist, lastAngle) || (HatchArm.getInstance().isHatchLimitTriggered() && (
+            (HatchArm.getInstance().getHatchSpearState() == HatchSpearState.PLACE) && downTimer.isDone()));
+    }
+
+    @Override public void update() {
+        switch (goal) {
+            case NO_ACTION:
+                break;
+            case PLACE_HATCH:
+                if ((Drive.getInstance().getVisionServoError(lastDist) < 28.0) && (HatchArm.getInstance().getHatchSpearState() != HatchSpearState.PLACE)) {
+                    HatchArm.getInstance().setHatchMechanismState(HatchMechanismState.SPEAR_PLACE_ONLY);
+                    downTimer.start(0.75);
+                }
+                break;
+            case INTAKE_HATCH:
+                if ((Drive.getInstance().getVisionServoError(lastDist) < 60.0) && (HatchArm.getInstance().getHatchSpearState() != HatchSpearState.PLACE)) {
+                    HatchArm.getInstance().setHatchMechanismState(HatchMechanismState.STATION_INTAKE);
+                    downTimer.start(1.0);
+                }
+                break;
+            default:
+                Logger.logErrorWithTrace("Unexpected Vision Servo Goal");
+
+        }
+
+
+        LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
+        if (mTarget.isValidTarget() && mTarget.getDistance() < 28.0) {
+            lastAngle = -mTarget.getYaw();
+            lastDist = mTarget.getDistance();
+            Drive.getInstance().setDistanceAndAngle(lastDist, lastAngle);
+        }
+    }
+
+    @Override public void done() {
+        Superstructure.getInstance().setRobotState(RobotState.TELEOP_DRIVE);
+    }
+
+    @Override public void start() {
+        LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
+        if (mTarget.isValidTarget()) {
+            lastAngle = -mTarget.getYaw();
+            lastDist = mTarget.getDistance();
+            Drive.getInstance().setDistanceAndAngle(lastDist, lastAngle);
+            timer.start(4.0);
+        } else {
+            Logger.logMarker("Invalid Target");
+        }
+    }
+
+    public enum VisionServoGoal {
+        PLACE_HATCH, INTAKE_HATCH, PLACE_CARGO, NO_ACTION
+    }
+}

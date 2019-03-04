@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.HATCH_ARM;
-import frc.robot.Constants.PNUEMATICS;
+import frc.robot.Constants.MISC;
 import frc.robot.lib.drivers.CT;
 import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
@@ -51,7 +51,7 @@ public class HatchArm extends Subsystem {
         mLimitTriggered = mHatchArmTab.add("Spear Limit", false).getEntry();
         mRawPos = mHatchArmTab.add("Raw Pos", 0.0).getEntry();
 
-        mSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, PNUEMATICS.kHatchArmChannel);
+        mSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchArmChannel);
         mSpearState = HatchSpearState.STOW;
         mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kKetteringReverseLimitSwitchTalonID, TalonLoc.Hatch_Arm, mHatchArmTab);
         mStartDis = new MkTime();
@@ -109,16 +109,14 @@ public class HatchArm extends Subsystem {
         return mSpearLimitTriggered;
     }
 
-    public void toggleSoftLimit() {
-        CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(!mSoftLimitState, GENERAL.kShortTimeoutMs));
-        CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(!mSoftLimitState, GENERAL.kShortTimeoutMs));
-        mSoftLimitState = !mSoftLimitState;
+    public void disableSoftLimit() {
+        CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
+        CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
     }
 
     public boolean isKetteringReverseTriggered() {
         return mArmTalon.slaveTalon.getSensorCollection().isRevLimitSwitchClosed();
     }
-
 
     public void outputTelemetry(double timestamp) {
         mArmTalon.updateShuffleboard();
@@ -205,10 +203,6 @@ public class HatchArm extends Subsystem {
         return mArmTalon.checkSystem();
     }
 
-    public mKetteringControlState getHatchIntakeControlState() {
-        return mHatchIntakeControlState;
-    }
-
     private void setHatchIntakeControlState(mKetteringControlState state) {
         if (state == mKetteringControlState.MOTION_MAGIC && mHatchIntakeControlState != mKetteringControlState.MOTION_MAGIC) {
             setEnable();
@@ -238,8 +232,8 @@ public class HatchArm extends Subsystem {
         return mSpearState;
     }
 
-    /*
-     * Move Hatch Arm to Stow or Place
+    /**
+     * Move Spear up to stow or down to place
      */
     public synchronized void setHatchSpearState(HatchSpearState armState) {
         mSpearState = armState;

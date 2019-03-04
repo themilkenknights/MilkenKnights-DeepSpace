@@ -91,12 +91,8 @@ public final class Constants {
     public static class DRIVE {
 
         //Invert
-        public static final boolean kLeftMasterInvert = false;
-        public static final boolean kLeftSlaveInvert = false;
-
-        public static final boolean KRightMasterInvert = true;
-        public static final boolean kRightSlaveInvert = true;
-
+        public static final boolean kLeftInvert = false;
+        public static final boolean KRightInvert = true;
         public static final boolean kLeftSensorInvert = true;
         public static final boolean kRightSensorInvert = true;
 
@@ -108,46 +104,21 @@ public final class Constants {
         public static final double kCircumference = kWheelDiameter * GENERAL.PI;
         public static final double kDriveWheelRadiusInches = kWheelDiameter / 2.0;
 
-        //Tuned dynamics
-        //TODO Tune All Drive Params on Carpet
-        public static final double kRobotLinearInertia = 45.94891; //Kg
-        public static final double kRobotAngularDrag = 10.0;  // N*m / (rad/sec)
-        public static final double kDriveVIntercept = 0.65;  // V
-        public static final double kDriveKv = 0.275;  // V per rad/s2
-        public static final double kDriveKa = 0.00575;  // V per rad/s^
-        public static final double kDriveAngularKa = 0.0065;  // V per rad/s^ (found by turn in place)
-        public static final double kRobotAngularInertia = (kDriveWheelTrackRadiusMeters * kDriveKa * kRobotLinearInertia) / (kDriveAngularKa);  // Kg m^2
-
         public static final double kDriveKp = 7 * (0.1 * 1023.0) / (700);
         public static final double kDriveKd = 3 * kDriveKp;
 
-        //TODO Turn In Place Scrub Tuning
         public static final double kTrackScrubFactor = 0.95;
-
-        //Pure Pursuit Params
-        public static final double kPathKX = 0.9;  // units/s per unit of error
-        public static final double kPathLookaheadTime = 0.4;  // seconds to look ahead along the path for steering
-        public static final double kPathMinLookaheadDistance = 24.0;  // inches
 
         //Talon PID Constants
         public static final double kMaxVel = 154.62;
         public static final double kMaxNativeVel = 3370.0;
-        //Other
-        public static final double kTurnInPlaceCircumference = 104.1;
+        public static final double kGoalPosTolerance = 1.5;
 
         //Vision Tuning
-
         public static final double kVisionTurnP = 0.040;
         public static final double kVisionDriverTurnP = -0.03;
 
-
-        //Turn In Place
-        public static final double kGoalPosTolerance = 0.75; // degrees
-        public static final double kGoalVelTolerance = 5.0; // inches per second
-
         public static final byte kNavXUpdateRate = (byte) 200;
-
-        public static final double kPixyKp = 0.045;
     }
 
 
@@ -232,25 +203,15 @@ public final class Constants {
     }
 
 
-    public static class PNUEMATICS {
+    public static class MISC {
 
-
+        public static final boolean kDriveCSVLogging = false;
+        public static final boolean kClimbRetractedState = false;
         public static final int kHatchArmChannel = 0;
         public static final int kFrontClimbSolenoidChannel = 2;
         public static final int kRearClimbSolenoidChannel = 1;
     }
 
-
-    public static class SUPERSTRUCTURE {
-
-        public static final boolean kClimbRetractedState = false;
-    }
-
-
-    public static class LOG {
-
-        public static final boolean kDriveCSVLogging = false;
-    }
 
 
     public static class VISION {
@@ -278,7 +239,7 @@ public final class Constants {
         public static final int kDistanceSlot = 0;
         public static final int kTurningSlot = 1;
 
-        public static final Map<TalonLoc, TalonSRXConfiguration> kConfigs = new HashMap<TalonLoc, TalonSRXConfiguration>();
+        public static final Map<TalonLoc, TalonSRXConfiguration> kConfigs = new HashMap<>();
 
         static {
             kConfigs.put(TalonLoc.Left, new TalonSRXConfiguration());
@@ -305,12 +266,12 @@ public final class Constants {
                 if (loc == TalonLoc.Left || loc == TalonLoc.Right) {
                     tal.motionCurveStrength = 7;
                     tal.velocityMeasurementPeriod = VelocityMeasPeriod.Period_25Ms;
-                    tal.velocityMeasurementWindow = 8;
+                    tal.velocityMeasurementWindow = 16;
                     //General Velocity/Motion Magic
                     tal.slot0.kP = DRIVE.kDriveKp;
                     tal.slot0.kD = DRIVE.kDriveKd;
                     tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
-                    tal.slot0.closedLoopPeakOutput = 0.4;
+                    tal.slot0.closedLoopPeakOutput = 0.5;
                     tal.slot0.allowableClosedloopError = 100;
                     //Motion Magic Turning
                     tal.slot1.kP = 2.4;
@@ -319,7 +280,7 @@ public final class Constants {
                     tal.slot1.kF = 1023.0 / 13653.0;
                     tal.slot1.integralZone = 100;
                     tal.slot1.maxIntegralAccumulator = 20;
-                    tal.slot1.closedLoopPeakOutput = 0.8;
+                    tal.slot1.closedLoopPeakOutput = 0.5;
                     tal.slot1.allowableClosedloopError = 10;
                     //~3deg
                     tal.auxPIDPolarity = false;
@@ -331,7 +292,7 @@ public final class Constants {
                     tal.reverseLimitSwitchNormal = LimitSwitchNormal.NormallyOpen;
                     tal.forwardSoftLimitEnable = true;
                     tal.reverseSoftLimitEnable = true;
-                    tal.clearPositionOnLimitR = false;//TODO fix
+                    tal.clearPositionOnLimitR = false;
                 }
 
                 if (loc == TalonLoc.Left) {
@@ -340,9 +301,6 @@ public final class Constants {
                 } else if (loc == TalonLoc.Right) {
                     tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
                     tal.primaryPID.selectedFeedbackCoefficient = 1.0;
-
-                   /* tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
-                    tal.primaryPID.selectedFeedbackCoefficient = 0.50; */
 
                     tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
                     tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0;
@@ -361,7 +319,7 @@ public final class Constants {
                     tal.reverseSoftLimitThreshold = (int) 14.0;
                     tal.motionCruiseVelocity = (int) (CARGO_ARM.kMaxRawVel);
                     tal.motionAcceleration = (int) (CARGO_ARM.kMaxRawVel * 10);
-                    tal.slot0.kP = (39.0 * ((0.1 * 1023.0) / (1600))); //7.5 deg or 1390 units
+                    tal.slot0.kP = (39.0 * ((0.1 * 1023.0) / (1600)));
                     tal.slot0.kI = tal.slot0.kP / 210;
                     tal.slot0.kD = tal.slot0.kP * 40;
                     tal.slot0.kF = 1023.0 / CARGO_ARM.kMaxRawVel;
@@ -374,7 +332,7 @@ public final class Constants {
                     tal.reverseSoftLimitThreshold = 0;
                     tal.motionCruiseVelocity = (int) (HATCH_ARM.kMotionMagicCruiseVel);
                     tal.motionAcceleration = (int) (HATCH_ARM.kMotionMagicAccel);
-                    tal.slot0.kP = 30.0 * ((0.1 * 1023.0) / (1600)); //7.5 deg or 1390 units
+                    tal.slot0.kP = 30.0 * ((0.1 * 1023.0) / (1600));
                     tal.slot0.kI = (tal.slot0.kP / 500) * 0.0;
                     tal.slot0.kD = tal.slot0.kP * 38.5;
                     tal.slot0.kF = (1023.0 / Constants.HATCH_ARM.kMaxRawVel);

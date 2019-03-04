@@ -20,10 +20,6 @@ public class MkMath {
         return (Constants.GENERAL.kTicksPerRev) * (in / Constants.DRIVE.kCircumference);
     }
 
-    public static double AngleToVel(double angle) {
-        return (angle / 360) * Constants.DRIVE.kTurnInPlaceCircumference;
-    }
-
     public static double handleDeadband(double val, double deadband) {
         return (java.lang.Math.abs(val) > java.lang.Math.abs(deadband)) ? val : 0.0;
     }
