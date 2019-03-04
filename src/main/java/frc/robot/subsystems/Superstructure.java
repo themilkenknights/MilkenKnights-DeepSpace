@@ -16,7 +16,7 @@ import frc.robot.Robot;
 import frc.robot.auto.modes.ClimbLevel2Mode;
 import frc.robot.auto.modes.HatchIntakeVisionPigeon;
 import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
-import frc.robot.auto.modes.SimpleCargoOuttake;
+import frc.robot.auto.modes.VisionCargoOuttake;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.CargoArm.CargoArmState;
@@ -101,7 +101,7 @@ public class Superstructure extends Subsystem {
         switch (state) {
             case TELEOP_DRIVE:
                 AutoChooser.disableAuto();
-                Vision.getInstance().configDriverVision();
+                Vision.getInstance().disableLED();
                 break;
             case HATCH_VISION_INTAKE:
                 startVisionHatchIntake();
@@ -123,17 +123,19 @@ public class Superstructure extends Subsystem {
     }
 
     private void startVisionHatchOuttake() {
-        Vision.getInstance().configLimelightVision();
-        // Timer.delay(0.5);
-        /*if(!Vision.getInstance().getLimelightTarget().isValidTarget()){
+        Vision.getInstance().enableLED();
+        Timer.delay(0.02);
+        Vision.getInstance().updateLimelight();
+        if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
             setRobotState(RobotState.TELEOP_DRIVE);
             Logger.logMarker("Limelight target not valid");
-        } */
-        AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
+        } else {
+            AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
+        }
     }
 
     private void startVisionHatchIntake() {
-        Vision.getInstance().configLimelightVision();
+        Vision.getInstance().enableLED();
         if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
             setRobotState(RobotState.TELEOP_DRIVE);
             Logger.logMarker("Limelight target not valid");
@@ -142,12 +144,12 @@ public class Superstructure extends Subsystem {
     }
 
     private void startVisionCargoOuttake() {
-        Vision.getInstance().configLimelightVision();
+        Vision.getInstance().enableLED();
         Timer.delay(1.0);
         //mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
         mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
         CargoArm.getInstance().setArmState(CargoArmState.REVERSE_CARGOSHIP);
-        AutoChooser.startAuto(new SimpleCargoOuttake());
+        AutoChooser.startAuto(new VisionCargoOuttake());
     }
 
     private void startAutoClimb() {

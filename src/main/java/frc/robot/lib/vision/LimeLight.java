@@ -4,7 +4,6 @@ import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Timer;
-import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MovingAverage;
 import frc.robot.lib.vision.LimeLightControlMode.Advanced_Crosshair;
 import frc.robot.lib.vision.LimeLightControlMode.Advanced_Target;
@@ -80,7 +79,7 @@ public class LimeLight {
     }
 
     public synchronized void updateTarget() {
-        mTarget = new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(), getVertLength(), getCaptureTime());
+        mTarget = new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(), getVertLength(), getSkew_Rotation(), getCaptureTime());
         mThrottleAverage.addNumber(mTarget);
     }
 
@@ -334,23 +333,12 @@ public class LimeLight {
     }
 
     public void getUpdate() {
-        try {
-            if (i == 10) {
-                resetPilelineLatency();
-                try {
-                    Thread.sleep(25);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                isConnected = getPipelineLatency() != 0.0;
-                i = 0;
-            }
-            i++;
-            updateTarget();
-        } catch (Throwable t) {
-            Logger.logThrowableCrash(t);
-            throw t;
+        if (i == 5) {
+            isConnected = getPipelineLatency() != 0.0;
+            i = 0;
         }
+        i++;
+        updateTarget();
     }
 
 }

@@ -109,16 +109,14 @@ public class HatchArm extends Subsystem {
         return mSpearLimitTriggered;
     }
 
-    public void toggleSoftLimit() {
-        CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(!mSoftLimitState, GENERAL.kShortTimeoutMs));
-        CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(!mSoftLimitState, GENERAL.kShortTimeoutMs));
-        mSoftLimitState = !mSoftLimitState;
+    public void disableSoftLimit() {
+        CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
+        CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
     }
 
     public boolean isKetteringReverseTriggered() {
         return mArmTalon.slaveTalon.getSensorCollection().isRevLimitSwitchClosed();
     }
-
 
     public void outputTelemetry(double timestamp) {
         mArmTalon.updateShuffleboard();
@@ -205,10 +203,6 @@ public class HatchArm extends Subsystem {
         return mArmTalon.checkSystem();
     }
 
-    public mKetteringControlState getHatchIntakeControlState() {
-        return mHatchIntakeControlState;
-    }
-
     private void setHatchIntakeControlState(mKetteringControlState state) {
         if (state == mKetteringControlState.MOTION_MAGIC && mHatchIntakeControlState != mKetteringControlState.MOTION_MAGIC) {
             setEnable();
@@ -238,8 +232,8 @@ public class HatchArm extends Subsystem {
         return mSpearState;
     }
 
-    /*
-     * Move Hatch Arm to Stow or Place
+    /**
+     * Move Spear up to stow or down to place
      */
     public synchronized void setHatchSpearState(HatchSpearState armState) {
         mSpearState = armState;

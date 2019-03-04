@@ -4,6 +4,10 @@ import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.shuffleboard.EventImportance;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import frc.robot.Constants;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
@@ -23,7 +27,7 @@ public class Logger {
 
     public static void logRobotInit() {
         String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-        // boolean test = new File("/media/sda1/" + dateStamp1 + "/").mkdirs();
+        boolean test = new File("/media/sda1/" + dateStamp1 + "/").mkdirs();
         logMarker("Robot Init on " + (Constants.kIsPracticeBot ? "Practice" : "Competition") + " Robot");
     }
 
@@ -62,7 +66,7 @@ public class Logger {
     }
 
     private static synchronized void logMarker(String mark, Throwable nullableException) {
-       /* if (!lastOutput.equals(mark)) {
+        if (!lastOutput.equals(mark)) {
             String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
             try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 + "/main_log.txt", true))) {
                 writer.print(RUN_INSTANCE_UUID.toString());
@@ -80,11 +84,11 @@ public class Logger {
             }
         } else {
             lastOutput = mark;
-        } */ //TODO fix
+        }
     }
 
     private static synchronized void logCrashMarker(String mark, Throwable nullableException) {
-      /*  if (!lastCrashOutput.equals(mark)) {
+        if (!lastCrashOutput.equals(mark)) {
             String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
             try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 + "/crash_log.txt", true))) {
                 writer.print(RUN_INSTANCE_UUID.toString());
@@ -102,6 +106,6 @@ public class Logger {
             }
         } else {
             lastCrashOutput = mark;
-        } */
+        }
     }
 }

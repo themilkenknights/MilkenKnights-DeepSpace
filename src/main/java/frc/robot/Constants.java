@@ -292,7 +292,7 @@ public final class Constants {
                     tal.reverseLimitSwitchNormal = LimitSwitchNormal.NormallyOpen;
                     tal.forwardSoftLimitEnable = true;
                     tal.reverseSoftLimitEnable = true;
-                    tal.clearPositionOnLimitR = false;//TODO fix
+                    tal.clearPositionOnLimitR = false;
                 }
 
                 if (loc == TalonLoc.Left) {
@@ -301,9 +301,6 @@ public final class Constants {
                 } else if (loc == TalonLoc.Right) {
                     tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
                     tal.primaryPID.selectedFeedbackCoefficient = 1.0;
-
-                   /* tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
-                    tal.primaryPID.selectedFeedbackCoefficient = 0.50; */
 
                     tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
                     tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0;

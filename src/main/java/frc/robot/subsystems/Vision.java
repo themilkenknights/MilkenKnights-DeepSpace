@@ -7,14 +7,11 @@ import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.lib.structure.Subsystem;
+import frc.robot.lib.util.MkTime;
 import frc.robot.lib.vision.LimeLight;
-import frc.robot.lib.vision.LimeLightControlMode.CamMode;
 import frc.robot.lib.vision.LimeLightControlMode.LedMode;
-import frc.robot.lib.vision.LimeLightControlMode.StreamType;
 import frc.robot.lib.vision.LimelightTarget;
-import frc.robot.lib.vision.MkPixyTarget;
 
 public class Vision extends Subsystem {
 
@@ -22,10 +19,10 @@ public class Vision extends Subsystem {
     private LimeLight mLimeLight;
     private NetworkTableEntry mLLX, mDist, mArea, mLED;
     private UsbCamera hatchCam;
-    private int cameraStream = 0;
     private boolean isVision = false;
     private MjpegServer server;
     private HttpCamera LLFeed;
+    private MkTime mLEDTimer = new MkTime();
 
     private Vision() {
         hatchCam = CameraServer.getInstance().startAutomaticCapture(0);
@@ -43,9 +40,7 @@ public class Vision extends Subsystem {
         mArea = mVisionTab.add("Area", 0.0).getEntry();
         mLED = mVisionTab.add("LED State", true).getEntry();
         mLimeLight = new LimeLight();
-        configDriverVision();
-
-        mLimeLight.setLEDMode(LedMode.kforceOff);
+        enableLED();
     }
 
     public static Vision getInstance() {
@@ -57,39 +52,36 @@ public class Vision extends Subsystem {
         mDist.setDouble(mLimeLight.returnAverageTarget().getDistance());
         mArea.setDouble(mLimeLight.returnAverageTarget().getArea());
         mLED.setBoolean(mLimeLight.getLEDMode() != LedMode.kforceOff);
-        SmartDashboard.putNumber("Pipeline", mLimeLight.getPipelineInt());
     }
 
-    public void configLimelightVision() {
-        mLimeLight.setPipeline(1);
-        mLimeLight.setCamMode(CamMode.kvision);
-        mLimeLight.setStream(StreamType.kStandard);
-        mLimeLight.setLEDMode(LedMode.kforceOn);
-        isVision = true;
-    }
-
-    public void configDriverVision() {
-        mLimeLight.setPipeline(1);
-        mLimeLight.setLEDMode(LedMode.kforceOff);
-        isVision = false;
+    public void setVisionPipeline() {
+        mLimeLight.setPipeline(0);
     }
 
     public void toggleVision() {
         if (isVision) {
-            mLimeLight.setLEDMode(LedMode.kforceOff);
-            isVision = false;
+            disableLED();
         } else {
-            mLimeLight.setLEDMode(LedMode.kforceOn);
-            isVision = true;
+            enableLED();
         }
     }
 
+    public void enableLED() {
+        mLimeLight.setLEDMode(LedMode.kforceOn);
+        isVision = true;
+    }
+
+    public void disableLED() {
+        mLimeLight.setLEDMode(LedMode.kforceOff);
+        isVision = false;
+    }
+
     public void teleopInit(double timestamp) {
-        configDriverVision();
+        setVisionPipeline();
     }
 
     public void autonomousInit(double timestamp) {
-        configDriverVision();
+        setVisionPipeline();
     }
 
     public void configHatchStream() {
@@ -110,18 +102,12 @@ public class Vision extends Subsystem {
         } */
     }
 
-    public void updateLimelight() {
+    public synchronized void updateLimelight() {
         mLimeLight.getUpdate();
     }
 
-    public MkPixyTarget getPixyTarget() {
-        //TODO Fix
-        // return mPixy.getLatestTarget();
-        return new MkPixyTarget(0, 0, false, 0.0);
-    }
-
     @Override public void onStop(double timestamp) {
-        configDriverVision();
+        setVisionPipeline();
     }
 
     @Override public boolean checkSystem() {

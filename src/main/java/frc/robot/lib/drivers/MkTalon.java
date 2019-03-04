@@ -191,7 +191,7 @@ public class MkTalon {
                 CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 100, kShort));
                 slaveTalon.follow(masterTalon);
             }
-       /*     Faults victorFaults = new Faults();
+       /*   Faults victorFaults = new Faults();
             CTRE(slaveTalon.getFaults(victorFaults));
             if(victorFaults.hasAnyFault()){
                 Logger.logErrorWithTrace(victorFaults.toString());

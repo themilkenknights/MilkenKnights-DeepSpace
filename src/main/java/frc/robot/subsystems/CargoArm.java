@@ -87,7 +87,7 @@ public class CargoArm extends Subsystem {
         }
     }
 
-    public PigeonIMU getmPigeon() {
+    public PigeonIMU getPigeon() {
         return mIntakeTalon.mPigeon;
     }
 
@@ -184,10 +184,9 @@ public class CargoArm extends Subsystem {
         setEnable();
     }
 
-    public void toggleSoftLimit() {
-        CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(!mSoftLimitState, GENERAL.kShortTimeoutMs));
-        CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(!mSoftLimitState, GENERAL.kShortTimeoutMs));
-        mSoftLimitState = !mSoftLimitState;
+    public void disableSoftLimit() {
+        CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
+        CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
     }
 
     public enum CargoArmControlState {

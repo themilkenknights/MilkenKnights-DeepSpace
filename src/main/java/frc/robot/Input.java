@@ -51,9 +51,9 @@ public class Input {
 
     private static final MkJoystickButton mIntakeRollerOut = operatorJoystick.getButton(6, "Intake Roller Out Fast");
 
-    private static final MkJoystickButton disableSoftLimit = operatorJoystick.getButton(8, "Disable Soft Limit && Toggle Vision");
+    private static final MkJoystickButton toggleVision = operatorJoystick.getButton(8, "Disable Soft Limit && Toggle Vision");
 
-    private static final MkJoystickButton mZeroArms = operatorJoystick.getButton(7, "Zero Arm Encoders");
+    private static final MkJoystickButton mZeroArmToggleLimit = operatorJoystick.getButton(7, "Zero Arm Encoders");
 
     private static final MkJoystickButton mStopAuto = operatorJoystick.getButton(9, "Stop Auto");
 
@@ -82,14 +82,14 @@ public class Input {
             Drive.getInstance().setOpenLoop(DriveSignal.BRAKE);
         }
 
-        if (mZeroArms.isPressed()) {
+        if (mZeroArmToggleLimit.isPressed()) {
             mCargo.zeroEncoder();
             mHatch.zeroEncoder();
+            mCargo.disableSoftLimit();
+            mHatch.disableSoftLimit();
         }
 
-        if (disableSoftLimit.isPressed()) {
-            mCargo.toggleSoftLimit();
-            mHatch.toggleSoftLimit();
+        if (toggleVision.isPressed()) {
             mVision.toggleVision();
         }
 
