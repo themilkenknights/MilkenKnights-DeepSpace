@@ -88,9 +88,9 @@ public class Drive extends Subsystem {
         SmartDashboard.putNumber("Avg Dist", (mPeriodicIO.leftPos + mPeriodicIO.rightPos) / 2);
         //SmartDashboard.putNumber("Aux Error", mRightDrive.masterTalon.getClosedLoopError(1));
         //SmartDashboard.putNumber("Aux Target", mRightDrive.masterTalon.getClosedLoopTarget(1));
-        // SmartDashboard.putNumber("Aux Pos", mRightDrive.masterTalon.getSelectedSensorPosition(1));
+        //SmartDashboard.putNumber("Aux Pos", mRightDrive.masterTalon.getSelectedSensorPosition(1));
         //SmartDashboard.putNumber("Aux Vel", mRightDrive.masterTalon.getSelectedSensorVelocity(1));
-        //        /SmartDashboard.putNumber("Main Target", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopTarget(0)));
+        //SmartDashboard.putNumber("Main Target", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopTarget(0)));
         //SmartDashboard.putNumber("Main Error", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopError(0)));
         //SmartDashboard.putNumber("Main Pos", MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getSelectedSensorPosition(0)));
     }
