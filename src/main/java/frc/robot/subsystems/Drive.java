@@ -14,7 +14,6 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.Constants.CONFIG;
 import frc.robot.Constants.DRIVE;
-import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.MISC;
 import frc.robot.lib.drivers.CT;
 import frc.robot.lib.drivers.MkTalon;
@@ -321,9 +320,9 @@ public class Drive extends Subsystem {
      * Zero all pigeon values
      */
     public void zeroPigeon() {
-        CT.RE(mPigeon.setFusedHeading(0, GENERAL.kLongCANTimeoutMs));
-        CT.RE(mPigeon.setYaw(0, GENERAL.kLongCANTimeoutMs));
-        CT.RE(mPigeon.setAccumZAngle(0, GENERAL.kLongCANTimeoutMs));
+        CT.RE(mPigeon.setFusedHeading(0, 0));
+        CT.RE(mPigeon.setYaw(0, 0));
+        CT.RE(mPigeon.setAccumZAngle(0, 0));
     }
 
     /**
