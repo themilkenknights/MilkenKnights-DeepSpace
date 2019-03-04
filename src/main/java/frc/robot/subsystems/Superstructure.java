@@ -14,9 +14,7 @@ import frc.robot.Constants.CAN;
 import frc.robot.Constants.MISC;
 import frc.robot.Robot;
 import frc.robot.auto.modes.ClimbLevel2Mode;
-import frc.robot.auto.modes.HatchIntakeVisionPigeon;
 import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
-import frc.robot.auto.modes.VisionCargoOuttake;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.CargoArm.CargoArmState;
@@ -24,7 +22,6 @@ import frc.robot.subsystems.HatchArm.HatchMechanismState;
 
 public class Superstructure extends Subsystem {
 
-    private static Drive mDrive = Drive.getInstance();
     private static HatchArm mHatch = HatchArm.getInstance();
     private PowerDistributionPanel mPDP;
     private Compressor mCompressor;
