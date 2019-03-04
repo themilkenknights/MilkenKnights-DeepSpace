@@ -136,20 +136,28 @@ public class Superstructure extends Subsystem {
 
     private void startVisionHatchIntake() {
         Vision.getInstance().enableLED();
+        Timer.delay(0.02);
+        Vision.getInstance().updateLimelight();
         if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
             setRobotState(RobotState.TELEOP_DRIVE);
             Logger.logMarker("Limelight target not valid");
+        } else {
+            AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
         }
-        AutoChooser.startAuto(new HatchIntakeVisionPigeon());
     }
 
     private void startVisionCargoOuttake() {
         Vision.getInstance().enableLED();
-        Timer.delay(1.0);
-        //mRobotState = Vision.getInstance().getLimelightTarget().isValidTarget() ? mRobotState : RobotState.TELEOP_DRIVE;
+        Timer.delay(0.02);
         mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
         CargoArm.getInstance().setArmState(CargoArmState.REVERSE_CARGOSHIP);
-        AutoChooser.startAuto(new VisionCargoOuttake());
+        Vision.getInstance().updateLimelight();
+        if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
+            setRobotState(RobotState.TELEOP_DRIVE);
+            Logger.logMarker("Limelight target not valid");
+        } else {
+            AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
+        }
     }
 
     private void startAutoClimb() {
