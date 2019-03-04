@@ -38,7 +38,7 @@ public class Drive extends Subsystem {
     private Rotation2d mGyroOffset = Rotation2d.identity();
     private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
     private double left_encoder_prev_distance_, right_encoder_prev_distance_ = 0.0;
-    private NetworkTableEntry mState, mStatus, mFusedHeading, mThetaErr, mGyroHeading;
+    private NetworkTableEntry mState, mStatus, mFusedHeading, mGyroHeading;
     private PigeonIMU mPigeon;
 
     private Drive() {
@@ -218,12 +218,11 @@ public class Drive extends Subsystem {
         if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
             mRightDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
             mLeftDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
-            mPigeon.setFusedHeading(0);
             left_encoder_prev_distance_ = 0;
             right_encoder_prev_distance_ = 0;
             mPeriodicIO.rightPos = 0.0;
             mPeriodicIO.leftPos = 0.0;
-            mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 0.3, 0);
+            mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 0.5, 0);
             mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.SensorSum, CONFIG.kPIDPrimary, 0);
             mRightDrive.masterTalon.configSelectedFeedbackCoefficient(0.5, CONFIG.kPIDPrimary, 0);
             mRightDrive.slaveVictor.follow(mRightDrive.masterTalon, FollowerType.PercentOutput);
@@ -254,7 +253,7 @@ public class Drive extends Subsystem {
      * @return The distance from the target when servoing with the Pigeon
      */
     public double getVisionServoError(double dist) {
-        return Math.abs(mPeriodicIO.rightPos);
+        return Math.abs(mPeriodicIO.rightPos - dist);
     }
 
     /**
@@ -352,7 +351,7 @@ public class Drive extends Subsystem {
     }
 
     public boolean isVisionFinished(double dist, double angle) {
-        return false;
+        return Math.abs(dist - mPeriodicIO.rightPos) < DRIVE.kGoalPosTolerance && Math.abs(angle - mPeriodicIO.gyro_heading.getDegrees()) < 1.5;
     }
 
     /**
@@ -392,7 +391,6 @@ public class Drive extends Subsystem {
         public double leftVel;
         public double rightVel;
         public Rotation2d gyro_heading = Rotation2d.identity();
-        public Pose2d error = Pose2d.identity();
         // OUTPUTS
         public double left_demand;
         public double right_demand;

@@ -239,7 +239,7 @@ public final class Constants {
         public static final int kDistanceSlot = 0;
         public static final int kTurningSlot = 1;
 
-        public static final Map<TalonLoc, TalonSRXConfiguration> kConfigs = new HashMap<TalonLoc, TalonSRXConfiguration>();
+        public static final Map<TalonLoc, TalonSRXConfiguration> kConfigs = new HashMap<>();
 
         static {
             kConfigs.put(TalonLoc.Left, new TalonSRXConfiguration());
@@ -266,12 +266,12 @@ public final class Constants {
                 if (loc == TalonLoc.Left || loc == TalonLoc.Right) {
                     tal.motionCurveStrength = 7;
                     tal.velocityMeasurementPeriod = VelocityMeasPeriod.Period_25Ms;
-                    tal.velocityMeasurementWindow = 8;
+                    tal.velocityMeasurementWindow = 16;
                     //General Velocity/Motion Magic
                     tal.slot0.kP = DRIVE.kDriveKp;
                     tal.slot0.kD = DRIVE.kDriveKd;
                     tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
-                    tal.slot0.closedLoopPeakOutput = 0.4;
+                    tal.slot0.closedLoopPeakOutput = 0.5;
                     tal.slot0.allowableClosedloopError = 100;
                     //Motion Magic Turning
                     tal.slot1.kP = 2.4;
@@ -280,7 +280,7 @@ public final class Constants {
                     tal.slot1.kF = 1023.0 / 13653.0;
                     tal.slot1.integralZone = 100;
                     tal.slot1.maxIntegralAccumulator = 20;
-                    tal.slot1.closedLoopPeakOutput = 0.8;
+                    tal.slot1.closedLoopPeakOutput = 0.5;
                     tal.slot1.allowableClosedloopError = 10;
                     //~3deg
                     tal.auxPIDPolarity = false;
