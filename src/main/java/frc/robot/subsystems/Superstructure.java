@@ -12,6 +12,7 @@ import frc.robot.AutoChooser;
 import frc.robot.Constants;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.MISC;
+import frc.robot.Input;
 import frc.robot.Robot;
 import frc.robot.auto.modes.ClimbLevel2Mode;
 import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
@@ -94,6 +95,9 @@ public class Superstructure extends Subsystem {
     }
 
     public synchronized void setRobotState(RobotState state) {
+        if (mRobotState != RobotState.TELEOP_DRIVE) {
+            Input.rumbleDriverController();
+        }
         mRobotState = state;
         switch (state) {
             case TELEOP_DRIVE:

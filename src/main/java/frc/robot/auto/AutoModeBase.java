@@ -9,7 +9,7 @@ import frc.robot.lib.util.Logger;
  */
 public abstract class AutoModeBase {
 
-    protected double mUpdateRate = 1.0 / 100.0;
+    protected double mUpdateRate = 1.0 / 200.0;
     protected boolean mActive = false;
 
     public void run() {
@@ -17,7 +17,7 @@ public abstract class AutoModeBase {
         try {
             routine();
         } catch (AutoModeEndedException e) {
-            Logger.logErrorWithTrace("AUTO MODE DONE!!!! ENDED EARLY!!!!");
+            Logger.logMarker("AUTO MODE DONE!!!!");
             return;
         }
         done();

@@ -21,6 +21,14 @@ public class SubsystemManager {
     private double timestamp_ = 0;
     private boolean running_;
     private int count = 0;
+
+    /**
+     * Control Input, periodic inputs/outputs, and quick updates should be run every cycle (20ms)
+     * Slow updates, telemetry, and safety checks should be run approx every 100ms.
+     * One subsystem should update each cycle to extreme minimize delays.
+     * Vision updates should occur every 20ms regardless of enabled state.
+     * While disbaled, run telemetry at 50hz (every 20ms) as there is no need to slow it down
+     */
     private final CrashTrackingRunnable runnable_ = new CrashTrackingRunnable() {
         @Override public void runCrashTracked() {
             synchronized (taskRunningLock_) {
@@ -71,7 +79,7 @@ public class SubsystemManager {
         }
     }
 
-    public void perioidicUpdate() {
+    public void periodicUpdate() {
         mainDt.updateDt();
     }
 
@@ -102,6 +110,9 @@ public class SubsystemManager {
         notifier_.startPeriodic(GENERAL.kFastLooperDt);
     }
 
+    /**
+     * Never disable the main loop, simply set the running boolean to false to stop outputs
+     */
     public void stop() {
         if (running_) {
             Logger.logMarker("Stopping Loops");

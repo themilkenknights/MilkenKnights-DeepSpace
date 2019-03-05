@@ -1,8 +1,7 @@
 package frc.robot.auto;
 
-import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.lib.util.CrashTrackingRunnable;
+import frc.robot.lib.util.DeltaTime;
 
 /**
  * This class selects, runs, and stops (if necessary) a specified autonomous mode.
@@ -11,9 +10,7 @@ public class AutoModeExecutor {
 
     private AutoModeBase m_auto_mode;
     private Thread m_thread = null;
-    private double timestamp_ = 0;
-    private double dt_ = 0;
-    private int i = 0;
+    private DeltaTime baseTimer = new DeltaTime("Auto Base", 5);
 
     public void start() {
         if (m_thread != null) {
@@ -37,15 +34,8 @@ public class AutoModeExecutor {
         m_thread = new Thread(new CrashTrackingRunnable() {
             @Override public void runCrashTracked() {
                 if (m_auto_mode != null) {
-                    double now = Timer.getFPGATimestamp();
+                    baseTimer.updateDt();
                     m_auto_mode.run();
-                    dt_ = now - timestamp_;
-                    timestamp_ = now;
-                    if (i == 10) {
-                        SmartDashboard.putNumber("Auto Mode Dt", dt_);
-                        i = 0;
-                    }
-                    i++;
                 }
             }
         });

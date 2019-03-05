@@ -1,5 +1,6 @@
 package frc.robot;
 
+import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.INPUT;
 import frc.robot.lib.drivers.MkJoystick;
@@ -8,6 +9,7 @@ import frc.robot.lib.math.DriveHelper;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
+import frc.robot.lib.util.MkTime;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Drive;
@@ -61,6 +63,8 @@ public class Input {
 
     private static final MkJoystickButton mTransferButton = mOperatorJoystick.getButton(12, "Transfer Hatch Button");
 
+    private static MkTime rumbleTimer = new MkTime();
+
     private static boolean isOperatorJoystickConnected = false;
 
     private static Drive mDrive = Drive.getInstance();
@@ -79,6 +83,11 @@ public class Input {
             isOperatorJoystickConnected = true;
         }
 
+        if (rumbleTimer.isDone()) {
+            mDriverJoystick.setRumble(RumbleType.kLeftRumble, 0.0);
+            mDriverJoystick.setRumble(RumbleType.kRightRumble, 0.0);
+            rumbleTimer.reset();
+        }
 
         if (mStopAuto.isPressed()) {
             mStructure.setRobotState(RobotState.TELEOP_DRIVE);
@@ -205,5 +214,11 @@ public class Input {
             }
 
         }
+    }
+
+    public static void rumbleDriverController() {
+        mDriverJoystick.setRumble(RumbleType.kLeftRumble, 0.25);
+        mDriverJoystick.setRumble(RumbleType.kRightRumble, 0.25);
+        rumbleTimer.start(0.25);
     }
 }
