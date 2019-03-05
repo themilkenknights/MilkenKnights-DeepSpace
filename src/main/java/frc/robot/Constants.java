@@ -6,7 +6,7 @@ import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
 import com.ctre.phoenix.motorcontrol.RemoteSensorSource;
 import com.ctre.phoenix.motorcontrol.VelocityMeasPeriod;
 import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
-import frc.robot.lib.drivers.MkTalon.TalonLoc;
+import frc.robot.misc.MkTalon.TalonLoc;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.InterpolatingTreeMap;

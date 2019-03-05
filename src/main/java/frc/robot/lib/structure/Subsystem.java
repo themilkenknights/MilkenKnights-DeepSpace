@@ -45,5 +45,7 @@ public abstract class Subsystem {
 
     public abstract void onStop(double timestamp);
 
+    public abstract void onRestart(double timestamp);
+
     public abstract boolean checkSystem();
 }

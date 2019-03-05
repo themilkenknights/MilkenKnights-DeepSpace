@@ -1,9 +1,10 @@
-package frc.robot.lib.drivers;
+package frc.robot.misc;
 
 import com.ctre.phoenix.ErrorCode;
 import com.ctre.phoenix.motorcontrol.ControlFrame;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
+import com.ctre.phoenix.motorcontrol.Faults;
 import com.ctre.phoenix.motorcontrol.InvertType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.StatusFrame;
@@ -41,7 +42,7 @@ public class MkTalon {
     public final TalonSRX masterTalon, slaveTalon;
     public final VictorSPX slaveVictor;
     private final int kShort = 20;
-    private final int kLong = GENERAL.kLongCANTimeoutMs;
+    private final int kLong = 50;
     private final double motorTimer = GENERAL.kMotorSafetyTimer;
     public PigeonIMU mPigeon;
     private TalonLoc mSide;
@@ -191,11 +192,6 @@ public class MkTalon {
                 CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 100, kShort));
                 slaveTalon.follow(masterTalon);
             }
-       /*   Faults victorFaults = new Faults();
-            CTRE(slaveTalon.getFaults(victorFaults));
-            if(victorFaults.hasAnyFault()){
-                Logger.logErrorWithTrace(victorFaults.toString());
-            } */
         } else {
             CTRE(slaveVictor.clearStickyFaults(kShort));
             CTRE(slaveVictor.configFactoryDefault(kLong));
@@ -208,31 +204,18 @@ public class MkTalon {
             slaveVictor.setNeutralMode(NeutralMode.Brake);
             slaveVictor.setControlFramePeriod(ControlFrame.Control_3_General, 5);
             slaveVictor.follow(masterTalon);
-           /* Faults victorFaults = new Faults();
-            CTRE(slaveVictor.getFaults(victorFaults));
-            if(victorFaults.hasAnyFault()){
-                Logger.logErrorWithTrace(victorFaults.toString());
-            } */
-        }
 
+        }
         if (mSide == TalonLoc.Cargo_Arm) {
             slaveVictor.setInverted(InvertType.OpposeMaster);
         }
-
-      /*  Faults talonFaults = new Faults();
-        CTRE(masterTalon.getFaults(talonFaults));
-        if(talonFaults.hasAnyFault()){
-            Logger.logErrorWithTrace(talonFaults.toString());
-        } */
-
         if (mSide == TalonLoc.Cargo_Intake) {
             mPigeon = new PigeonIMU(masterTalon);
             CTRE(mPigeon.configFactoryDefault(200));
-            CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_1_General, 5, 100));
-            CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_9_SixDeg_YPR, 3, 100));
-            CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_6_SensorFusion, 3, 100));
+            CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_1_General, 3, kLong));
+            CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_9_SixDeg_YPR, 3, kLong));
+            CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_6_SensorFusion, 3, kLong));
         }
-
         motorSafetyTimer.start(motorTimer);
     }
 
@@ -282,52 +265,6 @@ public class MkTalon {
         }
     }
 
-    private int getZero(int bookend0, int bookend1, boolean bCrossZeroOnInterval, int offset) {
-		/*int ticksPerRevolution = 4096;
-		// Normalize bookends (should be 0 - ticksPerRevolution)
-		bookend0 &= (ticksPerRevolution - 1);
-		bookend1 &= (ticksPerRevolution - 1);
-
-		// Assign greater and lesser bookend
-		int greaterBookend;
-		int lesserBookend;
-
-		if (bookend0 > bookend1) {
-			greaterBookend = bookend0;
-			lesserBookend = bookend1;
-		} else {
-			greaterBookend = bookend1;
-			lesserBookend = bookend0;
-		}
-
-		int average = (greaterBookend + lesserBookend) / 2;
-
-		// Get Fractional Part of Pulse Width Position (0 - ticksPerRevolution)
-		int pulseWidth = masterTalon.getSensorCollection().getPulseWidthPosition();
-		pulseWidth &= (ticksPerRevolution - 1);
-
-		if (bCrossZeroOnInterval) {
-			if (pulseWidth > average) {
-				pulseWidth -= ticksPerRevolution;
-			}
-		} else {
-			if (pulseWidth < ((ticksPerRevolution / 2 - average) & 0x0FFF)) {
-				pulseWidth += ticksPerRevolution;
-			}
-		}
-
-		pulseWidth += offset; */
-
-        int pulseWidth = masterTalon.getSensorCollection().getPulseWidthPosition();
-        if (pulseWidth > 0) {
-            pulseWidth = pulseWidth & 0xFFF;
-        } else {
-            pulseWidth += (-Math.round(((double) pulseWidth / 4096) - 0.50)) * 4096;
-        }
-        System.out.println(mSide.toString() + " PW: " + pulseWidth + " B0: " + -bookend0);
-        return pulseWidth + (-bookend0);
-    }
-
     /**
      * Update shuffleboard with latest values
      */
@@ -336,10 +273,6 @@ public class MkTalon {
         mPos.setDouble(getPosition());
         mError.setDouble(getError());
         mOutput.setDouble(masterTalon.getMotorOutputPercent());
-    }
-
-    public PigeonIMU getmPigeon() {
-        return mPigeon;
     }
 
     /**
@@ -704,6 +637,31 @@ public class MkTalon {
 
         resetConfig();
         return check;
+    }
+
+    public void checkForError() {
+        masterTalon.clearStickyFaults();
+        Timer.delay(0.05);
+        Faults masterFaults = new Faults();
+        CTRE(masterTalon.getFaults(masterFaults));
+        if (masterFaults.hasAnyFault()) {
+            Logger.logMarker(masterFaults.toString());
+        }
+        if (mSide == TalonLoc.Cargo_Intake || mSide == TalonLoc.Hatch_Arm) {
+            slaveTalon.clearStickyFaults();
+            Faults slaveTalonFaults = new Faults();
+            CTRE(slaveTalon.getFaults(slaveTalonFaults));
+            if (slaveTalonFaults.hasAnyFault()) {
+                Logger.logMarker(slaveTalonFaults.toString());
+            }
+        } else {
+            slaveVictor.clearStickyFaults();
+            Faults slaveVictorFaults = new Faults();
+            CTRE(slaveVictor.getFaults(slaveVictorFaults));
+            if (slaveVictorFaults.hasAnyFault()) {
+                Logger.logMarker(slaveVictorFaults.toString());
+            }
+        }
     }
 
     /**

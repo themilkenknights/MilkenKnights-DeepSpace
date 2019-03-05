@@ -166,6 +166,10 @@ public class Superstructure extends Subsystem {
         setRearClimbState(ClimbState.RETRACTED);
     }
 
+    @Override public void onRestart(double timestamp) {
+
+    }
+
     @Override public boolean checkSystem() {
         return mCompressor.getCompressorCurrent() > 0.0 && mPDP.getTotalCurrent() > 0.0 && mPDP.getVoltage() > 0.0;
     }

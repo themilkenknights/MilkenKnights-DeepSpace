@@ -6,6 +6,7 @@ import frc.robot.Constants.GENERAL;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.CrashTrackingRunnable;
 import frc.robot.lib.util.DeltaTime;
+import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.Vision;
 import java.util.List;
 
@@ -25,18 +26,20 @@ public class SubsystemManager {
             synchronized (taskRunningLock_) {
                 double now = fastDt.updateDt();
                 if (running_) {
+                    int i = 0;
                     for (Subsystem subsystem : mAllSubsystems) {
                         Input.updateControlInput();
                         subsystem.readPeriodicInputs(now);
                         subsystem.onQuickLoop(now);
                         subsystem.writePeriodicOutputs(now);
-                        if (count == 5) {
+                        if (count == i) {
                             subsystem.slowUpdate(now);
                             subsystem.outputTelemetry(now);
                             subsystem.safetyCheck(now);
                         }
+                        i++;
                     }
-                    if (count == 5) {
+                    if (count == 4) {
                         count = 0;
                     }
                     count++;
@@ -58,8 +61,8 @@ public class SubsystemManager {
         notifier_ = new Notifier(runnable_);
         running_ = false;
 
-        mainDt = new DeltaTime("Main", 5);
-        fastDt = new DeltaTime("Fast", 5);
+        mainDt = new DeltaTime("Iterative Dt", 5);
+        fastDt = new DeltaTime("Looper Dt", 5);
     }
 
     public void checkSystem() {
@@ -79,7 +82,7 @@ public class SubsystemManager {
         }
 
         if (!running_) {
-            System.out.println("Starting Sandstorm (Auto)");
+            Logger.logMarker("Starting Sandstorm (Auto)");
             running_ = true;
 
         }
@@ -92,7 +95,7 @@ public class SubsystemManager {
             subsystem.teleopInit(now);
         }
         if (!running_) {
-            System.out.println("Starting Teleop");
+            Logger.logMarker("Starting Teleop");
             running_ = true;
 
         }
@@ -101,7 +104,7 @@ public class SubsystemManager {
 
     public void stop() {
         if (running_) {
-            System.out.println("Stopping");
+            Logger.logMarker("Stopping Loops");
             running_ = false;
 
         }

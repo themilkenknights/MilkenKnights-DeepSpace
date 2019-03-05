@@ -12,13 +12,13 @@ import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.HATCH_ARM;
 import frc.robot.Constants.MISC;
 import frc.robot.lib.drivers.CT;
-import frc.robot.lib.drivers.MkTalon;
-import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTime;
+import frc.robot.misc.MkTalon;
+import frc.robot.misc.MkTalon.TalonLoc;
 import frc.robot.subsystems.Superstructure.RobotState;
 
 public class HatchArm extends Subsystem {
@@ -191,6 +191,10 @@ public class HatchArm extends Subsystem {
     @Override public void onStop(double timestamp) {
         setHatchSpearState(HatchSpearState.STOW);
         setHatchMechanismState(HatchMechanismState.UNKNOWN);
+    }
+
+    @Override public void onRestart(double timestamp) {
+        mArmTalon.checkForError();
     }
 
     @Override public boolean checkSystem() {

@@ -110,6 +110,10 @@ public class Vision extends Subsystem {
         setVisionPipeline();
     }
 
+    @Override public void onRestart(double timestamp) {
+
+    }
+
     @Override public boolean checkSystem() {
         return mLimeLight.isConnected();
     }

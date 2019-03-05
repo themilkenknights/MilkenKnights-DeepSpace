@@ -1,4 +1,4 @@
-package frc.robot.paths;
+package frc.robot.misc;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.lib.geometry.Pose2d;

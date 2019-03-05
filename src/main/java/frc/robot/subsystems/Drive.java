@@ -16,8 +16,6 @@ import frc.robot.Constants.CONFIG;
 import frc.robot.Constants.DRIVE;
 import frc.robot.Constants.MISC;
 import frc.robot.lib.drivers.CT;
-import frc.robot.lib.drivers.MkTalon;
-import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.geometry.Pose2d;
 import frc.robot.lib.geometry.Rotation2d;
 import frc.robot.lib.geometry.Twist2d;
@@ -26,8 +24,10 @@ import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.ReflectingCSVWriter;
-import frc.robot.paths.Kinematics;
-import frc.robot.paths.RobotState;
+import frc.robot.misc.Kinematics;
+import frc.robot.misc.MkTalon;
+import frc.robot.misc.MkTalon.TalonLoc;
+import frc.robot.misc.RobotState;
 
 public class Drive extends Subsystem {
 
@@ -140,6 +140,11 @@ public class Drive extends Subsystem {
             mCSVWriter.flush();
             mCSVWriter = null;
         }
+    }
+
+    @Override public void onRestart(double timestamp) {
+        mLeftDrive.checkForError();
+        mRightDrive.checkForError();
     }
 
     /**

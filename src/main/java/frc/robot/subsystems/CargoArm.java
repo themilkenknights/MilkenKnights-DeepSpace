@@ -12,11 +12,11 @@ import frc.robot.Constants.CAN;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.GENERAL;
 import frc.robot.lib.drivers.CT;
-import frc.robot.lib.drivers.MkTalon;
-import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
+import frc.robot.misc.MkTalon;
+import frc.robot.misc.MkTalon.TalonLoc;
 
 public class CargoArm extends Subsystem {
 
@@ -132,6 +132,11 @@ public class CargoArm extends Subsystem {
 
     @Override public void onStop(double timestamp) {
         setIntakeRollers(0);
+    }
+
+    @Override public void onRestart(double timestamp) {
+        mArmTalon.checkForError();
+        mIntakeTalon.checkForError();
     }
 
     @Override public boolean checkSystem() {

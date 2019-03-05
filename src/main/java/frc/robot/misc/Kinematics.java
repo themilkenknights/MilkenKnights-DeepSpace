@@ -1,4 +1,4 @@
-package frc.robot.paths;
+package frc.robot.misc;
 
 import frc.robot.Constants;
 import frc.robot.Constants.DRIVE;
