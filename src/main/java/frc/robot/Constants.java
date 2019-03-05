@@ -264,7 +264,7 @@ public final class Constants {
                 tal.forwardLimitSwitchNormal = LimitSwitchNormal.Disabled;
                 tal.reverseLimitSwitchNormal = LimitSwitchNormal.Disabled;
                 if (loc == TalonLoc.Left || loc == TalonLoc.Right) {
-                    tal.motionCurveStrength = 7;
+                    tal.motionCurveStrength = 5;
                     tal.velocityMeasurementPeriod = VelocityMeasPeriod.Period_25Ms;
                     tal.velocityMeasurementWindow = 16;
                     //General Velocity/Motion Magic
@@ -285,7 +285,7 @@ public final class Constants {
                     //~3deg
                     tal.auxPIDPolarity = false;
                     tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.9);
-                    tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.5);
+                    tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.4);
                 } else if (loc == TalonLoc.Cargo_Arm || loc == TalonLoc.Hatch_Arm) {
                     tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
                     tal.reverseLimitSwitchSource = LimitSwitchSource.RemoteTalonSRX;
