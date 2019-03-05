@@ -83,17 +83,19 @@ public class Input {
             isOperatorJoystickConnected = true;
         }
 
+        //Stop rumble after 250ms
         if (rumbleTimer.isDone()) {
             mDriverJoystick.setRumble(RumbleType.kLeftRumble, 0.0);
             mDriverJoystick.setRumble(RumbleType.kRightRumble, 0.0);
             rumbleTimer.reset();
         }
 
+        //Disable Auto Mode and set robot state to teleop drive for manual control
         if (mStopAuto.isPressed()) {
             mStructure.setRobotState(RobotState.TELEOP_DRIVE);
-            Drive.getInstance().setOpenLoop(DriveSignal.BRAKE);
         }
 
+        //Re-seed absolute values to relative encoder and disable soft limit for arms
         if (mZeroArmToggleLimit.isPressed()) {
             mCargo.zeroEncoder();
             mHatch.zeroEncoder();
@@ -101,10 +103,12 @@ public class Input {
             mHatch.disableSoftLimit();
         }
 
+        //Toggle Limelight LEDs
         if (toggleVision.isPressed()) {
             mVision.toggleVision();
         }
 
+        //Move arms in open loop while held. This switches the arm to open loop control mode.
         if (mCargoArmManual.isHeld()) {
             mCargo.setOpenLoop(MkMath.handleDeadband(-mOperatorJoystick.getRawAxis(1), INPUT.kOperatorDeadband));
             mVision.configCargoStream();
@@ -114,24 +118,32 @@ public class Input {
             mVision.configHatchStream();
         }
 
+        //Ensure that arm stops after manual mode button is released and is not set at the last output
         if (mOperatorJoystick.getRawButtonReleased(2)) {
             mCargo.setOpenLoop(0.0);
         }
 
+        //Ensure that arm stops after manual mode button is released and is not set at the last output
         if (mOperatorJoystick.getTriggerReleased()) {
             mHatch.setOpenLoop(0.0);
         }
 
+        //Update robot state as it might have changed
         currentRobotState = mStructure.getRobotState();
 
+        //Enable auto climb that uses encoders & gyro
         if (mAutoClimb.isPressed()) {
             mStructure.setRobotState(RobotState.AUTO_CLIMB);
         } else if (mFrontClimb.isPressed()) {
+            //Toggle Front Climb Actuators (Toward Spear)
             mStructure.setFrontClimbState(mStructure.getFrontClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
         } else if (mRearClimb.isPressed()) {
+            //Toggle Rear Climb Actuators (Toward Cargo Arm/Rio)
             mStructure.setRearClimbState(mStructure.getRearClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
         }
 
+        //GTA Style driving.
+        //Right and Left Triggers are added (with left being negative) to get a throttle value
         if (currentRobotState == RobotState.TELEOP_DRIVE) {
             double forward = (-mDriverJoystick.getRawAxis(2) + mDriverJoystick.getRawAxis(3));
             double turn = (-mDriverJoystick.getRawAxis(0));
@@ -216,6 +228,9 @@ public class Input {
         }
     }
 
+    /**
+     * Rumble Xbox Controller for 250ms at 25% output
+     */
     public static void rumbleDriverController() {
         mDriverJoystick.setRumble(RumbleType.kLeftRumble, 0.25);
         mDriverJoystick.setRumble(RumbleType.kRightRumble, 0.25);
