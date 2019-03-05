@@ -3,6 +3,7 @@ package frc.robot.subsystems;
 import edu.wpi.cscore.HttpCamera;
 import edu.wpi.cscore.MjpegServer;
 import edu.wpi.cscore.UsbCamera;
+import edu.wpi.cscore.VideoMode;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
@@ -18,21 +19,22 @@ public class Vision extends Subsystem {
 
     private LimeLight mLimeLight;
     private NetworkTableEntry mLLX, mDist, mArea, mLED;
-    private UsbCamera hatchCam;
+    private UsbCamera cargoCam;
     private boolean isVision = false;
     private MjpegServer server;
     private HttpCamera LLFeed;
     private MkTime mLEDTimer = new MkTime();
 
     private Vision() {
-        hatchCam = CameraServer.getInstance().startAutomaticCapture(0);
-        hatchCam.setConnectVerbose(0);
+        cargoCam = CameraServer.getInstance().startAutomaticCapture(0);
+        cargoCam.setVideoMode(VideoMode.PixelFormat.kMJPEG, 320, 240, 30);
+        cargoCam.setConnectVerbose(0);
 
         LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
 
-        server = CameraServer.getInstance().addSwitchedCamera("Toggle Cam");
+        server = new MjpegServer("Switched Camera", 5805);
         server.setSource(LLFeed);
-        server.setSource(hatchCam);
+        server.setSource(cargoCam);
 
         ShuffleboardTab mVisionTab = Shuffleboard.getTab("Vision");
         mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
@@ -40,7 +42,7 @@ public class Vision extends Subsystem {
         mArea = mVisionTab.add("Area", 0.0).getEntry();
         mLED = mVisionTab.add("LED State", true).getEntry();
         mLimeLight = new LimeLight();
-        enableLED();
+        disableLED();
     }
 
     public static Vision getInstance() {
@@ -56,6 +58,8 @@ public class Vision extends Subsystem {
 
     public void setVisionPipeline() {
         mLimeLight.setPipeline(0);
+        mLimeLight.setLEDMode(LedMode.kforceOff);
+        isVision = false;
     }
 
     public void toggleVision() {
@@ -67,13 +71,23 @@ public class Vision extends Subsystem {
     }
 
     public void enableLED() {
-        mLimeLight.setLEDMode(LedMode.kforceOn);
-        isVision = true;
+        if (!isVision) {
+            mLimeLight.setLEDMode(LedMode.kforceOn);
+            isVision = true;
+            mLEDTimer.start(0.05);
+        }
+    }
+
+    public boolean timerDone() {
+        return mLEDTimer.isDone();
     }
 
     public void disableLED() {
-        mLimeLight.setLEDMode(LedMode.kforceOff);
-        isVision = false;
+        if (isVision) {
+            mLimeLight.setLEDMode(LedMode.kforceOff);
+            isVision = false;
+            mLEDTimer.reset();
+        }
     }
 
     public void teleopInit(double timestamp) {

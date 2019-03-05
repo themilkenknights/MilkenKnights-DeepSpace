@@ -125,7 +125,9 @@ public class Superstructure extends Subsystem {
 
     private void startVisionHatchOuttake() {
         Vision.getInstance().enableLED();
-        Timer.delay(0.02);
+        if (!Vision.getInstance().timerDone()) {
+            Timer.delay(0.02);
+        }
         Vision.getInstance().updateLimelight();
         if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
             setRobotState(RobotState.TELEOP_DRIVE);
@@ -137,7 +139,9 @@ public class Superstructure extends Subsystem {
 
     private void startVisionHatchIntake() {
         Vision.getInstance().enableLED();
-        Timer.delay(0.02);
+        if (!Vision.getInstance().timerDone()) {
+            Timer.delay(0.02);
+        }
         Vision.getInstance().updateLimelight();
         if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
             setRobotState(RobotState.TELEOP_DRIVE);
@@ -149,7 +153,9 @@ public class Superstructure extends Subsystem {
 
     private void startVisionCargoOuttake() {
         Vision.getInstance().enableLED();
-        Timer.delay(0.02);
+        if (!Vision.getInstance().timerDone()) {
+            Timer.delay(0.02);
+        }
         mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
         CargoArm.getInstance().setArmState(CargoArmState.REVERSE_CARGOSHIP);
         Vision.getInstance().updateLimelight();
