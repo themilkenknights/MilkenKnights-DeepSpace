@@ -1,5 +1,6 @@
 package frc.robot.auto.actions;
 
+import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTime;
 import frc.robot.lib.vision.LimelightTarget;
@@ -16,7 +17,9 @@ public class MotionMagicVisionPigeon implements Action {
     private MkTime timer = new MkTime();
     private double lastDist, lastAngle, lastSkew = 0.0;
     private MkTime downTimer = new MkTime();
+    private MkTime driveBackTimer = new MkTime();
     private VisionServoGoal goal;
+    private boolean turnBack = false;
 
     public MotionMagicVisionPigeon(VisionServoGoal goal) {
         this.goal = goal;
@@ -54,7 +57,9 @@ public class MotionMagicVisionPigeon implements Action {
 
 
         LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
-        if (mTarget.isValidTarget() && mTarget.getDistance() < 28.0) {
+        if (turnBack && !driveBackTimer.isDone()) {
+            Drive.getInstance().setOpenLoop(new DriveSignal(-0.3, -0.3));
+        } else if (mTarget.isValidTarget() && mTarget.getDistance() < 28.0) {
             lastAngle = -mTarget.getYaw();
             lastDist = mTarget.getDistance();
             lastSkew = mTarget.getSkew() * 0.01;
@@ -67,13 +72,19 @@ public class MotionMagicVisionPigeon implements Action {
     }
 
     @Override public void start() {
+        turnBack = false;
         LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
         if (mTarget.isValidTarget()) {
-            lastAngle = -mTarget.getYaw();
-            lastDist = mTarget.getDistance();
-            lastSkew = mTarget.getSkew() * 0.01;
-            Drive.getInstance().setDistanceAndAngle(lastDist, lastAngle + lastSkew);
-            timer.start(4.0);
+            if (mTarget.getDistance() < 35 && Math.abs(mTarget.getYaw()) > 15.0) {
+                turnBack = true;
+                driveBackTimer.start(1.0);
+            } else {
+                lastAngle = -mTarget.getYaw();
+                lastDist = mTarget.getDistance();
+                lastSkew = mTarget.getSkew() * 0.01;
+                Drive.getInstance().setDistanceAndAngle(lastDist, lastAngle + lastSkew);
+                timer.start(4.0);
+            }
         } else {
             Logger.logMarker("Invalid Target");
         }
