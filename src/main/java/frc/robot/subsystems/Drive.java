@@ -2,8 +2,6 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
-import com.ctre.phoenix.motorcontrol.FeedbackDevice;
-import com.ctre.phoenix.motorcontrol.FollowerType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.networktables.NetworkTableEntry;
@@ -86,8 +84,10 @@ public class Drive extends Subsystem {
      * Step 1: Read inputs from Talon and Pigeon
      */
     @Override public synchronized void readPeriodicInputs(double timestamp) {
+        double fusedHeading = mPigeon.getFusedHeading();
         mPeriodicIO.timestamp = Timer.getFPGATimestamp();
-        mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(mPigeon.getFusedHeading()).rotateBy(mGyroOffset);
+        mPeriodicIO.fusedHeading = fusedHeading;
+        mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(fusedHeading).rotateBy(mGyroOffset);
         mPeriodicIO.leftPos = mLeftDrive.getPosition();
         mPeriodicIO.rightPos = mRightDrive.getPosition();
         mPeriodicIO.leftVel = mLeftDrive.getVelocity();
@@ -125,7 +125,8 @@ public class Drive extends Subsystem {
             mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward, mPeriodicIO.brake_mode);
             mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward, mPeriodicIO.brake_mode);
         } else if (mDriveControlState == DriveControlState.PIGEON_SERVO) {
-            mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.AuxPID, mPeriodicIO.right_feedforward, NeutralMode.Brake);
+            mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, DemandType.AuxPID, mPeriodicIO.left_feedforward, mPeriodicIO.brake_mode);
+            mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.AuxPID, mPeriodicIO.right_feedforward, mPeriodicIO.brake_mode);
         } else {
             Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
         }
@@ -211,45 +212,22 @@ public class Drive extends Subsystem {
             mDriveControlState = DriveControlState.PIGEON_SERVO;
         }
 
-        mPeriodicIO.left_demand = 0.0;
-        mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist) + ((mPeriodicIO.rightPos + mPeriodicIO.leftPos) / 2.0);
-        mPeriodicIO.left_feedforward = 0.0;
-        mPeriodicIO.right_feedforward = ((mPigeon.getFusedHeading() + angle) / 360.0) * 8192.0;
+        mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(dist) + (mPeriodicIO.leftPos);
+        mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist) + (mPeriodicIO.rightPos);
+        mPeriodicIO.left_feedforward = MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
+        mPeriodicIO.right_feedforward = MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
         mPeriodicIO.brake_mode = NeutralMode.Brake;
     }
 
     public void configHatchVision() {
         if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
-            mRightDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
-            mLeftDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
-            left_encoder_prev_distance_ = 0;
-            right_encoder_prev_distance_ = 0;
-            mPeriodicIO.rightPos = 0.0;
-            mPeriodicIO.leftPos = 0.0;
             mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 0.5, 0);
-            mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.SensorSum, CONFIG.kPIDPrimary, 0);
-            mRightDrive.masterTalon.configSelectedFeedbackCoefficient(0.5, CONFIG.kPIDPrimary, 0);
-            mRightDrive.slaveVictor.follow(mRightDrive.masterTalon, FollowerType.PercentOutput);
-            mLeftDrive.masterTalon.follow(mRightDrive.masterTalon, FollowerType.AuxOutput1);
-            mLeftDrive.slaveVictor.follow(mRightDrive.masterTalon, FollowerType.AuxOutput1);
         }
     }
 
     private void configNormalDrive() {
         if (mDriveControlState == DriveControlState.PIGEON_SERVO) {
             mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 1.0, 0);
-            mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, CONFIG.kPIDPrimary, 0);
-            mRightDrive.masterTalon.configSelectedFeedbackCoefficient(1.0, CONFIG.kPIDPrimary, 0);
-            mRightDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
-            mLeftDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
-            left_encoder_prev_distance_ = 0;
-            right_encoder_prev_distance_ = 0;
-            mPeriodicIO.rightPos = 0.0;
-            mPeriodicIO.leftPos = 0.0;
-            mLeftDrive.slaveVictor.follow(mLeftDrive.masterTalon);
-            mRightDrive.slaveVictor.follow(mRightDrive.masterTalon);
-            mLeftDrive.masterTalon.set(ControlMode.PercentOutput, 0.0);
-            mRightDrive.masterTalon.set(ControlMode.PercentOutput, 0.0);
         }
     }
 
@@ -394,7 +372,9 @@ public class Drive extends Subsystem {
         public double rightPos;
         public double leftVel;
         public double rightVel;
+        public double fusedHeading;
         public Rotation2d gyro_heading = Rotation2d.identity();
+
         // OUTPUTS
         public double left_demand;
         public double right_demand;

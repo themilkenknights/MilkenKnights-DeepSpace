@@ -641,7 +641,6 @@ public class MkTalon {
 
     public void checkForError() {
         masterTalon.clearStickyFaults();
-        Timer.delay(0.05);
         Faults masterFaults = new Faults();
         CTRE(masterTalon.getFaults(masterFaults));
         if (masterFaults.hasAnyFault()) {
@@ -661,6 +660,20 @@ public class MkTalon {
             if (slaveVictorFaults.hasAnyFault()) {
                 Logger.logMarker(slaveVictorFaults.toString());
             }
+        }
+    }
+
+    public void checkForReset() {
+        boolean reset = false;
+        reset = masterTalon.hasResetOccurred();
+        if (mSide == TalonLoc.Cargo_Intake || mSide == TalonLoc.Hatch_Arm) {
+            reset = slaveTalon.hasResetOccurred();
+        } else {
+            reset = slaveVictor.hasResetOccurred();
+        }
+
+        if (reset) {
+            Logger.logErrorWithTrace("Reset Has Occurred On Side: " + mSide);
         }
     }
 

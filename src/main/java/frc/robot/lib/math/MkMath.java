@@ -64,6 +64,14 @@ public class MkMath {
         return nativeUnitsToDegrees(vel) * 10;
     }
 
+    public static double degreesToPigeonNativeUnits(double angle) {
+        return (angle / 360.0) * 8192.0;
+    }
+
+    public static double pigeonNativeUnitsToDegrees(double units) {
+        return (units / 8192.0) * 360.0;
+    }
+
     public static double normalAbsoluteAngleDegrees(double angle) {
         return (angle %= 360) >= 0 ? angle : (angle + 360);
     }
