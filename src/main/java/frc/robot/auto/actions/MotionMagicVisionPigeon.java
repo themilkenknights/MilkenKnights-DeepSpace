@@ -14,7 +14,7 @@ import frc.robot.subsystems.Vision;
 public class MotionMagicVisionPigeon implements Action {
 
     private MkTime timer = new MkTime();
-    private double lastDist, lastAngle = 0.0;
+    private double lastDist, lastAngle, lastSkew = 0.0;
     private MkTime downTimer = new MkTime();
     private VisionServoGoal goal;
 
@@ -70,7 +70,8 @@ public class MotionMagicVisionPigeon implements Action {
         if (mTarget.isValidTarget()) {
             lastAngle = -mTarget.getYaw();
             lastDist = mTarget.getDistance();
-            Drive.getInstance().setDistanceAndAngle(lastDist, lastAngle);
+            lastSkew = mTarget.getSkew() * 0.01;
+            Drive.getInstance().setDistanceAndAngle(lastDist, lastAngle + lastSkew);
             timer.start(4.0);
         } else {
             Logger.logMarker("Invalid Target");
