@@ -29,6 +29,8 @@ public class Input {
     private static final MkJoystick mDriverJoystick = new MkJoystick(0);
     private static final MkJoystick mOperatorJoystick = new MkJoystick(1);
 
+    private static final MkJoystickButton mToggleVelocity = mDriverJoystick.getButton(10, "Toggle Velocity Setpoint");
+
     private static final MkJoystickButton mHatchVisionPlace = mDriverJoystick.getButton(1, "Hatch Vision Place");
 
     private static final MkJoystickButton mCargoVisionOuttake = mDriverJoystick.getButton(2, "Vision Cargo Outtake");
@@ -66,6 +68,8 @@ public class Input {
     private static MkTime rumbleTimer = new MkTime();
 
     private static boolean isOperatorJoystickConnected = false;
+
+    private static boolean isVelocitySetpoint = false;
 
     private static Drive mDrive = Drive.getInstance();
     private static HatchArm mHatch = HatchArm.getInstance();
@@ -128,6 +132,10 @@ public class Input {
             mHatch.setOpenLoop(0.0);
         }
 
+        if (mToggleVelocity.isPressed()) {
+            isVelocitySetpoint = !isVelocitySetpoint;
+        }
+
         //Update robot state as it might have changed
         currentRobotState = mStructure.getRobotState();
 
@@ -148,7 +156,11 @@ public class Input {
             double forward = (-mDriverJoystick.getRawAxis(2) + mDriverJoystick.getRawAxis(3));
             double turn = (-mDriverJoystick.getRawAxis(0));
             DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
-            mDrive.setOpenLoop(controlSig);
+            if (isVelocitySetpoint) {
+                mDrive.setVelocitySetpointNormal(controlSig);
+            } else {
+                mDrive.setOpenLoop(controlSig);
+            }
         }
 
         if (isOperatorJoystickConnected) {

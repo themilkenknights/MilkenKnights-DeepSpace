@@ -31,7 +31,7 @@ public class Drive extends Subsystem {
 
     private final MkTalon mLeftDrive, mRightDrive;
     public PeriodicIO mPeriodicIO;
-    public DriveControlState mDriveControlState = DriveControlState.OPEN_LOOP;
+    private DriveControlState mDriveControlState = DriveControlState.OPEN_LOOP;
     private Rotation2d mGyroOffset = Rotation2d.identity();
     private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
     private double left_encoder_prev_distance_, right_encoder_prev_distance_ = 0.0;
@@ -127,6 +127,9 @@ public class Drive extends Subsystem {
         } else if (mDriveControlState == DriveControlState.PIGEON_SERVO) {
             mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, DemandType.AuxPID, mPeriodicIO.left_feedforward, mPeriodicIO.brake_mode);
             mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.AuxPID, mPeriodicIO.right_feedforward, mPeriodicIO.brake_mode);
+        } else if (mDriveControlState == DriveControlState.VELOCITY_SETPOINT) {
+            mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
+            mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
         } else {
             Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
         }
@@ -166,6 +169,28 @@ public class Drive extends Subsystem {
         mPeriodicIO.left_feedforward = 0.0;
         mPeriodicIO.right_feedforward = 0.0;
         mPeriodicIO.brake_mode = NeutralMode.Brake;
+    }
+
+    /**
+     * Controls Drivetrain in Closed-loop velocity Mode Method sets Talons in Native Units per 100ms
+     *
+     * @param signal An object that contains left and right velocities (inches per sec)
+     */
+    public synchronized void setVelocity(DriveSignal signal, DriveSignal feedforward) {
+        if (mDriveControlState != DriveControlState.VELOCITY_SETPOINT) {
+            Logger.logMarker("Switching to Velocity");
+            mPeriodicIO.left_demand = 0.0;
+            mPeriodicIO.right_demand = 0.0;
+            mPeriodicIO.left_feedforward = 0.0;
+            mPeriodicIO.right_feedforward = 0.0;
+            configNormalDrive();
+            mDriveControlState = DriveControlState.VELOCITY_SETPOINT;
+        }
+        mPeriodicIO.left_demand = signal.getLeft();
+        mPeriodicIO.right_demand = signal.getRight();
+        mPeriodicIO.left_feedforward = feedforward.getLeft();
+        mPeriodicIO.right_feedforward = feedforward.getRight();
+        mPeriodicIO.brake_mode = signal.getBrakeMode();
     }
 
     /**
@@ -308,6 +333,10 @@ public class Drive extends Subsystem {
         CT.RE(mPigeon.setAccumZAngle(0, 0));
     }
 
+    public void setVelocitySetpointNormal(DriveSignal sig){
+        setVelocity(new DriveSignal(sig.getLeft() * DRIVE.kMaxNativeVel, sig.getRight() * DRIVE.kMaxNativeVel), DriveSignal.BRAKE);
+    }
+
     /**
      * Left is Positive
      * Right is Negative
@@ -336,6 +365,10 @@ public class Drive extends Subsystem {
         return Math.abs(dist - mPeriodicIO.rightPos) < DRIVE.kGoalPosTolerance && Math.abs(angle - mPeriodicIO.gyro_heading.getDegrees()) < 1.5;
     }
 
+    public DriveControlState getDriveControlState() {
+        return mDriveControlState;
+    }
+
     /**
      * Calculate position deltas and read gyro angle to update odometry information.
      *
@@ -355,7 +388,7 @@ public class Drive extends Subsystem {
     }
 
     public enum DriveControlState {
-        OPEN_LOOP, MOTION_MAGIC, PIGEON_SERVO
+        OPEN_LOOP, MOTION_MAGIC, PIGEON_SERVO, VELOCITY_SETPOINT
     }
 
 

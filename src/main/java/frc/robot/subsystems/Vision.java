@@ -24,6 +24,7 @@ public class Vision extends Subsystem {
     private MjpegServer server;
     private HttpCamera LLFeed;
     private MkTime mLEDTimer = new MkTime();
+    private MkTime autoOffTimer = new MkTime();
 
     private Vision() {
         cargoCam = CameraServer.getInstance().startAutomaticCapture(0);
