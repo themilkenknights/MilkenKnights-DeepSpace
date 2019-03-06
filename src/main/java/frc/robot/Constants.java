@@ -116,7 +116,6 @@ public final class Constants {
 
         //Vision Tuning
         public static final double kVisionTurnP = 0.040;
-        public static final double kVisionDriverTurnP = -0.03;
 
         public static final byte kNavXUpdateRate = (byte) 200;
     }
