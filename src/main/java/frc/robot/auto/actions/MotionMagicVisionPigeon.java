@@ -27,7 +27,7 @@ public class MotionMagicVisionPigeon implements Action {
      * or if the arm is down for a specified time and the limit switch is triggered.
      */
     @Override public boolean isFinished() {
-        return timer.isDone() || Drive.getInstance().isVisionFinished(lastDist, lastAngle) || (HatchArm.getInstance().isHatchLimitTriggered() && (
+        return timer.isDone() || Drive.getInstance().isVisionFinished(lastDist, lastAngle + lastSkew) || (HatchArm.getInstance().isHatchLimitTriggered() && (
             (HatchArm.getInstance().getHatchSpearState() == HatchSpearState.PLACE) && downTimer.isDone()));
     }
 
@@ -57,7 +57,8 @@ public class MotionMagicVisionPigeon implements Action {
         if (mTarget.isValidTarget() && mTarget.getDistance() < 28.0) {
             lastAngle = -mTarget.getYaw();
             lastDist = mTarget.getDistance();
-            Drive.getInstance().setDistanceAndAngle(lastDist, lastAngle);
+            lastSkew = mTarget.getSkew() * 0.01;
+            Drive.getInstance().setDistanceAndAngle(lastDist, lastAngle + lastSkew);
         }
     }
 
