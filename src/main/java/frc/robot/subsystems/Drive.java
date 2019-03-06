@@ -212,8 +212,8 @@ public class Drive extends Subsystem {
             mDriveControlState = DriveControlState.PIGEON_SERVO;
         }
 
-        mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(dist) + (mPeriodicIO.leftPos);
-        mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist) + (mPeriodicIO.rightPos);
+        mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(dist + mPeriodicIO.leftPos);
+        mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist + mPeriodicIO.rightPos);
         mPeriodicIO.left_feedforward = MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
         mPeriodicIO.right_feedforward = MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
         mPeriodicIO.brake_mode = NeutralMode.Brake;
