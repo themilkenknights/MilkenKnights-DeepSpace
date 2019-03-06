@@ -5,8 +5,8 @@ import frc.robot.lib.util.DriveSignal;
 
 public class DriveHelper {
 
-    private static final double kThrottleDeadband = Constants.INPUT.kThrottleDeadband;
-    private static final double kWheelDeadband = Constants.INPUT.kWheelDeadband;
+    private static final double kThrottleDeadband = Constants.GENERAL.kThrottleDeadband;
+    private static final double kWheelDeadband = Constants.GENERAL.kWheelDeadband;
 
     public static DriveSignal cheesyDrive(double throttle, double wheel, boolean cubeInputs) {
         double leftMotorSpeed;

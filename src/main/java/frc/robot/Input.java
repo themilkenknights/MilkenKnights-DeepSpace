@@ -2,7 +2,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 import frc.robot.Constants.CARGO_ARM;
-import frc.robot.Constants.INPUT;
+import frc.robot.Constants.GENERAL;
 import frc.robot.lib.drivers.MkJoystick;
 import frc.robot.lib.drivers.MkJoystickButton;
 import frc.robot.lib.math.DriveHelper;
@@ -114,11 +114,11 @@ public class Input {
 
         //Move arms in open loop while held. This switches the arm to open loop control mode.
         if (mCargoArmManual.isHeld()) {
-            mCargo.setOpenLoop(MkMath.handleDeadband(-mOperatorJoystick.getRawAxis(1), INPUT.kOperatorDeadband));
+            mCargo.setOpenLoop(MkMath.handleDeadband(-mOperatorJoystick.getRawAxis(1), GENERAL.kOperatorDeadband));
             mVision.configCargoStream();
         } else if (mOperatorJoystick.getTrigger()) {
             double movement = -mOperatorJoystick.getRawAxis(1) / 1.1;
-            mHatch.setOpenLoop(MkMath.handleDeadband(Math.pow(movement, 3), INPUT.kOperatorDeadband));
+            mHatch.setOpenLoop(MkMath.handleDeadband(Math.pow(movement, 3), GENERAL.kOperatorDeadband));
             mVision.configHatchStream();
         }
 

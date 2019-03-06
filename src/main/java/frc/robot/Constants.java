@@ -32,7 +32,7 @@ import java.util.Map;
  */
 public final class Constants {
 
-    public static final boolean kIsPracticeBot = false;
+    public static final boolean kIsPracticeBot = true;
 
 
     public static class GENERAL {
@@ -44,6 +44,9 @@ public final class Constants {
         public static final double kMotorSafetyTimer = 0.05;
         public static final double kMainLoopDt = 0.02;
         public static final double kFastLooperDt = 0.02;
+        public static final double kThrottleDeadband = 0.0;
+        public static final double kWheelDeadband = 0.003;
+        public static final double kOperatorDeadband = 0.01;
     }
 
 
@@ -99,15 +102,10 @@ public final class Constants {
         //Measured params
         public static final double kEffectiveDriveWheelTrackWidthInches = 33.75; //Effective Wheelbase
         public static final double kDriveWheelTrackWidthInches = 22.45;
-        public static final double kDriveWheelTrackRadiusMeters = (kDriveWheelTrackWidthInches / 2.0) * 0.0254;
         public static final double kWheelDiameter = 6.0;
         public static final double kCircumference = kWheelDiameter * GENERAL.PI;
-        public static final double kDriveWheelRadiusInches = kWheelDiameter / 2.0;
 
-        public static final double kDriveKp = 7 * (0.1 * 1023.0) / (700);
-        public static final double kDriveKd = 3 * kDriveKp;
-
-        public static final double kTrackScrubFactor = 0.95;
+        public static final double kTrackScrubFactor = 1.0;
 
         //Talon PID Constants
         public static final double kMaxVel = 154.62;
@@ -118,15 +116,6 @@ public final class Constants {
         public static final double kVisionTurnP = 0.040;
 
         public static final byte kNavXUpdateRate = (byte) 200;
-    }
-
-
-    public static class INPUT {
-
-        public static final double kThrottleDeadband = 0.0;
-        public static final double kWheelDeadband = 0.003;
-        public static final double kOperatorDeadband = 0.01;
-
     }
 
 
@@ -161,9 +150,7 @@ public final class Constants {
 
         public static final double kMaxRawVel = 243.029333333;
 
-
         public static final double kMaxSafeCurrent = 80;
-
         public static final double kIntakeRollerInSpeed = -0.40;
         public static final double kCargoShipIntakeRollerOut = 0.5;
         public static final double kRocketLevelOneOutSpeed = 0.3;
@@ -189,7 +176,6 @@ public final class Constants {
         public static final boolean kHatchArmMasterDirection = true;
 
         public static final double kMaxRawVel = 3085.0;
-
         public static final double kMotionMagicCruiseVel = kMaxRawVel * 0.9;
         public static final double kMotionMagicAccel = kMaxRawVel * 5;
 
@@ -205,7 +191,6 @@ public final class Constants {
     public static class MISC {
 
         public static final boolean kDriveCSVLogging = false;
-        public static final boolean kClimbRetractedState = false;
         public static final int kHatchArmChannel = 0;
         public static final int kFrontClimbSolenoidChannel = 2;
         public static final int kRearClimbSolenoidChannel = 1;
@@ -254,10 +239,12 @@ public final class Constants {
                 tal.voltageCompSaturation = 12.0;
                 tal.voltageMeasurementFilter = 32;
                 tal.neutralDeadband = 0.0;
+                //Ensure that disconnected limit switches do not cause arm motors to stop
                 tal.remoteSensorClosedLoopDisableNeutralOnLOS = true;
                 tal.limitSwitchDisableNeutralOnLOS = true;
                 tal.softLimitDisableNeutralOnLOS = true;
                 tal.motionCurveStrength = 4;
+                //Disable all limit switches by default
                 tal.forwardLimitSwitchSource = LimitSwitchSource.Deactivated;
                 tal.reverseLimitSwitchSource = LimitSwitchSource.Deactivated;
                 tal.forwardLimitSwitchNormal = LimitSwitchNormal.Disabled;
@@ -267,8 +254,8 @@ public final class Constants {
                     tal.velocityMeasurementPeriod = VelocityMeasPeriod.Period_25Ms;
                     tal.velocityMeasurementWindow = 16;
                     //General Velocity/Motion Magic
-                    tal.slot0.kP = DRIVE.kDriveKp;
-                    tal.slot0.kD = DRIVE.kDriveKd;
+                    tal.slot0.kP = 7.0 * (0.1 * 1023.0) / (700.0);
+                    tal.slot0.kD = 3.0 * tal.slot0.kP;
                     tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
                     tal.slot0.closedLoopPeakOutput = 0.5;
                     tal.slot0.allowableClosedloopError = 100;
@@ -285,16 +272,27 @@ public final class Constants {
                     tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.9);
                     tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.4);
 
-                    tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
-                    tal.primaryPID.selectedFeedbackCoefficient = 1.0;
+                    tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
+                    tal.primaryPID.selectedFeedbackCoefficient = 0.5;
 
-                    tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor0;
+                    tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
                     tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0;
 
-                    tal.remoteFilter0.remoteSensorDeviceID = CAN.kLeftCargoIntakeTalonID;
-                    tal.remoteFilter0.remoteSensorSource = RemoteSensorSource.GadgeteerPigeon_Yaw;
+                    tal.remoteFilter1.remoteSensorDeviceID = CAN.kLeftCargoIntakeTalonID;
+                    tal.remoteFilter1.remoteSensorSource = RemoteSensorSource.GadgeteerPigeon_Yaw;
 
-                    tal.auxPIDPolarity = (loc == TalonLoc.Left);
+                    tal.sum0Term = FeedbackDevice.RemoteSensor0;
+                    tal.sum1Term = FeedbackDevice.CTRE_MagEncoder_Relative;
+
+                    tal.remoteFilter0.remoteSensorSource = RemoteSensorSource.TalonSRX_SelectedSensor;
+
+                    if (loc == TalonLoc.Left) {
+                        tal.remoteFilter0.remoteSensorDeviceID = CAN.kDriveRightMasterTalonID;
+                        tal.auxPIDPolarity = true;
+                    } else {
+                        tal.remoteFilter0.remoteSensorDeviceID = CAN.kDriveLeftMasterTalonID;
+                        tal.auxPIDPolarity = false;
+                    }
                 } else if (loc == TalonLoc.Cargo_Arm || loc == TalonLoc.Hatch_Arm) {
                     tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
                     tal.reverseLimitSwitchSource = LimitSwitchSource.RemoteTalonSRX;

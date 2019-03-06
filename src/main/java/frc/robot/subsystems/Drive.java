@@ -333,7 +333,7 @@ public class Drive extends Subsystem {
         CT.RE(mPigeon.setAccumZAngle(0, 0));
     }
 
-    public void setVelocitySetpointNormal(DriveSignal sig){
+    public void setVelocitySetpointNormal(DriveSignal sig) {
         setVelocity(new DriveSignal(sig.getLeft() * DRIVE.kMaxNativeVel, sig.getRight() * DRIVE.kMaxNativeVel), DriveSignal.BRAKE);
     }
 

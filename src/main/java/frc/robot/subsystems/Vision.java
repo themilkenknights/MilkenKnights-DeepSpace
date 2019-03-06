@@ -4,6 +4,7 @@ import edu.wpi.cscore.HttpCamera;
 import edu.wpi.cscore.MjpegServer;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.cscore.VideoMode;
+import edu.wpi.cscore.VideoSource.ConnectionStrategy;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
@@ -23,6 +24,7 @@ public class Vision extends Subsystem {
     private boolean isVision = false;
     private MjpegServer server;
     private HttpCamera LLFeed;
+    private boolean isHatchFeed = true;
     private MkTime mLEDTimer = new MkTime();
     private MkTime autoOffTimer = new MkTime();
 
@@ -34,8 +36,8 @@ public class Vision extends Subsystem {
         LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
 
         server = new MjpegServer("Switched Camera", 5805);
-        server.setSource(LLFeed);
         server.setSource(cargoCam);
+        server.setSource(LLFeed);
 
         ShuffleboardTab mVisionTab = Shuffleboard.getTab("Vision");
         mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
@@ -100,21 +102,21 @@ public class Vision extends Subsystem {
     }
 
     public void configHatchStream() {
-       /* if (cameraStream != 0) {
-            hatchCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
-            server.setSource(hatchCam);
+        if (!isHatchFeed) {
+            LLFeed.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
+            server.setSource(LLFeed);
             cargoCam.setConnectionStrategy(ConnectionStrategy.kForceClose);
-            cameraStream = 0;
-        } */
+            isHatchFeed = true;
+        }
     }
 
     public void configCargoStream() {
-    /*  if (cameraStream != 1) {
-           cargoCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
+        if (isHatchFeed) {
+            cargoCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
             server.setSource(cargoCam);
-            hatchCam.setConnectionStrategy(ConnectionStrategy.kForceClose);
-            cameraStream = 1;
-        } */
+            LLFeed.setConnectionStrategy(ConnectionStrategy.kForceClose);
+            isHatchFeed = false;
+        }
     }
 
     public synchronized void updateLimelight() {
