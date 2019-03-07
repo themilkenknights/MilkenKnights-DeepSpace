@@ -26,4 +26,8 @@ public class MkTime {
         return hasBeenSet && Timer.getFPGATimestamp() - startTime >= timerLength;
     }
 
+    public boolean isDone(double length){
+        return hasBeenSet && Timer.getFPGATimestamp() - startTime >= length;
+    }
+
 }
