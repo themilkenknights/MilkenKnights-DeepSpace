@@ -644,8 +644,12 @@ public class MkTalon {
         Faults masterFaults = new Faults();
         CTRE(masterTalon.getFaults(masterFaults));
         if (masterFaults.hasAnyFault()) {
+            if (mSide == TalonLoc.Cargo_Arm || mSide == TalonLoc.Hatch_Arm) {
+                zeroEncoder();
+            }
             Logger.logMarker(masterFaults.toString());
         }
+        //TODO Fix
         if (mSide == TalonLoc.Cargo_Intake || mSide == TalonLoc.Hatch_Arm) {
             slaveTalon.clearStickyFaults();
             Faults slaveTalonFaults = new Faults();
