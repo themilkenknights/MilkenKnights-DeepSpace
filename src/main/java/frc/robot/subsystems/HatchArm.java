@@ -74,6 +74,7 @@ public class HatchArm extends Subsystem {
     }
 
     @Override public void safetyCheck(double timestamp) {
+        mArmTalon.checkForError();
         if (!mArmTalon.isEncoderConnected()) {
             if (mKetteringDisCon) {
                 if (mStartDis.isDone()) {
