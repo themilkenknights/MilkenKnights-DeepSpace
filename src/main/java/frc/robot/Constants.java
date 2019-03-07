@@ -253,12 +253,14 @@ public final class Constants {
                     tal.motionCurveStrength = 5;
                     tal.velocityMeasurementPeriod = VelocityMeasPeriod.Period_25Ms;
                     tal.velocityMeasurementWindow = 16;
+                    
                     //General Velocity/Motion Magic
                     tal.slot0.kP = 7.0 * (0.1 * 1023.0) / (700.0);
                     tal.slot0.kD = 3.0 * tal.slot0.kP;
                     tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
                     tal.slot0.closedLoopPeakOutput = 0.5;
                     tal.slot0.allowableClosedloopError = 100;
+
                     //Motion Magic Turning
                     tal.slot1.kP = 2.4;
                     tal.slot1.kI = 0.00;

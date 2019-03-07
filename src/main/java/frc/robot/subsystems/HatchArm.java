@@ -95,6 +95,7 @@ public class HatchArm extends Subsystem {
                 Timer.delay(0.05);
             }
         }
+
         if (mArmTalon.getCurrent() > HATCH_ARM.kMaxSafeCurrent) {
             Logger.logErrorWithTrace("Unsafe Current on Hatch" + mArmTalon.getCurrent() + " Amps");
             setOpenLoop(0.0);

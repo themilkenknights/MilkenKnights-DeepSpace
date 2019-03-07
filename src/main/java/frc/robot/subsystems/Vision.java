@@ -59,12 +59,6 @@ public class Vision extends Subsystem {
         mLED.setBoolean(mLimeLight.getLEDMode() != LedMode.kforceOff);
     }
 
-    public void setVisionPipeline() {
-        mLimeLight.setPipeline(0);
-        mLimeLight.setLEDMode(LedMode.kforceOff);
-        isVision = false;
-    }
-
     public void toggleVision() {
         if (isVision) {
             disableLED();
@@ -78,6 +72,7 @@ public class Vision extends Subsystem {
             mLimeLight.setLEDMode(LedMode.kforceOn);
             isVision = true;
             mLEDTimer.start(0.05);
+            autoOffTimer.start(15.0);
         }
     }
 
@@ -90,15 +85,16 @@ public class Vision extends Subsystem {
             mLimeLight.setLEDMode(LedMode.kforceOff);
             isVision = false;
             mLEDTimer.reset();
+            autoOffTimer.reset();
         }
     }
 
     public void teleopInit(double timestamp) {
-        setVisionPipeline();
+        disableLED();
     }
 
     public void autonomousInit(double timestamp) {
-        setVisionPipeline();
+        disableLED();
     }
 
     public void configHatchStream() {
@@ -121,14 +117,17 @@ public class Vision extends Subsystem {
 
     public synchronized void updateLimelight() {
         mLimeLight.getUpdate();
+        if (autoOffTimer.isDone()) {
+            disableLED();
+        }
     }
 
     @Override public void onStop(double timestamp) {
-        setVisionPipeline();
+        disableLED();
     }
 
     @Override public void onRestart(double timestamp) {
-
+        disableLED();
     }
 
     @Override public boolean checkSystem() {
