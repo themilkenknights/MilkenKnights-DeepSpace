@@ -56,7 +56,7 @@ public class CargoArm extends Subsystem {
      */
     @Override public void safetyCheck(double timestamp) {
         synchronized (CargoArm.this) {
-            mArmTalon.checkForError();
+            mArmTalon.checkForReset();
             if (!mArmTalon.isEncoderConnected()) {
                 if (mDisCon) {
                     if (Timer.getFPGATimestamp() - mStartDis > 0.25) {
@@ -136,8 +136,8 @@ public class CargoArm extends Subsystem {
     }
 
     @Override public void onRestart(double timestamp) {
-        mArmTalon.checkForError();
-        mIntakeTalon.checkForError();
+        mArmTalon.checkForErrorInit();
+        mIntakeTalon.checkForErrorInit();
     }
 
     @Override public boolean checkSystem() {

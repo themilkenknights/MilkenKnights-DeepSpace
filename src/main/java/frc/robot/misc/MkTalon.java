@@ -9,6 +9,7 @@ import com.ctre.phoenix.motorcontrol.InvertType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.StatusFrame;
 import com.ctre.phoenix.motorcontrol.StatusFrameEnhanced;
+import com.ctre.phoenix.motorcontrol.StickyFaults;
 import com.ctre.phoenix.motorcontrol.can.BaseMotorController;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
@@ -639,7 +640,7 @@ public class MkTalon {
         return check;
     }
 
-    public void checkForError() {
+    public void checkForErrorInit() {
         masterTalon.clearStickyFaults();
         Faults masterFaults = new Faults();
         CTRE(masterTalon.getFaults(masterFaults));
@@ -668,16 +669,13 @@ public class MkTalon {
     }
 
     public void checkForReset() {
-        boolean reset = false;
-        reset = masterTalon.hasResetOccurred();
-        if (mSide == TalonLoc.Cargo_Intake || mSide == TalonLoc.Hatch_Arm) {
-            reset = slaveTalon.hasResetOccurred();
-        } else {
-            reset = slaveVictor.hasResetOccurred();
-        }
-
-        if (reset) {
-            Logger.logErrorWithTrace("Reset Has Occurred On Side: " + mSide);
+        StickyFaults masterFaults = new StickyFaults();
+        CTRE(masterTalon.getStickyFaults(masterFaults));
+        if (masterFaults.hasAnyFault() || masterTalon.hasResetOccurred()) {
+            if (mSide == TalonLoc.Cargo_Arm || mSide == TalonLoc.Hatch_Arm) {
+                zeroEncoder();
+            }
+            Logger.logMarker(masterFaults.toString());
         }
     }
 

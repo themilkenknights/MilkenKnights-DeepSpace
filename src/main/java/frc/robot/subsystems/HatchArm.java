@@ -74,7 +74,7 @@ public class HatchArm extends Subsystem {
     }
 
     @Override public void safetyCheck(double timestamp) {
-        mArmTalon.checkForError();
+        mArmTalon.checkForReset();
         if (!mArmTalon.isEncoderConnected()) {
             if (mKetteringDisCon) {
                 if (mStartDis.isDone()) {
@@ -196,7 +196,7 @@ public class HatchArm extends Subsystem {
     }
 
     @Override public void onRestart(double timestamp) {
-        mArmTalon.checkForError();
+        mArmTalon.checkForErrorInit();
     }
 
     @Override public boolean checkSystem() {

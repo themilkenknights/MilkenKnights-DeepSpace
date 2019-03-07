@@ -147,8 +147,8 @@ public class Drive extends Subsystem {
     }
 
     @Override public void onRestart(double timestamp) {
-        mLeftDrive.checkForError();
-        mRightDrive.checkForError();
+        mLeftDrive.checkForErrorInit();
+        mRightDrive.checkForErrorInit();
     }
 
     /**
