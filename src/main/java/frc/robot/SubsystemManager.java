@@ -43,7 +43,7 @@ public class SubsystemManager {
                         if (count == i) {
                             subsystem.slowUpdate(now);
                             subsystem.outputTelemetry(now);
-                            subsystem.safetyCheck(now);
+                           // subsystem.safetyCheck(now);
                         }
                         i++;
                     }
@@ -69,8 +69,8 @@ public class SubsystemManager {
         notifier_ = new Notifier(runnable_);
         running_ = false;
 
-        mainDt = new DeltaTime("Iterative Dt", 5);
-        fastDt = new DeltaTime("Looper Dt", 5);
+        mainDt = new DeltaTime("Iterative Dt", 1);
+        fastDt = new DeltaTime("Looper Dt", 1);
     }
 
     public void checkSystem() {

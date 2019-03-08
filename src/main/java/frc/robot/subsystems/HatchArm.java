@@ -74,7 +74,7 @@ public class HatchArm extends Subsystem {
     }
 
     @Override public void safetyCheck(double timestamp) {
-        mArmTalon.checkForReset();
+       mArmTalon.checkForReset();
         if (!mArmTalon.isEncoderConnected()) {
             if (mKetteringDisCon) {
                 if (mStartDis.isDone()) {
@@ -176,7 +176,7 @@ public class HatchArm extends Subsystem {
                 Logger.logErrorWithTrace("Unexpected Hatch Arm control state: " + mHatchMechanismState);
                 break;
         }
-        if (mHatchIntakeControlState == mKetteringControlState.OPEN_LOOP) {
+        /*if (mHatchIntakeControlState == mKetteringControlState.OPEN_LOOP) {
             mArmTalon.set(ControlMode.PercentOutput, mKetteringOpenLoopSetpoint, NeutralMode.Brake);
         } else if (mHatchIntakeControlState == mKetteringControlState.MOTION_MAGIC) {
             if (mHatchKetteringSetpoint == mKetteringSetpoint.ENABLE) {
@@ -186,7 +186,7 @@ public class HatchArm extends Subsystem {
             }
         } else {
             Logger.logErrorWithTrace("Unexpected arm control state: " + mHatchIntakeControlState);
-        }
+        } */
         mSpearSolenoid.set(mSpearState.state);
     }
 

@@ -1,6 +1,7 @@
 package frc.robot.auto;
 
 import frc.robot.auto.actions.Action;
+import frc.robot.lib.util.DeltaTime;
 import frc.robot.lib.util.Logger;
 
 /**
@@ -11,6 +12,7 @@ public abstract class AutoModeBase {
 
     protected double mUpdateRate = 1.0 / 200.0;
     protected boolean mActive = false;
+    private DeltaTime baseTimer = new DeltaTime("Auto Base", 5);
 
     public void run() {
         mActive = true;
@@ -35,6 +37,7 @@ public abstract class AutoModeBase {
         isActiveWithThrow();
         action.start();
         while (isActiveWithThrow() && !action.isFinished()) {
+            baseTimer.updateDt();
             action.update();
             long waitTime = (long) (mUpdateRate * 1000.0);
             try {

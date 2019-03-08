@@ -19,14 +19,13 @@ public class Vision extends Subsystem {
 
 
     private LimeLight mLimeLight;
-    private NetworkTableEntry mLLX, mDist, mArea, mLED;
+    private NetworkTableEntry mLLX, mDist, mArea, mLED, mSkew;
     private UsbCamera cargoCam;
     private boolean isVision = false;
     private MjpegServer server;
     private HttpCamera LLFeed;
     private boolean isHatchFeed = true;
     private MkTime mLEDTimer = new MkTime();
-    private MkTime autoOffTimer = new MkTime();
 
     private Vision() {
         cargoCam = CameraServer.getInstance().startAutomaticCapture(0);
@@ -44,6 +43,7 @@ public class Vision extends Subsystem {
         mDist = mVisionTab.add("Limelight Dist", 0.0).getEntry();
         mArea = mVisionTab.add("Area", 0.0).getEntry();
         mLED = mVisionTab.add("LED State", true).getEntry();
+        mSkew = mVisionTab.add("Skew", 0.0).getEntry();
         mLimeLight = new LimeLight();
         disableLED();
     }
@@ -53,10 +53,11 @@ public class Vision extends Subsystem {
     }
 
     @Override public void outputTelemetry(double timestamp) {
-        mLLX.setDouble(mLimeLight.returnAverageTarget().getYaw());
-        mDist.setDouble(mLimeLight.returnAverageTarget().getDistance());
-        mArea.setDouble(mLimeLight.returnAverageTarget().getArea());
+        mLLX.setDouble(getLimelightTarget().getYaw());
+        mDist.setDouble(getLimelightTarget().getDistance());
+        mArea.setDouble(getLimelightTarget().getArea());
         mLED.setBoolean(mLimeLight.getLEDMode() != LedMode.kforceOff);
+        mSkew.setDouble(getLimelightTarget().getSkew());
     }
 
     public void toggleVision() {
@@ -72,7 +73,6 @@ public class Vision extends Subsystem {
             mLimeLight.setLEDMode(LedMode.kforceOn);
             isVision = true;
             mLEDTimer.start(0.05);
-            autoOffTimer.start(15.0);
         }
     }
 
@@ -85,7 +85,6 @@ public class Vision extends Subsystem {
             mLimeLight.setLEDMode(LedMode.kforceOff);
             isVision = false;
             mLEDTimer.reset();
-            autoOffTimer.reset();
         }
     }
 
@@ -117,7 +116,7 @@ public class Vision extends Subsystem {
 
     public synchronized void updateLimelight() {
         mLimeLight.getUpdate();
-        if (autoOffTimer.isDone()) {
+        if (mLEDTimer.isDone(10.0)) {
             disableLED();
         }
     }

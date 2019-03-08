@@ -10,7 +10,6 @@ public class AutoModeExecutor {
 
     private AutoModeBase m_auto_mode;
     private Thread m_thread = null;
-    private DeltaTime baseTimer = new DeltaTime("Auto Base", 5);
 
     public void start() {
         if (m_thread != null) {
@@ -34,7 +33,6 @@ public class AutoModeExecutor {
         m_thread = new Thread(new CrashTrackingRunnable() {
             @Override public void runCrashTracked() {
                 if (m_auto_mode != null) {
-                    baseTimer.updateDt();
                     m_auto_mode.run();
                 }
             }

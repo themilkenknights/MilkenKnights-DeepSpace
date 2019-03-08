@@ -53,9 +53,9 @@ public class Input {
 
     private static final MkJoystickButton mIntakeRollerOut = mOperatorJoystick.getButton(6, "Intake Roller Out Fast");
 
-    private static final MkJoystickButton toggleVision = mOperatorJoystick.getButton(8, "Toggle Vision");
+    private static final MkJoystickButton toggleVision = mOperatorJoystick.getButton(7, "Toggle Vision");
 
-    private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick.getButton(7, "Zero Arm Encoders && Disable Soft Limit");
+    private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick.getButton(8, "Zero Arm Encoders && Disable Soft Limit");
 
     private static final MkJoystickButton mStopAuto = mOperatorJoystick.getButton(9, "Stop Auto");
 
@@ -83,8 +83,10 @@ public class Input {
             || currentRobotState == RobotState.HATCH_VISION_OUTTAKE || currentRobotState == RobotState.AUTO_CLIMB || currentRobotState == RobotState.PATH_FOLLOWING;
 
         //Joystick isn't connected if throttle is equal to zero. Used to ensure robot doesn't move when Joystick unplugged.
-        if (mOperatorJoystick.getThrottle() == 0.0) {
+        if (mOperatorJoystick.getRawAxis(3) != -1.0) {
             isOperatorJoystickConnected = true;
+        } else {
+            isOperatorJoystickConnected = false;
         }
 
         //Stop rumble after 250ms
