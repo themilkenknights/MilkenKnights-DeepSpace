@@ -15,6 +15,6 @@
     "**/.factorypath": true
   },
   "wpilib.online": true,
-  "java.format.settings.url": "./style.xml",
-  "java.format.settings.profile": ""
+  "java.format.settings.url": "style.xml",
+  "java.format.settings.profile": "MkStyle"
 }
