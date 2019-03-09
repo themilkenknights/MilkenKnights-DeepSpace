@@ -45,8 +45,7 @@ public class Input {
 
 	private static final MkJoystickButton mCargoArmManual = mOperatorJoystick.getButton(2, "Cargo Arm Manual Mode");
 
-	private static final MkJoystickButton mSpearTogglePlaceStow = mOperatorJoystick.getButton(3,
-			"Hatch Spear Toggle (Place/Stow)");
+	private static final MkJoystickButton mSpearTogglePlaceStow = mOperatorJoystick.getButton(3, "Hatch Spear Toggle (Place/Stow)");
 
 	private static final MkJoystickButton mSpearIntake = mOperatorJoystick.getButton(4, "Hatch Spear HP Intake");
 
@@ -56,15 +55,13 @@ public class Input {
 
 	private static final MkJoystickButton toggleVision = mOperatorJoystick.getButton(7, "Toggle Vision");
 
-	private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick.getButton(8,
-			"Zero Arm Encoders && Disable Soft Limit");
+	private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick.getButton(8, "Zero Arm Encoders && Disable Soft Limit");
 
 	private static final MkJoystickButton mStopAuto = mOperatorJoystick.getButton(9, "Stop Auto");
 
 	private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
 
-	private static final MkJoystickButton mGroundIntakeToggleButton = mOperatorJoystick.getButton(11,
-			"Ground Intake Toggle (Stow/Ground)");
+	private static final MkJoystickButton mGroundIntakeToggleButton = mOperatorJoystick.getButton(11, "Ground Intake Toggle (Stow/Ground)");
 
 	private static final MkJoystickButton mTransferButton = mOperatorJoystick.getButton(12, "Transfer Hatch Button");
 
@@ -148,12 +145,10 @@ public class Input {
 			mStructure.setRobotState(RobotState.AUTO_CLIMB);
 		} else if (mFrontClimb.isPressed()) {
 			// Toggle Front Climb Actuators (Toward Spear)
-			mStructure.setFrontClimbState(mStructure.getFrontClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED
-					: ClimbState.RETRACTED);
+			mStructure.setFrontClimbState(mStructure.getFrontClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
 		} else if (mRearClimb.isPressed()) {
 			// Toggle Rear Climb Actuators (Toward Cargo Arm/Rio)
-			mStructure.setRearClimbState(
-					mStructure.getRearClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
+			mStructure.setRearClimbState(mStructure.getRearClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
 		}
 
 		// GTA Style driving.
@@ -194,22 +189,22 @@ public class Input {
 				mVision.configCargoStream();
 			} else if (mIntakeRollerOut.isHeld()) {
 				switch (mCargo.getArmState()) {
-				case INTAKE:
-				case ENABLE:
-					mCargo.setIntakeRollers(CARGO_ARM.kDefaultIntakeRollerOutSpeed);
-					break;
-				case FORWARD_ROCKET_LEVEL_ONE:
-					mCargo.setIntakeRollers(CARGO_ARM.kRocketLevelOneOutSpeed);
-					break;
-				case FORWARD_ROCKET_LEVEL_TWO:
-					mCargo.setIntakeRollers(CARGO_ARM.kRocketLevelTwoOutSpeed);
-					break;
-				case REVERSE_CARGOSHIP:
-					mCargo.setIntakeRollers(CARGO_ARM.kCargoShipIntakeRollerOut);
-					break;
-				default:
-					Logger.logError("Unexpected Cargo Arm State");
-					break;
+					case INTAKE:
+					case ENABLE:
+						mCargo.setIntakeRollers(CARGO_ARM.kDefaultIntakeRollerOutSpeed);
+						break;
+					case FORWARD_ROCKET_LEVEL_ONE:
+						mCargo.setIntakeRollers(CARGO_ARM.kRocketLevelOneOutSpeed);
+						break;
+					case FORWARD_ROCKET_LEVEL_TWO:
+						mCargo.setIntakeRollers(CARGO_ARM.kRocketLevelTwoOutSpeed);
+						break;
+					case REVERSE_CARGOSHIP:
+						mCargo.setIntakeRollers(CARGO_ARM.kCargoShipIntakeRollerOut);
+						break;
+					default:
+						Logger.logError("Unexpected Cargo Arm State");
+						break;
 				}
 				mVision.configCargoStream();
 			} else {
@@ -226,8 +221,7 @@ public class Input {
 				mHatch.setHatchMechanismState(HatchMechanismState.TRANSFER);
 				mVision.configHatchStream();
 			} else if (mGroundIntakeToggleButton.isPressed()) {
-				mHatch.setHatchMechanismState(mHatch.getHatchMechanismState() == HatchMechanismState.GROUND_INTAKE
-						? HatchMechanismState.STOWED
+				mHatch.setHatchMechanismState(mHatch.getHatchMechanismState() == HatchMechanismState.GROUND_INTAKE ? HatchMechanismState.STOWED
 						: HatchMechanismState.GROUND_INTAKE);
 			} else if (mSpearTogglePlaceStow.isPressed()) {
 				if (mHatch.getHatchSpearState() == HatchSpearState.STOW) {

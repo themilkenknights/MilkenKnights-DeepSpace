@@ -13,8 +13,8 @@ import frc.robot.lib.vision.LimeLightControlMode.Snapshot;
 import frc.robot.lib.vision.LimeLightControlMode.StreamType;
 
 /**
- * Lime Light Class was started by Corey Applegate of Team 3244 Granite City
- * Gearheads. We Hope you Enjoy the Lime Light Camera.
+ * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you
+ * Enjoy the Lime Light Camera.
  */
 public class LimeLight {
 
@@ -80,8 +80,8 @@ public class LimeLight {
 	}
 
 	public synchronized void updateTarget() {
-		mTarget = new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(), getVertLength(),
-				getSkew_Rotation(), getCaptureTime());
+		mTarget =
+				new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(), getVertLength(), getSkew_Rotation(), getCaptureTime());
 		mThrottleAverage.addNumber(mTarget);
 	}
 
@@ -94,7 +94,7 @@ public class LimeLight {
 	}
 
 	public double[] getCamTran() {
-		double[] cam = camtran.getDoubleArray(new double[] { 0, 0, 0, 0, 0, 0 });
+		double[] cam = camtran.getDoubleArray(new double[] {0, 0, 0, 0, 0, 0});
 		return cam;
 	}
 
@@ -154,8 +154,7 @@ public class LimeLight {
 	}
 
 	/**
-	 * tl The pipeline’s latency contribution (ms) Add at least 11ms for image
-	 * capture latency.
+	 * tl The pipeline’s latency contribution (ms) Add at least 11ms for image capture latency.
 	 */
 	public double getPipelineLatency() {
 		double l = tl.getDouble(0.0);
@@ -223,10 +222,9 @@ public class LimeLight {
 	 * @param pipeline
 	 */
 	/*
-	 * public void setPipeline(Double pipeline) { if(pipeline<0){ pipeline = 0.0;
-	 * throw new IllegalArgumentException("Pipeline can not be less than zero");
-	 * }else if(pipeline>9){ pipeline = 9.0; throw new
-	 * IllegalArgumentException("Pipeline can not be greater than nine"); }
+	 * public void setPipeline(Double pipeline) { if(pipeline<0){ pipeline = 0.0; throw new
+	 * IllegalArgumentException("Pipeline can not be less than zero"); }else if(pipeline>9){ pipeline =
+	 * 9.0; throw new IllegalArgumentException("Pipeline can not be greater than nine"); }
 	 * m_table.getEntry("pipeline").setValue(pipeline); }
 	 */
 
@@ -267,10 +265,9 @@ public class LimeLight {
 	 * stream Sets limelight’s streaming mode
 	 *
 	 * <p>
-	 * kStandard - Side-by-side streams if a webcam is attached to Limelight
-	 * kPiPMain - The secondary camera stream is placed in the lower-right corner of
-	 * the primary camera stream kPiPSecondary - The primary camera stream is placed
-	 * in the lower-right corner of the secondary camera stream
+	 * kStandard - Side-by-side streams if a webcam is attached to Limelight kPiPMain - The secondary
+	 * camera stream is placed in the lower-right corner of the primary camera stream kPiPSecondary -
+	 * The primary camera stream is placed in the lower-right corner of the secondary camera stream
 	 */
 	public void setStream(StreamType stream) {
 		m_table.getEntry("stream").setValue(stream.getValue());
@@ -293,10 +290,9 @@ public class LimeLight {
 	}
 
 	/**
-	 * Limelight posts three raw contours to NetworkTables that are not influenced
-	 * by your grouping mode. That is, they are filtered with your pipeline
-	 * parameters, but never grouped. X and Y are returned in normalized screen
-	 * space (-1 to 1) rather than degrees. *
+	 * Limelight posts three raw contours to NetworkTables that are not influenced by your grouping
+	 * mode. That is, they are filtered with your pipeline parameters, but never grouped. X and Y are
+	 * returned in normalized screen space (-1 to 1) rather than degrees. *
 	 */
 	public double getAdvanced_RotationToTarget(Advanced_Target raw) {
 		NetworkTableEntry txRaw = m_table.getEntry("tx" + raw.getValue());
