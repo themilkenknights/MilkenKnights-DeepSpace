@@ -8,14 +8,14 @@ package frc.robot.lib.util;
  */
 public class LatchedBoolean {
 
-    private boolean mLast = false;
+  private boolean mLast = false;
 
-    public boolean update(boolean newValue) {
-        boolean ret = false;
-        if (newValue && !mLast) {
-            ret = true;
-        }
-        mLast = newValue;
-        return ret;
+  public boolean update(boolean newValue) {
+    boolean ret = false;
+    if (newValue && !mLast) {
+      ret = true;
     }
+    mLast = newValue;
+    return ret;
+  }
 }

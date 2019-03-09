@@ -13,49 +13,51 @@ import frc.robot.subsystems.Vision;
 
 public class MotionMagicVisionFeed implements Action {
 
-    private MkTime expirationTimer;
-    private VisionState mLastVisionState = VisionState.EMPTY;
-    private boolean useLimit;
-    private double lastTime = 0.0;
-    private double targetYaw = 0.0;
-    private double initYaw = 0.0;
+  private MkTime expirationTimer;
+  private VisionState mLastVisionState = VisionState.EMPTY;
+  private boolean useLimit;
+  private double lastTime = 0.0;
+  private double targetYaw = 0.0;
+  private double initYaw = 0.0;
 
-    public MotionMagicVisionFeed(boolean useLimit) {
-        expirationTimer = new MkTime();
-        this.useLimit = useLimit;
-    }
+  public MotionMagicVisionFeed(boolean useLimit) {
+    expirationTimer = new MkTime();
+    this.useLimit = useLimit;
+  }
 
-    @Override public boolean isFinished() {
-        return expirationTimer.isDone() || (useLimit ? HatchArm.getInstance()
-            .isHatchLimitTriggered() : Drive.getInstance().isMotionMagicFinished());
-    }
+  @Override
+  public boolean isFinished() {
+    return expirationTimer.isDone() || (useLimit ? HatchArm.getInstance().isHatchLimitTriggered()
+        : Drive.getInstance().isMotionMagicFinished());
+  }
 
-    @Override public void update() {
-        LimelightTarget target = Vision.getInstance().getLimelightTarget();
-        double mDist = target.getDistance();
-        if (mDist > 20.0 && target.isValidTarget()) {
-            double vel = (mLastVisionState.getTarget().getYaw() - target.getYaw()) / (
-                Timer.getFPGATimestamp() - lastTime);
-            double mSteer = 0.03 * ((targetYaw)) + vel * DRIVE.kVisionTurnP * 8 * 0.0;
-            DriveSignal mSig = Drive.getInstance()
-                .setMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast),
-                    new DriveSignal(mSteer, -mSteer));
-            mLastVisionState = new VisionState(mSig, target, Drive.getInstance().getHeadingDeg());
-        } else {
-            double mSteer = DRIVE.kVisionTurnP * 0 * (mLastVisionState.getTarget().getYaw()
-                - /* Math.abs(mLastVisionState.getYaw() - Drive.getInstance().getYaw()) */ 0);
-            Drive.getInstance().updateMotionMagicPositionSetpoint(mLastVisionState.getDriveSignal(),
-                new DriveSignal(mSteer, -mSteer));
-        }
+  @Override
+  public void update() {
+    LimelightTarget target = Vision.getInstance().getLimelightTarget();
+    double mDist = target.getDistance();
+    if (mDist > 20.0 && target.isValidTarget()) {
+      double vel = (mLastVisionState.getTarget().getYaw() - target.getYaw())
+          / (Timer.getFPGATimestamp() - lastTime);
+      double mSteer = 0.03 * ((targetYaw)) + vel * DRIVE.kVisionTurnP * 8 * 0.0;
+      DriveSignal mSig = Drive.getInstance().setMotionMagicDeltaSetpoint(
+          new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
+      mLastVisionState = new VisionState(mSig, target, Drive.getInstance().getHeadingDeg());
+    } else {
+      double mSteer = DRIVE.kVisionTurnP * 0 * (mLastVisionState.getTarget().getYaw()
+          - /* Math.abs(mLastVisionState.getYaw() - Drive.getInstance().getYaw()) */ 0);
+      Drive.getInstance().updateMotionMagicPositionSetpoint(mLastVisionState.getDriveSignal(),
+          new DriveSignal(mSteer, -mSteer));
     }
+  }
 
-    @Override public void done() {
-    }
+  @Override
+  public void done() {}
 
-    @Override public void start() {
-        expirationTimer.start(5.0);
-        lastTime = Timer.getFPGATimestamp();
-        targetYaw = Vision.getInstance().getLimelightTarget().getYaw();
-        initYaw = Drive.getInstance().getHeadingDeg();
-    }
+  @Override
+  public void start() {
+    expirationTimer.start(5.0);
+    lastTime = Timer.getFPGATimestamp();
+    targetYaw = Vision.getInstance().getLimelightTarget().getYaw();
+    initYaw = Drive.getInstance().getHeadingDeg();
+  }
 }
