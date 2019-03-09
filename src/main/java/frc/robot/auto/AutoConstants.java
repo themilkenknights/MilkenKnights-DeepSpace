@@ -1,5 +1,3 @@
 package frc.robot.auto;
 
-public class AutoConstants {
-
-}
+public class AutoConstants {}

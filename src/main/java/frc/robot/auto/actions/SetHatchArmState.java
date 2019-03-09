@@ -5,13 +5,14 @@ import frc.robot.subsystems.HatchArm.HatchMechanismState;
 
 public class SetHatchArmState extends RunOnceAction {
 
-    private HatchMechanismState state;
+  private HatchMechanismState state;
 
-    public SetHatchArmState(HatchMechanismState state) {
-        this.state = state;
-    }
+  public SetHatchArmState(HatchMechanismState state) {
+    this.state = state;
+  }
 
-    @Override public void runOnce() {
-        HatchArm.getInstance().setHatchMechanismState(state);
-    }
+  @Override
+  public void runOnce() {
+    HatchArm.getInstance().setHatchMechanismState(state);
+  }
 }
