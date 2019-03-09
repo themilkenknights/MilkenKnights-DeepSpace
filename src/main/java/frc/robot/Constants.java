@@ -9,7 +9,7 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.InterpolatingTreeMap;
-import frc.robot.misc.MkTalon.TalonLoc;
+import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import java.util.HashMap;
 import java.util.Map;
 

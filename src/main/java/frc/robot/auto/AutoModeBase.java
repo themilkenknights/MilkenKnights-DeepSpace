@@ -10,7 +10,7 @@ import frc.robot.lib.util.Logger;
  */
 public abstract class AutoModeBase {
 
-	protected double mUpdateRate = 1.0 / 200.0;
+	protected double mUpdateRate = 1.0 / 100.0;
 	protected boolean mActive = false;
 	private DeltaTime baseTimer = new DeltaTime("Auto Base", 5);
 

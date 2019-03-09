@@ -1,4 +1,4 @@
-package frc.robot.misc;
+package frc.robot.lib.geometry;
 
 import frc.robot.Constants;
 import frc.robot.Constants.DRIVE;

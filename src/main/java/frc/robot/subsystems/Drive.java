@@ -22,10 +22,10 @@ import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.ReflectingCSVWriter;
-import frc.robot.misc.Kinematics;
-import frc.robot.misc.MkTalon;
-import frc.robot.misc.MkTalon.TalonLoc;
-import frc.robot.misc.RobotState;
+import frc.robot.lib.geometry.Kinematics;
+import frc.robot.lib.drivers.MkTalon;
+import frc.robot.lib.drivers.MkTalon.TalonLoc;
+import frc.robot.lib.geometry.RobotState;
 
 public class Drive extends Subsystem {
 

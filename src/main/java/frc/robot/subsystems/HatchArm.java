@@ -15,8 +15,8 @@ import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTime;
-import frc.robot.misc.MkTalon;
-import frc.robot.misc.MkTalon.TalonLoc;
+import frc.robot.lib.drivers.MkTalon;
+import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.subsystems.Superstructure.RobotState;
 
 public class HatchArm extends Subsystem {

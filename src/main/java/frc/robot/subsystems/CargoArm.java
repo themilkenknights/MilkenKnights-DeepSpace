@@ -5,18 +5,17 @@ import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.networktables.NetworkTableEntry;
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.GENERAL;
 import frc.robot.lib.drivers.CT;
+import frc.robot.lib.drivers.MkTalon;
+import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
-import frc.robot.misc.MkTalon;
-import frc.robot.misc.MkTalon.TalonLoc;
 
 public class CargoArm extends Subsystem {
 
@@ -56,37 +55,23 @@ public class CargoArm extends Subsystem {
 	 * control.
 	 */
 	@Override
-	public void safetyCheck(double timestamp) {
-		synchronized (CargoArm.this) {
-			mArmTalon.checkForReset();
-			if (!mArmTalon.isEncoderConnected()) {
-				if (mDisCon) {
-					if (Timer.getFPGATimestamp() - mStartDis > 0.25) {
-						setArmControlState(CargoArmControlState.OPEN_LOOP);
-						mDisCon = false;
-						mStartDis = 0;
-					}
-				} else {
-					mDisCon = true;
-					mStartDis = Timer.getFPGATimestamp();
-				}
-				Logger.logError("Cargo Arm Encoder Not Connected");
+	public synchronized void safetyCheck(double timestamp) {
+		mArmTalon.checkForReset();
+		if (!mArmTalon.isEncoderConnected()) {
+			if (mDisCon) {
+				setOpenLoop(0.0);
+				mDisCon = false;
 			} else {
-				if (mDisCon) {
-					mDisCon = false;
-					mStartDis = 0;
-					mArmTalon.zeroEncoder();
-					Timer.delay(0.05);
-					setArmControlState(CargoArmControlState.MOTION_MAGIC);
-				}
+				mDisCon = true;
 			}
 
-			if (mArmTalon.getCurrent() > CARGO_ARM.kMaxSafeCurrent) {
-				Logger.logError("Unsafe Current on Cargo " + mArmTalon.getCurrent() + " Amps");
-				setArmControlState(CargoArmControlState.OPEN_LOOP);
-				setOpenLoop(0.0);
-			}
 		}
+
+		if (mArmTalon.getCurrent() > CARGO_ARM.kMaxSafeCurrent) {
+			Logger.logError("Unsafe Current on Cargo " + mArmTalon.getCurrent() + " Amps");
+			setOpenLoop(0.0);
+		}
+
 	}
 
 	public PigeonIMU getPigeon() {
