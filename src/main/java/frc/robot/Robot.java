@@ -1,9 +1,3 @@
-/*----------------------------------------------------------------------------*/
-/* Copyright (c) 2018 FIRST. All Rights Reserved. */
-/* Open Source Software - may be modified and shared by FRC teams. The code */
-/* must be accompanied by the FIRST BSD license file in the root directory of */
-/* the project. */
-/*----------------------------------------------------------------------------*/
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
@@ -19,15 +13,16 @@ import java.util.Arrays;
 public class Robot extends TimedRobot {
 
     public static MatchState mMatchState = MatchState.DISABLED;
-    private final SubsystemManager mSubsystemManager =
-        new SubsystemManager(Arrays.asList(CargoArm.getInstance(), Drive.getInstance(), HatchArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
+    private final SubsystemManager mSubsystemManager = new SubsystemManager(Arrays.asList(CargoArm.getInstance(),
+            Drive.getInstance(), HatchArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
 
     public Robot() {
         super(Constants.GENERAL.kMainLoopDt);
         Logger.logRobotConstruction();
     }
 
-    @Override public void robotInit() {
+    @Override
+    public void robotInit() {
         try {
             Logger.logRobotInit();
             Shuffleboard.startRecording();
@@ -37,7 +32,8 @@ public class Robot extends TimedRobot {
         }
     }
 
-    @Override public void disabledInit() {
+    @Override
+    public void disabledInit() {
         try {
             Logger.logDisabledInit();
             mMatchState = MatchState.DISABLED;
@@ -49,7 +45,8 @@ public class Robot extends TimedRobot {
         }
     }
 
-    @Override public void autonomousInit() {
+    @Override
+    public void autonomousInit() {
         try {
             Logger.logAutoInit();
             mMatchState = MatchState.AUTO;
@@ -60,7 +57,8 @@ public class Robot extends TimedRobot {
         }
     }
 
-    @Override public void teleopInit() {
+    @Override
+    public void teleopInit() {
         try {
             Logger.logTeleopInit();
             mMatchState = MatchState.TELEOP;
@@ -71,7 +69,8 @@ public class Robot extends TimedRobot {
         }
     }
 
-    @Override public void testInit() {
+    @Override
+    public void testInit() {
         try {
             mMatchState = MatchState.TEST;
             mSubsystemManager.startAuto();
@@ -84,7 +83,8 @@ public class Robot extends TimedRobot {
         }
     }
 
-    @Override public void robotPeriodic() {
+    @Override
+    public void robotPeriodic() {
         try {
             mSubsystemManager.periodicUpdate();
         } catch (Throwable t) {
