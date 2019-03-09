@@ -5,9 +5,9 @@ import frc.robot.lib.util.Logger;
 
 public class CT {
 
-  public static void RE(ErrorCode errorCode) {
-    if (errorCode != ErrorCode.OK) {
-      Logger.logErrorWithTrace(errorCode.toString());
-    }
-  }
+	public static void RE(ErrorCode errorCode) {
+		if (errorCode != ErrorCode.OK) {
+			Logger.logErrorWithTrace(errorCode.toString());
+		}
+	}
 }

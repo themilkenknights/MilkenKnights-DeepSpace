@@ -10,68 +10,66 @@ import java.util.TreeMap;
  * @param <K> The type of the key (must implement InverseInterpolable)
  * @param <V> The type of the value (must implement Interpolable)
  */
-public class InterpolatingTreeMap<K extends InverseInterpolable<K> & Comparable<K>, V extends Interpolable<V>>
-    extends TreeMap<K, V> {
+public class InterpolatingTreeMap<K extends InverseInterpolable<K> & Comparable<K>, V extends Interpolable<V>> extends TreeMap<K, V> {
 
-  private static final long serialVersionUID = 8347275262778054124L;
-  int max_;
+	private static final long serialVersionUID = 8347275262778054124L;
+	int max_;
 
-  public InterpolatingTreeMap() {
-    this(0);
-  }
+	public InterpolatingTreeMap() {
+		this(0);
+	}
 
-  public InterpolatingTreeMap(int maximumSize) {
-    max_ = maximumSize;
-  }
+	public InterpolatingTreeMap(int maximumSize) {
+		max_ = maximumSize;
+	}
 
-  @Override
-  public void putAll(Map<? extends K, ? extends V> map) {
-    System.out.println("Unimplemented Method");
-  }
+	@Override
+	public void putAll(Map<? extends K, ? extends V> map) {
+		System.out.println("Unimplemented Method");
+	}
 
-  /**
-   * Inserts a key value pair, and trims the tree if a max size is specified
-   *
-   * @param key Key for inserted data
-   * @param value Value for inserted data
-   * @return the value
-   */
-  @Override
-  public V put(K key, V value) {
-    if (max_ > 0 && max_ <= size()) {
-      // "Prune" the tree if it is oversize
-      K first = firstKey();
-      remove(first);
-    }
-    super.put(key, value);
-    return value;
-  }
+	/**
+	 * Inserts a key value pair, and trims the tree if a max size is specified
+	 *
+	 * @param key Key for inserted data
+	 * @param value Value for inserted data
+	 * @return the value
+	 */
+	@Override
+	public V put(K key, V value) {
+		if (max_ > 0 && max_ <= size()) {
+			// "Prune" the tree if it is oversize
+			K first = firstKey();
+			remove(first);
+		}
+		super.put(key, value);
+		return value;
+	}
 
-  /**
-   * @param key Lookup for a value (does not have to exist)
-   * @return V or null; V if it is Interpolable or exists, null if it is at a bound and cannot
-   *         average
-   */
-  public V getInterpolated(K key) {
-    V gotval = get(key);
-    if (gotval == null) {
-      /** Get surrounding keys for interpolation */
-      K topBound = ceilingKey(key);
-      K bottomBound = floorKey(key);
-      /** If attempting interpolation at ends of tree, return the nearest data point */
-      if (topBound == null && bottomBound == null) {
-        return null;
-      } else if (topBound == null) {
-        return get(bottomBound);
-      } else if (bottomBound == null) {
-        return get(topBound);
-      }
-      /** Get surrounding values for interpolation */
-      V topElem = get(topBound);
-      V bottomElem = get(bottomBound);
-      return bottomElem.interpolate(topElem, bottomBound.inverseInterpolate(topBound, key));
-    } else {
-      return gotval;
-    }
-  }
+	/**
+	 * @param key Lookup for a value (does not have to exist)
+	 * @return V or null; V if it is Interpolable or exists, null if it is at a bound and cannot average
+	 */
+	public V getInterpolated(K key) {
+		V gotval = get(key);
+		if (gotval == null) {
+			/** Get surrounding keys for interpolation */
+			K topBound = ceilingKey(key);
+			K bottomBound = floorKey(key);
+			/** If attempting interpolation at ends of tree, return the nearest data point */
+			if (topBound == null && bottomBound == null) {
+				return null;
+			} else if (topBound == null) {
+				return get(bottomBound);
+			} else if (bottomBound == null) {
+				return get(topBound);
+			}
+			/** Get surrounding values for interpolation */
+			V topElem = get(topBound);
+			V bottomElem = get(bottomBound);
+			return bottomElem.interpolate(topElem, bottomBound.inverseInterpolate(topBound, key));
+		} else {
+			return gotval;
+		}
+	}
 }

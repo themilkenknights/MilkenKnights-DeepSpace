@@ -6,5 +6,5 @@ package frc.robot.lib.structure;
  */
 public interface Loop {
 
-  void onLoop(double timestamp);
+	void onLoop(double timestamp);
 }
