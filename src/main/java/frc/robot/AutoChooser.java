@@ -12,7 +12,6 @@ public class AutoChooser {
 	private static AutoModeExecutor mAutoModeExecuter = null;
 
 	public static void startAuto(AutoModeBase base) {
-		updateGameData();
 		if (mAutoModeExecuter != null) {
 			mAutoModeExecuter.stop();
 		}
@@ -22,7 +21,7 @@ public class AutoChooser {
 		mAutoModeExecuter.start();
 	}
 
-	private static void updateGameData() {
+	public static void updateGameData() {
 		matchData.alliance = DriverStation.getInstance().getAlliance();
 		matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
 		matchData.matchType = DriverStation.getInstance().getMatchType();

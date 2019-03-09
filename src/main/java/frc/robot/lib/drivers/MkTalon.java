@@ -215,7 +215,7 @@ public class MkTalon {
 		}
 		if (mSide == TalonLoc.Cargo_Intake) {
 			mPigeon = new PigeonIMU(masterTalon);
-			CTRE(mPigeon.configFactoryDefault(200));
+			CTRE(mPigeon.configFactoryDefault(kLong));
 			CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_1_General, 3, kLong));
 			CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_9_SixDeg_YPR, 3, kLong));
 			CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_6_SensorFusion, 3, kLong));
@@ -599,7 +599,7 @@ public class MkTalon {
 				}
 
 				newTime.start(10.0);
-				while (!CargoArm.getInstance().spearLimit()) {
+				while (!CargoArm.getInstance().isSpearLimitTriggered()) {
 					if (newTime.isDone()) {
 						Logger.logErrorWithTrace("Did not detect spear switch (Fwd)");
 						check = false;

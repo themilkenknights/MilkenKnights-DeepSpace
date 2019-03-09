@@ -37,7 +37,7 @@ public class Superstructure extends Subsystem {
 	 * controller that changes calls the lower-level subsystems.
 	 */
 	private Superstructure() {
-		ShuffleboardTab mStructureTab = Shuffleboard.getTab("Superstructure");
+		ShuffleboardTab mStructureTab = Shuffleboard.getTab("General");
 		mMatchState = mStructureTab.add("Match State", "").getEntry();
 		mRobotStateEntry = mStructureTab.add("Robot State", "").getEntry();
 		mCompressorCurrent = mStructureTab.add("Compressor Current", 0.0).getEntry();
@@ -119,7 +119,7 @@ public class Superstructure extends Subsystem {
 				startAutoClimb();
 				break;
 			default:
-				Logger.logErrorWithTrace("Unexpected robot state: " + mRobotState);
+				Logger.logError("Unexpected robot state: " + mRobotState);
 				break;
 		}
 		Logger.logMarker("Switching to Robot State:" + mRobotState);

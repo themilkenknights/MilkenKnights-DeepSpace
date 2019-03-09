@@ -28,9 +28,9 @@ public class HatchArm extends Subsystem {
 	private final MkTalon mArmTalon;
 	private HatchSpearState mSpearState;
 	private Solenoid mSpearSolenoid;
-	private boolean mKetteringDisCon = false;
+	private boolean mDisCon = false;
 	private double mKetteringOpenLoopSetpoint, mKetteringPosEnable = 0.0;
-	private MkTime mStartDis, mMoveTime, fastTime;
+	private MkTime mMoveTime, fastTime;
 	private boolean mSoftLimitState = true;
 	private boolean mSpearLimitTriggered = false;
 	private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus, mRawError, mMechState, mLimitTriggered, mSpearStateTab, mRawPos;
@@ -52,7 +52,6 @@ public class HatchArm extends Subsystem {
 		mSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchArmChannel);
 		mSpearState = HatchSpearState.STOW;
 		mArmTalon = new MkTalon(CAN.kGroundHatchArmTalonID, CAN.kKetteringReverseLimitSwitchTalonID, TalonLoc.Hatch_Arm, mHatchArmTab);
-		mStartDis = new MkTime();
 		mMoveTime = new MkTime();
 		fastTime = new MkTime();
 	}
@@ -77,29 +76,18 @@ public class HatchArm extends Subsystem {
 	public void safetyCheck(double timestamp) {
 		mArmTalon.checkForReset();
 		if (!mArmTalon.isEncoderConnected()) {
-			if (mKetteringDisCon) {
-				if (mStartDis.isDone()) {
-					setOpenLoop(0.0);
-					mKetteringDisCon = false;
-					mStartDis.reset();
-				}
+			if (mDisCon) {
+				setOpenLoop(0.0);
+				mDisCon = false;
+				Logger.logError("Hatch Arm Encoder Disconnected");
 			} else {
-				mKetteringDisCon = true;
-				mStartDis.start(0.3);
-			}
-			Logger.logErrorWithTrace("Hatch Arm Encoder Not Connected");
-		} else {
-			if (mKetteringDisCon) {
-				mKetteringDisCon = false;
-				mStartDis.reset();
-				mArmTalon.zeroEncoder();
-				Timer.delay(0.05);
+				mDisCon = true;
 			}
 		}
 
 		if (mArmTalon.getCurrent() > HATCH_ARM.kMaxSafeCurrent) {
-			Logger.logErrorWithTrace("Unsafe Current on Hatch" + mArmTalon.getCurrent() + " Amps");
 			setOpenLoop(0.0);
+			Logger.logError("Unsafe Current on Hatch Arm " + mArmTalon.getCurrent() + " Amps");
 		}
 	}
 
@@ -113,8 +101,8 @@ public class HatchArm extends Subsystem {
 	}
 
 	public void disableSoftLimit() {
-		CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
-		CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
+		CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(false, 0));
+		CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(false, 0));
 	}
 
 	public boolean isKetteringReverseTriggered() {
@@ -139,7 +127,7 @@ public class HatchArm extends Subsystem {
 	 */
 	@Override
 	public synchronized void onQuickLoop(double timestamp) {
-		mSpearLimitTriggered = CargoArm.getInstance().spearLimit();
+		mSpearLimitTriggered = CargoArm.getInstance().isSpearLimitTriggered();
 		switch (mHatchMechanismState) {
 			case STOWED:
 			case SPEAR_STOW_ONLY:
@@ -175,7 +163,7 @@ public class HatchArm extends Subsystem {
 				}
 				break;
 			default:
-				Logger.logErrorWithTrace("Unexpected Hatch Arm control state: " + mHatchMechanismState);
+				Logger.logError("Unexpected Hatch Arm control state: " + mHatchMechanismState);
 				break;
 		}
 		/*
@@ -245,7 +233,7 @@ public class HatchArm extends Subsystem {
 	/**
 	 * Move Spear up to stow or down to place
 	 */
-	public synchronized void setHatchSpearState(HatchSpearState armState) {
+	private synchronized void setHatchSpearState(HatchSpearState armState) {
 		mSpearState = armState;
 		Logger.logMarker("Set Hatch Spear to " + armState.toString());
 	}

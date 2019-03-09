@@ -12,7 +12,7 @@ public class DeltaTime {
 
 	public DeltaTime(String name, int loopsTillUpdate) {
 		this.loopsTillUpdate = loopsTillUpdate;
-		mEntry = Shuffleboard.getTab("Loops").add(name, 0.0).getEntry();
+		mEntry = Shuffleboard.getTab("General").add(name, 0.0).getEntry();
 		count = 0;
 	}
 

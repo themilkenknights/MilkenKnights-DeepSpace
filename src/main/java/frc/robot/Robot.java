@@ -51,6 +51,7 @@ public class Robot extends TimedRobot {
 			Logger.logAutoInit();
 			mMatchState = MatchState.AUTO;
 			mSubsystemManager.startAuto();
+			AutoChooser.updateGameData();
 		} catch (Throwable t) {
 			Logger.logThrowableCrash(t);
 			throw t;

@@ -37,7 +37,7 @@ public class Vision extends Subsystem {
 		server.setSource(cargoCam);
 		server.setSource(LLFeed);
 
-		ShuffleboardTab mVisionTab = Shuffleboard.getTab("Vision");
+		ShuffleboardTab mVisionTab = Shuffleboard.getTab("General");
 		mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
 		mDist = mVisionTab.add("Limelight Dist", 0.0).getEntry();
 		mArea = mVisionTab.add("Area", 0.0).getEntry();
@@ -72,7 +72,7 @@ public class Vision extends Subsystem {
 		if (!isVision) {
 			mLimeLight.setLEDMode(LedMode.kforceOn);
 			isVision = true;
-			mLEDTimer.start(0.05);
+			mLEDTimer.start(0.25);
 		}
 	}
 

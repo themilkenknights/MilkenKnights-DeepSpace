@@ -30,7 +30,7 @@ public class CargoArm extends Subsystem {
 
 	private CargoArm() {
 		ShuffleboardTab mCargoArmTab = Shuffleboard.getTab("Cargo Arm");
-		ShuffleboardTab mIntakeRollersTab = Shuffleboard.getTab("Intake Rollers");
+		ShuffleboardTab mIntakeRollersTab = Shuffleboard.getTab("General");
 
 		mAbsPos = mCargoArmTab.add("Absolute Pos", 0.0).getEntry();
 		mControlMode = mCargoArmTab.add("Control Mode", "").getEntry();
@@ -61,15 +61,15 @@ public class CargoArm extends Subsystem {
 			if (mDisCon) {
 				setOpenLoop(0.0);
 				mDisCon = false;
+				Logger.logError("Cargo Arm Encoder Disconnected");
 			} else {
 				mDisCon = true;
 			}
-
 		}
 
 		if (mArmTalon.getCurrent() > CARGO_ARM.kMaxSafeCurrent) {
-			Logger.logError("Unsafe Current on Cargo " + mArmTalon.getCurrent() + " Amps");
 			setOpenLoop(0.0);
+			Logger.logError("Unsafe Current on Cargo Arm " + mArmTalon.getCurrent() + " Amps");
 		}
 
 	}
@@ -137,7 +137,7 @@ public class CargoArm extends Subsystem {
 		return mArmTalon.checkSystem() && mIntakeTalon.checkSystem();
 	}
 
-	public boolean spearLimit() {
+	public boolean isSpearLimitTriggered() {
 		return mIntakeTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
 	}
 
@@ -150,10 +150,6 @@ public class CargoArm extends Subsystem {
 
 	public synchronized void setIntakeRollers(double output) {
 		mRollerSetpoint = output;
-	}
-
-	public CargoArmControlState getArmControlState() {
-		return mCargoArmControlState;
 	}
 
 	private synchronized void setArmControlState(CargoArmControlState state) {
@@ -184,8 +180,8 @@ public class CargoArm extends Subsystem {
 	}
 
 	public void disableSoftLimit() {
-		CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
-		CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(false, GENERAL.kShortTimeoutMs));
+		CT.RE(mArmTalon.masterTalon.configForwardSoftLimitEnable(false, 0));
+		CT.RE(mArmTalon.masterTalon.configReverseSoftLimitEnable(false, 0));
 	}
 
 	public enum CargoArmControlState {

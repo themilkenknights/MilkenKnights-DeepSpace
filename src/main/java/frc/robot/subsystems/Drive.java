@@ -96,28 +96,20 @@ public class Drive extends Subsystem {
 		mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(fusedHeading).rotateBy(mGyroOffset);
 		mPeriodicIO.leftPos = mLeftDrive.getPosition();
 		mPeriodicIO.rightPos = mRightDrive.getPosition();
-		mPeriodicIO.leftVel = mLeftDrive.getVelocity();
-		mPeriodicIO.rightVel = mRightDrive.getVelocity();
+		// mPeriodicIO.leftVel = mLeftDrive.getVelocity();
+		// mPeriodicIO.rightVel = mRightDrive.getVelocity();
 	}
 
-	/**
+	/*
 	 * Periodic update after read. Used to update odometry and path setpoints
 	 *
 	 * @param timestamp In Seconds Since Code Start
+	 * 
+	 * @Override public synchronized void onQuickLoop(double timestamp) { stateEstimator(timestamp);
+	 * switch (mDriveControlState) { case OPEN_LOOP: case MOTION_MAGIC: case PIGEON_SERVO: break;
+	 * default: Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
+	 * break; } }
 	 */
-	@Override
-	public synchronized void onQuickLoop(double timestamp) {
-		stateEstimator(timestamp);
-		switch (mDriveControlState) {
-			case OPEN_LOOP:
-			case MOTION_MAGIC:
-			case PIGEON_SERVO:
-				break;
-			default:
-				Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
-				break;
-		}
-	}
 
 	/**
 	 * Write setpoints to Talons and Victors left_demand and right_demand are always in Talon Native
