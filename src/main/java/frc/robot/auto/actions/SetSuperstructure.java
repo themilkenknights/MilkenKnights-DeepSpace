@@ -13,6 +13,6 @@ public class SetSuperstructure extends RunOnceAction {
 
 	@Override
 	public void runOnce() {
-		Superstructure.getInstance().setRobotState(RobotState.TELEOP_DRIVE);
+		Superstructure.getInstance().setRobotState(state);
 	}
 }

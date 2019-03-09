@@ -20,11 +20,12 @@ public class DeltaTime {
 		double now = Timer.getFPGATimestamp();
 		double dt = now - lastTime;
 		lastTime = now;
-		// if (count == loopsTillUpdate) {
-		mEntry.setDouble(dt * 1e3);
-		// count = 0;
-		// }
-		// count++;
+		if (count == loopsTillUpdate) {
+			mEntry.setDouble(dt * 1e3);
+			count = 0;
+		} else {
+			count++;
+		}
 		return now;
 	}
 }
