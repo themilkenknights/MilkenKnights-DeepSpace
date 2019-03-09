@@ -23,199 +23,187 @@ import frc.robot.subsystems.HatchArm.HatchMechanismState;
 
 public class Superstructure extends Subsystem {
 
-  private static HatchArm mHatch = HatchArm.getInstance();
-  private PowerDistributionPanel mPDP;
-  private Compressor mCompressor;
-  private RobotState mRobotState = RobotState.TELEOP_DRIVE;
-  private Solenoid mFrontClimbSolenoid, mRearClimbSolenoid;
-  private ClimbState mRearClimbState = ClimbState.RETRACTED;
-  private ClimbState mFrontClimbState = ClimbState.RETRACTED;
-  private NetworkTableEntry mMatchState,
-      mRobotStateEntry,
-      mCompressorCurrent,
-      mFrontClimb,
-      mRearClimb;
+    private static HatchArm mHatch = HatchArm.getInstance();
+    private PowerDistributionPanel mPDP;
+    private Compressor mCompressor;
+    private RobotState mRobotState = RobotState.TELEOP_DRIVE;
+    private Solenoid mFrontClimbSolenoid, mRearClimbSolenoid;
+    private ClimbState mRearClimbState = ClimbState.RETRACTED;
+    private ClimbState mFrontClimbState = ClimbState.RETRACTED;
+    private NetworkTableEntry mMatchState, mRobotStateEntry, mCompressorCurrent, mFrontClimb,
+        mRearClimb;
 
-  /**
-   * Stores PDP, Compressor, General Robot Data, and Climb Actuators. Acts as the high-level
-   * controller that changes calls the lower-level subsystems.
-   */
-  private Superstructure() {
-    ShuffleboardTab mStructureTab = Shuffleboard.getTab("Superstructure");
-    mMatchState = mStructureTab.add("Match State", "").getEntry();
-    mRobotStateEntry = mStructureTab.add("Robot State", "").getEntry();
-    mCompressorCurrent = mStructureTab.add("Compressor Current", 0.0).getEntry();
-    mFrontClimb = mStructureTab.add("Front Climb", "").getEntry();
-    mRearClimb = mStructureTab.add("Rear Climb", "").getEntry();
+    /**
+     * Stores PDP, Compressor, General Robot Data, and Climb Actuators. Acts as the high-level
+     * controller that changes calls the lower-level subsystems.
+     */
+    private Superstructure() {
+        ShuffleboardTab mStructureTab = Shuffleboard.getTab("Superstructure");
+        mMatchState = mStructureTab.add("Match State", "").getEntry();
+        mRobotStateEntry = mStructureTab.add("Robot State", "").getEntry();
+        mCompressorCurrent = mStructureTab.add("Compressor Current", 0.0).getEntry();
+        mFrontClimb = mStructureTab.add("Front Climb", "").getEntry();
+        mRearClimb = mStructureTab.add("Rear Climb", "").getEntry();
 
-    mFrontClimbSolenoid =
-        new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kFrontClimbSolenoidChannel);
-    mRearClimbSolenoid =
-        new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kRearClimbSolenoidChannel);
+        mFrontClimbSolenoid =
+            new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kFrontClimbSolenoidChannel);
+        mRearClimbSolenoid =
+            new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kRearClimbSolenoidChannel);
 
-    mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
-    LiveWindow.disableTelemetry(mPDP);
-    mCompressor = new Compressor(CAN.kPneumaticsControlModuleID);
-  }
-
-  public static Superstructure getInstance() {
-    return InstanceHolder.mInstance;
-  }
-
-  @Override
-  public void outputTelemetry(double timestamp) {
-    mMatchState.setString(Robot.mMatchState.toString());
-    mRobotStateEntry.setString(mRobotState.toString());
-    mCompressorCurrent.setDouble(mCompressor.getCompressorCurrent());
-    mFrontClimb.setString(mFrontClimbState.toString());
-    mRearClimb.setString(mRearClimbState.toString());
-  }
-
-  public ClimbState getFrontClimbState() {
-    return mFrontClimbState;
-  }
-
-  public void setFrontClimbState(ClimbState state) {
-    mFrontClimbState = state;
-    mFrontClimbSolenoid.set(state.state);
-  }
-
-  public ClimbState getRearClimbState() {
-    return mRearClimbState;
-  }
-
-  public void setRearClimbState(ClimbState state) {
-    mRearClimbState = state;
-    mRearClimbSolenoid.set(state.state);
-  }
-
-  public void teleopInit(double timestamp) {
-    setRobotState(RobotState.TELEOP_DRIVE);
-  }
-
-  @Override
-  public void autonomousInit(double timestamp) {
-    setRobotState(RobotState.TELEOP_DRIVE);
-  }
-
-  public RobotState getRobotState() {
-    return mRobotState;
-  }
-
-  public synchronized void setRobotState(RobotState state) {
-    if (mRobotState != RobotState.TELEOP_DRIVE) {
-      Input.rumbleDriverController();
+        mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
+        LiveWindow.disableTelemetry(mPDP);
+        mCompressor = new Compressor(CAN.kPneumaticsControlModuleID);
     }
-    mRobotState = state;
-    switch (state) {
-      case TELEOP_DRIVE:
-        AutoChooser.disableAuto();
-        Vision.getInstance().disableLED();
-        break;
-      case HATCH_VISION_INTAKE:
-        startVisionHatchIntake();
-      case HATCH_VISION_OUTTAKE:
-        startVisionHatchOuttake();
-        break;
-      case VISION_CARGO_OUTTAKE:
-        startVisionCargoOuttake();
-      case PATH_FOLLOWING:
-        break;
-      case AUTO_CLIMB:
-        startAutoClimb();
-        break;
-      default:
-        Logger.logErrorWithTrace("Unexpected robot state: " + mRobotState);
-        break;
+
+    public static Superstructure getInstance() {
+        return InstanceHolder.mInstance;
     }
-    Logger.logMarker("Switching to Robot State:" + mRobotState);
-  }
 
-  private void startVisionHatchOuttake() {
-    Vision.getInstance().enableLED();
-    if (!Vision.getInstance().timerDone()) {
-      Timer.delay(0.02);
+    @Override public void outputTelemetry(double timestamp) {
+        mMatchState.setString(Robot.mMatchState.toString());
+        mRobotStateEntry.setString(mRobotState.toString());
+        mCompressorCurrent.setDouble(mCompressor.getCompressorCurrent());
+        mFrontClimb.setString(mFrontClimbState.toString());
+        mRearClimb.setString(mRearClimbState.toString());
     }
-    Vision.getInstance().updateLimelight();
-    if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
-      setRobotState(RobotState.TELEOP_DRIVE);
-      Logger.logMarker("Limelight target not valid");
-    } else {
-      AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
+
+    public ClimbState getFrontClimbState() {
+        return mFrontClimbState;
     }
-  }
 
-  private void startVisionHatchIntake() {
-    Vision.getInstance().enableLED();
-    if (!Vision.getInstance().timerDone()) {
-      Timer.delay(0.02);
+    public void setFrontClimbState(ClimbState state) {
+        mFrontClimbState = state;
+        mFrontClimbSolenoid.set(state.state);
     }
-    Vision.getInstance().updateLimelight();
-    if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
-      setRobotState(RobotState.TELEOP_DRIVE);
-      Logger.logMarker("Limelight target not valid");
-    } else {
-      AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
+
+    public ClimbState getRearClimbState() {
+        return mRearClimbState;
     }
-  }
 
-  private void startVisionCargoOuttake() {
-    Vision.getInstance().enableLED();
-    if (!Vision.getInstance().timerDone()) {
-      Timer.delay(0.02);
+    public void setRearClimbState(ClimbState state) {
+        mRearClimbState = state;
+        mRearClimbSolenoid.set(state.state);
     }
-    mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
-    CargoArm.getInstance().setArmState(CargoArmState.REVERSE_CARGOSHIP);
-    Vision.getInstance().updateLimelight();
-    if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
-      setRobotState(RobotState.TELEOP_DRIVE);
-      Logger.logMarker("Limelight target not valid");
-    } else {
-      AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
+
+    public void teleopInit(double timestamp) {
+        setRobotState(RobotState.TELEOP_DRIVE);
     }
-  }
 
-  private void startAutoClimb() {
-    AutoChooser.startAuto(new ClimbLevel2Mode());
-  }
-
-  @Override
-  public void onStop(double timestamp) {
-    setFrontClimbState(ClimbState.RETRACTED);
-    setRearClimbState(ClimbState.RETRACTED);
-  }
-
-  @Override
-  public void onRestart(double timestamp) {}
-
-  @Override
-  public boolean checkSystem() {
-    return mCompressor.getCompressorCurrent() > 0.0
-        && mPDP.getTotalCurrent() > 0.0
-        && mPDP.getVoltage() > 0.0;
-  }
-
-  public enum ClimbState {
-    RETRACTED(false),
-    LOWERED(true);
-    public final boolean state;
-
-    ClimbState(final boolean state) {
-      this.state = state;
+    @Override public void autonomousInit(double timestamp) {
+        setRobotState(RobotState.TELEOP_DRIVE);
     }
-  }
 
-  public enum RobotState {
-    PATH_FOLLOWING,
-    TELEOP_DRIVE,
-    HATCH_VISION_INTAKE,
-    HATCH_VISION_OUTTAKE,
-    VISION_CARGO_OUTTAKE,
-    AUTO_CLIMB
-  }
+    public RobotState getRobotState() {
+        return mRobotState;
+    }
 
-  private static class InstanceHolder {
+    public synchronized void setRobotState(RobotState state) {
+        if (mRobotState != RobotState.TELEOP_DRIVE) {
+            Input.rumbleDriverController();
+        }
+        mRobotState = state;
+        switch (state) {
+            case TELEOP_DRIVE:
+                AutoChooser.disableAuto();
+                Vision.getInstance().disableLED();
+                break;
+            case HATCH_VISION_INTAKE:
+                startVisionHatchIntake();
+            case HATCH_VISION_OUTTAKE:
+                startVisionHatchOuttake();
+                break;
+            case VISION_CARGO_OUTTAKE:
+                startVisionCargoOuttake();
+            case PATH_FOLLOWING:
+                break;
+            case AUTO_CLIMB:
+                startAutoClimb();
+                break;
+            default:
+                Logger.logErrorWithTrace("Unexpected robot state: " + mRobotState);
+                break;
+        }
+        Logger.logMarker("Switching to Robot State:" + mRobotState);
+    }
 
-    private static final Superstructure mInstance = new Superstructure();
-  }
+    private void startVisionHatchOuttake() {
+        Vision.getInstance().enableLED();
+        if (!Vision.getInstance().timerDone()) {
+            Timer.delay(0.02);
+        }
+        Vision.getInstance().updateLimelight();
+        if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
+            setRobotState(RobotState.TELEOP_DRIVE);
+            Logger.logMarker("Limelight target not valid");
+        } else {
+            AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
+        }
+    }
+
+    private void startVisionHatchIntake() {
+        Vision.getInstance().enableLED();
+        if (!Vision.getInstance().timerDone()) {
+            Timer.delay(0.02);
+        }
+        Vision.getInstance().updateLimelight();
+        if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
+            setRobotState(RobotState.TELEOP_DRIVE);
+            Logger.logMarker("Limelight target not valid");
+        } else {
+            AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
+        }
+    }
+
+    private void startVisionCargoOuttake() {
+        Vision.getInstance().enableLED();
+        if (!Vision.getInstance().timerDone()) {
+            Timer.delay(0.02);
+        }
+        mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
+        CargoArm.getInstance().setArmState(CargoArmState.REVERSE_CARGOSHIP);
+        Vision.getInstance().updateLimelight();
+        if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
+            setRobotState(RobotState.TELEOP_DRIVE);
+            Logger.logMarker("Limelight target not valid");
+        } else {
+            AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
+        }
+    }
+
+    private void startAutoClimb() {
+        AutoChooser.startAuto(new ClimbLevel2Mode());
+    }
+
+    @Override public void onStop(double timestamp) {
+        setFrontClimbState(ClimbState.RETRACTED);
+        setRearClimbState(ClimbState.RETRACTED);
+    }
+
+    @Override public void onRestart(double timestamp) {
+    }
+
+    @Override public boolean checkSystem() {
+        return mCompressor.getCompressorCurrent() > 0.0 && mPDP.getTotalCurrent() > 0.0
+            && mPDP.getVoltage() > 0.0;
+    }
+
+    public enum ClimbState {
+        RETRACTED(false), LOWERED(true);
+        public final boolean state;
+
+        ClimbState(final boolean state) {
+            this.state = state;
+        }
+    }
+
+
+    public enum RobotState {
+        PATH_FOLLOWING, TELEOP_DRIVE, HATCH_VISION_INTAKE, HATCH_VISION_OUTTAKE, VISION_CARGO_OUTTAKE, AUTO_CLIMB
+    }
+
+
+    private static class InstanceHolder {
+
+        private static final Superstructure mInstance = new Superstructure();
+    }
 }
