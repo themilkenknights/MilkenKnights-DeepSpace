@@ -10,55 +10,55 @@ import frc.robot.lib.util.Logger;
  */
 public abstract class AutoModeBase {
 
-  protected double mUpdateRate = 1.0 / 200.0;
-  protected boolean mActive = false;
-  private DeltaTime baseTimer = new DeltaTime("Auto Base", 5);
+    protected double mUpdateRate = 1.0 / 200.0;
+    protected boolean mActive = false;
+    private DeltaTime baseTimer = new DeltaTime("Auto Base", 5);
 
-  public void run() {
-    mActive = true;
-    try {
-      routine();
-    } catch (AutoModeEndedException e) {
-      Logger.logMarker("AUTO MODE DONE!!!!");
-      return;
+    public void run() {
+        mActive = true;
+        try {
+            routine();
+        } catch (AutoModeEndedException e) {
+            Logger.logMarker("AUTO MODE DONE!!!!");
+            return;
+        }
+        done();
     }
-    done();
-  }
 
-  public void done() {
-    Logger.logMarker("Auto mode done");
-  }
-
-  public void stop() {
-    mActive = false;
-  }
-
-  public void runAction(Action action) throws AutoModeEndedException {
-    isActiveWithThrow();
-    action.start();
-    while (isActiveWithThrow() && !action.isFinished()) {
-      baseTimer.updateDt();
-      action.update();
-      long waitTime = (long) (mUpdateRate * 1000.0);
-      try {
-        Thread.sleep(waitTime);
-      } catch (InterruptedException e) {
-        e.printStackTrace();
-      }
+    public void done() {
+        Logger.logMarker("Auto mode done");
     }
-    action.done();
-  }
 
-  public boolean isActiveWithThrow() throws AutoModeEndedException {
-    if (!isActive()) {
-      throw new AutoModeEndedException();
+    public void stop() {
+        mActive = false;
     }
-    return isActive();
-  }
 
-  public boolean isActive() {
-    return mActive;
-  }
+    public void runAction(Action action) throws AutoModeEndedException {
+        isActiveWithThrow();
+        action.start();
+        while (isActiveWithThrow() && !action.isFinished()) {
+            baseTimer.updateDt();
+            action.update();
+            long waitTime = (long) (mUpdateRate * 1000.0);
+            try {
+                Thread.sleep(waitTime);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        action.done();
+    }
 
-  protected abstract void routine() throws AutoModeEndedException;
+    public boolean isActiveWithThrow() throws AutoModeEndedException {
+        if (!isActive()) {
+            throw new AutoModeEndedException();
+        }
+        return isActive();
+    }
+
+    public boolean isActive() {
+        return mActive;
+    }
+
+    protected abstract void routine() throws AutoModeEndedException;
 }
