@@ -12,6 +12,7 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.MkTime;
 import frc.robot.lib.vision.LimeLight;
+import frc.robot.lib.vision.LimeLightControlMode;
 import frc.robot.lib.vision.LimeLightControlMode.LedMode;
 import frc.robot.lib.vision.LimelightTarget;
 
@@ -19,23 +20,30 @@ public class Vision extends Subsystem {
 
 	private LimeLight mLimeLight;
 	private NetworkTableEntry mLLX, mDist, mArea, mLED, mSkew;
-	private UsbCamera cargoCam;
+	//private UsbCamera cargoCam;
 	private boolean isVision = false;
-	private MjpegServer server;
-	private HttpCamera LLFeed;
+	//private MjpegServer server;
+	//private HttpCamera LLFeed;
+	//private UsbCamera LLFeed;
 	private boolean isHatchFeed = true;
 	private MkTime mLEDTimer = new MkTime();
 
 	private Vision() {
-		cargoCam = CameraServer.getInstance().startAutomaticCapture(0);
-		cargoCam.setVideoMode(VideoMode.PixelFormat.kMJPEG, 320, 240, 30);
-		cargoCam.setConnectVerbose(0);
+	//	cargoCam = CameraServer.getInstance().startAutomaticCapture(0);
+		//	cargoCam.setVideoMode(VideoMode.PixelFormat.kYUYV, 320, 240, 30);
+			//	cargoCam.setVideoMode(VideoMode.PixelFormat.kMJPEG, 320, 240, 30);
+	//	cargoCam.setConnectVerbose(0);
 
-		LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
+		//LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
 
-		server = new MjpegServer("Switched Camera", 5805);
-		server.setSource(cargoCam);
-		server.setSource(LLFeed);
+		//	LLFeed = CameraServer.getInstance().startAutomaticCapture(1);
+		//	LLFeed.setVideoMode(VideoMode.PixelFormat.kYUYV, 320, 240, 30);
+			//LLFeed.setFPS(30);
+			//LLFeed.setConnectVerbose(0);
+	//	server = new MjpegServer("Switched Camera", 5805);
+
+		//server.setSource(cargoCam);
+		//server.setSource(LLFeed);
 
 		ShuffleboardTab mVisionTab = Shuffleboard.getTab("General");
 		mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
@@ -44,7 +52,6 @@ public class Vision extends Subsystem {
 		mLED = mVisionTab.add("Limelight LED", true).getEntry();
 		mSkew = mVisionTab.add("Limelight Skew", 0.0).getEntry();
 		mLimeLight = new LimeLight();
-		disableLED();
 	}
 
 	public static Vision getInstance() {
@@ -62,16 +69,16 @@ public class Vision extends Subsystem {
 
 	public void toggleVision() {
 		if (isVision) {
-			disableLED();
+		disableLED();
 		} else {
-			enableLED();
+enableLED();
 		}
 	}
 
 	public void enableLED() {
 		if (!isVision) {
-			mLimeLight.setLEDMode(LedMode.kforceOn);
-			isVision = true;
+				mLimeLight.setPipeline(0);
+				isVision = true;
 			mLEDTimer.start(0.25);
 		}
 	}
@@ -82,7 +89,7 @@ public class Vision extends Subsystem {
 
 	public void disableLED() {
 		if (isVision) {
-			mLimeLight.setLEDMode(LedMode.kforceOff);
+			mLimeLight.setPipeline(1);
 			isVision = false;
 			mLEDTimer.reset();
 		}
@@ -97,27 +104,27 @@ public class Vision extends Subsystem {
 	}
 
 	public void configHatchStream() {
-		if (!isHatchFeed) {
+	/*	if (!isHatchFeed) {
 			LLFeed.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
 			server.setSource(LLFeed);
-			cargoCam.setConnectionStrategy(ConnectionStrategy.kForceClose);
-			isHatchFeed = true;
-		}
+				cargoCam.setConnectionStrategy(ConnectionStrategy.kForceClose);
+				isHatchFeed = true;
+		} */
 	}
 
 	public void configCargoStream() {
-		if (isHatchFeed) {
+	/*	if (isHatchFeed) {
 			cargoCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
 			server.setSource(cargoCam);
-			LLFeed.setConnectionStrategy(ConnectionStrategy.kForceClose);
-			isHatchFeed = false;
-		}
+				LLFeed.setConnectionStrategy(ConnectionStrategy.kForceClose);
+				isHatchFeed = false;
+		} */
 	}
 
 	public synchronized void updateLimelight() {
 		mLimeLight.getUpdate();
 		if (mLEDTimer.isDone(10.0)) {
-			disableLED();
+			//disableLED();
 		}
 	}
 

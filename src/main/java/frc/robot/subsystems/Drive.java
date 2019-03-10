@@ -2,6 +2,7 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
+import com.ctre.phoenix.motorcontrol.FollowerType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.networktables.NetworkTableEntry;
@@ -60,16 +61,16 @@ public class Drive extends Subsystem {
 	public synchronized void outputTelemetry(double timestamp) {
 		mLeftDrive.updateShuffleboard();
 		mRightDrive.updateShuffleboard();
-		mState.setString(mDriveControlState.toString());
-		mStatus.setBoolean(driveStatus());
-		mFusedHeading.setDouble(mPigeon.getFusedHeading());
-		if (getHeading() != null) {
+		/*mState.setString(mDriveControlState.toString());
+		mStatus.setBoolean(driveStatus());*/
+		mFusedHeading.setDouble(mPeriodicIO.fusedHeading);
+		/*if (getHeading() != null) {
 			mGyroHeading.setDouble(getHeading().getDegrees());
 		}
 		if (mCSVWriter != null) {
 			mCSVWriter.add(mPeriodicIO);
 			mCSVWriter.write();
-		}
+		}*/
 		SmartDashboard.putNumber("Avg Dist", (mPeriodicIO.leftPos + mPeriodicIO.rightPos) / 2);
 		/*
 		 * SmartDashboard.putNumber("Aux Error", mRightDrive.masterTalon.getClosedLoopError(1));
@@ -255,12 +256,14 @@ public class Drive extends Subsystem {
 	public void configHatchVision() {
 		if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
 			mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 0.5, 0);
+			mLeftDrive.slaveTalon.follow(mRightDrive.masterTalon, FollowerType.AuxOutput1);
 		}
 	}
 
 	private void configNormalDrive() {
 		if (mDriveControlState == DriveControlState.PIGEON_SERVO) {
 			mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 1.0, 0);
+			mLeftDrive.slaveTalon.set(ControlMode.PercentOutput, 0.0);
 		}
 	}
 
@@ -278,8 +281,8 @@ public class Drive extends Subsystem {
 	public void autonomousInit(double timestamp) {
 		left_encoder_prev_distance_ = 0;
 		right_encoder_prev_distance_ = 0;
-		mLeftDrive.masterTalon.setSelectedSensorPosition(0);
-		mRightDrive.masterTalon.setSelectedSensorPosition(0);
+		mLeftDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
+		mRightDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
 		zeroPigeon();
 		RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
 		setHeading(Rotation2d.identity());
@@ -291,8 +294,8 @@ public class Drive extends Subsystem {
 	public void teleopInit(double timestamp) {
 		left_encoder_prev_distance_ = 0;
 		right_encoder_prev_distance_ = 0;
-		mLeftDrive.masterTalon.setSelectedSensorPosition(0);
-		mRightDrive.masterTalon.setSelectedSensorPosition(0);
+		mLeftDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
+		mRightDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
 		zeroPigeon();
 		RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
 		setHeading(Rotation2d.identity());

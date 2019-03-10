@@ -66,7 +66,7 @@ public class Logger {
 	}
 
 	private static synchronized void logMarker(String mark, Throwable nullableException) {
-		if (!lastOutput.equals(mark)) {
+	/*	if (!lastOutput.equals(mark)) {
 			String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 			try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 + "/main_log.txt", true))) {
 				writer.print(RUN_INSTANCE_UUID.toString());
@@ -84,11 +84,11 @@ public class Logger {
 			}
 		} else {
 			lastOutput = mark;
-		}
+		} */
 	}
 
 	private static synchronized void logCrashMarker(String mark, Throwable nullableException) {
-		if (!lastCrashOutput.equals(mark)) {
+	/*	if (!lastCrashOutput.equals(mark)) {
 			String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 			try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 + "/crash_log.txt", true))) {
 				writer.print(RUN_INSTANCE_UUID.toString());
@@ -106,6 +106,6 @@ public class Logger {
 			}
 		} else {
 			lastCrashOutput = mark;
-		}
+		} */
 	}
 }

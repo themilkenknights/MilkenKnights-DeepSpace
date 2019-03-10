@@ -58,11 +58,11 @@ public class Superstructure extends Subsystem {
 
 	@Override
 	public void outputTelemetry(double timestamp) {
-		mMatchState.setString(Robot.mMatchState.toString());
+	/*	mMatchState.setString(Robot.mMatchState.toString());
 		mRobotStateEntry.setString(mRobotState.toString());
 		mCompressorCurrent.setDouble(mCompressor.getCompressorCurrent());
 		mFrontClimb.setString(mFrontClimbState.toString());
-		mRearClimb.setString(mRearClimbState.toString());
+		mRearClimb.setString(mRearClimbState.toString()); */
 	}
 
 	public ClimbState getFrontClimbState() {

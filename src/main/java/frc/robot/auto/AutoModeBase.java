@@ -1,8 +1,11 @@
 package frc.robot.auto;
 
+import edu.wpi.first.wpilibj.Timer;
 import frc.robot.auto.actions.Action;
 import frc.robot.lib.util.DeltaTime;
 import frc.robot.lib.util.Logger;
+
+import java.sql.Time;
 
 /**
  * An abstract class that is the basis of the robot's autonomous routines. This is implemented in
@@ -12,7 +15,7 @@ public abstract class AutoModeBase {
 
 	protected double mUpdateRate = 1.0 / 100.0;
 	protected boolean mActive = false;
-	private DeltaTime baseTimer = new DeltaTime("Auto Base", 5);
+	private DeltaTime baseTimer = new DeltaTime("Auto Base: " + Timer.getFPGATimestamp(), 5);
 
 	public void run() {
 		mActive = true;

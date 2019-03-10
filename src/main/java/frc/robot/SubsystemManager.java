@@ -44,19 +44,23 @@ public class SubsystemManager {
 						if (count == i) {
 							subsystem.slowUpdate(now);
 							subsystem.outputTelemetry(now);
-							// subsystem.safetyCheck(now);
+							//subsystem.safetyCheck(now);
 						}
 						i++;
 					}
-					if (count == mAllSubsystems.size()) {
-						count = 0;
-					}
-					count++;
 				} else {
 					for (Subsystem subsystem : mAllSubsystems) {
-						subsystem.outputTelemetry(now);
+						int i = 0;
+						if (count == i) {
+							subsystem.outputTelemetry(now);
+						}
+						i++;
 					}
 				}
+				if (count == mAllSubsystems.size()) {
+					count = 0;
+				}
+				count++;
 				Vision.getInstance().updateLimelight();
 				timestamp_ = now;
 			}

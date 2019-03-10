@@ -110,7 +110,7 @@ public class HatchArm extends Subsystem {
 	}
 
 	public void outputTelemetry(double timestamp) {
-		mArmTalon.updateShuffleboard();
+	/*	mArmTalon.updateShuffleboard();
 		mDesiredState.setString(mHatchKetteringSetpoint.toString());
 		mControlMode.setString(mHatchIntakeControlState.toString());
 		mStatus.setBoolean(mArmTalon.isEncoderConnected());
@@ -119,7 +119,7 @@ public class HatchArm extends Subsystem {
 		mRawError.setDouble(MkMath.degreesToNativeUnits(mArmTalon.getError()));
 		mRawPos.setDouble(mArmTalon.masterTalon.getSelectedSensorPosition());
 		mLimitTriggered.setBoolean(isHatchLimitTriggered());
-		mSpearStateTab.setString(mSpearState.toString());
+		mSpearStateTab.setString(mSpearState.toString()); */
 	}
 
 	/**

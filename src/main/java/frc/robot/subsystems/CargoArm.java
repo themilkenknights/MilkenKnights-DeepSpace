@@ -103,12 +103,12 @@ public class CargoArm extends Subsystem {
 
 	@Override
 	public void outputTelemetry(double timestamp) {
-		mArmTalon.updateShuffleboard();
+	/*	mArmTalon.updateShuffleboard();
 		mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
 		mDesiredState.setString(mCargoArmState.toString());
 		mControlMode.setString(mCargoArmControlState.toString());
 		mStatus.setBoolean(mArmTalon.isEncoderConnected());
-		mRawError.setDouble(MkMath.degreesToNativeUnits(mArmTalon.getError()));
+		mRawError.setDouble(MkMath.degreesToNativeUnits(mArmTalon.getError())); */
 	}
 
 	@Override

@@ -44,7 +44,7 @@ public final class Constants {
 		public static final double kTicksPerRev = 4096.0;
 		public static final double kMotorSafetyTimer = 0.05;
 		public static final double kMainLoopDt = 0.02;
-		public static final double kFastLooperDt = 0.02;
+		public static final double kFastLooperDt = 0.01;
 		public static final double kThrottleDeadband = 0.0;
 		public static final double kWheelDeadband = 0.003;
 		public static final double kOperatorDeadband = 0.01;
@@ -274,26 +274,24 @@ public final class Constants {
 					tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.9);
 					tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.4);
 
-					tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
-					tal.primaryPID.selectedFeedbackCoefficient = 0.5;
-
-					tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
-					tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0;
-
-					tal.remoteFilter1.remoteSensorDeviceID = CAN.kLeftCargoIntakeTalonID;
-					tal.remoteFilter1.remoteSensorSource = RemoteSensorSource.GadgeteerPigeon_Yaw;
-
-					tal.sum0Term = FeedbackDevice.RemoteSensor0;
-					tal.sum1Term = FeedbackDevice.CTRE_MagEncoder_Relative;
-
-					tal.remoteFilter0.remoteSensorSource = RemoteSensorSource.TalonSRX_SelectedSensor;
-
 					if (loc == TalonLoc.Left) {
-						tal.remoteFilter0.remoteSensorDeviceID = CAN.kDriveRightMasterTalonID;
-						tal.auxPIDPolarity = true;
+							tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
 					} else {
-						tal.remoteFilter0.remoteSensorDeviceID = CAN.kDriveLeftMasterTalonID;
-						tal.auxPIDPolarity = false;
+							tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
+							tal.primaryPID.selectedFeedbackCoefficient = 0.5;
+
+							tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
+							tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0;
+
+							tal.remoteFilter1.remoteSensorDeviceID = CAN.kLeftCargoIntakeTalonID;
+							tal.remoteFilter1.remoteSensorSource = RemoteSensorSource.GadgeteerPigeon_Yaw;
+
+							tal.sum0Term = FeedbackDevice.RemoteSensor0;
+							tal.sum1Term = FeedbackDevice.CTRE_MagEncoder_Relative;
+
+							tal.remoteFilter0.remoteSensorSource = RemoteSensorSource.TalonSRX_SelectedSensor;
+							tal.remoteFilter0.remoteSensorDeviceID = CAN.kDriveLeftMasterTalonID;
+							tal.auxPIDPolarity = false;
 					}
 				} else if (loc == TalonLoc.Cargo_Arm || loc == TalonLoc.Hatch_Arm) {
 					tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
