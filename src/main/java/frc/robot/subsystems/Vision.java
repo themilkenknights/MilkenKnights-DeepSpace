@@ -40,9 +40,9 @@ public class Vision extends Subsystem {
 		ShuffleboardTab mVisionTab = Shuffleboard.getTab("General");
 		mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
 		mDist = mVisionTab.add("Limelight Dist", 0.0).getEntry();
-		mArea = mVisionTab.add("Area", 0.0).getEntry();
-		mLED = mVisionTab.add("LED State", true).getEntry();
-		mSkew = mVisionTab.add("Skew", 0.0).getEntry();
+		mArea = mVisionTab.add("Limelight Area", 0.0).getEntry();
+		mLED = mVisionTab.add("Limelight LED", true).getEntry();
+		mSkew = mVisionTab.add("Limelight Skew", 0.0).getEntry();
 		mLimeLight = new LimeLight();
 		disableLED();
 	}

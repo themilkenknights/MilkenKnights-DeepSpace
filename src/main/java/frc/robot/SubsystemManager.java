@@ -48,7 +48,7 @@ public class SubsystemManager {
 						}
 						i++;
 					}
-					if (count == 4) {
+					if (count == mAllSubsystems.size()) {
 						count = 0;
 					}
 					count++;
