@@ -1,7 +1,6 @@
 package frc.robot.lib.vision;
 
 import java.util.ArrayList;
-
 import edu.wpi.first.wpilibj.Timer;
 import io.github.pseudoresonance.pixy2api.Pixy2;
 import io.github.pseudoresonance.pixy2api.Pixy2.LinkType;

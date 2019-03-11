@@ -1,9 +1,7 @@
 package frc.robot.lib.geometry;
 
 import static frc.robot.lib.util.Util.kEpsilon;
-
 import java.text.DecimalFormat;
-
 import frc.robot.lib.util.Util;
 
 /**

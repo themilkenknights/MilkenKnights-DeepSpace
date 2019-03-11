@@ -1,7 +1,6 @@
 package frc.robot.auto.actions;
 
 import com.ctre.phoenix.motorcontrol.NeutralMode;
-
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.subsystems.Drive;
 

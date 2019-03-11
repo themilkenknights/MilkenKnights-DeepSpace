@@ -2,10 +2,8 @@ package frc.robot;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import com.ctre.phoenix.motorcontrol.*;
 import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
-
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.InterpolatingDouble;

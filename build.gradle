@@ -77,6 +77,8 @@ jar {
 
 spotless {
     java {
+        importOrder 'java', 'javax', 'org', 'com'
+        removeUnusedImports()
         eclipse().configFile 'style.xml'
     }
 }

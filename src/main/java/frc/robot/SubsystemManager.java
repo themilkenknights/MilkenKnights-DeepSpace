@@ -1,7 +1,6 @@
 package frc.robot;
 
 import java.util.List;
-
 import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.Constants.GENERAL;

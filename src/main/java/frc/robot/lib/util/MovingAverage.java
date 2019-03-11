@@ -1,7 +1,6 @@
 package frc.robot.lib.util;
 
 import java.util.ArrayList;
-
 import frc.robot.lib.vision.LimelightTarget;
 
 /**
