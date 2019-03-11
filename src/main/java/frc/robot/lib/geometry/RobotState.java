@@ -51,7 +51,8 @@ public class RobotState {
   }
 
   /**
-   * Returns the robot's position on the field at a certain time. Linearly interpolates between stored robot positions to fill in the gaps.
+   * Returns the robot's position on the field at a certain time. Linearly interpolates between stored robot positions
+   * to fill in the gaps.
    */
   public synchronized Pose2d getFieldToVehicle(double timestamp) {
     return field_to_vehicle_.getInterpolated(new InterpolatingDouble(timestamp));

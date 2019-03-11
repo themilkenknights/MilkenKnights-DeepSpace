@@ -9,7 +9,6 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.Constants.CONFIG;
 import frc.robot.Constants.DRIVE;
@@ -36,7 +35,7 @@ public class Drive extends Subsystem {
   private Rotation2d mGyroOffset = Rotation2d.identity();
   private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
   private double left_encoder_prev_distance_, right_encoder_prev_distance_ = 0.0;
-  private NetworkTableEntry mState, mStatus, mFusedHeading, mGyroHeading;
+  private NetworkTableEntry mState, mStatus, mFusedHeading, mGyroHeading, mAvgDist;
   private PigeonIMU mPigeon;
 
   private Drive() {
@@ -45,9 +44,12 @@ public class Drive extends Subsystem {
     mStatus = mDriveTab.add("Status", false).getEntry();
     mFusedHeading = mDriveTab.add("Fused Heading", 0.0).getEntry();
     mGyroHeading = mDriveTab.add("Gyro Heading", 0.0).getEntry();
+    mAvgDist = mDriveTab.add("Avg Dist", 0.0).getEntry();
     mPeriodicIO = new PeriodicIO();
-    mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left, mDriveTab);
-    mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right, mDriveTab);
+    mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID,
+        TalonLoc.Left, mDriveTab);
+    mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID,
+        TalonLoc.Right, mDriveTab);
     mPigeon = CargoArm.getInstance().getPigeon();
   }
 
@@ -71,8 +73,9 @@ public class Drive extends Subsystem {
   }
 
   /**
-   * Write setpoints to Talons and Victors left_demand and right_demand are always in Talon Native Units or Talon Native Units Per 100ms
-   * left_feedforward and right_feedforward are in Percent Output [-1,1] and are added to the Talon SRX Closed Loop Output
+   * Write setpoints to Talons and Victors left_demand and right_demand are always in Talon Native Units or Talon Native
+   * Units Per 100ms left_feedforward and right_feedforward are in Percent Output [-1,1] and are added to the Talon SRX
+   * Closed Loop Output
    */
   @Override
   public synchronized void writePeriodicOutputs(double timestamp) {
@@ -80,31 +83,16 @@ public class Drive extends Subsystem {
       mLeftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.MOTION_MAGIC) {
-      mLeftDrive.set(
-          ControlMode.MotionMagic,
-          mPeriodicIO.left_demand,
-          DemandType.ArbitraryFeedForward,
+      mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward,
           mPeriodicIO.left_feedforward,
           mPeriodicIO.brake_mode);
-      mRightDrive.set(
-          ControlMode.MotionMagic,
-          mPeriodicIO.right_demand,
-          DemandType.ArbitraryFeedForward,
+      mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward,
           mPeriodicIO.right_feedforward,
           mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.PIGEON_SERVO) {
-      mLeftDrive.set(
-          ControlMode.MotionMagic,
-          mPeriodicIO.left_demand,
-          DemandType.AuxPID,
-          mPeriodicIO.left_feedforward,
-          mPeriodicIO.brake_mode);
-      mRightDrive.set(
-          ControlMode.MotionMagic,
-          mPeriodicIO.right_demand,
-          DemandType.AuxPID,
-          mPeriodicIO.right_feedforward,
-          mPeriodicIO.brake_mode);
+      mRightDrive
+          .set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.AuxPID, mPeriodicIO.right_feedforward,
+              mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.VELOCITY_SETPOINT) {
       mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
@@ -130,16 +118,17 @@ public class Drive extends Subsystem {
   public synchronized void outputTelemetry(double timestamp) {
     mLeftDrive.updateShuffleboard();
     mRightDrive.updateShuffleboard();
+    mFusedHeading.setDouble(mPeriodicIO.fusedHeading);
+    mAvgDist.setDouble((mPeriodicIO.leftPos + mPeriodicIO.rightPos) / 2);
+    if (getHeading() != null) {
+      mGyroHeading.setDouble(getHeading().getDegrees());
+    }
+    if (mCSVWriter != null) {
+      mCSVWriter.add(mPeriodicIO);
+      mCSVWriter.write();
+    }
     /*
      * mState.setString(mDriveControlState.toString()); mStatus.setBoolean(driveStatus());
-     */
-    mFusedHeading.setDouble(mPeriodicIO.fusedHeading);
-    /*
-     * if (getHeading() != null) { mGyroHeading.setDouble(getHeading().getDegrees()); } if (mCSVWriter
-     * != null) { mCSVWriter.add(mPeriodicIO); mCSVWriter.write(); }
-     */
-    SmartDashboard.putNumber("Avg Dist", (mPeriodicIO.leftPos + mPeriodicIO.rightPos) / 2);
-    /*
      * SmartDashboard.putNumber("Aux Error", mRightDrive.masterTalon.getClosedLoopError(1));
      * SmartDashboard.putNumber("Aux Target", mRightDrive.masterTalon.getClosedLoopTarget(1));
      * SmartDashboard.putNumber("Aux Pos", mRightDrive.masterTalon.getSelectedSensorPosition(1));
@@ -154,16 +143,7 @@ public class Drive extends Subsystem {
   }
 
   public void teleopInit(double timestamp) {
-    left_encoder_prev_distance_ = 0;
-    right_encoder_prev_distance_ = 0;
-    mLeftDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
-    mRightDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
-    zeroPigeon();
-    RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
-    setHeading(Rotation2d.identity());
-    if (mCSVWriter == null && MISC.kDriveCSVLogging) {
-      mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
-    }
+    zero();
   }
 
   /**
@@ -171,16 +151,7 @@ public class Drive extends Subsystem {
    */
   @Override
   public void autonomousInit(double timestamp) {
-    left_encoder_prev_distance_ = 0;
-    right_encoder_prev_distance_ = 0;
-    mLeftDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
-    mRightDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
-    zeroPigeon();
-    RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
-    setHeading(Rotation2d.identity());
-    if (mCSVWriter == null && MISC.kDriveCSVLogging) {
-      mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
-    }
+    zero();
   }
 
   /**
@@ -239,6 +210,19 @@ public class Drive extends Subsystem {
     }
   }
 
+  private void zero() {
+    left_encoder_prev_distance_ = 0;
+    right_encoder_prev_distance_ = 0;
+    mLeftDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
+    mRightDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
+    zeroPigeon();
+    RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
+    setHeading(Rotation2d.identity());
+    if (mCSVWriter == null && MISC.kDriveCSVLogging) {
+      mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
+    }
+  }
+
   /**
    * Zero all pigeon values
    */
@@ -246,6 +230,20 @@ public class Drive extends Subsystem {
     CT.RE(mPigeon.setFusedHeading(0, 0));
     CT.RE(mPigeon.setYaw(0, 0));
     CT.RE(mPigeon.setAccumZAngle(0, 0));
+  }
+
+  private synchronized Rotation2d getHeading() {
+    return mPeriodicIO.gyro_heading;
+  }
+
+  /**
+   * Zero heading by adding a software offset
+   */
+  public synchronized void setHeading(Rotation2d heading) {
+    Logger.logMarker("SET HEADING: " + heading.getDegrees());
+    mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(mPigeon.getFusedHeading()).inverse());
+    Logger.logMarker("Gyro offset: " + mGyroOffset.getDegrees());
+    mPeriodicIO.gyro_heading = heading;
   }
 
   public synchronized DriveSignal setMotionMagicDeltaSetpoint(
@@ -328,7 +326,8 @@ public class Drive extends Subsystem {
   }
 
   public void setVelocitySetpointNormal(DriveSignal sig) {
-    setVelocity(new DriveSignal(sig.getLeft() * DRIVE.kMaxNativeVel, sig.getRight() * DRIVE.kMaxNativeVel), DriveSignal.BRAKE);
+    setVelocity(new DriveSignal(sig.getLeft() * DRIVE.kMaxNativeVel, sig.getRight() * DRIVE.kMaxNativeVel),
+        DriveSignal.BRAKE);
   }
 
   /**
@@ -403,20 +402,6 @@ public class Drive extends Subsystem {
     RobotState.getInstance().addObservations(timestamp, odometry_velocity, predicted_velocity);
     left_encoder_prev_distance_ = left_distance;
     right_encoder_prev_distance_ = right_distance;
-  }
-
-  private synchronized Rotation2d getHeading() {
-    return mPeriodicIO.gyro_heading;
-  }
-
-  /**
-   * Zero heading by adding a software offset
-   */
-  public synchronized void setHeading(Rotation2d heading) {
-    Logger.logMarker("SET HEADING: " + heading.getDegrees());
-    mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(mPigeon.getFusedHeading()).inverse());
-    Logger.logMarker("Gyro offset: " + mGyroOffset.getDegrees());
-    mPeriodicIO.gyro_heading = heading;
   }
 
   public enum DriveControlState {

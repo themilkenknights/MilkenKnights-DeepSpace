@@ -4,7 +4,7 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.Constants.DRIVE;
 import frc.robot.lib.util.DriveSignal;
-import frc.robot.lib.util.MkTime;
+import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.lib.vision.VisionState;
 import frc.robot.subsystems.Drive;
@@ -13,14 +13,14 @@ import frc.robot.subsystems.Vision;
 
 public class MotionMagicVisionFeed implements Action {
 
-  private MkTime expirationTimer;
+  private MkTimer expirationTimer;
   private VisionState mLastVisionState = VisionState.EMPTY;
   private boolean useLimit;
   private double lastTime = 0.0;
   private double targetYaw = 0.0;
 
   public MotionMagicVisionFeed(boolean useLimit) {
-    expirationTimer = new MkTime();
+    expirationTimer = new MkTimer();
     this.useLimit = useLimit;
   }
 

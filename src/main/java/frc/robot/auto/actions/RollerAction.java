@@ -1,16 +1,16 @@
 package frc.robot.auto.actions;
 
-import frc.robot.lib.util.MkTime;
+import frc.robot.lib.util.MkTimer;
 import frc.robot.subsystems.CargoArm;
 
 public class RollerAction implements Action {
 
-  private MkTime timer;
+  private MkTimer timer;
   private double time;
   private double output;
 
   public RollerAction(double output, double time) {
-    timer = new MkTime();
+    timer = new MkTimer();
     this.time = time;
     this.output = output;
   }

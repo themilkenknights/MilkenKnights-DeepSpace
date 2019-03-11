@@ -2,7 +2,7 @@ package frc.robot.auto.actions;
 
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
-import frc.robot.lib.util.MkTime;
+import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
@@ -14,10 +14,10 @@ import frc.robot.subsystems.Vision;
 
 public class MotionMagicVisionPigeon implements Action {
 
-  private MkTime timer = new MkTime();
+  private MkTimer timer = new MkTimer();
   private double lastDist, lastAngle, lastSkew = 0.0;
-  private MkTime downTimer = new MkTime();
-  private MkTime driveBackTimer = new MkTime();
+  private MkTimer downTimer = new MkTimer();
+  private MkTimer driveBackTimer = new MkTimer();
   private VisionServoGoal goal;
   private boolean turnBack = false;
 
@@ -26,8 +26,8 @@ public class MotionMagicVisionPigeon implements Action {
   }
 
   /**
-   * Exit tracking if it is taking too long or if the tracking is finished or if the arm is down for a specified time and the limit switch
-   * is triggered.
+   * Exit tracking if it is taking too long or if the tracking is finished or if the arm is down for a specified time
+   * and the limit switch is triggered.
    */
   @Override
   public boolean isFinished() {

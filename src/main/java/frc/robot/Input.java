@@ -9,7 +9,7 @@ import frc.robot.lib.math.DriveHelper;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
-import frc.robot.lib.util.MkTime;
+import frc.robot.lib.util.MkTimer;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Drive;
@@ -45,7 +45,8 @@ public class Input {
 
   private static final MkJoystickButton mCargoArmManual = mOperatorJoystick.getButton(2, "Cargo Arm Manual Mode");
 
-  private static final MkJoystickButton mSpearTogglePlaceStow = mOperatorJoystick.getButton(3, "Hatch Spear Toggle (Place/Stow)");
+  private static final MkJoystickButton mSpearTogglePlaceStow = mOperatorJoystick
+      .getButton(3, "Hatch Spear Toggle (Place/Stow)");
 
   private static final MkJoystickButton mSpearIntake = mOperatorJoystick.getButton(4, "Hatch Spear HP Intake");
 
@@ -55,17 +56,19 @@ public class Input {
 
   private static final MkJoystickButton toggleVision = mOperatorJoystick.getButton(7, "Toggle Vision");
 
-  private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick.getButton(8, "Zero Arm Encoders && Disable Soft Limit");
+  private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick
+      .getButton(8, "Zero Arm Encoders && Disable Soft Limit");
 
   private static final MkJoystickButton mStopAuto = mOperatorJoystick.getButton(9, "Stop Auto");
 
   private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
 
-  private static final MkJoystickButton mGroundIntakeToggleButton = mOperatorJoystick.getButton(11, "Ground Intake Toggle (Stow/Ground)");
+  private static final MkJoystickButton mGroundIntakeToggleButton = mOperatorJoystick
+      .getButton(11, "Ground Intake Toggle (Stow/Ground)");
 
   private static final MkJoystickButton mTransferButton = mOperatorJoystick.getButton(12, "Transfer Hatch Button");
 
-  private static MkTime rumbleTimer = new MkTime();
+  private static MkTimer rumbleTimer = new MkTimer();
 
   private static boolean isVelocitySetpoint = false;
 
@@ -143,10 +146,12 @@ public class Input {
       mStructure.setRobotState(RobotState.AUTO_CLIMB);
     } else if (mFrontClimb.isPressed()) {
       // Toggle Front Climb Actuators (Toward Spear)
-      mStructure.setFrontClimbState(mStructure.getFrontClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
+      mStructure.setFrontClimbState(
+          mStructure.getFrontClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
     } else if (mRearClimb.isPressed()) {
       // Toggle Rear Climb Actuators (Toward Cargo Arm/Rio)
-      mStructure.setRearClimbState(mStructure.getRearClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
+      mStructure.setRearClimbState(
+          mStructure.getRearClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
     }
 
     // GTA Style driving.

@@ -23,9 +23,10 @@ public class SubsystemManager {
   private int count = 0;
 
   /**
-   * Control Input, periodic inputs/outputs, and quick updates should be run every cycle (20ms) Slow updates, telemetry, and safety checks
-   * should be run approx every 100ms. One subsystem should update each cycle to extreme minimize delays. Vision updates should occur every
-   * 20ms regardless of enabled state. While disbaled, run telemetry at 50hz (every 20ms) as there is no need to slow it down
+   * Control Input, periodic inputs/outputs, and quick updates should be run every cycle (20ms) Slow updates, telemetry,
+   * and safety checks should be run approx every 100ms. One subsystem should update each cycle to extreme minimize
+   * delays. Vision updates should occur every 20ms regardless of enabled state. While disbaled, run telemetry at 50hz
+   * (every 20ms) as there is no need to slow it down
    */
   private final CrashTrackingRunnable runnable_ =
       new CrashTrackingRunnable() {
@@ -43,7 +44,7 @@ public class SubsystemManager {
                 if (count == i) {
                   subsystem.slowUpdate(now);
                   subsystem.outputTelemetry(now);
-                  //subsystem.safetyCheck(now);
+                  subsystem.safetyCheck(now);
                 }
                 i++;
               }
@@ -81,6 +82,12 @@ public class SubsystemManager {
   public void checkSystem() {
     for (Subsystem subsystem : mAllSubsystems) {
       subsystem.checkSystem();
+    }
+  }
+
+  public void init(){
+    for (Subsystem subsystem : mAllSubsystems) {
+      subsystem.onRestart(Timer.getFPGATimestamp());
     }
   }
 

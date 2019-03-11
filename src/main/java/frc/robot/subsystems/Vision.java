@@ -4,7 +4,7 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.lib.structure.Subsystem;
-import frc.robot.lib.util.MkTime;
+import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.vision.LimeLight;
 import frc.robot.lib.vision.LimeLightControlMode.LedMode;
 import frc.robot.lib.vision.LimelightTarget;
@@ -19,7 +19,7 @@ public class Vision extends Subsystem {
   // private HttpCamera LLFeed;
   // private UsbCamera LLFeed;
   private boolean isHatchFeed = true;
-  private MkTime mLEDTimer = new MkTime();
+  private MkTimer mLEDTimer = new MkTimer();
 
   private Vision() {
     // cargoCam = CameraServer.getInstance().startAutomaticCapture(0);
@@ -83,6 +83,7 @@ public class Vision extends Subsystem {
     return mLimeLight.isConnected();
   }
 
+
   public synchronized LimelightTarget getLimelightTarget() {
     return mLimeLight.returnLastTarget();
   }
@@ -95,19 +96,20 @@ public class Vision extends Subsystem {
     }
   }
 
+  public void enableLED() {
+    if (!isVision) {
+      mLimeLight.setPipeline(0);
+      isVision = true;
+      mLEDTimer.start(0.2);
+    }
+  }
+
+
   public void disableLED() {
     if (isVision) {
       mLimeLight.setPipeline(1);
       isVision = false;
       mLEDTimer.reset();
-    }
-  }
-
-  public void enableLED() {
-    if (!isVision) {
-      mLimeLight.setPipeline(0);
-      isVision = true;
-      mLEDTimer.start(0.25);
     }
   }
 
@@ -133,9 +135,6 @@ public class Vision extends Subsystem {
 
   public synchronized void updateLimelight() {
     mLimeLight.getUpdate();
-    if (mLEDTimer.isDone(10.0)) {
-      // disableLED();
-    }
   }
 
   private static class InstanceHolder {

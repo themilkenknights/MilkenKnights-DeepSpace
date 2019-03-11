@@ -36,8 +36,8 @@ public class Superstructure extends Subsystem {
       mRearClimb;
 
   /**
-   * Stores PDP, Compressor, General Robot Data, and Climb Actuators. Acts as the high-level controller that changes calls the lower-level
-   * subsystems.
+   * Stores PDP, Compressor, General Robot Data, and Climb Actuators. Acts as the high-level controller that changes
+   * calls the lower-level subsystems.
    */
   private Superstructure() {
     ShuffleboardTab mStructureTab = Shuffleboard.getTab("General");
@@ -152,7 +152,7 @@ public class Superstructure extends Subsystem {
   private void startVisionHatchOuttake() {
     Vision.getInstance().enableLED();
     if (!Vision.getInstance().timerDone()) {
-      Timer.delay(0.02);
+      Timer.delay(0.1);
     }
     Vision.getInstance().updateLimelight();
     if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
@@ -166,7 +166,7 @@ public class Superstructure extends Subsystem {
   private void startVisionHatchIntake() {
     Vision.getInstance().enableLED();
     if (!Vision.getInstance().timerDone()) {
-      Timer.delay(0.02);
+      Timer.delay(0.1);
     }
     Vision.getInstance().updateLimelight();
     if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
@@ -180,7 +180,7 @@ public class Superstructure extends Subsystem {
   private void startVisionCargoOuttake() {
     Vision.getInstance().enableLED();
     if (!Vision.getInstance().timerDone()) {
-      Timer.delay(0.02);
+      Timer.delay(0.1);
     }
     mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
     CargoArm.getInstance().setArmState(CargoArmState.REVERSE_CARGOSHIP);

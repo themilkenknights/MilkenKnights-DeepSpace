@@ -84,8 +84,8 @@ public class CargoArm extends Subsystem {
   }
 
   /**
-   * The arm encoder was getting periodically briefly disconnected during matches so this method waits 250ms before switching to open loop
-   * control.
+   * The arm encoder was getting periodically briefly disconnected during matches so this method waits 250ms before
+   * switching to open loop control.
    *
    * <p>This method also checks for unsafe current output and will automatically switches to open
    * loop control.
@@ -111,14 +111,12 @@ public class CargoArm extends Subsystem {
 
   @Override
   public void outputTelemetry(double timestamp) {
-    /*
-     * mArmTalon.updateShuffleboard();
-     * mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
-     * mDesiredState.setString(mCargoArmState.toString());
-     * mControlMode.setString(mCargoArmControlState.toString());
-     * mStatus.setBoolean(mArmTalon.isEncoderConnected());
-     * mRawError.setDouble(MkMath.degreesToNativeUnits(mArmTalon.getError()));
-     */
+    mArmTalon.updateShuffleboard();
+    mDesiredState.setString(mCargoArmState.toString());
+    mControlMode.setString(mCargoArmControlState.toString());
+    /* mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
+    mStatus.setBoolean(mArmTalon.isEncoderConnected());
+    mRawError.setDouble(MkMath.degreesToNativeUnits(mArmTalon.getError())); */
   }
 
   @Override

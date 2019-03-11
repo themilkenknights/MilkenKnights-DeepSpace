@@ -2,8 +2,8 @@
 // http://algs4.cs.princeton.edu/14analysis/PolynomialRegression.java.html
 package frc.robot.lib.util;
 /**
- * **************************************************************************** Compilation: javac -cp .:jama.jar PolynomialRegression.java
- * Execution: java -cp .:jama.jar PolynomialRegression Dependencies: jama.jar StdOut.java
+ * **************************************************************************** Compilation: javac -cp .:jama.jar
+ * PolynomialRegression.java Execution: java -cp .:jama.jar PolynomialRegression Dependencies: jama.jar StdOut.java
  *
  * <p>% java -cp .:jama.jar PolynomialRegression 0.01 n^3 + -1.64 n^2 + 168.92 n + -2113.73 (R^2 =
  * 0.997)

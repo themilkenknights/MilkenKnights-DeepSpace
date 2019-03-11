@@ -4,6 +4,7 @@ import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Timer;
+import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.util.MovingAverage;
 import frc.robot.lib.vision.LimeLightControlMode.Advanced_Crosshair;
 import frc.robot.lib.vision.LimeLightControlMode.Advanced_Target;
@@ -13,7 +14,8 @@ import frc.robot.lib.vision.LimeLightControlMode.Snapshot;
 import frc.robot.lib.vision.LimeLightControlMode.StreamType;
 
 /**
- * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you Enjoy the Lime Light Camera.
+ * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you Enjoy the Lime Light
+ * Camera.
  */
 public class LimeLight {
 
@@ -36,7 +38,7 @@ public class LimeLight {
   private Boolean isConnected = false;
   private LimelightTarget mTarget;
   private MovingAverage mThrottleAverage;
-  private int i = 0;
+  private MkTimer validTarget;
 
   /**
    * Using the Default Lime Light NT table
@@ -64,6 +66,8 @@ public class LimeLight {
 
     mTarget = LimelightTarget.EMPTY;
     mThrottleAverage = new MovingAverage(3);
+    validTarget = new MkTimer();
+    validTarget.start(0.05);
   }
 
   /**
@@ -197,8 +201,8 @@ public class LimeLight {
    * stream Sets limelight’s streaming mode
    *
    * <p>kStandard - Side-by-side streams if a webcam is attached to Limelight kPiPMain - The
-   * secondary camera stream is placed in the lower-right corner of the primary camera stream kPiPSecondary - The primary camera stream is
-   * placed in the lower-right corner of the secondary camera stream
+   * secondary camera stream is placed in the lower-right corner of the primary camera stream kPiPSecondary - The
+   * primary camera stream is placed in the lower-right corner of the secondary camera stream
    */
   public void setStream(StreamType stream) {
     m_table.getEntry("stream").setValue(stream.getValue());
@@ -221,8 +225,9 @@ public class LimeLight {
   }
 
   /**
-   * Limelight posts three raw contours to NetworkTables that are not influenced by your grouping mode. That is, they are filtered with your
-   * pipeline parameters, but never grouped. X and Y are returned in normalized screen space (-1 to 1) rather than degrees. *
+   * Limelight posts three raw contours to NetworkTables that are not influenced by your grouping mode. That is, they
+   * are filtered with your pipeline parameters, but never grouped. X and Y are returned in normalized screen space (-1
+   * to 1) rather than degrees. *
    */
   public double getAdvanced_RotationToTarget(Advanced_Target raw) {
     NetworkTableEntry txRaw = m_table.getEntry("tx" + raw.getValue());
@@ -241,12 +246,11 @@ public class LimeLight {
     double a = taRaw.getDouble(0.0);
     return a;
   }
+
   /**
    * pipeline Sets limelight’s current pipeline
    *
    * <p>0 . 9 Select pipeline 0.9
-   *
-   * @param pipeline
    */
   /*
    * public void setPipeline(Double pipeline) { if(pipeline<0){ pipeline = 0.0; throw new
@@ -254,7 +258,6 @@ public class LimeLight {
    * 9.0; throw new IllegalArgumentException("Pipeline can not be greater than nine"); }
    * m_table.getEntry("pipeline").setValue(pipeline); }
    */
-
   public double getAdvanced_Skew_Rotation(Advanced_Target raw) {
     NetworkTableEntry tsRaw = m_table.getEntry("ts" + raw.getValue());
     double s = tsRaw.getDouble(0.0);
@@ -281,11 +284,10 @@ public class LimeLight {
   }
 
   public void getUpdate() {
-    if (i == 5) {
+    if (validTarget.isDone()) {
       isConnected = getPipelineLatency() != 0.0;
-      i = 0;
+      validTarget.start(0.05);
     }
-    i++;
     updateTarget();
   }
 

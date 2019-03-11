@@ -14,7 +14,7 @@ import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
-import frc.robot.lib.util.MkTime;
+import frc.robot.lib.util.MkTimer;
 import frc.robot.subsystems.Superstructure.RobotState;
 
 public class HatchArm extends Subsystem {
@@ -29,7 +29,7 @@ public class HatchArm extends Subsystem {
   private Solenoid mSpearSolenoid;
   private boolean mDisCon = false;
   private double mKetteringOpenLoopSetpoint, mKetteringPosEnable = 0.0;
-  private MkTime mMoveTime, fastTime;
+  private MkTimer mMoveTime, fastTime;
   private boolean mSoftLimitState = true;
   private boolean mSpearLimitTriggered = false;
   private NetworkTableEntry mAbsPos,
@@ -64,16 +64,12 @@ public class HatchArm extends Subsystem {
             CAN.kKetteringReverseLimitSwitchTalonID,
             TalonLoc.Hatch_Arm,
             mHatchArmTab);
-    mMoveTime = new MkTime();
-    fastTime = new MkTime();
+    mMoveTime = new MkTimer();
+    fastTime = new MkTimer();
   }
 
   public static HatchArm getInstance() {
     return HatchArm.InstanceHolder.mInstance;
-  }
-
-  public boolean isHatchLimitTriggered() {
-    return mSpearLimitTriggered;
   }
 
   public void disableSoftLimit() {
@@ -144,7 +140,7 @@ public class HatchArm extends Subsystem {
 
   @Override
   public void safetyCheck(double timestamp) {
-    mArmTalon.checkForReset();
+    /*mArmTalon.checkForReset();
     if (!mArmTalon.isEncoderConnected()) {
       if (mDisCon) {
         setOpenLoop(0.0);
@@ -158,21 +154,25 @@ public class HatchArm extends Subsystem {
     if (mArmTalon.getCurrent() > HATCH_ARM.kMaxSafeCurrent) {
       setOpenLoop(0.0);
       Logger.logError("Unsafe Current on Hatch Arm " + mArmTalon.getCurrent() + " Amps");
-    }
+    } */
   }
 
   public void outputTelemetry(double timestamp) {
+    mMechState.setString(mHatchMechanismState.toString());
+    mLimitTriggered.setBoolean(isHatchLimitTriggered());
+    mSpearStateTab.setString(mSpearState.toString());
     /*
-     * mArmTalon.updateShuffleboard(); mDesiredState.setString(mHatchKetteringSetpoint.toString());
-     * mControlMode.setString(mHatchIntakeControlState.toString());
-     * mStatus.setBoolean(mArmTalon.isEncoderConnected());
-     * mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
-     * mMechState.setString(mHatchMechanismState.toString());
-     * mRawError.setDouble(MkMath.degreesToNativeUnits(mArmTalon.getError()));
-     * mRawPos.setDouble(mArmTalon.masterTalon.getSelectedSensorPosition());
-     * mLimitTriggered.setBoolean(isHatchLimitTriggered());
-     * mSpearStateTab.setString(mSpearState.toString());
-     */
+    mArmTalon.updateShuffleboard();
+    mDesiredState.setString(mHatchKetteringSetpoint.toString());
+    mControlMode.setString(mHatchIntakeControlState.toString());
+    mStatus.setBoolean(mArmTalon.isEncoderConnected());
+    mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
+    mRawError.setDouble(MkMath.degreesToNativeUnits(mArmTalon.getError()));
+    mRawPos.setDouble(mArmTalon.masterTalon.getSelectedSensorPosition()); */
+  }
+
+  public boolean isHatchLimitTriggered() {
+    return mSpearLimitTriggered;
   }
 
   @Override
@@ -217,6 +217,17 @@ public class HatchArm extends Subsystem {
     mHatchKetteringSetpoint = state;
   }
 
+  private void setHatchIntakeControlState(mKetteringControlState state) {
+    if (state == mKetteringControlState.MOTION_MAGIC
+        && mHatchIntakeControlState != mKetteringControlState.MOTION_MAGIC) {
+      setEnable();
+    } else if (state == mKetteringControlState.OPEN_LOOP
+        && mHatchIntakeControlState != mKetteringControlState.OPEN_LOOP) {
+      mKetteringOpenLoopSetpoint = 0.0;
+    }
+    mHatchIntakeControlState = state;
+  }
+
   public void zeroEncoder() {
     mArmTalon.zeroEncoder();
     setEnable();
@@ -233,17 +244,6 @@ public class HatchArm extends Subsystem {
       setHatchIntakeControlState(mKetteringControlState.OPEN_LOOP);
     }
     mKetteringOpenLoopSetpoint = output;
-  }
-
-  private void setHatchIntakeControlState(mKetteringControlState state) {
-    if (state == mKetteringControlState.MOTION_MAGIC
-        && mHatchIntakeControlState != mKetteringControlState.MOTION_MAGIC) {
-      setEnable();
-    } else if (state == mKetteringControlState.OPEN_LOOP
-        && mHatchIntakeControlState != mKetteringControlState.OPEN_LOOP) {
-      mKetteringOpenLoopSetpoint = 0.0;
-    }
-    mHatchIntakeControlState = state;
   }
 
   public HatchSpearState getHatchSpearState() {
@@ -328,7 +328,8 @@ public class HatchArm extends Subsystem {
   }
 
   /**
-   * The state of the pneumatic spear that places and intakes the Hatches. The default state should always be stowed on power off.
+   * The state of the pneumatic spear that places and intakes the Hatches. The default state should always be stowed on
+   * power off.
    */
   public enum HatchSpearState {
     PLACE(HATCH_ARM.kHatchArmPlaceState),
