@@ -5,12 +5,7 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.lib.util.MovingAverage;
-import frc.robot.lib.vision.LimeLightControlMode.Advanced_Crosshair;
-import frc.robot.lib.vision.LimeLightControlMode.Advanced_Target;
-import frc.robot.lib.vision.LimeLightControlMode.CamMode;
-import frc.robot.lib.vision.LimeLightControlMode.LedMode;
-import frc.robot.lib.vision.LimeLightControlMode.Snapshot;
-import frc.robot.lib.vision.LimeLightControlMode.StreamType;
+import frc.robot.lib.vision.LimeLightControlMode.*;
 
 /**
  * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you

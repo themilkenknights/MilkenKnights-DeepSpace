@@ -1,5 +1,7 @@
 package frc.robot;
 
+import java.util.List;
+
 import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.Constants.GENERAL;
@@ -8,7 +10,6 @@ import frc.robot.lib.util.CrashTrackingRunnable;
 import frc.robot.lib.util.DeltaTime;
 import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.Vision;
-import java.util.List;
 
 /**
  * Used to reset, start, stop, and update all subsystems at once
@@ -44,7 +45,7 @@ public class SubsystemManager {
 						if (count == i) {
 							subsystem.slowUpdate(now);
 							subsystem.outputTelemetry(now);
-							//subsystem.safetyCheck(now);
+							// subsystem.safetyCheck(now);
 						}
 						i++;
 					}

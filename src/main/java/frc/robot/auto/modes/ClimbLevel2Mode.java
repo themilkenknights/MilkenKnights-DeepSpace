@@ -2,12 +2,7 @@ package frc.robot.auto.modes;
 
 import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeEndedException;
-import frc.robot.auto.actions.ActuateFrontSolenoids;
-import frc.robot.auto.actions.ActuateRearSolenoids;
-import frc.robot.auto.actions.CargoArmSetpoint;
-import frc.robot.auto.actions.MotionMagicBlind;
-import frc.robot.auto.actions.WaitAction;
-import frc.robot.auto.actions.WaitForAngle;
+import frc.robot.auto.actions.*;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Superstructure.ClimbState;
 

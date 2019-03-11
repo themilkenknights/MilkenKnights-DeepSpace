@@ -1,7 +1,8 @@
 package frc.robot.lib.util;
 
-import frc.robot.lib.vision.LimelightTarget;
 import java.util.ArrayList;
+
+import frc.robot.lib.vision.LimelightTarget;
 
 /**
  * Helper class for storing and calculating a moving average

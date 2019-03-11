@@ -6,17 +6,15 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants.CAN;
-import frc.robot.Constants.GENERAL;
 import frc.robot.Constants.HATCH_ARM;
 import frc.robot.Constants.MISC;
 import frc.robot.lib.drivers.CT;
-import frc.robot.lib.math.MkMath;
+import frc.robot.lib.drivers.MkTalon;
+import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTime;
-import frc.robot.lib.drivers.MkTalon;
-import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.subsystems.Superstructure.RobotState;
 
 public class HatchArm extends Subsystem {
@@ -110,16 +108,17 @@ public class HatchArm extends Subsystem {
 	}
 
 	public void outputTelemetry(double timestamp) {
-	/*	mArmTalon.updateShuffleboard();
-		mDesiredState.setString(mHatchKetteringSetpoint.toString());
-		mControlMode.setString(mHatchIntakeControlState.toString());
-		mStatus.setBoolean(mArmTalon.isEncoderConnected());
-		mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
-		mMechState.setString(mHatchMechanismState.toString());
-		mRawError.setDouble(MkMath.degreesToNativeUnits(mArmTalon.getError()));
-		mRawPos.setDouble(mArmTalon.masterTalon.getSelectedSensorPosition());
-		mLimitTriggered.setBoolean(isHatchLimitTriggered());
-		mSpearStateTab.setString(mSpearState.toString()); */
+		/*
+		 * mArmTalon.updateShuffleboard(); mDesiredState.setString(mHatchKetteringSetpoint.toString());
+		 * mControlMode.setString(mHatchIntakeControlState.toString());
+		 * mStatus.setBoolean(mArmTalon.isEncoderConnected());
+		 * mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
+		 * mMechState.setString(mHatchMechanismState.toString());
+		 * mRawError.setDouble(MkMath.degreesToNativeUnits(mArmTalon.getError()));
+		 * mRawPos.setDouble(mArmTalon.masterTalon.getSelectedSensorPosition());
+		 * mLimitTriggered.setBoolean(isHatchLimitTriggered());
+		 * mSpearStateTab.setString(mSpearState.toString());
+		 */
 	}
 
 	/**

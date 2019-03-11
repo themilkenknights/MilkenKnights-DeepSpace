@@ -27,7 +27,7 @@ public class LimelightTarget {
 		this.captureTime = captureTime;
 		// this.distance = (24.0) / (Math.tan(Math.toRadians(35 + yOffset)));
 		this.distance = VISION.kAreaToDistVisionMap.getInterpolated(new InterpolatingDouble(getArea())).value;
-		this.skew = skew > -45.0 ? skew : skew + 90.0 ;
+		this.skew = skew > -45.0 ? skew : skew + 90.0;
 	}
 
 	public double getHorizLength() {

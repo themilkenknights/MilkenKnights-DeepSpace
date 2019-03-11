@@ -1,6 +1,7 @@
 package frc.robot.auto.actions;
 
 import com.ctre.phoenix.motorcontrol.NeutralMode;
+
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.Constants.DRIVE;
 import frc.robot.lib.util.DriveSignal;

@@ -4,12 +4,12 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.sensors.PigeonIMU;
+
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.CARGO_ARM;
-import frc.robot.Constants.GENERAL;
 import frc.robot.lib.drivers.CT;
 import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
@@ -103,12 +103,14 @@ public class CargoArm extends Subsystem {
 
 	@Override
 	public void outputTelemetry(double timestamp) {
-	/*	mArmTalon.updateShuffleboard();
-		mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
-		mDesiredState.setString(mCargoArmState.toString());
-		mControlMode.setString(mCargoArmControlState.toString());
-		mStatus.setBoolean(mArmTalon.isEncoderConnected());
-		mRawError.setDouble(MkMath.degreesToNativeUnits(mArmTalon.getError())); */
+		/*
+		 * mArmTalon.updateShuffleboard();
+		 * mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
+		 * mDesiredState.setString(mCargoArmState.toString());
+		 * mControlMode.setString(mCargoArmControlState.toString());
+		 * mStatus.setBoolean(mArmTalon.isEncoderConnected());
+		 * mRawError.setDouble(MkMath.degreesToNativeUnits(mArmTalon.getError()));
+		 */
 	}
 
 	@Override

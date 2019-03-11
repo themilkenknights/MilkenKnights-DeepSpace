@@ -13,7 +13,6 @@ import frc.robot.Constants;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.MISC;
 import frc.robot.Input;
-import frc.robot.Robot;
 import frc.robot.auto.modes.ClimbLevel2Mode;
 import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
 import frc.robot.lib.structure.Subsystem;
@@ -58,11 +57,13 @@ public class Superstructure extends Subsystem {
 
 	@Override
 	public void outputTelemetry(double timestamp) {
-	/*	mMatchState.setString(Robot.mMatchState.toString());
-		mRobotStateEntry.setString(mRobotState.toString());
-		mCompressorCurrent.setDouble(mCompressor.getCompressorCurrent());
-		mFrontClimb.setString(mFrontClimbState.toString());
-		mRearClimb.setString(mRearClimbState.toString()); */
+		/*
+		 * mMatchState.setString(Robot.mMatchState.toString());
+		 * mRobotStateEntry.setString(mRobotState.toString());
+		 * mCompressorCurrent.setDouble(mCompressor.getCompressorCurrent());
+		 * mFrontClimb.setString(mFrontClimbState.toString());
+		 * mRearClimb.setString(mRearClimbState.toString());
+		 */
 	}
 
 	public ClimbState getFrontClimbState() {

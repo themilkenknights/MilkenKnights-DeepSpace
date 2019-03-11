@@ -5,6 +5,7 @@ import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.FollowerType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.sensors.PigeonIMU;
+
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
@@ -15,18 +16,14 @@ import frc.robot.Constants.CONFIG;
 import frc.robot.Constants.DRIVE;
 import frc.robot.Constants.MISC;
 import frc.robot.lib.drivers.CT;
-import frc.robot.lib.geometry.Pose2d;
-import frc.robot.lib.geometry.Rotation2d;
-import frc.robot.lib.geometry.Twist2d;
+import frc.robot.lib.drivers.MkTalon;
+import frc.robot.lib.drivers.MkTalon.TalonLoc;
+import frc.robot.lib.geometry.*;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.ReflectingCSVWriter;
-import frc.robot.lib.geometry.Kinematics;
-import frc.robot.lib.drivers.MkTalon;
-import frc.robot.lib.drivers.MkTalon.TalonLoc;
-import frc.robot.lib.geometry.RobotState;
 
 public class Drive extends Subsystem {
 
@@ -61,16 +58,14 @@ public class Drive extends Subsystem {
 	public synchronized void outputTelemetry(double timestamp) {
 		mLeftDrive.updateShuffleboard();
 		mRightDrive.updateShuffleboard();
-		/*mState.setString(mDriveControlState.toString());
-		mStatus.setBoolean(driveStatus());*/
+		/*
+		 * mState.setString(mDriveControlState.toString()); mStatus.setBoolean(driveStatus());
+		 */
 		mFusedHeading.setDouble(mPeriodicIO.fusedHeading);
-		/*if (getHeading() != null) {
-			mGyroHeading.setDouble(getHeading().getDegrees());
-		}
-		if (mCSVWriter != null) {
-			mCSVWriter.add(mPeriodicIO);
-			mCSVWriter.write();
-		}*/
+		/*
+		 * if (getHeading() != null) { mGyroHeading.setDouble(getHeading().getDegrees()); } if (mCSVWriter
+		 * != null) { mCSVWriter.add(mPeriodicIO); mCSVWriter.write(); }
+		 */
 		SmartDashboard.putNumber("Avg Dist", (mPeriodicIO.leftPos + mPeriodicIO.rightPos) / 2);
 		/*
 		 * SmartDashboard.putNumber("Aux Error", mRightDrive.masterTalon.getClosedLoopError(1));

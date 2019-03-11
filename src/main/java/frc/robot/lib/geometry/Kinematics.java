@@ -2,9 +2,6 @@ package frc.robot.lib.geometry;
 
 import frc.robot.Constants;
 import frc.robot.Constants.DRIVE;
-import frc.robot.lib.geometry.Pose2d;
-import frc.robot.lib.geometry.Rotation2d;
-import frc.robot.lib.geometry.Twist2d;
 
 /**
  * Provides forward and inverse kinematics equations for the robot modeling the wheelbase as a

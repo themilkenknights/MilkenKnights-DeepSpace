@@ -1,14 +1,11 @@
 package frc.robot;
 
+import java.util.Arrays;
+
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import frc.robot.lib.util.Logger;
-import frc.robot.subsystems.CargoArm;
-import frc.robot.subsystems.Drive;
-import frc.robot.subsystems.HatchArm;
-import frc.robot.subsystems.Superstructure;
-import frc.robot.subsystems.Vision;
-import java.util.Arrays;
+import frc.robot.subsystems.*;
 
 public class Robot extends TimedRobot {
 
