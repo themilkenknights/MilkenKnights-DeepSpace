@@ -46,6 +46,31 @@ public class Pose2d implements IPose2d<Pose2d> {
     return new Pose2d(new Translation2d(), rotation);
   }
 
+  public Pose2d normal() {
+    return new Pose2d(translation_, rotation_.normal());
+  }
+
+  /**
+   * Finds the point where the heading of this pose intersects the heading of another. Returns (+INF, +INF) if parallel.
+   */
+  public Translation2d intersection(final Pose2d other) {
+    final Rotation2d other_rotation = other.getRotation();
+    if (rotation_.isParallel(other_rotation)) {
+      // Lines are parallel.
+      return new Translation2d(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
+    }
+    if (Math.abs(rotation_.cos()) < Math.abs(other_rotation.cos())) {
+      return intersectionInternal(this, other);
+    } else {
+      return intersectionInternal(other, this);
+    }
+  }
+
+  @Override
+  public Rotation2d getRotation() {
+    return rotation_;
+  }
+
   private static Translation2d intersectionInternal(final Pose2d a, final Pose2d b) {
     final Rotation2d a_r = a.getRotation();
     final Rotation2d b_r = b.getRotation();
@@ -58,6 +83,22 @@ public class Pose2d implements IPose2d<Pose2d> {
       return new Translation2d(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
     }
     return a_t.translateBy(a_r.toTranslation().scale(t));
+  }
+
+  @Override
+  public Translation2d getTranslation() {
+    return translation_;
+  }
+
+  /**
+   * Return true if this pose is (nearly) colinear with the another.
+   */
+  public boolean isColinear(final Pose2d other) {
+    if (!getRotation().isParallel(other.getRotation())) {
+      return false;
+    }
+    final Twist2d twist = log(inverse().transformBy(other));
+    return (Util.epsilonEquals(twist.dy, 0.0) && Util.epsilonEquals(twist.dtheta, 0.0));
   }
 
   /**
@@ -82,67 +123,6 @@ public class Pose2d implements IPose2d<Pose2d> {
   }
 
   /**
-   * Obtain a new Pose2d from a (constant curvature) velocity. See: https://github.com/strasdat/Sophus/blob/master/sophus/se2.hpp
-   */
-  public static Pose2d exp(final Twist2d delta) {
-    double sin_theta = Math.sin(delta.dtheta);
-    double cos_theta = Math.cos(delta.dtheta);
-    double s, c;
-    if (Math.abs(delta.dtheta) < kEps) {
-      s = 1.0 - 1.0 / 6.0 * delta.dtheta * delta.dtheta;
-      c = .5 * delta.dtheta;
-    } else {
-      s = sin_theta / delta.dtheta;
-      c = (1.0 - cos_theta) / delta.dtheta;
-    }
-    return new Pose2d(
-        new Translation2d(delta.dx * s - delta.dy * c, delta.dx * c + delta.dy * s),
-        new Rotation2d(cos_theta, sin_theta, false));
-  }
-
-  public Pose2d normal() {
-    return new Pose2d(translation_, rotation_.normal());
-  }
-
-  /**
-   * Finds the point where the heading of this pose intersects the heading of another. Returns
-   * (+INF, +INF) if parallel.
-   */
-  public Translation2d intersection(final Pose2d other) {
-    final Rotation2d other_rotation = other.getRotation();
-    if (rotation_.isParallel(other_rotation)) {
-      // Lines are parallel.
-      return new Translation2d(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
-    }
-    if (Math.abs(rotation_.cos()) < Math.abs(other_rotation.cos())) {
-      return intersectionInternal(this, other);
-    } else {
-      return intersectionInternal(other, this);
-    }
-  }
-
-  @Override
-  public Rotation2d getRotation() {
-    return rotation_;
-  }
-
-  @Override
-  public Translation2d getTranslation() {
-    return translation_;
-  }
-
-  /**
-   * Return true if this pose is (nearly) colinear with the another.
-   */
-  public boolean isColinear(final Pose2d other) {
-    if (!getRotation().isParallel(other.getRotation())) {
-      return false;
-    }
-    final Twist2d twist = log(inverse().transformBy(other));
-    return (Util.epsilonEquals(twist.dy, 0.0) && Util.epsilonEquals(twist.dtheta, 0.0));
-  }
-
-  /**
    * The inverse of this transform "undoes" the effect of translating by this transform.
    *
    * @return The opposite of this transform.
@@ -164,6 +144,25 @@ public class Pose2d implements IPose2d<Pose2d> {
     }
     final Twist2d twist = Pose2d.log(inverse().transformBy(other));
     return transformBy(Pose2d.exp(twist.scaled(x)));
+  }
+
+  /**
+   * Obtain a new Pose2d from a (constant curvature) velocity. See: https://github.com/strasdat/Sophus/blob/master/sophus/se2.hpp
+   */
+  public static Pose2d exp(final Twist2d delta) {
+    double sin_theta = Math.sin(delta.dtheta);
+    double cos_theta = Math.cos(delta.dtheta);
+    double s, c;
+    if (Math.abs(delta.dtheta) < kEps) {
+      s = 1.0 - 1.0 / 6.0 * delta.dtheta * delta.dtheta;
+      c = .5 * delta.dtheta;
+    } else {
+      s = sin_theta / delta.dtheta;
+      c = (1.0 - cos_theta) / delta.dtheta;
+    }
+    return new Pose2d(
+        new Translation2d(delta.dx * s - delta.dy * c, delta.dx * c + delta.dy * s),
+        new Rotation2d(cos_theta, sin_theta, false));
   }
 
   @Override
@@ -200,8 +199,7 @@ public class Pose2d implements IPose2d<Pose2d> {
   }
 
   /**
-   * Transforming this RigidTransform2d means first translating by other.translation and then
-   * rotating by other.rotation
+   * Transforming this RigidTransform2d means first translating by other.translation and then rotating by other.rotation
    *
    * @param other The other transform.
    * @return This transform * other

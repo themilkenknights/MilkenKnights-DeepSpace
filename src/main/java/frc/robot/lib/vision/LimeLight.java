@@ -13,8 +13,7 @@ import frc.robot.lib.vision.LimeLightControlMode.Snapshot;
 import frc.robot.lib.vision.LimeLightControlMode.StreamType;
 
 /**
- * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you
- * Enjoy the Lime Light Camera.
+ * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you Enjoy the Lime Light Camera.
  */
 public class LimeLight {
 
@@ -91,19 +90,6 @@ public class LimeLight {
     return isConnected;
   }
 
-  public synchronized void updateTarget() {
-    mTarget =
-        new LimelightTarget(
-            getIsTargetFound(),
-            getX(),
-            getY(),
-            getHorizLength(),
-            getVertLength(),
-            getSkew_Rotation(),
-            getCaptureTime());
-    mThrottleAverage.addNumber(mTarget);
-  }
-
   public synchronized LimelightTarget returnLastTarget() {
     return mTarget;
   }
@@ -118,66 +104,11 @@ public class LimeLight {
   }
 
   /**
-   * tv Whether the limelight has any valid targets (0 or 1)
-   */
-  public boolean getIsTargetFound() {
-    double v = tv.getDouble(0);
-    return v != 0.0f;
-  }
-
-  /**
-   * tx Horizontal Offset From Crosshair To Target (-27 degrees to 27 degrees)
-   */
-  public double getX() {
-    double x = tx.getDouble(0.0);
-    return x;
-  }
-
-  /**
-   * ty Vertical Offset From Crosshair To Target (-20.5 degrees to 20.5 degrees)
-   */
-  public double getY() {
-    double y = ty.getDouble(0.0);
-    return y;
-  }
-
-  public double getHorizLength() {
-    double h = thoriz.getDouble(0.0);
-    return h;
-  }
-
-  public double getVertLength() {
-    double v = tvert.getDouble(0.0);
-    return v;
-  }
-
-  public double getCaptureTime() {
-    double l = Timer.getFPGATimestamp() - (tl.getDouble(0.0) * 1e-3);
-    return l;
-  }
-
-  /**
    * ta Target Area (0% of image to 100% of image)
    */
   public double getTargetArea() {
     double a = ta.getDouble(0.0);
     return a;
-  }
-
-  /**
-   * ts Skew or rotation (-90 degrees to 0 degrees)
-   */
-  public double getSkew_Rotation() {
-    double s = ts.getDouble(0.0);
-    return s;
-  }
-
-  /**
-   * tl The pipeline’s latency contribution (ms) Add at least 11ms for image capture latency.
-   */
-  public double getPipelineLatency() {
-    double l = tl.getDouble(0.0);
-    return l;
   }
 
   /**
@@ -190,7 +121,6 @@ public class LimeLight {
     LedMode mode = LedMode.getByValue(led);
     return mode;
   }
-  // Setters
 
   /**
    * LedMode Sets limelight’s LED state
@@ -230,19 +160,6 @@ public class LimeLight {
     double pipe = pipeline.getDouble(0.0);
     return pipe;
   }
-  /**
-   * pipeline Sets limelight’s current pipeline
-   *
-   * <p>0 . 9 Select pipeline 0.9
-   *
-   * @param pipeline
-   */
-  /*
-   * public void setPipeline(Double pipeline) { if(pipeline<0){ pipeline = 0.0; throw new
-   * IllegalArgumentException("Pipeline can not be less than zero"); }else if(pipeline>9){ pipeline =
-   * 9.0; throw new IllegalArgumentException("Pipeline can not be greater than nine"); }
-   * m_table.getEntry("pipeline").setValue(pipeline); }
-   */
 
   /**
    * pipeline Sets limelight’s current pipeline
@@ -280,9 +197,8 @@ public class LimeLight {
    * stream Sets limelight’s streaming mode
    *
    * <p>kStandard - Side-by-side streams if a webcam is attached to Limelight kPiPMain - The
-   * secondary camera stream is placed in the lower-right corner of the primary camera stream
-   * kPiPSecondary - The primary camera stream is placed in the lower-right corner of the secondary
-   * camera stream
+   * secondary camera stream is placed in the lower-right corner of the primary camera stream kPiPSecondary - The primary camera stream is
+   * placed in the lower-right corner of the secondary camera stream
    */
   public void setStream(StreamType stream) {
     m_table.getEntry("stream").setValue(stream.getValue());
@@ -293,6 +209,7 @@ public class LimeLight {
     Snapshot mode = Snapshot.getByValue(snshot);
     return mode;
   }
+  // Setters
 
   /**
    * snapshot Allows users to take snapshots during a match
@@ -304,16 +221,14 @@ public class LimeLight {
   }
 
   /**
-   * Limelight posts three raw contours to NetworkTables that are not influenced by your grouping
-   * mode. That is, they are filtered with your pipeline parameters, but never grouped. X and Y are
-   * returned in normalized screen space (-1 to 1) rather than degrees. *
+   * Limelight posts three raw contours to NetworkTables that are not influenced by your grouping mode. That is, they are filtered with your
+   * pipeline parameters, but never grouped. X and Y are returned in normalized screen space (-1 to 1) rather than degrees. *
    */
   public double getAdvanced_RotationToTarget(Advanced_Target raw) {
     NetworkTableEntry txRaw = m_table.getEntry("tx" + raw.getValue());
     double x = txRaw.getDouble(0.0);
     return x;
   }
-  // *************** Advanced Usage with Raw Contours *********************
 
   public double getAdvanced_degVerticalToTarget(Advanced_Target raw) {
     NetworkTableEntry tyRaw = m_table.getEntry("ty" + raw.getValue());
@@ -326,6 +241,19 @@ public class LimeLight {
     double a = taRaw.getDouble(0.0);
     return a;
   }
+  /**
+   * pipeline Sets limelight’s current pipeline
+   *
+   * <p>0 . 9 Select pipeline 0.9
+   *
+   * @param pipeline
+   */
+  /*
+   * public void setPipeline(Double pipeline) { if(pipeline<0){ pipeline = 0.0; throw new
+   * IllegalArgumentException("Pipeline can not be less than zero"); }else if(pipeline>9){ pipeline =
+   * 9.0; throw new IllegalArgumentException("Pipeline can not be greater than nine"); }
+   * m_table.getEntry("pipeline").setValue(pipeline); }
+   */
 
   public double getAdvanced_Skew_Rotation(Advanced_Target raw) {
     NetworkTableEntry tsRaw = m_table.getEntry("ts" + raw.getValue());
@@ -339,9 +267,6 @@ public class LimeLight {
     crosshars[1] = getAdvanced_RawCrosshair_Y(raw);
     return crosshars;
   }
-  // Raw Crosshairs:
-  // If you are using raw targeting data, you can still utilize your calibrated
-  // crosshairs:
 
   public double getAdvanced_RawCrosshair_X(Advanced_Crosshair raw) {
     NetworkTableEntry cxRaw = m_table.getEntry("cx" + raw.getValue());
@@ -362,5 +287,77 @@ public class LimeLight {
     }
     i++;
     updateTarget();
+  }
+
+  /**
+   * tl The pipeline’s latency contribution (ms) Add at least 11ms for image capture latency.
+   */
+  public double getPipelineLatency() {
+    double l = tl.getDouble(0.0);
+    return l;
+  }
+
+  public synchronized void updateTarget() {
+    mTarget =
+        new LimelightTarget(
+            getIsTargetFound(),
+            getX(),
+            getY(),
+            getHorizLength(),
+            getVertLength(),
+            getSkew_Rotation(),
+            getCaptureTime());
+    mThrottleAverage.addNumber(mTarget);
+  }
+  // *************** Advanced Usage with Raw Contours *********************
+
+  /**
+   * tv Whether the limelight has any valid targets (0 or 1)
+   */
+  public boolean getIsTargetFound() {
+    double v = tv.getDouble(0);
+    return v != 0.0f;
+  }
+
+  /**
+   * tx Horizontal Offset From Crosshair To Target (-27 degrees to 27 degrees)
+   */
+  public double getX() {
+    double x = tx.getDouble(0.0);
+    return x;
+  }
+
+  /**
+   * ty Vertical Offset From Crosshair To Target (-20.5 degrees to 20.5 degrees)
+   */
+  public double getY() {
+    double y = ty.getDouble(0.0);
+    return y;
+  }
+
+  public double getHorizLength() {
+    double h = thoriz.getDouble(0.0);
+    return h;
+  }
+  // Raw Crosshairs:
+  // If you are using raw targeting data, you can still utilize your calibrated
+  // crosshairs:
+
+  public double getVertLength() {
+    double v = tvert.getDouble(0.0);
+    return v;
+  }
+
+  /**
+   * ts Skew or rotation (-90 degrees to 0 degrees)
+   */
+  public double getSkew_Rotation() {
+    double s = ts.getDouble(0.0);
+    return s;
+  }
+
+  public double getCaptureTime() {
+    double l = Timer.getFPGATimestamp() - (tl.getDouble(0.0) * 1e-3);
+    return l;
   }
 }

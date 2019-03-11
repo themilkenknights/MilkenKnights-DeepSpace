@@ -39,6 +39,12 @@ public class ReflectingCSVWriter<T> {
     writeLine(line.toString());
   }
 
+  protected synchronized void writeLine(String line) {
+    if (mOutput != null) {
+      mOutput.println(line);
+    }
+  }
+
   public void add(T value) {
     StringBuffer line = new StringBuffer();
     for (Field field : mFields) {
@@ -75,12 +81,6 @@ public class ReflectingCSVWriter<T> {
         break;
       }
       writeLine(val);
-    }
-  }
-
-  protected synchronized void writeLine(String line) {
-    if (mOutput != null) {
-      mOutput.println(line);
     }
   }
 }

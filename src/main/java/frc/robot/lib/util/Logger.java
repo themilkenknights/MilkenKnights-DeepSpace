@@ -22,6 +22,22 @@ public class Logger {
     logMarker("Robot Startup");
   }
 
+  public static synchronized void logMarker(String mark) {
+    logMarker(mark, null);
+    System.out.println(mark);
+  }
+
+  private static synchronized void logMarker(String mark, Throwable nullableException) {
+    /*
+     * if (!lastOutput.equals(mark)) { String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new
+     * Date()); try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 +
+     * "/main_log.txt", true))) { writer.print(RUN_INSTANCE_UUID.toString()); writer.print(", ");
+     * writer.print(mark); writer.print(", "); writer.print(new Date().toString()); if
+     * (nullableException != null) { writer.print(", "); nullableException.printStackTrace(writer); }
+     * writer.println(); } catch (IOException e) { e.printStackTrace(); } } else { lastOutput = mark; }
+     */
+  }
+
   public static void logRobotInit() {
     String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
     boolean test = new File("/media/sda1/" + dateStamp1 + "/").mkdirs();
@@ -49,11 +65,6 @@ public class Logger {
     DriverStation.reportError(mark, false);
   }
 
-  public static synchronized void logMarker(String mark) {
-    logMarker(mark, null);
-    System.out.println(mark);
-  }
-
   public static synchronized void logErrorWithTrace(String mark) {
     logMarker(mark, null);
     DriverStation.reportError(mark, false);
@@ -61,17 +72,6 @@ public class Logger {
 
   public static synchronized void logThrowableCrash(Throwable throwable) {
     logCrashMarker("Exception", throwable);
-  }
-
-  private static synchronized void logMarker(String mark, Throwable nullableException) {
-    /*
-     * if (!lastOutput.equals(mark)) { String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new
-     * Date()); try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 +
-     * "/main_log.txt", true))) { writer.print(RUN_INSTANCE_UUID.toString()); writer.print(", ");
-     * writer.print(mark); writer.print(", "); writer.print(new Date().toString()); if
-     * (nullableException != null) { writer.print(", "); nullableException.printStackTrace(writer); }
-     * writer.println(); } catch (IOException e) { e.printStackTrace(); } } else { lastOutput = mark; }
-     */
   }
 
   private static synchronized void logCrashMarker(String mark, Throwable nullableException) {

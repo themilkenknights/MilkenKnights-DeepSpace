@@ -2,9 +2,8 @@
 // http://algs4.cs.princeton.edu/14analysis/PolynomialRegression.java.html
 package frc.robot.lib.util;
 /**
- * **************************************************************************** Compilation: javac
- * -cp .:jama.jar PolynomialRegression.java Execution: java -cp .:jama.jar PolynomialRegression
- * Dependencies: jama.jar StdOut.java
+ * **************************************************************************** Compilation: javac -cp .:jama.jar PolynomialRegression.java
+ * Execution: java -cp .:jama.jar PolynomialRegression Dependencies: jama.jar StdOut.java
  *
  * <p>% java -cp .:jama.jar PolynomialRegression 0.01 n^3 + -1.64 n^2 + 168.92 n + -2113.73 (R^2 =
  * 0.997)
@@ -49,17 +48,6 @@ public class PolynomialRegression {
     solve(x, y, degree);
   }
 
-  /**
-   * Performs a polynomial regression on the data points {@code (y[i], x[i])}.
-   *
-   * @param x the values of the predictor variable
-   * @param y the corresponding values of the response variable
-   * @param degree the degree of the polynomial to fit
-   */
-  public PolynomialRegression(double[] x, double[] y, int degree) {
-    solve(x, y, degree);
-  }
-
   private void solve(double[] x, double[] y, int degree) {
     this.degree = degree;
     int n = x.length;
@@ -101,6 +89,17 @@ public class PolynomialRegression {
     // variation not accounted for
     Matrix residuals = matrixX.times(beta).minus(matrixY);
     sse = residuals.norm2() * residuals.norm2();
+  }
+
+  /**
+   * Performs a polynomial regression on the data points {@code (y[i], x[i])}.
+   *
+   * @param x the values of the predictor variable
+   * @param y the corresponding values of the response variable
+   * @param degree the degree of the polynomial to fit
+   */
+  public PolynomialRegression(double[] x, double[] y, int degree) {
+    solve(x, y, degree);
   }
 
   /**

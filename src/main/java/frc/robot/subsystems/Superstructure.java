@@ -36,8 +36,8 @@ public class Superstructure extends Subsystem {
       mRearClimb;
 
   /**
-   * Stores PDP, Compressor, General Robot Data, and Climb Actuators. Acts as the high-level
-   * controller that changes calls the lower-level subsystems.
+   * Stores PDP, Compressor, General Robot Data, and Climb Actuators. Acts as the high-level controller that changes calls the lower-level
+   * subsystems.
    */
   private Superstructure() {
     ShuffleboardTab mStructureTab = Shuffleboard.getTab("General");
@@ -72,6 +72,32 @@ public class Superstructure extends Subsystem {
      */
   }
 
+  public void teleopInit(double timestamp) {
+    setRobotState(RobotState.TELEOP_DRIVE);
+  }
+
+  @Override
+  public void autonomousInit(double timestamp) {
+    setRobotState(RobotState.TELEOP_DRIVE);
+  }
+
+  @Override
+  public void onStop(double timestamp) {
+    setFrontClimbState(ClimbState.RETRACTED);
+    setRearClimbState(ClimbState.RETRACTED);
+  }
+
+  @Override
+  public void onRestart(double timestamp) {
+  }
+
+  @Override
+  public boolean checkSystem() {
+    return mCompressor.getCompressorCurrent() > 0.0
+        && mPDP.getTotalCurrent() > 0.0
+        && mPDP.getVoltage() > 0.0;
+  }
+
   public ClimbState getFrontClimbState() {
     return mFrontClimbState;
   }
@@ -88,15 +114,6 @@ public class Superstructure extends Subsystem {
   public void setRearClimbState(ClimbState state) {
     mRearClimbState = state;
     mRearClimbSolenoid.set(state.state);
-  }
-
-  public void teleopInit(double timestamp) {
-    setRobotState(RobotState.TELEOP_DRIVE);
-  }
-
-  @Override
-  public void autonomousInit(double timestamp) {
-    setRobotState(RobotState.TELEOP_DRIVE);
   }
 
   public RobotState getRobotState() {
@@ -178,23 +195,6 @@ public class Superstructure extends Subsystem {
 
   private void startAutoClimb() {
     AutoChooser.startAuto(new ClimbLevel2Mode());
-  }
-
-  @Override
-  public void onStop(double timestamp) {
-    setFrontClimbState(ClimbState.RETRACTED);
-    setRearClimbState(ClimbState.RETRACTED);
-  }
-
-  @Override
-  public void onRestart(double timestamp) {
-  }
-
-  @Override
-  public boolean checkSystem() {
-    return mCompressor.getCompressorCurrent() > 0.0
-        && mPDP.getTotalCurrent() > 0.0
-        && mPDP.getVoltage() > 0.0;
   }
 
   public enum ClimbState {

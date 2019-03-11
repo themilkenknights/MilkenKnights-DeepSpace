@@ -55,39 +55,8 @@ public class CargoArm extends Subsystem {
     return InstanceHolder.mInstance;
   }
 
-  /**
-   * The arm encoder was getting periodically briefly disconnected during matches so this method
-   * waits 250ms before switching to open loop control.
-   *
-   * <p>This method also checks for unsafe current output and will automatically switches to open
-   * loop control.
-   */
-  @Override
-  public synchronized void safetyCheck(double timestamp) {
-    mArmTalon.checkForReset();
-    if (!mArmTalon.isEncoderConnected()) {
-      if (mDisCon) {
-        setOpenLoop(0.0);
-        mDisCon = false;
-        Logger.logError("Cargo Arm Encoder Disconnected");
-      } else {
-        mDisCon = true;
-      }
-    }
-
-    if (mArmTalon.getCurrent() > CARGO_ARM.kMaxSafeCurrent) {
-      setOpenLoop(0.0);
-      Logger.logError("Unsafe Current on Cargo Arm " + mArmTalon.getCurrent() + " Amps");
-    }
-  }
-
   public PigeonIMU getPigeon() {
     return mIntakeTalon.mPigeon;
-  }
-
-  private void setEnable() {
-    mArmPosEnable = mArmTalon.getPosition();
-    mCargoArmState = CargoArmState.ENABLE;
   }
 
   public synchronized void onQuickLoop(double timestamp) {
@@ -112,6 +81,32 @@ public class CargoArm extends Subsystem {
     }
 
     mIntakeTalon.set(ControlMode.PercentOutput, mRollerSetpoint, NeutralMode.Brake);
+  }
+
+  /**
+   * The arm encoder was getting periodically briefly disconnected during matches so this method waits 250ms before switching to open loop
+   * control.
+   *
+   * <p>This method also checks for unsafe current output and will automatically switches to open
+   * loop control.
+   */
+  @Override
+  public synchronized void safetyCheck(double timestamp) {
+    mArmTalon.checkForReset();
+    if (!mArmTalon.isEncoderConnected()) {
+      if (mDisCon) {
+        setOpenLoop(0.0);
+        mDisCon = false;
+        Logger.logError("Cargo Arm Encoder Disconnected");
+      } else {
+        mDisCon = true;
+      }
+    }
+
+    if (mArmTalon.getCurrent() > CARGO_ARM.kMaxSafeCurrent) {
+      setOpenLoop(0.0);
+      Logger.logError("Unsafe Current on Cargo Arm " + mArmTalon.getCurrent() + " Amps");
+    }
   }
 
   @Override
@@ -152,8 +147,13 @@ public class CargoArm extends Subsystem {
     return mArmTalon.checkSystem() && mIntakeTalon.checkSystem();
   }
 
-  public boolean isSpearLimitTriggered() {
-    return mIntakeTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
+  public synchronized void setIntakeRollers(double output) {
+    mRollerSetpoint = output;
+  }
+
+  public void zeroEncoder() {
+    mArmTalon.zeroEncoder();
+    setEnable();
   }
 
   public synchronized void setOpenLoop(double output) {
@@ -161,10 +161,6 @@ public class CargoArm extends Subsystem {
       setArmControlState(CargoArmControlState.OPEN_LOOP);
     }
     mOpenLoopSetpoint = output;
-  }
-
-  public synchronized void setIntakeRollers(double output) {
-    mRollerSetpoint = output;
   }
 
   private synchronized void setArmControlState(CargoArmControlState state) {
@@ -180,6 +176,15 @@ public class CargoArm extends Subsystem {
     mCargoArmControlState = state;
   }
 
+  private void setEnable() {
+    mArmPosEnable = mArmTalon.getPosition();
+    mCargoArmState = CargoArmState.ENABLE;
+  }
+
+  public boolean isSpearLimitTriggered() {
+    return mIntakeTalon.slaveTalon.getSensorCollection().isFwdLimitSwitchClosed();
+  }
+
   public CargoArmState getArmState() {
     return mCargoArmState;
   }
@@ -189,11 +194,6 @@ public class CargoArm extends Subsystem {
       setArmControlState(CargoArmControlState.MOTION_MAGIC);
     }
     mCargoArmState = state;
-  }
-
-  public void zeroEncoder() {
-    mArmTalon.zeroEncoder();
-    setEnable();
   }
 
   public void disableSoftLimit() {

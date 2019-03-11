@@ -20,10 +20,6 @@ public class RobotState {
     reset(0, new Pose2d());
   }
 
-  public static RobotState getInstance() {
-    return instance_;
-  }
-
   /**
    * Resets the field to robot transform (robot's position on the field)
    */
@@ -34,6 +30,10 @@ public class RobotState {
     vehicle_velocity_predicted_ = Twist2d.identity();
     vehicle_velocity_measured_ = Twist2d.identity();
     distance_driven_ = 0.0;
+  }
+
+  public static RobotState getInstance() {
+    return instance_;
   }
 
   public synchronized void resetDistanceDriven() {
@@ -51,8 +51,7 @@ public class RobotState {
   }
 
   /**
-   * Returns the robot's position on the field at a certain time. Linearly interpolates between
-   * stored robot positions to fill in the gaps.
+   * Returns the robot's position on the field at a certain time. Linearly interpolates between stored robot positions to fill in the gaps.
    */
   public synchronized Pose2d getFieldToVehicle(double timestamp) {
     return field_to_vehicle_.getInterpolated(new InterpolatingDouble(timestamp));

@@ -29,60 +29,43 @@ public class Input {
   private static final MkJoystick mDriverJoystick = new MkJoystick(0);
   private static final MkJoystick mOperatorJoystick = new MkJoystick(1);
 
-  private static final MkJoystickButton mToggleVelocity =
-      mDriverJoystick.getButton(10, "Toggle Velocity Setpoint");
+  private static final MkJoystickButton mToggleVelocity = mDriverJoystick.getButton(10, "Toggle Velocity Setpoint");
 
-  private static final MkJoystickButton mHatchVisionPlace =
-      mDriverJoystick.getButton(1, "Hatch Vision Place");
+  private static final MkJoystickButton mHatchVisionPlace = mDriverJoystick.getButton(1, "Hatch Vision Place");
 
-  private static final MkJoystickButton mCargoVisionOuttake =
-      mDriverJoystick.getButton(2, "Vision Cargo Outtake");
+  private static final MkJoystickButton mCargoVisionOuttake = mDriverJoystick.getButton(2, "Vision Cargo Outtake");
 
-  private static final MkJoystickButton mHatchVisionIntake =
-      mDriverJoystick.getButton(3, "Vision Hatch Intake");
+  private static final MkJoystickButton mHatchVisionIntake = mDriverJoystick.getButton(3, "Vision Hatch Intake");
 
-  private static final MkJoystickButton mAutoClimb =
-      mDriverJoystick.getButton(4, "Automated Climb");
+  private static final MkJoystickButton mAutoClimb = mDriverJoystick.getButton(4, "Automated Climb");
 
   private static final MkJoystickButton mFrontClimb = mDriverJoystick.getButton(5, "Climb Front");
 
   private static final MkJoystickButton mRearClimb = mDriverJoystick.getButton(6, "Climb Rear");
 
-  private static final MkJoystickButton mCargoArmManual =
-      mOperatorJoystick.getButton(2, "Cargo Arm Manual Mode");
+  private static final MkJoystickButton mCargoArmManual = mOperatorJoystick.getButton(2, "Cargo Arm Manual Mode");
 
-  private static final MkJoystickButton mSpearTogglePlaceStow =
-      mOperatorJoystick.getButton(3, "Hatch Spear Toggle (Place/Stow)");
+  private static final MkJoystickButton mSpearTogglePlaceStow = mOperatorJoystick.getButton(3, "Hatch Spear Toggle (Place/Stow)");
 
-  private static final MkJoystickButton mSpearIntake =
-      mOperatorJoystick.getButton(4, "Hatch Spear HP Intake");
+  private static final MkJoystickButton mSpearIntake = mOperatorJoystick.getButton(4, "Hatch Spear HP Intake");
 
-  private static final MkJoystickButton mIntakeRollerIn =
-      mOperatorJoystick.getButton(5, "Intake Roller In");
+  private static final MkJoystickButton mIntakeRollerIn = mOperatorJoystick.getButton(5, "Intake Roller In");
 
-  private static final MkJoystickButton mIntakeRollerOut =
-      mOperatorJoystick.getButton(6, "Intake Roller Out Fast");
+  private static final MkJoystickButton mIntakeRollerOut = mOperatorJoystick.getButton(6, "Intake Roller Out Fast");
 
-  private static final MkJoystickButton toggleVision =
-      mOperatorJoystick.getButton(7, "Toggle Vision");
+  private static final MkJoystickButton toggleVision = mOperatorJoystick.getButton(7, "Toggle Vision");
 
-  private static final MkJoystickButton mZeroArmToggleLimit =
-      mOperatorJoystick.getButton(8, "Zero Arm Encoders && Disable Soft Limit");
+  private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick.getButton(8, "Zero Arm Encoders && Disable Soft Limit");
 
   private static final MkJoystickButton mStopAuto = mOperatorJoystick.getButton(9, "Stop Auto");
 
-  private static final MkJoystickButton mStowAllButton =
-      mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
+  private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
 
-  private static final MkJoystickButton mGroundIntakeToggleButton =
-      mOperatorJoystick.getButton(11, "Ground Intake Toggle (Stow/Ground)");
+  private static final MkJoystickButton mGroundIntakeToggleButton = mOperatorJoystick.getButton(11, "Ground Intake Toggle (Stow/Ground)");
 
-  private static final MkJoystickButton mTransferButton =
-      mOperatorJoystick.getButton(12, "Transfer Hatch Button");
+  private static final MkJoystickButton mTransferButton = mOperatorJoystick.getButton(12, "Transfer Hatch Button");
 
   private static MkTime rumbleTimer = new MkTime();
-
-  private static boolean isOperatorJoystickConnected = false;
 
   private static boolean isVelocitySetpoint = false;
 
@@ -98,7 +81,7 @@ public class Input {
     // Joystick isn't connected if throttle is equal to zero. Used to ensure robot
     // doesn't move when
     // Joystick unplugged.
-    isOperatorJoystickConnected = mOperatorJoystick.getRawAxis(3) != -1.0;
+    boolean isOperatorJoystickConnected = mOperatorJoystick.getRawAxis(3) != -1.0;
 
     // Stop rumble after 250ms
     if (rumbleTimer.isDone()) {
@@ -128,8 +111,7 @@ public class Input {
     // Move arms in open loop while held. This switches the arm to open loop control
     // mode.
     if (mCargoArmManual.isHeld()) {
-      mCargo.setOpenLoop(
-          MkMath.handleDeadband(-mOperatorJoystick.getRawAxis(1), GENERAL.kOperatorDeadband));
+      mCargo.setOpenLoop(MkMath.handleDeadband(-mOperatorJoystick.getRawAxis(1), GENERAL.kOperatorDeadband));
       mVision.configCargoStream();
     } else if (mOperatorJoystick.getTrigger()) {
       double movement = -mOperatorJoystick.getRawAxis(1) / 1.1;
@@ -161,16 +143,10 @@ public class Input {
       mStructure.setRobotState(RobotState.AUTO_CLIMB);
     } else if (mFrontClimb.isPressed()) {
       // Toggle Front Climb Actuators (Toward Spear)
-      mStructure.setFrontClimbState(
-          mStructure.getFrontClimbState() == ClimbState.RETRACTED
-              ? ClimbState.LOWERED
-              : ClimbState.RETRACTED);
+      mStructure.setFrontClimbState(mStructure.getFrontClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
     } else if (mRearClimb.isPressed()) {
       // Toggle Rear Climb Actuators (Toward Cargo Arm/Rio)
-      mStructure.setRearClimbState(
-          mStructure.getRearClimbState() == ClimbState.RETRACTED
-              ? ClimbState.LOWERED
-              : ClimbState.RETRACTED);
+      mStructure.setRearClimbState(mStructure.getRearClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
     }
 
     // GTA Style driving.

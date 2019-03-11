@@ -26,8 +26,8 @@ public class MotionMagicVisionPigeon implements Action {
   }
 
   /**
-   * Exit tracking if it is taking too long or if the tracking is finished or if the arm is down for
-   * a specified time and the limit switch is triggered.
+   * Exit tracking if it is taking too long or if the tracking is finished or if the arm is down for a specified time and the limit switch
+   * is triggered.
    */
   @Override
   public boolean isFinished() {

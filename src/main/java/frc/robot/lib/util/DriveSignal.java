@@ -3,8 +3,7 @@ package frc.robot.lib.util;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 
 /**
- * A drivetrain command consisting of the left, right motor settings and whether the brake mode is
- * enabled.
+ * A drivetrain command consisting of the left, right motor settings and whether the brake mode is enabled.
  */
 public class DriveSignal {
 

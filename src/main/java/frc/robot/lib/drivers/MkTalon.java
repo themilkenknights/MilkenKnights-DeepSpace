@@ -243,42 +243,12 @@ public class MkTalon {
     motorSafetyTimer.start(motorTimer);
   }
 
-  public boolean isEncoderConnected() {
-    return masterTalon.getSensorCollection().getPulseWidthRiseToRiseUs() > 100;
-  }
-
-  public synchronized void set(ControlMode mode, double value, NeutralMode nMode) {
-    set(mode, value, DemandType.ArbitraryFeedForward, 0.0, nMode);
-  }
-
   /**
-   * Primary method for all Talon Control. Only sends commands to the Talon if they are new or if
-   * the motor safety timer expires.
-   *
-   * @param mode Control Mode for Talon (PercentOuput, MotionMagic, Velocity, etc.)
-   * @param value Setpoint (Units based on Control Mode, See {@link Constants}
-   * @param nMode Neutral Mode (Brake/Coast) for Talons/Victors
-   * @param arbFeed Arbitrary feedforward added as a PercentOutput to any closed loop (or open loop)
-   * mode.
+   * Logs and sends error to DS if any Phoenix Config method returns an Error Code that is not 'OK'
    */
-  public synchronized void set(
-      ControlMode mode, double value, DemandType type, double arbFeed, NeutralMode nMode) {
-    if (lastNeutralMode != nMode) {
-      lastNeutralMode = nMode;
-      masterTalon.setNeutralMode(nMode);
-      slaveVictor.setNeutralMode(nMode);
-    }
-    if (mode != lastControlMode
-        || value != lastOutput
-        || lastDemandType != type
-        || arbFeed != lastArbFeed
-        || motorSafetyTimer.isDone()) {
-      masterTalon.set(mode, value, type, arbFeed);
-      lastControlMode = mode;
-      lastOutput = value;
-      lastDemandType = type;
-      lastArbFeed = arbFeed;
-      motorSafetyTimer.start(motorTimer);
+  private void CTRE(ErrorCode errorCode) {
+    if (errorCode != ErrorCode.OK) {
+      Logger.logErrorWithTrace(errorCode.toString() + " Side: " + mSide);
     }
   }
 
@@ -307,6 +277,39 @@ public class MkTalon {
                   kShort));
     } else {
       Logger.logErrorWithTrace("Can't Zero Encoder: MkTalon Position - " + mSide.toString());
+    }
+  }
+
+  public synchronized void set(ControlMode mode, double value, NeutralMode nMode) {
+    set(mode, value, DemandType.ArbitraryFeedForward, 0.0, nMode);
+  }
+
+  /**
+   * Primary method for all Talon Control. Only sends commands to the Talon if they are new or if the motor safety timer expires.
+   *
+   * @param mode Control Mode for Talon (PercentOuput, MotionMagic, Velocity, etc.)
+   * @param value Setpoint (Units based on Control Mode, See {@link Constants}
+   * @param nMode Neutral Mode (Brake/Coast) for Talons/Victors
+   * @param arbFeed Arbitrary feedforward added as a PercentOutput to any closed loop (or open loop) mode.
+   */
+  public synchronized void set(
+      ControlMode mode, double value, DemandType type, double arbFeed, NeutralMode nMode) {
+    if (lastNeutralMode != nMode) {
+      lastNeutralMode = nMode;
+      masterTalon.setNeutralMode(nMode);
+      slaveVictor.setNeutralMode(nMode);
+    }
+    if (mode != lastControlMode
+        || value != lastOutput
+        || lastDemandType != type
+        || arbFeed != lastArbFeed
+        || motorSafetyTimer.isDone()) {
+      masterTalon.set(mode, value, type, arbFeed);
+      lastControlMode = mode;
+      lastOutput = value;
+      lastDemandType = type;
+      lastArbFeed = arbFeed;
+      motorSafetyTimer.start(motorTimer);
     }
   }
 
@@ -359,9 +362,9 @@ public class MkTalon {
   }
 
   /**
-   * @return Error from setpoint in Inches/Inches Per Sec/Degrees Note that the method returns the
-   * deviation from target setpoint unlike the official {@link BaseMotorController#getClosedLoopError()}
-   * method. This method serves to limit CAN usage by using known setpoints to calculate error.
+   * @return Error from setpoint in Inches/Inches Per Sec/Degrees Note that the method returns the deviation from target setpoint unlike the
+   * official {@link BaseMotorController#getClosedLoopError()} method. This method serves to limit CAN usage by using known setpoints to
+   * calculate error.
    */
   public synchronized double getError() {
     switch (mSide) {
@@ -385,13 +388,6 @@ public class MkTalon {
         Logger.logErrorWithTrace("Talon doesn't have encoder");
         return 0.0;
     }
-  }
-
-  /**
-   * @return Current through Talon in Amperes
-   */
-  public synchronized double getCurrent() {
-    return masterTalon.getOutputCurrent();
   }
 
   public boolean checkDriveDeltas() {
@@ -423,9 +419,8 @@ public class MkTalon {
   }
 
   /**
-   * Defines the tests for each mechanism. The current, velocity, and position of each mechanism
-   * must meet a minimum (or maximum) value and for mechanisms with several motors, the delta
-   * between these measurements must be below a certain threshold.
+   * Defines the tests for each mechanism. The current, velocity, and position of each mechanism must meet a minimum (or maximum) value and
+   * for mechanisms with several motors, the delta between these measurements must be below a certain threshold.
    *
    * <p>The cargo and ground intake move to each available setpoint and should be verified by the
    * test operator.
@@ -668,6 +663,17 @@ public class MkTalon {
     return check;
   }
 
+  /**
+   * @return Current through Talon in Amperes
+   */
+  public synchronized double getCurrent() {
+    return masterTalon.getOutputCurrent();
+  }
+
+  public boolean isEncoderConnected() {
+    return masterTalon.getSensorCollection().getPulseWidthRiseToRiseUs() > 100;
+  }
+
   public void checkForErrorInit() {
     masterTalon.clearStickyFaults();
     Faults masterFaults = new Faults();
@@ -707,15 +713,6 @@ public class MkTalon {
     }
   }
 
-  /**
-   * Logs and sends error to DS if any Phoenix Config method returns an Error Code that is not 'OK'
-   */
-  private void CTRE(ErrorCode errorCode) {
-    if (errorCode != ErrorCode.OK) {
-      Logger.logErrorWithTrace(errorCode.toString() + " Side: " + mSide);
-    }
-  }
-
   @Override
   public String toString() {
     return "Output: "
@@ -728,12 +725,10 @@ public class MkTalon {
   }
 
   /**
-   * Left Drive and Right Drive house the Talon, Victor, and SRX Mag encoder for each side of the
-   * drivetrain. The hatch Arm houses the ground hatch intake Talon, SRX Mag Encoder, and an unused
-   * Talon with a Breakout board with two limit switches. One limit switch is placed at the reverse
-   * hardstop for the ground intake arm, and the second is placed on the pneumatic spear arm to
-   * detect when the main arm is inside the target. The Cargo Arm houses the Talon, Victor, and SRX
-   * Mag encoder for the main cargo arm.
+   * Left Drive and Right Drive house the Talon, Victor, and SRX Mag encoder for each side of the drivetrain. The hatch Arm houses the
+   * ground hatch intake Talon, SRX Mag Encoder, and an unused Talon with a Breakout board with two limit switches. One limit switch is
+   * placed at the reverse hardstop for the ground intake arm, and the second is placed on the pneumatic spear arm to detect when the main
+   * arm is inside the target. The Cargo Arm houses the Talon, Victor, and SRX Mag encoder for the main cargo arm.
    */
   public enum TalonLoc {
     Left,

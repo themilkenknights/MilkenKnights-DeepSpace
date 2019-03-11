@@ -56,12 +56,12 @@ public class MkMath {
     return (ang / 360.0) * 4096.0;
   }
 
-  public static double nativeUnitsToDegrees(double raw) {
-    return ((raw / 4096.0) * 360.0);
-  }
-
   public static double nativeUnitsPer100MstoDegreesPerSec(double vel) {
     return nativeUnitsToDegrees(vel) * 10;
+  }
+
+  public static double nativeUnitsToDegrees(double raw) {
+    return ((raw / 4096.0) * 360.0);
   }
 
   public static double degreesToPigeonNativeUnits(double angle) {

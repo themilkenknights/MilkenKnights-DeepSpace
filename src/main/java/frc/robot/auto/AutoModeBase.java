@@ -6,8 +6,8 @@ import frc.robot.lib.util.DeltaTime;
 import frc.robot.lib.util.Logger;
 
 /**
- * An abstract class that is the basis of the robot's autonomous routines. This is implemented in
- * auto modes (which are routines that do actions).
+ * An abstract class that is the basis of the robot's autonomous routines. This is implemented in auto modes (which are routines that do
+ * actions).
  */
 public abstract class AutoModeBase {
 
@@ -25,6 +25,8 @@ public abstract class AutoModeBase {
     }
     done();
   }
+
+  protected abstract void routine() throws AutoModeEndedException;
 
   public void done() {
     Logger.logMarker("Auto mode done");
@@ -60,6 +62,4 @@ public abstract class AutoModeBase {
   public boolean isActive() {
     return mActive;
   }
-
-  protected abstract void routine() throws AutoModeEndedException;
 }

@@ -60,11 +60,46 @@ public class Vision extends Subsystem {
     mSkew.setDouble(getLimelightTarget().getSkew());
   }
 
+  public void teleopInit(double timestamp) {
+    disableLED();
+  }
+
+  public void autonomousInit(double timestamp) {
+    disableLED();
+  }
+
+  @Override
+  public void onStop(double timestamp) {
+    disableLED();
+  }
+
+  @Override
+  public void onRestart(double timestamp) {
+    disableLED();
+  }
+
+  @Override
+  public boolean checkSystem() {
+    return mLimeLight.isConnected();
+  }
+
+  public synchronized LimelightTarget getLimelightTarget() {
+    return mLimeLight.returnLastTarget();
+  }
+
   public void toggleVision() {
     if (isVision) {
       disableLED();
     } else {
       enableLED();
+    }
+  }
+
+  public void disableLED() {
+    if (isVision) {
+      mLimeLight.setPipeline(1);
+      isVision = false;
+      mLEDTimer.reset();
     }
   }
 
@@ -78,22 +113,6 @@ public class Vision extends Subsystem {
 
   public boolean timerDone() {
     return mLEDTimer.isDone();
-  }
-
-  public void disableLED() {
-    if (isVision) {
-      mLimeLight.setPipeline(1);
-      isVision = false;
-      mLEDTimer.reset();
-    }
-  }
-
-  public void teleopInit(double timestamp) {
-    disableLED();
-  }
-
-  public void autonomousInit(double timestamp) {
-    disableLED();
   }
 
   public void configHatchStream() {
@@ -117,25 +136,6 @@ public class Vision extends Subsystem {
     if (mLEDTimer.isDone(10.0)) {
       // disableLED();
     }
-  }
-
-  @Override
-  public void onStop(double timestamp) {
-    disableLED();
-  }
-
-  @Override
-  public void onRestart(double timestamp) {
-    disableLED();
-  }
-
-  @Override
-  public boolean checkSystem() {
-    return mLimeLight.isConnected();
-  }
-
-  public synchronized LimelightTarget getLimelightTarget() {
-    return mLimeLight.returnLastTarget();
   }
 
   private static class InstanceHolder {

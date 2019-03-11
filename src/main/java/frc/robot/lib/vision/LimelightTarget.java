@@ -37,6 +37,10 @@ public class LimelightTarget {
     this.skew = skew > -45.0 ? skew : skew + 90.0;
   }
 
+  public double getArea() {
+    return area;
+  }
+
   public double getHorizLength() {
     return horizLength;
   }
@@ -55,10 +59,6 @@ public class LimelightTarget {
 
   public double getYOffset() {
     return yOffset;
-  }
-
-  public double getArea() {
-    return area;
   }
 
   public double getCaptureTime() {

@@ -48,10 +48,6 @@ public class Translation2d implements ITranslation2d<Translation2d> {
     return a.x_ * b.x_ + a.y_ * b.y_;
   }
 
-  public static double cross(final Translation2d a, final Translation2d b) {
-    return a.x_ * b.y_ - a.y_ * b.x_;
-  }
-
   /**
    * The "norm" of a transform is the Euclidean distance in x and y.
    *
@@ -59,6 +55,10 @@ public class Translation2d implements ITranslation2d<Translation2d> {
    */
   public double norm() {
     return Math.hypot(x_, y_);
+  }
+
+  public static double cross(final Translation2d a, final Translation2d b) {
+    return a.x_ * b.y_ - a.y_ * b.x_;
   }
 
   public double norm2() {
