@@ -66,8 +66,8 @@ public class Drive extends Subsystem {
     mPeriodicIO.gyro_heading = Rotation2d.fromDegrees(fusedHeading).rotateBy(mGyroOffset);
     mPeriodicIO.leftPos = mLeftDrive.getPosition();
     mPeriodicIO.rightPos = mRightDrive.getPosition();
-    // mPeriodicIO.leftVel = mLeftDrive.getVelocity();
-    // mPeriodicIO.rightVel = mRightDrive.getVelocity();
+    //mPeriodicIO.leftVel = mLeftDrive.getVelocity();
+    //mPeriodicIO.rightVel = mRightDrive.getVelocity();
   }
 
   /**
