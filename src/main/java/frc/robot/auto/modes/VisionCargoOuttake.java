@@ -9,9 +9,9 @@ import frc.robot.auto.actions.RollerAction;
 
 public class VisionCargoOuttake extends AutoModeBase {
 
-	@Override
-	protected void routine() throws AutoModeEndedException {
-		runAction(new MotionMagicVisionPigeon(VisionServoGoal.PLACE_CARGO));
-		runAction(new RollerAction(CARGO_ARM.kCargoShipIntakeRollerOut, 1.0));
-	}
+  @Override
+  protected void routine() throws AutoModeEndedException {
+    runAction(new MotionMagicVisionPigeon(VisionServoGoal.PLACE_CARGO));
+    runAction(new RollerAction(CARGO_ARM.kCargoShipIntakeRollerOut, 1.0));
+  }
 }

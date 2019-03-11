@@ -2,7 +2,6 @@ plugins {
     id "java"
     id "edu.wpi.first.GradleRIO" version "2019.4.1"
     id 'idea'
-    id "com.diffplug.gradle.spotless" version "3.18.0"
 }
 
 def ROBOT_MAIN_CLASS = "frc.robot.Main"
@@ -73,12 +72,4 @@ test {
 jar {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     manifest edu.wpi.first.gradlerio.GradleRIOPlugin.javaManifest(ROBOT_MAIN_CLASS)
-}
-
-spotless {
-    java {
-        importOrder 'java', 'javax', 'org', 'com'
-        removeUnusedImports()
-        eclipse().configFile 'style.xml'
-    }
 }

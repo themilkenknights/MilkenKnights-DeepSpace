@@ -5,14 +5,14 @@ import frc.robot.subsystems.Superstructure.RobotState;
 
 public class SetSuperstructure extends RunOnceAction {
 
-	private RobotState state;
+  private RobotState state;
 
-	public SetSuperstructure(RobotState state) {
-		this.state = state;
-	}
+  public SetSuperstructure(RobotState state) {
+    this.state = state;
+  }
 
-	@Override
-	public void runOnce() {
-		Superstructure.getInstance().setRobotState(state);
-	}
+  @Override
+  public void runOnce() {
+    Superstructure.getInstance().setRobotState(state);
+  }
 }

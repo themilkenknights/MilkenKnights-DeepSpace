@@ -5,15 +5,15 @@ package frc.robot.lib.util;
  */
 public abstract class CrashTrackingRunnable implements Runnable {
 
-	@Override
-	public final void run() {
-		try {
-			runCrashTracked();
-		} catch (Throwable t) {
-			Logger.logThrowableCrash(t);
-			throw t;
-		}
-	}
+  @Override
+  public final void run() {
+    try {
+      runCrashTracked();
+    } catch (Throwable t) {
+      Logger.logThrowableCrash(t);
+      throw t;
+    }
+  }
 
-	public abstract void runCrashTracked();
+  public abstract void runCrashTracked();
 }

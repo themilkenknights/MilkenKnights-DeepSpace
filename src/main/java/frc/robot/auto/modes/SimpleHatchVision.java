@@ -9,10 +9,10 @@ import frc.robot.subsystems.Superstructure.RobotState;
 
 public class SimpleHatchVision extends AutoModeBase {
 
-	@Override
-	protected void routine() throws AutoModeEndedException {
-		runAction(new MotionMagicVisionFeed(true));
-		runAction(new MotionMagicBlind(-20.0));
-		Superstructure.getInstance().setRobotState(RobotState.TELEOP_DRIVE);
-	}
+  @Override
+  protected void routine() throws AutoModeEndedException {
+    runAction(new MotionMagicVisionFeed(true));
+    runAction(new MotionMagicBlind(-20.0));
+    Superstructure.getInstance().setRobotState(RobotState.TELEOP_DRIVE);
+  }
 }

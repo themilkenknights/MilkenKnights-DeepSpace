@@ -11,135 +11,135 @@ import frc.robot.lib.vision.LimelightTarget;
 
 public class Vision extends Subsystem {
 
-	private LimeLight mLimeLight;
-	private NetworkTableEntry mLLX, mDist, mArea, mLED, mSkew;
-	// private UsbCamera cargoCam;
-	private boolean isVision = false;
-	// private MjpegServer server;
-	// private HttpCamera LLFeed;
-	// private UsbCamera LLFeed;
-	private boolean isHatchFeed = true;
-	private MkTime mLEDTimer = new MkTime();
+  private LimeLight mLimeLight;
+  private NetworkTableEntry mLLX, mDist, mArea, mLED, mSkew;
+  // private UsbCamera cargoCam;
+  private boolean isVision = false;
+  // private MjpegServer server;
+  // private HttpCamera LLFeed;
+  // private UsbCamera LLFeed;
+  private boolean isHatchFeed = true;
+  private MkTime mLEDTimer = new MkTime();
 
-	private Vision() {
-		// cargoCam = CameraServer.getInstance().startAutomaticCapture(0);
-		// cargoCam.setVideoMode(VideoMode.PixelFormat.kYUYV, 320, 240, 30);
-		// cargoCam.setVideoMode(VideoMode.PixelFormat.kMJPEG, 320, 240, 30);
-		// cargoCam.setConnectVerbose(0);
+  private Vision() {
+    // cargoCam = CameraServer.getInstance().startAutomaticCapture(0);
+    // cargoCam.setVideoMode(VideoMode.PixelFormat.kYUYV, 320, 240, 30);
+    // cargoCam.setVideoMode(VideoMode.PixelFormat.kMJPEG, 320, 240, 30);
+    // cargoCam.setConnectVerbose(0);
 
-		// LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
+    // LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
 
-		// LLFeed = CameraServer.getInstance().startAutomaticCapture(1);
-		// LLFeed.setVideoMode(VideoMode.PixelFormat.kYUYV, 320, 240, 30);
-		// LLFeed.setFPS(30);
-		// LLFeed.setConnectVerbose(0);
-		// server = new MjpegServer("Switched Camera", 5805);
+    // LLFeed = CameraServer.getInstance().startAutomaticCapture(1);
+    // LLFeed.setVideoMode(VideoMode.PixelFormat.kYUYV, 320, 240, 30);
+    // LLFeed.setFPS(30);
+    // LLFeed.setConnectVerbose(0);
+    // server = new MjpegServer("Switched Camera", 5805);
 
-		// server.setSource(cargoCam);
-		// server.setSource(LLFeed);
+    // server.setSource(cargoCam);
+    // server.setSource(LLFeed);
 
-		ShuffleboardTab mVisionTab = Shuffleboard.getTab("General");
-		mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
-		mDist = mVisionTab.add("Limelight Dist", 0.0).getEntry();
-		mArea = mVisionTab.add("Limelight Area", 0.0).getEntry();
-		mLED = mVisionTab.add("Limelight LED", true).getEntry();
-		mSkew = mVisionTab.add("Limelight Skew", 0.0).getEntry();
-		mLimeLight = new LimeLight();
-	}
+    ShuffleboardTab mVisionTab = Shuffleboard.getTab("General");
+    mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
+    mDist = mVisionTab.add("Limelight Dist", 0.0).getEntry();
+    mArea = mVisionTab.add("Limelight Area", 0.0).getEntry();
+    mLED = mVisionTab.add("Limelight LED", true).getEntry();
+    mSkew = mVisionTab.add("Limelight Skew", 0.0).getEntry();
+    mLimeLight = new LimeLight();
+  }
 
-	public static Vision getInstance() {
-		return Vision.InstanceHolder.mInstance;
-	}
+  public static Vision getInstance() {
+    return Vision.InstanceHolder.mInstance;
+  }
 
-	@Override
-	public void outputTelemetry(double timestamp) {
-		mLLX.setDouble(getLimelightTarget().getYaw());
-		mDist.setDouble(getLimelightTarget().getDistance());
-		mArea.setDouble(getLimelightTarget().getArea());
-		mLED.setBoolean(mLimeLight.getLEDMode() != LedMode.kforceOff);
-		mSkew.setDouble(getLimelightTarget().getSkew());
-	}
+  @Override
+  public void outputTelemetry(double timestamp) {
+    mLLX.setDouble(getLimelightTarget().getYaw());
+    mDist.setDouble(getLimelightTarget().getDistance());
+    mArea.setDouble(getLimelightTarget().getArea());
+    mLED.setBoolean(mLimeLight.getLEDMode() != LedMode.kforceOff);
+    mSkew.setDouble(getLimelightTarget().getSkew());
+  }
 
-	public void toggleVision() {
-		if (isVision) {
-			disableLED();
-		} else {
-			enableLED();
-		}
-	}
+  public void toggleVision() {
+    if (isVision) {
+      disableLED();
+    } else {
+      enableLED();
+    }
+  }
 
-	public void enableLED() {
-		if (!isVision) {
-			mLimeLight.setPipeline(0);
-			isVision = true;
-			mLEDTimer.start(0.25);
-		}
-	}
+  public void enableLED() {
+    if (!isVision) {
+      mLimeLight.setPipeline(0);
+      isVision = true;
+      mLEDTimer.start(0.25);
+    }
+  }
 
-	public boolean timerDone() {
-		return mLEDTimer.isDone();
-	}
+  public boolean timerDone() {
+    return mLEDTimer.isDone();
+  }
 
-	public void disableLED() {
-		if (isVision) {
-			mLimeLight.setPipeline(1);
-			isVision = false;
-			mLEDTimer.reset();
-		}
-	}
+  public void disableLED() {
+    if (isVision) {
+      mLimeLight.setPipeline(1);
+      isVision = false;
+      mLEDTimer.reset();
+    }
+  }
 
-	public void teleopInit(double timestamp) {
-		disableLED();
-	}
+  public void teleopInit(double timestamp) {
+    disableLED();
+  }
 
-	public void autonomousInit(double timestamp) {
-		disableLED();
-	}
+  public void autonomousInit(double timestamp) {
+    disableLED();
+  }
 
-	public void configHatchStream() {
-		/*
-		 * if (!isHatchFeed) { LLFeed.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
-		 * server.setSource(LLFeed); cargoCam.setConnectionStrategy(ConnectionStrategy.kForceClose);
-		 * isHatchFeed = true; }
-		 */
-	}
+  public void configHatchStream() {
+    /*
+     * if (!isHatchFeed) { LLFeed.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
+     * server.setSource(LLFeed); cargoCam.setConnectionStrategy(ConnectionStrategy.kForceClose);
+     * isHatchFeed = true; }
+     */
+  }
 
-	public void configCargoStream() {
-		/*
-		 * if (isHatchFeed) { cargoCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
-		 * server.setSource(cargoCam); LLFeed.setConnectionStrategy(ConnectionStrategy.kForceClose);
-		 * isHatchFeed = false; }
-		 */
-	}
+  public void configCargoStream() {
+    /*
+     * if (isHatchFeed) { cargoCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
+     * server.setSource(cargoCam); LLFeed.setConnectionStrategy(ConnectionStrategy.kForceClose);
+     * isHatchFeed = false; }
+     */
+  }
 
-	public synchronized void updateLimelight() {
-		mLimeLight.getUpdate();
-		if (mLEDTimer.isDone(10.0)) {
-			// disableLED();
-		}
-	}
+  public synchronized void updateLimelight() {
+    mLimeLight.getUpdate();
+    if (mLEDTimer.isDone(10.0)) {
+      // disableLED();
+    }
+  }
 
-	@Override
-	public void onStop(double timestamp) {
-		disableLED();
-	}
+  @Override
+  public void onStop(double timestamp) {
+    disableLED();
+  }
 
-	@Override
-	public void onRestart(double timestamp) {
-		disableLED();
-	}
+  @Override
+  public void onRestart(double timestamp) {
+    disableLED();
+  }
 
-	@Override
-	public boolean checkSystem() {
-		return mLimeLight.isConnected();
-	}
+  @Override
+  public boolean checkSystem() {
+    return mLimeLight.isConnected();
+  }
 
-	public synchronized LimelightTarget getLimelightTarget() {
-		return mLimeLight.returnLastTarget();
-	}
+  public synchronized LimelightTarget getLimelightTarget() {
+    return mLimeLight.returnLastTarget();
+  }
 
-	private static class InstanceHolder {
+  private static class InstanceHolder {
 
-		private static final Vision mInstance = new Vision();
-	}
+    private static final Vision mInstance = new Vision();
+  }
 }

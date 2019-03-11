@@ -5,14 +5,14 @@ import frc.robot.subsystems.Superstructure.ClimbState;
 
 public class ActuateFrontSolenoids extends RunOnceAction {
 
-	private ClimbState state;
+  private ClimbState state;
 
-	public ActuateFrontSolenoids(ClimbState state) {
-		this.state = state;
-	}
+  public ActuateFrontSolenoids(ClimbState state) {
+    this.state = state;
+  }
 
-	@Override
-	public void runOnce() {
-		Superstructure.getInstance().setFrontClimbState(state);
-	}
+  @Override
+  public void runOnce() {
+    Superstructure.getInstance().setFrontClimbState(state);
+  }
 }
