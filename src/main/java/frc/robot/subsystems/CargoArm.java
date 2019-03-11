@@ -25,7 +25,7 @@ public class CargoArm extends Subsystem {
   private boolean mDisCon = false;
   private boolean mSoftLimitState = true;
   private double mStartDis, mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable = 0.0;
-  private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus, mRawError;
+  private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus;
 
   private CargoArm() {
     ShuffleboardTab mCargoArmTab = Shuffleboard.getTab("Cargo Arm");
@@ -35,20 +35,10 @@ public class CargoArm extends Subsystem {
     mControlMode = mCargoArmTab.add("Control Mode", "").getEntry();
     mStatus = mCargoArmTab.add("Status", false).getEntry();
     mDesiredState = mCargoArmTab.add("Desired State", "").getEntry();
-    mRawError = mCargoArmTab.add("Raw Error", 0.0).getEntry();
+    mIntakeTalon = new MkTalon(CAN.kLeftCargoIntakeTalonID, CAN.kRightCargoIntakeTalonID, TalonLoc.Cargo_Intake,
+        mIntakeRollersTab);
+    mArmTalon = new MkTalon(CAN.kMasterCargoArmTalonID, CAN.kSlaveCargoArmVictorID, TalonLoc.Cargo_Arm, mCargoArmTab);
 
-    mArmTalon =
-        new MkTalon(
-            CAN.kMasterCargoArmTalonID,
-            CAN.kSlaveCargoArmVictorID,
-            TalonLoc.Cargo_Arm,
-            mCargoArmTab);
-    mIntakeTalon =
-        new MkTalon(
-            CAN.kLeftCargoIntakeTalonID,
-            CAN.kRightCargoIntakeTalonID,
-            TalonLoc.Cargo_Intake,
-            mIntakeRollersTab);
   }
 
   public static CargoArm getInstance() {
@@ -64,22 +54,15 @@ public class CargoArm extends Subsystem {
       mArmTalon.set(ControlMode.PercentOutput, mOpenLoopSetpoint, NeutralMode.Brake);
     } else if (mCargoArmControlState == CargoArmControlState.MOTION_MAGIC) {
       if (mCargoArmState.equals(CargoArmState.ENABLE)) {
-        mArmTalon.set(
-            ControlMode.MotionMagic, MkMath.degreesToNativeUnits(mArmPosEnable), NeutralMode.Brake);
+        mArmTalon.set(ControlMode.MotionMagic, MkMath.degreesToNativeUnits(mArmPosEnable), NeutralMode.Brake);
       } else {
-        double armFeed =
-            MkMath.sin(mArmTalon.getPosition() + CARGO_ARM.kArmOffset) * CARGO_ARM.kFeedConstant;
-        mArmTalon.set(
-            ControlMode.MotionMagic,
-            MkMath.degreesToNativeUnits(mCargoArmState.state),
-            DemandType.ArbitraryFeedForward,
-            -armFeed,
-            NeutralMode.Brake);
+        double armFeed = MkMath.sin(mArmTalon.getPosition() + CARGO_ARM.kArmOffset) * CARGO_ARM.kFeedConstant;
+        mArmTalon.set(ControlMode.MotionMagic, MkMath.degreesToNativeUnits(mCargoArmState.state),
+            DemandType.ArbitraryFeedForward, -armFeed, NeutralMode.Brake);
       }
     } else {
       Logger.logErrorWithTrace("Unexpected Cargo Arm Control State: " + mCargoArmControlState);
     }
-
     mIntakeTalon.set(ControlMode.PercentOutput, mRollerSetpoint, NeutralMode.Brake);
   }
 
@@ -114,9 +97,8 @@ public class CargoArm extends Subsystem {
     mArmTalon.updateShuffleboard();
     mDesiredState.setString(mCargoArmState.toString());
     mControlMode.setString(mCargoArmControlState.toString());
-    /* mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
-    mStatus.setBoolean(mArmTalon.isEncoderConnected());
-    mRawError.setDouble(MkMath.degreesToNativeUnits(mArmTalon.getError())); */
+    /*mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
+    mStatus.setBoolean(mArmTalon.isEncoderConnected());*/
   }
 
   @Override
@@ -147,6 +129,10 @@ public class CargoArm extends Subsystem {
 
   public synchronized void setIntakeRollers(double output) {
     mRollerSetpoint = output;
+    //TODO Calibrate
+    if (output == CARGO_ARM.kIntakeRollerInSpeed && mIntakeTalon.getCurrent() > 1.0) {
+      setArmState(CargoArmState.REVERSE_CARGOSHIP);
+    }
   }
 
   public void zeroEncoder() {

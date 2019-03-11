@@ -210,6 +210,13 @@ public class Drive extends Subsystem {
     }
   }
 
+  public void configHatchVision() {
+    if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
+      mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 0.5, 0);
+      mLeftDrive.masterTalon.follow(mRightDrive.masterTalon, FollowerType.AuxOutput1);
+    }
+  }
+
   private void zero() {
     left_encoder_prev_distance_ = 0;
     right_encoder_prev_distance_ = 0;
@@ -304,12 +311,6 @@ public class Drive extends Subsystem {
     mPeriodicIO.brake_mode = NeutralMode.Brake;
   }
 
-  public void configHatchVision() {
-    if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
-      mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 0.5, 0);
-      mLeftDrive.slaveTalon.follow(mRightDrive.masterTalon, FollowerType.AuxOutput1);
-    }
-  }
 
   /**
    * @return The distance from the target when servoing with the Pigeon
