@@ -1,8 +1,5 @@
 package frc.robot.lib.vision;
 
-import frc.robot.Constants.VISION;
-import frc.robot.lib.util.InterpolatingDouble;
-
 public class LimelightTarget {
 
   public static LimelightTarget EMPTY = new LimelightTarget(false, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
@@ -31,7 +28,7 @@ public class LimelightTarget {
     this.vertLength = vertLength;
     this.area = horizLength * vertLength;
     this.captureTime = captureTime;
-     this.distance = ((15.75) / (Math.tan(Math.toRadians(20.0 + (yOffset * 1.075))))) + -2.0;
+    this.distance = ((15.75) / (Math.tan(Math.toRadians(20.0 + (yOffset * 1.075))))) + -2.0;
     //this.distance =VISION.kAreaToDistVisionMap.getInterpolated(new InterpolatingDouble(getArea())).value;
     this.skew = skew > -45.0 ? skew : skew + 90.0;
   }

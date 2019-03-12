@@ -83,6 +83,13 @@ public class Vision extends Subsystem {
     return mLimeLight.isConnected();
   }
 
+  public void disableLED() {
+    if (isVision) {
+      mLimeLight.setPipeline(1);
+      isVision = false;
+      mLEDTimer.reset();
+    }
+  }
 
   public synchronized LimelightTarget getLimelightTarget() {
     return mLimeLight.returnLastTarget();
@@ -101,15 +108,6 @@ public class Vision extends Subsystem {
       mLimeLight.setPipeline(0);
       isVision = true;
       mLEDTimer.start(0.2);
-    }
-  }
-
-
-  public void disableLED() {
-    if (isVision) {
-      mLimeLight.setPipeline(1);
-      isVision = false;
-      mLEDTimer.reset();
     }
   }
 

@@ -91,7 +91,9 @@ public class Drive extends Subsystem {
           mPeriodicIO.right_feedforward,
           mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.PIGEON_SERVO) {
-      mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.AuxPID, mPeriodicIO.right_feedforward, mPeriodicIO.brake_mode);
+      mRightDrive
+          .set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.AuxPID, mPeriodicIO.right_feedforward,
+              mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.VELOCITY_SETPOINT) {
       mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
@@ -118,7 +120,7 @@ public class Drive extends Subsystem {
     mLeftDrive.updateShuffleboard();
     mRightDrive.updateShuffleboard();
     mFusedHeading.setDouble(mPeriodicIO.fusedHeading);
-    mAvgDist.setDouble((mPeriodicIO.leftPos + mPeriodicIO.rightPos) / 2);
+    mAvgDist.setDouble((0) / 2);
     if (getHeading() != null) {
       mGyroHeading.setDouble(getHeading().getDegrees());
     }
@@ -127,17 +129,18 @@ public class Drive extends Subsystem {
       mCSVWriter.write();
     }
 
-     mState.setString(mDriveControlState.toString()); mStatus.setBoolean(driveStatus());
-      SmartDashboard.putNumber("Aux Error", mRightDrive.masterTalon.getClosedLoopError(1));
-     // SmartDashboard.putNumber("Aux Target", mRightDrive.masterTalon.getClosedLoopTarget(1));
-      SmartDashboard.putNumber("Aux Pos", mRightDrive.masterTalon.getSelectedSensorPosition(1));
-      SmartDashboard.putNumber("Aux Vel", mRightDrive.masterTalon.getSelectedSensorVelocity(1));
-      SmartDashboard.putNumber("Main Target",
-      MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopTarget(0)));
-      SmartDashboard.putNumber("Main Error",
-      MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopError(0)));
-      SmartDashboard.putNumber("Main Pos",
-      MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getSelectedSensorPosition(0)));
+    mState.setString(mDriveControlState.toString());
+    mStatus.setBoolean(driveStatus());
+    SmartDashboard.putNumber("Aux Error", mRightDrive.masterTalon.getClosedLoopError(1));
+    //SmartDashboard.putNumber("Aux Target", mRightDrive.masterTalon.getClosedLoopTarget(1));
+    SmartDashboard.putNumber("Aux Pos", mRightDrive.masterTalon.getSelectedSensorPosition(1));
+    SmartDashboard.putNumber("Aux Vel", mRightDrive.masterTalon.getSelectedSensorVelocity(1));
+    SmartDashboard.putNumber("Main Target",
+        MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopTarget(0)));
+    SmartDashboard.putNumber("Main Error",
+        MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopError(0)));
+    SmartDashboard.putNumber("Main Pos",
+        MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getSelectedSensorPosition(0)));
 
   }
 
@@ -208,18 +211,11 @@ public class Drive extends Subsystem {
     }
   }
 
-  public synchronized void configHatchVision() {
-    if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
-      mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 0.5, 0);
-      mLeftDrive.masterTalon.follow(mRightDrive.masterTalon, FollowerType.AuxOutput1);
-    }
-  }
-
   private void zero() {
     left_encoder_prev_distance_ = 0;
     right_encoder_prev_distance_ = 0;
-    mLeftDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
-    mRightDrive.masterTalon.setSelectedSensorPosition(0, 0, 0);
+    mLeftDrive.zeroEncoder();
+    mRightDrive.zeroEncoder();
     zeroPigeon();
     RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
     setHeading(Rotation2d.identity());
@@ -251,13 +247,17 @@ public class Drive extends Subsystem {
     mPeriodicIO.gyro_heading = heading;
   }
 
+  /**
+   * @return If both SRX Mag Encoders are connected
+   */
+  private synchronized boolean driveStatus() {
+    return mLeftDrive.isEncoderConnected() && mRightDrive.isEncoderConnected();
+  }
+
   public synchronized DriveSignal setMotionMagicDeltaSetpoint(
       DriveSignal signal, DriveSignal feedforward) {
-    DriveSignal newSig =
-        new DriveSignal(
-            signal.getLeft() + mPeriodicIO.leftPos,
-            signal.getRight() + mPeriodicIO.rightPos,
-            signal.getBrakeMode());
+    DriveSignal newSig = new DriveSignal(signal.getLeft() + mPeriodicIO.leftPos,
+        signal.getRight() + mPeriodicIO.rightPos, signal.getBrakeMode());
     updateMotionMagicPositionSetpoint(newSig, feedforward);
     return newSig;
   }
@@ -300,26 +300,26 @@ public class Drive extends Subsystem {
       configHatchVision();
       mDriveControlState = DriveControlState.PIGEON_SERVO;
     }
-    mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(dist + mPeriodicIO.leftPos);
-    mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist +mPeriodicIO.rightPos);
-    mPeriodicIO.left_feedforward = MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
+    //mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(dist + mPeriodicIO.leftPos);
+    //right pos should be avg dist
+    mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist + mPeriodicIO.rightPos);
+    //mPeriodicIO.left_feedforward = MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
     mPeriodicIO.right_feedforward = MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
     mPeriodicIO.brake_mode = NeutralMode.Brake;
   }
 
+  public synchronized void configHatchVision() {
+    if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
+      mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 0.5, 0);
+      mLeftDrive.masterTalon.follow(mRightDrive.masterTalon, FollowerType.AuxOutput1);
+    }
+  }
 
   /**
    * @return The distance from the target when servoing with the Pigeon
    */
   public double getVisionServoError(double dist) {
     return Math.abs(mPeriodicIO.rightPos - dist);
-  }
-
-  /**
-   * @return If both SRX Mag Encoders are connected
-   */
-  private synchronized boolean driveStatus() {
-    return mLeftDrive.isEncoderConnected() && mRightDrive.isEncoderConnected();
   }
 
   public void setVelocitySetpointNormal(DriveSignal sig) {

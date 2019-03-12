@@ -85,7 +85,7 @@ public class SubsystemManager {
     }
   }
 
-  public void init(){
+  public void init() {
     for (Subsystem subsystem : mAllSubsystems) {
       subsystem.onRestart(Timer.getFPGATimestamp());
     }

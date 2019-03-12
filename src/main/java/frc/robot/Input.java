@@ -161,7 +161,7 @@ public class Input {
       double forward = (-mDriverJoystick.getRawAxis(2) + mDriverJoystick.getRawAxis(3));
       double turn = (-mDriverJoystick.getRawAxis(0));
       DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
-        mDrive.setOpenLoop(controlSig);
+      mDrive.setOpenLoop(controlSig);
 
     }
 
