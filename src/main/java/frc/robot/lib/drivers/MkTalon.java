@@ -128,20 +128,19 @@ public class MkTalon {
     }
     switch (mSide) {
       case Right:
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_12_Feedback1, 5, kShort));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 5, kShort));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_14_Turn_PIDF1, 5, kShort));
+        masterTalon.selectProfileSlot(CONFIG.kDistanceSlot, CONFIG.kPIDPrimary);
+        masterTalon.selectProfileSlot(CONFIG.kTurningSlot, CONFIG.kPIDAuxilliaryTurn);
       case Left:
         CTRE(masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5));
         CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kShort));
         CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 5, kShort));
         CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 5, kShort));
         CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 100, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 10, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 10, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_12_Feedback1, 20, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_13_Base_PIDF0, 20, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_14_Turn_PIDF1, 20, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrame.Status_10_Targets, 20, kShort));
-        masterTalon.selectProfileSlot(CONFIG.kDistanceSlot, CONFIG.kPIDPrimary);
-        masterTalon.selectProfileSlot(CONFIG.kTurningSlot, CONFIG.kPIDAuxilliaryTurn);
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_Targets, 10, kShort));
+
         zeroEncoder();
         break;
       case Cargo_Arm:
@@ -158,7 +157,7 @@ public class MkTalon {
       case Cargo_Intake:
         CTRE(masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5));
         CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kLong));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 100, kLong));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 50, kLong));
         CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 100, kLong));
         CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 100, kLong));
         CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 100, kLong));
