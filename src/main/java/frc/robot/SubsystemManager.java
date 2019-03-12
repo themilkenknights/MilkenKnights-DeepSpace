@@ -44,7 +44,7 @@ public class SubsystemManager {
                 if (count == i) {
                   subsystem.slowUpdate(now);
                   subsystem.outputTelemetry(now);
-                  subsystem.safetyCheck(now);
+                  //subsystem.safetyCheck(now);
                 }
                 i++;
               }

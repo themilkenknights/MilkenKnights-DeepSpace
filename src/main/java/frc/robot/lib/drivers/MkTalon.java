@@ -93,9 +93,10 @@ public class MkTalon {
     lastControlMode = ControlMode.PercentOutput;
     lastNeutralMode = NeutralMode.Brake;
     lastOutput = Double.NaN;
-    CTRE(masterTalon.clearStickyFaults(kShort));
-    CTRE(masterTalon.configFactoryDefault(kShort));
-    CTRE(masterTalon.configAllSettings(CONFIG.kConfigs.get(mSide), kLong));
+      CTRE(masterTalon.clearStickyFaults(kShort));
+      CTRE(masterTalon.configFactoryDefault(kShort));
+      CTRE(masterTalon.configAllSettings(CONFIG.kConfigs.get(mSide), kLong));
+
     masterTalon.setNeutralMode(NeutralMode.Brake);
     masterTalon.enableVoltageCompensation(true);
     switch (mSide) {
@@ -156,13 +157,13 @@ public class MkTalon {
         break;
       case Cargo_Intake:
         CTRE(masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 100, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 100, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 100, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 100, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 100, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_11_UartGadgeteer, 3, kShort));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kLong));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 100,  kLong));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 100,  kLong));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 100,  kLong));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 100,  kLong));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 100,  kLong));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_11_UartGadgeteer, 3,  kLong));
         break;
       default:
         Logger.logError("Unknown Side");
@@ -173,7 +174,9 @@ public class MkTalon {
     if (mSide == TalonLoc.Hatch_Arm || mSide == TalonLoc.Cargo_Intake) {
       CTRE(slaveTalon.clearStickyFaults(kShort));
       CTRE(slaveTalon.configFactoryDefault(kLong));
-      CTRE(slaveTalon.configAllSettings(CONFIG.kConfigs.get(mSide)));
+      if(mSide == TalonLoc.Cargo_Intake){
+        CTRE(slaveTalon.configAllSettings(CONFIG.kConfigs.get(mSide)));
+      }
       slaveTalon.enableVoltageCompensation(true);
       slaveTalon.setNeutralMode(NeutralMode.Brake);
       if (mSide == TalonLoc.Hatch_Arm || mSide == TalonLoc.Cargo_Intake) {
@@ -184,6 +187,8 @@ public class MkTalon {
         CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 100, kShort));
         CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 100, kShort));
         CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 100, kShort));
+      }
+      if(mSide == TalonLoc.Cargo_Intake){
         slaveTalon.follow(masterTalon);
       }
     } else {
@@ -637,31 +642,28 @@ public class MkTalon {
 
   public void checkForErrorInit() {
     masterTalon.clearStickyFaults();
-    Timer.delay(0.1);
     Faults masterFaults = new Faults();
     CTRE(masterTalon.getFaults(masterFaults));
     if (masterFaults.hasAnyFault()) {
       if (mSide == TalonLoc.Cargo_Arm || mSide == TalonLoc.Hatch_Arm) {
         zeroEncoder();
       }
-      Logger.logMarker(masterFaults.toString());
+      Logger.logMarker(masterFaults.toString() + " Side " + mSide);
     }
 
     if (mSide == TalonLoc.Cargo_Intake || mSide == TalonLoc.Hatch_Arm) {
       slaveTalon.clearStickyFaults();
-      Timer.delay(0.1);
       Faults slaveTalonFaults = new Faults();
       CTRE(slaveTalon.getFaults(slaveTalonFaults));
       if (slaveTalonFaults.hasAnyFault()) {
-        Logger.logMarker(slaveTalonFaults.toString());
+        Logger.logMarker(slaveTalonFaults.toString() + " Slave Side " + mSide);
       }
     } else {
       slaveVictor.clearStickyFaults();
-      Timer.delay(0.1);
       Faults slaveVictorFaults = new Faults();
       CTRE(slaveVictor.getFaults(slaveVictorFaults));
       if (slaveVictorFaults.hasAnyFault()) {
-        Logger.logMarker(slaveVictorFaults.toString());
+        Logger.logMarker(slaveVictorFaults.toString()+ " Slave Side " + mSide);
       }
     }
   }
@@ -673,7 +675,7 @@ public class MkTalon {
       if (mSide == TalonLoc.Cargo_Arm || mSide == TalonLoc.Hatch_Arm) {
         zeroEncoder();
       }
-      Logger.logMarker(masterFaults.toString());
+      Logger.logMarker(masterFaults.toString()+ " Master Reset Side " + mSide);
     }
   }
 

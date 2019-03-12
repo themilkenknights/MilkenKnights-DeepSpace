@@ -64,6 +64,7 @@ public class MotionMagicVisionPigeon implements Action {
     LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
     if (turnBack && !driveBackTimer.isDone()) {
       Drive.getInstance().setOpenLoop(new DriveSignal(-0.3, -0.3));
+      //TODO Fix
     } else if (mTarget.isValidTarget() && mTarget.getDistance() < 28.0) {
       lastAngle = -mTarget.getYaw();
       lastDist = mTarget.getDistance();
@@ -82,7 +83,7 @@ public class MotionMagicVisionPigeon implements Action {
     turnBack = false;
     LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
     if (mTarget.isValidTarget()) {
-      if (mTarget.getDistance() < 35 && Math.abs(mTarget.getYaw()) > 15.0) {
+      if (mTarget.getDistance() > 35 && Math.abs(mTarget.getYaw()) > 15.0) {
         turnBack = true;
         driveBackTimer.start(1.0);
       } else {

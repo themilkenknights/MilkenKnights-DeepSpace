@@ -161,15 +161,11 @@ public class Input {
       double forward = (-mDriverJoystick.getRawAxis(2) + mDriverJoystick.getRawAxis(3));
       double turn = (-mDriverJoystick.getRawAxis(0));
       DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
-      if (isVelocitySetpoint) {
-        mDrive.setVelocitySetpointNormal(controlSig);
-      } else {
         mDrive.setOpenLoop(controlSig);
-      }
+
     }
 
     if (isOperatorJoystickConnected) {
-
       if (mCargoVisionOuttake.isPressed()) {
         mStructure.setRobotState(RobotState.VISION_CARGO_OUTTAKE);
         mVision.configCargoStream();

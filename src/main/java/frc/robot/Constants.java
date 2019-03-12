@@ -254,25 +254,25 @@ public final class Constants {
           tal.slot0.kP = 7.0 * (0.1 * 1023.0) / (700.0);
           tal.slot0.kD = 3.0 * tal.slot0.kP;
           tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
-          tal.slot0.closedLoopPeakOutput = 0.5;
+          tal.slot0.closedLoopPeakOutput = 1.0;
           tal.slot0.allowableClosedloopError = 100;
 
           // Motion Magic Turning
-          tal.slot1.kP = 2.4;
+          tal.slot1.kP = 0.0;
           tal.slot1.kI = 0.00;
-          tal.slot1.kD = tal.slot1.kP * 23.0;
-          tal.slot1.kF = 1023.0 / 13653.0;
+          tal.slot1.kD = tal.slot1.kP * 0.0;
+          tal.slot1.kF = 1023.0 / 510.0;
           tal.slot1.integralZone = 100;
           tal.slot1.maxIntegralAccumulator = 20;
-          tal.slot1.closedLoopPeakOutput = 0.5;
-          tal.slot1.allowableClosedloopError = 10; // ~3deg
+          tal.slot1.closedLoopPeakOutput = 1.0;
+          tal.slot1.allowableClosedloopError = 0; // ~3deg
 
           tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.9);
           tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.4);
 
-          if (loc == TalonLoc.Left) {
+          if (loc == TalonLoc.Left || loc == TalonLoc.Right) {
             tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
-          } else {
+          } /*else {
             tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
             tal.primaryPID.selectedFeedbackCoefficient = 0.5;
 
@@ -288,7 +288,7 @@ public final class Constants {
             tal.remoteFilter0.remoteSensorSource = RemoteSensorSource.TalonSRX_SelectedSensor;
             tal.remoteFilter0.remoteSensorDeviceID = CAN.kDriveLeftMasterTalonID;
             tal.auxPIDPolarity = false;
-          }
+          } */
         } else if (loc == TalonLoc.Cargo_Arm || loc == TalonLoc.Hatch_Arm) {
           tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
           tal.reverseLimitSwitchSource = LimitSwitchSource.RemoteTalonSRX;

@@ -35,10 +35,10 @@ public class CargoArm extends Subsystem {
     mControlMode = mCargoArmTab.add("Control Mode", "").getEntry();
     mStatus = mCargoArmTab.add("Status", false).getEntry();
     mDesiredState = mCargoArmTab.add("Desired State", "").getEntry();
+
+    mArmTalon = new MkTalon(CAN.kMasterCargoArmTalonID, CAN.kSlaveCargoArmVictorID, TalonLoc.Cargo_Arm, mCargoArmTab);
     mIntakeTalon = new MkTalon(CAN.kLeftCargoIntakeTalonID, CAN.kRightCargoIntakeTalonID, TalonLoc.Cargo_Intake,
         mIntakeRollersTab);
-    mArmTalon = new MkTalon(CAN.kMasterCargoArmTalonID, CAN.kSlaveCargoArmVictorID, TalonLoc.Cargo_Arm, mCargoArmTab);
-
   }
 
   public static CargoArm getInstance() {
@@ -129,10 +129,7 @@ public class CargoArm extends Subsystem {
 
   public synchronized void setIntakeRollers(double output) {
     mRollerSetpoint = output;
-    //TODO Calibrate
-    if (output == CARGO_ARM.kIntakeRollerInSpeed && mIntakeTalon.getCurrent() > 1.0) {
-      setArmState(CargoArmState.REVERSE_CARGOSHIP);
-    }
+    setArmState(CargoArmState.REVERSE_CARGOSHIP);
   }
 
   public void zeroEncoder() {
@@ -148,12 +145,10 @@ public class CargoArm extends Subsystem {
   }
 
   private synchronized void setArmControlState(CargoArmControlState state) {
-    if (state == CargoArmControlState.MOTION_MAGIC
-        && mCargoArmControlState != CargoArmControlState.MOTION_MAGIC) {
+    if (state == CargoArmControlState.MOTION_MAGIC && mCargoArmControlState != CargoArmControlState.MOTION_MAGIC) {
       setEnable();
       Logger.logMarker("Switching to Cargo Arm Motion Magic");
-    } else if (state == CargoArmControlState.OPEN_LOOP
-        && mCargoArmControlState != CargoArmControlState.OPEN_LOOP) {
+    } else if (state == CargoArmControlState.OPEN_LOOP && mCargoArmControlState != CargoArmControlState.OPEN_LOOP) {
       mOpenLoopSetpoint = 0.0;
       Logger.logMarker("Switching to Cargo Arm Open Loop");
     }

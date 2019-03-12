@@ -9,6 +9,7 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.Constants.CONFIG;
 import frc.robot.Constants.DRIVE;
@@ -90,9 +91,7 @@ public class Drive extends Subsystem {
           mPeriodicIO.right_feedforward,
           mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.PIGEON_SERVO) {
-      mRightDrive
-          .set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.AuxPID, mPeriodicIO.right_feedforward,
-              mPeriodicIO.brake_mode);
+      mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.AuxPID, mPeriodicIO.right_feedforward, mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.VELOCITY_SETPOINT) {
       mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
@@ -127,19 +126,19 @@ public class Drive extends Subsystem {
       mCSVWriter.add(mPeriodicIO);
       mCSVWriter.write();
     }
-    /*
-     * mState.setString(mDriveControlState.toString()); mStatus.setBoolean(driveStatus());
-     * SmartDashboard.putNumber("Aux Error", mRightDrive.masterTalon.getClosedLoopError(1));
-     * SmartDashboard.putNumber("Aux Target", mRightDrive.masterTalon.getClosedLoopTarget(1));
-     * SmartDashboard.putNumber("Aux Pos", mRightDrive.masterTalon.getSelectedSensorPosition(1));
-     * SmartDashboard.putNumber("Aux Vel", mRightDrive.masterTalon.getSelectedSensorVelocity(1));
-     * SmartDashboard.putNumber("Main Target",
-     * MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopTarget(0)));
-     * SmartDashboard.putNumber("Main Error",
-     * MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopError(0)));
-     * SmartDashboard.putNumber("Main Pos",
-     * MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getSelectedSensorPosition(0)));
-     */
+
+     mState.setString(mDriveControlState.toString()); mStatus.setBoolean(driveStatus());
+      SmartDashboard.putNumber("Aux Error", mRightDrive.masterTalon.getClosedLoopError(1));
+     // SmartDashboard.putNumber("Aux Target", mRightDrive.masterTalon.getClosedLoopTarget(1));
+      SmartDashboard.putNumber("Aux Pos", mRightDrive.masterTalon.getSelectedSensorPosition(1));
+      SmartDashboard.putNumber("Aux Vel", mRightDrive.masterTalon.getSelectedSensorVelocity(1));
+      SmartDashboard.putNumber("Main Target",
+      MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopTarget(0)));
+      SmartDashboard.putNumber("Main Error",
+      MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopError(0)));
+      SmartDashboard.putNumber("Main Pos",
+      MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getSelectedSensorPosition(0)));
+
   }
 
   public void teleopInit(double timestamp) {
@@ -203,14 +202,13 @@ public class Drive extends Subsystem {
     mPeriodicIO.brake_mode = NeutralMode.Brake;
   }
 
-  private void configNormalDrive() {
+  private synchronized void configNormalDrive() {
     if (mDriveControlState == DriveControlState.PIGEON_SERVO) {
       mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 1.0, 0);
-      mLeftDrive.slaveTalon.set(ControlMode.PercentOutput, 0.0);
     }
   }
 
-  public void configHatchVision() {
+  public synchronized void configHatchVision() {
     if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
       mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 0.5, 0);
       mLeftDrive.masterTalon.follow(mRightDrive.masterTalon, FollowerType.AuxOutput1);
@@ -303,11 +301,9 @@ public class Drive extends Subsystem {
       mDriveControlState = DriveControlState.PIGEON_SERVO;
     }
     mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(dist + mPeriodicIO.leftPos);
-    mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist + mPeriodicIO.rightPos);
-    mPeriodicIO.left_feedforward =
-        MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
-    mPeriodicIO.right_feedforward =
-        MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
+    mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist +mPeriodicIO.rightPos);
+    mPeriodicIO.left_feedforward = MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
+    mPeriodicIO.right_feedforward = MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
     mPeriodicIO.brake_mode = NeutralMode.Brake;
   }
 
