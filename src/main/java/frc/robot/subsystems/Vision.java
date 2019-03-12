@@ -1,5 +1,7 @@
 package frc.robot.subsystems;
 
+import edu.wpi.cscore.UsbCamera;
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
@@ -17,7 +19,7 @@ public class Vision extends Subsystem {
   private boolean isVision = false;
   // private MjpegServer server;
   // private HttpCamera LLFeed;
-  // private UsbCamera LLFeed;
+  private UsbCamera LLFeed;
   private boolean isHatchFeed = true;
   private MkTimer mLEDTimer = new MkTimer();
 
@@ -29,7 +31,7 @@ public class Vision extends Subsystem {
 
     // LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
 
-    // LLFeed = CameraServer.getInstance().startAutomaticCapture(1);
+     LLFeed = CameraServer.getInstance().startAutomaticCapture(0);
     // LLFeed.setVideoMode(VideoMode.PixelFormat.kYUYV, 320, 240, 30);
     // LLFeed.setFPS(30);
     // LLFeed.setConnectVerbose(0);
