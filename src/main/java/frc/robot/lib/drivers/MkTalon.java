@@ -292,6 +292,14 @@ public class MkTalon {
     mOutput.setDouble(masterTalon.getMotorOutputPercent());
   }
 
+  public synchronized double getTarget(){
+    return getTarget(0);
+  }
+  public synchronized double getTarget(int slot){
+    return slot == 0 ? MkMath.nativeUnitsToInches(lastOutput) : MkMath.pigeonNativeUnitsToDegrees(lastArbFeed);
+  }
+
+
   /**
    * @return Velocity from SRX Mag Encoder in Inches or Degrees Per Second
    */
@@ -309,17 +317,21 @@ public class MkTalon {
     }
   }
 
+  public synchronized double getPosition(){
+    return getPosition(0);
+  }
+
   /**
    * @return Position from SRX Mag Encoder in Inches or Degrees
    */
-  public synchronized double getPosition() {
+  public synchronized double getPosition(int slot) {
     switch (mSide) {
       case Cargo_Arm:
       case Hatch_Arm:
         return MkMath.nativeUnitsToDegrees(masterTalon.getSelectedSensorPosition(CONFIG.kPIDPrimary));
       case Left:
       case Right:
-        return MkMath.nativeUnitsToInches(masterTalon.getSelectedSensorPosition(CONFIG.kPIDPrimary));
+        return slot == 0 ? MkMath.nativeUnitsToInches(masterTalon.getSelectedSensorPosition(CONFIG.kPIDPrimary)) : MkMath.pigeonNativeUnitsToDegrees(masterTalon.getSelectedSensorPosition(CONFIG.kPIDAuxilliaryTurn));
       default:
         Logger.logErrorWithTrace("Talon does not have encoder");
         return 0.0;
@@ -332,6 +344,10 @@ public class MkTalon {
    * CAN usage by using known setpoints to calculate error.
    */
   public synchronized double getError() {
+    return getError(0);
+  }
+
+  public synchronized double getError(int slot){
     switch (mSide) {
       case Cargo_Arm:
       case Hatch_Arm:
@@ -345,7 +361,7 @@ public class MkTalon {
         if (lastControlMode == ControlMode.Velocity) {
           return MkMath.nativeUnitsPer100MstoInchesPerSec(lastOutput) - getVelocity();
         } else if (lastControlMode == ControlMode.MotionMagic) {
-          return MkMath.nativeUnitsToInches(lastOutput) - getPosition();
+          return slot == 0? MkMath.nativeUnitsToInches(lastOutput) - getPosition() : MkMath.pigeonNativeUnitsToDegrees(lastArbFeed) - getPosition(CONFIG.kPIDAuxilliaryTurn);
         } else {
           return 0.0;
         }

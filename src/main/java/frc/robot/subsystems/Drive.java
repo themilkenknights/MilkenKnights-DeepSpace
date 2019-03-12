@@ -120,7 +120,8 @@ public class Drive extends Subsystem {
     mLeftDrive.updateShuffleboard();
     mRightDrive.updateShuffleboard();
     mFusedHeading.setDouble(mPeriodicIO.fusedHeading);
-    mAvgDist.setDouble((0) / 2);
+    mAvgDist.setDouble((mLeftDrive.masterTalon.getSensorCollection().getQuadraturePosition() + mRightDrive.masterTalon
+        .getSensorCollection().getQuadraturePosition()) / 2.0);
     if (getHeading() != null) {
       mGyroHeading.setDouble(getHeading().getDegrees());
     }
@@ -128,20 +129,15 @@ public class Drive extends Subsystem {
       mCSVWriter.add(mPeriodicIO);
       mCSVWriter.write();
     }
-
     mState.setString(mDriveControlState.toString());
     mStatus.setBoolean(driveStatus());
-    SmartDashboard.putNumber("Aux Error", mRightDrive.masterTalon.getClosedLoopError(1));
-    //SmartDashboard.putNumber("Aux Target", mRightDrive.masterTalon.getClosedLoopTarget(1));
-    SmartDashboard.putNumber("Aux Pos", mRightDrive.masterTalon.getSelectedSensorPosition(1));
-    SmartDashboard.putNumber("Aux Vel", mRightDrive.masterTalon.getSelectedSensorVelocity(1));
-    SmartDashboard.putNumber("Main Target",
-        MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopTarget(0)));
-    SmartDashboard.putNumber("Main Error",
-        MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getClosedLoopError(0)));
-    SmartDashboard.putNumber("Main Pos",
-        MkMath.nativeUnitsToInches(mRightDrive.masterTalon.getSelectedSensorPosition(0)));
 
+    SmartDashboard.putNumber("Aux Error", mRightDrive.getError(1));
+    SmartDashboard.putNumber("Aux Target", mRightDrive.getTarget(1));
+    SmartDashboard.putNumber("Aux Pos", mRightDrive.getPosition(1));
+    SmartDashboard.putNumber("Main Target", mRightDrive.getTarget(0));
+    SmartDashboard.putNumber("Left Enc", MkMath.nativeUnitsToDegrees(mLeftDrive.masterTalon.getSensorCollection().getQuadraturePosition()));
+    SmartDashboard.putNumber("Right Enc", MkMath.nativeUnitsToDegrees(mRightDrive.masterTalon.getSensorCollection().getQuadraturePosition()));
   }
 
   public void teleopInit(double timestamp) {
