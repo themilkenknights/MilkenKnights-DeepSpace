@@ -4,7 +4,6 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.Solenoid;
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
@@ -150,10 +149,6 @@ public class Superstructure extends Subsystem {
   }
 
   private void startVisionHatchOuttake() {
-    Vision.getInstance().enableLED();
-    if (!Vision.getInstance().timerDone()) {
-      Timer.delay(0.1);
-    }
     Vision.getInstance().updateLimelight();
     if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
       setRobotState(RobotState.TELEOP_DRIVE);
@@ -164,10 +159,6 @@ public class Superstructure extends Subsystem {
   }
 
   private void startVisionHatchIntake() {
-    Vision.getInstance().enableLED();
-    if (!Vision.getInstance().timerDone()) {
-      Timer.delay(0.1);
-    }
     Vision.getInstance().updateLimelight();
     if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
       setRobotState(RobotState.TELEOP_DRIVE);
@@ -178,10 +169,6 @@ public class Superstructure extends Subsystem {
   }
 
   private void startVisionCargoOuttake() {
-    Vision.getInstance().enableLED();
-    if (!Vision.getInstance().timerDone()) {
-      Timer.delay(0.1);
-    }
     mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
     CargoArm.getInstance().setArmState(CargoArmState.REVERSE_CARGOSHIP);
     Vision.getInstance().updateLimelight();

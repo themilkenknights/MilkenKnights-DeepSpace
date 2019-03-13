@@ -115,11 +115,9 @@ public class Input {
     // mode.
     if (mCargoArmManual.isHeld()) {
       mCargo.setOpenLoop(MkMath.handleDeadband(-mOperatorJoystick.getRawAxis(1), GENERAL.kOperatorDeadband));
-      mVision.configCargoStream();
     } else if (mOperatorJoystick.getTrigger()) {
       double movement = -mOperatorJoystick.getRawAxis(1) / 1.1;
       mHatch.setOpenLoop(MkMath.handleDeadband(Math.pow(movement, 3), GENERAL.kOperatorDeadband));
-      mVision.configHatchStream();
     }
 
     // Ensure that arm stops after manual mode button is released and is not set at
@@ -167,24 +165,18 @@ public class Input {
     if (isOperatorJoystickConnected) {
       if (mCargoVisionOuttake.isPressed()) {
         mStructure.setRobotState(RobotState.VISION_CARGO_OUTTAKE);
-        mVision.configCargoStream();
       } else if (mOperatorJoystick.getPOV() == 0) {
         mCargo.setArmState(CargoArmState.FORWARD_ROCKET_LEVEL_TWO);
-        mVision.configCargoStream();
       } else if (mOperatorJoystick.getPOV() == 90) {
         mCargo.setArmState(CargoArmState.REVERSE_CARGOSHIP);
-        mVision.configCargoStream();
       } else if (mOperatorJoystick.getPOV() == 180) {
         mCargo.setArmState(CargoArmState.FORWARD_ROCKET_LEVEL_ONE);
-        mVision.configCargoStream();
       } else if (mOperatorJoystick.getPOV() == 270) {
         mCargo.setArmState(CargoArmState.INTAKE);
-        mVision.configCargoStream();
       }
 
       if (mIntakeRollerIn.isHeld()) {
         mCargo.setIntakeRollers(CARGO_ARM.kIntakeRollerInSpeed);
-        mVision.configCargoStream();
       } else if (mIntakeRollerOut.isHeld()) {
         switch (mCargo.getArmState()) {
           case INTAKE:
@@ -204,20 +196,16 @@ public class Input {
             Logger.logError("Unexpected Cargo Arm State");
             break;
         }
-        mVision.configCargoStream();
       } else {
         mCargo.setIntakeRollers(0.0);
       }
 
       if (mHatchVisionIntake.isPressed()) {
         mStructure.setRobotState(RobotState.HATCH_VISION_INTAKE);
-        mVision.configHatchStream();
       } else if (mHatchVisionPlace.isPressed()) {
         mStructure.setRobotState(RobotState.HATCH_VISION_OUTTAKE);
-        mVision.configHatchStream();
       } else if (mTransferButton.isPressed()) {
         mHatch.setHatchMechanismState(HatchMechanismState.TRANSFER);
-        mVision.configHatchStream();
       } else if (mGroundIntakeToggleButton.isPressed()) {
         mHatch.setHatchMechanismState(
             mHatch.getHatchMechanismState() == HatchMechanismState.GROUND_INTAKE
@@ -229,10 +217,8 @@ public class Input {
         } else {
           mHatch.setHatchMechanismState(HatchMechanismState.SPEAR_STOW_ONLY);
         }
-        mVision.configHatchStream();
       } else if (mSpearIntake.isPressed()) {
         mHatch.setHatchMechanismState(HatchMechanismState.STATION_INTAKE);
-        mVision.configHatchStream();
       } else if (mStowAllButton.isPressed()) {
         mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
         mCargo.setArmState(CargoArmState.REVERSE_CARGOSHIP);
