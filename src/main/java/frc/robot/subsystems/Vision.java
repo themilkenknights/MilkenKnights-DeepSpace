@@ -1,6 +1,7 @@
 package frc.robot.subsystems;
 
 import edu.wpi.cscore.UsbCamera;
+import edu.wpi.cscore.VideoMode.PixelFormat;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
@@ -9,6 +10,7 @@ import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.vision.LimeLight;
 import frc.robot.lib.vision.LimeLightControlMode.LedMode;
+import frc.robot.lib.vision.LimeLightControlMode.StreamType;
 import frc.robot.lib.vision.LimelightTarget;
 
 public class Vision extends Subsystem {
@@ -32,6 +34,7 @@ public class Vision extends Subsystem {
     // LLFeed = new HttpCamera("limelight", "http://limelight.local:5800/stream.mjpg");
 
      LLFeed = CameraServer.getInstance().startAutomaticCapture(0);
+     LLFeed.setVideoMode(PixelFormat.kMJPEG, 176,144,30);
     // LLFeed.setVideoMode(VideoMode.PixelFormat.kYUYV, 320, 240, 30);
     // LLFeed.setFPS(30);
     // LLFeed.setConnectVerbose(0);
@@ -86,8 +89,10 @@ public class Vision extends Subsystem {
   }
 
   public void disableLED() {
+    mLimeLight.setStream(StreamType.kPiPSecondary);
+    mLimeLight.setPipeline(0);
     if (isVision) {
-      mLimeLight.setPipeline(1);
+      mLimeLight.setPipeline(0);
       isVision = false;
       mLEDTimer.reset();
     }

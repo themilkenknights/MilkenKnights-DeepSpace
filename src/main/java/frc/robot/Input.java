@@ -164,7 +164,6 @@ public class Input {
       mDrive.setOpenLoop(controlSig);
 
     }
-
     if (isOperatorJoystickConnected) {
       if (mCargoVisionOuttake.isPressed()) {
         mStructure.setRobotState(RobotState.VISION_CARGO_OUTTAKE);

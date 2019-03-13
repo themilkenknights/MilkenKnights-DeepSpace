@@ -129,7 +129,6 @@ public class CargoArm extends Subsystem {
 
   public synchronized void setIntakeRollers(double output) {
     mRollerSetpoint = output;
-    setArmState(CargoArmState.REVERSE_CARGOSHIP);
   }
 
   public void zeroEncoder() {
@@ -188,7 +187,7 @@ public class CargoArm extends Subsystem {
 
   public enum CargoArmState {
     ENABLE(0.0), // State directly after robot is enabled (not mapped to a specific angle)
-    INTAKE(187.0),
+    INTAKE(182.0),
     FORWARD_ROCKET_LEVEL_ONE(120.0),
     FORWARD_ROCKET_LEVEL_TWO(75.0),
     REVERSE_CARGOSHIP(21.0);
