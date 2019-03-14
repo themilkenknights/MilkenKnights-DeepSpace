@@ -14,7 +14,7 @@ import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
-import frc.robot.subsystems.HatchArm.HatchSpearState;
+import frc.robot.subsystems.HatchArm.HatchState;
 import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Superstructure.ClimbState;
 import frc.robot.subsystems.Superstructure.RobotState;
@@ -44,8 +44,7 @@ public class Input {
 
   private static final MkJoystickButton mCargoArmManual = mOperatorJoystick.getButton(2, "Cargo Arm Manual Mode");
 
-  private static final MkJoystickButton mSpearTogglePlaceStow = mOperatorJoystick
-      .getButton(3, "Hatch Spear Toggle (Place/Stow)");
+  private static final MkJoystickButton mSpearTogglePlaceStow = mOperatorJoystick.getButton(3, "Hatch Spear Toggle (Place/Stow)");
 
   private static final MkJoystickButton mSpearIntake = mOperatorJoystick.getButton(4, "Hatch Spear HP Intake");
 
@@ -55,17 +54,11 @@ public class Input {
 
   private static final MkJoystickButton toggleVision = mOperatorJoystick.getButton(7, "Toggle Vision");
 
-  private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick
-      .getButton(8, "Zero Arm Encoders && Disable Soft Limit");
+  private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick.getButton(8, "Zero Arm Encoders && Disable Soft Limit");
 
   private static final MkJoystickButton mStopAuto = mOperatorJoystick.getButton(9, "Stop Auto");
 
   private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
-
-  private static final MkJoystickButton mGroundIntakeToggleButton = mOperatorJoystick
-      .getButton(11, "Ground Intake Toggle (Stow/Ground)");
-
-  private static final MkJoystickButton mTransferButton = mOperatorJoystick.getButton(12, "Transfer Hatch Button");
 
   private static MkTimer rumbleTimer = new MkTimer();
 
@@ -201,15 +194,15 @@ public class Input {
       } else if (mHatchVisionPlace.isPressed()) {
         mStructure.setRobotState(RobotState.HATCH_VISION_OUTTAKE);
       } else if (mSpearTogglePlaceStow.isPressed()) {
-        if (mHatch.getHatchSpearState() == HatchSpearState.STOW) {
-          mHatch.setHatchState(HatchSpearState.PLACE);
+        if (mHatch.getHatchSpearState() == HatchState.STOW) {
+          mHatch.setHatchState(HatchState.PLACE);
         } else {
-          mHatch.setHatchState(HatchSpearState.STOW);
+          mHatch.setHatchState(HatchState.STOW);
         }
       } else if (mSpearIntake.isPressed()) {
-        mHatch.setHatchState(HatchSpearState.INTAKE);
+        mHatch.setHatchState(HatchState.INTAKE);
       } else if (mStowAllButton.isPressed()) {
-        mHatch.setHatchState(HatchSpearState.STOW);
+        mHatch.setHatchState(HatchState.STOW);
         mCargo.setArmState(CargoArmState.REVERSE_CARGOSHIP);
       }
     }
@@ -218,9 +211,9 @@ public class Input {
   /**
    * Rumble Xbox Controller for 250ms at 25% output
    */
-  public static void rumbleDriverController() {
-    mDriverJoystick.setRumble(RumbleType.kLeftRumble, 0.25);
-    mDriverJoystick.setRumble(RumbleType.kRightRumble, 0.25);
-    rumbleTimer.start(0.5);
+  public static void rumbleDriverController(double intensity, double sec) {
+    mDriverJoystick.setRumble(RumbleType.kLeftRumble, intensity);
+    mDriverJoystick.setRumble(RumbleType.kRightRumble, intensity);
+    rumbleTimer.start(sec);
   }
 }

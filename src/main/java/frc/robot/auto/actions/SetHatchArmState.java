@@ -1,13 +1,13 @@
 package frc.robot.auto.actions;
 
 import frc.robot.subsystems.HatchArm;
-import frc.robot.subsystems.HatchArm.HatchSpearState;
+import frc.robot.subsystems.HatchArm.HatchState;
 
 public class SetHatchArmState extends RunOnceAction {
 
-  private HatchSpearState state;
+  private HatchState state;
 
-  public SetHatchArmState(HatchSpearState state) {
+  public SetHatchArmState(HatchState state) {
     this.state = state;
   }
 

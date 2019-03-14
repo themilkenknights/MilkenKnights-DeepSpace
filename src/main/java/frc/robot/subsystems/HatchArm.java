@@ -8,17 +8,20 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.HATCH_ARM;
 import frc.robot.Constants.MISC;
+import frc.robot.Input;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
+import frc.robot.lib.util.MkTimer;
 import frc.robot.subsystems.Superstructure.RobotState;
 
 public class HatchArm extends Subsystem {
 
-  private HatchSpearState mHatchState;
+  private HatchState mHatchState;
   private Solenoid mSpearSolenoid, mPancakeSolenoid;
   private boolean mSpearLimitTriggered = false;
   private NetworkTableEntry mLimitTriggered, mSpearStateTab;
+  private MkTimer downTimer = new MkTimer();
 
   private HatchArm() {
     ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
@@ -27,7 +30,7 @@ public class HatchArm extends Subsystem {
 
     mSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchArmChannel);
     mPancakeSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchPancakeChannel);
-    mHatchState = HatchSpearState.STOW;
+    mHatchState = HatchState.STOW;
   }
 
   public static HatchArm getInstance() {
@@ -39,11 +42,16 @@ public class HatchArm extends Subsystem {
     mSpearLimitTriggered = CargoArm.getInstance().isSpearLimitTriggered();
     switch (mHatchState) {
       case STOW:
+        break;
       case PLACE:
+        if (downTimer.isDone() && mSpearLimitTriggered) {
+          mPancakeSolenoid.set(false);
+          Input.rumbleDriverController(0.25, 0.5);
+        }
         break;
       case INTAKE:
         if (isHatchLimitTriggered()) {
-          setHatchState(HatchSpearState.STOW);
+          setHatchState(HatchState.STOW);
           if (Superstructure.getInstance().getRobotState() == RobotState.TELEOP_DRIVE) {
             Drive.getInstance().setOpenLoop(new DriveSignal(-0.4, -0.4));
           }
@@ -83,28 +91,31 @@ public class HatchArm extends Subsystem {
 
   @Override
   public boolean checkSystem() {
-    setHatchState(HatchSpearState.PLACE);
+    setHatchState(HatchState.PLACE);
     Logger.logMarker("Set to Place");
     Timer.delay(1.0);
-    setHatchState(HatchSpearState.STOW);
+    setHatchState(HatchState.STOW);
     Timer.delay(1.0);
     Logger.logMarker("Set to Stow");
     return true;
   }
 
-  public HatchSpearState getHatchSpearState() {
+  public HatchState getHatchSpearState() {
     return mHatchState;
   }
 
-  public void setHatchState(HatchSpearState state) {
+  public void setHatchState(HatchState state) {
     mSpearSolenoid.set(state.state);
     mHatchState = state;
     switch (state) {
       case PLACE:
+        downTimer.start(0.5);
       case STOW:
         mPancakeSolenoid.set(true);
+        break;
       case INTAKE:
         mPancakeSolenoid.set(false);
+        break;
     }
     Logger.logMarker("Set Hatch State to " + state.toString());
   }
@@ -114,13 +125,13 @@ public class HatchArm extends Subsystem {
    * The state of the pneumatic spear that places and intakes the Hatches. The default state should always be stowed on
    * power off.
    */
-  public enum HatchSpearState {
+  public enum HatchState {
     PLACE(HATCH_ARM.kHatchArmPlaceState),
     STOW(!HATCH_ARM.kHatchArmPlaceState),
     INTAKE(HATCH_ARM.kHatchArmPlaceState);
     public final boolean state;
 
-    HatchSpearState(final boolean state) {
+    HatchState(final boolean state) {
       this.state = state;
     }
   }

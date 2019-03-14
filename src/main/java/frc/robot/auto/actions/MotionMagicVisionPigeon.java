@@ -1,12 +1,11 @@
 package frc.robot.auto.actions;
 
-import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
-import frc.robot.subsystems.HatchArm.HatchSpearState;
+import frc.robot.subsystems.HatchArm.HatchState;
 import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Superstructure.RobotState;
 import frc.robot.subsystems.Vision;
@@ -33,7 +32,7 @@ public class MotionMagicVisionPigeon implements Action {
     return isDone || timer.isDone()
         || Drive.getInstance().isVisionFinished(lastDist, lastAngle + lastSkew)
         || (HatchArm.getInstance().isHatchLimitTriggered()
-        && ((HatchArm.getInstance().getHatchSpearState() == HatchSpearState.PLACE)
+        && ((HatchArm.getInstance().getHatchSpearState() == HatchState.PLACE)
         && downTimer.isDone()));
   }
 
@@ -44,15 +43,15 @@ public class MotionMagicVisionPigeon implements Action {
         break;
       case PLACE_HATCH:
         if ((Drive.getInstance().getVisionServoError(lastDist) < 28.0)
-            && (HatchArm.getInstance().getHatchSpearState() != HatchSpearState.PLACE)) {
-          HatchArm.getInstance().setHatchState(HatchSpearState.PLACE);
+            && (HatchArm.getInstance().getHatchSpearState() != HatchState.PLACE)) {
+          HatchArm.getInstance().setHatchState(HatchState.PLACE);
           downTimer.start(0.75);
         }
         break;
       case INTAKE_HATCH:
         if ((Drive.getInstance().getVisionServoError(lastDist) < 60.0)
-            && (HatchArm.getInstance().getHatchSpearState() != HatchSpearState.PLACE)) {
-          HatchArm.getInstance().setHatchState(HatchSpearState.INTAKE);
+            && (HatchArm.getInstance().getHatchSpearState() != HatchState.PLACE)) {
+          HatchArm.getInstance().setHatchState(HatchState.INTAKE);
           downTimer.start(1.0);
         }
         break;

@@ -12,12 +12,13 @@ import frc.robot.Constants;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.MISC;
 import frc.robot.Input;
+import frc.robot.Robot;
 import frc.robot.auto.modes.ClimbLevel2Mode;
 import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.CargoArm.CargoArmState;
-import frc.robot.subsystems.HatchArm.HatchSpearState;
+import frc.robot.subsystems.HatchArm.HatchState;
 
 public class Superstructure extends Subsystem {
 
@@ -46,10 +47,8 @@ public class Superstructure extends Subsystem {
     mFrontClimb = mStructureTab.add("Front Climb", "").getEntry();
     mRearClimb = mStructureTab.add("Rear Climb", "").getEntry();
 
-    mFrontClimbSolenoid =
-        new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kFrontClimbSolenoidChannel);
-    mRearClimbSolenoid =
-        new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kRearClimbSolenoidChannel);
+    mFrontClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kFrontClimbSolenoidChannel);
+    mRearClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kRearClimbSolenoidChannel);
 
     mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
     LiveWindow.disableTelemetry(mPDP);
@@ -62,13 +61,11 @@ public class Superstructure extends Subsystem {
 
   @Override
   public void outputTelemetry(double timestamp) {
-    /*
-     * mMatchState.setString(Robot.mMatchState.toString());
-     * mRobotStateEntry.setString(mRobotState.toString());
-     * mCompressorCurrent.setDouble(mCompressor.getCompressorCurrent());
-     * mFrontClimb.setString(mFrontClimbState.toString());
-     * mRearClimb.setString(mRearClimbState.toString());
-     */
+    mMatchState.setString(Robot.mMatchState.toString());
+    mRobotStateEntry.setString(mRobotState.toString());
+    mFrontClimb.setString(mFrontClimbState.toString());
+    mRearClimb.setString(mRearClimbState.toString());
+    //mCompressorCurrent.setDouble(mCompressor.getCompressorCurrent());
   }
 
   public void teleopInit(double timestamp) {
@@ -120,8 +117,8 @@ public class Superstructure extends Subsystem {
   }
 
   public synchronized void setRobotState(RobotState state) {
-    if (mRobotState != RobotState.TELEOP_DRIVE) {
-      Input.rumbleDriverController();
+    if (mRobotState != RobotState.TELEOP_DRIVE && state == RobotState.TELEOP_DRIVE) {
+      Input.rumbleDriverController(0.5, 0.5);
     }
     mRobotState = state;
     switch (state) {
@@ -136,7 +133,6 @@ public class Superstructure extends Subsystem {
         break;
       case VISION_CARGO_OUTTAKE:
         startVisionCargoOuttake();
-      case PATH_FOLLOWING:
         break;
       case AUTO_CLIMB:
         startAutoClimb();
@@ -169,7 +165,7 @@ public class Superstructure extends Subsystem {
   }
 
   private void startVisionCargoOuttake() {
-    mHatch.setHatchState(HatchSpearState.STOW);
+    mHatch.setHatchState(HatchState.STOW);
     CargoArm.getInstance().setArmState(CargoArmState.REVERSE_CARGOSHIP);
     Vision.getInstance().updateLimelight();
     if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
@@ -195,7 +191,6 @@ public class Superstructure extends Subsystem {
   }
 
   public enum RobotState {
-    PATH_FOLLOWING,
     TELEOP_DRIVE,
     HATCH_VISION_INTAKE,
     HATCH_VISION_OUTTAKE,
