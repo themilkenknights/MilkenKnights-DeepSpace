@@ -1,6 +1,5 @@
 package frc.robot.auto;
 
-import edu.wpi.first.wpilibj.Timer;
 import frc.robot.auto.actions.Action;
 import frc.robot.lib.util.DeltaTime;
 import frc.robot.lib.util.Logger;
@@ -13,7 +12,7 @@ public abstract class AutoModeBase {
 
   protected double mUpdateRate = 1.0 / 100.0;
   protected boolean mActive = false;
-  private DeltaTime baseTimer = new DeltaTime("Auto Base: " + Timer.getFPGATimestamp(), 5);
+  private DeltaTime baseTimer = new DeltaTime("Auto Base Dt", 1, false);
 
   public void run() {
     mActive = true;

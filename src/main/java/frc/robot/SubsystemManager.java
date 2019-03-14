@@ -75,8 +75,8 @@ public class SubsystemManager {
     notifier_ = new Notifier(runnable_);
     running_ = false;
 
-    mainDt = new DeltaTime("Iterative Dt", 1);
-    fastDt = new DeltaTime("Looper Dt", 1);
+    mainDt = new DeltaTime("Iterative Dt", 1, false);
+    fastDt = new DeltaTime("Looper Dt", 1, false);
   }
 
   public void checkSystem() {

@@ -21,7 +21,7 @@ public class HatchArm extends Subsystem {
   private Solenoid mSpearSolenoid, mPancakeSolenoid;
   private boolean mSpearLimitTriggered = false;
   private NetworkTableEntry mLimitTriggered, mSpearStateTab;
-  private MkTimer downTimer = new MkTimer();
+  private MkTimer downTimer;
 
   private HatchArm() {
     ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
@@ -31,6 +31,7 @@ public class HatchArm extends Subsystem {
     mSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchArmChannel);
     mPancakeSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchPancakeChannel);
     mHatchState = HatchState.STOW;
+    downTimer = new MkTimer();
   }
 
   public static HatchArm getInstance() {
