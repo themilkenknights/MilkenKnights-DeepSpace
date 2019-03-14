@@ -19,7 +19,7 @@ public class MotionMagicVisionPigeon implements Action {
   private MkTimer downTimer = new MkTimer();
   private MkTimer driveBackTimer = new MkTimer();
   private VisionServoGoal goal;
-  private boolean turnBack = false;
+  private boolean turnBack, isDone = false;
 
   public MotionMagicVisionPigeon(VisionServoGoal goal) {
     this.goal = goal;
@@ -31,7 +31,7 @@ public class MotionMagicVisionPigeon implements Action {
    */
   @Override
   public boolean isFinished() {
-    return timer.isDone()
+    return isDone || timer.isDone()
         || Drive.getInstance().isVisionFinished(lastDist, lastAngle + lastSkew)
         || (HatchArm.getInstance().isHatchLimitTriggered()
         && ((HatchArm.getInstance().getHatchSpearState() == HatchSpearState.PLACE)
@@ -61,14 +61,14 @@ public class MotionMagicVisionPigeon implements Action {
         Logger.logErrorWithTrace("Unexpected Vision Servo Goal");
     }
 
-    LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
+   LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
     if (turnBack && !driveBackTimer.isDone()) {
-      Drive.getInstance().setOpenLoop(new DriveSignal(-0.3, -0.3));
+      //Drive.getInstance().setOpenLoop(new DriveSignal(-0.3, -0.3));
       //TODO Fix
     } else if (mTarget.isValidTarget() && mTarget.getDistance() < 28.0) {
       lastAngle = -mTarget.getYaw();
       lastDist = mTarget.getDistance();
-      lastSkew = mTarget.getSkew() * 0.01;
+      lastSkew = mTarget.getSkew() * -2.0;
       Drive.getInstance().setDistanceAndAngle(lastDist, lastAngle + lastSkew);
     }
   }
@@ -83,13 +83,14 @@ public class MotionMagicVisionPigeon implements Action {
     turnBack = false;
     LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
     if (mTarget.isValidTarget()) {
-      if (mTarget.getDistance() > 35 && Math.abs(mTarget.getYaw()) > 15.0) {
+      if (mTarget.getDistance() > 35 && Math.abs(mTarget.getYaw()) > 20.0) {
         turnBack = true;
-        driveBackTimer.start(1.0);
+        isDone = true;
+        //driveBackTimer.start(1.0);
       } else {
         lastAngle = -mTarget.getYaw();
         lastDist = mTarget.getDistance();
-        lastSkew = mTarget.getSkew() * 0.01;
+        lastSkew = mTarget.getSkew() * -2.0;
         Drive.getInstance().setDistanceAndAngle(lastDist, lastAngle + lastSkew);
         timer.start(4.0);
       }

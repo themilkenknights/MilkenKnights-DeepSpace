@@ -144,12 +144,10 @@ public class Input {
       mStructure.setRobotState(RobotState.AUTO_CLIMB);
     } else if (mFrontClimb.isPressed()) {
       // Toggle Front Climb Actuators (Toward Spear)
-      mStructure.setFrontClimbState(
-          mStructure.getFrontClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
+      mStructure.setFrontClimbState(mStructure.getFrontClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
     } else if (mRearClimb.isPressed()) {
       // Toggle Rear Climb Actuators (Toward Cargo Arm/Rio)
-      mStructure.setRearClimbState(
-          mStructure.getRearClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
+      mStructure.setRearClimbState(mStructure.getRearClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
     }
 
     // GTA Style driving.
@@ -159,8 +157,16 @@ public class Input {
       double forward = (-mDriverJoystick.getRawAxis(2) + mDriverJoystick.getRawAxis(3));
       double turn = (-mDriverJoystick.getRawAxis(0));
       DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
-      mDrive.setOpenLoop(controlSig);
-
+      /*if(isVelocitySetpoint){
+        if(mDriverJoystick.getPOV() == 270){
+          mDrive.setDistanceAndAngle(0, -mDriverJoystick.getRawAxis(0) * 20);
+        } else if(mDriverJoystick.getPOV() == 90){
+          mDrive.setDistanceAndAngle(0, -mDriverJoystick.getRawAxis(0) * -20);
+        }
+       // mDrive.setDistanceAndAngle(forward, -mDriverJoystick.getRawAxis(0) * 25);
+      } else{ */
+        mDrive.setOpenLoop(controlSig);
+     // }
     }
     if (isOperatorJoystickConnected) {
       if (mCargoVisionOuttake.isPressed()) {
@@ -232,6 +238,6 @@ public class Input {
   public static void rumbleDriverController() {
     mDriverJoystick.setRumble(RumbleType.kLeftRumble, 0.25);
     mDriverJoystick.setRumble(RumbleType.kRightRumble, 0.25);
-    rumbleTimer.start(0.25);
+    rumbleTimer.start(0.5);
   }
 }

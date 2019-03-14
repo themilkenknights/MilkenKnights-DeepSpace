@@ -15,13 +15,13 @@ import frc.robot.lib.vision.LimelightTarget;
 public class Vision extends Subsystem {
 
   private LimeLight mLimeLight;
-  private NetworkTableEntry mLLX, mDist, mArea, mLED, mSkew;
+  private NetworkTableEntry mLLX, mDist, mArea, mLED, mSkew, mValid;
   private boolean isVision = true;
-  private UsbCamera hatchCam;
+  //private UsbCamera hatchCam;
 
   private Vision() {
-    hatchCam = CameraServer.getInstance().startAutomaticCapture(0);
-    hatchCam.setVideoMode(PixelFormat.kMJPEG, 176, 144, 30);
+    //hatchCam = CameraServer.getInstance().startAutomaticCapture(0);
+    //hatchCam.setVideoMode(PixelFormat.kMJPEG, 176, 144, 30);
 
     ShuffleboardTab mVisionTab = Shuffleboard.getTab("General");
     mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
@@ -29,6 +29,7 @@ public class Vision extends Subsystem {
     mArea = mVisionTab.add("Limelight Area", 0.0).getEntry();
     mLED = mVisionTab.add("Limelight LED", true).getEntry();
     mSkew = mVisionTab.add("Limelight Skew", 0.0).getEntry();
+    mValid = mVisionTab.add("Valid Target", false).getEntry();
     mLimeLight = new LimeLight();
   }
 
@@ -43,6 +44,7 @@ public class Vision extends Subsystem {
     mArea.setDouble(getLimelightTarget().getArea());
     mLED.setBoolean(mLimeLight.getLEDMode() != LedMode.kforceOff);
     mSkew.setDouble(getLimelightTarget().getSkew());
+    mValid.setBoolean(getLimelightTarget().isValidTarget());
   }
 
   public void teleopInit(double timestamp) {

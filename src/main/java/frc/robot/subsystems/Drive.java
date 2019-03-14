@@ -315,7 +315,7 @@ public class Drive extends Subsystem {
    * @return The distance from the target when servoing with the Pigeon
    */
   public double getVisionServoError(double dist) {
-    return Math.abs(mPeriodicIO.rightPos - dist);
+    return Math.abs((mPeriodicIO.rightPos / 2) - dist);
   }
 
   public void setVelocitySetpointNormal(DriveSignal sig) {

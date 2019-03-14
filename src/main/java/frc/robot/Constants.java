@@ -1,9 +1,6 @@
 package frc.robot;
 
-import com.ctre.phoenix.motorcontrol.FeedbackDevice;
-import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
-import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
-import com.ctre.phoenix.motorcontrol.VelocityMeasPeriod;
+import com.ctre.phoenix.motorcontrol.*;
 import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.math.MkMath;
@@ -253,25 +250,21 @@ public final class Constants {
           tal.slot0.kP = 7.0 * (0.1 * 1023.0) / (700.0);
           tal.slot0.kD = 3.0 * tal.slot0.kP;
           tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
-          tal.slot0.closedLoopPeakOutput = 1.0;
+          tal.slot0.closedLoopPeakOutput = 0.30;
           tal.slot0.allowableClosedloopError = 100;
 
-          // Motion Magic Turning
-          tal.slot1.kP = 0.0;
-          tal.slot1.kI = 0.00;
-          tal.slot1.kD = tal.slot1.kP * 0.0;
-          tal.slot1.kF = 1023.0 / 510.0;
-          tal.slot1.integralZone = 100;
-          tal.slot1.maxIntegralAccumulator = 20;
+          tal.slot1.kP = 15.0 * (0.1 * 1023.0) / (700.0);
+          tal.slot1.kD = 10.0 * tal.slot0.kP;
+          tal.slot1.kF = 1023.0 / DRIVE.kMaxNativeVel;
           tal.slot1.closedLoopPeakOutput = 1.0;
-          tal.slot1.allowableClosedloopError = 0; // ~3deg
+          tal.slot1.allowableClosedloopError = 30;
 
           tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.9);
           tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.4);
 
-          if (loc == TalonLoc.Left || loc == TalonLoc.Right) {
+          if (loc == TalonLoc.Left) {
             tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
-          } /*else {
+          } else {
             tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
             tal.primaryPID.selectedFeedbackCoefficient = 0.5;
 
@@ -287,7 +280,7 @@ public final class Constants {
             tal.remoteFilter0.remoteSensorSource = RemoteSensorSource.TalonSRX_SelectedSensor;
             tal.remoteFilter0.remoteSensorDeviceID = CAN.kDriveLeftMasterTalonID;
             tal.auxPIDPolarity = false;
-          } */
+          }
         } else if (loc == TalonLoc.Cargo_Arm || loc == TalonLoc.Hatch_Arm) {
           tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
           tal.reverseLimitSwitchSource = LimitSwitchSource.RemoteTalonSRX;
