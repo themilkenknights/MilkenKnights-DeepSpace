@@ -131,13 +131,14 @@ public class Drive extends Subsystem {
     }
     mState.setString(mDriveControlState.toString());
     mStatus.setBoolean(driveStatus());
-
     SmartDashboard.putNumber("Aux Error", mRightDrive.getError(1));
     SmartDashboard.putNumber("Aux Target", mRightDrive.getTarget(1));
     SmartDashboard.putNumber("Aux Pos", mRightDrive.getPosition(1));
     SmartDashboard.putNumber("Main Target", mRightDrive.getTarget(0));
-    SmartDashboard.putNumber("Left Enc", MkMath.nativeUnitsToDegrees(mLeftDrive.masterTalon.getSensorCollection().getQuadraturePosition()));
-    SmartDashboard.putNumber("Right Enc", MkMath.nativeUnitsToDegrees(mRightDrive.masterTalon.getSensorCollection().getQuadraturePosition()));
+    SmartDashboard.putNumber("Left Enc",
+        MkMath.nativeUnitsToDegrees(mLeftDrive.masterTalon.getSensorCollection().getQuadraturePosition()));
+    SmartDashboard.putNumber("Right Enc",
+        MkMath.nativeUnitsToDegrees(mRightDrive.masterTalon.getSensorCollection().getQuadraturePosition()));
   }
 
   public void teleopInit(double timestamp) {
@@ -250,8 +251,7 @@ public class Drive extends Subsystem {
     return mLeftDrive.isEncoderConnected() && mRightDrive.isEncoderConnected();
   }
 
-  public synchronized DriveSignal setMotionMagicDeltaSetpoint(
-      DriveSignal signal, DriveSignal feedforward) {
+  public synchronized DriveSignal setMotionMagicDeltaSetpoint(DriveSignal signal, DriveSignal feedforward) {
     DriveSignal newSig = new DriveSignal(signal.getLeft() + mPeriodicIO.leftPos,
         signal.getRight() + mPeriodicIO.rightPos, signal.getBrakeMode());
     updateMotionMagicPositionSetpoint(newSig, feedforward);

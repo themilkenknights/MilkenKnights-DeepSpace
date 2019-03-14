@@ -56,3 +56,25 @@
 - POV LEFT Cargo Intake Setpoint
 
 - POV RIGHT Cargo Reverse Cargoship
+
+## Things to check when having issues
+
+- CAN Bus Utilization
+
+- TODO Items
+
+- Loop Times
+
+- Phoenix Tuner
+
+  - Self-test device
+  
+    - Ensure Limit Switches are in correct state
+    
+    - Ensure correct sensor is selected and reports the correct values
+    
+    - Throttle motor controller to verify that it's working
+
+- All CAN devices are up-to-date
+
+- CTRE Phoenix & WPILIB are updated
