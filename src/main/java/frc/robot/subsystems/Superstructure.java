@@ -17,7 +17,7 @@ import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
 import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.CargoArm.CargoArmState;
-import frc.robot.subsystems.HatchArm.HatchMechanismState;
+import frc.robot.subsystems.HatchArm.HatchSpearState;
 
 public class Superstructure extends Subsystem {
 
@@ -169,7 +169,7 @@ public class Superstructure extends Subsystem {
   }
 
   private void startVisionCargoOuttake() {
-    mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
+    mHatch.setHatchState(HatchSpearState.STOW);
     CargoArm.getInstance().setArmState(CargoArmState.REVERSE_CARGOSHIP);
     Vision.getInstance().updateLimelight();
     if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {

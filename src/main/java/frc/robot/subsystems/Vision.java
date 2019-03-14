@@ -17,11 +17,11 @@ public class Vision extends Subsystem {
   private LimeLight mLimeLight;
   private NetworkTableEntry mLLX, mDist, mArea, mLED, mSkew, mValid;
   private boolean isVision = true;
-  //private UsbCamera hatchCam;
+  private UsbCamera hatchCam;
 
   private Vision() {
-    //hatchCam = CameraServer.getInstance().startAutomaticCapture(0);
-    //hatchCam.setVideoMode(PixelFormat.kMJPEG, 176, 144, 30);
+    hatchCam = CameraServer.getInstance().startAutomaticCapture(0);
+    hatchCam.setVideoMode(PixelFormat.kMJPEG, 176, 144, 30);
 
     ShuffleboardTab mVisionTab = Shuffleboard.getTab("General");
     mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();

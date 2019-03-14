@@ -6,7 +6,6 @@ import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
-import frc.robot.subsystems.HatchArm.HatchMechanismState;
 import frc.robot.subsystems.HatchArm.HatchSpearState;
 import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Superstructure.RobotState;
@@ -46,14 +45,14 @@ public class MotionMagicVisionPigeon implements Action {
       case PLACE_HATCH:
         if ((Drive.getInstance().getVisionServoError(lastDist) < 28.0)
             && (HatchArm.getInstance().getHatchSpearState() != HatchSpearState.PLACE)) {
-          HatchArm.getInstance().setHatchMechanismState(HatchMechanismState.SPEAR_PLACE_ONLY);
+          HatchArm.getInstance().setHatchState(HatchSpearState.PLACE);
           downTimer.start(0.75);
         }
         break;
       case INTAKE_HATCH:
         if ((Drive.getInstance().getVisionServoError(lastDist) < 60.0)
             && (HatchArm.getInstance().getHatchSpearState() != HatchSpearState.PLACE)) {
-          HatchArm.getInstance().setHatchMechanismState(HatchMechanismState.STATION_INTAKE);
+          HatchArm.getInstance().setHatchState(HatchSpearState.INTAKE);
           downTimer.start(1.0);
         }
         break;

@@ -14,7 +14,6 @@ import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
-import frc.robot.subsystems.HatchArm.HatchMechanismState;
 import frc.robot.subsystems.HatchArm.HatchSpearState;
 import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Superstructure.ClimbState;
@@ -101,9 +100,7 @@ public class Input {
     // Re-seed absolute values to relative encoder and disable soft limit for arms
     if (mZeroArmToggleLimit.isPressed()) {
       mCargo.zeroEncoder();
-      mHatch.zeroEncoder();
       mCargo.disableSoftLimit();
-      mHatch.disableSoftLimit();
     }
 
     // Toggle Limelight LEDs
@@ -115,21 +112,12 @@ public class Input {
     // mode.
     if (mCargoArmManual.isHeld()) {
       mCargo.setOpenLoop(MkMath.handleDeadband(-mOperatorJoystick.getRawAxis(1), GENERAL.kOperatorDeadband));
-    } else if (mOperatorJoystick.getTrigger()) {
-      double movement = -mOperatorJoystick.getRawAxis(1) / 1.1;
-      mHatch.setOpenLoop(MkMath.handleDeadband(Math.pow(movement, 3), GENERAL.kOperatorDeadband));
     }
 
     // Ensure that arm stops after manual mode button is released and is not set at
     // the last output
     if (mOperatorJoystick.getRawButtonReleased(2)) {
       mCargo.setOpenLoop(0.0);
-    }
-
-    // Ensure that arm stops after manual mode button is released and is not set at
-    // the last output
-    if (mOperatorJoystick.getTriggerReleased()) {
-      mHatch.setOpenLoop(0.0);
     }
 
     if (mToggleVelocity.isPressed()) {
@@ -144,10 +132,12 @@ public class Input {
       mStructure.setRobotState(RobotState.AUTO_CLIMB);
     } else if (mFrontClimb.isPressed()) {
       // Toggle Front Climb Actuators (Toward Spear)
-      mStructure.setFrontClimbState(mStructure.getFrontClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
+      mStructure.setFrontClimbState(
+          mStructure.getFrontClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
     } else if (mRearClimb.isPressed()) {
       // Toggle Rear Climb Actuators (Toward Cargo Arm/Rio)
-      mStructure.setRearClimbState(mStructure.getRearClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
+      mStructure.setRearClimbState(
+          mStructure.getRearClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
     }
 
     // GTA Style driving.
@@ -165,8 +155,8 @@ public class Input {
         }
        // mDrive.setDistanceAndAngle(forward, -mDriverJoystick.getRawAxis(0) * 25);
       } else{ */
-        mDrive.setOpenLoop(controlSig);
-     // }
+      mDrive.setOpenLoop(controlSig);
+      // }
     }
     if (isOperatorJoystickConnected) {
       if (mCargoVisionOuttake.isPressed()) {
@@ -210,23 +200,16 @@ public class Input {
         mStructure.setRobotState(RobotState.HATCH_VISION_INTAKE);
       } else if (mHatchVisionPlace.isPressed()) {
         mStructure.setRobotState(RobotState.HATCH_VISION_OUTTAKE);
-      } else if (mTransferButton.isPressed()) {
-        mHatch.setHatchMechanismState(HatchMechanismState.TRANSFER);
-      } else if (mGroundIntakeToggleButton.isPressed()) {
-        mHatch.setHatchMechanismState(
-            mHatch.getHatchMechanismState() == HatchMechanismState.GROUND_INTAKE
-                ? HatchMechanismState.STOWED
-                : HatchMechanismState.GROUND_INTAKE);
       } else if (mSpearTogglePlaceStow.isPressed()) {
         if (mHatch.getHatchSpearState() == HatchSpearState.STOW) {
-          mHatch.setHatchMechanismState(HatchMechanismState.SPEAR_PLACE_ONLY);
+          mHatch.setHatchState(HatchSpearState.PLACE);
         } else {
-          mHatch.setHatchMechanismState(HatchMechanismState.SPEAR_STOW_ONLY);
+          mHatch.setHatchState(HatchSpearState.STOW);
         }
       } else if (mSpearIntake.isPressed()) {
-        mHatch.setHatchMechanismState(HatchMechanismState.STATION_INTAKE);
+        mHatch.setHatchState(HatchSpearState.INTAKE);
       } else if (mStowAllButton.isPressed()) {
-        mHatch.setHatchMechanismState(HatchMechanismState.STOWED);
+        mHatch.setHatchState(HatchSpearState.STOW);
         mCargo.setArmState(CargoArmState.REVERSE_CARGOSHIP);
       }
     }

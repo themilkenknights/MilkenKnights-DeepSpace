@@ -1,6 +1,10 @@
 package frc.robot;
 
-import com.ctre.phoenix.motorcontrol.*;
+import com.ctre.phoenix.motorcontrol.FeedbackDevice;
+import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
+import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
+import com.ctre.phoenix.motorcontrol.RemoteSensorSource;
+import com.ctre.phoenix.motorcontrol.VelocityMeasPeriod;
 import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.math.MkMath;
@@ -161,17 +165,6 @@ public final class Constants {
 
     public static final boolean kHatchArmSensorPhase = false;
     public static final boolean kHatchArmMasterDirection = true;
-
-    public static final double kMaxRawVel = 3085.0;
-    public static final double kMotionMagicCruiseVel = kMaxRawVel * 0.9;
-    public static final double kMotionMagicAccel = kMaxRawVel * 5;
-
-    public static final double kMaxSafeCurrent = 150;
-
-    public static final int kBookEnd_0 = kIsPracticeBot ? 1997 : 853;
-    public static final int kBookEnd_1 = kIsPracticeBot ? -90 : -1131;
-    public static final boolean kCrossOverZero = kIsPracticeBot ? true : true;
-    public static final int kOffset = kIsPracticeBot ? -1997 : -853;
   }
 
   public static class MISC {
@@ -180,6 +173,7 @@ public final class Constants {
     public static final int kHatchArmChannel = 0;
     public static final int kFrontClimbSolenoidChannel = 2;
     public static final int kRearClimbSolenoidChannel = 1;
+    public static final int kHatchPancakeChannel = 3;
   }
 
   public static class VISION {
@@ -221,7 +215,6 @@ public final class Constants {
       kConfigs.put(TalonLoc.Left, new TalonSRXConfiguration());
       kConfigs.put(TalonLoc.Right, new TalonSRXConfiguration());
       kConfigs.put(TalonLoc.Cargo_Arm, new TalonSRXConfiguration());
-      kConfigs.put(TalonLoc.Hatch_Arm, new TalonSRXConfiguration());
       kConfigs.put(TalonLoc.Cargo_Intake, new TalonSRXConfiguration());
       for (TalonLoc loc : kConfigs.keySet()) {
         TalonSRXConfiguration tal = kConfigs.get(loc);
@@ -281,7 +274,7 @@ public final class Constants {
             tal.remoteFilter0.remoteSensorDeviceID = CAN.kDriveLeftMasterTalonID;
             tal.auxPIDPolarity = false;
           }
-        } else if (loc == TalonLoc.Cargo_Arm || loc == TalonLoc.Hatch_Arm) {
+        } else if (loc == TalonLoc.Cargo_Arm) {
           tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
           tal.reverseLimitSwitchSource = LimitSwitchSource.RemoteTalonSRX;
           tal.reverseLimitSwitchNormal = LimitSwitchNormal.NormallyOpen;
@@ -303,19 +296,6 @@ public final class Constants {
           tal.slot0.integralZone = 200;
           tal.slot0.maxIntegralAccumulator = 300;
           tal.motionCurveStrength = 3;
-        } else if (loc == TalonLoc.Hatch_Arm) {
-          tal.reverseLimitSwitchDeviceID = CAN.kKetteringReverseLimitSwitchTalonID;
-          tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(179);
-          tal.reverseSoftLimitThreshold = 0;
-          tal.motionCruiseVelocity = (int) (HATCH_ARM.kMotionMagicCruiseVel);
-          tal.motionAcceleration = (int) (HATCH_ARM.kMotionMagicAccel);
-          tal.slot0.kP = 30.0 * ((0.1 * 1023.0) / (1600));
-          tal.slot0.kI = (tal.slot0.kP / 500) * 0.0;
-          tal.slot0.kD = tal.slot0.kP * 38.5;
-          tal.slot0.kF = (1023.0 / Constants.HATCH_ARM.kMaxRawVel);
-          tal.slot0.maxIntegralAccumulator = 0;
-          tal.slot0.integralZone = 0;
-          tal.motionCurveStrength = 7;
         }
       }
     }
