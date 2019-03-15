@@ -51,7 +51,7 @@ public class Superstructure extends Subsystem {
     mRearClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kRearClimbSolenoidChannel);
 
     mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
-    LiveWindow.disableTelemetry(mPDP);
+    LiveWindow.disableAllTelemetry();
     mCompressor = new Compressor(CAN.kPneumaticsControlModuleID);
   }
 
@@ -65,7 +65,6 @@ public class Superstructure extends Subsystem {
     mRobotStateEntry.setString(mRobotState.toString());
     mFrontClimb.setString(mFrontClimbState.toString());
     mRearClimb.setString(mRearClimbState.toString());
-    //mCompressorCurrent.setDouble(mCompressor.getCompressorCurrent());
   }
 
   public void teleopInit(double timestamp) {
@@ -89,8 +88,7 @@ public class Superstructure extends Subsystem {
 
   @Override
   public boolean checkSystem() {
-    return mCompressor.getCompressorCurrent() > 0.0
-        && mPDP.getTotalCurrent() > 0.0
+    return mPDP.getTotalCurrent() > 0.0
         && mPDP.getVoltage() > 0.0;
   }
 

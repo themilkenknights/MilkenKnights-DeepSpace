@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.shuffleboard.EventImportance;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import frc.robot.Constants;
+import frc.robot.Constants.MISC;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -20,6 +21,8 @@ public class Logger {
   private static final UUID RUN_INSTANCE_UUID = UUID.randomUUID();
   private static String lastOutput = "";
   private static String lastCrashOutput = "";
+  private static MkTimer lastMarkerTimer = new MkTimer();
+  private static MkTimer lastCrashMarkerTimer = new MkTimer();
 
   public static void logRobotConstruction() {
     logMarker("Robot Startup");
@@ -31,35 +34,39 @@ public class Logger {
   }
 
   private static synchronized void logMarker(String mark, Throwable nullableException) {
-    if (!lastOutput.equals(mark)) {
-      String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new
-          Date());
-      try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 +
-          "/main_log.txt", true))) {
-        writer.print(RUN_INSTANCE_UUID.toString());
-        writer.print(", ");
-        writer.print(mark);
-        writer.print(", ");
-        writer.print(new Date().toString());
-        if
-        (nullableException != null) {
-          writer.print(", ");
-          nullableException.printStackTrace(writer);
+    if (MISC.kErrorLogging) {
+      if (!lastOutput.equals(mark) || lastMarkerTimer.isDone()) {
+        if (lastMarkerTimer.isDone()) {
+          lastMarkerTimer.reset();
         }
-        writer.println();
-      } catch (IOException e) {
-        e.printStackTrace();
+        lastOutput = mark;
+        String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        try (PrintWriter writer = new PrintWriter(new FileWriter("/media/sda1/" + dateStamp1 +
+            "/main_log.txt", true))) {
+          writer.print(RUN_INSTANCE_UUID.toString());
+          writer.print(", ");
+          writer.print(mark);
+          writer.print(", ");
+          writer.print(new Date().toString());
+          if
+          (nullableException != null) {
+            writer.print(", ");
+            nullableException.printStackTrace(writer);
+          }
+          writer.println();
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+      } else {
+        lastMarkerTimer.start(0.5);
       }
-    } else {
-      lastOutput = mark;
     }
   }
 
   public static void logRobotInit() {
     String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
     boolean test = new File("/media/sda1/" + dateStamp1 + "/").mkdirs();
-    logMarker(
-        "Robot Init on " + (Constants.kIsPracticeBot ? "Practice" : "Competition") + " Robot");
+    logMarker("Robot Init on " + (Constants.kIsPracticeBot ? "Practice" : "Competition") + " Robot");
   }
 
   public static void logTeleopInit() {
@@ -92,27 +99,32 @@ public class Logger {
   }
 
   private static synchronized void logCrashMarker(String mark, Throwable nullableException) {
-    if (!lastCrashOutput.equals(mark)) {
-      String dateStamp1 = new
-          SimpleDateFormat("yyyy-MM-dd").format(new Date());
-      try (PrintWriter writer = new PrintWriter(new
-          FileWriter("/media/sda1/" + dateStamp1 + "/crash_log.txt", true))) {
-        writer.print(RUN_INSTANCE_UUID.toString());
-        writer.print(", ");
-        writer.print(mark);
-        writer.print(", ");
-        writer.print(new Date().toString());
-        if (nullableException != null) {
-          writer.print(", ");
-          nullableException.printStackTrace(writer);
+    if (MISC.kErrorLogging) {
+      if (!lastCrashOutput.equals(mark) || lastCrashMarkerTimer.isDone()) {
+        if (lastCrashMarkerTimer.isDone()) {
+          lastCrashMarkerTimer.reset();
         }
-        writer.println();
-      } catch
-      (IOException e) {
-        e.printStackTrace();
+        lastCrashOutput = mark;
+        String dateStamp1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        try (PrintWriter writer = new PrintWriter(new
+            FileWriter("/media/sda1/" + dateStamp1 + "/crash_log.txt", true))) {
+          writer.print(RUN_INSTANCE_UUID.toString());
+          writer.print(", ");
+          writer.print(mark);
+          writer.print(", ");
+          writer.print(new Date().toString());
+          if (nullableException != null) {
+            writer.print(", ");
+            nullableException.printStackTrace(writer);
+          }
+          writer.println();
+        } catch
+        (IOException e) {
+          e.printStackTrace();
+        }
+      } else {
+        lastCrashMarkerTimer.start(0.5);
       }
-    } else {
-      lastCrashOutput = mark;
     }
   }
 }

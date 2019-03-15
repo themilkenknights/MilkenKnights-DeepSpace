@@ -33,8 +33,6 @@ public final class Constants {
 
   public static class GENERAL {
 
-    public static final int kShortTimeoutMs = 0;
-    public static final int kLongCANTimeoutMs = 50;
     public static final double PI = 3.14159265359;
     public static final double kMaxNominalOutput = 1.0;
     public static final double kTicksPerRev = 4096.0;
@@ -162,14 +160,12 @@ public final class Constants {
   public static class HATCH_ARM {
 
     public static final boolean kHatchArmPlaceState = true;
-
-    public static final boolean kHatchArmSensorPhase = false;
-    public static final boolean kHatchArmMasterDirection = true;
   }
 
   public static class MISC {
 
     public static final boolean kDriveCSVLogging = false;
+    public static final boolean kErrorLogging = true;
     public static final int kHatchArmChannel = 0;
     public static final int kFrontClimbSolenoidChannel = 2;
     public static final int kRearClimbSolenoidChannel = 1;

@@ -69,10 +69,6 @@ public class HatchArm extends Subsystem {
     mSpearStateTab.setString(mHatchState.toString());
   }
 
-  public boolean isHatchLimitTriggered() {
-    return mSpearLimitTriggered;
-  }
-
   @Override
   public void teleopInit(double timestamp) {
   }
@@ -101,8 +97,8 @@ public class HatchArm extends Subsystem {
     return true;
   }
 
-  public HatchState getHatchSpearState() {
-    return mHatchState;
+  public boolean isHatchLimitTriggered() {
+    return mSpearLimitTriggered;
   }
 
   public void setHatchState(HatchState state) {
@@ -119,6 +115,10 @@ public class HatchArm extends Subsystem {
         break;
     }
     Logger.logMarker("Set Hatch State to " + state.toString());
+  }
+
+  public HatchState getHatchSpearState() {
+    return mHatchState;
   }
 
 

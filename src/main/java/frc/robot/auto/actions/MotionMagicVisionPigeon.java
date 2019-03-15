@@ -59,7 +59,7 @@ public class MotionMagicVisionPigeon implements Action {
         Logger.logErrorWithTrace("Unexpected Vision Servo Goal");
     }
 
-   LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
+    LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
     if (turnBack && !driveBackTimer.isDone()) {
       //Drive.getInstance().setOpenLoop(new DriveSignal(-0.3, -0.3));
       //TODO Fix

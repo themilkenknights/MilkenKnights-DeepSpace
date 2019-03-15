@@ -267,15 +267,6 @@ public class MkTalon {
     mOutput.setDouble(masterTalon.getMotorOutputPercent());
   }
 
-  public synchronized double getTarget() {
-    return getTarget(0);
-  }
-
-  public synchronized double getTarget(int slot) {
-    return slot == 0 ? MkMath.nativeUnitsToInches(lastOutput) : MkMath.pigeonNativeUnitsToDegrees(lastArbFeed);
-  }
-
-
   /**
    * @return Velocity from SRX Mag Encoder in Inches or Degrees Per Second
    */
@@ -297,6 +288,15 @@ public class MkTalon {
   }
 
   /**
+   * @return Error from setpoint in Inches/Inches Per Sec/Degrees Note that the method returns the deviation from target
+   * setpoint unlike the official {@link BaseMotorController#getClosedLoopError()} method. This method serves to limit
+   * CAN usage by using known setpoints to calculate error.
+   */
+  public synchronized double getError() {
+    return getError(0);
+  }
+
+  /**
    * @return Position from SRX Mag Encoder in Inches or Degrees
    */
   public synchronized double getPosition(int slot) {
@@ -311,15 +311,6 @@ public class MkTalon {
         Logger.logErrorWithTrace("Talon does not have encoder");
         return 0.0;
     }
-  }
-
-  /**
-   * @return Error from setpoint in Inches/Inches Per Sec/Degrees Note that the method returns the deviation from target
-   * setpoint unlike the official {@link BaseMotorController#getClosedLoopError()} method. This method serves to limit
-   * CAN usage by using known setpoints to calculate error.
-   */
-  public synchronized double getError() {
-    return getError(0);
   }
 
   public synchronized double getError(int slot) {
@@ -344,6 +335,14 @@ public class MkTalon {
         Logger.logErrorWithTrace("Talon doesn't have encoder");
         return 0.0;
     }
+  }
+
+  public synchronized double getTarget() {
+    return getTarget(0);
+  }
+
+  public synchronized double getTarget(int slot) {
+    return slot == 0 ? MkMath.nativeUnitsToInches(lastOutput) : MkMath.pigeonNativeUnitsToDegrees(lastArbFeed);
   }
 
   public boolean checkDriveDeltas() {

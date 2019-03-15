@@ -288,18 +288,17 @@ public class Drive extends Subsystem {
    */
   public synchronized void setDistanceAndAngle(double dist, double angle) {
     if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
-      Logger.logMarker("Switching to Pigeon Servo");
       mPeriodicIO.left_demand = 0.0;
       mPeriodicIO.right_demand = 0.0;
       mPeriodicIO.left_feedforward = 0.0;
       mPeriodicIO.right_feedforward = 0.0;
       configHatchVision();
       mDriveControlState = DriveControlState.PIGEON_SERVO;
+      Logger.logMarker("Switching to Pigeon Servo");
     }
-    //mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(dist + mPeriodicIO.leftPos);
-    //right pos should be avg dist
+    mPeriodicIO.left_demand = 0.0;
     mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist + mPeriodicIO.rightPos);
-    //mPeriodicIO.left_feedforward = MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
+    mPeriodicIO.left_feedforward = 0.0;
     mPeriodicIO.right_feedforward = MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
     mPeriodicIO.brake_mode = NeutralMode.Brake;
   }

@@ -10,6 +10,7 @@ import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
+import frc.robot.lib.util.SynchronousPIDF;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Drive;
@@ -44,7 +45,8 @@ public class Input {
 
   private static final MkJoystickButton mCargoArmManual = mOperatorJoystick.getButton(2, "Cargo Arm Manual Mode");
 
-  private static final MkJoystickButton mSpearTogglePlaceStow = mOperatorJoystick.getButton(3, "Hatch Spear Toggle (Place/Stow)");
+  private static final MkJoystickButton mSpearTogglePlaceStow = mOperatorJoystick
+      .getButton(3, "Hatch Spear Toggle (Place/Stow)");
 
   private static final MkJoystickButton mSpearIntake = mOperatorJoystick.getButton(4, "Hatch Spear HP Intake");
 
@@ -54,7 +56,8 @@ public class Input {
 
   private static final MkJoystickButton toggleVision = mOperatorJoystick.getButton(7, "Toggle Vision");
 
-  private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick.getButton(8, "Zero Arm Encoders && Disable Soft Limit");
+  private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick
+      .getButton(8, "Zero Arm Encoders && Disable Soft Limit");
 
   private static final MkJoystickButton mStopAuto = mOperatorJoystick.getButton(9, "Stop Auto");
 
@@ -63,6 +66,8 @@ public class Input {
   private static MkTimer rumbleTimer = new MkTimer();
 
   private static boolean isVelocitySetpoint = false;
+
+  private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.05, 0.0, 0.15);
 
   private static Drive mDrive = Drive.getInstance();
   private static HatchArm mHatch = HatchArm.getInstance();
@@ -140,16 +145,19 @@ public class Input {
       double forward = (-mDriverJoystick.getRawAxis(2) + mDriverJoystick.getRawAxis(3));
       double turn = (-mDriverJoystick.getRawAxis(0));
       DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
-      /*if(isVelocitySetpoint){
-        if(mDriverJoystick.getPOV() == 270){
+      if (isVelocitySetpoint) {
+        double visionTurn = mVisionAssist.calculate(Drive.getInstance().getHeadingDeg());
+        mDrive.setOpenLoop(new DriveSignal(controlSig.getLeft() + visionTurn, controlSig.getRight() - visionTurn));
+        /*
+        if (mDriverJoystick.getPOV() == 270) {
           mDrive.setDistanceAndAngle(0, -mDriverJoystick.getRawAxis(0) * 20);
-        } else if(mDriverJoystick.getPOV() == 90){
+        } else if (mDriverJoystick.getPOV() == 90) {
           mDrive.setDistanceAndAngle(0, -mDriverJoystick.getRawAxis(0) * -20);
-        }
-       // mDrive.setDistanceAndAngle(forward, -mDriverJoystick.getRawAxis(0) * 25);
-      } else{ */
-      mDrive.setOpenLoop(controlSig);
-      // }
+        }*/
+
+      } else {
+        mDrive.setOpenLoop(controlSig);
+      }
     }
     if (isOperatorJoystickConnected) {
       if (mCargoVisionOuttake.isPressed()) {
