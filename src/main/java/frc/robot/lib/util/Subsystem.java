@@ -1,4 +1,4 @@
-package frc.robot.lib.structure;
+package frc.robot.lib.util;
 
 /**
  * The Subsystem abstract class, which serves as a basic framework for all robot subsystems. Each subsystem outputs
@@ -30,9 +30,6 @@ public abstract class Subsystem {
    * Method for sanity checks with a slow update period
    */
   public synchronized void safetyCheck(double timestamp) {
-  }
-
-  public synchronized void slowUpdate(double timestamp) {
   }
 
   /**

@@ -9,10 +9,10 @@ import frc.robot.Constants.CAN;
 import frc.robot.Constants.HATCH_ARM;
 import frc.robot.Constants.MISC;
 import frc.robot.Input;
-import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
+import frc.robot.lib.util.Subsystem;
 import frc.robot.subsystems.Superstructure.RobotState;
 
 public class HatchArm extends Subsystem {

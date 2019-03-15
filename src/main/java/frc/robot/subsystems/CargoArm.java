@@ -13,8 +13,8 @@ import frc.robot.lib.drivers.CT;
 import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
 import frc.robot.lib.math.MkMath;
-import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
+import frc.robot.lib.util.Subsystem;
 
 public class CargoArm extends Subsystem {
 
@@ -23,8 +23,7 @@ public class CargoArm extends Subsystem {
   public final MkTalon mIntakeTalon;
   private final MkTalon mArmTalon;
   private boolean mDisCon = false;
-  private boolean mSoftLimitState = true;
-  private double mStartDis, mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable = 0.0;
+  private double mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable = 0.0;
   private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus;
 
   private CargoArm() {
@@ -180,8 +179,7 @@ public class CargoArm extends Subsystem {
   }
 
   public enum CargoArmControlState {
-    MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all
-    // circumstances
+    MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all circumstances
     OPEN_LOOP // Direct PercentVBus control of the arm as a failsafe
   }
 

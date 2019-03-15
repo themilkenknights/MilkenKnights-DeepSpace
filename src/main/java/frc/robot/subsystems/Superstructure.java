@@ -15,8 +15,8 @@ import frc.robot.Input;
 import frc.robot.Robot;
 import frc.robot.auto.modes.ClimbLevel2Mode;
 import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
-import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.Logger;
+import frc.robot.lib.util.Subsystem;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.HatchArm.HatchState;
 

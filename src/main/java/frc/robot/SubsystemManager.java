@@ -3,10 +3,10 @@ package frc.robot;
 import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.Constants.GENERAL;
-import frc.robot.lib.structure.Subsystem;
 import frc.robot.lib.util.CrashTrackingRunnable;
 import frc.robot.lib.util.DeltaTime;
 import frc.robot.lib.util.Logger;
+import frc.robot.lib.util.Subsystem;
 import frc.robot.subsystems.Vision;
 import java.util.List;
 
@@ -42,9 +42,8 @@ public class SubsystemManager {
                 subsystem.onQuickLoop(now);
                 subsystem.writePeriodicOutputs(now);
                 if (count == i) {
-                  subsystem.slowUpdate(now);
                   subsystem.outputTelemetry(now);
-                  //subsystem.safetyCheck(now);
+                  subsystem.safetyCheck(now);
                 }
                 i++;
               }
@@ -80,8 +79,14 @@ public class SubsystemManager {
   }
 
   public void checkSystem() {
+    boolean check = true;
     for (Subsystem subsystem : mAllSubsystems) {
-      subsystem.checkSystem();
+      check &= subsystem.checkSystem();
+    }
+    if (check) {
+      Logger.logMarker("Test Success");
+    } else {
+      Logger.logError("TEST FAILED!!!!!");
     }
   }
 
