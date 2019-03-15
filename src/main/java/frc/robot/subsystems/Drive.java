@@ -125,7 +125,7 @@ public class Drive extends Subsystem {
     if (getHeading() != null) {
       mGyroHeading.setDouble(getHeading().getDegrees());
     }
-    if (mCSVWriter != null) {
+    if (mCSVWriter != null && MISC.kDriveCSVLogging) {
       mCSVWriter.add(mPeriodicIO);
       mCSVWriter.write();
     }
@@ -159,7 +159,7 @@ public class Drive extends Subsystem {
   @Override
   public void onStop(double timestamp) {
     setOpenLoop(DriveSignal.BRAKE);
-    if (mCSVWriter != null) {
+    if (mCSVWriter != null && MISC.kDriveCSVLogging) {
       mCSVWriter.flush();
       mCSVWriter = null;
     }

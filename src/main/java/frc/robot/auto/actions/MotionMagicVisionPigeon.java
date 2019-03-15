@@ -15,9 +15,8 @@ public class MotionMagicVisionPigeon implements Action {
   private MkTimer timer = new MkTimer();
   private double lastDist, lastAngle, lastSkew = 0.0;
   private MkTimer downTimer = new MkTimer();
-  private MkTimer driveBackTimer = new MkTimer();
   private VisionServoGoal goal;
-  private boolean turnBack, isDone = false;
+  private boolean isDone = false;
 
   public MotionMagicVisionPigeon(VisionServoGoal goal) {
     this.goal = goal;
@@ -60,10 +59,7 @@ public class MotionMagicVisionPigeon implements Action {
     }
 
     LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
-    if (turnBack && !driveBackTimer.isDone()) {
-      //Drive.getInstance().setOpenLoop(new DriveSignal(-0.3, -0.3));
-      //TODO Fix
-    } else if (mTarget.isValidTarget() && mTarget.getDistance() < 28.0) {
+    if (mTarget.isValidTarget() && mTarget.getDistance() < 28.0) {
       lastAngle = -mTarget.getYaw();
       lastDist = mTarget.getDistance();
       lastSkew = mTarget.getSkew() * -2.0;
@@ -73,27 +69,20 @@ public class MotionMagicVisionPigeon implements Action {
 
   @Override
   public void done() {
-    Superstructure.getInstance().setRobotState(RobotState.TELEOP_DRIVE);
   }
 
   @Override
   public void start() {
-    turnBack = false;
     LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
     if (mTarget.isValidTarget()) {
-      if (mTarget.getDistance() > 35 && Math.abs(mTarget.getYaw()) > 20.0) {
-        turnBack = true;
-        isDone = true;
-        //driveBackTimer.start(1.0);
-      } else {
-        lastAngle = -mTarget.getYaw();
-        lastDist = mTarget.getDistance();
-        lastSkew = mTarget.getSkew() * -2.0;
-        Drive.getInstance().setDistanceAndAngle(lastDist, lastAngle + lastSkew);
-        timer.start(4.0);
-      }
+      lastAngle = -mTarget.getYaw();
+      lastDist = mTarget.getDistance();
+      lastSkew = mTarget.getSkew() * -2.0;
+      Drive.getInstance().setDistanceAndAngle(lastDist, lastAngle + lastSkew);
+      timer.start(4.0);
     } else {
       Logger.logMarker("Invalid Target");
+      Superstructure.getInstance().setRobotState(RobotState.TELEOP_DRIVE);
     }
   }
 
