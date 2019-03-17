@@ -20,13 +20,14 @@ public class HatchArm extends Subsystem {
   private HatchState mHatchState;
   private Solenoid mSpearSolenoid, mPancakeSolenoid;
   private boolean mSpearLimitTriggered = false;
-  private NetworkTableEntry mLimitTriggered, mSpearStateTab;
+  private NetworkTableEntry mLimitTriggered, mSpearStateTab, mPancakeTab;
   private MkTimer downTimer;
 
   private HatchArm() {
     ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
     mSpearStateTab = mHatchArmTab.add("Spear State", "").getEntry();
     mLimitTriggered = mHatchArmTab.add("Spear Limit", false).getEntry();
+    mPancakeTab = mHatchArmTab.add("Pancake", false).getEntry();
 
     mSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchArmChannel);
     mPancakeSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchPancakeChannel);
@@ -67,6 +68,7 @@ public class HatchArm extends Subsystem {
   public void outputTelemetry(double timestamp) {
     mLimitTriggered.setBoolean(isHatchLimitTriggered());
     mSpearStateTab.setString(mHatchState.toString());
+    mPancakeTab.setBoolean(mPancakeSolenoid.get());
   }
 
   @Override
@@ -102,19 +104,25 @@ public class HatchArm extends Subsystem {
   }
 
   public void setHatchState(HatchState state) {
-    mSpearSolenoid.set(state.state);
     mHatchState = state;
     switch (state) {
       case PLACE:
+        mPancakeSolenoid.set(true);
         downTimer.start(0.5);
+        break;
       case STOW:
         mPancakeSolenoid.set(true);
         break;
       case INTAKE:
         mPancakeSolenoid.set(false);
         break;
+      default:
+        Logger.logErrorWithTrace("Unknown Hatch State");
+        break;
+
     }
     Logger.logMarker("Set Hatch State to " + state.toString());
+    mSpearSolenoid.set(state.state);
   }
 
   public HatchState getHatchSpearState() {

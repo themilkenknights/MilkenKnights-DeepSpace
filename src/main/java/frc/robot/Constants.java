@@ -165,7 +165,7 @@ public final class Constants {
   public static class MISC {
 
     public static final boolean kDriveCSVLogging = false;
-    public static final boolean kErrorLogging = true;
+    public static final boolean kErrorLogging = false;
     public static final int kHatchArmChannel = 0;
     public static final int kFrontClimbSolenoidChannel = 2;
     public static final int kRearClimbSolenoidChannel = 1;

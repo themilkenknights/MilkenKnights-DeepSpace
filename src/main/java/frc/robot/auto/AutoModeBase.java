@@ -12,7 +12,7 @@ public abstract class AutoModeBase {
 
   protected double mUpdateRate = 1.0 / 100.0;
   protected boolean mActive = false;
-  private DeltaTime baseTimer = new DeltaTime("Auto Base Dt", 1, false);
+  private DeltaTime baseTimer = new DeltaTime("Auto Base Dt", 1, true);
 
   public void run() {
     mActive = true;

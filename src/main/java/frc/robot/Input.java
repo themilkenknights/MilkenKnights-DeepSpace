@@ -11,6 +11,8 @@ import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.util.SynchronousPIDF;
+import frc.robot.lib.vision.LimeLight;
+import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Drive;
@@ -63,9 +65,14 @@ public class Input {
 
   private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
 
+  private static final MkJoystickButton mToggleAutoDown = mOperatorJoystick.getButton(11, "Auto Down Button");
   private static MkTimer rumbleTimer = new MkTimer();
 
   private static boolean isVelocitySetpoint = false;
+
+  private static boolean hasBeenDown = false;
+
+  private static boolean enableAutoDown = false;
 
   private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.05, 0.0, 0.15);
 
@@ -160,6 +167,16 @@ public class Input {
       }
     }
     if (isOperatorJoystickConnected) {
+      if(mToggleAutoDown.isPressed()){
+        enableAutoDown = false;
+      }
+      LimelightTarget target = mVision.getLimelightTarget();
+if(target.isValidTarget() && target.getDistance() < 26 && target.getDistance() > 17 && Math.abs(target.getYaw()) < 15.0 && mHatch.getHatchSpearState() == HatchState.STOW && !hasBeenDown){
+//mHatch.setHatchState(HatchState.PLACE);
+hasBeenDown = true;
+}
+
+
       if (mCargoVisionOuttake.isPressed()) {
         mStructure.setRobotState(RobotState.VISION_CARGO_OUTTAKE);
       } else if (mOperatorJoystick.getPOV() == 0) {
@@ -206,6 +223,8 @@ public class Input {
           mHatch.setHatchState(HatchState.PLACE);
         } else {
           mHatch.setHatchState(HatchState.STOW);
+          hasBeenDown = false;
+          enableAutoDown = false;
         }
       } else if (mSpearIntake.isPressed()) {
         mHatch.setHatchState(HatchState.INTAKE);
