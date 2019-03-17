@@ -11,8 +11,6 @@ import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.util.SynchronousPIDF;
-import frc.robot.lib.vision.LimeLight;
-import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Drive;
@@ -29,6 +27,7 @@ import frc.robot.subsystems.Vision;
 public class Input {
 
   private static final MkJoystick mDriverJoystick = new MkJoystick(0);
+
   private static final MkJoystick mOperatorJoystick = new MkJoystick(1);
 
   private static final MkJoystickButton mToggleVelocity = mDriverJoystick.getButton(10, "Toggle Velocity Setpoint");
@@ -65,14 +64,9 @@ public class Input {
 
   private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
 
-  private static final MkJoystickButton mToggleAutoDown = mOperatorJoystick.getButton(11, "Auto Down Button");
   private static MkTimer rumbleTimer = new MkTimer();
 
   private static boolean isVelocitySetpoint = false;
-
-  private static boolean hasBeenDown = false;
-
-  private static boolean enableAutoDown = false;
 
   private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.05, 0.0, 0.15);
 
@@ -85,9 +79,7 @@ public class Input {
   public static void updateControlInput() {
     RobotState currentRobotState = mStructure.getRobotState();
 
-    // Joystick isn't connected if throttle is equal to zero. Used to ensure robot
-    // doesn't move when
-    // Joystick unplugged.
+    // Joystick isn't connected if throttle is equal to zero. Used to ensure robot doesn't move when Joystick unplugged.
     boolean isOperatorJoystickConnected = mOperatorJoystick.getRawAxis(3) != -1.0;
 
     // Stop rumble after 250ms
@@ -136,7 +128,7 @@ public class Input {
     if (mAutoClimb.isPressed()) {
       mStructure.setRobotState(RobotState.AUTO_CLIMB);
     } else if (mFrontClimb.isPressed()) {
-      // Toggle Front Climb Actuators (Toward Spear)
+      // Toggle Front Climb Actuators (Toward Hatch Spear)
       mStructure.setFrontClimbState(
           mStructure.getFrontClimbState() == ClimbState.RETRACTED ? ClimbState.LOWERED : ClimbState.RETRACTED);
     } else if (mRearClimb.isPressed()) {
@@ -166,20 +158,13 @@ public class Input {
         mDrive.setOpenLoop(controlSig);
       }
     }
+
     if (isOperatorJoystickConnected) {
-      if(mToggleAutoDown.isPressed()){
-        enableAutoDown = false;
-      }
-      LimelightTarget target = mVision.getLimelightTarget();
-if(target.isValidTarget() && target.getDistance() < 26 && target.getDistance() > 17 && Math.abs(target.getYaw()) < 15.0 && mHatch.getHatchSpearState() == HatchState.STOW && !hasBeenDown){
-//mHatch.setHatchState(HatchState.PLACE);
-hasBeenDown = true;
-}
-
-
       if (mCargoVisionOuttake.isPressed()) {
+        //Auto align and drive towards cargoship
         mStructure.setRobotState(RobotState.VISION_CARGO_OUTTAKE);
       } else if (mOperatorJoystick.getPOV() == 0) {
+        //Move cargo arm based on POV 'hat'
         mCargo.setArmState(CargoArmState.FORWARD_ROCKET_LEVEL_TWO);
       } else if (mOperatorJoystick.getPOV() == 90) {
         mCargo.setArmState(CargoArmState.REVERSE_CARGOSHIP);
@@ -190,8 +175,10 @@ hasBeenDown = true;
       }
 
       if (mIntakeRollerIn.isHeld()) {
+        //Always intake at the same speed
         mCargo.setIntakeRollers(CARGO_ARM.kIntakeRollerInSpeed);
       } else if (mIntakeRollerOut.isHeld()) {
+        //Set outtake roller speed based on Cargo Arm Position
         switch (mCargo.getArmState()) {
           case INTAKE:
           case ENABLE:
@@ -219,14 +206,16 @@ hasBeenDown = true;
       } else if (mHatchVisionPlace.isPressed()) {
         mStructure.setRobotState(RobotState.HATCH_VISION_OUTTAKE);
       } else if (mSpearTogglePlaceStow.isPressed()) {
+        //Toggle between stow and place
         if (mHatch.getHatchSpearState() == HatchState.STOW) {
+          //Place mode uses the limit switch to retract the pancake actuator at the correct time
           mHatch.setHatchState(HatchState.PLACE);
         } else {
+          //Stows hatch spear and extends pancake actuator
           mHatch.setHatchState(HatchState.STOW);
-          hasBeenDown = false;
-          enableAutoDown = false;
         }
       } else if (mSpearIntake.isPressed()) {
+        //Intake mode uses the limit switch to stow arm at the correct time
         mHatch.setHatchState(HatchState.INTAKE);
       } else if (mStowAllButton.isPressed()) {
         mHatch.setHatchState(HatchState.STOW);
