@@ -15,8 +15,8 @@ public class HatchOuttakeVisionPigeon extends AutoModeBase {
   @Override
   protected void routine() throws AutoModeEndedException {
     runAction(new MotionMagicVisionPigeon(VisionServoGoal.PLACE_HATCH));
-    runAction(new OpenLoopDrive(-0.25, -0.25, 0.5));
-    runAction(new CargoArmSetpoint(CargoArmState.REVERSE_CARGOSHIP));
-    runAction(new SetHatchArmState(HatchState.STOW));
+   // runAction(new OpenLoopDrive(-0.25, -0.25, 0.5));
+   // runAction(new CargoArmSetpoint(CargoArmState.REVERSE_CARGOSHIP));
+   // runAction(new SetHatchArmState(HatchState.STOW));
   }
 }

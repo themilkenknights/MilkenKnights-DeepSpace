@@ -146,7 +146,7 @@ public class Input {
       DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
       if (isVelocitySetpoint) {
         double visionTurn = mVisionAssist.calculate(Drive.getInstance().getHeadingDeg());
-        mDrive.setOpenLoop(new DriveSignal(controlSig.getLeft() + visionTurn, controlSig.getRight() - visionTurn));
+        mDrive.setOpenLoop(new DriveSignal(controlSig.getLeft() - visionTurn, controlSig.getRight() + visionTurn));
         /*
         if (mDriverJoystick.getPOV() == 270) {
           mDrive.setDistanceAndAngle(0, -mDriverJoystick.getRawAxis(0) * 20);

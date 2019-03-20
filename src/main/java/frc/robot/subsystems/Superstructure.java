@@ -122,7 +122,6 @@ public class Superstructure extends Subsystem {
     switch (state) {
       case TELEOP_DRIVE:
         AutoChooser.disableAuto();
-        Vision.getInstance().disableLED();
         break;
       case HATCH_VISION_INTAKE:
         startVisionHatchIntake();

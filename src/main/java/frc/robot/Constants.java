@@ -231,7 +231,7 @@ public final class Constants {
         tal.forwardLimitSwitchNormal = LimitSwitchNormal.Disabled;
         tal.reverseLimitSwitchNormal = LimitSwitchNormal.Disabled;
         if (loc == TalonLoc.Left || loc == TalonLoc.Right) {
-          tal.motionCurveStrength = 5;
+          tal.motionCurveStrength = 2;
           tal.velocityMeasurementPeriod = VelocityMeasPeriod.Period_25Ms;
           tal.velocityMeasurementWindow = 16;
 
@@ -239,14 +239,17 @@ public final class Constants {
           tal.slot0.kP = 7.0 * (0.1 * 1023.0) / (700.0);
           tal.slot0.kD = 3.0 * tal.slot0.kP;
           tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
-          tal.slot0.closedLoopPeakOutput = 0.30;
+          tal.slot0.closedLoopPeakOutput = 1.0;
           tal.slot0.allowableClosedloopError = 100;
 
-          tal.slot1.kP = 15.0 * (0.1 * 1023.0) / (700.0);
-          tal.slot1.kD = 10.0 * tal.slot0.kP;
-          tal.slot1.kF = 1023.0 / DRIVE.kMaxNativeVel;
+          tal.slot1.kP = 1.8;
+          tal.slot1.kI = 0.0;
+          tal.slot1.kD = 2.0;
+          tal.slot1.kF = 1023.0 / 819.0;
           tal.slot1.closedLoopPeakOutput = 1.0;
-          tal.slot1.allowableClosedloopError = 30;
+          tal.slot1.allowableClosedloopError = 15;
+          tal.slot1.maxIntegralAccumulator = 10000;
+          tal.slot1.integralZone = 150;
 
           tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.9);
           tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.4);

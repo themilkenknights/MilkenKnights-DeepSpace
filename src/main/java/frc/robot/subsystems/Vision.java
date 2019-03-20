@@ -22,6 +22,7 @@ public class Vision extends Subsystem {
   private Vision() {
     hatchCam = CameraServer.getInstance().startAutomaticCapture(0);
     hatchCam.setVideoMode(PixelFormat.kMJPEG, 176, 144, 30);
+    hatchCam.setConnectVerbose(0);
 
     ShuffleboardTab mVisionTab = Shuffleboard.getTab("General");
     mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
@@ -48,11 +49,11 @@ public class Vision extends Subsystem {
   }
 
   public void teleopInit(double timestamp) {
-    disableLED();
+    enableLED();
   }
 
   public void autonomousInit(double timestamp) {
-    disableLED();
+    enableLED();
   }
 
   @Override
@@ -71,8 +72,8 @@ public class Vision extends Subsystem {
   }
 
   public void disableLED() {
-    mLimeLight.setStream(StreamType.kPiPSecondary);
-    mLimeLight.setPipeline(0);
+    mLimeLight.setStream(StreamType.kStandard);
+    mLimeLight.setPipeline(1);
   }
 
   public synchronized LimelightTarget getLimelightTarget() {
@@ -88,7 +89,7 @@ public class Vision extends Subsystem {
   }
 
   public void enableLED() {
-    mLimeLight.setStream(StreamType.kPiPSecondary);
+    mLimeLight.setStream(StreamType.kStandard);
     mLimeLight.setPipeline(0);
   }
 
