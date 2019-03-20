@@ -16,7 +16,6 @@ import frc.robot.lib.util.Subsystem;
 import frc.robot.subsystems.Superstructure.RobotState;
 
 public class HatchArm extends Subsystem {
-
   private HatchState mHatchState;
   private Solenoid mSpearSolenoid, mPancakeSolenoid;
   private boolean mSpearLimitTriggered = false;
@@ -28,7 +27,6 @@ public class HatchArm extends Subsystem {
     mSpearStateTab = mHatchArmTab.add("Spear State", "").getEntry();
     mLimitTriggered = mHatchArmTab.add("Spear Limit", false).getEntry();
     mPancakeTab = mHatchArmTab.add("Pancake", false).getEntry();
-
     mSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchArmChannel);
     mPancakeSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchPancakeChannel);
     mHatchState = HatchState.STOW;
@@ -85,7 +83,6 @@ public class HatchArm extends Subsystem {
 
   @Override
   public void onRestart(double timestamp) {
-
   }
 
   @Override
@@ -119,7 +116,6 @@ public class HatchArm extends Subsystem {
       default:
         Logger.logErrorWithTrace("Unknown Hatch State");
         break;
-
     }
     Logger.logMarker("Set Hatch State to " + state.toString());
     mSpearSolenoid.set(state.state);
@@ -129,24 +125,19 @@ public class HatchArm extends Subsystem {
     return mHatchState;
   }
 
-
   /**
-   * The state of the pneumatic spear that places and intakes the Hatches. The default state should always be stowed on
-   * power off.
+   * The state of the pneumatic spear that places and intakes the Hatches. The default state should
+   * always be stowed on power off.
    */
   public enum HatchState {
-    PLACE(HATCH_ARM.kHatchArmPlaceState),
-    STOW(!HATCH_ARM.kHatchArmPlaceState),
-    INTAKE(HATCH_ARM.kHatchArmPlaceState);
+    PLACE(HATCH_ARM.kHatchArmPlaceState), STOW(!HATCH_ARM.kHatchArmPlaceState), INTAKE(HATCH_ARM.kHatchArmPlaceState);
     public final boolean state;
 
     HatchState(final boolean state) {
       this.state = state;
     }
   }
-
   private static class InstanceHolder {
-
     private static final HatchArm mInstance = new HatchArm();
   }
 }

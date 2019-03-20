@@ -1,13 +1,13 @@
 package frc.robot.lib.geometry;
 
-import frc.robot.lib.util.Util;
 import java.text.DecimalFormat;
+
+import frc.robot.lib.util.Util;
 
 /**
  * A translation in a 2d coordinate frame. Translations are simply shifts in an (x, y) plane.
  */
 public class Translation2d implements ITranslation2d<Translation2d> {
-
   protected static final Translation2d kIdentity = new Translation2d();
   protected final double x_;
   protected final double y_;
@@ -48,6 +48,10 @@ public class Translation2d implements ITranslation2d<Translation2d> {
     return a.x_ * b.x_ + a.y_ * b.y_;
   }
 
+  public static double cross(final Translation2d a, final Translation2d b) {
+    return a.x_ * b.y_ - a.y_ * b.x_;
+  }
+
   /**
    * The "norm" of a transform is the Euclidean distance in x and y.
    *
@@ -55,10 +59,6 @@ public class Translation2d implements ITranslation2d<Translation2d> {
    */
   public double norm() {
     return Math.hypot(x_, y_);
-  }
-
-  public static double cross(final Translation2d a, final Translation2d b) {
-    return a.x_ * b.y_ - a.y_ * b.x_;
   }
 
   public double norm2() {
@@ -72,8 +72,7 @@ public class Translation2d implements ITranslation2d<Translation2d> {
    * @return This translation rotated by rotation.
    */
   public Translation2d rotateBy(final Rotation2d rotation) {
-    return new Translation2d(
-        x_ * rotation.cos() - y_ * rotation.sin(), x_ * rotation.sin() + y_ * rotation.cos());
+    return new Translation2d(x_ * rotation.cos() - y_ * rotation.sin(), x_ * rotation.sin() + y_ * rotation.cos());
   }
 
   public Rotation2d direction() {
@@ -99,8 +98,7 @@ public class Translation2d implements ITranslation2d<Translation2d> {
   }
 
   public boolean epsilonEquals(final Translation2d other, double epsilon) {
-    return Util.epsilonEquals(x(), other.x(), epsilon)
-        && Util.epsilonEquals(y(), other.y(), epsilon);
+    return Util.epsilonEquals(x(), other.x(), epsilon) && Util.epsilonEquals(y(), other.y(), epsilon);
   }
 
   public double x() {

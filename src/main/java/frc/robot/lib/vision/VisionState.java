@@ -3,7 +3,6 @@ package frc.robot.lib.vision;
 import frc.robot.lib.util.DriveSignal;
 
 public class VisionState {
-
   public static VisionState EMPTY = new VisionState(DriveSignal.BRAKE, LimelightTarget.EMPTY, 0.0);
   private DriveSignal mDriveSignal;
   private LimelightTarget mTarget;

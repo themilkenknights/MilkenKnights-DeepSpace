@@ -8,7 +8,6 @@ import jaci.pathfinder.Trajectory;
  * @author Jared341
  */
 public class Path {
-
   protected Pair pair_;
   protected String name_;
   private boolean invert;
@@ -20,7 +19,6 @@ public class Path {
   }
 
   public Path() {
-
   }
 
   public String getName() {
@@ -35,7 +33,6 @@ public class Path {
       segment.acceleration = -segment.acceleration;
       segment.jerk = -segment.jerk;
     }
-
     for (Trajectory.Segment segment : pair_.right.segments) {
       segment.position = -segment.position;
       segment.velocity = -segment.velocity;
@@ -67,8 +64,7 @@ public class Path {
   }
 
   public Path copyPath() {
-    return new Path(name_,
-        new Pair(getLeftWheelTrajectory().copy(), getRightWheelTrajectory().copy()));
+    return new Path(name_, new Pair(getLeftWheelTrajectory().copy(), getRightWheelTrajectory().copy()));
   }
 
   public Trajectory getRightWheelTrajectory() {
@@ -76,7 +72,6 @@ public class Path {
   }
 
   public static class Pair {
-
     public Trajectory left;
     public Trajectory right;
 

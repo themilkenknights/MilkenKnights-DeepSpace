@@ -4,7 +4,6 @@ import frc.robot.subsystems.HatchArm;
 import frc.robot.subsystems.HatchArm.HatchState;
 
 public class SetHatchArmState extends RunOnceAction {
-
   private HatchState state;
 
   public SetHatchArmState(HatchState state) {

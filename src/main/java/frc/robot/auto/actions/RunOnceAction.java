@@ -6,7 +6,6 @@ package frc.robot.auto.actions;
  * @see Action
  */
 public abstract class RunOnceAction implements Action {
-
   @Override
   public boolean isFinished() {
     return true;

@@ -4,7 +4,6 @@ import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Superstructure.ClimbState;
 
 public class ActuateFrontSolenoids extends RunOnceAction {
-
   private ClimbState state;
 
   public ActuateFrontSolenoids(ClimbState state) {

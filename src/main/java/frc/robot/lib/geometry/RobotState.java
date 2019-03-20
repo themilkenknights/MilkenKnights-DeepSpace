@@ -1,13 +1,13 @@
 package frc.robot.lib.geometry;
 
+import java.util.Map;
+
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.lib.util.InterpolatingDouble;
 import frc.robot.lib.util.InterpolatingTreeMap;
 import frc.robot.subsystems.Drive;
-import java.util.Map;
 
 public class RobotState {
-
   private static final int kObservationBufferSize = 100;
   // FPGATimestamp -> RigidTransform2d or Rotation2d
   private static RobotState instance_ = new RobotState();
@@ -18,6 +18,10 @@ public class RobotState {
 
   private RobotState() {
     reset(0, new Pose2d());
+  }
+
+  public static RobotState getInstance() {
+    return instance_;
   }
 
   /**
@@ -32,18 +36,12 @@ public class RobotState {
     distance_driven_ = 0.0;
   }
 
-  public static RobotState getInstance() {
-    return instance_;
-  }
-
   public synchronized void resetDistanceDriven() {
     distance_driven_ = 0.0;
   }
 
   public synchronized Pose2d getPredictedFieldToVehicle(double lookahead_time) {
-    return getLatestFieldToVehicle()
-        .getValue()
-        .transformBy(Pose2d.exp(vehicle_velocity_predicted_.scaled(lookahead_time)));
+    return getLatestFieldToVehicle().getValue().transformBy(Pose2d.exp(vehicle_velocity_predicted_.scaled(lookahead_time)));
   }
 
   public synchronized Map.Entry<InterpolatingDouble, Pose2d> getLatestFieldToVehicle() {
@@ -51,19 +49,15 @@ public class RobotState {
   }
 
   /**
-   * Returns the robot's position on the field at a certain time. Linearly interpolates between stored robot positions
-   * to fill in the gaps.
+   * Returns the robot's position on the field at a certain time. Linearly interpolates between stored
+   * robot positions to fill in the gaps.
    */
   public synchronized Pose2d getFieldToVehicle(double timestamp) {
     return field_to_vehicle_.getInterpolated(new InterpolatingDouble(timestamp));
   }
 
-  public synchronized void addObservations(
-      double timestamp, Twist2d measured_velocity, Twist2d predicted_velocity) {
-    addFieldToVehicleObservation(
-        timestamp,
-        Kinematics.integrateForwardKinematics(
-            getLatestFieldToVehicle().getValue(), measured_velocity));
+  public synchronized void addObservations(double timestamp, Twist2d measured_velocity, Twist2d predicted_velocity) {
+    addFieldToVehicleObservation(timestamp, Kinematics.integrateForwardKinematics(getLatestFieldToVehicle().getValue(), measured_velocity));
     vehicle_velocity_measured_ = measured_velocity;
     vehicle_velocity_predicted_ = predicted_velocity;
   }
@@ -72,17 +66,9 @@ public class RobotState {
     field_to_vehicle_.put(new InterpolatingDouble(timestamp), observation);
   }
 
-  public synchronized Twist2d generateOdometryFromSensors(
-      double left_encoder_delta_distance,
-      double right_encoder_delta_distance,
-      Rotation2d current_gyro_angle) {
+  public synchronized Twist2d generateOdometryFromSensors(double left_encoder_delta_distance, double right_encoder_delta_distance, Rotation2d current_gyro_angle) {
     final Pose2d last_measurement = getLatestFieldToVehicle().getValue();
-    final Twist2d delta =
-        Kinematics.forwardKinematics(
-            last_measurement.getRotation(),
-            left_encoder_delta_distance,
-            right_encoder_delta_distance,
-            current_gyro_angle);
+    final Twist2d delta = Kinematics.forwardKinematics(last_measurement.getRotation(), left_encoder_delta_distance, right_encoder_delta_distance, current_gyro_angle);
     distance_driven_ += delta.dx; // do we care about dy here?
     return delta;
   }

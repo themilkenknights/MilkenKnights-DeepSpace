@@ -5,19 +5,13 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.lib.util.MkTimer;
-import frc.robot.lib.vision.LimeLightControlMode.Advanced_Crosshair;
-import frc.robot.lib.vision.LimeLightControlMode.Advanced_Target;
-import frc.robot.lib.vision.LimeLightControlMode.CamMode;
-import frc.robot.lib.vision.LimeLightControlMode.LedMode;
-import frc.robot.lib.vision.LimeLightControlMode.Snapshot;
-import frc.robot.lib.vision.LimeLightControlMode.StreamType;
+import frc.robot.lib.vision.LimeLightControlMode.*;
 
 /**
- * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you Enjoy the Lime Light
- * Camera.
+ * Lime Light Class was started by Corey Applegate of Team 3244 Granite City Gearheads. We Hope you
+ * Enjoy the Lime Light Camera.
  */
 public class LimeLight {
-
   NetworkTableEntry tv, tx, ty, ta, ts, tl, thoriz, tvert, ledMode, camMode, pipeline, stream, snapshot;
   NetworkTableEntry camtran;
   private NetworkTable m_table, m_pnp_table;
@@ -45,11 +39,9 @@ public class LimeLight {
     pipeline = m_table.getEntry("pipeline");
     stream = m_table.getEntry("stream");
     snapshot = m_table.getEntry("snapshot");
-
     m_pnp_tableName = "limelight";
     m_pnp_table = NetworkTableInstance.getDefault().getTable(m_pnp_tableName);
     camtran = m_pnp_table.getEntry("camtran");
-
     mTarget = LimelightTarget.EMPTY;
     validTarget = new MkTimer();
     validTarget.start(0.05);
@@ -105,7 +97,8 @@ public class LimeLight {
   /**
    * LedMode Sets limelight’s LED state
    *
-   * <p>kon koff kblink
+   * <p>
+   * kon koff kblink
    */
   public void setLEDMode(LedMode ledMode) {
     m_table.getEntry("ledMode").setValue(ledMode.getValue());
@@ -125,7 +118,8 @@ public class LimeLight {
   /**
    * camMode Sets limelight’s operation mode
    *
-   * <p>kvision kdriver (Increases exposure, disables vision processing)
+   * <p>
+   * kvision kdriver (Increases exposure, disables vision processing)
    */
   public void setCamMode(CamMode camMode) {
     m_table.getEntry("camMode").setValue(camMode.getValue());
@@ -144,7 +138,8 @@ public class LimeLight {
   /**
    * pipeline Sets limelight’s current pipeline
    *
-   * <p>0 . 9 Select pipeline 0.9
+   * <p>
+   * 0 . 9 Select pipeline 0.9
    */
   public void setPipeline(Integer pipeline) {
     if (pipeline < 0) {
@@ -176,9 +171,10 @@ public class LimeLight {
   /**
    * stream Sets limelight’s streaming mode
    *
-   * <p>kStandard - Side-by-side streams if a webcam is attached to Limelight kPiPMain - The
-   * secondary camera stream is placed in the lower-right corner of the primary camera stream kPiPSecondary - The
-   * primary camera stream is placed in the lower-right corner of the secondary camera stream
+   * <p>
+   * kStandard - Side-by-side streams if a webcam is attached to Limelight kPiPMain - The secondary
+   * camera stream is placed in the lower-right corner of the primary camera stream kPiPSecondary -
+   * The primary camera stream is placed in the lower-right corner of the secondary camera stream
    */
   public void setStream(StreamType stream) {
     m_table.getEntry("stream").setValue(stream.getValue());
@@ -193,7 +189,8 @@ public class LimeLight {
   /**
    * snapshot Allows users to take snapshots during a match
    *
-   * <p>kon - Stop taking snapshots koff - Take two snapshots per second
+   * <p>
+   * kon - Stop taking snapshots koff - Take two snapshots per second
    */
   public void setSnapshot(Snapshot snapshot) {
     m_table.getEntry("snapshot").setValue(snapshot.getValue());
@@ -201,9 +198,9 @@ public class LimeLight {
   // Setters
 
   /**
-   * Limelight posts three raw contours to NetworkTables that are not influenced by your grouping mode. That is, they
-   * are filtered with your pipeline parameters, but never grouped. X and Y are returned in normalized screen space (-1
-   * to 1) rather than degrees. *
+   * Limelight posts three raw contours to NetworkTables that are not influenced by your grouping
+   * mode. That is, they are filtered with your pipeline parameters, but never grouped. X and Y are
+   * returned in normalized screen space (-1 to 1) rather than degrees. *
    */
   public double getAdvanced_RotationToTarget(Advanced_Target raw) {
     NetworkTableEntry txRaw = m_table.getEntry("tx" + raw.getValue());
@@ -226,7 +223,8 @@ public class LimeLight {
   /**
    * pipeline Sets limelight’s current pipeline
    *
-   * <p>0 . 9 Select pipeline 0.9
+   * <p>
+   * 0 . 9 Select pipeline 0.9
    */
   /*
    * public void setPipeline(Double pipeline) { if(pipeline<0){ pipeline = 0.0; throw new
@@ -276,8 +274,7 @@ public class LimeLight {
   }
 
   public synchronized void updateTarget() {
-    mTarget = new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(), getVertLength(),
-        getSkew_Rotation(), getCamTran(), getCaptureTime());
+    mTarget = new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(), getVertLength(), getSkew_Rotation(), getCamTran(), getCaptureTime());
   }
 
   /**
@@ -327,7 +324,7 @@ public class LimeLight {
   }
 
   public double[] getCamTran() {
-    double[] cam = camtran.getDoubleArray(new double[]{0, 0, 0, 0, 0, 0});
+    double[] cam = camtran.getDoubleArray(new double[] {0, 0, 0, 0, 0, 0});
     return cam;
   }
 

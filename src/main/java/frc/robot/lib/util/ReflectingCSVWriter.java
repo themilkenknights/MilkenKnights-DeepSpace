@@ -12,7 +12,6 @@ import java.util.concurrent.ConcurrentLinkedDeque;
  * Writes data to a CSV file
  */
 public class ReflectingCSVWriter<T> {
-
   ConcurrentLinkedDeque<String> mLinesToWrite = new ConcurrentLinkedDeque<>();
   PrintWriter mOutput = null;
   Field[] mFields;

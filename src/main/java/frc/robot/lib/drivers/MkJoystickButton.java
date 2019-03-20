@@ -4,7 +4,6 @@ import edu.wpi.first.wpilibj.Joystick;
 import frc.robot.lib.util.Logger;
 
 public class MkJoystickButton {
-
   private final MkJoystick joystick;
   private final int rawButton;
   private final String buttonName;
@@ -23,14 +22,7 @@ public class MkJoystickButton {
     final boolean isPressed = !lastState && joystick.getRawButton(rawButton);
     update();
     if (isPressed) {
-      Logger.logMarker(
-          "[Joystick] "
-              + joystick.getPort()
-              + "\t [Button]"
-              + rawButton
-              + "\t Pressed ( "
-              + buttonName
-              + " Button )");
+      Logger.logMarker("[Joystick] " + joystick.getPort() + "\t [Button]" + rawButton + "\t Pressed ( " + buttonName + " Button )");
     }
     return isPressed;
   }

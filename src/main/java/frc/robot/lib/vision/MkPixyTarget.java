@@ -1,7 +1,6 @@
 package frc.robot.lib.vision;
 
 public class MkPixyTarget {
-
   private double yaw;
   private double area;
   private boolean isCargoIntaked;

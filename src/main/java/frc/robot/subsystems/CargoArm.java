@@ -4,6 +4,7 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.sensors.PigeonIMU;
+
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
@@ -17,7 +18,6 @@ import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.Subsystem;
 
 public class CargoArm extends Subsystem {
-
   private static CargoArmControlState mCargoArmControlState = CargoArmControlState.MOTION_MAGIC;
   private static CargoArmState mCargoArmState = CargoArmState.ENABLE;
   public final MkTalon mIntakeTalon;
@@ -29,15 +29,12 @@ public class CargoArm extends Subsystem {
   private CargoArm() {
     ShuffleboardTab mCargoArmTab = Shuffleboard.getTab("Cargo Arm");
     ShuffleboardTab mIntakeRollersTab = Shuffleboard.getTab("General");
-
     mAbsPos = mCargoArmTab.add("Absolute Pos", 0.0).getEntry();
     mControlMode = mCargoArmTab.add("Control Mode", "").getEntry();
     mStatus = mCargoArmTab.add("Status", false).getEntry();
     mDesiredState = mCargoArmTab.add("Desired State", "").getEntry();
-
     mArmTalon = new MkTalon(CAN.kMasterCargoArmTalonID, CAN.kSlaveCargoArmVictorID, TalonLoc.Cargo_Arm, mCargoArmTab);
-    mIntakeTalon = new MkTalon(CAN.kLeftCargoIntakeTalonID, CAN.kRightCargoIntakeTalonID, TalonLoc.Cargo_Intake,
-        mIntakeRollersTab);
+    mIntakeTalon = new MkTalon(CAN.kLeftCargoIntakeTalonID, CAN.kRightCargoIntakeTalonID, TalonLoc.Cargo_Intake, mIntakeRollersTab);
   }
 
   public static CargoArm getInstance() {
@@ -56,8 +53,7 @@ public class CargoArm extends Subsystem {
         mArmTalon.set(ControlMode.MotionMagic, MkMath.degreesToNativeUnits(mArmPosEnable), NeutralMode.Brake);
       } else {
         double armFeed = MkMath.sin(mArmTalon.getPosition() + CARGO_ARM.kArmOffset) * CARGO_ARM.kFeedConstant;
-        mArmTalon.set(ControlMode.MotionMagic, MkMath.degreesToNativeUnits(mCargoArmState.state),
-            DemandType.ArbitraryFeedForward, -armFeed, NeutralMode.Brake);
+        mArmTalon.set(ControlMode.MotionMagic, MkMath.degreesToNativeUnits(mCargoArmState.state), DemandType.ArbitraryFeedForward, -armFeed, NeutralMode.Brake);
       }
     } else {
       Logger.logErrorWithTrace("Unexpected Cargo Arm Control State: " + mCargoArmControlState);
@@ -66,11 +62,12 @@ public class CargoArm extends Subsystem {
   }
 
   /**
-   * The arm encoder was getting periodically briefly disconnected during matches so this method waits 250ms before
-   * switching to open loop control.
+   * The arm encoder was getting periodically briefly disconnected during matches so this method waits
+   * 250ms before switching to open loop control.
    *
-   * <p>This method also checks for unsafe current output and will automatically switches to open
-   * loop control.
+   * <p>
+   * This method also checks for unsafe current output and will automatically switches to open loop
+   * control.
    */
   @Override
   public synchronized void safetyCheck(double timestamp) {
@@ -84,7 +81,6 @@ public class CargoArm extends Subsystem {
         mDisCon = true;
       }
     }
-
     if (mArmTalon.getCurrent() > CARGO_ARM.kMaxSafeCurrent) {
       setOpenLoop(0.0);
       Logger.logError("Unsafe Current on Cargo Arm " + mArmTalon.getCurrent() + " Amps");
@@ -96,8 +92,10 @@ public class CargoArm extends Subsystem {
     mArmTalon.updateShuffleboard();
     mDesiredState.setString(mCargoArmState.toString());
     mControlMode.setString(mCargoArmControlState.toString());
-    /*mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
-    mStatus.setBoolean(mArmTalon.isEncoderConnected());*/
+    /*
+     * mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
+     * mStatus.setBoolean(mArmTalon.isEncoderConnected());
+     */
   }
 
   @Override
@@ -182,23 +180,16 @@ public class CargoArm extends Subsystem {
     MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all circumstances
     OPEN_LOOP // Direct PercentVBus control of the arm as a failsafe
   }
-
   public enum CargoArmState {
     ENABLE(0.0), // State directly after robot is enabled (not mapped to a specific angle)
-    INTAKE(182.0),
-    FORWARD_ROCKET_LEVEL_ONE(120.0),
-    FORWARD_ROCKET_LEVEL_TWO(75.0),
-    REVERSE_CARGOSHIP(21.0);
-
+    INTAKE(182.0), FORWARD_ROCKET_LEVEL_ONE(120.0), FORWARD_ROCKET_LEVEL_TWO(75.0), REVERSE_CARGOSHIP(21.0);
     public final double state;
 
     CargoArmState(final double state) {
       this.state = state;
     }
   }
-
   private static class InstanceHolder {
-
     private static final CargoArm mInstance = new CargoArm();
   }
 }

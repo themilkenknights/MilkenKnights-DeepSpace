@@ -11,7 +11,6 @@ import jaci.pathfinder.Trajectory;
  * @author Jared341
  */
 public class TrajectoryFollower {
-
   private double kp_;
   private double kAng_;
   private double ka_;
@@ -52,9 +51,7 @@ public class TrajectoryFollower {
     double currentTime = Timer.getFPGATimestamp();
     current_segment = (int) (customRound(currentTime - Dt) / GENERAL.kFastLooperDt);
     if (current_segment < profile_.length()) {
-
       // Trajectory.Segment segment = interpolateSegments(current_segment, currentTime);
-
       Trajectory.Segment segment = profile_.get(current_segment);
       double error = segment.position - dist;
       double angError = segment.heading - heading;
@@ -95,7 +92,7 @@ public class TrajectoryFollower {
     return last_error_ < _DistTol && last_Ang_error < _AngTol;
   }
 
-  //TODO Fix
+  // TODO Fix
   private Trajectory.Segment interpolateSegments(int currentSeg, double time) {
     if (currentSeg == 0) {
       return profile_.get(currentSeg);
@@ -106,21 +103,14 @@ public class TrajectoryFollower {
     double firstTime = firstSeg.dt * (currentSeg - 1);
     double lastTime = lastSeg.dt * (currentSeg);
     double currentTime = time - Dt;
-    pos = (((currentTime - firstTime) * (lastSeg.position - firstSeg.position)) / (lastTime
-        - firstTime)) + firstSeg.position;
-    vel = (((currentTime - firstTime) * (lastSeg.velocity - firstSeg.velocity)) / (lastTime
-        - firstTime)) + firstSeg.velocity;
-    acc = (((currentTime - firstTime) * (lastSeg.acceleration - firstSeg.acceleration)) / (lastTime
-        - firstTime)) + firstSeg.acceleration;
-    jerk = (((currentTime - firstTime) * (lastSeg.jerk - firstSeg.jerk)) / (lastTime - firstTime))
-        + firstSeg.jerk;
+    pos = (((currentTime - firstTime) * (lastSeg.position - firstSeg.position)) / (lastTime - firstTime)) + firstSeg.position;
+    vel = (((currentTime - firstTime) * (lastSeg.velocity - firstSeg.velocity)) / (lastTime - firstTime)) + firstSeg.velocity;
+    acc = (((currentTime - firstTime) * (lastSeg.acceleration - firstSeg.acceleration)) / (lastTime - firstTime)) + firstSeg.acceleration;
+    jerk = (((currentTime - firstTime) * (lastSeg.jerk - firstSeg.jerk)) / (lastTime - firstTime)) + firstSeg.jerk;
     heading = lastSeg.heading;
     dt = firstSeg.dt;
-    x = (((currentTime - firstTime) * (lastSeg.x - firstSeg.x)) / (lastTime - firstTime))
-        + firstSeg.x;
-    y = (((currentTime - firstTime) * (lastSeg.y - firstSeg.y)) / (lastTime - firstTime))
-        + firstSeg.y;
+    x = (((currentTime - firstTime) * (lastSeg.x - firstSeg.x)) / (lastTime - firstTime)) + firstSeg.x;
+    y = (((currentTime - firstTime) * (lastSeg.y - firstSeg.y)) / (lastTime - firstTime)) + firstSeg.y;
     return new Trajectory.Segment(pos, vel, acc, jerk, heading, dt, x, y);
   }
-
 }

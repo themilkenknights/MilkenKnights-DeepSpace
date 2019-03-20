@@ -6,7 +6,6 @@ import frc.robot.auto.actions.MotionMagicVisionPigeon;
 import frc.robot.auto.actions.MotionMagicVisionPigeon.VisionServoGoal;
 
 public class HatchOuttakeVisionPigeon extends AutoModeBase {
-
   @Override
   protected void routine() throws AutoModeEndedException {
     runAction(new MotionMagicVisionPigeon(VisionServoGoal.PLACE_HATCH));

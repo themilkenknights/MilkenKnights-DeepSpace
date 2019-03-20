@@ -5,7 +5,6 @@ import frc.robot.lib.util.DriveSignal;
 import frc.robot.subsystems.Drive;
 
 public class OpenLoopDrive implements Action {
-
   private static final Drive mDrive = Drive.getInstance();
   private final double mDuration, mLeft, mRight;
   private double mStartTime;

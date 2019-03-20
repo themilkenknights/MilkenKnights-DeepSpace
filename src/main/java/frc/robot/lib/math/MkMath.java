@@ -3,7 +3,6 @@ package frc.robot.lib.math;
 import frc.robot.Constants;
 
 public class MkMath {
-
   public static double nativeUnitsPer100MstoInchesPerSec(double vel) {
     return 10 * nativeUnitsToInches(vel);
   }

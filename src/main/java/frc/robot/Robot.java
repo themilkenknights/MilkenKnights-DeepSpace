@@ -1,21 +1,16 @@
 package frc.robot;
 
+import java.util.Arrays;
+
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import frc.robot.lib.util.Logger;
-import frc.robot.subsystems.CargoArm;
-import frc.robot.subsystems.Drive;
-import frc.robot.subsystems.HatchArm;
-import frc.robot.subsystems.Superstructure;
-import frc.robot.subsystems.Vision;
-import java.util.Arrays;
+import frc.robot.subsystems.*;
 
 public class Robot extends TimedRobot {
-
   public static MatchState mMatchState = MatchState.DISABLED;
-  private final SubsystemManager mSubsystemManager = new SubsystemManager(Arrays
-      .asList(CargoArm.getInstance(), Drive.getInstance(), HatchArm.getInstance(), Superstructure.getInstance(),
-          Vision.getInstance()));
+  private final SubsystemManager mSubsystemManager =
+      new SubsystemManager(Arrays.asList(CargoArm.getInstance(), Drive.getInstance(), HatchArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
 
   public Robot() {
     super(Constants.GENERAL.kMainLoopDt);
@@ -97,9 +92,6 @@ public class Robot extends TimedRobot {
   }
 
   public enum MatchState {
-    AUTO,
-    TELEOP,
-    DISABLED,
-    TEST
+    AUTO, TELEOP, DISABLED, TEST
   }
 }

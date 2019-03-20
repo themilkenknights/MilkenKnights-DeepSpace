@@ -4,7 +4,6 @@ import frc.robot.Constants;
 import frc.robot.lib.util.DriveSignal;
 
 public class DriveHelper {
-
   private static final double kThrottleDeadband = Constants.GENERAL.kThrottleDeadband;
   private static final double kWheelDeadband = Constants.GENERAL.kWheelDeadband;
 
@@ -36,7 +35,6 @@ public class DriveHelper {
         rightMotorSpeed = -Math.max(-moveValue, -rotateValue);
       }
     }
-
     return new DriveSignal(leftMotorSpeed, rightMotorSpeed);
   }
 

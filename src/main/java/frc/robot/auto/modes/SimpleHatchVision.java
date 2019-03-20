@@ -8,7 +8,6 @@ import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Superstructure.RobotState;
 
 public class SimpleHatchVision extends AutoModeBase {
-
   @Override
   protected void routine() throws AutoModeEndedException {
     runAction(new MotionMagicVisionFeed(true));

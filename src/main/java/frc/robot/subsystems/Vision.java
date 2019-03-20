@@ -13,7 +13,6 @@ import frc.robot.lib.vision.LimeLightControlMode.StreamType;
 import frc.robot.lib.vision.LimelightTarget;
 
 public class Vision extends Subsystem {
-
   private LimeLight mLimeLight;
   private NetworkTableEntry mLLX, mDist, mArea, mLED, mSkew, mValid;
   private boolean isVision = true;
@@ -23,7 +22,6 @@ public class Vision extends Subsystem {
     hatchCam = CameraServer.getInstance().startAutomaticCapture(0);
     hatchCam.setVideoMode(PixelFormat.kMJPEG, 176, 144, 30);
     hatchCam.setConnectVerbose(0);
-
     ShuffleboardTab mVisionTab = Shuffleboard.getTab("General");
     mLLX = mVisionTab.add("Limelight X", 0.0).getEntry();
     mDist = mVisionTab.add("Limelight Dist", 0.0).getEntry();
@@ -98,7 +96,6 @@ public class Vision extends Subsystem {
   }
 
   private static class InstanceHolder {
-
     private static final Vision mInstance = new Vision();
   }
 }

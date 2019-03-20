@@ -4,7 +4,6 @@ import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Superstructure.RobotState;
 
 public class SetSuperstructure extends RunOnceAction {
-
   private RobotState state;
 
   public SetSuperstructure(RobotState state) {

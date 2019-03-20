@@ -3,10 +3,7 @@ package frc.robot.lib.util;
 import jaci.pathfinder.Trajectory;
 
 public class TrajectoryStatus {
-
-  public static TrajectoryStatus NEUTRAL = new TrajectoryStatus(
-      new Trajectory.Segment(0, 0, 0, 0, 0, 0, 0, 0), 0, 0, 0, 0, 0);
-
+  public static TrajectoryStatus NEUTRAL = new TrajectoryStatus(new Trajectory.Segment(0, 0, 0, 0, 0, 0, 0, 0), 0, 0, 0, 0, 0);
   private double output;
   private Trajectory.Segment seg;
   private double posError;
@@ -15,8 +12,7 @@ public class TrajectoryStatus {
   private double angError;
   private double arbFeed;
 
-  public TrajectoryStatus(Trajectory.Segment seg, double posError, double velError, double angError,
-      double arbFeed, double output) {
+  public TrajectoryStatus(Trajectory.Segment seg, double posError, double velError, double angError, double arbFeed, double output) {
     this.seg = seg;
     this.output = output;
     this.posError = posError;
@@ -50,8 +46,6 @@ public class TrajectoryStatus {
   }
 
   public String toString() {
-    return seg.toString() + "Output: " + output + " Position Error: " + posError
-        + "Velocity Error: " + velError + "Angle Error: " + angError + " Arb Feed: " + arbFeed;
+    return seg.toString() + "Output: " + output + " Position Error: " + posError + "Velocity Error: " + velError + "Angle Error: " + angError + " Arb Feed: " + arbFeed;
   }
-
 }

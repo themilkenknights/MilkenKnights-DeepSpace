@@ -1,10 +1,10 @@
 package frc.robot.lib.drivers;
 
-import edu.wpi.first.wpilibj.XboxController;
 import java.util.HashMap;
 
-public class MkXboxController extends XboxController {
+import edu.wpi.first.wpilibj.XboxController;
 
+public class MkXboxController extends XboxController {
   private final HashMap<Integer, MkXboxControllerButton> buttons;
 
   /**

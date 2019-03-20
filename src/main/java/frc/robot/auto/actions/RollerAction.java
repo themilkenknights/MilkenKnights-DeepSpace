@@ -4,7 +4,6 @@ import frc.robot.lib.util.MkTimer;
 import frc.robot.subsystems.CargoArm;
 
 public class RollerAction implements Action {
-
   private MkTimer timer;
   private double time;
   private double output;

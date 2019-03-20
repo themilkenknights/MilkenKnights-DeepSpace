@@ -5,10 +5,10 @@ import frc.robot.lib.util.Util;
 /**
  * Represents a 2d pose (rigid transform) containing translational and rotational elements.
  *
- * <p>Inspired by Sophus (https://github.com/strasdat/Sophus/tree/master/sophus)
+ * <p>
+ * Inspired by Sophus (https://github.com/strasdat/Sophus/tree/master/sophus)
  */
 public class Pose2d implements IPose2d<Pose2d> {
-
   protected static final Pose2d kIdentity = new Pose2d();
   private static final double kEps = 1E-9;
   protected final Translation2d translation_;
@@ -46,13 +46,61 @@ public class Pose2d implements IPose2d<Pose2d> {
     return new Pose2d(new Translation2d(), rotation);
   }
 
+  private static Translation2d intersectionInternal(final Pose2d a, final Pose2d b) {
+    final Rotation2d a_r = a.getRotation();
+    final Rotation2d b_r = b.getRotation();
+    final Translation2d a_t = a.getTranslation();
+    final Translation2d b_t = b.getTranslation();
+    final double tan_b = b_r.tan();
+    final double t = ((a_t.x() - b_t.x()) * tan_b + b_t.y() - a_t.y()) / (a_r.sin() - a_r.cos() * tan_b);
+    if (Double.isNaN(t)) {
+      return new Translation2d(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
+    }
+    return a_t.translateBy(a_r.toTranslation().scale(t));
+  }
+
+  /**
+   * Logical inverse of the above.
+   */
+  public static Twist2d log(final Pose2d transform) {
+    final double dtheta = transform.getRotation().getRadians();
+    final double half_dtheta = 0.5 * dtheta;
+    final double cos_minus_one = transform.getRotation().cos() - 1.0;
+    double halftheta_by_tan_of_halfdtheta;
+    if (Math.abs(cos_minus_one) < kEps) {
+      halftheta_by_tan_of_halfdtheta = 1.0 - 1.0 / 12.0 * dtheta * dtheta;
+    } else {
+      halftheta_by_tan_of_halfdtheta = -(half_dtheta * transform.getRotation().sin()) / cos_minus_one;
+    }
+    final Translation2d translation_part = transform.getTranslation().rotateBy(new Rotation2d(halftheta_by_tan_of_halfdtheta, -half_dtheta, false));
+    return new Twist2d(translation_part.x(), translation_part.y(), dtheta);
+  }
+
+  /**
+   * Obtain a new Pose2d from a (constant curvature) velocity. See:
+   * https://github.com/strasdat/Sophus/blob/master/sophus/se2.hpp
+   */
+  public static Pose2d exp(final Twist2d delta) {
+    double sin_theta = Math.sin(delta.dtheta);
+    double cos_theta = Math.cos(delta.dtheta);
+    double s, c;
+    if (Math.abs(delta.dtheta) < kEps) {
+      s = 1.0 - 1.0 / 6.0 * delta.dtheta * delta.dtheta;
+      c = .5 * delta.dtheta;
+    } else {
+      s = sin_theta / delta.dtheta;
+      c = (1.0 - cos_theta) / delta.dtheta;
+    }
+    return new Pose2d(new Translation2d(delta.dx * s - delta.dy * c, delta.dx * c + delta.dy * s), new Rotation2d(cos_theta, sin_theta, false));
+  }
+
   public Pose2d normal() {
     return new Pose2d(translation_, rotation_.normal());
   }
 
   /**
-   * Finds the point where the heading of this pose intersects the heading of another. Returns (+INF, +INF) if
-   * parallel.
+   * Finds the point where the heading of this pose intersects the heading of another. Returns (+INF,
+   * +INF) if parallel.
    */
   public Translation2d intersection(final Pose2d other) {
     final Rotation2d other_rotation = other.getRotation();
@@ -72,20 +120,6 @@ public class Pose2d implements IPose2d<Pose2d> {
     return rotation_;
   }
 
-  private static Translation2d intersectionInternal(final Pose2d a, final Pose2d b) {
-    final Rotation2d a_r = a.getRotation();
-    final Rotation2d b_r = b.getRotation();
-    final Translation2d a_t = a.getTranslation();
-    final Translation2d b_t = b.getTranslation();
-    final double tan_b = b_r.tan();
-    final double t =
-        ((a_t.x() - b_t.x()) * tan_b + b_t.y() - a_t.y()) / (a_r.sin() - a_r.cos() * tan_b);
-    if (Double.isNaN(t)) {
-      return new Translation2d(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
-    }
-    return a_t.translateBy(a_r.toTranslation().scale(t));
-  }
-
   @Override
   public Translation2d getTranslation() {
     return translation_;
@@ -100,27 +134,6 @@ public class Pose2d implements IPose2d<Pose2d> {
     }
     final Twist2d twist = log(inverse().transformBy(other));
     return (Util.epsilonEquals(twist.dy, 0.0) && Util.epsilonEquals(twist.dtheta, 0.0));
-  }
-
-  /**
-   * Logical inverse of the above.
-   */
-  public static Twist2d log(final Pose2d transform) {
-    final double dtheta = transform.getRotation().getRadians();
-    final double half_dtheta = 0.5 * dtheta;
-    final double cos_minus_one = transform.getRotation().cos() - 1.0;
-    double halftheta_by_tan_of_halfdtheta;
-    if (Math.abs(cos_minus_one) < kEps) {
-      halftheta_by_tan_of_halfdtheta = 1.0 - 1.0 / 12.0 * dtheta * dtheta;
-    } else {
-      halftheta_by_tan_of_halfdtheta =
-          -(half_dtheta * transform.getRotation().sin()) / cos_minus_one;
-    }
-    final Translation2d translation_part =
-        transform
-            .getTranslation()
-            .rotateBy(new Rotation2d(halftheta_by_tan_of_halfdtheta, -half_dtheta, false));
-    return new Twist2d(translation_part.x(), translation_part.y(), dtheta);
   }
 
   /**
@@ -147,25 +160,6 @@ public class Pose2d implements IPose2d<Pose2d> {
     return transformBy(Pose2d.exp(twist.scaled(x)));
   }
 
-  /**
-   * Obtain a new Pose2d from a (constant curvature) velocity. See: https://github.com/strasdat/Sophus/blob/master/sophus/se2.hpp
-   */
-  public static Pose2d exp(final Twist2d delta) {
-    double sin_theta = Math.sin(delta.dtheta);
-    double cos_theta = Math.cos(delta.dtheta);
-    double s, c;
-    if (Math.abs(delta.dtheta) < kEps) {
-      s = 1.0 - 1.0 / 6.0 * delta.dtheta * delta.dtheta;
-      c = .5 * delta.dtheta;
-    } else {
-      s = sin_theta / delta.dtheta;
-      c = (1.0 - cos_theta) / delta.dtheta;
-    }
-    return new Pose2d(
-        new Translation2d(delta.dx * s - delta.dy * c, delta.dx * c + delta.dy * s),
-        new Rotation2d(cos_theta, sin_theta, false));
-  }
-
   @Override
   public double distance(final Pose2d other) {
     return Pose2d.log(inverse().transformBy(other)).norm();
@@ -190,8 +184,7 @@ public class Pose2d implements IPose2d<Pose2d> {
   }
 
   public boolean epsilonEquals(final Pose2d other, double epsilon) {
-    return getTranslation().epsilonEquals(other.getTranslation(), epsilon)
-        && getRotation().isParallel(other.getRotation());
+    return getTranslation().epsilonEquals(other.getTranslation(), epsilon) && getRotation().isParallel(other.getRotation());
   }
 
   @Override
@@ -200,22 +193,19 @@ public class Pose2d implements IPose2d<Pose2d> {
   }
 
   /**
-   * Transforming this RigidTransform2d means first translating by other.translation and then rotating by
-   * other.rotation
+   * Transforming this RigidTransform2d means first translating by other.translation and then rotating
+   * by other.rotation
    *
    * @param other The other transform.
    * @return This transform * other
    */
   @Override
   public Pose2d transformBy(final Pose2d other) {
-    return new Pose2d(
-        translation_.translateBy(other.translation_.rotateBy(rotation_)),
-        rotation_.rotateBy(other.rotation_));
+    return new Pose2d(translation_.translateBy(other.translation_.rotateBy(rotation_)), rotation_.rotateBy(other.rotation_));
   }
 
   @Override
   public Pose2d mirror() {
-    return new Pose2d(
-        new Translation2d(getTranslation().x(), -getTranslation().y()), getRotation().inverse());
+    return new Pose2d(new Translation2d(getTranslation().x(), -getTranslation().y()), getRotation().inverse());
   }
 }

@@ -4,14 +4,12 @@ import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.lib.util.Logger;
 
 public class MkXboxControllerButton {
-
   private final MkXboxController joystick;
   private final int rawButton;
   private final String buttonName;
   private boolean lastState;
 
-  public MkXboxControllerButton(
-      final MkXboxController joystick, final int rawButton, final String buttonName) {
+  public MkXboxControllerButton(final MkXboxController joystick, final int rawButton, final String buttonName) {
     this.joystick = joystick;
     this.rawButton = rawButton;
     this.buttonName = buttonName;
@@ -24,14 +22,7 @@ public class MkXboxControllerButton {
     final boolean isPressed = !lastState && joystick.getRawButton(rawButton);
     update();
     if (isPressed) {
-      Logger.logMarker(
-          "[Joystick] "
-              + joystick.getPort()
-              + "\t[Button]"
-              + rawButton
-              + "\t Pressed ( "
-              + buttonName
-              + " )");
+      Logger.logMarker("[Joystick] " + joystick.getPort() + "\t[Button]" + rawButton + "\t Pressed ( " + buttonName + " )");
     }
     return isPressed;
   }

@@ -3,7 +3,6 @@ package frc.robot.auto.actions;
 import frc.robot.subsystems.Drive;
 
 public class MotionMagicAngle implements Action {
-
   private double dist;
   private double angle;
 

@@ -1,10 +1,10 @@
 package frc.robot.lib.drivers;
 
-import edu.wpi.first.wpilibj.Joystick;
 import java.util.HashMap;
 
-public class MkJoystick extends Joystick {
+import edu.wpi.first.wpilibj.Joystick;
 
+public class MkJoystick extends Joystick {
   private final HashMap<Integer, MkJoystickButton> buttons;
 
   /**

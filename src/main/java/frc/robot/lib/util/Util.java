@@ -6,7 +6,6 @@ import java.util.List;
  * Contains basic functions that are used often.
  */
 public class Util {
-
   public static final double kEpsilon = 1e-12;
 
   /**

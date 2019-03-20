@@ -21,7 +21,6 @@ import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.HatchArm.HatchState;
 
 public class Superstructure extends Subsystem {
-
   private static HatchArm mHatch = HatchArm.getInstance();
   private PowerDistributionPanel mPDP;
   private Compressor mCompressor;
@@ -29,15 +28,11 @@ public class Superstructure extends Subsystem {
   private Solenoid mFrontClimbSolenoid, mRearClimbSolenoid;
   private ClimbState mRearClimbState = ClimbState.RETRACTED;
   private ClimbState mFrontClimbState = ClimbState.RETRACTED;
-  private NetworkTableEntry mMatchState,
-      mRobotStateEntry,
-      mCompressorCurrent,
-      mFrontClimb,
-      mRearClimb;
+  private NetworkTableEntry mMatchState, mRobotStateEntry, mCompressorCurrent, mFrontClimb, mRearClimb;
 
   /**
-   * Stores PDP, Compressor, General Robot Data, and Climb Actuators. Acts as the high-level controller that changes
-   * calls the lower-level subsystems.
+   * Stores PDP, Compressor, General Robot Data, and Climb Actuators. Acts as the high-level
+   * controller that changes calls the lower-level subsystems.
    */
   private Superstructure() {
     ShuffleboardTab mStructureTab = Shuffleboard.getTab("General");
@@ -46,10 +41,8 @@ public class Superstructure extends Subsystem {
     mCompressorCurrent = mStructureTab.add("Compressor Current", 0.0).getEntry();
     mFrontClimb = mStructureTab.add("Front Climb", "").getEntry();
     mRearClimb = mStructureTab.add("Rear Climb", "").getEntry();
-
     mFrontClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kFrontClimbSolenoidChannel);
     mRearClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kRearClimbSolenoidChannel);
-
     mPDP = new PowerDistributionPanel(Constants.CAN.kPowerDistributionPanelID);
     LiveWindow.disableAllTelemetry();
     mCompressor = new Compressor(CAN.kPneumaticsControlModuleID);
@@ -88,8 +81,7 @@ public class Superstructure extends Subsystem {
 
   @Override
   public boolean checkSystem() {
-    return mPDP.getTotalCurrent() > 0.0
-        && mPDP.getVoltage() > 0.0;
+    return mPDP.getTotalCurrent() > 0.0 && mPDP.getVoltage() > 0.0;
   }
 
   public ClimbState getFrontClimbState() {
@@ -178,25 +170,17 @@ public class Superstructure extends Subsystem {
   }
 
   public enum ClimbState {
-    RETRACTED(false),
-    LOWERED(true);
+    RETRACTED(false), LOWERED(true);
     public final boolean state;
 
     ClimbState(final boolean state) {
       this.state = state;
     }
   }
-
   public enum RobotState {
-    TELEOP_DRIVE,
-    HATCH_VISION_INTAKE,
-    HATCH_VISION_OUTTAKE,
-    VISION_CARGO_OUTTAKE,
-    AUTO_CLIMB
+    TELEOP_DRIVE, HATCH_VISION_INTAKE, HATCH_VISION_OUTTAKE, VISION_CARGO_OUTTAKE, AUTO_CLIMB
   }
-
   private static class InstanceHolder {
-
     private static final Superstructure mInstance = new Superstructure();
   }
 }

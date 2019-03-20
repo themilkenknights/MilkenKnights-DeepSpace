@@ -3,7 +3,6 @@ package frc.robot.auto.actions;
 import frc.robot.subsystems.Drive;
 
 public class WaitForAngle implements Action {
-
   private double angle;
   private boolean mUp;
 

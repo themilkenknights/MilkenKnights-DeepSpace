@@ -11,7 +11,6 @@ import frc.robot.subsystems.Superstructure.RobotState;
 import frc.robot.subsystems.Vision;
 
 public class MotionMagicVisionPigeon implements Action {
-
   private MkTimer timer = new MkTimer();
   private double lastDist, lastAngle, lastSkew = 0.0;
   private MkTimer downTimer = new MkTimer();
@@ -23,17 +22,14 @@ public class MotionMagicVisionPigeon implements Action {
   }
 
   /**
-   * Exit tracking if it is taking too long or if the tracking is finished or if the arm is down for a specified time
-   * and the limit switch is triggered.
+   * Exit tracking if it is taking too long or if the tracking is finished or if the arm is down for a
+   * specified time and the limit switch is triggered.
    */
   @Override
   public boolean isFinished() {
-    return isDone || timer.isDone()
-        || Drive.getInstance().isVisionFinished(lastDist, lastAngle + lastSkew)
-        || (HatchArm.getInstance().isHatchLimitTriggered()
-        && ((HatchArm.getInstance().getHatchSpearState() == HatchState.PLACE)
-        && downTimer.isDone()));
-    /*  return false;*/
+    return isDone || timer.isDone() || Drive.getInstance().isVisionFinished(lastDist, lastAngle + lastSkew)
+        || (HatchArm.getInstance().isHatchLimitTriggered() && ((HatchArm.getInstance().getHatchSpearState() == HatchState.PLACE) && downTimer.isDone()));
+    /* return false; */
   }
 
   @Override
@@ -42,15 +38,13 @@ public class MotionMagicVisionPigeon implements Action {
       case NO_ACTION:
         break;
       case PLACE_HATCH:
-        if ((Drive.getInstance().getVisionServoError(lastDist) < 28.0)
-            && (HatchArm.getInstance().getHatchSpearState() != HatchState.PLACE)) {
-          //HatchArm.getInstance().setHatchState(HatchState.PLACE);
+        if ((Drive.getInstance().getVisionServoError(lastDist) < 28.0) && (HatchArm.getInstance().getHatchSpearState() != HatchState.PLACE)) {
+          // HatchArm.getInstance().setHatchState(HatchState.PLACE);
           downTimer.start(0.75);
         }
         break;
       case INTAKE_HATCH:
-        if ((Drive.getInstance().getVisionServoError(lastDist) < 60.0)
-            && (HatchArm.getInstance().getHatchSpearState() != HatchState.PLACE)) {
+        if ((Drive.getInstance().getVisionServoError(lastDist) < 60.0) && (HatchArm.getInstance().getHatchSpearState() != HatchState.PLACE)) {
           HatchArm.getInstance().setHatchState(HatchState.INTAKE);
           downTimer.start(1.0);
         }
@@ -59,7 +53,6 @@ public class MotionMagicVisionPigeon implements Action {
         Logger.logErrorWithTrace("Unexpected Vision Servo Goal");
         break;
     }
-
     LimelightTarget mTarget = Vision.getInstance().getLimelightTarget();
     if (mTarget.isValidTarget() && mTarget.getDistance() > 18.0) {
       lastAngle = -mTarget.getYaw();
@@ -69,7 +62,6 @@ public class MotionMagicVisionPigeon implements Action {
       } else {
         lastSkew = 0.0;
       }
-
       Drive.getInstance().setDistanceAndAngle(lastDist, lastAngle + lastSkew);
     }
   }
@@ -89,7 +81,6 @@ public class MotionMagicVisionPigeon implements Action {
       } else {
         lastSkew = 0.0;
       }
-
       Drive.getInstance().setDistanceAndAngle(lastDist, lastAngle + lastSkew);
       timer.start(4.0);
     } else {
@@ -99,9 +90,6 @@ public class MotionMagicVisionPigeon implements Action {
   }
 
   public enum VisionServoGoal {
-    PLACE_HATCH,
-    INTAKE_HATCH,
-    PLACE_CARGO,
-    NO_ACTION
+    PLACE_HATCH, INTAKE_HATCH, PLACE_CARGO, NO_ACTION
   }
 }
