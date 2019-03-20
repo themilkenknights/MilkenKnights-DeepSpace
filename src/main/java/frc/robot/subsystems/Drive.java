@@ -138,6 +138,20 @@ public class Drive extends Subsystem {
       mGyroHeading.setDouble(getHeading().getDegrees());
     }
     if (mCSVWriter != null && MISC.kDriveCSVLogging) {
+      if (mDriveControlState == DriveControlState.VELOCITY_SETPOINT) {
+        mPeriodicIO.leftDesiredPos = leftStatus.getSeg().position;
+        mPeriodicIO.leftDesiredVel = leftStatus.getSeg().velocity;
+        mPeriodicIO.rightDesiredPos = rightStatus.getSeg().position;
+        mPeriodicIO.rightDesiredVel = rightStatus.getSeg().velocity;
+        mPeriodicIO.desiredHeading = leftStatus.getSeg().heading;
+        mPeriodicIO.headingError = leftStatus.getAngError();
+        mPeriodicIO.leftVelError = leftStatus.getVelError();
+        mPeriodicIO.leftPosError = leftStatus.getPosError();
+        mPeriodicIO.rightVelError = rightStatus.getVelError();
+        mPeriodicIO.rightPosError = rightStatus.getPosError();
+        mPeriodicIO.desiredX = (leftStatus.getSeg().x + rightStatus.getSeg().x) / 2;
+        mPeriodicIO.desiredY = (leftStatus.getSeg().y + rightStatus.getSeg().y) / 2;
+      }
       mCSVWriter.add(mPeriodicIO);
       mCSVWriter.write();
     }
@@ -313,7 +327,7 @@ public class Drive extends Subsystem {
     // System.out.println(MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle));
   }
 
-  public synchronized void configHatchVision() {
+  private synchronized void configHatchVision() {
     if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
       mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 0.5, 0);
       mLeftDrive.masterTalon.follow(mRightDrive.masterTalon, FollowerType.AuxOutput1);
@@ -323,11 +337,16 @@ public class Drive extends Subsystem {
   /**
    * @return The distance from the target when servoing with the Pigeon
    */
-  public double getVisionServoError(double dist) {
+  public synchronized double getVisionServoError(double dist) {
     return Math.abs((mPeriodicIO.rightPos / 2) - dist);
   }
 
-  public void setVelocitySetpointNormal(DriveSignal sig) {
+  /**
+   * Used for Manual Velocity Setpoint for tuning
+   * 
+   * @param sig Desired output in perent of max velocity
+   */
+  public synchronized void setVelocitySetpointNormal(DriveSignal sig) {
     setVelocity(new DriveSignal(sig.getLeft() * DRIVE.kMaxNativeVel, sig.getRight() * DRIVE.kMaxNativeVel), DriveSignal.BRAKE);
   }
 
@@ -336,7 +355,7 @@ public class Drive extends Subsystem {
    *
    * @param signal An object that contains left and right velocities (inches per sec)
    */
-  public synchronized void setVelocity(DriveSignal signal, DriveSignal feedforward) {
+  private synchronized void setVelocity(DriveSignal signal, DriveSignal feedforward) {
     if (mDriveControlState != DriveControlState.VELOCITY_SETPOINT) {
       Logger.logMarker("Switching to Velocity");
       mPeriodicIO.left_demand = 0.0;
@@ -470,5 +489,17 @@ public class Drive extends Subsystem {
     public double left_feedforward;
     public double right_feedforward;
     public NeutralMode brake_mode;
+    public double desiredHeading;
+    public double headingError;
+    public double leftDesiredVel;
+    public double leftDesiredPos;
+    public double leftPosError;
+    public double leftVelError;
+    public double rightDesiredVel;
+    public double rightDesiredPos;
+    public double rightPosError;
+    public double rightVelError;
+    public double desiredX;
+    public double desiredY;
   }
 }
