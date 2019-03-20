@@ -93,7 +93,7 @@ public class TrajectoryFollower {
   }
 
   // TODO Fix
-  private Trajectory.Segment interpolateSegments(int currentSeg, double time) {
+  private Trajectory.Segment interpolateSegments(int currentSeg) {
     if (currentSeg == 0) {
       return profile_.get(currentSeg);
     }
@@ -101,9 +101,9 @@ public class TrajectoryFollower {
     Trajectory.Segment lastSeg = profile_.get(currentSeg);
     double pos, vel, acc, jerk, heading, dt, x, y;
     double firstTime = firstSeg.dt * (currentSeg - 1);
-    double lastTime = lastSeg.dt * (currentSeg);
-    double currentTime = time - Dt;
-    pos = (((currentTime - firstTime) * (lastSeg.position - firstSeg.position)) / (lastTime - firstTime)) + firstSeg.position;
+    double lastTime = firstSeg.dt * (currentSeg);
+    double currentTime = Timer.getFPGATimestamp() - Dt;
+    pos = ((currentTime - firstTime) * ((lastSeg.position - firstSeg.position) / (lastTime - firstTime))) + firstSeg.position;
     vel = (((currentTime - firstTime) * (lastSeg.velocity - firstSeg.velocity)) / (lastTime - firstTime)) + firstSeg.velocity;
     acc = (((currentTime - firstTime) * (lastSeg.acceleration - firstSeg.acceleration)) / (lastTime - firstTime)) + firstSeg.acceleration;
     jerk = (((currentTime - firstTime) * (lastSeg.jerk - firstSeg.jerk)) / (lastTime - firstTime)) + firstSeg.jerk;

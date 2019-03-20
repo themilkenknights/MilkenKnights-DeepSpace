@@ -4,7 +4,6 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.sensors.PigeonIMU;
-
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
@@ -24,14 +23,12 @@ public class CargoArm extends Subsystem {
   private final MkTalon mArmTalon;
   private boolean mDisCon = false;
   private double mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable = 0.0;
-  private NetworkTableEntry mAbsPos, mDesiredState, mControlMode, mStatus;
+  private NetworkTableEntry mDesiredState, mControlMode;
 
   private CargoArm() {
     ShuffleboardTab mCargoArmTab = Shuffleboard.getTab("Cargo Arm");
     ShuffleboardTab mIntakeRollersTab = Shuffleboard.getTab("General");
-    mAbsPos = mCargoArmTab.add("Absolute Pos", 0.0).getEntry();
     mControlMode = mCargoArmTab.add("Control Mode", "").getEntry();
-    mStatus = mCargoArmTab.add("Status", false).getEntry();
     mDesiredState = mCargoArmTab.add("Desired State", "").getEntry();
     mArmTalon = new MkTalon(CAN.kMasterCargoArmTalonID, CAN.kSlaveCargoArmVictorID, TalonLoc.Cargo_Arm, mCargoArmTab);
     mIntakeTalon = new MkTalon(CAN.kLeftCargoIntakeTalonID, CAN.kRightCargoIntakeTalonID, TalonLoc.Cargo_Intake, mIntakeRollersTab);
@@ -65,7 +62,6 @@ public class CargoArm extends Subsystem {
    * The arm encoder was getting periodically briefly disconnected during matches so this method waits
    * 250ms before switching to open loop control.
    *
-   * <p>
    * This method also checks for unsafe current output and will automatically switches to open loop
    * control.
    */
@@ -92,10 +88,6 @@ public class CargoArm extends Subsystem {
     mArmTalon.updateShuffleboard();
     mDesiredState.setString(mCargoArmState.toString());
     mControlMode.setString(mCargoArmControlState.toString());
-    /*
-     * mAbsPos.setDouble(mArmTalon.masterTalon.getSensorCollection().getPulseWidthPosition());
-     * mStatus.setBoolean(mArmTalon.isEncoderConnected());
-     */
   }
 
   @Override
