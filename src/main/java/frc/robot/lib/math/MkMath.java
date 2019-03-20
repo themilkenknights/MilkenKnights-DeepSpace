@@ -72,6 +72,10 @@ public class MkMath {
     return (units / 8192.0) * 360.0;
   }
 
+  public static double inchesToFt(double inches) {
+    return inches / 12.0;
+  }
+
   public static double normalAbsoluteAngleDegrees(double angle) {
     return (angle %= 360) >= 0 ? angle : (angle + 360);
   }

@@ -2,7 +2,7 @@ package frc.robot.lib.vision;
 
 public class LimelightTarget {
 
-  public static LimelightTarget EMPTY = new LimelightTarget(false, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+  public static LimelightTarget EMPTY = new LimelightTarget(false, 0.0, 0.0, 0.0, 0.0, 0.0, new double[]{}, 0.0);
   private boolean validTarget; // Does limelight have a target
   private double xOffset; // Horizontal center of bounding box from center in degrees
   private double yOffset; // Vertical center of bounding box from center in degrees
@@ -12,6 +12,7 @@ public class LimelightTarget {
   private double horizLength;
   private double vertLength;
   private double skew;
+  private double[] camTran;
 
   public LimelightTarget(
       boolean validTarget,
@@ -20,6 +21,7 @@ public class LimelightTarget {
       double horizLength,
       double vertLength,
       double skew,
+      double camTran[],
       double captureTime) {
     this.validTarget = validTarget;
     this.xOffset = xOffset;
@@ -31,6 +33,7 @@ public class LimelightTarget {
     this.distance = ((15.75) / (Math.tan(Math.toRadians(20.0 + (yOffset * 1.075))))) + -2.0;
     //this.distance =VISION.kAreaToDistVisionMap.getInterpolated(new InterpolatingDouble(getArea())).value;
     this.skew = skew > -45.0 ? skew : skew + 90.0;
+    this.camTran = camTran;
   }
 
   public double getArea() {
@@ -69,19 +72,13 @@ public class LimelightTarget {
     return skew;
   }
 
+  public double[] getCamTran() {
+    return camTran;
+  }
+
   @Override
   public String toString() {
-    return "X:"
-        + xOffset
-        + ", Y: "
-        + yOffset
-        + ", Area:"
-        + area
-        + ", Dt: "
-        + captureTime
-        + " Distance: "
-        + distance
-        + " Valid: "
-        + validTarget;
+    return "X:" + xOffset + ", Y: " + yOffset + ", Area:" + area + ", Dt: " + captureTime + " Distance: " + distance
+        + " Valid: " + validTarget;
   }
 }

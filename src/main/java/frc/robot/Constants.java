@@ -14,18 +14,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Unless otherwise noted by raw/native/RPM, all position unites are in inches and degrees and all velocity units are in
- * inches per second and degrees per second. 'ID' typically notes a CAN ID All PID Constants are in Native Units. The
- * front of the robot is at the Hatch Mechanism/Battery. The exception is for the Cargo Mechanism where Left/Right for
- * this mechanism are flipped.
+ * Unless otherwise noted by raw/native/RPM, all position unites are in inches
+ * and degrees and all velocity units are in inches per second and degrees per
+ * second. 'ID' typically notes a CAN ID All PID Constants are in Native Units.
+ * The front of the robot is at the Hatch Mechanism/Battery. The exception is
+ * for the Cargo Mechanism where Left/Right for this mechanism are flipped.
  *
- * <p>The zero position for the arms are at the hardstops inside the robot perimeter.
+ * <p>
+ * The zero position for the arms are at the hardstops inside the robot
+ * perimeter.
  *
- * <p>Positive voltages/sensor measurements for the arms should correspond to rotating toward the
- * ground. Positive Voltages to the drive motors should always move the robot forward.
+ * <p>
+ * Positive voltages/sensor measurements for the arms should correspond to
+ * rotating toward the ground. Positive Voltages to the drive motors should
+ * always move the robot forward.
  *
- * <p>+X is Hatch Arm/Battery Forward -X is Hatch Arm/Battery Forward +Y is Left (Hatch Arm/Battery
- * Forward) -Y is Right (Hatch Arm/Battery Forward)
+ * <p>
+ * +X is Hatch Arm/Battery Forward -X is Hatch Arm/Battery Forward +Y is Left
+ * (Hatch Arm/Battery Forward) -Y is Right (Hatch Arm/Battery Forward)
  */
 public final class Constants {
 
@@ -45,8 +51,9 @@ public final class Constants {
   }
 
   /**
-   * Every CAN ID should be listed here. Note that the Talons & Victors are physical numerical order ony on the Comp
-   * Bot. Every CAN ID corresponds to the same outputs on the practice bot but the order is different.
+   * Every CAN ID should be listed here. Note that the Talons & Victors are
+   * physical numerical order ony on the Comp Bot. Every CAN ID corresponds to the
+   * same outputs on the practice bot but the order is different.
    */
   public static class CAN {
 
@@ -110,6 +117,10 @@ public final class Constants {
     public static final double kVisionTurnP = 0.040;
 
     public static final byte kNavXUpdateRate = (byte) 200;
+
+    public static final double DRIVE_FOLLOWER_P = 1;
+    public static final double DRIVE_FOLLOWER_A = 0.00125;
+    public static final double DRIVE_FOLLOWER_ANG = -1.25;
   }
 
   public static class TEST {
@@ -174,26 +185,17 @@ public final class Constants {
 
   public static class VISION {
 
-    public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble>
-        kAreaToDistVisionMap = new InterpolatingTreeMap<>();
+    public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> kAreaToDistVisionMap = new InterpolatingTreeMap<>();
 
     static {
-      VISION.kAreaToDistVisionMap.put(
-          new InterpolatingDouble(12400.0), new InterpolatingDouble(15.9));
-      VISION.kAreaToDistVisionMap.put(
-          new InterpolatingDouble(9362.0), new InterpolatingDouble(20.16));
-      VISION.kAreaToDistVisionMap.put(
-          new InterpolatingDouble(6958.0), new InterpolatingDouble(26.26));
-      VISION.kAreaToDistVisionMap.put(
-          new InterpolatingDouble(5122.0), new InterpolatingDouble(32.45));
-      VISION.kAreaToDistVisionMap.put(
-          new InterpolatingDouble(3423.0), new InterpolatingDouble(42.8));
-      VISION.kAreaToDistVisionMap.put(
-          new InterpolatingDouble(2155.0), new InterpolatingDouble(57.44));
-      VISION.kAreaToDistVisionMap.put(
-          new InterpolatingDouble(1464.0), new InterpolatingDouble(73.35));
-      VISION.kAreaToDistVisionMap.put(
-          new InterpolatingDouble(980.0), new InterpolatingDouble(94.09));
+      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(12400.0), new InterpolatingDouble(15.9));
+      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(9362.0), new InterpolatingDouble(20.16));
+      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(6958.0), new InterpolatingDouble(26.26));
+      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(5122.0), new InterpolatingDouble(32.45));
+      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(3423.0), new InterpolatingDouble(42.8));
+      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(2155.0), new InterpolatingDouble(57.44));
+      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1464.0), new InterpolatingDouble(73.35));
+      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(980.0), new InterpolatingDouble(94.09));
     }
   }
 
