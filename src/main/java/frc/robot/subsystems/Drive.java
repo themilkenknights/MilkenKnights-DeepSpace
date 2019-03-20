@@ -361,15 +361,6 @@ public class Drive extends Subsystem {
   }
 
   /**
-   * Left is Positive Right is Negative (180 to -180)
-   *
-   * @return current fused heading from navX
-   */
-  public double getHeadingDeg() {
-    return mPeriodicIO.gyro_heading.getDegrees();
-  }
-
-  /**
    * @return Pitch from the Pigeon IMU [-90 to 90deg]
    */
   public double getPitch() {
@@ -453,12 +444,23 @@ public class Drive extends Subsystem {
    * then set as a velocity setpoint
    */
   private synchronized void updatePathFollower() {
-    TrajectoryStatus leftUpdate = pathFollower.getLeftVelocity(mPeriodicIO.leftPos, mPeriodicIO.leftPos, -getHeadingDeg());
-    TrajectoryStatus rightUpdate = pathFollower.getRightVelocity(mPeriodicIO.rightPos, mPeriodicIO.rightVel, -getHeadingDeg());
+    TrajectoryStatus leftUpdate = pathFollower
+        .getLeftVelocity(mPeriodicIO.leftPos, mPeriodicIO.leftPos, -getHeadingDeg());
+    TrajectoryStatus rightUpdate = pathFollower
+        .getRightVelocity(mPeriodicIO.rightPos, mPeriodicIO.rightVel, -getHeadingDeg());
     leftStatus = leftUpdate;
     rightStatus = rightUpdate;
     setVelocity(new DriveSignal(leftUpdate.getOutput(), rightUpdate.getOutput()),
         new DriveSignal(leftUpdate.getArbFeed(), rightUpdate.getArbFeed()));
+  }
+
+  /**
+   * Left is Positive Right is Negative (180 to -180)
+   *
+   * @return current fused heading from navX
+   */
+  public double getHeadingDeg() {
+    return mPeriodicIO.gyro_heading.getDegrees();
   }
 
 

@@ -83,11 +83,6 @@ public class LimeLight {
     return mTarget;
   }
 
-  public double[] getCamTran() {
-    double[] cam = camtran.getDoubleArray(new double[]{0, 0, 0, 0, 0, 0});
-    return cam;
-  }
-
   /**
    * ta Target Area (0% of image to 100% of image)
    */
@@ -194,7 +189,6 @@ public class LimeLight {
     Snapshot mode = Snapshot.getByValue(snshot);
     return mode;
   }
-  // Setters
 
   /**
    * snapshot Allows users to take snapshots during a match
@@ -204,6 +198,7 @@ public class LimeLight {
   public void setSnapshot(Snapshot snapshot) {
     m_table.getEntry("snapshot").setValue(snapshot.getValue());
   }
+  // Setters
 
   /**
    * Limelight posts three raw contours to NetworkTables that are not influenced by your grouping mode. That is, they
@@ -284,7 +279,6 @@ public class LimeLight {
     mTarget = new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(), getVertLength(),
         getSkew_Rotation(), getCamTran(), getCaptureTime());
   }
-  // *************** Advanced Usage with Raw Contours *********************
 
   /**
    * tv Whether the limelight has any valid targets (0 or 1)
@@ -293,6 +287,7 @@ public class LimeLight {
     double v = tv.getDouble(0);
     return v != 0.0f;
   }
+  // *************** Advanced Usage with Raw Contours *********************
 
   /**
    * tx Horizontal Offset From Crosshair To Target (-27 degrees to 27 degrees)
@@ -314,14 +309,14 @@ public class LimeLight {
     double h = thoriz.getDouble(0.0);
     return h;
   }
-  // Raw Crosshairs:
-  // If you are using raw targeting data, you can still utilize your calibrated
-  // crosshairs:
 
   public double getVertLength() {
     double v = tvert.getDouble(0.0);
     return v;
   }
+  // Raw Crosshairs:
+  // If you are using raw targeting data, you can still utilize your calibrated
+  // crosshairs:
 
   /**
    * ts Skew or rotation (-90 degrees to 0 degrees)
@@ -329,6 +324,11 @@ public class LimeLight {
   public double getSkew_Rotation() {
     double s = ts.getDouble(0.0);
     return s;
+  }
+
+  public double[] getCamTran() {
+    double[] cam = camtran.getDoubleArray(new double[]{0, 0, 0, 0, 0, 0});
+    return cam;
   }
 
   public double getCaptureTime() {

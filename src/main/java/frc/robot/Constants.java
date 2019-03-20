@@ -14,24 +14,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Unless otherwise noted by raw/native/RPM, all position unites are in inches
- * and degrees and all velocity units are in inches per second and degrees per
- * second. 'ID' typically notes a CAN ID All PID Constants are in Native Units.
- * The front of the robot is at the Hatch Mechanism/Battery. The exception is
- * for the Cargo Mechanism where Left/Right for this mechanism are flipped.
+ * Unless otherwise noted by raw/native/RPM, all position unites are in inches and degrees and all velocity units are in
+ * inches per second and degrees per second. 'ID' typically notes a CAN ID All PID Constants are in Native Units. The
+ * front of the robot is at the Hatch Mechanism/Battery. The exception is for the Cargo Mechanism where Left/Right for
+ * this mechanism are flipped.
  *
  * <p>
- * The zero position for the arms are at the hardstops inside the robot
- * perimeter.
+ * The zero position for the arms are at the hardstops inside the robot perimeter.
  *
  * <p>
- * Positive voltages/sensor measurements for the arms should correspond to
- * rotating toward the ground. Positive Voltages to the drive motors should
- * always move the robot forward.
+ * Positive voltages/sensor measurements for the arms should correspond to rotating toward the ground. Positive Voltages
+ * to the drive motors should always move the robot forward.
  *
  * <p>
- * +X is Hatch Arm/Battery Forward -X is Hatch Arm/Battery Forward +Y is Left
- * (Hatch Arm/Battery Forward) -Y is Right (Hatch Arm/Battery Forward)
+ * +X is Hatch Arm/Battery Forward -X is Hatch Arm/Battery Forward +Y is Left (Hatch Arm/Battery Forward) -Y is Right
+ * (Hatch Arm/Battery Forward)
  */
 public final class Constants {
 
@@ -51,9 +48,8 @@ public final class Constants {
   }
 
   /**
-   * Every CAN ID should be listed here. Note that the Talons & Victors are
-   * physical numerical order ony on the Comp Bot. Every CAN ID corresponds to the
-   * same outputs on the practice bot but the order is different.
+   * Every CAN ID should be listed here. Note that the Talons & Victors are physical numerical order ony on the Comp
+   * Bot. Every CAN ID corresponds to the same outputs on the practice bot but the order is different.
    */
   public static class CAN {
 

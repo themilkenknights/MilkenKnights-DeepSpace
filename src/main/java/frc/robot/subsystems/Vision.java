@@ -76,6 +76,11 @@ public class Vision extends Subsystem {
     mLimeLight.setPipeline(1);
   }
 
+  public void enableLED() {
+    mLimeLight.setStream(StreamType.kStandard);
+    mLimeLight.setPipeline(0);
+  }
+
   public synchronized LimelightTarget getLimelightTarget() {
     return mLimeLight.returnLastTarget();
   }
@@ -86,11 +91,6 @@ public class Vision extends Subsystem {
     } else {
       enableLED();
     }
-  }
-
-  public void enableLED() {
-    mLimeLight.setStream(StreamType.kStandard);
-    mLimeLight.setPipeline(0);
   }
 
   public synchronized void updateLimelight() {

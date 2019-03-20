@@ -21,7 +21,7 @@ public class LimelightTarget {
       double horizLength,
       double vertLength,
       double skew,
-      double camTran[],
+      double[] camTran,
       double captureTime) {
     this.validTarget = validTarget;
     this.xOffset = xOffset;

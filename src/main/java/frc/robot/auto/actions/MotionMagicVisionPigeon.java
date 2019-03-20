@@ -1,6 +1,5 @@
 package frc.robot.auto.actions;
 
-import frc.robot.AutoChooser;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.vision.LimelightTarget;
@@ -29,7 +28,7 @@ public class MotionMagicVisionPigeon implements Action {
    */
   @Override
   public boolean isFinished() {
-   return isDone || timer.isDone()
+    return isDone || timer.isDone()
         || Drive.getInstance().isVisionFinished(lastDist, lastAngle + lastSkew)
         || (HatchArm.getInstance().isHatchLimitTriggered()
         && ((HatchArm.getInstance().getHatchSpearState() == HatchState.PLACE)
@@ -65,9 +64,9 @@ public class MotionMagicVisionPigeon implements Action {
     if (mTarget.isValidTarget() && mTarget.getDistance() > 18.0) {
       lastAngle = -mTarget.getYaw();
       lastDist = mTarget.getDistance();
-      if(lastDist > 45.0){
+      if (lastDist > 45.0) {
         lastSkew = mTarget.getSkew() * -2.3;
-      } else{
+      } else {
         lastSkew = 0.0;
       }
 
@@ -85,9 +84,9 @@ public class MotionMagicVisionPigeon implements Action {
     if (mTarget.isValidTarget()) {
       lastAngle = -mTarget.getYaw();
       lastDist = mTarget.getDistance();
-      if(lastDist > 45.0){
+      if (lastDist > 45.0) {
         lastSkew = mTarget.getSkew() * -2.3;
-      } else{
+      } else {
         lastSkew = 0.0;
       }
 

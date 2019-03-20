@@ -13,14 +13,9 @@ import java.util.Arrays;
 public class Robot extends TimedRobot {
 
   public static MatchState mMatchState = MatchState.DISABLED;
-  private final SubsystemManager mSubsystemManager =
-      new SubsystemManager(
-          Arrays.asList(
-              CargoArm.getInstance(),
-              Drive.getInstance(),
-              HatchArm.getInstance(),
-              Superstructure.getInstance(),
-              Vision.getInstance()));
+  private final SubsystemManager mSubsystemManager = new SubsystemManager(Arrays
+      .asList(CargoArm.getInstance(), Drive.getInstance(), HatchArm.getInstance(), Superstructure.getInstance(),
+          Vision.getInstance()));
 
   public Robot() {
     super(Constants.GENERAL.kMainLoopDt);
