@@ -27,6 +27,11 @@ import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.ReflectingCSVWriter;
 import frc.robot.lib.util.Subsystem;
+import frc.robot.lib.util.TrajectoryStatus;
+import frc.robot.lib.util.trajectory.Path;
+import frc.robot.lib.util.trajectory.PathFollower;
+import jaci.pathfinder.Pathfinder;
+import jaci.pathfinder.Trajectory;
 
 public class Drive extends Subsystem {
 
@@ -38,6 +43,11 @@ public class Drive extends Subsystem {
   private double left_encoder_prev_distance_, right_encoder_prev_distance_ = 0.0;
   private NetworkTableEntry mState, mStatus, mFusedHeading, mGyroHeading, mAvgDist;
   private PigeonIMU mPigeon;
+  private PathFollower pathFollower = null;
+  private TrajectoryStatus leftStatus;
+  private TrajectoryStatus rightStatus;
+  private DriveSignal currentSetpoint;
+  private double lastAngle = 0;
 
   private Drive() {
     ShuffleboardTab mDriveTab = Shuffleboard.getTab("Drive");
@@ -52,6 +62,11 @@ public class Drive extends Subsystem {
     mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID,
         TalonLoc.Right, mDriveTab);
     mPigeon = CargoArm.getInstance().getPigeon();
+
+    leftStatus = TrajectoryStatus.NEUTRAL;
+    rightStatus = TrajectoryStatus.NEUTRAL;
+    currentSetpoint = DriveSignal.BRAKE;
+
   }
 
   public static Drive getInstance() {
@@ -396,11 +411,62 @@ public class Drive extends Subsystem {
     right_encoder_prev_distance_ = right_distance;
   }
 
+  /**
+   * @param path Robot Path
+   * @param dist_tol Position Tolerance for Path Follower
+   * @param ang_tol Robot Angle Tolerance for Path Follower (Degrees)
+   */
+  public synchronized void setDrivePath(Path path, double dist_tol, double ang_tol) {
+    Logger.logMarker("Began Path: " + path.getName());
+    double offset = lastAngle - Pathfinder
+        .boundHalfDegrees(Pathfinder.r2d(path.getLeftWheelTrajectory().get(0).heading));
+    for (Trajectory.Segment segment : path.getLeftWheelTrajectory().segments) {
+      segment.heading = Pathfinder.boundHalfDegrees(Pathfinder.r2d(segment.heading) + offset);
+    }
+    for (Trajectory.Segment segment : path.getRightWheelTrajectory().segments) {
+      segment.heading = Pathfinder.boundHalfDegrees(Pathfinder.r2d(segment.heading) + offset);
+    }
+    zero();
+    pathFollower = new PathFollower(path, dist_tol, ang_tol);
+    mDriveControlState = DriveControlState.PATH_FOLLOWING;
+  }
+
+  /*
+ Called from Auto Action to check when the path finishes. Saves the last angle to use with the next path and resets the Trajectory Status
+  */
+  public synchronized boolean isPathFinished() {
+    if (pathFollower.getFinished()) {
+      lastAngle = pathFollower.getEndHeading();
+      mDriveControlState = DriveControlState.OPEN_LOOP;
+      pathFollower = null;
+      leftStatus = TrajectoryStatus.NEUTRAL;
+      rightStatus = TrajectoryStatus.NEUTRAL;
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Called from Looper during Path Following Gets a TrajectoryStatus containing output velocity and Desired Trajectory
+   * Information for logging Inputs Position, Speed and Angle to Trajectory Follower Creates a new Drive Signal that is
+   * then set as a velocity setpoint
+   */
+  private synchronized void updatePathFollower() {
+    TrajectoryStatus leftUpdate = pathFollower.getLeftVelocity(mPeriodicIO.leftPos, mPeriodicIO.leftPos, -getHeadingDeg());
+    TrajectoryStatus rightUpdate = pathFollower.getRightVelocity(mPeriodicIO.rightPos, mPeriodicIO.rightVel, -getHeadingDeg());
+    leftStatus = leftUpdate;
+    rightStatus = rightUpdate;
+    setVelocity(new DriveSignal(leftUpdate.getOutput(), rightUpdate.getOutput()),
+        new DriveSignal(leftUpdate.getArbFeed(), rightUpdate.getArbFeed()));
+  }
+
+
   public enum DriveControlState {
     OPEN_LOOP,
     MOTION_MAGIC,
     PIGEON_SERVO,
-    VELOCITY_SETPOINT
+    VELOCITY_SETPOINT,
+    PATH_FOLLOWING
   }
 
   private static class InstanceHolder {

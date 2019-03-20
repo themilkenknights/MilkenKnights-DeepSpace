@@ -5,7 +5,6 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.lib.util.MkTimer;
-import frc.robot.lib.util.MovingAverage;
 import frc.robot.lib.vision.LimeLightControlMode.Advanced_Crosshair;
 import frc.robot.lib.vision.LimeLightControlMode.Advanced_Target;
 import frc.robot.lib.vision.LimeLightControlMode.CamMode;
@@ -19,25 +18,12 @@ import frc.robot.lib.vision.LimeLightControlMode.StreamType;
  */
 public class LimeLight {
 
-  NetworkTableEntry tv,
-      tx,
-      ty,
-      ta,
-      ts,
-      tl,
-      thoriz,
-      tvert,
-      ledMode,
-      camMode,
-      pipeline,
-      stream,
-      snapshot;
+  NetworkTableEntry tv, tx, ty, ta, ts, tl, thoriz, tvert, ledMode, camMode, pipeline, stream, snapshot;
   NetworkTableEntry camtran;
   private NetworkTable m_table, m_pnp_table;
   private String m_tableName, m_pnp_tableName;
   private Boolean isConnected = false;
   private LimelightTarget mTarget;
-  private MovingAverage mThrottleAverage;
   private MkTimer validTarget;
 
   /**
@@ -65,7 +51,6 @@ public class LimeLight {
     camtran = m_pnp_table.getEntry("camtran");
 
     mTarget = LimelightTarget.EMPTY;
-    mThrottleAverage = new MovingAverage(3);
     validTarget = new MkTimer();
     validTarget.start(0.05);
   }
@@ -96,10 +81,6 @@ public class LimeLight {
 
   public synchronized LimelightTarget returnLastTarget() {
     return mTarget;
-  }
-
-  public synchronized LimelightTarget returnAverageTarget() {
-    return mThrottleAverage.getAverage();
   }
 
   public double[] getCamTran() {
@@ -300,16 +281,8 @@ public class LimeLight {
   }
 
   public synchronized void updateTarget() {
-    mTarget =
-        new LimelightTarget(
-            getIsTargetFound(),
-            getX(),
-            getY(),
-            getHorizLength(),
-            getVertLength(),
-            getSkew_Rotation(),
-            getCaptureTime());
-    mThrottleAverage.addNumber(mTarget);
+    mTarget = new LimelightTarget(getIsTargetFound(), getX(), getY(), getHorizLength(), getVertLength(),
+        getSkew_Rotation(), getCamTran(), getCaptureTime());
   }
   // *************** Advanced Usage with Raw Contours *********************
 
