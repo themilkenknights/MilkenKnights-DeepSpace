@@ -93,6 +93,7 @@ public final class Constants {
     public static final double DRIVE_FOLLOWER_P = 1;
     public static final double DRIVE_FOLLOWER_A = 0.00125;
     public static final double DRIVE_FOLLOWER_ANG = -1.25;
+    public static final double PATH_DT = 0.02;
   }
   public static class TEST {
     public static final double kMinDriveTestPos = 420.0;

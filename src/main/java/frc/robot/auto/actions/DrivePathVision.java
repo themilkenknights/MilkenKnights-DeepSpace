@@ -28,7 +28,7 @@ public class DrivePathVision implements Action {
   @Override
   public void start() {
     double now = Timer.getFPGATimestamp();
-    Trajectory.Config fastConfig = new Trajectory.Config(Trajectory.FitMethod.HERMITE_QUINTIC, Config.SAMPLES_FAST, 0.02, 135, 80, 500);
+    Trajectory.Config fastConfig = new Trajectory.Config(Trajectory.FitMethod.HERMITE_CUBIC, Config.SAMPLES_FAST, DRIVE.PATH_DT, 135, 80, 500);
     Waypoint[] drivePath = new Waypoint[] {new Waypoint(0, 0, Pathfinder.d2r(0)), new Waypoint(35.5, 8.323, Pathfinder.d2r(23.343))};
     Trajectory trajectory = Pathfinder.generate(drivePath, fastConfig);
     TankModifier modifier = new TankModifier(trajectory).modify(DRIVE.kEffectiveDriveWheelTrackWidthInches);
