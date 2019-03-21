@@ -27,9 +27,11 @@ import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.ReflectingCSVWriter;
 import frc.robot.lib.util.Subsystem;
+import frc.robot.lib.util.SynchronousPIDF;
 import frc.robot.lib.util.TrajectoryStatus;
 import frc.robot.lib.util.trajectory.Path;
 import frc.robot.lib.util.trajectory.PathFollower;
+import frc.robot.lib.vision.LimelightTarget;
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
 
@@ -45,8 +47,8 @@ public class Drive extends Subsystem {
   private PathFollower pathFollower = null;
   private TrajectoryStatus leftStatus;
   private TrajectoryStatus rightStatus;
-  private DriveSignal currentSetpoint;
-  private double lastAngle = 0;
+  private double lastAngle, lastDist = 0.0;
+  private SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.0151, 0.0, 285.0);
 
   private Drive() {
     ShuffleboardTab mDriveTab = Shuffleboard.getTab("Drive");
@@ -61,7 +63,6 @@ public class Drive extends Subsystem {
     mPigeon = CargoArm.getInstance().getPigeon();
     leftStatus = TrajectoryStatus.NEUTRAL;
     rightStatus = TrajectoryStatus.NEUTRAL;
-    currentSetpoint = DriveSignal.BRAKE;
   }
 
   public static Drive getInstance() {
@@ -245,7 +246,7 @@ public class Drive extends Subsystem {
   }
 
   /**
-   * Zero all pigeon values
+   * Zero all pigeon values TODO Enable
    */
   public void zeroPigeon() {
     CT.RE(mPigeon.setFusedHeading(0, 0));
@@ -318,7 +319,9 @@ public class Drive extends Subsystem {
   }
 
   private synchronized void configHatchVision() {
-    if (mDriveControlState != DriveControlState.PIGEON_SERVO && mDriveControlState != DriveControlState.MOTION_MAGIC) {
+    if (mDriveControlState != DriveControlState.PIGEON_SERVO
+        && mDriveControlState != DriveControlState.MOTION_MAGIC
+        && mDriveControlState != DriveControlState.VISION_DRIVE) {
       mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.SensorSum);
       mRightDrive.masterTalon.configSelectedFeedbackCoefficient(0.5, 0, 0);
       mLeftDrive.masterTalon.follow(mRightDrive.masterTalon, FollowerType.AuxOutput1);
@@ -326,7 +329,9 @@ public class Drive extends Subsystem {
   }
 
   private synchronized void configNormalDrive() {
-    if (mDriveControlState == DriveControlState.PIGEON_SERVO || mDriveControlState == DriveControlState.MOTION_MAGIC) {
+    if (mDriveControlState == DriveControlState.PIGEON_SERVO
+        || mDriveControlState == DriveControlState.MOTION_MAGIC
+        || mDriveControlState == DriveControlState.VISION_DRIVE) {
       mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
       mRightDrive.masterTalon.configSelectedFeedbackCoefficient(1.0, 0, 0);
     }
@@ -371,8 +376,23 @@ public class Drive extends Subsystem {
   }
 
   private synchronized void updateVisionDrive() {
+    LimelightTarget target = Vision.getInstance().getLimelightTarget();
+    double visionTurn = 0.0;
+    if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE && ((lastDist - target.getDistance()) > -0.5)) {
+      visionTurn = mVisionAssist.calculate(target.getYaw());
+    }
+    double dist = target.getDistance();
+    setMotionMagicPositionSetpoint(dist, new DriveSignal(-visionTurn, visionTurn));
+    lastDist = dist;
+  }
 
-    //setMotionMagicPositionSetpoint();
+  public synchronized void setVisionDrive() {
+    configHatchVision();
+    mPeriodicIO.left_demand = 0.0;
+    mPeriodicIO.right_demand = 0.0;
+    mPeriodicIO.left_feedforward = 0.0;
+    mPeriodicIO.right_feedforward = 0.0;
+    mDriveControlState = DriveControlState.VISION_DRIVE;
   }
 
   /**
@@ -385,7 +405,7 @@ public class Drive extends Subsystem {
   }
 
   public boolean isMotionMagicFinished() {
-    return Math.abs(mPeriodicIO.rightPos - mPeriodicIO.right_demand) < DRIVE.kGoalPosTolerance;
+    return Math.abs(mPeriodicIO.rightPos - mPeriodicIO.right_demand) < 0.5;
   }
 
   public boolean isVisionFinished(double dist, double angle) {

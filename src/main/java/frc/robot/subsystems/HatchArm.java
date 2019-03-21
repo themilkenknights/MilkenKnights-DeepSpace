@@ -11,7 +11,6 @@ import frc.robot.Constants.MISC;
 import frc.robot.Input;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
-import frc.robot.lib.util.MinTimeBoolean;
 import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.util.Subsystem;
 import frc.robot.subsystems.Superstructure.RobotState;
@@ -23,7 +22,6 @@ public class HatchArm extends Subsystem {
   private NetworkTableEntry mLimitTriggered, mSpearStateTab, mPancakeTab;
   private MkTimer downTimer = new MkTimer();
   private MkTimer autoTimer = new MkTimer();
-  private MinTimeBoolean isHatchOnTarget = new MinTimeBoolean(0.1);
 
   private HatchArm() {
     ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
@@ -67,9 +65,11 @@ public class HatchArm extends Subsystem {
     }
     if (!autoTimer.hasBeenSet() && mSpearLimitTriggered) {
       autoTimer.start(0.35);
-    } else if (autoTimer.isDone() && mSpearLimitTriggered) {
-      isHatchOnTarget.update(mSpearLimitTriggered, Timer.getFPGATimestamp()));
     }
+  }
+
+  public synchronized boolean isHatchTriggeredTimer() {
+    return autoTimer.isDone() && mSpearLimitTriggered;
   }
 
   public void outputTelemetry(double timestamp) {
@@ -128,6 +128,7 @@ public class HatchArm extends Subsystem {
     }
     Logger.logMarker("Set Hatch State to " + state.toString());
     mSpearSolenoid.set(state.state);
+    autoTimer.reset();
   }
 
   public HatchState getHatchSpearState() {
