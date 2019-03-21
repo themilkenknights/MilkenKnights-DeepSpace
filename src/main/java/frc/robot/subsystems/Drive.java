@@ -90,6 +90,9 @@ public class Drive extends Subsystem {
       case MOTION_MAGIC:
       case PIGEON_SERVO:
         break;
+      case VISION_DRIVE:
+        updateVisionDrive();
+        break;
       case VELOCITY_SETPOINT:
         updatePathFollower();
         break;
@@ -367,6 +370,11 @@ public class Drive extends Subsystem {
     mPeriodicIO.brake_mode = signal.getBrakeMode();
   }
 
+  private synchronized void updateVisionDrive() {
+
+    setMotionMagicPositionSetpoint();
+  }
+
   /**
    * @return Pitch from the Pigeon IMU [-90 to 90deg]
    */
@@ -382,10 +390,6 @@ public class Drive extends Subsystem {
 
   public boolean isVisionFinished(double dist, double angle) {
     return Math.abs(dist - mPeriodicIO.rightPos) < DRIVE.kGoalPosTolerance && Math.abs(angle - mPeriodicIO.gyro_heading.getDegrees()) < 1.5;
-  }
-
-  public DriveControlState getDriveControlState() {
-    return mDriveControlState;
   }
 
   /**
@@ -468,6 +472,7 @@ public class Drive extends Subsystem {
     OPEN_LOOP,
     MOTION_MAGIC,
     PIGEON_SERVO,
+    VISION_DRIVE,
     VELOCITY_SETPOINT
   }
 

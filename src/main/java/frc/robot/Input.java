@@ -10,7 +10,6 @@ import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
-import frc.robot.lib.util.SynchronousPIDF;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Drive;
@@ -45,7 +44,6 @@ public class Input {
   private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
   public static boolean hasBeenTriggered = false;
   private static MkTimer rumbleTimer = new MkTimer();
-  private static boolean isVelocitySetpoint = false;
   private static Drive mDrive = Drive.getInstance();
   private static HatchArm mHatch = HatchArm.getInstance();
   private static CargoArm mCargo = CargoArm.getInstance();

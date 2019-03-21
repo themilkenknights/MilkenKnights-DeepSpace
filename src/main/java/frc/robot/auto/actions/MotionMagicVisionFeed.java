@@ -24,7 +24,8 @@ public class MotionMagicVisionFeed implements Action {
   @Override
   public boolean isFinished() {
     //TODO Fix
-    return expirationTimer.isDone() || Drive.getInstance().isMotionMagicFinished() || ((mGoal == VisionGoal.INTAKE_HATCH || mGoal == VisionGoal.PLACE_HATCH) && (HatchArm.getInstance().isHatchLimitTriggered()));
+    return expirationTimer.isDone() || Drive.getInstance().isMotionMagicFinished() || ((mGoal == VisionGoal.INTAKE_HATCH
+        || mGoal == VisionGoal.PLACE_HATCH) && (HatchArm.getInstance().isHatchLimitTriggered()));
   }
 
   @Override

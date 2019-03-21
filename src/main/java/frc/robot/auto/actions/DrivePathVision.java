@@ -33,7 +33,7 @@ public class DrivePathVision implements Action {
   @Override
   public void start() {
     double now = Timer.getFPGATimestamp();
-    Trajectory.Config fastConfig = new Trajectory.Config(Trajectory.FitMethod.HERMITE_QUINTIC, Config.SAMPLES_LOW, DRIVE.PATH_DT, 40, 30, 100);
+    Trajectory.Config fastConfig = new Trajectory.Config(Trajectory.FitMethod.HERMITE_CUBIC, Config.SAMPLES_FAST, DRIVE.PATH_DT, 40, 30, 100);
     LimelightTarget currentTarget = Vision.getInstance().getLimelightTarget();
     double x = currentTarget.getCamTran()[2];
     double y = -currentTarget.getCamTran()[0];
