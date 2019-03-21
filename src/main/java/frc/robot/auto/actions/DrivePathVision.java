@@ -3,7 +3,9 @@ package frc.robot.auto.actions;
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.Constants.DRIVE;
 import frc.robot.lib.util.trajectory.Path;
+import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.Drive;
+import frc.robot.subsystems.Vision;
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
 import jaci.pathfinder.Trajectory.Config;
@@ -22,14 +24,20 @@ public class DrivePathVision implements Action {
 
   @Override
   public void done() {
-    Drive.getInstance().isPathFinished();
+    //Drive.getInstance().isPathFinished();
   }
 
   @Override
   public void start() {
     double now = Timer.getFPGATimestamp();
-    Trajectory.Config fastConfig = new Trajectory.Config(Trajectory.FitMethod.HERMITE_CUBIC, Config.SAMPLES_FAST, DRIVE.PATH_DT, 135, 80, 500);
-    Waypoint[] drivePath = new Waypoint[] {new Waypoint(0, 0, Pathfinder.d2r(0)), new Waypoint(35.5, 8.323, Pathfinder.d2r(23.343))};
+    Trajectory.Config fastConfig = new Trajectory.Config(Trajectory.FitMethod.HERMITE_QUINTIC, Config.SAMPLES_LOW, DRIVE.PATH_DT, 40, 30, 100);
+    LimelightTarget currentTarget = Vision.getInstance().getLimelightTarget();
+    double x = currentTarget.getCamTran()[2];
+    double y = -currentTarget.getCamTran()[0];
+    double yaw = currentTarget.getCamTran()[4];
+    Waypoint[] drivePath = new Waypoint[] {
+            new Waypoint(x,y, Pathfinder.d2r(yaw)),
+            new Waypoint(0.0, 0.0, Pathfinder.d2r(0.0))};
     Trajectory trajectory = Pathfinder.generate(drivePath, fastConfig);
     TankModifier modifier = new TankModifier(trajectory).modify(DRIVE.kEffectiveDriveWheelTrackWidthInches);
     Trajectory left = modifier.getLeftTrajectory();

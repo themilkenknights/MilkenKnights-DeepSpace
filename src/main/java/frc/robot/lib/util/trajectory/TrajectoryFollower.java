@@ -51,8 +51,8 @@ public class TrajectoryFollower {
     double currentTime = Timer.getFPGATimestamp();
     current_segment = (int) (customRound(currentTime - Dt) / Constants.DRIVE.PATH_DT);
     if (current_segment < profile_.length()) {
-      // Trajectory.Segment segment = interpolateSegments(current_segment, currentTime);
-      Trajectory.Segment segment = profile_.get(current_segment);
+     // Trajectory.Segment segment = interpolateSegments(current_segment);
+     Trajectory.Segment segment = profile_.get(current_segment);
       double error = segment.position - dist;
       double angError = segment.heading - heading;
       if (angError > 180) {
@@ -74,7 +74,7 @@ public class TrajectoryFollower {
 
   // TODO Update to Path Dt
   private double customRound(double num) {
-    return Math.ceil(num * 50) / 50.0;
+    return Math.ceil(num * 100) / 100.0;
   }
 
   public double getHeading() {

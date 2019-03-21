@@ -89,7 +89,7 @@ public class Logger {
 
   public static synchronized void logErrorWithTrace(String mark) {
     logMarker(mark, null);
-    DriverStation.reportError(mark, false);
+    DriverStation.reportError(mark, true);
   }
 
   public static synchronized void logThrowableCrash(Throwable throwable) {

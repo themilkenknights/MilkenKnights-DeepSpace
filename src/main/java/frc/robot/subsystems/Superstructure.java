@@ -14,7 +14,9 @@ import frc.robot.Constants.MISC;
 import frc.robot.Input;
 import frc.robot.Robot;
 import frc.robot.auto.modes.ClimbLevel2Mode;
+import frc.robot.auto.modes.HatchIntakeVisionPigeon;
 import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
+import frc.robot.auto.modes.SimpleHatchPlace;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.Subsystem;
 import frc.robot.subsystems.CargoArm.CargoArmState;
@@ -126,6 +128,9 @@ public class Superstructure extends Subsystem {
       case AUTO_CLIMB:
         startAutoClimb();
         break;
+      case SIMPLE_PLACE:
+        setSimpleHatch();
+        break;
       default:
         Logger.logError("Unexpected robot state: " + mRobotState);
         break;
@@ -161,8 +166,12 @@ public class Superstructure extends Subsystem {
       setRobotState(RobotState.TELEOP_DRIVE);
       Logger.logMarker("Limelight target not valid");
     } else {
-      AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
+      AutoChooser.startAuto(new HatchIntakeVisionPigeon());
     }
+  }
+
+  private void setSimpleHatch(){
+    AutoChooser.startAuto(new SimpleHatchPlace());
   }
 
   private void startAutoClimb() {
@@ -178,7 +187,7 @@ public class Superstructure extends Subsystem {
     }
   }
   public enum RobotState {
-    TELEOP_DRIVE, HATCH_VISION_INTAKE, HATCH_VISION_OUTTAKE, VISION_CARGO_OUTTAKE, AUTO_CLIMB
+    TELEOP_DRIVE, HATCH_VISION_INTAKE, HATCH_VISION_OUTTAKE, VISION_CARGO_OUTTAKE, AUTO_CLIMB, SIMPLE_PLACE
   }
   private static class InstanceHolder {
     private static final Superstructure mInstance = new Superstructure();

@@ -1,9 +1,6 @@
 package frc.robot.subsystems;
 
-import com.ctre.phoenix.motorcontrol.ControlMode;
-import com.ctre.phoenix.motorcontrol.DemandType;
-import com.ctre.phoenix.motorcontrol.FollowerType;
-import com.ctre.phoenix.motorcontrol.NeutralMode;
+import com.ctre.phoenix.motorcontrol.*;
 import com.ctre.phoenix.sensors.PigeonIMU;
 
 import edu.wpi.first.networktables.NetworkTableEntry;
@@ -135,7 +132,7 @@ public class Drive extends Subsystem {
     mAvgDist
         .setDouble((mLeftDrive.masterTalon.getSensorCollection().getQuadraturePosition() + mRightDrive.masterTalon.getSensorCollection().getQuadraturePosition()) / 2.0);
     if (getHeading() != null) {
-      mGyroHeading.setDouble(getHeading().getDegrees());
+      mGyroHeading.setDouble(getHeadingDeg());
     }
     if (mCSVWriter != null && MISC.kDriveCSVLogging) {
       if (mDriveControlState == DriveControlState.VELOCITY_SETPOINT) {
@@ -229,17 +226,22 @@ public class Drive extends Subsystem {
   private synchronized void configNormalDrive() {
     if (mDriveControlState == DriveControlState.PIGEON_SERVO) {
       mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 1.0, 0);
+      mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
+      mRightDrive.masterTalon.configSelectedFeedbackCoefficient(1.0, 0, 0);
     }
   }
 
-  private void zero() {
+  private synchronized void zero() {
     left_encoder_prev_distance_ = 0;
     right_encoder_prev_distance_ = 0;
     mLeftDrive.zeroEncoder();
     mRightDrive.zeroEncoder();
-    zeroPigeon();
     RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
     setHeading(Rotation2d.identity());
+    mPeriodicIO.leftPos = 0.0;
+    mPeriodicIO.rightPos = 0.0;
+    mPeriodicIO.leftVel = 0.0;
+    mPeriodicIO.rightVel = 0.0;
     if (mCSVWriter == null && MISC.kDriveCSVLogging) {
       mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
     }
@@ -330,6 +332,8 @@ public class Drive extends Subsystem {
   private synchronized void configHatchVision() {
     if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
       mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 0.5, 0);
+      mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.SensorSum);
+      mRightDrive.masterTalon.configSelectedFeedbackCoefficient(0.5, 0, 0);
       mLeftDrive.masterTalon.follow(mRightDrive.masterTalon, FollowerType.AuxOutput1);
     }
   }
@@ -417,6 +421,7 @@ public class Drive extends Subsystem {
    * @param ang_tol Robot Angle Tolerance for Path Follower (Degrees)
    */
   public synchronized void setDrivePath(Path path, double dist_tol, double ang_tol) {
+    zero();
     Logger.logMarker("Began Path: " + path.getName());
     double offset = lastAngle - Pathfinder.boundHalfDegrees(Pathfinder.r2d(path.getLeftWheelTrajectory().get(0).heading));
     for (Trajectory.Segment segment : path.getLeftWheelTrajectory().segments) {
@@ -425,7 +430,6 @@ public class Drive extends Subsystem {
     for (Trajectory.Segment segment : path.getRightWheelTrajectory().segments) {
       segment.heading = Pathfinder.boundHalfDegrees(Pathfinder.r2d(segment.heading) + offset);
     }
-    zero();
     pathFollower = new PathFollower(path, dist_tol, ang_tol);
     mDriveControlState = DriveControlState.VELOCITY_SETPOINT;
   }
@@ -452,11 +456,11 @@ public class Drive extends Subsystem {
    * Follower Creates a new Drive Signal that is then set as a velocity setpoint
    */
   private synchronized void updatePathFollower() {
-    TrajectoryStatus leftUpdate = pathFollower.getLeftVelocity(mPeriodicIO.leftPos, mPeriodicIO.leftVel, -getHeadingDeg());
-    TrajectoryStatus rightUpdate = pathFollower.getRightVelocity(mPeriodicIO.rightPos, mPeriodicIO.rightVel, -getHeadingDeg());
+    TrajectoryStatus leftUpdate = pathFollower.getLeftVelocity(mPeriodicIO.leftPos, mPeriodicIO.leftVel, getHeadingDeg());
+    TrajectoryStatus rightUpdate = pathFollower.getRightVelocity(mPeriodicIO.rightPos, mPeriodicIO.rightVel, getHeadingDeg());
     leftStatus = leftUpdate;
     rightStatus = rightUpdate;
-    setVelocity(new DriveSignal(leftUpdate.getOutput(), rightUpdate.getOutput()), new DriveSignal(leftUpdate.getArbFeed(), rightUpdate.getArbFeed()));
+    setVelocity(new DriveSignal(MkMath.InchesPerSecToUnitsPer100Ms(leftUpdate.getOutput()), MkMath.InchesPerSecToUnitsPer100Ms(rightUpdate.getOutput())), new DriveSignal(leftUpdate.getArbFeed(), rightUpdate.getArbFeed()));
   }
 
   /**

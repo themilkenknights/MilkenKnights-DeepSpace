@@ -3,6 +3,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.GENERAL;
+import frc.robot.auto.modes.HatchIntakeVisionPigeon;
 import frc.robot.lib.drivers.MkJoystick;
 import frc.robot.lib.drivers.MkJoystickButton;
 import frc.robot.lib.math.DriveHelper;
@@ -11,6 +12,7 @@ import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.util.SynchronousPIDF;
+import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.*;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.HatchArm.HatchState;
@@ -40,8 +42,6 @@ public class Input {
   private static final MkJoystickButton mStopAuto = mOperatorJoystick.getButton(9, "Stop Auto");
   private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
   private static MkTimer rumbleTimer = new MkTimer();
-  private static boolean isVelocitySetpoint = false;
-  private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.05, 0.0, 0.15);
   private static Drive mDrive = Drive.getInstance();
   private static HatchArm mHatch = HatchArm.getInstance();
   private static CargoArm mCargo = CargoArm.getInstance();
@@ -83,7 +83,7 @@ public class Input {
       mCargo.setOpenLoop(0.0);
     }
     if (mToggleVelocity.isPressed()) {
-      isVelocitySetpoint = !isVelocitySetpoint;
+        mStructure.setRobotState(RobotState.SIMPLE_PLACE);
     }
     // Update robot state as it might have changed
     currentRobotState = mStructure.getRobotState();
@@ -104,17 +104,7 @@ public class Input {
       double forward = (-mDriverJoystick.getRawAxis(2) + mDriverJoystick.getRawAxis(3));
       double turn = (-mDriverJoystick.getRawAxis(0));
       DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
-      if (isVelocitySetpoint) {
-        double visionTurn = mVisionAssist.calculate(Drive.getInstance().getHeadingDeg());
-        mDrive.setOpenLoop(new DriveSignal(controlSig.getLeft() - visionTurn, controlSig.getRight() + visionTurn));
-        /*
-         * if (mDriverJoystick.getPOV() == 270) { mDrive.setDistanceAndAngle(0,
-         * -mDriverJoystick.getRawAxis(0) * 20); } else if (mDriverJoystick.getPOV() == 90) {
-         * mDrive.setDistanceAndAngle(0, -mDriverJoystick.getRawAxis(0) * -20); }
-         */
-      } else {
-        mDrive.setOpenLoop(controlSig);
-      }
+      mDrive.setOpenLoop(controlSig);
     }
     if (isOperatorJoystickConnected) {
       if (mCargoVisionOuttake.isPressed()) {

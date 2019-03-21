@@ -6,6 +6,7 @@ import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.lib.util.Subsystem;
 import frc.robot.lib.vision.LimeLight;
 import frc.robot.lib.vision.LimeLightControlMode.LedMode;
@@ -44,6 +45,7 @@ public class Vision extends Subsystem {
     mLED.setBoolean(mLimeLight.getLEDMode() != LedMode.kforceOff);
     mSkew.setDouble(getLimelightTarget().getSkew());
     mValid.setBoolean(getLimelightTarget().isValidTarget());
+    //System.out.println(getLimelightTarget().getCamTran()[4]);
   }
 
   public void teleopInit(double timestamp) {
@@ -70,13 +72,13 @@ public class Vision extends Subsystem {
   }
 
   public void disableLED() {
-    mLimeLight.setStream(StreamType.kStandard);
-    mLimeLight.setPipeline(1);
+    mLimeLight.setStream(StreamType.kPiPMain);
+    mLimeLight.setPipeline(2);
   }
 
   public void enableLED() {
     mLimeLight.setStream(StreamType.kStandard);
-    mLimeLight.setPipeline(0);
+    mLimeLight.setPipeline(1);
   }
 
   public synchronized LimelightTarget getLimelightTarget() {

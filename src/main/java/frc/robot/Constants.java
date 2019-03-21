@@ -93,7 +93,7 @@ public final class Constants {
     public static final double DRIVE_FOLLOWER_P = 1;
     public static final double DRIVE_FOLLOWER_A = 0.00125;
     public static final double DRIVE_FOLLOWER_ANG = -1.25;
-    public static final double PATH_DT = 0.02;
+    public static final double PATH_DT = 0.01;
   }
   public static class TEST {
     public static final double kMinDriveTestPos = 420.0;
@@ -205,8 +205,8 @@ public final class Constants {
           tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.4);
           if (loc == TalonLoc.Left) {
             tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
-          } else {
-            tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
+            } else {
+          tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
             tal.primaryPID.selectedFeedbackCoefficient = 0.5;
             tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
             tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0;
