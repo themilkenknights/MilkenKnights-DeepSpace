@@ -4,7 +4,6 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.sensors.PigeonIMU;
-
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
@@ -51,7 +50,8 @@ public class CargoArm extends Subsystem {
         mArmTalon.set(ControlMode.MotionMagic, MkMath.degreesToNativeUnits(mArmPosEnable), NeutralMode.Brake);
       } else {
         double armFeed = MkMath.sin(mArmTalon.getPosition() + CARGO_ARM.kArmOffset) * CARGO_ARM.kFeedConstant;
-        mArmTalon.set(ControlMode.MotionMagic, MkMath.degreesToNativeUnits(mCargoArmState.state), DemandType.ArbitraryFeedForward, -armFeed, NeutralMode.Brake);
+        mArmTalon.set(ControlMode.MotionMagic, MkMath.degreesToNativeUnits(mCargoArmState.state), DemandType.ArbitraryFeedForward, -armFeed,
+            NeutralMode.Brake);
       }
     } else {
       Logger.logErrorWithTrace("Unexpected Cargo Arm Control State: " + mCargoArmControlState);
@@ -60,11 +60,9 @@ public class CargoArm extends Subsystem {
   }
 
   /**
-   * The arm encoder was getting periodically briefly disconnected during matches so this method waits
-   * 250ms before switching to open loop control.
+   * The arm encoder was getting periodically briefly disconnected during matches so this method waits 250ms before switching to open loop control.
    *
-   * This method also checks for unsafe current output and will automatically switches to open loop
-   * control.
+   * This method also checks for unsafe current output and will automatically switches to open loop control.
    */
   @Override
   public synchronized void safetyCheck(double timestamp) {
@@ -173,6 +171,7 @@ public class CargoArm extends Subsystem {
     MOTION_MAGIC, // Closed Loop Motion Profile following on the talons used in nearly all circumstances
     OPEN_LOOP // Direct PercentVBus control of the arm as a failsafe
   }
+
   public enum CargoArmState {
     ENABLE(0.0), // State directly after robot is enabled (not mapped to a specific angle)
     INTAKE(182.0), FORWARD_ROCKET_LEVEL_ONE(120.0), FORWARD_ROCKET_LEVEL_TWO(75.0), REVERSE_CARGOSHIP(21.0);
@@ -182,6 +181,7 @@ public class CargoArm extends Subsystem {
       this.state = state;
     }
   }
+
   private static class InstanceHolder {
     private static final CargoArm mInstance = new CargoArm();
   }

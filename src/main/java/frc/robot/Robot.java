@@ -1,16 +1,20 @@
 package frc.robot;
 
-import java.util.Arrays;
-
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import frc.robot.lib.util.Logger;
-import frc.robot.subsystems.*;
+import frc.robot.subsystems.CargoArm;
+import frc.robot.subsystems.Drive;
+import frc.robot.subsystems.HatchArm;
+import frc.robot.subsystems.Superstructure;
+import frc.robot.subsystems.Vision;
+import java.util.Arrays;
 
 public class Robot extends TimedRobot {
   public static MatchState mMatchState = MatchState.DISABLED;
   private final SubsystemManager mSubsystemManager =
-      new SubsystemManager(Arrays.asList(CargoArm.getInstance(), Drive.getInstance(), HatchArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
+      new SubsystemManager(
+          Arrays.asList(CargoArm.getInstance(), Drive.getInstance(), HatchArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
 
   public Robot() {
     super(Constants.GENERAL.kMainLoopDt);

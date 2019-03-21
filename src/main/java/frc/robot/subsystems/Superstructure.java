@@ -33,8 +33,8 @@ public class Superstructure extends Subsystem {
   private NetworkTableEntry mMatchState, mRobotStateEntry, mCompressorCurrent, mFrontClimb, mRearClimb;
 
   /**
-   * Stores PDP, Compressor, General Robot Data, and Climb Actuators. Acts as the high-level
-   * controller that changes calls the lower-level subsystems.
+   * Stores PDP, Compressor, General Robot Data, and Climb Actuators. Acts as the high-level controller that changes calls the lower-level
+   * subsystems.
    */
   private Superstructure() {
     ShuffleboardTab mStructureTab = Shuffleboard.getTab("General");
@@ -186,9 +186,11 @@ public class Superstructure extends Subsystem {
       this.state = state;
     }
   }
+
   public enum RobotState {
     TELEOP_DRIVE, HATCH_VISION_INTAKE, HATCH_VISION_OUTTAKE, VISION_CARGO_OUTTAKE, AUTO_CLIMB, SIMPLE_PLACE
   }
+
   private static class InstanceHolder {
     private static final Superstructure mInstance = new Superstructure();
   }

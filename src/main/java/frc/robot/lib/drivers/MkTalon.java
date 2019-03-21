@@ -1,20 +1,28 @@
 package frc.robot.lib.drivers;
 
-import java.util.ArrayList;
-
 import com.ctre.phoenix.ErrorCode;
-import com.ctre.phoenix.motorcontrol.*;
+import com.ctre.phoenix.motorcontrol.ControlFrame;
+import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.DemandType;
+import com.ctre.phoenix.motorcontrol.Faults;
+import com.ctre.phoenix.motorcontrol.InvertType;
+import com.ctre.phoenix.motorcontrol.NeutralMode;
+import com.ctre.phoenix.motorcontrol.StatusFrameEnhanced;
+import com.ctre.phoenix.motorcontrol.StickyFaults;
 import com.ctre.phoenix.motorcontrol.can.BaseMotorController;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import com.ctre.phoenix.sensors.PigeonIMU;
 import com.ctre.phoenix.sensors.PigeonIMU_StatusFrame;
-
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants;
-import frc.robot.Constants.*;
+import frc.robot.Constants.CARGO_ARM;
+import frc.robot.Constants.CONFIG;
+import frc.robot.Constants.DRIVE;
+import frc.robot.Constants.GENERAL;
+import frc.robot.Constants.TEST;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
@@ -22,6 +30,7 @@ import frc.robot.lib.util.Util;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.HatchArm;
+import java.util.ArrayList;
 
 public class MkTalon {
   private static ArrayList<Double> currents = new ArrayList<>();
@@ -68,16 +77,13 @@ public class MkTalon {
    * Configures all Talon/Victor Configs at startup based on the talon position
    *
    * <p>
-   * This method is meant to contain the mess in one place and ensure that each parameter is set
-   * correctly.
+   * This method is meant to contain the mess in one place and ensure that each parameter is set correctly.
    *
    * <p>
-   * All of the persistent configs are stored in {@link Constants.CONFIG}. These primarily configure
-   * PID/Limit Switch/Encoder settings.
+   * All of the persistent configs are stored in {@link Constants.CONFIG}. These primarily configure PID/Limit Switch/Encoder settings.
    *
    * <p>
-   * Errors will appear on the Driver Station and will be logged to disk if a config() method return
-   * an error.
+   * Errors will appear on the Driver Station and will be logged to disk if a config() method return an error.
    */
   public synchronized void resetConfig() {
     lastControlMode = ControlMode.PercentOutput;
@@ -206,8 +212,9 @@ public class MkTalon {
       CTRE(masterTalon.setSelectedSensorPosition(0, CONFIG.kPIDPrimary, kShort));
       CTRE(masterTalon.getSensorCollection().setQuadraturePosition(0, kShort));
     } else if (mSide == TalonLoc.Cargo_Arm) {
-      CTRE(masterTalon.getSensorCollection().syncQuadratureWithPulseWidth(CARGO_ARM.kBookEnd_0, CARGO_ARM.kBookEnd_1, CARGO_ARM.kCrossOverZero, CARGO_ARM.kOffset,
-          kShort));
+      CTRE(masterTalon.getSensorCollection()
+          .syncQuadratureWithPulseWidth(CARGO_ARM.kBookEnd_0, CARGO_ARM.kBookEnd_1, CARGO_ARM.kCrossOverZero, CARGO_ARM.kOffset,
+              kShort));
     } else {
       Logger.logErrorWithTrace("Can't Zero Encoder: MkTalon Position - " + mSide.toString());
     }
@@ -218,14 +225,12 @@ public class MkTalon {
   }
 
   /**
-   * Primary method for all Talon Control. Only sends commands to the Talon if they are new or if the
-   * motor safety timer expires.
+   * Primary method for all Talon Control. Only sends commands to the Talon if they are new or if the motor safety timer expires.
    *
    * @param mode Control Mode for Talon (PercentOuput, MotionMagic, Velocity, etc.)
    * @param value Setpoint (Units based on Control Mode, See {@link Constants}
    * @param nMode Neutral Mode (Brake/Coast) for Talons/Victors
-   * @param arbFeed Arbitrary feedforward added as a PercentOutput to any closed loop (or open loop)
-   *        mode.
+   * @param arbFeed Arbitrary feedforward added as a PercentOutput to any closed loop (or open loop) mode.
    */
   public synchronized void set(ControlMode mode, double value, DemandType type, double arbFeed, NeutralMode nMode) {
     if (lastNeutralMode != nMode) {
@@ -274,10 +279,8 @@ public class MkTalon {
   }
 
   /**
-   * @return Error from setpoint in Inches/Inches Per Sec/Degrees Note that the method returns the
-   *         deviation from target setpoint unlike the official
-   *         {@link BaseMotorController#getClosedLoopError()} method. This method serves to limit CAN
-   *         usage by using known setpoints to calculate error.
+   * @return Error from setpoint in Inches/Inches Per Sec/Degrees Note that the method returns the deviation from target setpoint unlike the official
+   * {@link BaseMotorController#getClosedLoopError()} method. This method serves to limit CAN usage by using known setpoints to calculate error.
    */
   public synchronized double getError() {
     return getError(0);
@@ -359,13 +362,11 @@ public class MkTalon {
   }
 
   /**
-   * Defines the tests for each mechanism. The current, velocity, and position of each mechanism must
-   * meet a minimum (or maximum) value and for mechanisms with several motors, the delta between these
-   * measurements must be below a certain threshold.
+   * Defines the tests for each mechanism. The current, velocity, and position of each mechanism must meet a minimum (or maximum) value and for
+   * mechanisms with several motors, the delta between these measurements must be below a certain threshold.
    *
    * <p>
-   * The cargo and ground intake move to each available setpoint and should be verified by the test
-   * operator.
+   * The cargo and ground intake move to each available setpoint and should be verified by the test operator.
    *
    * @return Whether the test was successful
    */
@@ -601,12 +602,10 @@ public class MkTalon {
   }
 
   /**
-   * Left Drive and Right Drive house the Talon, Victor, and SRX Mag encoder for each side of the
-   * drivetrain. The hatch Arm houses the ground hatch intake Talon, SRX Mag Encoder, and an unused
-   * Talon with a Breakout board with two limit switches. One limit switch is placed at the reverse
-   * hardstop for the ground intake arm, and the second is placed on the pneumatic spear arm to detect
-   * when the main arm is inside the target. The Cargo Arm houses the Talon, Victor, and SRX Mag
-   * encoder for the main cargo arm.
+   * Left Drive and Right Drive house the Talon, Victor, and SRX Mag encoder for each side of the drivetrain. The hatch Arm houses the ground hatch
+   * intake Talon, SRX Mag Encoder, and an unused Talon with a Breakout board with two limit switches. One limit switch is placed at the reverse
+   * hardstop for the ground intake arm, and the second is placed on the pneumatic spear arm to detect when the main arm is inside the target. The
+   * Cargo Arm houses the Talon, Victor, and SRX Mag encoder for the main cargo arm.
    */
   public enum TalonLoc {
     Left, Right, Cargo_Arm, Cargo_Intake

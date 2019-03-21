@@ -4,18 +4,18 @@ import frc.robot.Constants;
 import frc.robot.Constants.DRIVE;
 
 /**
- * Provides forward and inverse kinematics equations for the robot modeling the wheelbase as a
- * differential drive (with a corrective factor to account for skidding).
+ * Provides forward and inverse kinematics equations for the robot modeling the wheelbase as a differential drive (with a corrective factor to account
+ * for skidding).
  */
 public class Kinematics {
   private static final double kEpsilon = 1E-9;
 
   /**
-   * Forward kinematics using only encoders, rotation is implicit (less accurate than below, but
-   * useful for predicting motion)
+   * Forward kinematics using only encoders, rotation is implicit (less accurate than below, but useful for predicting motion)
    */
   public static Twist2d forwardKinematics(double left_wheel_delta, double right_wheel_delta) {
-    double delta_rotation = (right_wheel_delta - left_wheel_delta) / (Constants.DRIVE.kEffectiveDriveWheelTrackWidthInches * Constants.DRIVE.kTrackScrubFactor);
+    double delta_rotation =
+        (right_wheel_delta - left_wheel_delta) / (Constants.DRIVE.kEffectiveDriveWheelTrackWidthInches * Constants.DRIVE.kTrackScrubFactor);
     return forwardKinematics(left_wheel_delta, right_wheel_delta, delta_rotation);
   }
 

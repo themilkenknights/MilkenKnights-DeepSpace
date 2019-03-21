@@ -2,13 +2,11 @@
 // http://algs4.cs.princeton.edu/14analysis/PolynomialRegression.java.html
 package frc.robot.lib.util;
 /**
- * **************************************************************************** Compilation: javac
- * -cp .:jama.jar PolynomialRegression.java Execution: java -cp .:jama.jar PolynomialRegression
- * Dependencies: jama.jar StdOut.java
+ * **************************************************************************** Compilation: javac -cp .:jama.jar PolynomialRegression.java Execution:
+ * java -cp .:jama.jar PolynomialRegression Dependencies: jama.jar StdOut.java
  *
  * <p>
- * % java -cp .:jama.jar PolynomialRegression 0.01 n^3 + -1.64 n^2 + 168.92 n + -2113.73 (R^2 =
- * 0.997)
+ * % java -cp .:jama.jar PolynomialRegression 0.01 n^3 + -1.64 n^2 + 168.92 n + -2113.73 (R^2 = 0.997)
  *
  * <p>
  * ****************************************************************************
@@ -18,18 +16,17 @@ import Jama.Matrix;
 import Jama.QRDecomposition;
 
 /**
- * The {@code PolynomialRegression} class performs a polynomial regression on an set of <em>N</em>
- * data points ( <em>y<sub>i</sub></em>, <em>x<sub>i</sub></em>). That is, it fits a polynomial
+ * The {@code PolynomialRegression} class performs a polynomial regression on an set of <em>N</em> data points ( <em>y<sub>i</sub></em>,
+ * <em>x<sub>i</sub></em>). That is, it fits a polynomial
  * <em>y</em> = &beta;<sub>0</sub> + &beta;<sub>1</sub> <em>x</em> + &beta;<sub>2</sub>
  * <em>x</em><sup>2</sup> + ... + &beta;<sub><em>d</em></sub> <em>x</em><sup><em>d</em></sup> (where
  * <em>y</em> is the response variable, <em>x</em> is the predictor variable, and the
- * &beta;<sub><em>i</em></sub> are the regression coefficients) that minimizes the sum of squared
- * residuals of the multiple regression model. It also computes associated the coefficient of
- * determination <em>R</em><sup>2</sup>.
+ * &beta;<sub><em>i</em></sub> are the regression coefficients) that minimizes the sum of squared residuals of the multiple regression model. It also
+ * computes associated the coefficient of determination <em>R</em><sup>2</sup>.
  *
  * <p>
- * This implementation performs a QR-decomposition of the underlying Vandermonde matrix, so it is
- * not the fastest or most numerically stable way to perform the polynomial regression.
+ * This implementation performs a QR-decomposition of the underlying Vandermonde matrix, so it is not the fastest or most numerically stable way to
+ * perform the polynomial regression.
  *
  * @author Robert Sedgewick
  * @author Kevin Wayne
@@ -168,8 +165,7 @@ public class PolynomialRegression {
   /**
    * Returns the coefficient of determination <em>R</em><sup>2</sup>.
    *
-   * @return the coefficient of determination <em>R</em><sup>2</sup>, which is a real number between 0
-   *         and 1
+   * @return the coefficient of determination <em>R</em><sup>2</sup>, which is a real number between 0 and 1
    */
   public double R2() {
     if (sst == 0.0) {

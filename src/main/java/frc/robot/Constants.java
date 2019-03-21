@@ -1,32 +1,30 @@
 package frc.robot;
 
+import com.ctre.phoenix.motorcontrol.FeedbackDevice;
+import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
+import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
+import com.ctre.phoenix.motorcontrol.RemoteSensorSource;
+import com.ctre.phoenix.motorcontrol.VelocityMeasPeriod;
+import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
+import frc.robot.lib.drivers.MkTalon.TalonLoc;
+import frc.robot.lib.math.MkMath;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.ctre.phoenix.motorcontrol.*;
-import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
-
-import frc.robot.lib.drivers.MkTalon.TalonLoc;
-import frc.robot.lib.math.MkMath;
-import frc.robot.lib.util.InterpolatingDouble;
-import frc.robot.lib.util.InterpolatingTreeMap;
-
 /**
- * Unless otherwise noted by raw/native/RPM, all position unites are in inches and degrees and all
- * velocity units are in inches per second and degrees per second. 'ID' typically notes a CAN ID All
- * PID Constants are in Native Units. The front of the robot is at the Hatch Mechanism/Battery. The
+ * Unless otherwise noted by raw/native/RPM, all position unites are in inches and degrees and all velocity units are in inches per second and degrees
+ * per second. 'ID' typically notes a CAN ID All PID Constants are in Native Units. The front of the robot is at the Hatch Mechanism/Battery. The
  * exception is for the Cargo Mechanism where Left/Right for this mechanism are flipped.
  *
  * <p>
  * The zero position for the arms are at the hardstops inside the robot perimeter.
  *
  * <p>
- * Positive voltages/sensor measurements for the arms should correspond to rotating toward the
- * ground. Positive Voltages to the drive motors should always move the robot forward.
+ * Positive voltages/sensor measurements for the arms should correspond to rotating toward the ground. Positive Voltages to the drive motors should
+ * always move the robot forward.
  *
  * <p>
- * +X is Hatch Arm/Battery Forward -X is Hatch Arm/Battery Forward +Y is Left (Hatch Arm/Battery
- * Forward) -Y is Right (Hatch Arm/Battery Forward)
+ * +X is Hatch Arm/Battery Forward -X is Hatch Arm/Battery Forward +Y is Left (Hatch Arm/Battery Forward) -Y is Right (Hatch Arm/Battery Forward)
  */
 public final class Constants {
   public static final boolean kIsPracticeBot = true;
@@ -42,10 +40,10 @@ public final class Constants {
     public static final double kWheelDeadband = 0.003;
     public static final double kOperatorDeadband = 0.01;
   }
+
   /**
-   * Every CAN ID should be listed here. Note that the Talons & Victors are physical numerical order
-   * ony on the Comp Bot. Every CAN ID corresponds to the same outputs on the practice bot but the
-   * order is different.
+   * Every CAN ID should be listed here. Note that the Talons & Victors are physical numerical order ony on the Comp Bot. Every CAN ID corresponds to
+   * the same outputs on the practice bot but the order is different.
    */
   public static class CAN {
     public static final int kPneumaticsControlModuleID = 0;
@@ -70,6 +68,7 @@ public final class Constants {
     // Used for Pigeon IMU
     public static final int kRightCargoIntakeTalonID = 6;
   }
+
   public static class DRIVE {
     // Invert
     public static final boolean kLeftInvert = false;
@@ -95,6 +94,7 @@ public final class Constants {
     public static final double DRIVE_FOLLOWER_ANG = -1.25;
     public static final double PATH_DT = 0.01;
   }
+
   public static class TEST {
     public static final double kMinDriveTestPos = 420.0;
     public static final double kMinDriveTestVel = 145.0;
@@ -111,6 +111,7 @@ public final class Constants {
     public static final double kHatchArmCurrent = 140;
     public static final double kHatchArmPos = 140;
   }
+
   public static class CARGO_ARM {
     public static final boolean kCargoArmSensorPhase = true;
     public static final boolean kCargoArmDirection = false;
@@ -130,9 +131,11 @@ public final class Constants {
     public static final boolean kCrossOverZero = false;
     public static final int kOffset = kIsPracticeBot ? -4192 : -3086;
   }
+
   public static class HATCH_ARM {
     public static final boolean kHatchArmPlaceState = true;
   }
+
   public static class MISC {
     public static final boolean kDriveCSVLogging = false;
     public static final boolean kErrorLogging = false;
@@ -141,25 +144,14 @@ public final class Constants {
     public static final int kRearClimbSolenoidChannel = 1;
     public static final int kHatchPancakeChannel = 3;
   }
-  public static class VISION {
-    public static InterpolatingTreeMap<InterpolatingDouble, InterpolatingDouble> kAreaToDistVisionMap = new InterpolatingTreeMap<>();
-    static {
-      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(12400.0), new InterpolatingDouble(15.9));
-      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(9362.0), new InterpolatingDouble(20.16));
-      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(6958.0), new InterpolatingDouble(26.26));
-      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(5122.0), new InterpolatingDouble(32.45));
-      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(3423.0), new InterpolatingDouble(42.8));
-      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(2155.0), new InterpolatingDouble(57.44));
-      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(1464.0), new InterpolatingDouble(73.35));
-      VISION.kAreaToDistVisionMap.put(new InterpolatingDouble(980.0), new InterpolatingDouble(94.09));
-    }
-  }
+
   public static class CONFIG {
     public static final int kPIDPrimary = 0;
     public static final int kPIDAuxilliaryTurn = 1;
     public static final int kDistanceSlot = 0;
     public static final int kTurningSlot = 1;
     public static final Map<TalonLoc, TalonSRXConfiguration> kConfigs = new HashMap<>();
+
     static {
       kConfigs.put(TalonLoc.Left, new TalonSRXConfiguration());
       kConfigs.put(TalonLoc.Right, new TalonSRXConfiguration());
@@ -184,7 +176,7 @@ public final class Constants {
         tal.forwardLimitSwitchNormal = LimitSwitchNormal.Disabled;
         tal.reverseLimitSwitchNormal = LimitSwitchNormal.Disabled;
         if (loc == TalonLoc.Left || loc == TalonLoc.Right) {
-          tal.motionCurveStrength = 2;
+          tal.motionCurveStrength = 3;
           tal.velocityMeasurementPeriod = VelocityMeasPeriod.Period_25Ms;
           tal.velocityMeasurementWindow = 16;
           // General Velocity/Motion Magic
@@ -208,15 +200,17 @@ public final class Constants {
           } else {
             tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
             tal.primaryPID.selectedFeedbackCoefficient = 0.5;
-            tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
-            tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0;
-            tal.remoteFilter1.remoteSensorDeviceID = CAN.kLeftCargoIntakeTalonID;
-            tal.remoteFilter1.remoteSensorSource = RemoteSensorSource.GadgeteerPigeon_Yaw;
             tal.sum0Term = FeedbackDevice.RemoteSensor0;
             tal.sum1Term = FeedbackDevice.CTRE_MagEncoder_Relative;
             tal.remoteFilter0.remoteSensorSource = RemoteSensorSource.TalonSRX_SelectedSensor;
             tal.remoteFilter0.remoteSensorDeviceID = CAN.kDriveLeftMasterTalonID;
             tal.auxPIDPolarity = false;
+            /*
+             * tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
+             * tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0; tal.remoteFilter1.remoteSensorDeviceID =
+             * CAN.kLeftCargoIntakeTalonID; tal.remoteFilter1.remoteSensorSource =
+             * RemoteSensorSource.GadgeteerPigeon_Yaw;
+             */
           }
         } else if (loc == TalonLoc.Cargo_Arm) {
           tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;

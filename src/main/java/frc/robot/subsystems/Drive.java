@@ -1,8 +1,11 @@
 package frc.robot.subsystems;
 
-import com.ctre.phoenix.motorcontrol.*;
+import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.DemandType;
+import com.ctre.phoenix.motorcontrol.FeedbackDevice;
+import com.ctre.phoenix.motorcontrol.FollowerType;
+import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.sensors.PigeonIMU;
-
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
@@ -15,9 +18,17 @@ import frc.robot.Constants.MISC;
 import frc.robot.lib.drivers.CT;
 import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
-import frc.robot.lib.geometry.*;
+import frc.robot.lib.geometry.Kinematics;
+import frc.robot.lib.geometry.Pose2d;
+import frc.robot.lib.geometry.RobotState;
+import frc.robot.lib.geometry.Rotation2d;
+import frc.robot.lib.geometry.Twist2d;
 import frc.robot.lib.math.MkMath;
-import frc.robot.lib.util.*;
+import frc.robot.lib.util.DriveSignal;
+import frc.robot.lib.util.Logger;
+import frc.robot.lib.util.ReflectingCSVWriter;
+import frc.robot.lib.util.Subsystem;
+import frc.robot.lib.util.TrajectoryStatus;
 import frc.robot.lib.util.trajectory.Path;
 import frc.robot.lib.util.trajectory.PathFollower;
 import jaci.pathfinder.Pathfinder;
@@ -90,9 +101,8 @@ public class Drive extends Subsystem {
   }
 
   /**
-   * Write setpoints to Talons and Victors left_demand and right_demand are always in Talon Native
-   * Units or Talon Native Units Per 100ms left_feedforward and right_feedforward are in Percent
-   * Output [-1,1] and are added to the Talon SRX Closed Loop Output
+   * Write setpoints to Talons and Victors left_demand and right_demand are always in Talon Native Units or Talon Native Units Per 100ms
+   * left_feedforward and right_feedforward are in Percent Output [-1,1] and are added to the Talon SRX Closed Loop Output
    */
   @Override
   public synchronized void writePeriodicOutputs(double timestamp) {
@@ -100,13 +110,17 @@ public class Drive extends Subsystem {
       mLeftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.MOTION_MAGIC) {
-      mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward, mPeriodicIO.brake_mode);
-      mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward, mPeriodicIO.brake_mode);
+      mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward,
+          mPeriodicIO.brake_mode);
+      mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward,
+          mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.PIGEON_SERVO) {
       mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.AuxPID, mPeriodicIO.right_feedforward, mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.VELOCITY_SETPOINT) {
-      mLeftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward, mPeriodicIO.brake_mode);
-      mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward, mPeriodicIO.brake_mode);
+      mLeftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward,
+          mPeriodicIO.brake_mode);
+      mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward,
+          mPeriodicIO.brake_mode);
     } else {
       Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
     }
@@ -122,6 +136,7 @@ public class Drive extends Subsystem {
    * default: Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
    * break; } }
    */
+
   /**
    * Update Shuffleboard and Log to CSV
    */
@@ -130,7 +145,8 @@ public class Drive extends Subsystem {
     mRightDrive.updateShuffleboard();
     mFusedHeading.setDouble(mPeriodicIO.fusedHeading);
     mAvgDist
-        .setDouble((mLeftDrive.masterTalon.getSensorCollection().getQuadraturePosition() + mRightDrive.masterTalon.getSensorCollection().getQuadraturePosition()) / 2.0);
+        .setDouble((mLeftDrive.masterTalon.getSensorCollection().getQuadraturePosition() + mRightDrive.masterTalon.getSensorCollection()
+            .getQuadraturePosition()) / 2.0);
     if (getHeading() != null) {
       mGyroHeading.setDouble(getHeadingDeg());
     }
@@ -305,8 +321,7 @@ public class Drive extends Subsystem {
   }
 
   /**
-   * Use Limelight to find Distance and Angle. Drive and turn to target using primary and aux PID on
-   * Talons
+   * Use Limelight to find Distance and Angle. Drive and turn to target using primary and aux PID on Talons
    *
    * @param dist Distance in Inches to Drive (Motion Magic)
    * @param angle Angle to serve to using Pigeon
@@ -347,7 +362,7 @@ public class Drive extends Subsystem {
 
   /**
    * Used for Manual Velocity Setpoint for tuning
-   * 
+   *
    * @param sig Desired output in perent of max velocity
    */
   public synchronized void setVelocitySetpointNormal(DriveSignal sig) {
@@ -451,16 +466,16 @@ public class Drive extends Subsystem {
   }
 
   /**
-   * Called from Looper during Path Following Gets a TrajectoryStatus containing output velocity and
-   * Desired Trajectory Information for logging Inputs Position, Speed and Angle to Trajectory
-   * Follower Creates a new Drive Signal that is then set as a velocity setpoint
+   * Called from Looper during Path Following Gets a TrajectoryStatus containing output velocity and Desired Trajectory Information for logging Inputs
+   * Position, Speed and Angle to Trajectory Follower Creates a new Drive Signal that is then set as a velocity setpoint
    */
   private synchronized void updatePathFollower() {
     TrajectoryStatus leftUpdate = pathFollower.getLeftVelocity(mPeriodicIO.leftPos, mPeriodicIO.leftVel, getHeadingDeg());
     TrajectoryStatus rightUpdate = pathFollower.getRightVelocity(mPeriodicIO.rightPos, mPeriodicIO.rightVel, getHeadingDeg());
     leftStatus = leftUpdate;
     rightStatus = rightUpdate;
-    setVelocity(new DriveSignal(MkMath.InchesPerSecToUnitsPer100Ms(leftUpdate.getOutput()), MkMath.InchesPerSecToUnitsPer100Ms(rightUpdate.getOutput())),
+    setVelocity(
+        new DriveSignal(MkMath.InchesPerSecToUnitsPer100Ms(leftUpdate.getOutput()), MkMath.InchesPerSecToUnitsPer100Ms(rightUpdate.getOutput())),
         new DriveSignal(leftUpdate.getArbFeed(), rightUpdate.getArbFeed()));
   }
 
@@ -476,9 +491,11 @@ public class Drive extends Subsystem {
   public enum DriveControlState {
     OPEN_LOOP, MOTION_MAGIC, PIGEON_SERVO, VELOCITY_SETPOINT
   }
+
   private static class InstanceHolder {
     private static final Drive mInstance = new Drive();
   }
+
   public static class PeriodicIO {
     public double timestamp;
     // Inputs

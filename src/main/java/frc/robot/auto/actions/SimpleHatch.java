@@ -20,7 +20,8 @@ public class SimpleHatch implements Action {
 
   @Override
   public boolean isFinished() {
-    return (HatchArm.getInstance().isHatchLimitTriggered() && HatchArm.getInstance().getHatchSpearState() == HatchArm.HatchState.PLACE) || driveTimer.isDone();
+    return (HatchArm.getInstance().isHatchLimitTriggered() && HatchArm.getInstance().getHatchSpearState() == HatchArm.HatchState.PLACE)
+        || driveTimer.isDone();
   }
 
   @Override

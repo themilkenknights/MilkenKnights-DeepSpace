@@ -1,5 +1,10 @@
 package frc.robot.lib.util;
 
+import edu.wpi.first.wpilibj.DriverStation;
+import edu.wpi.first.wpilibj.shuffleboard.EventImportance;
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import frc.robot.Constants;
+import frc.robot.Constants.MISC;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -7,12 +12,6 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
-
-import edu.wpi.first.wpilibj.DriverStation;
-import edu.wpi.first.wpilibj.shuffleboard.EventImportance;
-import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
-import frc.robot.Constants;
-import frc.robot.Constants.MISC;
 
 /**
  * Tracks start-up and caught crash events, logging them to a file which dosn't roll over

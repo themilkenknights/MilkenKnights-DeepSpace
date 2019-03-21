@@ -1,10 +1,9 @@
 package frc.robot.lib.geometry;
 
-import static frc.robot.lib.util.Util.kEpsilon;
-
+import frc.robot.lib.util.Util;
 import java.text.DecimalFormat;
 
-import frc.robot.lib.util.Util;
+import static frc.robot.lib.util.Util.kEpsilon;
 
 /**
  * A rotation in a 2d coordinate frame represented a point on the unit circle (cosine and sine).
@@ -114,7 +113,8 @@ public class Rotation2d implements IRotation2d<Rotation2d> {
    * @return This rotation rotated by other.
    */
   public Rotation2d rotateBy(final Rotation2d other) {
-    return new Rotation2d(cos_angle_ * other.cos_angle_ - sin_angle_ * other.sin_angle_, cos_angle_ * other.sin_angle_ + sin_angle_ * other.cos_angle_, true);
+    return new Rotation2d(cos_angle_ * other.cos_angle_ - sin_angle_ * other.sin_angle_,
+        cos_angle_ * other.sin_angle_ + sin_angle_ * other.cos_angle_, true);
   }
 
   /**

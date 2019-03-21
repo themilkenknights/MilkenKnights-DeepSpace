@@ -1,7 +1,6 @@
 package frc.robot.lib.drivers;
 
 import com.ctre.phoenix.CANifier;
-
 import frc.robot.lib.math.HsvToRgb;
 
 public class MkLED extends CANifier {

@@ -6,8 +6,7 @@ import edu.wpi.first.wpilibj.Timer;
 /**
  * This class implements a PID Control Loop.
  *
- * Does all computation synchronously (i.e. the calculate() function must be called by the user from
- * his own thread)
+ * Does all computation synchronously (i.e. the calculate() function must be called by the user from his own thread)
  */
 public class SynchronousPIDF {
   private double m_P; // factor for "proportional" control
@@ -76,8 +75,8 @@ public class SynchronousPIDF {
   }
 
   /**
-   * Read the input, calculate the output accordingly, and write to the output. This should be called
-   * at a constant rate by the user (ex. in a timed thread)
+   * Read the input, calculate the output accordingly, and write to the output. This should be called at a constant rate by the user (ex. in a timed
+   * thread)
    *
    * @param input the input
    * @param dt time passed since previous call to calculate
@@ -115,8 +114,7 @@ public class SynchronousPIDF {
   }
 
   /**
-   * Set the PID controller gain parameters. Set the proportional, integral, and differential
-   * coefficients.
+   * Set the PID controller gain parameters. Set the proportional, integral, and differential coefficients.
    *
    * @param p Proportional coefficient
    * @param i Integral coefficient
@@ -129,8 +127,7 @@ public class SynchronousPIDF {
   }
 
   /**
-   * Set the PID controller gain parameters. Set the proportional, integral, and differential
-   * coefficients.
+   * Set the PID controller gain parameters. Set the proportional, integral, and differential coefficients.
    *
    * @param p Proportional coefficient
    * @param i Integral coefficient
@@ -181,8 +178,7 @@ public class SynchronousPIDF {
   }
 
   /**
-   * Return the current PID result This is always centered on zero and constrained the the max and min
-   * outs
+   * Return the current PID result This is always centered on zero and constrained the the max and min outs
    *
    * @return the latest calculated output
    */
@@ -195,18 +191,16 @@ public class SynchronousPIDF {
   }
 
   /**
-   * Set the PID controller to consider the input to be continuous, Rather then using the max and min
-   * in as constraints, it considers them to be the same point and automatically calculates the
-   * shortest route to the setpoint.
+   * Set the PID controller to consider the input to be continuous, Rather then using the max and min in as constraints, it considers them to be the
+   * same point and automatically calculates the shortest route to the setpoint.
    */
   public void setContinuous() {
     this.setContinuous(true);
   }
 
   /**
-   * Set the PID controller to consider the input to be continuous, Rather then using the max and min
-   * in as constraints, it considers them to be the same point and automatically calculates the
-   * shortest route to the setpoint.
+   * Set the PID controller to consider the input to be continuous, Rather then using the max and min in as constraints, it considers them to be the
+   * same point and automatically calculates the shortest route to the setpoint.
    *
    * @param continuous Set to true turns on continuous, false turns off continuous
    */

@@ -13,7 +13,8 @@ public class LimelightTarget {
   private double skew;
   private double[] camTran;
 
-  public LimelightTarget(boolean validTarget, double xOffset, double yOffset, double horizLength, double vertLength, double skew, double[] camTran, double captureTime) {
+  public LimelightTarget(boolean validTarget, double xOffset, double yOffset, double horizLength, double vertLength, double skew, double[] camTran,
+      double captureTime) {
     this.validTarget = validTarget;
     this.xOffset = xOffset;
     this.yOffset = yOffset;
