@@ -34,6 +34,7 @@ public class SynchronousPIDF {
   // deadband
   // then treat error for the proportional
   // term as 0
+  private double lastTime = 0.0;
 
   public SynchronousPIDF() {
   }
@@ -65,6 +66,13 @@ public class SynchronousPIDF {
     m_I = Ki;
     m_D = Kd;
     m_F = Kf;
+  }
+
+  public double calculate(double input) {
+    double now = Timer.getFPGATimestamp();
+    double out = calculate(input, now - lastTime);
+    lastTime = now;
+    return out;
   }
 
   /**

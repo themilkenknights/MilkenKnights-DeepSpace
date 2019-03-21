@@ -3,7 +3,6 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.GENERAL;
-import frc.robot.auto.modes.HatchIntakeVisionPigeon;
 import frc.robot.lib.drivers.MkJoystick;
 import frc.robot.lib.drivers.MkJoystickButton;
 import frc.robot.lib.math.DriveHelper;
@@ -42,11 +41,14 @@ public class Input {
   private static final MkJoystickButton mStopAuto = mOperatorJoystick.getButton(9, "Stop Auto");
   private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
   private static MkTimer rumbleTimer = new MkTimer();
+  private static boolean isVelocitySetpoint = false;
+  private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.0151, 0.0, 285.0);
   private static Drive mDrive = Drive.getInstance();
   private static HatchArm mHatch = HatchArm.getInstance();
   private static CargoArm mCargo = CargoArm.getInstance();
   private static Superstructure mStructure = Superstructure.getInstance();
   private static Vision mVision = Vision.getInstance();
+  public static boolean hasBeenTriggered = false;
 
   public static void updateControlInput() {
     RobotState currentRobotState = mStructure.getRobotState();
@@ -83,7 +85,8 @@ public class Input {
       mCargo.setOpenLoop(0.0);
     }
     if (mToggleVelocity.isPressed()) {
-        mStructure.setRobotState(RobotState.SIMPLE_PLACE);
+      isVelocitySetpoint = !isVelocitySetpoint;
+      hasBeenTriggered = false;
     }
     // Update robot state as it might have changed
     currentRobotState = mStructure.getRobotState();
@@ -104,7 +107,33 @@ public class Input {
       double forward = (-mDriverJoystick.getRawAxis(2) + mDriverJoystick.getRawAxis(3));
       double turn = (-mDriverJoystick.getRawAxis(0));
       DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
-      mDrive.setOpenLoop(controlSig);
+      if (isVelocitySetpoint) {
+          double visionTurn = 0.0;
+          LimelightTarget target = mVision.getLimelightTarget();
+          if(target.isValidTarget()) {
+              if(target.getDistance() < 35.0){
+                  mHatch.setHatchState(HatchState.PLACE);
+              }
+              if(mHatch.getHatchSpearState() != HatchState.PLACE){
+                  visionTurn = mVisionAssist.calculate(Vision.getInstance().getLimelightTarget().getYaw());
+              }
+          }
+          if(hasBeenTriggered){
+              mDrive.setOpenLoop(DriveSignal.BRAKE);
+              isVelocitySetpoint = false;
+              hasBeenTriggered = false;
+          } else{
+              mDrive.setOpenLoop(new DriveSignal(0.25 - visionTurn, 0.25 + visionTurn));
+          }
+
+        /*
+         * if (mDriverJoystick.getPOV() == 270) { mDrive.setDistanceAndAngle(0,
+         * -mDriverJoystick.getRawAxis(0) * 20); } else if (mDriverJoystick.getPOV() == 90) {
+         * mDrive.setDistanceAndAngle(0, -mDriverJoystick.getRawAxis(0) * -20); }
+         */
+      } else {
+        mDrive.setOpenLoop(controlSig);
+      }
     }
     if (isOperatorJoystickConnected) {
       if (mCargoVisionOuttake.isPressed()) {
@@ -176,5 +205,9 @@ public class Input {
     mDriverJoystick.setRumble(RumbleType.kLeftRumble, intensity);
     mDriverJoystick.setRumble(RumbleType.kRightRumble, intensity);
     rumbleTimer.start(sec);
+  }
+
+  public static synchronized void setTriggered(){
+      hasBeenTriggered = true;
   }
 }

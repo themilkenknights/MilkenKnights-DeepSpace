@@ -46,12 +46,14 @@ public class HatchArm extends Subsystem {
       case PLACE:
         if (downTimer.isDone() && mSpearLimitTriggered) {
           mPancakeSolenoid.set(false);
+          Input.setTriggered();
           Input.rumbleDriverController(0.25, 0.5);
         }
         break;
       case INTAKE:
         if (isHatchLimitTriggered()) {
           setHatchState(HatchState.STOW);
+          Input.setTriggered();
           if (Superstructure.getInstance().getRobotState() == RobotState.TELEOP_DRIVE) {
             Drive.getInstance().setOpenLoop(new DriveSignal(-0.4, -0.4));
           }
@@ -108,7 +110,7 @@ public class HatchArm extends Subsystem {
         downTimer.start(0.5);
         break;
       case STOW:
-        mPancakeSolenoid.set(true);
+        mPancakeSolenoid.set(false);
         break;
       case INTAKE:
         mPancakeSolenoid.set(false);

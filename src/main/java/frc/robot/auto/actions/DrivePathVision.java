@@ -5,6 +5,8 @@ import frc.robot.Constants.DRIVE;
 import frc.robot.lib.util.trajectory.Path;
 import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.Drive;
+import frc.robot.subsystems.HatchArm;
+import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Vision;
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
@@ -15,7 +17,8 @@ import jaci.pathfinder.modifiers.TankModifier;
 public class DrivePathVision implements Action {
   @Override
   public boolean isFinished() {
-    return false;
+return Drive.getInstance().isPathFinished();
+
   }
 
   @Override
@@ -24,7 +27,8 @@ public class DrivePathVision implements Action {
 
   @Override
   public void done() {
-    //Drive.getInstance().isPathFinished();
+    HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
+    Superstructure.getInstance().setRobotState(Superstructure.RobotState.TELEOP_DRIVE);
   }
 
   @Override
