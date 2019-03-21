@@ -460,7 +460,8 @@ public class Drive extends Subsystem {
     TrajectoryStatus rightUpdate = pathFollower.getRightVelocity(mPeriodicIO.rightPos, mPeriodicIO.rightVel, getHeadingDeg());
     leftStatus = leftUpdate;
     rightStatus = rightUpdate;
-    setVelocity(new DriveSignal(MkMath.InchesPerSecToUnitsPer100Ms(leftUpdate.getOutput()), MkMath.InchesPerSecToUnitsPer100Ms(rightUpdate.getOutput())), new DriveSignal(leftUpdate.getArbFeed(), rightUpdate.getArbFeed()));
+    setVelocity(new DriveSignal(MkMath.InchesPerSecToUnitsPer100Ms(leftUpdate.getOutput()), MkMath.InchesPerSecToUnitsPer100Ms(rightUpdate.getOutput())),
+        new DriveSignal(leftUpdate.getArbFeed(), rightUpdate.getArbFeed()));
   }
 
   /**

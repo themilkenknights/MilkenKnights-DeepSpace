@@ -39,7 +39,7 @@ public class MotionMagicVisionPigeon implements Action {
         break;
       case PLACE_HATCH:
         if ((Drive.getInstance().getVisionServoError(lastDist) < 28.0) && (HatchArm.getInstance().getHatchSpearState() != HatchState.PLACE)) {
-           HatchArm.getInstance().setHatchState(HatchState.PLACE);
+          HatchArm.getInstance().setHatchState(HatchState.PLACE);
           downTimer.start(0.75);
         }
         break;

@@ -170,7 +170,7 @@ public class Superstructure extends Subsystem {
     }
   }
 
-  private void setSimpleHatch(){
+  private void setSimpleHatch() {
     AutoChooser.startAuto(new SimpleHatchPlace());
   }
 

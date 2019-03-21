@@ -205,8 +205,8 @@ public final class Constants {
           tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.4);
           if (loc == TalonLoc.Left) {
             tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
-            } else {
-          tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
+          } else {
+            tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
             tal.primaryPID.selectedFeedbackCoefficient = 0.5;
             tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
             tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0;

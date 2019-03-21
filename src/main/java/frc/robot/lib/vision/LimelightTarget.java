@@ -1,7 +1,7 @@
 package frc.robot.lib.vision;
 
 public class LimelightTarget {
-  public static LimelightTarget EMPTY = new LimelightTarget(false, 0.0, 0.0, 0.0, 0.0, 0.0, new double[] {0.0,0.0,0.0,0.0,0.0,0.0}, 0.0);
+  public static LimelightTarget EMPTY = new LimelightTarget(false, 0.0, 0.0, 0.0, 0.0, 0.0, new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0}, 0.0);
   private boolean validTarget; // Does limelight have a target
   private double xOffset; // Horizontal center of bounding box from center in degrees
   private double yOffset; // Vertical center of bounding box from center in degrees

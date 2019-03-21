@@ -17,8 +17,7 @@ import jaci.pathfinder.modifiers.TankModifier;
 public class DrivePathVision implements Action {
   @Override
   public boolean isFinished() {
-return Drive.getInstance().isPathFinished();
-
+    return Drive.getInstance().isPathFinished();
   }
 
   @Override
@@ -39,9 +38,7 @@ return Drive.getInstance().isPathFinished();
     double x = currentTarget.getCamTran()[2];
     double y = -currentTarget.getCamTran()[0];
     double yaw = currentTarget.getCamTran()[4];
-    Waypoint[] drivePath = new Waypoint[] {
-            new Waypoint(x,y, Pathfinder.d2r(yaw)),
-            new Waypoint(0.0, 0.0, Pathfinder.d2r(0.0))};
+    Waypoint[] drivePath = new Waypoint[] {new Waypoint(x, y, Pathfinder.d2r(yaw)), new Waypoint(0.0, 0.0, Pathfinder.d2r(0.0))};
     Trajectory trajectory = Pathfinder.generate(drivePath, fastConfig);
     TankModifier modifier = new TankModifier(trajectory).modify(DRIVE.kEffectiveDriveWheelTrackWidthInches);
     Trajectory left = modifier.getLeftTrajectory();

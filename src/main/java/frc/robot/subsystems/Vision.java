@@ -6,7 +6,6 @@ import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.lib.util.Subsystem;
 import frc.robot.lib.vision.LimeLight;
 import frc.robot.lib.vision.LimeLightControlMode.LedMode;
@@ -45,7 +44,7 @@ public class Vision extends Subsystem {
     mLED.setBoolean(mLimeLight.getLEDMode() != LedMode.kforceOff);
     mSkew.setDouble(getLimelightTarget().getSkew());
     mValid.setBoolean(getLimelightTarget().isValidTarget());
-    //System.out.println(getLimelightTarget().getCamTran()[4]);
+    // System.out.println(getLimelightTarget().getCamTran()[4]);
   }
 
   public void teleopInit(double timestamp) {

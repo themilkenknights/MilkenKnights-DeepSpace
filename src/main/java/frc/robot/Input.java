@@ -108,24 +108,23 @@ public class Input {
       double turn = (-mDriverJoystick.getRawAxis(0));
       DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
       if (isVelocitySetpoint) {
-          double visionTurn = 0.0;
-          LimelightTarget target = mVision.getLimelightTarget();
-          if(target.isValidTarget()) {
-              if(target.getDistance() < 35.0){
-                  mHatch.setHatchState(HatchState.PLACE);
-              }
-              if(mHatch.getHatchSpearState() != HatchState.PLACE){
-                  visionTurn = mVisionAssist.calculate(Vision.getInstance().getLimelightTarget().getYaw());
-              }
+        double visionTurn = 0.0;
+        LimelightTarget target = mVision.getLimelightTarget();
+        if (target.isValidTarget()) {
+          if (target.getDistance() < 35.0) {
+            mHatch.setHatchState(HatchState.PLACE);
           }
-          if(hasBeenTriggered){
-              mDrive.setOpenLoop(DriveSignal.BRAKE);
-              isVelocitySetpoint = false;
-              hasBeenTriggered = false;
-          } else{
-              mDrive.setOpenLoop(new DriveSignal(0.25 - visionTurn, 0.25 + visionTurn));
+          if (mHatch.getHatchSpearState() != HatchState.PLACE) {
+            visionTurn = mVisionAssist.calculate(Vision.getInstance().getLimelightTarget().getYaw());
           }
-
+        }
+        if (hasBeenTriggered) {
+          mDrive.setOpenLoop(DriveSignal.BRAKE);
+          isVelocitySetpoint = false;
+          hasBeenTriggered = false;
+        } else {
+          mDrive.setOpenLoop(new DriveSignal(0.25 - visionTurn, 0.25 + visionTurn));
+        }
         /*
          * if (mDriverJoystick.getPOV() == 270) { mDrive.setDistanceAndAngle(0,
          * -mDriverJoystick.getRawAxis(0) * 20); } else if (mDriverJoystick.getPOV() == 90) {
@@ -207,7 +206,7 @@ public class Input {
     rumbleTimer.start(sec);
   }
 
-  public static synchronized void setTriggered(){
-      hasBeenTriggered = true;
+  public static synchronized void setTriggered() {
+    hasBeenTriggered = true;
   }
 }
