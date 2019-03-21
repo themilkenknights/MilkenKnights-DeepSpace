@@ -40,6 +40,7 @@ public class Input {
   private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick.getButton(8, "Zero Arm Encoders && Disable Soft Limit");
   private static final MkJoystickButton mStopAuto = mOperatorJoystick.getButton(9, "Stop Auto");
   private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
+  public static boolean hasBeenTriggered = false;
   private static MkTimer rumbleTimer = new MkTimer();
   private static boolean isVelocitySetpoint = false;
   private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.0151, 0.0, 285.0);
@@ -48,7 +49,6 @@ public class Input {
   private static CargoArm mCargo = CargoArm.getInstance();
   private static Superstructure mStructure = Superstructure.getInstance();
   private static Vision mVision = Vision.getInstance();
-  public static boolean hasBeenTriggered = false;
 
   public static void updateControlInput() {
     RobotState currentRobotState = mStructure.getRobotState();
