@@ -377,7 +377,7 @@ public class Drive extends Subsystem {
   }
 
   public boolean isMotionMagicFinished() {
-    return Math.abs(mLeftDrive.getError()) < DRIVE.kGoalPosTolerance && Math.abs(mRightDrive.getError()) < DRIVE.kGoalPosTolerance;
+    return Math.abs(mPeriodicIO.rightPos - mPeriodicIO.right_demand) < DRIVE.kGoalPosTolerance;
   }
 
   public boolean isVisionFinished(double dist, double angle) {

@@ -31,6 +31,6 @@ public class MotionMagicBlind implements Action {
 
   @Override
   public void start() {
-    Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(dist, dist, NeutralMode.Brake), DriveSignal.BRAKE);
+    Drive.getInstance().setMotionMagicPositionSetpoint(dist, DriveSignal.BRAKE);
   }
 }

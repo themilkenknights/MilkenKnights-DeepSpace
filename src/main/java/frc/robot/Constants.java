@@ -176,7 +176,7 @@ public final class Constants {
         tal.forwardLimitSwitchNormal = LimitSwitchNormal.Disabled;
         tal.reverseLimitSwitchNormal = LimitSwitchNormal.Disabled;
         if (loc == TalonLoc.Left || loc == TalonLoc.Right) {
-          tal.motionCurveStrength = 3;
+          tal.motionCurveStrength = 4;
           tal.velocityMeasurementPeriod = VelocityMeasPeriod.Period_25Ms;
           tal.velocityMeasurementWindow = 16;
           // General Velocity/Motion Magic
