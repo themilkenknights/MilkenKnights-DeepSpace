@@ -1,47 +1,58 @@
 package frc.robot.auto.actions;
 
-import com.ctre.phoenix.motorcontrol.NeutralMode;
-import edu.wpi.first.wpilibj.Timer;
-import frc.robot.Constants.DRIVE;
 import frc.robot.lib.util.DriveSignal;
+import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
+import frc.robot.lib.util.SynchronousPIDF;
 import frc.robot.lib.vision.LimelightTarget;
-import frc.robot.lib.vision.VisionState;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
 import frc.robot.subsystems.Vision;
 
 public class MotionMagicVisionFeed implements Action {
   private MkTimer expirationTimer;
-  private VisionState mLastVisionState = VisionState.EMPTY;
-  private boolean useLimit;
-  private double lastTime = 0.0;
-  private double targetYaw = 0.0;
+  private SynchronousPIDF mVisionAssist;
+  private VisionGoal mGoal;
+  private double lastDist = 0.0;
 
-  public MotionMagicVisionFeed(boolean useLimit) {
+  public MotionMagicVisionFeed(VisionGoal mGoal) {
     expirationTimer = new MkTimer();
-    this.useLimit = useLimit;
+    mVisionAssist = new SynchronousPIDF(0.0151, 0.0, 285.0);
+    this.mGoal = mGoal;
   }
 
   @Override
   public boolean isFinished() {
-    return expirationTimer.isDone() || (useLimit ? HatchArm.getInstance().isHatchLimitTriggered() : Drive.getInstance().isMotionMagicFinished());
+    return expirationTimer.isDone();
   }
 
   @Override
   public void update() {
     LimelightTarget target = Vision.getInstance().getLimelightTarget();
-    double mDist = target.getDistance();
-    if (mDist > 20.0 && target.isValidTarget()) {
-      double vel = (mLastVisionState.getTarget().getYaw() - target.getYaw()) / (Timer.getFPGATimestamp() - lastTime);
-      double mSteer = 0.03 * ((targetYaw)) + vel * DRIVE.kVisionTurnP * 8 * 0.0;
-      DriveSignal mSig =
-          Drive.getInstance().setMotionMagicDeltaSetpoint(new DriveSignal(mDist, mDist, NeutralMode.Coast), new DriveSignal(mSteer, -mSteer));
-      mLastVisionState = new VisionState(mSig, target, Drive.getInstance().getHeadingDeg());
-    } else {
-      double mSteer = DRIVE.kVisionTurnP * 0 * (mLastVisionState.getTarget().getYaw()
-          - /* Math.abs(mLastVisionState.getYaw() - Drive.getInstance().getYaw()) */ 0);
-      Drive.getInstance().updateMotionMagicPositionSetpoint(mLastVisionState.getDriveSignal(), new DriveSignal(mSteer, -mSteer));
+    if (target.isValidTarget()) {
+      double visionTurn = 0.0;
+      switch (mGoal) {
+        case PLACE_HATCH:
+          if (target.getDistance() < 36.0) {
+            HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
+          }
+          break;
+        case PLACE_CARGO:
+          break;
+        case INTAKE_HATCH:
+          break;
+        default:
+          Logger.logErrorWithTrace("Unknown Vision Goal");
+          break;
+      }
+
+      if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE && ((lastDist - target.getDistance()) > -0.5)) {
+        visionTurn = mVisionAssist.calculate(target.getYaw());
+      }
+
+      double dist = target.getDistance();
+      Drive.getInstance().setMotionMagicPositionSetpoint(dist, new DriveSignal(-visionTurn, visionTurn));
+      lastDist = dist;
     }
   }
 
@@ -52,7 +63,9 @@ public class MotionMagicVisionFeed implements Action {
   @Override
   public void start() {
     expirationTimer.start(5.0);
-    lastTime = Timer.getFPGATimestamp();
-    targetYaw = Vision.getInstance().getLimelightTarget().getYaw();
+  }
+
+  public enum VisionGoal {
+    PLACE_HATCH, INTAKE_HATCH, PLACE_CARGO
   }
 }

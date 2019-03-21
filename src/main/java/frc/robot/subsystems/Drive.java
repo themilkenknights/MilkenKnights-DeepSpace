@@ -12,7 +12,6 @@ import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
-import frc.robot.Constants.CONFIG;
 import frc.robot.Constants.DRIVE;
 import frc.robot.Constants.MISC;
 import frc.robot.lib.drivers.CT;
@@ -110,8 +109,6 @@ public class Drive extends Subsystem {
       mLeftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.MOTION_MAGIC) {
-      mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward,
-          mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward,
           mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.PIGEON_SERVO) {
@@ -125,17 +122,6 @@ public class Drive extends Subsystem {
       Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
     }
   }
-
-  /*
-   * Periodic update after read. Used to update odometry and path setpoints
-   *
-   * @param timestamp In Seconds Since Code Start
-   *
-   * @Override public synchronized void onQuickLoop(double timestamp) { stateEstimator(timestamp);
-   * switch (mDriveControlState) { case OPEN_LOOP: case MOTION_MAGIC: case PIGEON_SERVO: break;
-   * default: Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
-   * break; } }
-   */
 
   /**
    * Update Shuffleboard and Log to CSV
@@ -239,14 +225,6 @@ public class Drive extends Subsystem {
     mPeriodicIO.brake_mode = NeutralMode.Brake;
   }
 
-  private synchronized void configNormalDrive() {
-    if (mDriveControlState == DriveControlState.PIGEON_SERVO) {
-      mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 1.0, 0);
-      mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
-      mRightDrive.masterTalon.configSelectedFeedbackCoefficient(1.0, 0, 0);
-    }
-  }
-
   private synchronized void zero() {
     left_encoder_prev_distance_ = 0;
     right_encoder_prev_distance_ = 0;
@@ -293,30 +271,23 @@ public class Drive extends Subsystem {
     return mLeftDrive.isEncoderConnected() && mRightDrive.isEncoderConnected();
   }
 
-  public synchronized DriveSignal setMotionMagicDeltaSetpoint(DriveSignal signal, DriveSignal feedforward) {
-    DriveSignal newSig = new DriveSignal(signal.getLeft() + mPeriodicIO.leftPos, signal.getRight() + mPeriodicIO.rightPos, signal.getBrakeMode());
-    updateMotionMagicPositionSetpoint(newSig, feedforward);
-    return newSig;
-  }
-
   /**
-   * @param signal Left/Right Position in inches
-   * @param feedforward Left/Right arbitrary feedforward (Percent Output, [-1,1])
+   * @param dist Delta Position in inches
+   * @param feed Left/Right arbitrary feed (Percent Output, [-1,1])
    */
-  public synchronized void updateMotionMagicPositionSetpoint(DriveSignal signal, DriveSignal feedforward) {
+  public synchronized void setMotionMagicPositionSetpoint(double dist, DriveSignal feed) {
     if (mDriveControlState != DriveControlState.MOTION_MAGIC) {
       Logger.logMarker("Switching to Motion Magic");
       mPeriodicIO.left_demand = 0.0;
       mPeriodicIO.right_demand = 0.0;
       mPeriodicIO.left_feedforward = 0.0;
       mPeriodicIO.right_feedforward = 0.0;
-      configNormalDrive();
+      configHatchVision();
       mDriveControlState = DriveControlState.MOTION_MAGIC;
     }
-    mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(signal.getLeft());
-    mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(signal.getRight());
-    mPeriodicIO.left_feedforward = feedforward.getLeft();
-    mPeriodicIO.right_feedforward = feedforward.getRight();
+    mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(dist + mPeriodicIO.rightPos);
+    mPeriodicIO.left_feedforward = feed.getLeft();
+    mPeriodicIO.right_feedforward = feed.getRight();
     mPeriodicIO.brake_mode = NeutralMode.Brake;
   }
 
@@ -341,15 +312,20 @@ public class Drive extends Subsystem {
     mPeriodicIO.left_feedforward = 0.0;
     mPeriodicIO.right_feedforward = MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
     mPeriodicIO.brake_mode = NeutralMode.Brake;
-    // System.out.println(MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle));
   }
 
   private synchronized void configHatchVision() {
-    if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
-      mRightDrive.masterTalon.configClosedLoopPeakOutput(CONFIG.kDistanceSlot, 0.5, 0);
+    if (mDriveControlState != DriveControlState.PIGEON_SERVO && mDriveControlState != DriveControlState.MOTION_MAGIC) {
       mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.SensorSum);
       mRightDrive.masterTalon.configSelectedFeedbackCoefficient(0.5, 0, 0);
       mLeftDrive.masterTalon.follow(mRightDrive.masterTalon, FollowerType.AuxOutput1);
+    }
+  }
+
+  private synchronized void configNormalDrive() {
+    if (mDriveControlState == DriveControlState.PIGEON_SERVO || mDriveControlState == DriveControlState.MOTION_MAGIC) {
+      mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
+      mRightDrive.masterTalon.configSelectedFeedbackCoefficient(1.0, 0, 0);
     }
   }
 
@@ -489,7 +465,10 @@ public class Drive extends Subsystem {
   }
 
   public enum DriveControlState {
-    OPEN_LOOP, MOTION_MAGIC, PIGEON_SERVO, VELOCITY_SETPOINT
+    OPEN_LOOP,
+    MOTION_MAGIC,
+    PIGEON_SERVO,
+    VELOCITY_SETPOINT
   }
 
   private static class InstanceHolder {

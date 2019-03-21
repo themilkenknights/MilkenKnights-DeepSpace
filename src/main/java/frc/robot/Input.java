@@ -11,7 +11,6 @@ import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.util.SynchronousPIDF;
-import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Drive;
@@ -47,7 +46,6 @@ public class Input {
   public static boolean hasBeenTriggered = false;
   private static MkTimer rumbleTimer = new MkTimer();
   private static boolean isVelocitySetpoint = false;
-  private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.0151, 0.0, 285.0);
   private static Drive mDrive = Drive.getInstance();
   private static HatchArm mHatch = HatchArm.getInstance();
   private static CargoArm mCargo = CargoArm.getInstance();
@@ -88,10 +86,7 @@ public class Input {
     if (mOperatorJoystick.getRawButtonReleased(2)) {
       mCargo.setOpenLoop(0.0);
     }
-    if (mToggleVelocity.isPressed()) {
-      isVelocitySetpoint = !isVelocitySetpoint;
-      hasBeenTriggered = false;
-    }
+
     // Update robot state as it might have changed
     currentRobotState = mStructure.getRobotState();
     // Enable auto climb that uses encoders & gyro
@@ -111,32 +106,7 @@ public class Input {
       double forward = (-mDriverJoystick.getRawAxis(2) + mDriverJoystick.getRawAxis(3));
       double turn = (-mDriverJoystick.getRawAxis(0));
       DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
-      if (isVelocitySetpoint) {
-        double visionTurn = 0.0;
-        LimelightTarget target = mVision.getLimelightTarget();
-        if (target.isValidTarget()) {
-          if (target.getDistance() < 35.0) {
-            mHatch.setHatchState(HatchState.PLACE);
-          }
-          if (mHatch.getHatchSpearState() != HatchState.PLACE) {
-            visionTurn = mVisionAssist.calculate(Vision.getInstance().getLimelightTarget().getYaw());
-          }
-        }
-        if (hasBeenTriggered) {
-          mDrive.setOpenLoop(DriveSignal.BRAKE);
-          isVelocitySetpoint = false;
-          hasBeenTriggered = false;
-        } else {
-          mDrive.setOpenLoop(new DriveSignal(0.25 - visionTurn, 0.25 + visionTurn));
-        }
-        /*
-         * if (mDriverJoystick.getPOV() == 270) { mDrive.setDistanceAndAngle(0,
-         * -mDriverJoystick.getRawAxis(0) * 20); } else if (mDriverJoystick.getPOV() == 90) {
-         * mDrive.setDistanceAndAngle(0, -mDriverJoystick.getRawAxis(0) * -20); }
-         */
-      } else {
-        mDrive.setOpenLoop(controlSig);
-      }
+      mDrive.setOpenLoop(controlSig);
     }
     if (isOperatorJoystickConnected) {
       if (mCargoVisionOuttake.isPressed()) {
