@@ -372,7 +372,7 @@ public class Drive extends Subsystem {
 
   private synchronized void updateVisionDrive() {
 
-    setMotionMagicPositionSetpoint();
+    //setMotionMagicPositionSetpoint();
   }
 
   /**

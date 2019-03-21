@@ -11,6 +11,7 @@ import frc.robot.Constants.MISC;
 import frc.robot.Input;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
+import frc.robot.lib.util.MinTimeBoolean;
 import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.util.Subsystem;
 import frc.robot.subsystems.Superstructure.RobotState;
@@ -20,7 +21,9 @@ public class HatchArm extends Subsystem {
   private Solenoid mSpearSolenoid, mPancakeSolenoid;
   private boolean mSpearLimitTriggered = false;
   private NetworkTableEntry mLimitTriggered, mSpearStateTab, mPancakeTab;
-  private MkTimer downTimer;
+  private MkTimer downTimer = new MkTimer();
+  private MkTimer autoTimer = new MkTimer();
+  private MinTimeBoolean isHatchOnTarget = new MinTimeBoolean(0.1);
 
   private HatchArm() {
     ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
@@ -30,7 +33,6 @@ public class HatchArm extends Subsystem {
     mSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchArmChannel);
     mPancakeSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchPancakeChannel);
     mHatchState = HatchState.STOW;
-    downTimer = new MkTimer();
   }
 
   public static HatchArm getInstance() {
@@ -62,6 +64,11 @@ public class HatchArm extends Subsystem {
       default:
         Logger.logError("Unexpected Hatch Arm control state: " + mHatchState);
         break;
+    }
+    if (!autoTimer.hasBeenSet() && mSpearLimitTriggered) {
+      autoTimer.start(0.35);
+    } else if (autoTimer.isDone() && mSpearLimitTriggered) {
+      isHatchOnTarget.update(mSpearLimitTriggered, Timer.getFPGATimestamp()));
     }
   }
 
@@ -107,10 +114,10 @@ public class HatchArm extends Subsystem {
     switch (state) {
       case PLACE:
         mPancakeSolenoid.set(true);
-        downTimer.start(0.5);
+        downTimer.start(0.4);
         break;
       case STOW:
-        mPancakeSolenoid.set(false);
+        mPancakeSolenoid.set(true);
         break;
       case INTAKE:
         mPancakeSolenoid.set(false);

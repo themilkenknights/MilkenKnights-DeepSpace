@@ -10,14 +10,13 @@ import frc.robot.subsystems.HatchArm;
 import frc.robot.subsystems.Vision;
 
 public class MotionMagicVisionFeed implements Action {
-  private MkTimer expirationTimer;
-  private SynchronousPIDF mVisionAssist;
+  private MkTimer expirationTimer = new MkTimer();
+  private SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.0151, 0.0, 285.0);
   private VisionGoal mGoal;
   private double lastDist = 0.0;
+  private boolean mLowered = false;
 
   public MotionMagicVisionFeed(VisionGoal mGoal) {
-    expirationTimer = new MkTimer();
-    mVisionAssist = new SynchronousPIDF(0.0151, 0.0, 285.0);
     this.mGoal = mGoal;
   }
 
@@ -35,8 +34,9 @@ public class MotionMagicVisionFeed implements Action {
       double visionTurn = 0.0;
       switch (mGoal) {
         case PLACE_HATCH:
-          if (target.getDistance() < 36.0) {
+          if (target.getDistance() < 36.0 && !mLowered) {
             HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
+            mLowered = true;
           }
           break;
         case PLACE_CARGO:
