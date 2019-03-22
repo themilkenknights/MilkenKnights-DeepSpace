@@ -1,12 +1,8 @@
 package frc.robot.auto.actions;
 
-import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
-import frc.robot.lib.util.SynchronousPIDF;
-import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
-import frc.robot.subsystems.Vision;
 
 public class MotionMagicVisionFeed implements Action {
   private MkTimer expirationTimer = new MkTimer();

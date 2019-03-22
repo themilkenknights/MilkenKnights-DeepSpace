@@ -106,7 +106,6 @@ public final class Constants {
         "CS-9"};
   }
 
-
   public static class TEST {
     public static final double kMinDriveTestPos = 420.0;
     public static final double kMinDriveTestVel = 145.0;

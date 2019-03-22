@@ -30,6 +30,7 @@ public class SubsystemManager {
     public void runCrashTracked() {
       synchronized (taskRunningLock_) {
         double now = fastDt.updateDt();
+        Vision.getInstance().updateLimelight();
         if (running_) {
           int i = 0;
           for (Subsystem subsystem : mAllSubsystems) {
@@ -56,7 +57,6 @@ public class SubsystemManager {
           count = 0;
         }
         count++;
-        Vision.getInstance().updateLimelight();
         timestamp_ = now;
       }
     }

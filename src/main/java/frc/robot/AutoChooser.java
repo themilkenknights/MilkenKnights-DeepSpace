@@ -2,7 +2,6 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeExecutor;
 import frc.robot.lib.util.DeserializePath;
@@ -13,11 +12,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AutoChooser {
+  public static final Map<String, Path> autoPaths = new HashMap<>();
   public static MatchData matchData = MatchData.defaultMatch;
+  public static AutoPosition mAutoPosition = AutoPosition.LEFT;
   private static AutoModeExecutor mAutoModeExecuter = null;
   private static SendableChooser<AutoPosition> positionChooser = new SendableChooser<>();
-  public static final Map<String, Path> autoPaths = new HashMap<>();
-  public static AutoPosition mAutoPosition = AutoPosition.LEFT;
 
   public static void startAuto(AutoModeBase base) {
     if (mAutoModeExecuter != null) {
@@ -34,7 +33,8 @@ public class AutoChooser {
     matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
     matchData.matchType = DriverStation.getInstance().getMatchType();
     mAutoPosition = positionChooser.getSelected();
-    Logger.logMarker("Alliance: " + matchData.alliance.toString() + " Match Number: " + matchData.matchNumber + " Match Type: " + matchData.matchType.toString());
+    Logger.logMarker(
+        "Alliance: " + matchData.alliance.toString() + " Match Number: " + matchData.matchNumber + " Match Type: " + matchData.matchType.toString());
   }
 
   public static void disableAuto() {
@@ -44,7 +44,6 @@ public class AutoChooser {
     mAutoModeExecuter = null;
     mAutoModeExecuter = new AutoModeExecutor();
   }
-
 
   /*
   Initialize Smart Dashboard Choosers and Serialize all paths into memory

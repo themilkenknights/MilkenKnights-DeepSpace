@@ -27,21 +27,6 @@ public class PathGenerator {
         new Waypoint(230, 100, Pathfinder.d2r(-15)),
         new Waypoint(262, 45, Pathfinder.d2r(-90)),
     }, slowerConfig, true));
-
-    robotPaths.put("CS-2", new Path(new Waypoint[] {
-        new Waypoint(121, -59, Pathfinder.d2r(0)),
-        new Waypoint(48, 8, Pathfinder.d2r(-35)),
-    }, fastConfig));
-
-    robotPaths.put("CS-3", new Path(new Waypoint[] {
-        new Waypoint(48, 8, Pathfinder.d2r(-35)),
-        new Waypoint(84, 0, Pathfinder.d2r(0)),
-    }, defaultConfig));
-
-    robotPaths.put("CS-4", new Path(new Waypoint[] {
-        new Waypoint(84, 0, Pathfinder.d2r(0)),
-        new Waypoint(62, 8, Pathfinder.d2r(-40)),
-    }, fastConfig));
   }
 
   public static void main(String[] args) {
@@ -51,8 +36,8 @@ public class PathGenerator {
       if (container.getValue().isBothSides()) {
         Path traj = container.getValue();
 
-        File leftPathFile = new File("paths/" + container.getKey() + "L.csv").getAbsoluteFile();
-        File rightPathFile = new File("paths/" + container.getKey() + "R.csv").getAbsoluteFile();
+        File leftPathFile = new File("src/main/deploy" + container.getKey() + "L.csv").getAbsoluteFile();
+        File rightPathFile = new File("src/main/deploy" + container.getKey() + "R.csv").getAbsoluteFile();
 
         Trajectory leftTraj = Pathfinder.generate(traj.getLeftPoints(), traj.getConfig());
         Trajectory rightTraj = Pathfinder.generate(traj.getPoints(), traj.getConfig());
@@ -60,10 +45,10 @@ public class PathGenerator {
         Pathfinder.writeToCSV(leftPathFile, leftTraj);
         Pathfinder.writeToCSV(rightPathFile, rightTraj);
 
-        System.out.println("Path: " + container.getKey() + " Time: " + leftBTraj.length() * 0.005 + " Sec");
+        System.out.println("Path: " + container.getKey() + " Time: " + leftTraj.length() * 0.005 + " Sec");
         if (container.getKey().charAt(0) == 'C') {
-          tiL += leftBTraj.length() * 0.01;
-          tiR += rightBTraj.length() * 0.01;
+          tiL += leftTraj.length() * 0.01;
+          tiR += rightTraj.length() * 0.01;
         }
       } else {
         File pathFile = new File("paths/" + container.getKey() + ".csv").getAbsoluteFile();
