@@ -10,6 +10,8 @@ import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
+import frc.robot.lib.util.SynchronousPIDF;
+import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Drive;
@@ -26,7 +28,7 @@ import frc.robot.subsystems.Vision;
 public class Input {
   private static final MkJoystick mDriverJoystick = new MkJoystick(0);
   private static final MkJoystick mOperatorJoystick = new MkJoystick(1);
-  private static final MkJoystickButton mToggleVelocity = mDriverJoystick.getButton(10, "Toggle Velocity Setpoint");
+  private static final MkJoystickButton mToggleManualVision = mDriverJoystick.getButton(10, "Toggle Velocity Setpoint");
   private static final MkJoystickButton mHatchVisionPlace = mDriverJoystick.getButton(1, "Hatch Vision Place");
   private static final MkJoystickButton mCargoVisionOuttake = mDriverJoystick.getButton(2, "Vision Cargo Outtake");
   private static final MkJoystickButton mHatchVisionIntake = mDriverJoystick.getButton(3, "Vision Hatch Intake");
@@ -43,6 +45,8 @@ public class Input {
   private static final MkJoystickButton mStopAuto = mOperatorJoystick.getButton(9, "Stop Auto");
   private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
   public static boolean hasBeenTriggered = false;
+  private static boolean isManualVisionMode = false;
+  private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.0151, 0.0, 285.0);
   private static MkTimer rumbleTimer = new MkTimer();
   private static Drive mDrive = Drive.getInstance();
   private static HatchArm mHatch = HatchArm.getInstance();
@@ -69,6 +73,9 @@ public class Input {
     if (mZeroArmToggleLimit.isPressed()) {
       mCargo.zeroEncoder();
       mCargo.disableSoftLimit();
+    }
+    if (mToggleManualVision.isPressed()) {
+      isManualVisionMode = !isManualVisionMode;
     }
     // Toggle Limelight LEDs
     if (toggleVision.isPressed()) {
@@ -104,7 +111,26 @@ public class Input {
       double forward = (-mDriverJoystick.getRawAxis(2) + mDriverJoystick.getRawAxis(3));
       double turn = (-mDriverJoystick.getRawAxis(0));
       DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
-      mDrive.setOpenLoop(controlSig);
+      if (isManualVisionMode) {
+        double visionTurn = 0.0;
+        LimelightTarget target = mVision.getLimelightTarget();
+        if (target.isValidTarget()) {
+          if (target.getDistance() < 35.0) {
+            mHatch.setHatchState(HatchState.PLACE);
+          }
+          if (mHatch.getHatchSpearState() != HatchState.PLACE) {
+            visionTurn = mVisionAssist.calculate(Vision.getInstance().getLimelightTarget().getYaw());
+          }
+        }
+        if (HatchArm.getInstance().isHatchTriggeredTimer()) {
+          isManualVisionMode = false;
+          mDrive.setOpenLoop(DriveSignal.BRAKE);
+        } else {
+          mDrive.setOpenLoop(new DriveSignal(0.25 - visionTurn, 0.25 + visionTurn));
+        }
+      } else {
+        mDrive.setOpenLoop(controlSig);
+      }
     }
     if (isOperatorJoystickConnected) {
       if (mCargoVisionOuttake.isPressed()) {

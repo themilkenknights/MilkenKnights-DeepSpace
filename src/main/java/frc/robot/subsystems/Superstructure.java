@@ -14,9 +14,9 @@ import frc.robot.Constants.MISC;
 import frc.robot.Input;
 import frc.robot.Robot;
 import frc.robot.auto.modes.ClimbLevel2Mode;
-import frc.robot.auto.modes.HatchIntakeVisionPigeon;
 import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
 import frc.robot.auto.modes.SimpleHatchPlace;
+import frc.robot.auto.modes.VisionCargoOuttake;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.Subsystem;
 import frc.robot.subsystems.CargoArm.CargoArmState;
@@ -166,7 +166,7 @@ public class Superstructure extends Subsystem {
       setRobotState(RobotState.TELEOP_DRIVE);
       Logger.logMarker("Limelight target not valid");
     } else {
-      AutoChooser.startAuto(new HatchIntakeVisionPigeon());
+      AutoChooser.startAuto(new VisionCargoOuttake());
     }
   }
 
