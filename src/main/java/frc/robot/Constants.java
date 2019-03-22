@@ -79,7 +79,7 @@ public final class Constants {
     public static final double kEffectiveDriveWheelTrackWidthInches = 33.75;
     // Effective Wheelbase
     public static final double kDriveWheelTrackWidthInches = 22.45;
-    public static final double kWheelDiameter = 6.0;
+    public static final double kWheelDiameter = 5.9575;
     public static final double kCircumference = kWheelDiameter * GENERAL.PI;
     public static final double kTrackScrubFactor = 1.0;
     // Talon PID Constants
@@ -93,7 +93,19 @@ public final class Constants {
     public static final double DRIVE_FOLLOWER_A = 0.00125;
     public static final double DRIVE_FOLLOWER_ANG = -1.25;
     public static final double PATH_DT = 0.01;
+
+    public static final String[] autoNames = {
+        "CS-1",
+        "CS-2",
+        "CS-3",
+        "CS-4",
+        "CS-5",
+        "CS-6",
+        "CS-7",
+        "CS-8",
+        "CS-9"};
   }
+
 
   public static class TEST {
     public static final double kMinDriveTestPos = 420.0;

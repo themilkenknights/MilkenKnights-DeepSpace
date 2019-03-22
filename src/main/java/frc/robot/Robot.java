@@ -27,6 +27,7 @@ public class Robot extends TimedRobot {
       Logger.logRobotInit();
       Shuffleboard.startRecording();
       mSubsystemManager.init();
+      AutoChooser.loadAutos();
     } catch (Throwable t) {
       Logger.logThrowableCrash(t);
       throw t;
