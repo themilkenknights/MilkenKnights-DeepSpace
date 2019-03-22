@@ -10,10 +10,7 @@ import frc.robot.subsystems.Vision;
 
 public class MotionMagicVisionFeed implements Action {
   private MkTimer expirationTimer = new MkTimer();
-  private SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.0151, 0.0, 285.0);
   private VisionGoal mGoal;
-  private double lastDist = 0.0;
-  private boolean mLowered = false;
 
   public MotionMagicVisionFeed(VisionGoal mGoal) {
     this.mGoal = mGoal;
@@ -21,28 +18,13 @@ public class MotionMagicVisionFeed implements Action {
 
   @Override
   public boolean isFinished() {
-    return expirationTimer.isDone() || Drive.getInstance().isMotionMagicFinished() || ((mGoal == VisionGoal.INTAKE_HATCH
+    return expirationTimer.isDone() || ((mGoal == VisionGoal.INTAKE_HATCH
         || mGoal == VisionGoal.PLACE_HATCH) && (HatchArm.getInstance().isHatchTriggeredTimer()));
   }
 
   @Override
   public void update() {
-    switch (mGoal) {
-      case PLACE_HATCH:
-        LimelightTarget target = Vision.getInstance().getLimelightTarget();
-        if (target.isValidTarget() && target.getDistance() < 36.0 && !mLowered) {
-          HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
-          mLowered = true;
-        }
-        break;
-      case PLACE_CARGO:
-        break;
-      case INTAKE_HATCH:
-        break;
-      default:
-        Logger.logErrorWithTrace("Unknown Vision Goal");
-        break;
-    }
+
   }
 
   @Override
@@ -51,8 +33,9 @@ public class MotionMagicVisionFeed implements Action {
 
   @Override
   public void start() {
+    Drive.getInstance().cancelPath();
     expirationTimer.start(3.0);
-    Drive.getInstance().setVisionDrive();
+    Drive.getInstance().setVisionDrive(mGoal);
   }
 
   public enum VisionGoal {

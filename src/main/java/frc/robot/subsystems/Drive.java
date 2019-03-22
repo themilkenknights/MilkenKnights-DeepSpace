@@ -14,6 +14,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.Constants.DRIVE;
 import frc.robot.Constants.MISC;
+import frc.robot.auto.actions.MotionMagicVisionFeed;
 import frc.robot.lib.drivers.CT;
 import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
@@ -49,6 +50,9 @@ public class Drive extends Subsystem {
   private TrajectoryStatus rightStatus;
   private double lastAngle, lastDist = 0.0;
   private SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.0151, 0.0, 285.0);
+  private boolean pathFinished = false;
+  private MotionMagicVisionFeed.VisionGoal mGoal;
+  private boolean mLowered = false;
 
   private Drive() {
     ShuffleboardTab mDriveTab = Shuffleboard.getTab("Drive");
@@ -320,8 +324,7 @@ public class Drive extends Subsystem {
 
   private synchronized void configHatchVision() {
     if (mDriveControlState != DriveControlState.PIGEON_SERVO
-        && mDriveControlState != DriveControlState.MOTION_MAGIC
-        && mDriveControlState != DriveControlState.VISION_DRIVE) {
+        && mDriveControlState != DriveControlState.MOTION_MAGIC) {
       mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.SensorSum);
       mRightDrive.masterTalon.configSelectedFeedbackCoefficient(0.5, 0, 0);
       mLeftDrive.masterTalon.follow(mRightDrive.masterTalon, FollowerType.AuxOutput1);
@@ -330,8 +333,7 @@ public class Drive extends Subsystem {
 
   private synchronized void configNormalDrive() {
     if (mDriveControlState == DriveControlState.PIGEON_SERVO
-        || mDriveControlState == DriveControlState.MOTION_MAGIC
-        || mDriveControlState == DriveControlState.VISION_DRIVE) {
+        || mDriveControlState == DriveControlState.MOTION_MAGIC) {
       mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
       mRightDrive.masterTalon.configSelectedFeedbackCoefficient(1.0, 0, 0);
     }
@@ -377,17 +379,36 @@ public class Drive extends Subsystem {
 
   private synchronized void updateVisionDrive() {
     LimelightTarget target = Vision.getInstance().getLimelightTarget();
+
+    switch (mGoal) {
+      case PLACE_HATCH:
+        if (target.isValidTarget() && target.getDistance() < 36.0 && !mLowered) {
+          HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
+          mLowered = true;
+        }
+        break;
+      case PLACE_CARGO:
+        break;
+      case INTAKE_HATCH:
+        break;
+      default:
+        Logger.logErrorWithTrace("Unknown Vision Goal");
+        break;
+    }
+
     double visionTurn = 0.0;
     if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE && ((lastDist - target.getDistance()) > -0.5)) {
       visionTurn = mVisionAssist.calculate(target.getYaw());
     }
     double dist = target.getDistance();
-    setMotionMagicPositionSetpoint(dist, new DriveSignal(-visionTurn, visionTurn));
+    setOpenLoop(new DriveSignal(0.30 + visionTurn, 0.30 - visionTurn));
     lastDist = dist;
   }
 
-  public synchronized void setVisionDrive() {
-    configHatchVision();
+  public synchronized void setVisionDrive(MotionMagicVisionFeed.VisionGoal mGoal) {
+    this.mGoal = mGoal;
+    mLowered = false;
+    configNormalDrive();
     mPeriodicIO.left_demand = 0.0;
     mPeriodicIO.right_demand = 0.0;
     mPeriodicIO.left_feedforward = 0.0;
@@ -447,6 +468,15 @@ public class Drive extends Subsystem {
     }
     pathFollower = new PathFollower(path, dist_tol, ang_tol);
     mDriveControlState = DriveControlState.VELOCITY_SETPOINT;
+    pathFinished = false;
+  }
+
+  public synchronized void cancelPath() {
+    lastAngle = pathFollower.getEndHeading();
+    mDriveControlState = DriveControlState.OPEN_LOOP;
+    pathFollower = null;
+    leftStatus = TrajectoryStatus.NEUTRAL;
+    rightStatus = TrajectoryStatus.NEUTRAL;
   }
 
   /*
@@ -454,7 +484,7 @@ public class Drive extends Subsystem {
    * next path and resets the Trajectory Status
    */
   public synchronized boolean isPathFinished() {
-    if (pathFollower.getFinished()) {
+    if (pathFinished) {
       lastAngle = pathFollower.getEndHeading();
       mDriveControlState = DriveControlState.OPEN_LOOP;
       pathFollower = null;
@@ -477,6 +507,7 @@ public class Drive extends Subsystem {
     setVelocity(
         new DriveSignal(MkMath.InchesPerSecToUnitsPer100Ms(leftUpdate.getOutput()), MkMath.InchesPerSecToUnitsPer100Ms(rightUpdate.getOutput())),
         new DriveSignal(leftUpdate.getArbFeed(), rightUpdate.getArbFeed()));
+    pathFinished = pathFollower.getFinished();
   }
 
   /**
