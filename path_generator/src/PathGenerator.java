@@ -1,6 +1,5 @@
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
-import jaci.pathfinder.Trajectory.Config;
 import jaci.pathfinder.Waypoint;
 import java.io.File;
 import java.util.HashMap;
@@ -9,88 +8,72 @@ import java.util.Map;
 public class PathGenerator {
 
   public static final HashMap<String, Path> robotPaths = new HashMap<>();
-  public static final Trajectory.Config fastConfig = new Trajectory.Config(Trajectory.FitMethod.HERMITE_QUINTIC, Config.SAMPLES_FAST, 0.02, 135, 80, 500);
+  public static final Trajectory.Config fastConfig = new Trajectory.Config(
+      Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_HIGH,
+      0.01, 135, 108, 1007);
+  public static final Trajectory.Config defaultConfig = new Trajectory.Config(
+      Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config
+      .SAMPLES_HIGH, 0.01, 130, 95, 800);
 
-  public static final double BLUE_LEFT_SWITCH_TO_SIDE_WALL = 0;
-  public static final double BLUE_RIGHT_SWITCH_TO_SIDE_WALL = 0;
-  public static final double BLUE_SWITCH_TO_WALL = 150;
-  public static final double BLUE_SWITCH_X_OFFSET = BLUE_SWITCH_TO_WALL - 140;
-  public static final double BLUE_SWITCH_Y_OFFSET =
-      (BLUE_RIGHT_SWITCH_TO_SIDE_WALL - BLUE_LEFT_SWITCH_TO_SIDE_WALL) / 2;
-
-  public static final double RED_LEFT_SWITCH_TO_SIDE_WALL = 0;
-  public static final double RED_RIGHT_SWITCH_TO_SIDE_WALL = 0;
-  public static final double RED_SWITCH_TO_WALL = 150;
-  public static final double RED_SWITCH_X_OFFSET = RED_SWITCH_TO_WALL - 140;
-  public static final double RED_SWITCH_Y_OFFSET =
-      (RED_RIGHT_SWITCH_TO_SIDE_WALL - RED_LEFT_SWITCH_TO_SIDE_WALL) / 2;
+  public static final Trajectory.Config slowerConfig = new Trajectory.Config(
+      Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_HIGH,
+      0.01, 100, 75, 200);
 
   static {
-   robotPaths.put("CS-2", new Path(new Waypoint[]{
-        new Waypoint(0, 0, Pathfinder.d2r(0)),
-        new Waypoint(35.5, 8.323, Pathfinder.d2r(23.343)),
+
+    robotPaths.put("CS-1", new Path(new Waypoint[] {
+        new Waypoint(69, 46, Pathfinder.d2r(0)),
+        new Waypoint(150, 75, Pathfinder.d2r(45)),
+        new Waypoint(230, 100, Pathfinder.d2r(-15)),
+        new Waypoint(262, 45, Pathfinder.d2r(-90)),
+    }, slowerConfig, true));
+
+    robotPaths.put("CS-2", new Path(new Waypoint[] {
+        new Waypoint(121, -59, Pathfinder.d2r(0)),
+        new Waypoint(48, 8, Pathfinder.d2r(-35)),
     }, fastConfig));
 
-    /* robotPaths.put("CS-3", new Path(new Waypoint[]{
+    robotPaths.put("CS-3", new Path(new Waypoint[] {
         new Waypoint(48, 8, Pathfinder.d2r(-35)),
         new Waypoint(84, 0, Pathfinder.d2r(0)),
     }, defaultConfig));
 
-    robotPaths.put("CS-4", new Path(new Waypoint[]{
+    robotPaths.put("CS-4", new Path(new Waypoint[] {
         new Waypoint(84, 0, Pathfinder.d2r(0)),
         new Waypoint(62, 8, Pathfinder.d2r(-40)),
     }, fastConfig));
-
-    robotPaths.put("CS-5", new Path(new Waypoint[]{
-        new Waypoint(62, 8, Pathfinder.d2r(-40)),
-        new Waypoint(121, -59, Pathfinder.d2r(0)),
-    }, fastConfig));
-
-    robotPaths.put("CS-6", new Path(new Waypoint[]{
-        new Waypoint(121, -59, Pathfinder.d2r(0)),
-        new Waypoint(63, 19, Pathfinder.d2r(-40)),
-    }, fastConfig));
-
-    robotPaths.put("CS-7", new Path(new Waypoint[]{
-        new Waypoint(63, 19, Pathfinder.d2r(-40)),
-        new Waypoint(96, 4, Pathfinder.d2r(0)),
-    }, defaultConfig));
-
-    robotPaths.put("CS-8", new Path(new Waypoint[]{
-        new Waypoint(96, 4, Pathfinder.d2r(0)),
-        new Waypoint(80, 5, Pathfinder.d2r(-30)),
-    }, fastConfig));
-
-    robotPaths.put("CS-9", new Path(new Waypoint[]{
-        new Waypoint(80, 5, Pathfinder.d2r(-30)),
-        new Waypoint(121, -49, Pathfinder.d2r(-15)),
-    }, fastConfig));
-
-    robotPaths.put("DriveStraight", new Path(new Waypoint[]{
-        new Waypoint(23, 156, 0),
-        new Waypoint(127, 156, 0)
-    }, fastConfig));
-
-    robotPaths.put("FS-1", new Path(new Waypoint[]{
-        new Waypoint(22, -113, Pathfinder.d2r(0)),
-        new Waypoint(119, -131, Pathfinder.d2r(0)),
-        new Waypoint(163, -114, Pathfinder.d2r(45)),
-        new Waypoint(170, -96, Pathfinder.d2r(90)),
-    }, defaultConfig, false, true)); */
-
   }
 
   public static void main(String[] args) {
     double tiL = 0;
     double tiR = 0;
     for (Map.Entry<String, Path> container : robotPaths.entrySet()) {
-        double t1 = System.nanoTime() * 1e-6;
-        Trajectory trajectory = Pathfinder
-            .generate(container.getValue().getPoints(), container.getValue().getConfig());
-        System.out.println((System.nanoTime() * 1e-6) - t1);
+      if (container.getValue().isBothSides()) {
+        Path traj = container.getValue();
+
+        File leftPathFile = new File("paths/" + container.getKey() + "L.csv").getAbsoluteFile();
+        File rightPathFile = new File("paths/" + container.getKey() + "R.csv").getAbsoluteFile();
+
+        Trajectory leftTraj = Pathfinder.generate(traj.getLeftPoints(), traj.getConfig());
+        Trajectory rightTraj = Pathfinder.generate(traj.getPoints(), traj.getConfig());
+
+        Pathfinder.writeToCSV(leftPathFile, leftTraj);
+        Pathfinder.writeToCSV(rightPathFile, rightTraj);
+
+        System.out.println("Path: " + container.getKey() + " Time: " + leftBTraj.length() * 0.005 + " Sec");
+        if (container.getKey().charAt(0) == 'C') {
+          tiL += leftBTraj.length() * 0.01;
+          tiR += rightBTraj.length() * 0.01;
+        }
+      } else {
+        File pathFile = new File("paths/" + container.getKey() + ".csv").getAbsoluteFile();
+        Trajectory trajectory = Pathfinder.generate(container.getValue().getPoints(), container.getValue().getConfig());
+        Pathfinder.writeToCSV(pathFile, trajectory);
+        System.out.println("Path: " + container.getKey() + " Time: " + trajectory.length() * 0.005 + " Sec");
       }
     }
-
+    System.out.println("Left: " + tiL + " Right: " + tiR);
+  }
 
   static class Path {
 
@@ -113,7 +96,6 @@ public class PathGenerator {
     public Path(Waypoint[] points, Trajectory.Config config) {
       this(points, config, false, true);
     }
-
 
     public void setOffset(double x, double y) {
       if (first) {
@@ -201,7 +183,5 @@ public class PathGenerator {
     public Trajectory.Config getConfig() {
       return config;
     }
-
   }
-
 }
