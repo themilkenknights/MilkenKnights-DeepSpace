@@ -14,7 +14,7 @@ public class PathGenerator {
 
   public static final Trajectory.Config slowerConfig = new Trajectory.Config(
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_HIGH,
-      0.01, 100, 90, 1000);
+      0.01, 120, 105, 1007);
 
   public static final Trajectory.Config fastConfig = new Trajectory.Config(
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_HIGH,
@@ -22,30 +22,18 @@ public class PathGenerator {
 
   static {
     robotPaths.put("CS-1", new Path(new Waypoint[] {
-        new Waypoint(69, -46, Pathfinder.d2r(0)),
-        new Waypoint(175, -11, Pathfinder.d2r(0)),
+        new Waypoint(68 ,0 ,Pathfinder.d2r(0)),
+        new Waypoint(175 ,-11 ,Pathfinder.d2r(0)),
     }, slowerConfig));
 
     robotPaths.put("CS-2", new Path(new Waypoint[] {
-        new Waypoint(204, -11, Pathfinder.d2r(0)),
-        new Waypoint(149, -55, Pathfinder.d2r(90)),
-        new Waypoint(196, -99, Pathfinder.d2r(0)),
+        new Waypoint(203 ,-11 ,Pathfinder.d2r(0)),
+        new Waypoint(60 ,-136 ,Pathfinder.d2r(0)),
     }, slowerConfig));
+
     robotPaths.put("CS-3", new Path(new Waypoint[] {
-        new Waypoint(196, -99, Pathfinder.d2r(0)),
-        new Waypoint(53, -136, Pathfinder.d2r(0)),
-    }, slowerConfig));
-
-    robotPaths.put("CS-4", new Path(new Waypoint[] {
-        new Waypoint(22, -136, Pathfinder.d2r(0)),
-        new Waypoint(210, -66, Pathfinder.d2r(0)),
-        new Waypoint(274, -108, Pathfinder.d2r(-55)),
-    }, slowerConfig));
-
-    robotPaths.put("CS-5", new Path(new Waypoint[] {
-        new Waypoint(274, -108, Pathfinder.d2r(-55)),
-        new Waypoint(262, -73, Pathfinder.d2r(-90)),
-        new Waypoint(262, -45, Pathfinder.d2r(-90))
+        new Waypoint(20 ,-136 ,Pathfinder.d2r(0)),
+        new Waypoint(261 ,-90 ,Pathfinder.d2r(0)),
     }, slowerConfig));
   }
 

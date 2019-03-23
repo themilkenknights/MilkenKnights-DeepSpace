@@ -1,4 +1,4 @@
-package frc.robot.lib.util.trajectory;
+package frc.robot.lib.math.trajectory;
 
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.Constants;

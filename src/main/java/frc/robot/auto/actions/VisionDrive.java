@@ -17,7 +17,7 @@ public class VisionDrive implements Action {
   public boolean isFinished() {
     return expirationTimer.isDone() || ((mGoal == VisionGoal.INTAKE_HATCH
         || mGoal == VisionGoal.PLACE_HATCH) && (HatchArm.getInstance().isHatchLimitTriggered())) || (mGoal == VisionGoal.PLACE_CARGO
-        && Drive.getInstance().isCargoTimerDone());
+        && Drive.getInstance().isDriveStateFinished());
   }
 
   @Override

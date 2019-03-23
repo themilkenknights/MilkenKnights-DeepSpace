@@ -1,7 +1,7 @@
 package frc.robot.lib.util;
 
 import frc.robot.Constants;
-import frc.robot.lib.util.trajectory.Path;
+import frc.robot.lib.math.trajectory.Path;
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
 import jaci.pathfinder.modifiers.TankModifier;

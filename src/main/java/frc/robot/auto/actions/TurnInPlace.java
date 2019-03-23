@@ -12,7 +12,7 @@ public class TurnInPlace implements Action {
 
   @Override
   public boolean isFinished() {
-    return Drive.getInstance().isTurnFinished();
+    return Drive.getInstance().isDriveStateFinished();
   }
 
   @Override

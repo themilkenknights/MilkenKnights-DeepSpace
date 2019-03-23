@@ -10,7 +10,6 @@ import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
-import frc.robot.Constants.DRIVE;
 import frc.robot.Constants.MISC;
 import frc.robot.auto.actions.VisionDrive;
 import frc.robot.lib.drivers.CT;
@@ -29,8 +28,8 @@ import frc.robot.lib.util.ReflectingCSVWriter;
 import frc.robot.lib.util.Subsystem;
 import frc.robot.lib.util.SynchronousPIDF;
 import frc.robot.lib.util.TrajectoryStatus;
-import frc.robot.lib.util.trajectory.Path;
-import frc.robot.lib.util.trajectory.PathFollower;
+import frc.robot.lib.math.trajectory.Path;
+import frc.robot.lib.math.trajectory.PathFollower;
 import frc.robot.lib.vision.LimelightTarget;
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
@@ -98,7 +97,7 @@ public class Drive extends Subsystem {
       case TURN_IN_PLACE:
         updateTurnToHeading(timestamp);
         break;
-      case VELOCITY_SETPOINT:
+      case PATH_FOLLOWING:
         updatePathFollower();
         break;
       default:
@@ -121,7 +120,7 @@ public class Drive extends Subsystem {
           mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward,
           mPeriodicIO.brake_mode);
-    } else if (mDriveControlState == DriveControlState.VELOCITY_SETPOINT) {
+    } else if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
       mLeftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward,
           mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward,
@@ -153,7 +152,7 @@ public class Drive extends Subsystem {
       mGyroHeading.setDouble(getHeadingDeg());
     }
     if (mCSVWriter != null && MISC.kDriveCSVLogging) {
-      if (mDriveControlState == DriveControlState.VELOCITY_SETPOINT) {
+      if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
         mPeriodicIO.leftDesiredPos = leftStatus.getSeg().position;
         mPeriodicIO.rightDesiredPos = rightStatus.getSeg().position;
         mPeriodicIO.desiredHeading = leftStatus.getSeg().heading;
@@ -175,7 +174,6 @@ public class Drive extends Subsystem {
 
   public void teleopInit(double timestamp) {
     zero();
-    RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
   }
 
   /**
@@ -184,7 +182,6 @@ public class Drive extends Subsystem {
   @Override
   public void autonomousInit(double timestamp) {
     zero();
-    RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
   }
 
   /**
@@ -197,6 +194,7 @@ public class Drive extends Subsystem {
       mCSVWriter.flush();
       mCSVWriter = null;
     }
+    zero();
   }
 
   @Override
@@ -233,18 +231,16 @@ public class Drive extends Subsystem {
   }
 
   private synchronized void zero() {
-    left_encoder_prev_distance_ = 0;
-    right_encoder_prev_distance_ = 0;
+    setHeading(Rotation2d.identity());
     mLeftDrive.zeroEncoder();
     mRightDrive.zeroEncoder();
-    setHeading(Rotation2d.identity());
-    mPeriodicIO.leftPos = 0.0;
-    mPeriodicIO.rightPos = 0.0;
-    mPeriodicIO.leftVel = 0.0;
-    mPeriodicIO.rightVel = 0.0;
+    mPeriodicIO = new PeriodicIO();
+    left_encoder_prev_distance_ = 0;
+    right_encoder_prev_distance_ = 0;
     if (mCSVWriter == null && MISC.kDriveCSVLogging) {
       mCSVWriter = new ReflectingCSVWriter<>("DRIVE-LOGS", PeriodicIO.class);
     }
+    RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
   }
 
   /**
@@ -264,9 +260,11 @@ public class Drive extends Subsystem {
    * Zero heading by adding a software offset
    */
   public synchronized void setHeading(Rotation2d heading) {
-    Logger.logMarker("SET HEADING: " + heading.getDegrees());
+    System.out.println("SET HEADING: " + heading.getDegrees());
+
     mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(mPigeon.getFusedHeading()).inverse());
-    Logger.logMarker("Gyro offset: " + mGyroOffset.getDegrees());
+    System.out.println("Gyro offset: " + mGyroOffset.getDegrees());
+
     mPeriodicIO.gyro_heading = heading;
   }
 
@@ -300,10 +298,10 @@ public class Drive extends Subsystem {
    * @param signal An object that contains left and right velocities (inches per sec)
    */
   private synchronized void setVelocity(DriveSignal signal, DriveSignal feedforward) {
-    if (mDriveControlState != DriveControlState.VELOCITY_SETPOINT) {
+    if (mDriveControlState != DriveControlState.PATH_FOLLOWING) {
       Logger.logMarker("Switching to Velocity");
       clearOutput();
-      mDriveControlState = DriveControlState.VELOCITY_SETPOINT;
+      mDriveControlState = DriveControlState.PATH_FOLLOWING;
     }
     mPeriodicIO.left_demand = signal.getLeft();
     mPeriodicIO.right_demand = signal.getRight();
@@ -358,10 +356,6 @@ public class Drive extends Subsystem {
     lastDist = dist;
   }
 
-  public boolean isCargoTimerDone() {
-    return placeCargoTimer.isDone(1.0);
-  }
-
   public synchronized void setVisionDrive(VisionDrive.VisionGoal mGoal) {
     this.mGoal = mGoal;
     mLowered = false;
@@ -384,14 +378,6 @@ public class Drive extends Subsystem {
     mPeriodicIO.right_demand = 0.0;
     mPeriodicIO.left_feedforward = 0.0;
     mPeriodicIO.right_feedforward = 0.0;
-  }
-
-  public boolean isMotionMagicFinished() {
-    return Math.abs(mPeriodicIO.rightPos - mPeriodicIO.right_demand) < 0.5;
-  }
-
-  public boolean isVisionFinished(double dist, double angle) {
-    return Math.abs(dist - mPeriodicIO.rightPos) < DRIVE.kGoalPosTolerance && Math.abs(angle - mPeriodicIO.gyro_heading.getDegrees()) < 1.5;
   }
 
   /**
@@ -419,7 +405,6 @@ public class Drive extends Subsystem {
    */
   public synchronized void setDrivePath(Path path, double dist_tol, double ang_tol) {
     Superstructure.getInstance().setRobotState(Superstructure.RobotState.PATH_FOLLOWING);
-    zero();
     Logger.logMarker("Began Path: " + path.getName());
     double offset = lastAngle - Pathfinder.boundHalfDegrees(Pathfinder.r2d(path.getLeftWheelTrajectory().get(0).heading));
     for (Trajectory.Segment segment : path.getLeftWheelTrajectory().segments) {
@@ -429,28 +414,13 @@ public class Drive extends Subsystem {
       segment.heading = Pathfinder.boundHalfDegrees(Pathfinder.r2d(segment.heading) + offset);
     }
     pathFollower = new PathFollower(path, dist_tol, ang_tol);
-    mDriveControlState = DriveControlState.VELOCITY_SETPOINT;
     pathFinished = false;
+    setVelocity(DriveSignal.BRAKE, DriveSignal.BRAKE);
+    zero();
   }
 
   public synchronized void cancelPath() {
     pathFinished = true;
-  }
-
-  /*
-   * Called from Auto Action to check when the path finishes. Saves the last angle to use with the
-   * next path and resets the Trajectory Status
-   */
-  public synchronized boolean isPathFinished() {
-    if (pathFinished) {
-      lastAngle = pathFollower.getEndHeading();
-      mDriveControlState = DriveControlState.OPEN_LOOP;
-      pathFollower = null;
-      leftStatus = TrajectoryStatus.NEUTRAL;
-      rightStatus = TrajectoryStatus.NEUTRAL;
-      return true;
-    }
-    return false;
   }
 
   public synchronized DriveControlState getDriveControlState() {
@@ -487,10 +457,6 @@ public class Drive extends Subsystem {
     }
   }
 
-  public synchronized boolean isTurnFinished() {
-    return mIsOnTarget;
-  }
-
   /**
    * Turn the robot to a target heading.
    *
@@ -521,6 +487,35 @@ public class Drive extends Subsystem {
     mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(wheel_delta.right + mPeriodicIO.rightPos);
   }
 
+  public synchronized boolean isDriveStateFinished() {
+    if (mDriveControlState == DriveControlState.TURN_IN_PLACE) {
+      return mIsOnTarget;
+    } else if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
+      if (pathFinished) {
+        lastAngle = pathFollower.getEndHeading();
+        mDriveControlState = DriveControlState.OPEN_LOOP;
+        pathFollower = null;
+        leftStatus = TrajectoryStatus.NEUTRAL;
+        rightStatus = TrajectoryStatus.NEUTRAL;
+        return true;
+      } else {
+        return false;
+      }
+    } else if (mDriveControlState == DriveControlState.MOTION_MAGIC) {
+      return Math.abs(mPeriodicIO.left_demand - mPeriodicIO.leftPos) < 0.25 && Math.abs(mPeriodicIO.right_demand - mPeriodicIO.rightPos) < 0.25;
+    } else if (mDriveControlState == DriveControlState.VISION_DRIVE) {
+      if (mGoal == VisionDrive.VisionGoal.PLACE_CARGO) {
+        return placeCargoTimer.isDone(1.0);
+      } else {
+        Logger.logError("Invalid Vision Drive Goal");
+        return true;
+      }
+    } else {
+      Logger.logError("Invalid Drive State");
+      return true;
+    }
+  }
+
   /**
    * Left is Positive Right is Negative (180 to -180)
    *
@@ -535,7 +530,7 @@ public class Drive extends Subsystem {
     MOTION_MAGIC,
     TURN_IN_PLACE,
     VISION_DRIVE,
-    VELOCITY_SETPOINT
+    PATH_FOLLOWING
   }
 
   private static class InstanceHolder {

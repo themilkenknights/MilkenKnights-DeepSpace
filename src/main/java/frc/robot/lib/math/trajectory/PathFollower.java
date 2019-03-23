@@ -1,4 +1,4 @@
-package frc.robot.lib.util.trajectory;
+package frc.robot.lib.math.trajectory;
 
 import frc.robot.Constants;
 import frc.robot.lib.util.TrajectoryStatus;

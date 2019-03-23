@@ -8,14 +8,15 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeExecutor;
+import frc.robot.lib.math.trajectory.Path;
+import frc.robot.lib.util.DeserializePath;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MatchData;
-import frc.robot.lib.util.trajectory.Path;
 import java.util.HashMap;
 import java.util.Map;
 
 public class AutoChooser {
-  public static final Map<String, Path> autoPaths = new HashMap<>();
+  public static Map<String, Path> autoPaths = new HashMap<>();
   public static MatchData matchData = MatchData.defaultMatch;
   public static AutoPosition mAutoPosition = AutoPosition.RIGHT;
   private static AutoModeExecutor mAutoModeExecuter;
@@ -34,6 +35,13 @@ public class AutoChooser {
   }
 
   public static void updateGameData() {
+    if (autoPaths == null) {
+      autoPaths = new HashMap<>();
+      for (String pathName : Constants.DRIVE.autoNames) {
+        autoPaths.put(pathName + "L", DeserializePath.getPathFromFile(pathName + "L"));
+        autoPaths.put(pathName + "R", DeserializePath.getPathFromFile(pathName + "R"));
+      }
+    }
     matchData.alliance = DriverStation.getInstance().getAlliance();
     matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
     matchData.matchType = DriverStation.getInstance().getMatchType();
@@ -48,6 +56,7 @@ public class AutoChooser {
     }
     mAutoModeExecuter = null;
     mAutoModeExecuter = new AutoModeExecutor();
+    autoPaths = null;
   }
 
   /*
@@ -56,10 +65,10 @@ public class AutoChooser {
   public static void loadAutos() {
     positionChooser.setDefaultOption("Right", AutoPosition.RIGHT);
     positionChooser.addOption("Left", AutoPosition.LEFT);
-    /*for (String pathName : Constants.DRIVE.autoNames) {
+    for (String pathName : Constants.DRIVE.autoNames) {
       autoPaths.put(pathName + "L", DeserializePath.getPathFromFile(pathName + "L"));
       autoPaths.put(pathName + "R", DeserializePath.getPathFromFile(pathName + "R"));
-    } */
+    }
   }
 
   public enum AutoPosition {

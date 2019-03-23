@@ -13,11 +13,7 @@ public class MotionMagicBlind implements Action {
 
   @Override
   public boolean isFinished() {
-    if (i < 5) {
-      i++;
-      return false;
-    }
-    return Drive.getInstance().isMotionMagicFinished();
+    return Drive.getInstance().isDriveStateFinished();
   }
 
   @Override

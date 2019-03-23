@@ -2,7 +2,7 @@ package frc.robot.auto.actions;
 
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.Constants.DRIVE;
-import frc.robot.lib.util.trajectory.Path;
+import frc.robot.lib.math.trajectory.Path;
 import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.Vision;
@@ -15,7 +15,7 @@ import jaci.pathfinder.modifiers.TankModifier;
 public class VisionTrajectory implements Action {
   @Override
   public boolean isFinished() {
-    return Drive.getInstance().isPathFinished();
+    return Drive.getInstance().isDriveStateFinished();
   }
 
   @Override
