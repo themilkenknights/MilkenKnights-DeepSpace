@@ -19,14 +19,15 @@ public class PathGenerator {
       0.01, 100, 80, 800);
 
   static {
+    //Right Cargoship
     /*robotPaths.put("CS-1", new Path(new Waypoint[] {
-        new Waypoint(68 ,-48 ,Pathfinder.d2r(0)),
-        new Waypoint(261 ,-90 ,Pathfinder.d2r(0)),
+         new Waypoint(68 ,0 ,Pathfinder.d2r(0)),
+ new Waypoint(175 ,-12 ,Pathfinder.d2r(-5)),
     }, platformConfig));
 
     robotPaths.put("CS-2", new Path(new Waypoint[] {
-        new Waypoint(203, -11, Pathfinder.d2r(0)),
-        new Waypoint(60, -136, Pathfinder.d2r(0)),
+         new Waypoint(205 ,-12 ,Pathfinder.d2r(0)),
+ new Waypoint(94 ,-124 ,Pathfinder.d2r(0)),
     }, fastConfig));
 
     robotPaths.put("CS-3", new Path(new Waypoint[] {
