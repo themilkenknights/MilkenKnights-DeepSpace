@@ -155,9 +155,7 @@ public class Drive extends Subsystem {
     if (mCSVWriter != null && MISC.kDriveCSVLogging) {
       if (mDriveControlState == DriveControlState.VELOCITY_SETPOINT) {
         mPeriodicIO.leftDesiredPos = leftStatus.getSeg().position;
-        mPeriodicIO.leftDesiredVel = leftStatus.getSeg().velocity;
         mPeriodicIO.rightDesiredPos = rightStatus.getSeg().position;
-        mPeriodicIO.rightDesiredVel = rightStatus.getSeg().velocity;
         mPeriodicIO.desiredHeading = leftStatus.getSeg().heading;
         mPeriodicIO.headingError = leftStatus.getAngError();
         mPeriodicIO.leftVelError = leftStatus.getVelError();
@@ -561,11 +559,9 @@ public class Drive extends Subsystem {
     public NeutralMode brake_mode;
     public double desiredHeading;
     public double headingError;
-    public double leftDesiredVel;
     public double leftDesiredPos;
     public double leftPosError;
     public double leftVelError;
-    public double rightDesiredVel;
     public double rightDesiredPos;
     public double rightPosError;
     public double rightVelError;
