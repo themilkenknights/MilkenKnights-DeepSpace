@@ -11,6 +11,7 @@ public class FrontSideCargshipAuto extends AutoModeBase {
   @Override
   protected void routine() throws AutoModeEndedException {
     runAction(new DrivePathAction(1, false));
+    runAction(new TurnInPlace(95.0));
     runAction(new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH));
     runAction(new DrivePathAction(2, true));
     runAction(new TurnInPlace(180.0));
