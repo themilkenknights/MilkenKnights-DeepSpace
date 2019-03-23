@@ -3,12 +3,9 @@ package frc.robot.auto.modes;
 import frc.robot.AutoChooser;
 import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeEndedException;
-import frc.robot.auto.actions.DelayAction;
 import frc.robot.auto.actions.DrivePathAction;
 import frc.robot.auto.actions.MotionMagicVisionFeed;
-import frc.robot.auto.actions.ParallelAction;
 import frc.robot.lib.util.DeserializePath;
-import java.util.Arrays;
 
 public class SideCargoshipHatchAuto extends AutoModeBase {
   @Override

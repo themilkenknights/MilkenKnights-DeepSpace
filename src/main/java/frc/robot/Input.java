@@ -134,7 +134,7 @@ public class Input {
       } else {
         mDrive.setOpenLoop(controlSig);
       }
-    } else if(mDrive.getmDriveControlState() == Drive.DriveControlState.VISION_DRIVE){
+    } else if (mDrive.getmDriveControlState() == Drive.DriveControlState.VISION_DRIVE) {
       mDrive.updateVisionDrive();
     }
     currentRobotState = mStructure.getRobotState();

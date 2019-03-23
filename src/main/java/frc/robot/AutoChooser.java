@@ -1,16 +1,13 @@
 package frc.robot;
 
-import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.shuffleboard.BuiltInWidgets;
 import edu.wpi.first.wpilibj.shuffleboard.ComplexWidget;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
-import edu.wpi.first.wpilibj.shuffleboard.WidgetType;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeExecutor;
-import frc.robot.lib.util.DeserializePath;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MatchData;
 import frc.robot.lib.util.trajectory.Path;
@@ -41,7 +38,8 @@ public class AutoChooser {
     matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
     matchData.matchType = DriverStation.getInstance().getMatchType();
     mAutoPosition = positionChooser.getSelected();
-    Logger.logMarker("Alliance: " + matchData.alliance.toString() + " Match Number: " + matchData.matchNumber + " Match Type: " + matchData.matchType.toString());
+    Logger.logMarker(
+        "Alliance: " + matchData.alliance.toString() + " Match Number: " + matchData.matchNumber + " Match Type: " + matchData.matchType.toString());
   }
 
   public static void disableAuto() {

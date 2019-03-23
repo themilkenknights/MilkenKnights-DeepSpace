@@ -16,7 +16,6 @@ import frc.robot.Robot;
 import frc.robot.auto.modes.ClimbLevel2Mode;
 import frc.robot.auto.modes.HatchIntakeVisionPigeon;
 import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
-import frc.robot.auto.modes.SimpleHatchPlace;
 import frc.robot.auto.modes.VisionCargoOuttake;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.Subsystem;
@@ -151,7 +150,7 @@ public class Superstructure extends Subsystem {
 
   private void startVisionHatchIntake() {
     Vision.getInstance().updateLimelight();
-    if (!Vision.getInstance().getLimelightTarget().isValidTarget()&& Vision.getInstance().getLimelightTarget().getDistance() < 140.0) {
+    if (!Vision.getInstance().getLimelightTarget().isValidTarget() && Vision.getInstance().getLimelightTarget().getDistance() < 140.0) {
       setRobotState(RobotState.TELEOP_DRIVE);
       Logger.logMarker("Limelight target not valid");
     } else {

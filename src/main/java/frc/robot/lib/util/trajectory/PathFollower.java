@@ -28,7 +28,7 @@ public class PathFollower {
     return lFollower.isFinishedTrajectory() && rFollower.isFinishedTrajectory();
   }
 
-  public double getTimeLeft(){
+  public double getTimeLeft() {
     return (lFollower.timeLeft() + rFollower.timeLeft()) / 2.0;
   }
 

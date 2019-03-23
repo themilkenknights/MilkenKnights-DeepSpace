@@ -1,9 +1,7 @@
 package frc.robot.lib.util;
 
 import edu.wpi.first.hal.util.BoundaryException;
-import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * This class implements a PID Control Loop.

@@ -3,8 +3,6 @@ package frc.robot.auto.modes;
 import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeEndedException;
 import frc.robot.auto.actions.MotionMagicVisionFeed;
-import frc.robot.auto.actions.MotionMagicVisionPigeon;
-import frc.robot.auto.actions.MotionMagicVisionPigeon.VisionServoGoal;
 import frc.robot.auto.actions.OpenLoopDrive;
 import frc.robot.auto.actions.SetHatchArmState;
 import frc.robot.auto.actions.SetSuperstructure;

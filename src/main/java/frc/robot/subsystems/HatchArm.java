@@ -1,7 +1,6 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.networktables.NetworkTableEntry;
-import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
@@ -63,7 +62,6 @@ public class HatchArm extends Subsystem {
         Logger.logError("Unexpected Hatch Arm control state: " + mHatchState);
         break;
     }
-
   }
 
   public synchronized boolean isHatchTriggeredTimer() {
@@ -88,9 +86,9 @@ public class HatchArm extends Subsystem {
 
   @Override
   public void onStop(double timestamp) {
-    if(autoHasBeenRun){
+    if (autoHasBeenRun) {
       autoHasBeenRun = false;
-    } else{
+    } else {
       setHatchState(HatchState.STOW);
     }
   }
@@ -134,7 +132,7 @@ public class HatchArm extends Subsystem {
     }
     Logger.logMarker("Set Hatch State to " + state.toString());
     mSpearSolenoid.set(state.state);
-      autoTimer.start(0.35);
+    autoTimer.start(0.35);
   }
 
   public HatchState getHatchSpearState() {

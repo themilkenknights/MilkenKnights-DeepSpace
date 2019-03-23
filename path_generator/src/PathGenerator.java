@@ -2,7 +2,6 @@ import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
 import jaci.pathfinder.Waypoint;
 import java.io.File;
-import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,35 +20,33 @@ public class PathGenerator {
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_HIGH,
       0.01, 50, 25, 250);
 
-
   static {
     robotPaths.put("CS-1", new Path(new Waypoint[] {
-        new Waypoint(69 ,-46 ,Pathfinder.d2r(0)),
-        new Waypoint(175 ,-11 ,Pathfinder.d2r(0)),
+        new Waypoint(69, -46, Pathfinder.d2r(0)),
+        new Waypoint(175, -11, Pathfinder.d2r(0)),
     }, slowerConfig));
 
-    robotPaths.put("CS-2",new Path(new Waypoint[]{
-        new Waypoint(204 ,-11 ,Pathfinder.d2r(0)),
-        new Waypoint(149 ,-55 ,Pathfinder.d2r(90)),
-        new Waypoint(196 ,-99 ,Pathfinder.d2r(0)),
+    robotPaths.put("CS-2", new Path(new Waypoint[] {
+        new Waypoint(204, -11, Pathfinder.d2r(0)),
+        new Waypoint(149, -55, Pathfinder.d2r(90)),
+        new Waypoint(196, -99, Pathfinder.d2r(0)),
     }, slowerConfig));
-    robotPaths.put("CS-3",new Path(new Waypoint[]{
-        new Waypoint(196 ,-99 ,Pathfinder.d2r(0)),
-        new Waypoint(53 ,-136 ,Pathfinder.d2r(0)),
-    }, slowerConfig));
-
-    robotPaths.put("CS-4",new Path(new Waypoint[]{
-        new Waypoint(22 ,-136 ,Pathfinder.d2r(0)),
-        new Waypoint(210 ,-66 ,Pathfinder.d2r(0)),
-        new Waypoint(274 ,-108 ,Pathfinder.d2r(-55)),
+    robotPaths.put("CS-3", new Path(new Waypoint[] {
+        new Waypoint(196, -99, Pathfinder.d2r(0)),
+        new Waypoint(53, -136, Pathfinder.d2r(0)),
     }, slowerConfig));
 
-    robotPaths.put("CS-5",new Path(new Waypoint[]{
-        new Waypoint(274 ,-108 ,Pathfinder.d2r(-55)),
-        new Waypoint(262 ,-73 ,Pathfinder.d2r(-90)),
-        new Waypoint(262 ,-45 ,Pathfinder.d2r(-90))
+    robotPaths.put("CS-4", new Path(new Waypoint[] {
+        new Waypoint(22, -136, Pathfinder.d2r(0)),
+        new Waypoint(210, -66, Pathfinder.d2r(0)),
+        new Waypoint(274, -108, Pathfinder.d2r(-55)),
     }, slowerConfig));
 
+    robotPaths.put("CS-5", new Path(new Waypoint[] {
+        new Waypoint(274, -108, Pathfinder.d2r(-55)),
+        new Waypoint(262, -73, Pathfinder.d2r(-90)),
+        new Waypoint(262, -45, Pathfinder.d2r(-90))
+    }, slowerConfig));
   }
 
   public static void main(String[] args) {

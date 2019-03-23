@@ -16,7 +16,8 @@ public class MotionMagicVisionFeed implements Action {
   @Override
   public boolean isFinished() {
     return expirationTimer.isDone() || ((mGoal == VisionGoal.INTAKE_HATCH
-        || mGoal == VisionGoal.PLACE_HATCH) && (HatchArm.getInstance().isHatchLimitTriggered())) || (mGoal == VisionGoal.PLACE_CARGO && Drive.getInstance().isCargoTimerDone());
+        || mGoal == VisionGoal.PLACE_HATCH) && (HatchArm.getInstance().isHatchLimitTriggered())) || (mGoal == VisionGoal.PLACE_CARGO
+        && Drive.getInstance().isCargoTimerDone());
   }
 
   @Override
@@ -26,9 +27,9 @@ public class MotionMagicVisionFeed implements Action {
 
   @Override
   public void done() {
-    if(mGoal == VisionGoal.INTAKE_HATCH){
+    if (mGoal == VisionGoal.INTAKE_HATCH) {
       HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
-    } else if(mGoal == VisionGoal.PLACE_CARGO){
+    } else if (mGoal == VisionGoal.PLACE_CARGO) {
       CargoArm.getInstance().setArmState(CargoArm.CargoArmState.REVERSE_CARGOSHIP);
     }
   }

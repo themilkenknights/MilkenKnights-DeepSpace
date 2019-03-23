@@ -5,8 +5,6 @@ import frc.robot.Constants.DRIVE;
 import frc.robot.lib.util.trajectory.Path;
 import frc.robot.lib.vision.LimelightTarget;
 import frc.robot.subsystems.Drive;
-import frc.robot.subsystems.HatchArm;
-import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Vision;
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;

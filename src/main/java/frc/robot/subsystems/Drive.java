@@ -38,6 +38,7 @@ import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
 
 public class Drive extends Subsystem {
+  private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(Constants.DRIVE.kVisionP, Constants.DRIVE.kVisionI, Constants.DRIVE.kVisionD);
   private final MkTalon mLeftDrive, mRightDrive;
   public PeriodicIO mPeriodicIO;
   private DriveControlState mDriveControlState = DriveControlState.OPEN_LOOP;
@@ -50,7 +51,6 @@ public class Drive extends Subsystem {
   private TrajectoryStatus leftStatus;
   private TrajectoryStatus rightStatus;
   private double lastAngle, lastDist = 0.0;
-  private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(Constants.DRIVE.kVisionP, Constants.DRIVE.kVisionI, Constants.DRIVE.kVisionD);
   private boolean pathFinished = false;
   private MotionMagicVisionFeed.VisionGoal mGoal;
   private boolean mLowered = false;
@@ -127,10 +127,10 @@ public class Drive extends Subsystem {
           mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward,
           mPeriodicIO.brake_mode);
-    } else if(mDriveControlState == DriveControlState.VISION_DRIVE){
+    } else if (mDriveControlState == DriveControlState.VISION_DRIVE) {
       mLeftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
-    } else{
+    } else {
       Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
     }
   }
@@ -398,9 +398,9 @@ public class Drive extends Subsystem {
         }
         break;
       case PLACE_CARGO:
-        if(target.getDistance() < 25.0 && !placeCargoTimer.hasBeenSet()){
+        if (target.getDistance() < 25.0 && !placeCargoTimer.hasBeenSet()) {
           placeCargoTimer.start(0.5);
-        } else if(placeCargoTimer.isDone()){
+        } else if (placeCargoTimer.isDone()) {
           CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut);
         }
         break;
@@ -419,18 +419,18 @@ public class Drive extends Subsystem {
     }
     double speed = 0.275;
     //double speed = -2.65 + 0.383917 * dist - 0.0196875 * Math.pow(dist,2) + 0.000483333 * Math.pow(dist,3) - 5.625e-6 * Math.pow(dist,4) + 2.5e-8 * Math.pow(dist,5);
-    if(20.0 > dist){
+    if (20.0 > dist) {
       speed = 0.15;
-    } else if(70.0 < dist){
+    } else if (70.0 < dist) {
       speed = 0.425;
     }
     //System.out.println(speed);
     mPeriodicIO.left_demand = speed - visionTurn;
-    mPeriodicIO.right_demand = speed +  visionTurn;
+    mPeriodicIO.right_demand = speed + visionTurn;
     lastDist = dist;
   }
 
-  public boolean isCargoTimerDone(){
+  public boolean isCargoTimerDone() {
     return placeCargoTimer.isDone(1.0);
   }
 
@@ -522,7 +522,7 @@ public class Drive extends Subsystem {
     return false;
   }
 
-  public synchronized DriveControlState getmDriveControlState (){
+  public synchronized DriveControlState getmDriveControlState() {
     return mDriveControlState;
   }
 
