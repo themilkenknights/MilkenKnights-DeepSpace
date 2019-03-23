@@ -522,7 +522,7 @@ public class Drive extends Subsystem {
     return false;
   }
 
-  public synchronized DriveControlState getmDriveControlState() {
+  public synchronized DriveControlState getDriveControlState() {
     return mDriveControlState;
   }
 
