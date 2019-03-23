@@ -125,6 +125,7 @@ public class MkTalon {
         CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_14_Turn_PIDF1, 50, kShort));
         masterTalon.selectProfileSlot(CONFIG.kDistanceSlot, CONFIG.kPIDPrimary);
         masterTalon.selectProfileSlot(CONFIG.kTurningSlot, CONFIG.kPIDAuxilliaryTurn);
+        //Falls Through
       case Left:
         CTRE(masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5));
         CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 10, kShort));
