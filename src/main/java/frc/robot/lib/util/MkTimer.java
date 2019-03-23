@@ -3,9 +3,9 @@ package frc.robot.lib.util;
 import edu.wpi.first.wpilibj.Timer;
 
 public class MkTimer {
-  private double timerLength = 0.0;
-  private double startTime = 0.0;
-  private boolean hasBeenSet = false;
+  private double timerLength;
+  private double startTime;
+  private boolean hasBeenSet;
 
   public void start(double timerLength) {
     this.timerLength = timerLength;

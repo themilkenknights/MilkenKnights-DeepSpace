@@ -21,8 +21,8 @@ public class CargoArm extends Subsystem {
   private static CargoArmState mCargoArmState = CargoArmState.ENABLE;
   public final MkTalon mIntakeTalon;
   private final MkTalon mArmTalon;
-  private boolean mDisCon = false;
-  private double mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable = 0.0;
+  private boolean mDisCon;
+  private double mOpenLoopSetpoint, mRollerSetpoint, mArmPosEnable;
   private NetworkTableEntry mDesiredState, mControlMode;
 
   private CargoArm() {

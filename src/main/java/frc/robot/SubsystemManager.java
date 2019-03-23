@@ -17,9 +17,9 @@ public class SubsystemManager {
   private final List<Subsystem> mAllSubsystems;
   private final Notifier notifier_;
   private final Object taskRunningLock_ = new Object();
-  private double timestamp_ = 0;
+  private double timestamp_;
   private boolean running_;
-  private int count = 0;
+  private int count;
   /**
    * Control Input, periodic inputs/outputs, and quick updates should be run every cycle (20ms) Slow updates, telemetry, and safety checks should be
    * run approx every 100ms. One subsystem should update each cycle to extreme minimize delays. Vision updates should occur every 20ms regardless of

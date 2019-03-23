@@ -5,7 +5,7 @@ import frc.robot.subsystems.Drive;
 
 public class MotionMagicBlind implements Action {
   private double dist;
-  private int i = 0;
+  private int i;
 
   public MotionMagicBlind(double dist) {
     this.dist = dist;
@@ -30,6 +30,6 @@ public class MotionMagicBlind implements Action {
 
   @Override
   public void start() {
-    Drive.getInstance().setMotionMagicPositionSetpoint(dist, DriveSignal.BRAKE);
+    Drive.getInstance().setMotionMagicPositionSetpoint(new DriveSignal(dist, dist), DriveSignal.BRAKE);
   }
 }

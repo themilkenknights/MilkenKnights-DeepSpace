@@ -48,8 +48,8 @@ public class Input {
   private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick.getButton(8, "Zero Arm Encoders && Disable Soft Limit");
   private static final MkJoystickButton mStopAuto = mOperatorJoystick.getButton(9, "Stop Auto");
   private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
-  public static boolean hasBeenTriggered = false;
-  private static boolean isManualVisionMode = false;
+  public static boolean hasBeenTriggered;
+  private static boolean isManualVisionMode;
   private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.0157, 0.0, 275.0);
   private static MkTimer rumbleTimer = new MkTimer();
   private static Drive mDrive = Drive.getInstance();

@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class DeltaTime {
-  private double lastTime = 0.0;
+  private double lastTime;
   private int loopsTillUpdate, count;
   private NetworkTableEntry mEntry;
   private boolean smartDash;

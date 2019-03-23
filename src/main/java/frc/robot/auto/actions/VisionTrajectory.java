@@ -12,7 +12,7 @@ import jaci.pathfinder.Trajectory.Config;
 import jaci.pathfinder.Waypoint;
 import jaci.pathfinder.modifiers.TankModifier;
 
-public class DrivePathVision implements Action {
+public class VisionTrajectory implements Action {
   @Override
   public boolean isFinished() {
     return Drive.getInstance().isPathFinished();

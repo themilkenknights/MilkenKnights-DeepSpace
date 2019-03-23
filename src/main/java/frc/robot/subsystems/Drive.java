@@ -2,8 +2,6 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
-import com.ctre.phoenix.motorcontrol.FeedbackDevice;
-import com.ctre.phoenix.motorcontrol.FollowerType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.networktables.NetworkTableEntry;
@@ -14,7 +12,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.Constants.DRIVE;
 import frc.robot.Constants.MISC;
-import frc.robot.auto.actions.MotionMagicVisionFeed;
+import frc.robot.auto.actions.VisionDrive;
 import frc.robot.lib.drivers.CT;
 import frc.robot.lib.drivers.MkTalon;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
@@ -43,18 +41,17 @@ public class Drive extends Subsystem {
   public PeriodicIO mPeriodicIO;
   private DriveControlState mDriveControlState = DriveControlState.OPEN_LOOP;
   private Rotation2d mGyroOffset = Rotation2d.identity();
-  private ReflectingCSVWriter<PeriodicIO> mCSVWriter = null;
-  private double left_encoder_prev_distance_, right_encoder_prev_distance_ = 0.0;
+  private ReflectingCSVWriter<PeriodicIO> mCSVWriter;
   private NetworkTableEntry mState, mStatus, mFusedHeading, mGyroHeading, mAvgDist;
   private PigeonIMU mPigeon;
-  private PathFollower pathFollower = null;
+  private PathFollower pathFollower;
   private TrajectoryStatus leftStatus;
   private TrajectoryStatus rightStatus;
-  private double lastAngle, lastDist = 0.0;
-  private boolean pathFinished = false;
-  private MotionMagicVisionFeed.VisionGoal mGoal;
-  private boolean mLowered = false;
+  private double lastAngle, lastDist, left_encoder_prev_distance_, right_encoder_prev_distance_;
+  private boolean pathFinished, mLowered, mIsOnTarget;
+  private VisionDrive.VisionGoal mGoal;
   private MkTimer placeCargoTimer = new MkTimer();
+  private Rotation2d mTargetHeading = new Rotation2d();
 
   private Drive() {
     ShuffleboardTab mDriveTab = Shuffleboard.getTab("Drive");
@@ -92,12 +89,14 @@ public class Drive extends Subsystem {
 
   @Override
   public synchronized void onQuickLoop(double timestamp) {
+    stateEstimator(timestamp);
     switch (mDriveControlState) {
       case OPEN_LOOP:
       case MOTION_MAGIC:
-      case PIGEON_SERVO:
-        break;
       case VISION_DRIVE:
+        break;
+      case TURN_IN_PLACE:
+        updateTurnToHeading(timestamp);
         break;
       case VELOCITY_SETPOINT:
         updatePathFollower();
@@ -118,10 +117,10 @@ public class Drive extends Subsystem {
       mLeftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.MOTION_MAGIC) {
+      mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward,
+          mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward,
           mPeriodicIO.brake_mode);
-    } else if (mDriveControlState == DriveControlState.PIGEON_SERVO) {
-      mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.AuxPID, mPeriodicIO.right_feedforward, mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.VELOCITY_SETPOINT) {
       mLeftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward,
           mPeriodicIO.brake_mode);
@@ -130,6 +129,11 @@ public class Drive extends Subsystem {
     } else if (mDriveControlState == DriveControlState.VISION_DRIVE) {
       mLeftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
+    } else if (mDriveControlState == DriveControlState.TURN_IN_PLACE) {
+      mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward,
+          mPeriodicIO.brake_mode);
+      mRightDrive.set(ControlMode.MotionMagic, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward,
+          mPeriodicIO.brake_mode);
     } else {
       Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
     }
@@ -168,12 +172,7 @@ public class Drive extends Subsystem {
     }
     mState.setString(mDriveControlState.toString());
     mStatus.setBoolean(driveStatus());
-    SmartDashboard.putNumber("Aux Error", mRightDrive.getError(1));
-    SmartDashboard.putNumber("Aux Target", mRightDrive.getTarget(1));
-    SmartDashboard.putNumber("Aux Pos", mRightDrive.getPosition(1));
     SmartDashboard.putNumber("Main Target", mRightDrive.getTarget(0));
-    SmartDashboard.putNumber("Left Enc", MkMath.nativeUnitsToDegrees(mLeftDrive.masterTalon.getSensorCollection().getQuadraturePosition()));
-    SmartDashboard.putNumber("Right Enc", MkMath.nativeUnitsToDegrees(mRightDrive.masterTalon.getSensorCollection().getQuadraturePosition()));
   }
 
   public void teleopInit(double timestamp) {
@@ -206,6 +205,7 @@ public class Drive extends Subsystem {
   public void onRestart(double timestamp) {
     mLeftDrive.checkForErrorInit();
     mRightDrive.checkForErrorInit();
+    zeroPigeon();
   }
 
   public boolean checkSystem() {
@@ -225,17 +225,12 @@ public class Drive extends Subsystem {
   public synchronized void setOpenLoop(DriveSignal signal) {
     if (mDriveControlState != DriveControlState.OPEN_LOOP) {
       Logger.logMarker("Switching to open loop");
-      mPeriodicIO.left_demand = 0.0;
-      mPeriodicIO.right_demand = 0.0;
-      mPeriodicIO.left_feedforward = 0.0;
-      mPeriodicIO.right_feedforward = 0.0;
-      configNormalDrive();
+      clearOutput();
+
       mDriveControlState = DriveControlState.OPEN_LOOP;
     }
     mPeriodicIO.left_demand = signal.getLeft();
     mPeriodicIO.right_demand = signal.getRight();
-    mPeriodicIO.left_feedforward = 0.0;
-    mPeriodicIO.right_feedforward = 0.0;
     mPeriodicIO.brake_mode = NeutralMode.Brake;
   }
 
@@ -255,7 +250,7 @@ public class Drive extends Subsystem {
   }
 
   /**
-   * Zero all pigeon values TODO Enable
+   * Zero all pigeon values
    */
   public void zeroPigeon() {
     CT.RE(mPigeon.setFusedHeading(0, 0));
@@ -288,76 +283,17 @@ public class Drive extends Subsystem {
    * @param dist Delta Position in inches
    * @param feed Left/Right arbitrary feed (Percent Output, [-1,1])
    */
-  public synchronized void setMotionMagicPositionSetpoint(double dist, DriveSignal feed) {
+  public synchronized void setMotionMagicPositionSetpoint(DriveSignal dist, DriveSignal feed) {
     if (mDriveControlState != DriveControlState.MOTION_MAGIC) {
       Logger.logMarker("Switching to Motion Magic");
-      mPeriodicIO.left_demand = 0.0;
-      mPeriodicIO.right_demand = 0.0;
-      mPeriodicIO.left_feedforward = 0.0;
-      mPeriodicIO.right_feedforward = 0.0;
-      configHatchVision();
+      clearOutput();
       mDriveControlState = DriveControlState.MOTION_MAGIC;
     }
-    mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(dist + mPeriodicIO.rightPos);
+    mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(dist.getLeft() + mPeriodicIO.leftPos);
+    mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist.getRight() + mPeriodicIO.rightPos);
     mPeriodicIO.left_feedforward = feed.getLeft();
     mPeriodicIO.right_feedforward = feed.getRight();
     mPeriodicIO.brake_mode = NeutralMode.Brake;
-  }
-
-  /**
-   * Use Limelight to find Distance and Angle. Drive and turn to target using primary and aux PID on Talons
-   *
-   * @param dist Distance in Inches to Drive (Motion Magic)
-   * @param angle Angle to serve to using Pigeon
-   */
-  public synchronized void setDistanceAndAngle(double dist, double angle) {
-    if (mDriveControlState != DriveControlState.PIGEON_SERVO) {
-      mPeriodicIO.left_demand = 0.0;
-      mPeriodicIO.right_demand = 0.0;
-      mPeriodicIO.left_feedforward = 0.0;
-      mPeriodicIO.right_feedforward = 0.0;
-      configHatchVision();
-      mDriveControlState = DriveControlState.PIGEON_SERVO;
-      Logger.logMarker("Switching to Pigeon Servo");
-    }
-    mPeriodicIO.left_demand = 0.0;
-    mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(dist + mPeriodicIO.rightPos);
-    mPeriodicIO.left_feedforward = 0.0;
-    mPeriodicIO.right_feedforward = MkMath.degreesToPigeonNativeUnits(mPeriodicIO.fusedHeading + angle);
-    mPeriodicIO.brake_mode = NeutralMode.Brake;
-  }
-
-  private synchronized void configHatchVision() {
-    if (mDriveControlState != DriveControlState.PIGEON_SERVO
-        && mDriveControlState != DriveControlState.MOTION_MAGIC) {
-      mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.SensorSum);
-      mRightDrive.masterTalon.configSelectedFeedbackCoefficient(0.5, 0, 0);
-      mLeftDrive.masterTalon.follow(mRightDrive.masterTalon, FollowerType.AuxOutput1);
-    }
-  }
-
-  private synchronized void configNormalDrive() {
-    if (mDriveControlState == DriveControlState.PIGEON_SERVO
-        || mDriveControlState == DriveControlState.MOTION_MAGIC) {
-      mRightDrive.masterTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
-      mRightDrive.masterTalon.configSelectedFeedbackCoefficient(1.0, 0, 0);
-    }
-  }
-
-  /**
-   * @return The distance from the target when servoing with the Pigeon
-   */
-  public synchronized double getVisionServoError(double dist) {
-    return Math.abs((mPeriodicIO.rightPos / 2) - dist);
-  }
-
-  /**
-   * Used for Manual Velocity Setpoint for tuning
-   *
-   * @param sig Desired output in perent of max velocity
-   */
-  public synchronized void setVelocitySetpointNormal(DriveSignal sig) {
-    setVelocity(new DriveSignal(sig.getLeft() * DRIVE.kMaxNativeVel, sig.getRight() * DRIVE.kMaxNativeVel), DriveSignal.BRAKE);
   }
 
   /**
@@ -368,11 +304,7 @@ public class Drive extends Subsystem {
   private synchronized void setVelocity(DriveSignal signal, DriveSignal feedforward) {
     if (mDriveControlState != DriveControlState.VELOCITY_SETPOINT) {
       Logger.logMarker("Switching to Velocity");
-      mPeriodicIO.left_demand = 0.0;
-      mPeriodicIO.right_demand = 0.0;
-      mPeriodicIO.left_feedforward = 0.0;
-      mPeriodicIO.right_feedforward = 0.0;
-      configNormalDrive();
+      clearOutput();
       mDriveControlState = DriveControlState.VELOCITY_SETPOINT;
     }
     mPeriodicIO.left_demand = signal.getLeft();
@@ -392,13 +324,13 @@ public class Drive extends Subsystem {
         }
         break;
       case PLACE_HATCH:
-        if (target.isValidTarget() && target.getDistance() < 25.0 && !mLowered) {
+        if (target.isValidTarget() && target.getDistance() < 26.0 && !mLowered) {
           HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
           mLowered = true;
         }
         break;
       case PLACE_CARGO:
-        if (target.getDistance() < 25.0 && !placeCargoTimer.hasBeenSet()) {
+        if (target.getDistance() < 26.0 && !placeCargoTimer.hasBeenSet()) {
           placeCargoTimer.start(0.5);
         } else if (placeCargoTimer.isDone()) {
           CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut);
@@ -411,11 +343,9 @@ public class Drive extends Subsystem {
 
     double visionTurn = 0.0;
     double dist = target.getDistance();
-    double skew = 0.0;
     if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE && ((lastDist - target.getDistance()) > -2.0)) {
-      skew = ((target.getSkew() * Math.pow(dist, 3)) / 5.0e4) * 0.5 + ((Math.sin(Math.toRadians(target.getYaw())) * dist) / 2.0);
-      //System.out.println("Yaw: " + target.getSkew() + " 1st: " + ((target.getSkew() * Math.pow(dist, 3)) / 5.0e4) + " 2nd: " + ((Math.sin(Math.toRadians(target.getYaw())) * dist) / 2.0));
-      visionTurn = mVisionAssist.calculate(target.getYaw() /*+ skew*/);
+      //double skew = ((target.getSkew() * Math.pow(dist, 3)) / 5.0e4) * 0.5 + ((Math.sin(Math.toRadians(target.getYaw())) * dist) / 2.0);
+      visionTurn = mVisionAssist.calculate(target.getYaw());
     }
     double speed = 0.275;
     //double speed = -2.65 + 0.383917 * dist - 0.0196875 * Math.pow(dist,2) + 0.000483333 * Math.pow(dist,3) - 5.625e-6 * Math.pow(dist,4) + 2.5e-8 * Math.pow(dist,5);
@@ -434,14 +364,10 @@ public class Drive extends Subsystem {
     return placeCargoTimer.isDone(1.0);
   }
 
-  public synchronized void setVisionDrive(MotionMagicVisionFeed.VisionGoal mGoal) {
-    configNormalDrive();
+  public synchronized void setVisionDrive(VisionDrive.VisionGoal mGoal) {
     this.mGoal = mGoal;
     mLowered = false;
-    mPeriodicIO.left_demand = 0.0;
-    mPeriodicIO.right_demand = 0.0;
-    mPeriodicIO.left_feedforward = 0.0;
-    mPeriodicIO.right_feedforward = 0.0;
+    clearOutput();
     mDriveControlState = DriveControlState.VISION_DRIVE;
     placeCargoTimer.reset();
   }
@@ -453,6 +379,13 @@ public class Drive extends Subsystem {
     double[] arr = new double[3];
     mPigeon.getYawPitchRoll(arr);
     return arr[2];
+  }
+
+  private void clearOutput() {
+    mPeriodicIO.left_demand = 0.0;
+    mPeriodicIO.right_demand = 0.0;
+    mPeriodicIO.left_feedforward = 0.0;
+    mPeriodicIO.right_feedforward = 0.0;
   }
 
   public boolean isMotionMagicFinished() {
@@ -547,18 +480,62 @@ public class Drive extends Subsystem {
   }
 
   /**
+   * Configures the drivebase to turn to a desired heading
+   */
+  public synchronized void setWantTurnToHeading(Rotation2d heading) {
+    if (Math.abs(heading.inverse().rotateBy(mTargetHeading).getDegrees()) > 1E-3) {
+      mTargetHeading = heading;
+      mIsOnTarget = false;
+    }
+  }
+
+  public synchronized boolean isTurnFinished() {
+    return mIsOnTarget;
+  }
+
+  /**
+   * Turn the robot to a target heading.
+   *
+   * Is called periodically when the robot is auto-aiming towards the boiler.
+   */
+  private synchronized void updateTurnToHeading(double timestamp) {
+    final Rotation2d field_to_robot = RobotState.getInstance().getLatestFieldToVehicle().getValue().getRotation();
+
+    // Figure out the rotation necessary to turn to face the goal.
+    final Rotation2d robot_to_target = field_to_robot.inverse().rotateBy(mTargetHeading);
+
+    // Check if we are on target
+    final double kGoalPosTolerance = 0.75; // degrees
+    final double kGoalVelTolerance = 5.0; // inches per second
+    if (Math.abs(robot_to_target.getDegrees()) < kGoalPosTolerance
+        && Math.abs(mPeriodicIO.leftVel) < kGoalVelTolerance
+        && Math.abs(mPeriodicIO.rightVel) < kGoalVelTolerance) {
+      // Use the current setpoint and base lock.
+      mIsOnTarget = true;
+      mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(mPeriodicIO.leftPos);
+      mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(mPeriodicIO.rightPos);
+      return;
+    }
+
+    Kinematics.DriveVelocity wheel_delta = Kinematics
+        .inverseKinematics(new Twist2d(0, 0, robot_to_target.getRadians()));
+    mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(wheel_delta.left + mPeriodicIO.leftPos);
+    mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(wheel_delta.right + mPeriodicIO.rightPos);
+  }
+
+  /**
    * Left is Positive Right is Negative (180 to -180)
    *
    * @return current fused heading from navX
    */
-  public double getHeadingDeg() {
+  private double getHeadingDeg() {
     return mPeriodicIO.gyro_heading.getDegrees();
   }
 
   public enum DriveControlState {
     OPEN_LOOP,
     MOTION_MAGIC,
-    PIGEON_SERVO,
+    TURN_IN_PLACE,
     VISION_DRIVE,
     VELOCITY_SETPOINT
   }

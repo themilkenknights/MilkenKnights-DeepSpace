@@ -18,7 +18,7 @@ public class AutoChooser {
   public static final Map<String, Path> autoPaths = new HashMap<>();
   public static MatchData matchData = MatchData.defaultMatch;
   public static AutoPosition mAutoPosition = AutoPosition.RIGHT;
-  private static AutoModeExecutor mAutoModeExecuter = null;
+  private static AutoModeExecutor mAutoModeExecuter;
   private static SendableChooser<AutoPosition> positionChooser = new SendableChooser<>();
   private static ShuffleboardTab mTab = Shuffleboard.getTab("General");
   private static ComplexWidget positionChooserTab = mTab.add("Position", positionChooser).withWidget(BuiltInWidgets.kSplitButtonChooser);

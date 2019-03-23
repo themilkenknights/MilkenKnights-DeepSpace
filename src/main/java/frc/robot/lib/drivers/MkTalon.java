@@ -43,10 +43,10 @@ public class MkTalon {
   private final double motorTimer = GENERAL.kMotorSafetyTimer;
   public PigeonIMU mPigeon;
   private TalonLoc mSide;
-  private ControlMode lastControlMode = null;
+  private ControlMode lastControlMode;
   private double lastOutput, lastArbFeed = Double.NaN;
-  private NeutralMode lastNeutralMode = null;
-  private DemandType lastDemandType = null;
+  private NeutralMode lastNeutralMode;
+  private DemandType lastDemandType;
   private MkTimer motorSafetyTimer = new MkTimer();
   private NetworkTableEntry mVel, mPos, mError, mOutput;
 

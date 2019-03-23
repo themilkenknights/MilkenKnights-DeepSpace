@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.Timer;
  */
 public class TimeDelayedBoolean {
   private Timer t = new Timer();
-  private boolean m_old = false;
+  private boolean m_old;
 
   public boolean update(boolean value, double timeout) {
     if (!m_old && value) {

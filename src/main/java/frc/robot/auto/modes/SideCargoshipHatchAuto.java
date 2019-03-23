@@ -4,7 +4,7 @@ import frc.robot.AutoChooser;
 import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeEndedException;
 import frc.robot.auto.actions.DrivePathAction;
-import frc.robot.auto.actions.MotionMagicVisionFeed;
+import frc.robot.auto.actions.VisionDrive;
 import frc.robot.lib.util.DeserializePath;
 
 public class SideCargoshipHatchAuto extends AutoModeBase {
@@ -32,7 +32,7 @@ public class SideCargoshipHatchAuto extends AutoModeBase {
     runAction(new DrivePathAction(4, true));
     runAction(new DrivePathAction(5, false)); */
     runAction(new DrivePathAction(1, false));
-    runAction(new MotionMagicVisionFeed(MotionMagicVisionFeed.VisionGoal.PLACE_HATCH));
+    runAction(new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH));
   }
 
   private double getTime(int pathNum) {

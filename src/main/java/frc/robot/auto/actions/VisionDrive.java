@@ -5,11 +5,11 @@ import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
 
-public class MotionMagicVisionFeed implements Action {
+public class VisionDrive implements Action {
   private MkTimer expirationTimer = new MkTimer();
   private VisionGoal mGoal;
 
-  public MotionMagicVisionFeed(VisionGoal mGoal) {
+  public VisionDrive(VisionGoal mGoal) {
     this.mGoal = mGoal;
   }
 

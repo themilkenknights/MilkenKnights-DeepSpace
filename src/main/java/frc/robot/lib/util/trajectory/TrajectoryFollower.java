@@ -15,7 +15,7 @@ public class TrajectoryFollower {
   private double kAng_;
   private double ka_;
   private double last_error_;
-  private double current_heading = 0;
+  private double current_heading;
   private int current_segment;
   private Trajectory profile_;
   private double Dt;

@@ -12,7 +12,7 @@ import frc.robot.subsystems.Vision;
 public class SimpleHatch implements Action {
   private SynchronousPIDF mVisionAssist;
   private MkTimer driveTimer = new MkTimer();
-  private double lastTime = 0.0;
+  private double lastTime;
 
   public SimpleHatch() {
     mVisionAssist = new SynchronousPIDF(0.0164, 0.0, 255.0);

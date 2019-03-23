@@ -7,7 +7,7 @@ package frc.robot.lib.util;
  * Returns true once if and only if the value of newValue changes from false to true.
  */
 public class LatchedBoolean {
-  private boolean mLast = false;
+  private boolean mLast;
 
   public boolean update(boolean newValue) {
     boolean ret = false;

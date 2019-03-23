@@ -18,11 +18,11 @@ import frc.robot.subsystems.Superstructure.RobotState;
 public class HatchArm extends Subsystem {
   private HatchState mHatchState;
   private Solenoid mSpearSolenoid, mPancakeSolenoid;
-  private boolean mSpearLimitTriggered = false;
+  private boolean mSpearLimitTriggered;
   private NetworkTableEntry mLimitTriggered, mSpearStateTab, mPancakeTab;
   private MkTimer downTimer = new MkTimer();
   private MkTimer autoTimer = new MkTimer();
-  private boolean autoHasBeenRun = false;
+  private boolean autoHasBeenRun;
 
   private HatchArm() {
     ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");

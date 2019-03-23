@@ -3,7 +3,6 @@ package frc.robot;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
 import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
-import com.ctre.phoenix.motorcontrol.RemoteSensorSource;
 import com.ctre.phoenix.motorcontrol.VelocityMeasPeriod;
 import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
 import frc.robot.lib.drivers.MkTalon.TalonLoc;
@@ -201,9 +200,8 @@ public final class Constants {
           tal.slot1.integralZone = 150;
           tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.9);
           tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.4);
-          if (loc == TalonLoc.Left) {
-            tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
-          } else {
+          tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
+            /*
             tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;
             tal.primaryPID.selectedFeedbackCoefficient = 0.5;
             tal.sum0Term = FeedbackDevice.RemoteSensor0;
@@ -211,13 +209,11 @@ public final class Constants {
             tal.remoteFilter0.remoteSensorSource = RemoteSensorSource.TalonSRX_SelectedSensor;
             tal.remoteFilter0.remoteSensorDeviceID = CAN.kDriveLeftMasterTalonID;
             tal.auxPIDPolarity = false;
-            /*
-             * tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
-             * tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0; tal.remoteFilter1.remoteSensorDeviceID =
-             * CAN.kLeftCargoIntakeTalonID; tal.remoteFilter1.remoteSensorSource =
-             * RemoteSensorSource.GadgeteerPigeon_Yaw;
+            tal.auxiliaryPID.selectedFeedbackSensor = FeedbackDevice.RemoteSensor1;
+            tal.auxiliaryPID.selectedFeedbackCoefficient = 1.0; tal.remoteFilter1.remoteSensorDeviceID =
+            CAN.kLeftCargoIntakeTalonID; tal.remoteFilter1.remoteSensorSource =
+            RemoteSensorSource.GadgeteerPigeon_Yaw;
              */
-          }
         } else if (loc == TalonLoc.Cargo_Arm) {
           tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
           tal.reverseLimitSwitchSource = LimitSwitchSource.RemoteTalonSRX;

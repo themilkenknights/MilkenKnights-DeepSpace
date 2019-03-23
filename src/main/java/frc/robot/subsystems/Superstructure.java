@@ -30,7 +30,7 @@ public class Superstructure extends Subsystem {
   private Solenoid mFrontClimbSolenoid, mRearClimbSolenoid;
   private ClimbState mRearClimbState = ClimbState.RETRACTED;
   private ClimbState mFrontClimbState = ClimbState.RETRACTED;
-  private NetworkTableEntry mMatchState, mRobotStateEntry, mCompressorCurrent, mFrontClimb, mRearClimb;
+  private NetworkTableEntry mMatchState, mRobotStateEntry, mFrontClimb, mRearClimb;
 
   /**
    * Stores PDP, Compressor, General Robot Data, and Climb Actuators. Acts as the high-level controller that changes calls the lower-level
@@ -40,7 +40,6 @@ public class Superstructure extends Subsystem {
     ShuffleboardTab mStructureTab = Shuffleboard.getTab("General");
     mMatchState = mStructureTab.add("Match State", "").getEntry();
     mRobotStateEntry = mStructureTab.add("Robot State", "").getEntry();
-    mCompressorCurrent = mStructureTab.add("Compressor Current", 0.0).getEntry();
     mFrontClimb = mStructureTab.add("Front Climb", "").getEntry();
     mRearClimb = mStructureTab.add("Rear Climb", "").getEntry();
     mFrontClimbSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kFrontClimbSolenoidChannel);

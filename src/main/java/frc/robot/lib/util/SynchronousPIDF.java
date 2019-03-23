@@ -15,25 +15,25 @@ public class SynchronousPIDF {
   private double m_F; // factor for feed forward gain
   private double m_maximumOutput = 1.0; // |maximum output|
   private double m_minimumOutput = -1.0; // |minimum output|
-  private double m_maximumInput = 0.0; // maximum input - limit setpoint to
+  private double m_maximumInput; // maximum input - limit setpoint to
   // this
-  private double m_minimumInput = 0.0; // minimum input - limit setpoint to
+  private double m_minimumInput; // minimum input - limit setpoint to
   // this
-  private boolean m_continuous = false; // do the endpoints wrap around? eg.
+  private boolean m_continuous; // do the endpoints wrap around? eg.
   // Absolute encoder
-  private double m_prevError = 0.0; // the prior sensor input (used to compute
+  private double m_prevError; // the prior sensor input (used to compute
   // velocity)
-  private double m_totalError = 0.0; // the sum of the errors for use in the
+  private double m_totalError; // the sum of the errors for use in the
   // integral calc
-  private double m_setpoint = 0.0;
-  private double m_error = 0.0;
-  private double m_result = 0.0;
+  private double m_setpoint;
+  private double m_error;
+  private double m_result;
   private double m_last_input = Double.NaN;
-  private double m_deadband = 0.0; // If the absolute error is less than
+  private double m_deadband; // If the absolute error is less than
   // deadband
   // then treat error for the proportional
   // term as 0
-  private double lastTime = 0.0;
+  private double lastTime;
 
   public SynchronousPIDF() {
   }

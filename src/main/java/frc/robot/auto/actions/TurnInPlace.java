@@ -1,19 +1,18 @@
 package frc.robot.auto.actions;
 
+import frc.robot.lib.geometry.Rotation2d;
 import frc.robot.subsystems.Drive;
 
-public class MotionMagicAngle implements Action {
-  private double dist;
+public class TurnInPlace implements Action {
   private double angle;
 
-  public MotionMagicAngle(double dist, double angle) {
-    this.dist = dist;
+  public TurnInPlace(double angle) {
     this.angle = angle;
   }
 
   @Override
   public boolean isFinished() {
-    return Drive.getInstance().isMotionMagicFinished();
+    return Drive.getInstance().isTurnFinished();
   }
 
   @Override
@@ -26,6 +25,6 @@ public class MotionMagicAngle implements Action {
 
   @Override
   public void start() {
-    Drive.getInstance().setDistanceAndAngle(dist, angle);
+    Drive.getInstance().setWantTurnToHeading(Rotation2d.fromDegrees(angle));
   }
 }

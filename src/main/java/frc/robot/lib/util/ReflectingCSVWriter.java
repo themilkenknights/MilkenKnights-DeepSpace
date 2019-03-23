@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentLinkedDeque;
  */
 public class ReflectingCSVWriter<T> {
   ConcurrentLinkedDeque<String> mLinesToWrite = new ConcurrentLinkedDeque<>();
-  PrintWriter mOutput = null;
+  PrintWriter mOutput;
   Field[] mFields;
 
   public ReflectingCSVWriter(String fileName, Class<T> typeClass) {

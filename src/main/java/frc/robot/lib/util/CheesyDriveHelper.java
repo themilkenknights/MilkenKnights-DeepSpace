@@ -21,9 +21,9 @@ public class CheesyDriveHelper {
   private static final double kQuickStopDeadband = 0.5;
   private static final double kQuickStopWeight = 0.1;
   private static final double kQuickStopScalar = 5.0;
-  private double mOldWheel = 0.0;
-  private double mQuickStopAccumlator = 0.0;
-  private double mNegInertiaAccumlator = 0.0;
+  private double mOldWheel;
+  private double mQuickStopAccumlator;
+  private double mNegInertiaAccumlator;
 
   public DriveSignal cheesyDrive(double throttle, double wheel, boolean isQuickTurn, boolean isHighGear) {
     wheel = handleDeadband(wheel, kWheelDeadband);

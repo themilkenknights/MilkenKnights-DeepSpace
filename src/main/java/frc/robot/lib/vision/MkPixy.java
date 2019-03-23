@@ -9,10 +9,10 @@ import java.util.ArrayList;
 
 public class MkPixy {
   private static final int blockSignature = 1;
-  private static ArrayList<Block> blocks = null;
-  private static Pixy2 pixy = null;
+  private static ArrayList<Block> blocks;
+  private static Pixy2 pixy;
   private static MkPixyTarget mTarget = new MkPixyTarget(0, 0, false, 0);
-  private static int PixyResult = 0;
+  private static int PixyResult;
 
   public MkPixy() {
     pixy = Pixy2.createInstance(LinkType.SPI);

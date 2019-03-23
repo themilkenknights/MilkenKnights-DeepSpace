@@ -7,7 +7,7 @@ import frc.robot.lib.util.CrashTrackingRunnable;
  */
 public class AutoModeExecutor {
   private AutoModeBase m_auto_mode;
-  private Thread m_thread = null;
+  private Thread m_thread;
 
   public void start() {
     if (m_thread != null) {

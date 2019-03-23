@@ -5,7 +5,7 @@ import frc.robot.lib.math.HsvToRgb;
 
 public class MkLED extends CANifier {
   private static float[] _rgb = new float[3];
-  private double startTime = 0;
+  private double startTime;
   private LEDColors[] currentColors = new LEDColors[] {LEDColors.OFF, LEDColors.OFF};
 
   public MkLED(int id) {
