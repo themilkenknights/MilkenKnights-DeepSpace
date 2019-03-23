@@ -6,7 +6,6 @@ import frc.robot.auto.AutoModeEndedException;
 import frc.robot.auto.actions.DrivePathAction;
 import frc.robot.auto.actions.TurnInPlace;
 import frc.robot.auto.actions.VisionDrive;
-import frc.robot.lib.util.DeserializePath;
 
 public class FrontSideCargshipAuto extends AutoModeBase {
   @Override
@@ -22,6 +21,6 @@ public class FrontSideCargshipAuto extends AutoModeBase {
   }
 
   private double getTime(int pathNum) {
-    return AutoChooser.autoPaths.get("CS-" + pathNum + (AutoChooser.mAutoPosition == AutoChooser.AutoPosition.LEFT ? "L" : "R")).getTime();
+    return AutoChooser.getPath("CS-" + pathNum + (AutoChooser.mAutoPosition == AutoChooser.AutoPosition.LEFT ? "L" : "R")).getTime();
   }
 }

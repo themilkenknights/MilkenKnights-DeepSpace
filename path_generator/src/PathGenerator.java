@@ -8,33 +8,30 @@ import java.util.Map;
 public class PathGenerator {
 
   public static final HashMap<String, Path> robotPaths = new HashMap<>();
-/*  public static final Trajectory.Config fastConfig = new Trajectory.Config(
-      Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_HIGH,
-      0.01, 130, 107, 1007);*/
-
-  public static final Trajectory.Config slowerConfig = new Trajectory.Config(
-      Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_HIGH,
-      0.01, 120, 105, 1007);
 
   public static final Trajectory.Config fastConfig = new Trajectory.Config(
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_HIGH,
-      0.01, 50, 25, 250);
+      0.01, 120, 105, 1007);
+
+  public static final Trajectory.Config platformConfig = new Trajectory.Config(
+      Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_HIGH,
+      0.01, 100, 80, 800);
 
   static {
     robotPaths.put("CS-1", new Path(new Waypoint[] {
-        new Waypoint(68 ,0 ,Pathfinder.d2r(0)),
-        new Waypoint(175 ,-11 ,Pathfinder.d2r(0)),
-    }, slowerConfig));
+        new Waypoint(68, 0, Pathfinder.d2r(0)),
+        new Waypoint(175, -11, Pathfinder.d2r(0)),
+    }, platformConfig));
 
     robotPaths.put("CS-2", new Path(new Waypoint[] {
-        new Waypoint(203 ,-11 ,Pathfinder.d2r(0)),
-        new Waypoint(60 ,-136 ,Pathfinder.d2r(0)),
-    }, slowerConfig));
+        new Waypoint(203, -11, Pathfinder.d2r(0)),
+        new Waypoint(60, -136, Pathfinder.d2r(0)),
+    }, fastConfig));
 
     robotPaths.put("CS-3", new Path(new Waypoint[] {
-        new Waypoint(20 ,-136 ,Pathfinder.d2r(0)),
-        new Waypoint(261 ,-90 ,Pathfinder.d2r(0)),
-    }, slowerConfig));
+        new Waypoint(20, -136, Pathfinder.d2r(0)),
+        new Waypoint(261, -90, Pathfinder.d2r(0)),
+    }, fastConfig));
   }
 
   public static void main(String[] args) {

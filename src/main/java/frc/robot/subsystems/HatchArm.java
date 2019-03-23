@@ -64,6 +64,10 @@ public class HatchArm extends Subsystem {
     }
   }
 
+  public void retractPancakeActuator() {
+    mPancakeSolenoid.set(false);
+  }
+
   public synchronized boolean isHatchTriggeredTimer() {
     return autoTimer.isDone() && mSpearLimitTriggered;
   }

@@ -37,10 +37,7 @@ public class AutoChooser {
   public static void updateGameData() {
     if (autoPaths == null) {
       autoPaths = new HashMap<>();
-      for (String pathName : Constants.DRIVE.autoNames) {
-        autoPaths.put(pathName + "L", DeserializePath.getPathFromFile(pathName + "L"));
-        autoPaths.put(pathName + "R", DeserializePath.getPathFromFile(pathName + "R"));
-      }
+      loadPaths();
     }
     matchData.alliance = DriverStation.getInstance().getAlliance();
     matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
@@ -65,6 +62,23 @@ public class AutoChooser {
   public static void loadAutos() {
     positionChooser.setDefaultOption("Right", AutoPosition.RIGHT);
     positionChooser.addOption("Left", AutoPosition.LEFT);
+    loadPaths();
+  }
+
+  public static Path getPath(String name) {
+    if (autoPaths == null) {
+      return DeserializePath.getPathFromFile(name);
+    } else {
+      try {
+        autoPaths.get(name);
+      } catch (NullPointerException e) {
+        return DeserializePath.getPathFromFile(name);
+      }
+    }
+    return new Path();
+  }
+
+  public static void loadPaths() {
     for (String pathName : Constants.DRIVE.autoNames) {
       autoPaths.put(pathName + "L", DeserializePath.getPathFromFile(pathName + "L"));
       autoPaths.put(pathName + "R", DeserializePath.getPathFromFile(pathName + "R"));
