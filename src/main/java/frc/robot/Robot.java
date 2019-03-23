@@ -2,6 +2,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import frc.robot.auto.modes.SideCargoshipHatchAuto;
 import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;
@@ -54,6 +55,7 @@ public class Robot extends TimedRobot {
       mMatchState = MatchState.AUTO;
       mSubsystemManager.startAuto();
       AutoChooser.updateGameData();
+      AutoChooser.startAuto(new SideCargoshipHatchAuto());
     } catch (Throwable t) {
       Logger.logThrowableCrash(t);
       throw t;

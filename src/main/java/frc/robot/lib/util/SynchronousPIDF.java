@@ -1,7 +1,9 @@
 package frc.robot.lib.util;
 
 import edu.wpi.first.hal.util.BoundaryException;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * This class implements a PID Control Loop.
@@ -69,7 +71,8 @@ public class SynchronousPIDF {
 
   public double calculate(double input) {
     double now = Timer.getFPGATimestamp();
-    double out = calculate(input, now - lastTime);
+    double dt = now - lastTime;
+    double out = calculate(input, dt);
     lastTime = now;
     return out;
   }
@@ -104,6 +107,7 @@ public class SynchronousPIDF {
     // Don't blow away m_error so as to not break derivative
     double proportionalError = Math.abs(m_error) < m_deadband ? 0 : m_error;
     m_result = (m_P * proportionalError + m_I * m_totalError + m_D * (m_error - m_prevError) / dt + m_F * m_setpoint);
+    //System.out.println("Result: " + m_result + "Error: " + m_D * (m_error - m_prevError) / dt + "delta error: " + (m_error - m_prevError) + " vel: " + (m_error - m_prevError) / dt + " Input: " + input + " Dt: " + dt + "\n");
     m_prevError = m_error;
     if (m_result > m_maximumOutput) {
       m_result = m_maximumOutput;

@@ -1,6 +1,7 @@
 package frc.robot.auto.actions;
 
 import frc.robot.AutoChooser;
+import frc.robot.lib.util.DeserializePath;
 import frc.robot.lib.util.trajectory.Path;
 import frc.robot.subsystems.Drive;
 
@@ -15,7 +16,7 @@ public class DrivePathAction implements Action {
   }
 
   public DrivePathAction(int pathNum, boolean dir) {
-    this(AutoChooser.autoPaths.get("CS-" + pathNum + (AutoChooser.mAutoPosition == AutoChooser.AutoPosition.LEFT ? "L" : "R")), dir);
+    this(DeserializePath.getPathFromFile("CS-" + pathNum + (AutoChooser.mAutoPosition == AutoChooser.AutoPosition.LEFT ? "L" : "R")), dir);
   }
 
   @Override public boolean isFinished() {

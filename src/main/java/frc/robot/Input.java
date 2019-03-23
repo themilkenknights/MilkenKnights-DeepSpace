@@ -30,8 +30,8 @@ public class Input {
   private static final MkJoystick mOperatorJoystick = new MkJoystick(1);
   private static final MkJoystickButton mToggleManualVision = mDriverJoystick.getButton(10, "Toggle Velocity Setpoint");
   private static final MkJoystickButton mHatchVisionPlace = mDriverJoystick.getButton(1, "Hatch Vision Place");
-  private static final MkJoystickButton mCargoVisionOuttake = mDriverJoystick.getButton(2, "Vision Cargo Outtake");
-  private static final MkJoystickButton mHatchVisionIntake = mDriverJoystick.getButton(3, "Vision Hatch Intake");
+  private static final MkJoystickButton mCargoVisionOuttake = mDriverJoystick.getButton(3, "Vision Cargo Outtake");
+  private static final MkJoystickButton mHatchVisionIntake = mDriverJoystick.getButton(2, "Vision Hatch Intake");
   private static final MkJoystickButton mAutoClimb = mDriverJoystick.getButton(4, "Automated Climb");
   private static final MkJoystickButton mFrontClimb = mDriverJoystick.getButton(5, "Climb Front");
   private static final MkJoystickButton mRearClimb = mDriverJoystick.getButton(6, "Climb Rear");
@@ -46,7 +46,7 @@ public class Input {
   private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
   public static boolean hasBeenTriggered = false;
   private static boolean isManualVisionMode = false;
-  private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.0151, 0.0, 285.0);
+  private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.0157, 0.0, 275.0);
   private static MkTimer rumbleTimer = new MkTimer();
   private static Drive mDrive = Drive.getInstance();
   private static HatchArm mHatch = HatchArm.getInstance();
@@ -76,6 +76,8 @@ public class Input {
     }
     if (mToggleManualVision.isPressed()) {
       isManualVisionMode = !isManualVisionMode;
+      mVisionAssist.reset();
+      hasBeenTriggered = false;
     }
     // Toggle Limelight LEDs
     if (toggleVision.isPressed()) {
@@ -115,8 +117,9 @@ public class Input {
         double visionTurn = 0.0;
         LimelightTarget target = mVision.getLimelightTarget();
         if (target.isValidTarget()) {
-          if (target.getDistance() < 35.0) {
+          if (target.getDistance() < 35.0 & !hasBeenTriggered) {
             mHatch.setHatchState(HatchState.PLACE);
+            hasBeenTriggered = true;
           }
           if (mHatch.getHatchSpearState() != HatchState.PLACE) {
             visionTurn = mVisionAssist.calculate(Vision.getInstance().getLimelightTarget().getYaw());
@@ -126,13 +129,17 @@ public class Input {
           isManualVisionMode = false;
           mDrive.setOpenLoop(DriveSignal.BRAKE);
         } else {
-          mDrive.setOpenLoop(new DriveSignal(0.25 - visionTurn, 0.25 + visionTurn));
+          mDrive.setOpenLoop(new DriveSignal(controlSig.getLeft() - visionTurn, controlSig.getRight() + visionTurn));
         }
       } else {
         mDrive.setOpenLoop(controlSig);
       }
+    } else if(mDrive.getmDriveControlState() == Drive.DriveControlState.VISION_DRIVE){
+      mDrive.updateVisionDrive();
     }
-    if (isOperatorJoystickConnected) {
+    currentRobotState = mStructure.getRobotState();
+
+    if (isOperatorJoystickConnected && currentRobotState == RobotState.TELEOP_DRIVE) {
       if (mCargoVisionOuttake.isPressed()) {
         // Auto align and drive towards cargoship
         mStructure.setRobotState(RobotState.VISION_CARGO_OUTTAKE);
@@ -202,9 +209,5 @@ public class Input {
     mDriverJoystick.setRumble(RumbleType.kLeftRumble, intensity);
     mDriverJoystick.setRumble(RumbleType.kRightRumble, intensity);
     rumbleTimer.start(sec);
-  }
-
-  public static synchronized void setTriggered() {
-    hasBeenTriggered = true;
   }
 }

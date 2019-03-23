@@ -2,31 +2,54 @@ import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
 import jaci.pathfinder.Waypoint;
 import java.io.File;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
 public class PathGenerator {
 
   public static final HashMap<String, Path> robotPaths = new HashMap<>();
-  public static final Trajectory.Config fastConfig = new Trajectory.Config(
+/*  public static final Trajectory.Config fastConfig = new Trajectory.Config(
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_HIGH,
-      0.01, 135, 108, 1007);
-  public static final Trajectory.Config defaultConfig = new Trajectory.Config(
-      Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config
-      .SAMPLES_HIGH, 0.01, 130, 95, 800);
+      0.01, 130, 107, 1007);*/
 
   public static final Trajectory.Config slowerConfig = new Trajectory.Config(
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_HIGH,
-      0.01, 100, 75, 200);
+      0.01, 100, 90, 1000);
+
+  public static final Trajectory.Config fastConfig = new Trajectory.Config(
+      Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_HIGH,
+      0.01, 50, 25, 250);
+
 
   static {
-
     robotPaths.put("CS-1", new Path(new Waypoint[] {
-        new Waypoint(69, 46, Pathfinder.d2r(0)),
-        new Waypoint(150, 75, Pathfinder.d2r(45)),
-        new Waypoint(230, 100, Pathfinder.d2r(-15)),
-        new Waypoint(262, 45, Pathfinder.d2r(-90)),
-    }, slowerConfig, true));
+        new Waypoint(69 ,-46 ,Pathfinder.d2r(0)),
+        new Waypoint(175 ,-11 ,Pathfinder.d2r(0)),
+    }, slowerConfig));
+
+    robotPaths.put("CS-2",new Path(new Waypoint[]{
+        new Waypoint(204 ,-11 ,Pathfinder.d2r(0)),
+        new Waypoint(149 ,-55 ,Pathfinder.d2r(90)),
+        new Waypoint(196 ,-99 ,Pathfinder.d2r(0)),
+    }, slowerConfig));
+    robotPaths.put("CS-3",new Path(new Waypoint[]{
+        new Waypoint(196 ,-99 ,Pathfinder.d2r(0)),
+        new Waypoint(53 ,-136 ,Pathfinder.d2r(0)),
+    }, slowerConfig));
+
+    robotPaths.put("CS-4",new Path(new Waypoint[]{
+        new Waypoint(22 ,-136 ,Pathfinder.d2r(0)),
+        new Waypoint(210 ,-66 ,Pathfinder.d2r(0)),
+        new Waypoint(274 ,-108 ,Pathfinder.d2r(-55)),
+    }, slowerConfig));
+
+    robotPaths.put("CS-5",new Path(new Waypoint[]{
+        new Waypoint(274 ,-108 ,Pathfinder.d2r(-55)),
+        new Waypoint(262 ,-73 ,Pathfinder.d2r(-90)),
+        new Waypoint(262 ,-45 ,Pathfinder.d2r(-90))
+    }, slowerConfig));
+
   }
 
   public static void main(String[] args) {
@@ -36,16 +59,16 @@ public class PathGenerator {
       if (container.getValue().isBothSides()) {
         Path traj = container.getValue();
 
-        File leftPathFile = new File("src/main/deploy" + container.getKey() + "L.csv").getAbsoluteFile();
-        File rightPathFile = new File("src/main/deploy" + container.getKey() + "R.csv").getAbsoluteFile();
+        File leftPathFile = new File("src/main/deploy/" + container.getKey() + "L.csv").getAbsoluteFile();
+        File rightPathFile = new File("src/main/deploy/" + container.getKey() + "R.csv").getAbsoluteFile();
 
-        Trajectory leftTraj = Pathfinder.generate(traj.getLeftPoints(), traj.getConfig());
-        Trajectory rightTraj = Pathfinder.generate(traj.getPoints(), traj.getConfig());
+        Trajectory leftTraj = Pathfinder.generate(traj.getPoints(), traj.getConfig());
+        Trajectory rightTraj = Pathfinder.generate(traj.getRightPoints(), traj.getConfig());
 
         Pathfinder.writeToCSV(leftPathFile, leftTraj);
         Pathfinder.writeToCSV(rightPathFile, rightTraj);
 
-        System.out.println("Path: " + container.getKey() + " Time: " + leftTraj.length() * 0.005 + " Sec");
+        System.out.println("Path: " + container.getKey() + " Time: " + leftTraj.length() * 0.01 + " Sec");
         if (container.getKey().charAt(0) == 'C') {
           tiL += leftTraj.length() * 0.01;
           tiR += rightTraj.length() * 0.01;
@@ -146,7 +169,7 @@ public class PathGenerator {
       return bothSides;
     }
 
-    public Waypoint[] getLeftPoints() {
+    public Waypoint[] getRightPoints() {
       Waypoint[] waypoints = new Waypoint[points.length];
       for (int i = 0; i < waypoints.length; i++) {
         waypoints[i] = new Waypoint(points[i].x, points[i].y, points[i].angle);

@@ -15,7 +15,7 @@ public class DeserializePath {
    */
   public static Path getPathFromFile(String name) {
     try {
-      String filePath = "/home/lvuser/paths/" + name + ".csv";
+      String filePath = "/home/lvuser/deploy/" + name + ".csv";
       Trajectory traj = Pathfinder.readFromCSV(new File(filePath));
       TankModifier modifier = new TankModifier(traj).modify(Constants.DRIVE.kEffectiveDriveWheelTrackWidthInches);
       Trajectory left = modifier.getLeftTrajectory();

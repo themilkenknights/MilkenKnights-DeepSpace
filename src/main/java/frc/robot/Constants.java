@@ -87,23 +87,18 @@ public final class Constants {
     public static final double kMaxNativeVel = 3370.0;
     public static final double kGoalPosTolerance = 1.5;
     // Vision Tuning
-    public static final double kVisionTurnP = 0.040;
     public static final byte kNavXUpdateRate = (byte) 200;
     public static final double DRIVE_FOLLOWER_P = 1;
     public static final double DRIVE_FOLLOWER_A = 0.00125;
     public static final double DRIVE_FOLLOWER_ANG = -1.25;
     public static final double PATH_DT = 0.01;
 
+    public static final double kVisionP = 0.01465;
+    public static final double kVisionI = 0.0;
+    public static final double kVisionD = 295.0;//285
+
     public static final String[] autoNames = {
-        "CS-1",
-        "CS-2",
-        "CS-3",
-        "CS-4",
-        "CS-5",
-        "CS-6",
-        "CS-7",
-        "CS-8",
-        "CS-9"};
+        "CS-1", "CS-2", "CS-3", "CS-4", "CS-5"};
   }
 
   public static class TEST {

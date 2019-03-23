@@ -1,6 +1,7 @@
 package frc.robot.auto.actions;
 
 import frc.robot.lib.util.MkTimer;
+import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
 
@@ -15,7 +16,7 @@ public class MotionMagicVisionFeed implements Action {
   @Override
   public boolean isFinished() {
     return expirationTimer.isDone() || ((mGoal == VisionGoal.INTAKE_HATCH
-        || mGoal == VisionGoal.PLACE_HATCH) && (HatchArm.getInstance().isHatchTriggeredTimer()));
+        || mGoal == VisionGoal.PLACE_HATCH) && (HatchArm.getInstance().isHatchLimitTriggered())) || (mGoal == VisionGoal.PLACE_CARGO && Drive.getInstance().isCargoTimerDone());
   }
 
   @Override
@@ -25,13 +26,19 @@ public class MotionMagicVisionFeed implements Action {
 
   @Override
   public void done() {
+    if(mGoal == VisionGoal.INTAKE_HATCH){
+      HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
+    } else if(mGoal == VisionGoal.PLACE_CARGO){
+      CargoArm.getInstance().setArmState(CargoArm.CargoArmState.REVERSE_CARGOSHIP);
+    }
   }
 
   @Override
   public void start() {
+    HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
     Drive.getInstance().cancelPath();
-    expirationTimer.start(3.0);
-    Drive.getInstance().setVisionDrive(mGoal);
+    expirationTimer.start(5.0);
+    Drive.getInstance().setVisionDrive(this.mGoal);
   }
 
   public enum VisionGoal {

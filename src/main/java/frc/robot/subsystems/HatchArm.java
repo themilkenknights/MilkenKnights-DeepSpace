@@ -1,6 +1,7 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.networktables.NetworkTableEntry;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
@@ -22,6 +23,7 @@ public class HatchArm extends Subsystem {
   private NetworkTableEntry mLimitTriggered, mSpearStateTab, mPancakeTab;
   private MkTimer downTimer = new MkTimer();
   private MkTimer autoTimer = new MkTimer();
+  private boolean autoHasBeenRun = false;
 
   private HatchArm() {
     ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
@@ -46,14 +48,12 @@ public class HatchArm extends Subsystem {
       case PLACE:
         if (downTimer.isDone() && mSpearLimitTriggered) {
           mPancakeSolenoid.set(false);
-          Input.setTriggered();
           Input.rumbleDriverController(0.25, 0.5);
         }
         break;
       case INTAKE:
         if (isHatchLimitTriggered()) {
           setHatchState(HatchState.STOW);
-          Input.setTriggered();
           if (Superstructure.getInstance().getRobotState() == RobotState.TELEOP_DRIVE) {
             Drive.getInstance().setOpenLoop(new DriveSignal(-0.4, -0.4));
           }
@@ -63,9 +63,7 @@ public class HatchArm extends Subsystem {
         Logger.logError("Unexpected Hatch Arm control state: " + mHatchState);
         break;
     }
-    if (!autoTimer.hasBeenSet() && mSpearLimitTriggered) {
-      autoTimer.start(0.35);
-    }
+
   }
 
   public synchronized boolean isHatchTriggeredTimer() {
@@ -80,18 +78,26 @@ public class HatchArm extends Subsystem {
 
   @Override
   public void teleopInit(double timestamp) {
+
   }
 
   @Override
   public void autonomousInit(double timestamp) {
+    autoHasBeenRun = true;
   }
 
   @Override
   public void onStop(double timestamp) {
+    if(autoHasBeenRun){
+      autoHasBeenRun = false;
+    } else{
+      setHatchState(HatchState.STOW);
+    }
   }
 
   @Override
   public void onRestart(double timestamp) {
+
   }
 
   @Override
@@ -128,7 +134,7 @@ public class HatchArm extends Subsystem {
     }
     Logger.logMarker("Set Hatch State to " + state.toString());
     mSpearSolenoid.set(state.state);
-    autoTimer.reset();
+      autoTimer.start(0.35);
   }
 
   public HatchState getHatchSpearState() {

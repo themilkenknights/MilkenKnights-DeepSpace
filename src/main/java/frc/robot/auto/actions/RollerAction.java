@@ -26,6 +26,7 @@ public class RollerAction implements Action {
 
   @Override
   public void done() {
+    CargoArm.getInstance().setIntakeRollers(0.0);
   }
 
   @Override

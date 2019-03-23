@@ -28,6 +28,10 @@ public class PathFollower {
     return lFollower.isFinishedTrajectory() && rFollower.isFinishedTrajectory();
   }
 
+  public double getTimeLeft(){
+    return (lFollower.timeLeft() + rFollower.timeLeft()) / 2.0;
+  }
+
   public double getEndHeading() {
     return path.getEndHeading();
   }

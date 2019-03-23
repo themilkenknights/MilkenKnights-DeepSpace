@@ -85,6 +85,10 @@ public class TrajectoryFollower {
     return current_segment >= profile_.length();
   }
 
+  public double timeLeft(){
+    return (profile_.length() -  current_segment) * 0.01;
+  }
+
   public double getLastError() {
     return last_error_;
   }

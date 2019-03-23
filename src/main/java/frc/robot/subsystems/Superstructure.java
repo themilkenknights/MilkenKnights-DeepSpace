@@ -14,6 +14,7 @@ import frc.robot.Constants.MISC;
 import frc.robot.Input;
 import frc.robot.Robot;
 import frc.robot.auto.modes.ClimbLevel2Mode;
+import frc.robot.auto.modes.HatchIntakeVisionPigeon;
 import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
 import frc.robot.auto.modes.SimpleHatchPlace;
 import frc.robot.auto.modes.VisionCargoOuttake;
@@ -117,8 +118,11 @@ public class Superstructure extends Subsystem {
       case TELEOP_DRIVE:
         AutoChooser.disableAuto();
         break;
+      case PATH_FOLLOWING:
+        break;
       case HATCH_VISION_INTAKE:
         startVisionHatchIntake();
+        break;
       case HATCH_VISION_OUTTAKE:
         startVisionHatchOuttake();
         break;
@@ -127,9 +131,6 @@ public class Superstructure extends Subsystem {
         break;
       case AUTO_CLIMB:
         startAutoClimb();
-        break;
-      case SIMPLE_PLACE:
-        setSimpleHatch();
         break;
       default:
         Logger.logError("Unexpected robot state: " + mRobotState);
@@ -140,7 +141,7 @@ public class Superstructure extends Subsystem {
 
   private void startVisionHatchOuttake() {
     Vision.getInstance().updateLimelight();
-    if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
+    if (!Vision.getInstance().getLimelightTarget().isValidTarget() && Vision.getInstance().getLimelightTarget().getDistance() < 140.0) {
       setRobotState(RobotState.TELEOP_DRIVE);
       Logger.logMarker("Limelight target not valid");
     } else {
@@ -150,11 +151,11 @@ public class Superstructure extends Subsystem {
 
   private void startVisionHatchIntake() {
     Vision.getInstance().updateLimelight();
-    if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
+    if (!Vision.getInstance().getLimelightTarget().isValidTarget()&& Vision.getInstance().getLimelightTarget().getDistance() < 140.0) {
       setRobotState(RobotState.TELEOP_DRIVE);
       Logger.logMarker("Limelight target not valid");
     } else {
-      AutoChooser.startAuto(new HatchOuttakeVisionPigeon());
+      AutoChooser.startAuto(new HatchIntakeVisionPigeon());
     }
   }
 
@@ -168,10 +169,6 @@ public class Superstructure extends Subsystem {
     } else {
       AutoChooser.startAuto(new VisionCargoOuttake());
     }
-  }
-
-  private void setSimpleHatch() {
-    AutoChooser.startAuto(new SimpleHatchPlace());
   }
 
   private void startAutoClimb() {
@@ -188,7 +185,7 @@ public class Superstructure extends Subsystem {
   }
 
   public enum RobotState {
-    TELEOP_DRIVE, HATCH_VISION_INTAKE, HATCH_VISION_OUTTAKE, VISION_CARGO_OUTTAKE, AUTO_CLIMB, SIMPLE_PLACE
+    TELEOP_DRIVE, HATCH_VISION_INTAKE, HATCH_VISION_OUTTAKE, VISION_CARGO_OUTTAKE, AUTO_CLIMB, PATH_FOLLOWING
   }
 
   private static class InstanceHolder {

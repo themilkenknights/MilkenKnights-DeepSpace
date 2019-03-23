@@ -26,6 +26,7 @@ import frc.robot.lib.geometry.Twist2d;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
+import frc.robot.lib.util.MkTimer;
 import frc.robot.lib.util.ReflectingCSVWriter;
 import frc.robot.lib.util.Subsystem;
 import frc.robot.lib.util.SynchronousPIDF;
@@ -49,10 +50,11 @@ public class Drive extends Subsystem {
   private TrajectoryStatus leftStatus;
   private TrajectoryStatus rightStatus;
   private double lastAngle, lastDist = 0.0;
-  private SynchronousPIDF mVisionAssist = new SynchronousPIDF(0.0151, 0.0, 285.0);
+  private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(Constants.DRIVE.kVisionP, Constants.DRIVE.kVisionI, Constants.DRIVE.kVisionD);
   private boolean pathFinished = false;
   private MotionMagicVisionFeed.VisionGoal mGoal;
   private boolean mLowered = false;
+  private MkTimer placeCargoTimer = new MkTimer();
 
   private Drive() {
     ShuffleboardTab mDriveTab = Shuffleboard.getTab("Drive");
@@ -96,7 +98,6 @@ public class Drive extends Subsystem {
       case PIGEON_SERVO:
         break;
       case VISION_DRIVE:
-        updateVisionDrive();
         break;
       case VELOCITY_SETPOINT:
         updatePathFollower();
@@ -126,7 +127,10 @@ public class Drive extends Subsystem {
           mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward,
           mPeriodicIO.brake_mode);
-    } else {
+    } else if(mDriveControlState == DriveControlState.VISION_DRIVE){
+      mLeftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
+      mRightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
+    } else{
       Logger.logErrorWithTrace("Unexpected drive control state: " + mDriveControlState);
     }
   }
@@ -174,6 +178,7 @@ public class Drive extends Subsystem {
 
   public void teleopInit(double timestamp) {
     zero();
+    RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
   }
 
   /**
@@ -182,6 +187,7 @@ public class Drive extends Subsystem {
   @Override
   public void autonomousInit(double timestamp) {
     zero();
+    RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
   }
 
   /**
@@ -238,7 +244,6 @@ public class Drive extends Subsystem {
     right_encoder_prev_distance_ = 0;
     mLeftDrive.zeroEncoder();
     mRightDrive.zeroEncoder();
-    RobotState.getInstance().reset(Timer.getFPGATimestamp(), Pose2d.identity());
     setHeading(Rotation2d.identity());
     mPeriodicIO.leftPos = 0.0;
     mPeriodicIO.rightPos = 0.0;
@@ -377,19 +382,27 @@ public class Drive extends Subsystem {
     mPeriodicIO.brake_mode = signal.getBrakeMode();
   }
 
-  private synchronized void updateVisionDrive() {
+  public synchronized void updateVisionDrive() {
     LimelightTarget target = Vision.getInstance().getLimelightTarget();
-
     switch (mGoal) {
+      case INTAKE_HATCH:
+        if (target.isValidTarget() && target.getDistance() < 55.0 && !mLowered) {
+          HatchArm.getInstance().setHatchState(HatchArm.HatchState.INTAKE);
+          mLowered = true;
+        }
+        break;
       case PLACE_HATCH:
-        if (target.isValidTarget() && target.getDistance() < 36.0 && !mLowered) {
+        if (target.isValidTarget() && target.getDistance() < 25.0 && !mLowered) {
           HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
           mLowered = true;
         }
         break;
       case PLACE_CARGO:
-        break;
-      case INTAKE_HATCH:
+        if(target.getDistance() < 25.0 && !placeCargoTimer.hasBeenSet()){
+          placeCargoTimer.start(0.5);
+        } else if(placeCargoTimer.isDone()){
+          CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut);
+        }
         break;
       default:
         Logger.logErrorWithTrace("Unknown Vision Goal");
@@ -397,23 +410,40 @@ public class Drive extends Subsystem {
     }
 
     double visionTurn = 0.0;
-    if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE && ((lastDist - target.getDistance()) > -0.5)) {
-      visionTurn = mVisionAssist.calculate(target.getYaw());
-    }
     double dist = target.getDistance();
-    setOpenLoop(new DriveSignal(0.30 + visionTurn, 0.30 - visionTurn));
+    double skew = 0.0;
+    if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE && ((lastDist - target.getDistance()) > -2.0)) {
+      skew = ((target.getSkew() * Math.pow(dist, 3)) / 5.0e4) * 0.5 + ((Math.sin(Math.toRadians(target.getYaw())) * dist) / 2.0);
+      //System.out.println("Yaw: " + target.getSkew() + " 1st: " + ((target.getSkew() * Math.pow(dist, 3)) / 5.0e4) + " 2nd: " + ((Math.sin(Math.toRadians(target.getYaw())) * dist) / 2.0));
+      visionTurn = mVisionAssist.calculate(target.getYaw() /*+ skew*/);
+    }
+    double speed = 0.275;
+    //double speed = -2.65 + 0.383917 * dist - 0.0196875 * Math.pow(dist,2) + 0.000483333 * Math.pow(dist,3) - 5.625e-6 * Math.pow(dist,4) + 2.5e-8 * Math.pow(dist,5);
+    if(20.0 > dist){
+      speed = 0.15;
+    } else if(70.0 < dist){
+      speed = 0.425;
+    }
+    //System.out.println(speed);
+    mPeriodicIO.left_demand = speed - visionTurn;
+    mPeriodicIO.right_demand = speed +  visionTurn;
     lastDist = dist;
   }
 
+  public boolean isCargoTimerDone(){
+    return placeCargoTimer.isDone(1.0);
+  }
+
   public synchronized void setVisionDrive(MotionMagicVisionFeed.VisionGoal mGoal) {
+    configNormalDrive();
     this.mGoal = mGoal;
     mLowered = false;
-    configNormalDrive();
     mPeriodicIO.left_demand = 0.0;
     mPeriodicIO.right_demand = 0.0;
     mPeriodicIO.left_feedforward = 0.0;
     mPeriodicIO.right_feedforward = 0.0;
     mDriveControlState = DriveControlState.VISION_DRIVE;
+    placeCargoTimer.reset();
   }
 
   /**
@@ -457,6 +487,7 @@ public class Drive extends Subsystem {
    * @param ang_tol Robot Angle Tolerance for Path Follower (Degrees)
    */
   public synchronized void setDrivePath(Path path, double dist_tol, double ang_tol) {
+    Superstructure.getInstance().setRobotState(Superstructure.RobotState.PATH_FOLLOWING);
     zero();
     Logger.logMarker("Began Path: " + path.getName());
     double offset = lastAngle - Pathfinder.boundHalfDegrees(Pathfinder.r2d(path.getLeftWheelTrajectory().get(0).heading));
@@ -472,11 +503,7 @@ public class Drive extends Subsystem {
   }
 
   public synchronized void cancelPath() {
-    lastAngle = pathFollower.getEndHeading();
-    mDriveControlState = DriveControlState.OPEN_LOOP;
-    pathFollower = null;
-    leftStatus = TrajectoryStatus.NEUTRAL;
-    rightStatus = TrajectoryStatus.NEUTRAL;
+    pathFinished = true;
   }
 
   /*
@@ -495,6 +522,10 @@ public class Drive extends Subsystem {
     return false;
   }
 
+  public synchronized DriveControlState getmDriveControlState (){
+    return mDriveControlState;
+  }
+
   /**
    * Called from Looper during Path Following Gets a TrajectoryStatus containing output velocity and Desired Trajectory Information for logging Inputs
    * Position, Speed and Angle to Trajectory Follower Creates a new Drive Signal that is then set as a velocity setpoint
@@ -504,9 +535,14 @@ public class Drive extends Subsystem {
     TrajectoryStatus rightUpdate = pathFollower.getRightVelocity(mPeriodicIO.rightPos, mPeriodicIO.rightVel, getHeadingDeg());
     leftStatus = leftUpdate;
     rightStatus = rightUpdate;
+    double turn = 0.0;
+  /*  LimelightTarget target = Vision.getInstance().getLimelightTarget();
+   if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE && target.isValidTarget() && pathFollower.getTimeLeft() < 0.2) {
+      turn = mVisionAssist.calculate(target.getYaw());
+    } */
     setVelocity(
         new DriveSignal(MkMath.InchesPerSecToUnitsPer100Ms(leftUpdate.getOutput()), MkMath.InchesPerSecToUnitsPer100Ms(rightUpdate.getOutput())),
-        new DriveSignal(leftUpdate.getArbFeed(), rightUpdate.getArbFeed()));
+        new DriveSignal(leftUpdate.getArbFeed() - turn, rightUpdate.getArbFeed() + turn));
     pathFinished = pathFollower.getFinished();
   }
 

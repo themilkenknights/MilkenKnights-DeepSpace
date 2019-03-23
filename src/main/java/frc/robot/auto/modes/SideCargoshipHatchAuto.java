@@ -7,17 +7,38 @@ import frc.robot.auto.actions.DelayAction;
 import frc.robot.auto.actions.DrivePathAction;
 import frc.robot.auto.actions.MotionMagicVisionFeed;
 import frc.robot.auto.actions.ParallelAction;
+import frc.robot.lib.util.DeserializePath;
 import java.util.Arrays;
 
 public class SideCargoshipHatchAuto extends AutoModeBase {
   @Override
   protected void routine() throws AutoModeEndedException {
-    runAction(new ParallelAction(Arrays.asList(
+  /*  runAction(new ParallelAction(Arrays.asList(
         new DrivePathAction(1, false),
-        new DelayAction(getTime(1) - 1.0, new MotionMagicVisionFeed(MotionMagicVisionFeed.VisionGoal.PLACE_HATCH)))));
+        new DelayAction(getTime(1) - 0.35, new MotionMagicVisionFeed(MotionMagicVisionFeed.VisionGoal.PLACE_HATCH)))));
+
+    runAction(new ParallelAction(Arrays.asList(
+        new DrivePathAction(2, false),
+        new DelayAction(getTime(2) - 0.22, new MotionMagicVisionFeed(MotionMagicVisionFeed.VisionGoal.PLACE_HATCH)))));
+
+    runAction(new ParallelAction(Arrays.asList(
+        new DrivePathAction(3, false),
+        new DelayAction(getTime(3) - 0.22, new MotionMagicVisionFeed(MotionMagicVisionFeed.VisionGoal.PLACE_HATCH)))));
+
+    runAction(new ParallelAction(Arrays.asList(
+        new DrivePathAction(4, false),
+        new DelayAction(getTime(4) - 0.22, new MotionMagicVisionFeed(MotionMagicVisionFeed.VisionGoal.PLACE_HATCH)))));
+ */
+
+   /* runAction(new DrivePathAction(2, true));
+    runAction(new DrivePathAction(3, false));
+    runAction(new DrivePathAction(4, true));
+    runAction(new DrivePathAction(5, false)); */
+    runAction(new DrivePathAction(1, false));
+    runAction(new MotionMagicVisionFeed(MotionMagicVisionFeed.VisionGoal.PLACE_HATCH));
   }
 
   private double getTime(int pathNum) {
-    return AutoChooser.autoPaths.get("CS-" + pathNum + (AutoChooser.mAutoPosition == AutoChooser.AutoPosition.LEFT ? "L" : "R")).getTime();
+    return DeserializePath.getPathFromFile("CS-" + pathNum + (AutoChooser.mAutoPosition == AutoChooser.AutoPosition.LEFT ? "L" : "R")).getTime();
   }
 }
