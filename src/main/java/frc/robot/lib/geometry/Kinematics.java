@@ -44,7 +44,7 @@ public class Kinematics {
     if (Math.abs(velocity.dtheta) < kEpsilon) {
       return new DriveVelocity(velocity.dx, velocity.dx);
     }
-    double delta_v = DRIVE.kEffectiveDriveWheelTrackWidthInches * velocity.dtheta / (2 * DRIVE.kTrackScrubFactor);
+    double delta_v = DRIVE.kDriveWheelTrackWidthInches * velocity.dtheta / (2 * DRIVE.kTrackScrubFactor);
     return new DriveVelocity(velocity.dx - delta_v, velocity.dx + delta_v);
   }
 

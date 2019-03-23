@@ -2,6 +2,7 @@ import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
 import jaci.pathfinder.Waypoint;
 import java.io.File;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,9 +19,9 @@ public class PathGenerator {
       0.01, 100, 80, 800);
 
   static {
-    robotPaths.put("CS-1", new Path(new Waypoint[] {
-        new Waypoint(68, 0, Pathfinder.d2r(0)),
-        new Waypoint(175, -11, Pathfinder.d2r(0)),
+    /*robotPaths.put("CS-1", new Path(new Waypoint[] {
+        new Waypoint(68 ,-48 ,Pathfinder.d2r(0)),
+        new Waypoint(261 ,-90 ,Pathfinder.d2r(0)),
     }, platformConfig));
 
     robotPaths.put("CS-2", new Path(new Waypoint[] {
@@ -31,7 +32,25 @@ public class PathGenerator {
     robotPaths.put("CS-3", new Path(new Waypoint[] {
         new Waypoint(20, -136, Pathfinder.d2r(0)),
         new Waypoint(261, -90, Pathfinder.d2r(0)),
+    }, fastConfig));*/
+
+
+    robotPaths.put("CS-1", new Path(new Waypoint[] {
+        new Waypoint(68 ,-48 ,Pathfinder.d2r(0)),
+        new Waypoint(261 ,-75 ,Pathfinder.d2r(0)),
     }, fastConfig));
+
+    robotPaths.put("CS-2", new Path(new Waypoint[] {
+        new Waypoint(261 ,-45 ,Pathfinder.d2r(90)),
+        new Waypoint(180 ,-110 ,Pathfinder.d2r(0)),
+        new Waypoint(55 ,-136 ,Pathfinder.d2r(0)),
+    }, fastConfig));
+
+    robotPaths.put("CS-3", new Path(new Waypoint[] {
+        new Waypoint(20 ,-136 ,Pathfinder.d2r(0)),
+        new Waypoint(284 ,-75 ,Pathfinder.d2r(0)),
+    }, fastConfig));
+
   }
 
   public static void main(String[] args) {

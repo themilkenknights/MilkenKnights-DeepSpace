@@ -99,8 +99,7 @@ public class Input {
       mCargo.setOpenLoop(MkMath.handleDeadband(-mOperatorJoystick.getRawAxis(1), GENERAL.kOperatorDeadband));
     }
 
-    // Ensure that arm stops after manual mode button is released and is not set at
-    // the last output
+    // Ensure that arm stops after manual mode button is released and is not set at the last output
     if (mOperatorJoystick.getRawButtonReleased(2)) {
       mCargo.setOpenLoop(0.0);
     }

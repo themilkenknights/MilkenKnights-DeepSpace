@@ -145,9 +145,6 @@ public class Drive extends Subsystem {
     mLeftDrive.updateShuffleboard();
     mRightDrive.updateShuffleboard();
     mFusedHeading.setDouble(mPeriodicIO.fusedHeading);
-    mAvgDist
-        .setDouble((mLeftDrive.masterTalon.getSensorCollection().getQuadraturePosition() + mRightDrive.masterTalon.getSensorCollection()
-            .getQuadraturePosition()) / 2.0);
     if (getHeading() != null) {
       mGyroHeading.setDouble(getHeadingDeg());
     }

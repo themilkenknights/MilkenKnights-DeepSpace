@@ -80,7 +80,7 @@ public final class Constants {
     public static final double kDriveWheelTrackWidthInches = 22.45;
     public static final double kWheelDiameter = 5.9575;
     public static final double kCircumference = kWheelDiameter * GENERAL.PI;
-    public static final double kTrackScrubFactor = 1.0;
+    public static final double kTrackScrubFactor = 0.95;
     // Talon PID Constants
     public static final double kMaxVel = 154.62;
     public static final double kMaxNativeVel = 3370.0;
