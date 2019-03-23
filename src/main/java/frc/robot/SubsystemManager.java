@@ -45,8 +45,8 @@ public class SubsystemManager {
             i++;
           }
         } else {
+          int i = 0;
           for (Subsystem subsystem : mAllSubsystems) {
-            int i = 0;
             if (count == i) {
               subsystem.outputTelemetry(now);
             }
