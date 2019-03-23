@@ -42,8 +42,8 @@ public class PathGenerator {
 
     robotPaths.put("CS-2", new Path(new Waypoint[] {
         new Waypoint(261 ,-45 ,Pathfinder.d2r(90)),
-        new Waypoint(180 ,-110 ,Pathfinder.d2r(0)),
-        new Waypoint(55 ,-136 ,Pathfinder.d2r(0)),
+        new Waypoint(197 ,-108 ,Pathfinder.d2r(0)),
+        new Waypoint(94 ,-123 ,Pathfinder.d2r(0)),
     }, fastConfig));
 
     robotPaths.put("CS-3", new Path(new Waypoint[] {
