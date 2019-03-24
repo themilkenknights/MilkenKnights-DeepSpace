@@ -97,7 +97,7 @@ public final class Constants {
     public static final double kVisionD = 295.0;//285
 
     public static final String[] autoNames = {
-        "CS-1", "CS-2", "CS-3", "CS-4", "CS-5"};
+        "CS-1", "CS-2", "CS-3", "CS-4"};
   }
 
   public static class TEST {

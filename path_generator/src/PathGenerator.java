@@ -2,7 +2,6 @@ import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
 import jaci.pathfinder.Waypoint;
 import java.io.File;
-import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,28 +13,31 @@ public class PathGenerator {
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_HIGH,
       0.01, 120, 105, 1007);
 
-  public static final Trajectory.Config platformConfig = new Trajectory.Config(
-      Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_HIGH,
-      0.01, 100, 80, 800);
-
   static {
-    //Right Cargoship
-    /*robotPaths.put("CS-1", new Path(new Waypoint[] {
-         new Waypoint(68 ,0 ,Pathfinder.d2r(0)),
- new Waypoint(175 ,-12 ,Pathfinder.d2r(-5)),
-    }, platformConfig));
+    robotPaths.put("CS-1", new Path(new Waypoint[] {
+        new Waypoint(69, -45, Pathfinder.d2r(0)),
+        new Waypoint(237, -102, Pathfinder.d2r(0)),
+        new Waypoint(261, -75, Pathfinder.d2r(90)),
+    }, fastConfig));
 
     robotPaths.put("CS-2", new Path(new Waypoint[] {
-         new Waypoint(205 ,-12 ,Pathfinder.d2r(0)),
- new Waypoint(94 ,-124 ,Pathfinder.d2r(0)),
+        new Waypoint(261, -46, Pathfinder.d2r(90)),
+        new Waypoint(273, -75, Pathfinder.d2r(135)),
     }, fastConfig));
 
     robotPaths.put("CS-3", new Path(new Waypoint[] {
+        new Waypoint(273, -75, Pathfinder.d2r(135)),
+        new Waypoint(226, -75, Pathfinder.d2r(45)),
+        new Waypoint(55, -136, Pathfinder.d2r(0)),
+    }, fastConfig));
+
+    robotPaths.put("CS-4", new Path(new Waypoint[] {
         new Waypoint(20, -136, Pathfinder.d2r(0)),
-        new Waypoint(261, -90, Pathfinder.d2r(0)),
-    }, fastConfig));*/
+        new Waypoint(275, -63, Pathfinder.d2r(-5)),
+        new Waypoint(300, -90, Pathfinder.d2r(85)),
+    }, fastConfig));
 
-
+ /*
     robotPaths.put("CS-1", new Path(new Waypoint[] {
         new Waypoint(68 ,-48 ,Pathfinder.d2r(0)),
         new Waypoint(261 ,-75 ,Pathfinder.d2r(0)),
@@ -51,7 +53,7 @@ public class PathGenerator {
         new Waypoint(20 ,-136 ,Pathfinder.d2r(0)),
         new Waypoint(284 ,-75 ,Pathfinder.d2r(0)),
     }, fastConfig));
-
+*/
   }
 
   public static void main(String[] args) {
