@@ -79,7 +79,7 @@ public class HatchArm extends Subsystem {
     return autoTimer.isDone() && mSpearLimitTriggered;
   }
 
-  public synchronized void setmPancakeSolenoid(boolean state){
+  public synchronized void setmPancakeSolenoid(boolean state) {
     mSpearState = state;
     Logger.logMarker("Set Pancake State to: " + state);
   }

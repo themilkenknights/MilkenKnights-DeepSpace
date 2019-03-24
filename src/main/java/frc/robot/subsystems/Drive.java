@@ -340,11 +340,11 @@ public class Drive extends Subsystem {
     //double speed = -2.65 + 0.383917 * dist - 0.0196875 * Math.pow(dist,2) + 0.000483333 * Math.pow(dist,3) - 5.625e-6 * Math.pow(dist,4) + 2.5e-8 * Math.pow(dist,5);
     if (20.0 > dist) {
       speed = 0.175;
-    }else if(90 < dist){
+    } else if (90 < dist) {
       speed = 0.65;
     } else if (70.0 < dist) {
       speed = 0.50;
-    } else if(50 < dist){
+    } else if (50 < dist) {
       speed = 0.4;
     }
     //System.out.println(speed);
@@ -354,9 +354,9 @@ public class Drive extends Subsystem {
   }
 
   public synchronized void setVisionDrive(VisionDrive.VisionGoal mGoal) {
-    if(mGoal == VisionDrive.VisionGoal.INTAKE_HATCH){
+    if (mGoal == VisionDrive.VisionGoal.INTAKE_HATCH) {
       HatchArm.getInstance().setHatchState(HatchArm.HatchState.INTAKE);
-    } else{
+    } else {
       HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
     }
     this.mGoal = mGoal;

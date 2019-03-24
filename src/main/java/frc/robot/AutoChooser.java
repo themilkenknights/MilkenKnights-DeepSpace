@@ -61,11 +61,11 @@ public class AutoChooser {
   }
 
   public static Path getPath(String name) {
-      try {
-        return autoPaths.get(name);
-      } catch (NullPointerException e) {
-        return DeserializePath.getPathFromFile(name);
-      }
+    try {
+      return autoPaths.get(name);
+    } catch (NullPointerException e) {
+      return DeserializePath.getPathFromFile(name);
+    }
   }
 
   public static void loadPaths() {
