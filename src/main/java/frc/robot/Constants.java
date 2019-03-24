@@ -97,7 +97,7 @@ public final class Constants {
     public static final double kVisionD = 295.0;//285
 
     public static final String[] autoNames = {
-        "CS-1", "CS-2", "CS-3", "CS-4", "CS-5"};
+        "CS-1", "CS-2", "CS-3"};
   }
 
   public static class TEST {
@@ -143,7 +143,7 @@ public final class Constants {
 
   public static class MISC {
     public static final boolean kDriveCSVLogging = false;
-    public static final boolean kErrorLogging = false;
+    public static final boolean kErrorLogging = true;
     public static final int kHatchArmChannel = 0;
     public static final int kFrontClimbSolenoidChannel = 2;
     public static final int kRearClimbSolenoidChannel = 1;

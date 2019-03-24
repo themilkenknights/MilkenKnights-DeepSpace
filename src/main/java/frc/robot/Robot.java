@@ -41,7 +41,7 @@ public class Robot extends TimedRobot {
       Logger.logDisabledInit();
       mMatchState = MatchState.DISABLED;
       mSubsystemManager.stop();
-      AutoChooser.disableAuto();
+      Superstructure.getInstance().setRobotState(Superstructure.RobotState.TELEOP_DRIVE);
     } catch (Throwable t) {
       Logger.logThrowableCrash(t);
       throw t;
@@ -55,7 +55,7 @@ public class Robot extends TimedRobot {
       mMatchState = MatchState.AUTO;
       mSubsystemManager.startAuto();
       AutoChooser.updateGameData();
-      AutoChooser.startAuto(new FrontSideCargshipAuto());
+     // AutoChooser.startAuto(new FrontSideCargshipAuto());
     } catch (Throwable t) {
       Logger.logThrowableCrash(t);
       throw t;
