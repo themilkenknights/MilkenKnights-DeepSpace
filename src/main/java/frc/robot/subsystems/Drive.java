@@ -336,9 +336,17 @@ public class Drive extends Subsystem {
       //double skew = ((target.getSkew() * Math.pow(dist, 3)) / 5.0e4) * 0.5 + ((Math.sin(Math.toRadians(target.getYaw())) * dist) / 2.0);
       visionTurn = mVisionAssist.calculate(target.getYaw());
     }
-    double speed = 0.325;
-    //double speed = -2.65 + 0.383917 * dist - 0.0196875 * Math.pow(dist,2) + 0.000483333 * Math.pow(dist,3) - 5.625e-6 * Math.pow(dist,4) + 2.5e-8 * Math.pow(dist,5);
-    if (20.0 > dist) {
+    //double speed = 0.325;
+    double speed =
+        3.74091e-12 * Math.pow(dist, 7) - 1.69478e-9 * Math.pow(dist, 6) + 3.14753e-7 * Math.pow(dist, 5) - 0.0000308813 * Math.pow(dist, 4)
+            + 0.0017188 * Math.pow(dist, 3) - 0.0540482 * Math.pow(dist, 2) + 0.89485 * dist - 5.81563;
+    //https://www.wolframalpha.com/input/?i=interpolating+polynomial+calculator&assumption=%7B%22F%22,+%22InterpolatingPolynomialCalculator%22,+%22data2%22%7D+-%3E%22%7B%7B110,0.75%7D,%7B100,0.7%7D,%7B90,0.65%7D,%7B70,0.5%7D,%7B50,+0.45%7D,%7B40,+0.35%7D,%7B30,+0.275%7D,%7B20,+0.175%7D%7D%22
+    if (dist < 20.0) {
+      speed = 0.175;
+    } else if (dist > 110) {
+      speed = 0.75;
+    }
+    /*if (20.0 > dist) {
       speed = 0.175;
     } else if (90 < dist) {
       speed = 0.65;
@@ -346,7 +354,7 @@ public class Drive extends Subsystem {
       speed = 0.50;
     } else if (50 < dist) {
       speed = 0.4;
-    }
+    }*/
     //System.out.println(speed);
     mPeriodicIO.left_demand = speed - visionTurn;
     mPeriodicIO.right_demand = speed + visionTurn;

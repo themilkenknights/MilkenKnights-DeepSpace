@@ -26,7 +26,7 @@ public class HatchArm extends Subsystem {
   private MkTimer downTimer = new MkTimer();
   private MkTimer autoTimer = new MkTimer();
   private boolean autoHasBeenRun;
-  private boolean mSpearState = false;
+  private boolean mPancakeState = false;
 
   private HatchArm() {
     ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
@@ -50,8 +50,7 @@ public class HatchArm extends Subsystem {
         break;
       case PLACE:
         if (downTimer.isDone() && mSpearLimitTriggered) {
-          setmPancakeSolenoid(false);
-          Logger.logMarker("PLACE RETRACT");
+          setPancakeSolenoid(false);
           Input.rumbleDriverController(0.25, 0.5);
           downTimer.reset();
         }
@@ -68,19 +67,20 @@ public class HatchArm extends Subsystem {
         Logger.logError("Unexpected Hatch Arm control state: " + mHatchState);
         break;
     }
-    mPancakeSolenoid.set(mSpearState);
+    mPancakeSolenoid.set(mPancakeState);
+    mSpearSolenoid.set(mHatchState.state);
   }
 
-  public synchronized void retractPancakeActuator() {
-    setmPancakeSolenoid(false);
+  public void retractPancakeActuator() {
+    setPancakeSolenoid(false);
   }
 
-  public synchronized boolean isHatchTriggeredTimer() {
+  public boolean isHatchTriggeredTimer() {
     return autoTimer.isDone() && mSpearLimitTriggered;
   }
 
-  public synchronized void setmPancakeSolenoid(boolean state) {
-    mSpearState = state;
+  public synchronized void setPancakeSolenoid(boolean state) {
+    mPancakeState = state;
     Logger.logMarker("Set Pancake State to: " + state);
   }
 
@@ -133,17 +133,14 @@ public class HatchArm extends Subsystem {
     mHatchState = state;
     switch (state) {
       case PLACE:
-        setmPancakeSolenoid(true);
-        Logger.logErrorWithTrace("PLACE ENABLE");
+        setPancakeSolenoid(true);
         downTimer.start(0.4);
         break;
       case STOW:
-        setmPancakeSolenoid(true);
-        Logger.logErrorWithTrace("STOW ENABLE");
+        setPancakeSolenoid(true);
         break;
       case INTAKE:
-        setmPancakeSolenoid(false);
-        Logger.logMarker("INTAKE RETRACT");
+        setPancakeSolenoid(false);
         break;
       default:
         Logger.logErrorWithTrace("Unknown Hatch State");
