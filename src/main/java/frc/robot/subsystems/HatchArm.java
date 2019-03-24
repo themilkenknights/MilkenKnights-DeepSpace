@@ -17,12 +17,16 @@ import frc.robot.subsystems.Superstructure.RobotState;
 
 public class HatchArm extends Subsystem {
   private HatchState mHatchState;
-  private Solenoid mSpearSolenoid, mPancakeSolenoid;
+  private Solenoid mSpearSolenoid;
+  private Solenoid mPancakeSolenoid;
   private boolean mSpearLimitTriggered;
-  private NetworkTableEntry mLimitTriggered, mSpearStateTab, mPancakeTab;
+  private NetworkTableEntry mLimitTriggered;
+  private NetworkTableEntry mSpearStateTab;
+  private NetworkTableEntry mPancakeTab;
   private MkTimer downTimer = new MkTimer();
   private MkTimer autoTimer = new MkTimer();
   private boolean autoHasBeenRun;
+  private boolean mPancakeState = false;
 
   private HatchArm() {
     ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
@@ -46,8 +50,9 @@ public class HatchArm extends Subsystem {
         break;
       case PLACE:
         if (downTimer.isDone() && mSpearLimitTriggered) {
-          mPancakeSolenoid.set(false);
+          setPancakeSolenoid(false);
           Input.rumbleDriverController(0.25, 0.5);
+          downTimer.reset();
         }
         break;
       case INTAKE:
@@ -62,14 +67,21 @@ public class HatchArm extends Subsystem {
         Logger.logError("Unexpected Hatch Arm control state: " + mHatchState);
         break;
     }
+    mPancakeSolenoid.set(mPancakeState);
+    mSpearSolenoid.set(mHatchState.state);
   }
 
   public void retractPancakeActuator() {
-    mPancakeSolenoid.set(false);
+    setPancakeSolenoid(false);
   }
 
-  public synchronized boolean isHatchTriggeredTimer() {
+  public boolean isHatchTriggeredTimer() {
     return autoTimer.isDone() && mSpearLimitTriggered;
+  }
+
+  public synchronized void setPancakeSolenoid(boolean state) {
+    mPancakeState = state;
+    Logger.logMarker("Set Pancake State to: " + state);
   }
 
   public void outputTelemetry(double timestamp) {
@@ -117,18 +129,18 @@ public class HatchArm extends Subsystem {
     return mSpearLimitTriggered;
   }
 
-  public void setHatchState(HatchState state) {
+  public synchronized void setHatchState(HatchState state) {
     mHatchState = state;
     switch (state) {
       case PLACE:
-        mPancakeSolenoid.set(true);
+        setPancakeSolenoid(true);
         downTimer.start(0.4);
         break;
       case STOW:
-        mPancakeSolenoid.set(true);
+        setPancakeSolenoid(true);
         break;
       case INTAKE:
-        mPancakeSolenoid.set(false);
+        setPancakeSolenoid(false);
         break;
       default:
         Logger.logErrorWithTrace("Unknown Hatch State");

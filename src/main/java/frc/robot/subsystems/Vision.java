@@ -76,7 +76,7 @@ public class Vision extends Subsystem {
   }
 
   public void enableLED() {
-    mLimeLight.setStream(StreamType.kPiPMain);
+    mLimeLight.setStream(StreamType.kStandard);
     mLimeLight.setPipeline(0);
   }
 

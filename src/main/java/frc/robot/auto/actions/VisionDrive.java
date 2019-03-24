@@ -36,10 +36,9 @@ public class VisionDrive implements Action {
 
   @Override
   public void start() {
-    HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
     Drive.getInstance().cancelPath();
     expirationTimer.start(5.0);
-    Drive.getInstance().setVisionDrive(this.mGoal);
+    Drive.getInstance().setVisionDrive(mGoal);
   }
 
   public enum VisionGoal {

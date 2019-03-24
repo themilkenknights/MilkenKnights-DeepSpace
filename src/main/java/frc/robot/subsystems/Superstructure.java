@@ -17,6 +17,7 @@ import frc.robot.auto.modes.ClimbLevel2Mode;
 import frc.robot.auto.modes.HatchIntakeVisionPigeon;
 import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
 import frc.robot.auto.modes.VisionCargoOuttake;
+import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.Subsystem;
 import frc.robot.subsystems.CargoArm.CargoArmState;
@@ -115,6 +116,7 @@ public class Superstructure extends Subsystem {
     switch (state) {
       case TELEOP_DRIVE:
         AutoChooser.disableAuto();
+        Drive.getInstance().setOpenLoop(DriveSignal.BRAKE);
         break;
       case PATH_FOLLOWING:
         break;

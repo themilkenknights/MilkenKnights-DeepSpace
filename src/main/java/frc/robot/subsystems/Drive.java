@@ -311,20 +311,16 @@ public class Drive extends Subsystem {
     LimelightTarget target = Vision.getInstance().getLimelightTarget();
     switch (mGoal) {
       case INTAKE_HATCH:
-        if (target.isValidTarget() && target.getDistance() < 55.0 && !mLowered) {
-          HatchArm.getInstance().setHatchState(HatchArm.HatchState.INTAKE);
-          mLowered = true;
-        }
         break;
       case PLACE_HATCH:
-        if (target.isValidTarget() && target.getDistance() < 26.0 && !mLowered) {
+        if (target.isValidTarget() && target.getDistance() < 28.0 && !mLowered) {
           HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
           mLowered = true;
         }
         break;
       case PLACE_CARGO:
         if (target.getDistance() < 26.0 && !placeCargoTimer.hasBeenSet()) {
-          placeCargoTimer.start(0.5);
+          placeCargoTimer.start(0.675);
         } else if (placeCargoTimer.isDone()) {
           CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut);
         }
@@ -340,13 +336,25 @@ public class Drive extends Subsystem {
       //double skew = ((target.getSkew() * Math.pow(dist, 3)) / 5.0e4) * 0.5 + ((Math.sin(Math.toRadians(target.getYaw())) * dist) / 2.0);
       visionTurn = mVisionAssist.calculate(target.getYaw());
     }
-    double speed = 0.275;
-    //double speed = -2.65 + 0.383917 * dist - 0.0196875 * Math.pow(dist,2) + 0.000483333 * Math.pow(dist,3) - 5.625e-6 * Math.pow(dist,4) + 2.5e-8 * Math.pow(dist,5);
-    if (20.0 > dist) {
-      speed = 0.15;
-    } else if (70.0 < dist) {
-      speed = 0.425;
+    //double speed = 0.325;
+    double speed =
+        3.74091e-12 * Math.pow(dist, 7) - 1.69478e-9 * Math.pow(dist, 6) + 3.14753e-7 * Math.pow(dist, 5) - 0.0000308813 * Math.pow(dist, 4)
+            + 0.0017188 * Math.pow(dist, 3) - 0.0540482 * Math.pow(dist, 2) + 0.89485 * dist - 5.81563;
+    //https://www.wolframalpha.com/input/?i=interpolating+polynomial+calculator&assumption=%7B%22F%22,+%22InterpolatingPolynomialCalculator%22,+%22data2%22%7D+-%3E%22%7B%7B110,0.75%7D,%7B100,0.7%7D,%7B90,0.65%7D,%7B70,0.5%7D,%7B50,+0.45%7D,%7B40,+0.35%7D,%7B30,+0.275%7D,%7B20,+0.175%7D%7D%22
+    if (dist < 20.0) {
+      speed = 0.175;
+    } else if (dist > 110) {
+      speed = 0.75;
     }
+    /*if (20.0 > dist) {
+      speed = 0.175;
+    } else if (90 < dist) {
+      speed = 0.65;
+    } else if (70.0 < dist) {
+      speed = 0.50;
+    } else if (50 < dist) {
+      speed = 0.4;
+    }*/
     //System.out.println(speed);
     mPeriodicIO.left_demand = speed - visionTurn;
     mPeriodicIO.right_demand = speed + visionTurn;
@@ -354,6 +362,11 @@ public class Drive extends Subsystem {
   }
 
   public synchronized void setVisionDrive(VisionDrive.VisionGoal mGoal) {
+    if (mGoal == VisionDrive.VisionGoal.INTAKE_HATCH) {
+      HatchArm.getInstance().setHatchState(HatchArm.HatchState.INTAKE);
+    } else {
+      HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
+    }
     this.mGoal = mGoal;
     mLowered = false;
     clearOutput();
@@ -502,7 +515,7 @@ public class Drive extends Subsystem {
       return Math.abs(mPeriodicIO.left_demand - mPeriodicIO.leftPos) < 0.25 && Math.abs(mPeriodicIO.right_demand - mPeriodicIO.rightPos) < 0.25;
     } else if (mDriveControlState == DriveControlState.VISION_DRIVE) {
       if (mGoal == VisionDrive.VisionGoal.PLACE_CARGO) {
-        return placeCargoTimer.isDone(1.0);
+        return placeCargoTimer.isDone(1.25);
       } else {
         Logger.logError("Invalid Vision Drive Goal");
         return true;

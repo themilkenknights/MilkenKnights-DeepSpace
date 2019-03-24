@@ -35,10 +35,6 @@ public class AutoChooser {
   }
 
   public static void updateGameData() {
-    if (autoPaths == null) {
-      autoPaths = new HashMap<>();
-      loadPaths();
-    }
     matchData.alliance = DriverStation.getInstance().getAlliance();
     matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
     matchData.matchType = DriverStation.getInstance().getMatchType();
@@ -53,7 +49,6 @@ public class AutoChooser {
     }
     mAutoModeExecuter = null;
     mAutoModeExecuter = new AutoModeExecutor();
-    autoPaths = null;
   }
 
   /*
@@ -66,23 +61,18 @@ public class AutoChooser {
   }
 
   public static Path getPath(String name) {
-    if (autoPaths == null) {
+    try {
+      return autoPaths.get(name);
+    } catch (NullPointerException e) {
       return DeserializePath.getPathFromFile(name);
-    } else {
-      try {
-        autoPaths.get(name);
-      } catch (NullPointerException e) {
-        return DeserializePath.getPathFromFile(name);
-      }
     }
-    return new Path();
   }
 
   public static void loadPaths() {
-    for (String pathName : Constants.DRIVE.autoNames) {
+   /* for (String pathName : Constants.DRIVE.autoNames) {
       autoPaths.put(pathName + "L", DeserializePath.getPathFromFile(pathName + "L"));
       autoPaths.put(pathName + "R", DeserializePath.getPathFromFile(pathName + "R"));
-    }
+    }*/
   }
 
   public enum AutoPosition {
