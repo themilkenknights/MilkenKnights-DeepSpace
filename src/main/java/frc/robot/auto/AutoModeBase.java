@@ -8,7 +8,7 @@ import frc.robot.lib.util.Logger;
  * An abstract class that is the basis of the robot's autonomous routines. This is implemented in auto modes (which are routines that do actions).
  */
 public abstract class AutoModeBase {
-  protected double mUpdateRate = 1.0 / 100.0;
+  protected double mUpdateRate = 1.0 / 200.0;
   protected boolean mActive;
   private DeltaTime baseTimer = new DeltaTime("Auto Base Dt", 1, true);
 
