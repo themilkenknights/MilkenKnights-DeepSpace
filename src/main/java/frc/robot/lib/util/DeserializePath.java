@@ -24,7 +24,7 @@ public class DeserializePath {
     } catch (IOException ex) {
       Logger.logMarker("Crashed Trying to Deserialize Paths");
       Logger.logThrowableCrash(ex);
-      return null;
+      return new Path();
     }
   }
 }

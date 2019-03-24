@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AutoChooser {
-  public static Map<String, Path> autoPaths = new HashMap<>();
+  public static final Map<String, Path> autoPaths = new HashMap<>();
   public static MatchData matchData = MatchData.defaultMatch;
   public static AutoPosition mAutoPosition = AutoPosition.RIGHT;
   private static AutoModeExecutor mAutoModeExecuter;
@@ -69,10 +69,10 @@ public class AutoChooser {
   }
 
   public static void loadPaths() {
-   /* for (String pathName : Constants.DRIVE.autoNames) {
+    for (String pathName : Constants.DRIVE.autoNames) {
       autoPaths.put(pathName + "L", DeserializePath.getPathFromFile(pathName + "L"));
       autoPaths.put(pathName + "R", DeserializePath.getPathFromFile(pathName + "R"));
-    }*/
+    }
   }
 
   public enum AutoPosition {

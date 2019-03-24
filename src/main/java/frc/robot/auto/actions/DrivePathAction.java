@@ -8,7 +8,7 @@ public class DrivePathAction implements Action {
   private final Path path;
 
   public DrivePathAction(Path path, boolean dir) {
-    this.path = path;
+    this.path = path.copyPath();
     if (dir) {
       this.path.invert();
     }
