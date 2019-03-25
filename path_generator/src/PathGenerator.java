@@ -9,16 +9,11 @@ public class PathGenerator {
 
   public static final HashMap<String, Path> robotPaths = new HashMap<>();
 
-  public static final Trajectory.Config veryFastConfig = new Trajectory.Config(
+  public static final Trajectory.Config defaultConfig = new Trajectory.Config(
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_FAST,
-      0.01, 110, 95, 3000);
-
-  public static final Trajectory.Config fastConfig = new Trajectory.Config(
-      Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_FAST,
-      0.01, 90, 90, 5000);
+      0.01, 100, 95, 1500);
 
   static {
-
   /*  robotPaths.put("CS-1", new Path(new Waypoint[] {
         new Waypoint(68 ,-47 ,Pathfinder.d2r(0)),
         new Waypoint(236 + 4 ,-102 - 12 ,Pathfinder.d2r(0)),
@@ -43,23 +38,22 @@ public class PathGenerator {
         new Waypoint(285 ,-79 - 30 ,Pathfinder.d2r(95)),
     }, veryFastConfig)); */
 
-
     robotPaths.put("CS-1", new Path(new Waypoint[] {
-        new Waypoint(203, -13, Pathfinder.d2r(0)),
-        new Waypoint(175, 15, Pathfinder.d2r(-90)),
-    }, veryFastConfig));
+        new Waypoint(204, -12, Pathfinder.d2r(0)),
+        new Waypoint(180, 19, Pathfinder.d2r(90)),
+    }, defaultConfig));
 
     robotPaths.put("CS-2", new Path(new Waypoint[] {
-        new Waypoint(175, 15, Pathfinder.d2r(-90)),
-        new Waypoint(76, -136, Pathfinder.d2r(0)),
-        new Waypoint(31, -136, Pathfinder.d2r(0)),
-    }, veryFastConfig));
+        new Waypoint(180, 19, Pathfinder.d2r(90)),
+        new Waypoint(70, -136, Pathfinder.d2r(0)),
+        new Waypoint(32, -136, Pathfinder.d2r(0)),
+    }, defaultConfig));
 
     robotPaths.put("CS-3", new Path(new Waypoint[] {
         new Waypoint(20, -136, Pathfinder.d2r(0)),
-        new Waypoint(234, -67, Pathfinder.d2r(0)),
-        new Waypoint(261, -90, Pathfinder.d2r(90)),
-    }, veryFastConfig));
+        new Waypoint(234, -62, Pathfinder.d2r(5)),
+        new Waypoint(264, -86, Pathfinder.d2r(95)),
+    }, defaultConfig));
   }
 
   public static void main(String[] args) {

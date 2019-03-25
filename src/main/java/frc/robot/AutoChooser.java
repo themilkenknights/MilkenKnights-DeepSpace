@@ -22,13 +22,7 @@ public class AutoChooser {
   public static final Trajectory.Config veryFastConfig = new Trajectory.Config(
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_FAST,
       0.01, 130, 110, 5000);
-  public static final Trajectory.Config fastConfig = new Trajectory.Config(
-      Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_FAST,
-      0.01, 90, 90, 5000);
 
-  public static final Trajectory.Config mediumConfig = new Trajectory.Config(
-      Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_LOW,
-      0.01, 80, 50, 700);
   public static final Map<String, Path> autoPaths = new HashMap<>();
   public static MatchData matchData = MatchData.defaultMatch;
   public static AutoPosition mAutoPosition = AutoPosition.RIGHT;
@@ -86,27 +80,20 @@ public class AutoChooser {
     HashMap<String, PathContainer> robotPaths = new HashMap<>();
 
     robotPaths.put("CS-1", new PathContainer(new Waypoint[] {
-        new Waypoint(68, -47, Pathfinder.d2r(0)),
-        new Waypoint(236 + 4, -102 - 12, Pathfinder.d2r(0)),
-        new Waypoint(256 + 4, -78 - 12, Pathfinder.d2r(90)),
+        new Waypoint(204 ,-12 ,Pathfinder.d2r(0)),
+        new Waypoint(180 ,19 ,Pathfinder.d2r(90)),
     }, veryFastConfig));
 
     robotPaths.put("CS-2", new PathContainer(new Waypoint[] {
-        new Waypoint(261, -46, Pathfinder.d2r(90)),
-        new Waypoint(261, -48, Pathfinder.d2r(90)),
-        new Waypoint(271, -70, Pathfinder.d2r(135)),
+        new Waypoint(180 ,19 ,Pathfinder.d2r(90)),
+        new Waypoint(70 ,-136 ,Pathfinder.d2r(0)),
+        new Waypoint(32 ,-136 ,Pathfinder.d2r(0)),
     }, veryFastConfig));
 
     robotPaths.put("CS-3", new PathContainer(new Waypoint[] {
-        new Waypoint(20, -136, Pathfinder.d2r(0)),
-        new Waypoint(234, -67, Pathfinder.d2r(0)),
-        new Waypoint(261, -89, Pathfinder.d2r(90)),
-    }, fastConfig));
-
-    robotPaths.put("CS-4", new PathContainer(new Waypoint[] {
-        new Waypoint(20, -136, Pathfinder.d2r(10)),
-        new Waypoint(260, -59 - 30, Pathfinder.d2r(5)),
-        new Waypoint(285, -79 - 30, Pathfinder.d2r(95)),
+        new Waypoint(20 ,-136 ,Pathfinder.d2r(0)),
+        new Waypoint(234 ,-62 ,Pathfinder.d2r(5)),
+        new Waypoint(264 ,-86 ,Pathfinder.d2r(95)),
     }, veryFastConfig));
 
     double tiL = 0;

@@ -17,10 +17,8 @@ import java.util.Arrays;
 public class FrontSideCargshipAuto extends AutoModeBase {
   @Override
   protected void routine() throws AutoModeEndedException {
-    runAction(new ParallelAction(Arrays.asList(
-        new DrivePathAction(1, false),
-        new DelayAction(getTime(1) - 0.1, new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH)))));
 
+    runAction(new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH));
     runAction(new ParallelAction(Arrays.asList(
         new DrivePathAction(2, true),
         new DelayAction(1.0, new SetHatchArmState(HatchArm.HatchState.INTAKE)),
