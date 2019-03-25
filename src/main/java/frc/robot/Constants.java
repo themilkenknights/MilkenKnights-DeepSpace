@@ -137,14 +137,11 @@ public final class Constants {
     public static final int kOffset = kIsPracticeBot ? -4192 : -3086;
   }
 
-  public static class HATCH_ARM {
-    public static final boolean kHatchArmPlaceState = true;
-  }
-
   public static class MISC {
     public static final boolean kDriveCSVLogging = false;
     public static final boolean kErrorLogging = true;
-    public static final int kHatchArmChannel = 0;
+    public static final int kFirstHatchArmChannel = 0;
+    public static final int kSecondHatchArmChannel = 5;
     public static final int kFrontClimbSolenoidChannel = 2;
     public static final int kRearClimbSolenoidChannel = 1;
     public static final int kHatchPancakeChannel = 3;

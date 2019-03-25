@@ -119,7 +119,7 @@ public class Superstructure extends Subsystem {
         AutoChooser.disableAuto();
         Drive.getInstance().setOpenLoop(DriveSignal.BRAKE);
         break;
-      case PATH_FOLLOWING:
+      case CARGOSHIP_AUTO:
         AutoChooser.startAuto(new FrontSideCargshipAuto());
         break;
       case HATCH_VISION_INTAKE:
@@ -187,7 +187,7 @@ public class Superstructure extends Subsystem {
   }
 
   public enum RobotState {
-    TELEOP_DRIVE, HATCH_VISION_INTAKE, HATCH_VISION_OUTTAKE, VISION_CARGO_OUTTAKE, AUTO_CLIMB, PATH_FOLLOWING
+    TELEOP_DRIVE, HATCH_VISION_INTAKE, HATCH_VISION_OUTTAKE, VISION_CARGO_OUTTAKE, AUTO_CLIMB, CARGOSHIP_AUTO
   }
 
   private static class InstanceHolder {

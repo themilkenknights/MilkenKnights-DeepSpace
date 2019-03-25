@@ -11,6 +11,7 @@ import frc.robot.auto.AutoModeExecutor;
 import frc.robot.lib.math.trajectory.Path;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MatchData;
+import frc.robot.subsystems.Superstructure;
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
 import jaci.pathfinder.Waypoint;
@@ -58,12 +59,21 @@ public class AutoChooser {
     mAutoModeExecuter = new AutoModeExecutor();
   }
 
+  public static void autoInit() {
+    if (mAutoPosition == AutoPosition.LEFT || mAutoPosition == AutoPosition.RIGHT) {
+      Superstructure.getInstance().setRobotState(Superstructure.RobotState.CARGOSHIP_AUTO);
+    } else {
+      Logger.logMarker("Not Running Auto");
+    }
+  }
+
   /*
-  Initialize Smart Dashboard Choosers and Serialize all paths into memory
+  Initialize Smart Dashboard Chooser
    */
   public static void loadAutos() {
-    positionChooser.setDefaultOption("Right", AutoPosition.RIGHT);
+    positionChooser.setDefaultOption("Nothing", AutoPosition.NOTHING);
     positionChooser.addOption("Left", AutoPosition.LEFT);
+    positionChooser.addOption("Right", AutoPosition.RIGHT);
     loadPaths();
   }
 
@@ -80,20 +90,20 @@ public class AutoChooser {
     HashMap<String, PathContainer> robotPaths = new HashMap<>();
 
     robotPaths.put("CS-1", new PathContainer(new Waypoint[] {
-        new Waypoint(204 ,-12 ,Pathfinder.d2r(0)),
-        new Waypoint(180 ,19 ,Pathfinder.d2r(90)),
+        new Waypoint(204, -12, Pathfinder.d2r(0)),
+        new Waypoint(175, 19, Pathfinder.d2r(90)),
     }, veryFastConfig));
 
     robotPaths.put("CS-2", new PathContainer(new Waypoint[] {
-        new Waypoint(180 ,19 ,Pathfinder.d2r(90)),
-        new Waypoint(70 ,-136 ,Pathfinder.d2r(0)),
-        new Waypoint(32 ,-136 ,Pathfinder.d2r(0)),
+        new Waypoint(175, 19, Pathfinder.d2r(90)),
+        new Waypoint(70, -136, Pathfinder.d2r(0)),
+        new Waypoint(32, -136, Pathfinder.d2r(0)),
     }, veryFastConfig));
 
     robotPaths.put("CS-3", new PathContainer(new Waypoint[] {
-        new Waypoint(20 ,-136 ,Pathfinder.d2r(0)),
-        new Waypoint(234 ,-62 ,Pathfinder.d2r(5)),
-        new Waypoint(264 ,-86 ,Pathfinder.d2r(95)),
+        new Waypoint(20, -136, Pathfinder.d2r(0)),
+        new Waypoint(234, -62, Pathfinder.d2r(5)),
+        new Waypoint(264, -86, Pathfinder.d2r(95)),
     }, veryFastConfig));
 
     double tiL = 0;
@@ -124,7 +134,7 @@ public class AutoChooser {
   }
 
   public enum AutoPosition {
-    LEFT, CENTER, RIGHT
+    LEFT, NOTHING, RIGHT
   }
 }
 

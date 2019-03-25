@@ -6,7 +6,6 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants.CAN;
-import frc.robot.Constants.HATCH_ARM;
 import frc.robot.Constants.MISC;
 import frc.robot.Input;
 import frc.robot.lib.util.DriveSignal;
@@ -17,7 +16,8 @@ import frc.robot.subsystems.Superstructure.RobotState;
 
 public class HatchArm extends Subsystem {
   private HatchState mHatchState;
-  private Solenoid mSpearSolenoid;
+  private Solenoid mFirstSpearSolenoid;
+  private Solenoid mSecondSpearSolenoid;
   private Solenoid mPancakeSolenoid;
   private boolean mSpearLimitTriggered;
   private NetworkTableEntry mLimitTriggered;
@@ -26,14 +26,14 @@ public class HatchArm extends Subsystem {
   private MkTimer downTimer = new MkTimer();
   private MkTimer autoTimer = new MkTimer();
   private boolean autoHasBeenRun;
-  private boolean mPancakeState = false;
 
   private HatchArm() {
     ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
     mSpearStateTab = mHatchArmTab.add("Spear State", "").getEntry();
     mLimitTriggered = mHatchArmTab.add("Spear Limit", false).getEntry();
     mPancakeTab = mHatchArmTab.add("Pancake", false).getEntry();
-    mSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchArmChannel);
+    mFirstSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kFirstHatchArmChannel);
+    mSecondSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kSecondHatchArmChannel);
     mPancakeSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchPancakeChannel);
     mHatchState = HatchState.STOW;
   }
@@ -67,8 +67,6 @@ public class HatchArm extends Subsystem {
         Logger.logError("Unexpected Hatch Arm control state: " + mHatchState);
         break;
     }
-    mPancakeSolenoid.set(mPancakeState);
-    mSpearSolenoid.set(mHatchState.state);
   }
 
   public void retractPancakeActuator() {
@@ -80,7 +78,7 @@ public class HatchArm extends Subsystem {
   }
 
   public synchronized void setPancakeSolenoid(boolean state) {
-    mPancakeState = state;
+    mPancakeSolenoid.set(state);
     Logger.logMarker("Set Pancake State to: " + state);
   }
 
@@ -150,7 +148,8 @@ public class HatchArm extends Subsystem {
         break;
     }
     Logger.logMarker("Set Hatch State to " + state.toString());
-    mSpearSolenoid.set(state.state);
+    mFirstSpearSolenoid.set(state.firstState);
+    mSecondSpearSolenoid.set(state.secondState);
     autoTimer.start(0.55);
   }
 
@@ -162,11 +161,15 @@ public class HatchArm extends Subsystem {
    * The state of the pneumatic spear that places and intakes the Hatches. The default state should always be stowed on power off.
    */
   public enum HatchState {
-    PLACE(HATCH_ARM.kHatchArmPlaceState), STOW(!HATCH_ARM.kHatchArmPlaceState), INTAKE(HATCH_ARM.kHatchArmPlaceState);
-    public final boolean state;
+    PLACE(true, true),
+    STOW(false, false),
+    INTAKE(true, true);
+    public final boolean firstState;
+    public final boolean secondState;
 
-    HatchState(final boolean state) {
-      this.state = state;
+    HatchState(final boolean firstState, final boolean secondState) {
+      this.firstState = firstState;
+      this.secondState = secondState;
     }
   }
 
