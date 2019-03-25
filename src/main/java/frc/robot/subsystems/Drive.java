@@ -310,17 +310,22 @@ public class Drive extends Subsystem {
     mPeriodicIO.brake_mode = signal.getBrakeMode();
   }
 
+  /**
+   * Primary method that controls vision driving. Takes in the latest limelight target and controls the hatch arm, cargo rollers, based on distance
+   * and the desired vision goal. The speed varies based on distance and goal, and the robot should turn toward the target while driving. Note that
+   * vision cannot be used when the hatch arm is down as it obscures the target.
+   */
   public synchronized void updateVisionDrive() {
     LimelightTarget target = Vision.getInstance().getLimelightTarget();
     switch (mGoal) {
       case INTAKE_HATCH:
         break;
       case PLACE_HATCH:
-        if (target.isValidTarget() && (target.getDistance() < 26.0) && !hasBeenLowered.hasBeenSet() && (Robot.mMatchState == Robot.MatchState.AUTO)) {
+        if (target.isValidTarget() && (target.getDistance() < 24.5) && !hasBeenLowered.hasBeenSet() && (Robot.mMatchState == Robot.MatchState.AUTO)) {
           HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
           hasBeenLowered.start(1.0);
         } else if (target.isValidTarget()
-            && target.getDistance() < 23.0
+            && target.getDistance() < 24.5
             && !hasBeenLowered.hasBeenSet()
             && Robot.mMatchState != Robot.MatchState.AUTO) {
           HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
@@ -342,7 +347,7 @@ public class Drive extends Subsystem {
     double visionTurn = 0.0;
     double dist = target.getDistance();
 
-    if (dist < 25.0 && !isPastVision.hasBeenSet()) {
+    if (dist < 26.0 && !isPastVision.hasBeenSet() && target.isValidTarget()) {
       isPastVision.start(1.0);
     }
 
