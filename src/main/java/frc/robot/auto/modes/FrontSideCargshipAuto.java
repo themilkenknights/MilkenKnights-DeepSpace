@@ -7,11 +7,9 @@ import frc.robot.auto.actions.DelayAction;
 import frc.robot.auto.actions.DrivePathAction;
 import frc.robot.auto.actions.OpenLoopDrive;
 import frc.robot.auto.actions.ParallelAction;
-import frc.robot.auto.actions.RollerAction;
 import frc.robot.auto.actions.SetHatchArmState;
 import frc.robot.auto.actions.SetSuperstructure;
 import frc.robot.auto.actions.VisionDrive;
-import frc.robot.auto.actions.WaitAction;
 import frc.robot.subsystems.HatchArm;
 import frc.robot.subsystems.Superstructure;
 import java.util.Arrays;
@@ -24,11 +22,11 @@ public class FrontSideCargshipAuto extends AutoModeBase {
         new DelayAction(getTime(1) - 0.1, new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH)))));
 
     runAction(new ParallelAction(Arrays.asList(
-      new DrivePathAction(2, true),
-        new DelayAction( 1.0,  new SetHatchArmState(HatchArm.HatchState.INTAKE)),
-      new DelayAction(getTime(2) - 0.05, new DrivePathAction(3, false)),
+        new DrivePathAction(2, true),
+        new DelayAction(1.0, new SetHatchArmState(HatchArm.HatchState.INTAKE)),
+        new DelayAction(getTime(2) - 0.05, new DrivePathAction(3, false)),
         new DelayAction(getTime(2) + getTime(3) - 1.4, new VisionDrive(VisionDrive.VisionGoal.INTAKE_HATCH))
-        )));
+    )));
 
     runAction(new ParallelAction(Arrays.asList(
         new DrivePathAction(4, true),

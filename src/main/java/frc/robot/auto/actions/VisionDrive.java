@@ -1,6 +1,5 @@
 package frc.robot.auto.actions;
 
-import frc.robot.Robot;
 import frc.robot.lib.util.MkTimer;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;

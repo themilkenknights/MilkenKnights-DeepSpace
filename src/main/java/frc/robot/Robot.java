@@ -2,7 +2,6 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
-import frc.robot.auto.modes.FrontSideCargshipAuto;
 import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;

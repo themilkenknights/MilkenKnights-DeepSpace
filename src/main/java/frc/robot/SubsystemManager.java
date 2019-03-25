@@ -8,7 +8,6 @@ import frc.robot.lib.util.CrashTrackingRunnable;
 import frc.robot.lib.util.DeltaTime;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.Subsystem;
-import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Vision;
 import java.util.List;
 
@@ -44,7 +43,7 @@ public class SubsystemManager {
               subsystem.outputTelemetry(now);
               subsystem.safetyCheck(now);
             }
-            if(count == 3){
+            if (count == 3) {
               RobotState.getInstance().outputToSmartDashboard();
             }
             i++;

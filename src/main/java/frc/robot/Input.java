@@ -5,7 +5,6 @@ import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.GENERAL;
 import frc.robot.lib.drivers.MkJoystick;
 import frc.robot.lib.drivers.MkJoystickButton;
-import frc.robot.lib.geometry.Rotation2d;
 import frc.robot.lib.math.DriveHelper;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.DriveSignal;
@@ -214,17 +213,16 @@ public class Input {
     double turn = (-mDriverJoystick.getRawAxis(0));
     DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
     if (isManualVisionMode) {
-     double visionTurn = 0.0;
+      double visionTurn = 0.0;
       LimelightTarget target = mVision.getLimelightTarget();
       if (target.isValidTarget()) {
        /* if (target.getDistance() < 35.0 & !hasBeenTriggered) {
           mHatch.setHatchState(HatchState.PLACE);
           hasBeenTriggered = true;
         }*/
-         if (mHatch.getHatchSpearState() != HatchState.PLACE) {
+        if (mHatch.getHatchSpearState() != HatchState.PLACE) {
           visionTurn = mVisionAssist.calculate(Vision.getInstance().getLimelightTarget().getYaw());
         }
-
       }
       if (HatchArm.getInstance().isHatchTriggeredTimer()) {
         isManualVisionMode = false;
