@@ -15,7 +15,7 @@ public class Robot extends TimedRobot {
   private final SubsystemManager mSubsystemManager =
       new SubsystemManager(
           Arrays.asList(CargoArm.getInstance(), Drive.getInstance(), HatchArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
-  private boolean hasBeenRun = false;
+  private boolean hasBeenRun;
 
   public Robot() {
     super(Constants.GENERAL.kMainLoopDt);

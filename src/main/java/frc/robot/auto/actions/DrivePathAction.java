@@ -6,7 +6,7 @@ import frc.robot.subsystems.Drive;
 
 public class DrivePathAction implements Action {
   private final Path path;
-  private int loopCounter = 0;
+  private int loopCounter;
 
   public DrivePathAction(Path path, boolean dir) {
     this.path = path.copyPath();

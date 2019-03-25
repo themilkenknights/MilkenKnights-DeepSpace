@@ -15,7 +15,7 @@ import frc.robot.lib.vision.LimelightTarget;
 public class Vision extends Subsystem {
   private LimeLight mLimeLight;
   private NetworkTableEntry mLLX, mDist, mArea, mLED, mSkew, mValid;
-  private boolean isVision = false;
+  private boolean isVision;
   private UsbCamera hatchCam;
 
   private Vision() {

@@ -106,7 +106,7 @@ public class TrajectoryFollower {
     Trajectory.Segment lastSeg = profile_.get(currentSeg);
     double pos, vel, acc, jerk, heading, dt, x, y;
     double firstTime = customRound(Timer.getFPGATimestamp() - Dt) - Constants.DRIVE.PATH_DT;
-    double lastTime =  customRound(Timer.getFPGATimestamp() - Dt);
+    double lastTime = customRound(Timer.getFPGATimestamp() - Dt);
     double currentTime = Timer.getFPGATimestamp() - Dt;
     pos = ((currentTime - firstTime) * ((lastSeg.position - firstSeg.position) / (lastTime - firstTime))) + firstSeg.position;
     vel = ((currentTime - firstTime) * ((lastSeg.velocity - firstSeg.velocity) / (lastTime - firstTime))) + firstSeg.velocity;

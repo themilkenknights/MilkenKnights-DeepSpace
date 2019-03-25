@@ -5,7 +5,6 @@ import frc.robot.subsystems.Drive;
 
 public class MotionMagicBlind implements Action {
   private double dist;
-  private int i;
 
   public MotionMagicBlind(double dist) {
     this.dist = dist;
