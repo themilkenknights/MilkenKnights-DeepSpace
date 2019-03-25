@@ -55,10 +55,10 @@ public class TrajectoryFollower {
       //Trajectory.Segment segment = profile_.get(current_segment);
       double error = segment.position - dist;
       double angError = segment.heading - heading;
-      if (angError > 180) {
-        angError = angError - 360;
-      } else if (angError < -180) {
-        angError = angError + 360;
+      if (angError > 180.0) {
+        angError = angError - 360.0;
+      } else if (angError < -180.0) {
+        angError = angError + 360.0;
       }
       double velError = segment.velocity - vel;
       double output = segment.velocity + (angError * kAng_) + (kp_ * error);
