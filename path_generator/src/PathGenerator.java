@@ -11,7 +11,7 @@ public class PathGenerator {
 
   public static final Trajectory.Config defaultConfig = new Trajectory.Config(
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_FAST,
-      0.01, 100, 95, 1500);
+      0.01, 105, 80, 1500);
 
   static {
     robotPaths.put("CS-1", new PathContainer(new Waypoint[] {
