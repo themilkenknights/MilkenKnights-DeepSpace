@@ -24,7 +24,6 @@ public class HatchArm extends Subsystem {
   private NetworkTableEntry mSpearStateTab;
   private NetworkTableEntry mPancakeTab;
   private MkTimer downTimer = new MkTimer();
-  private MkTimer autoTimer = new MkTimer();
   private boolean autoHasBeenRun;
 
   private HatchArm() {
@@ -56,7 +55,7 @@ public class HatchArm extends Subsystem {
         }
         break;
       case INTAKE:
-        if (isHatchLimitTriggered()) {
+        if (isHatchLimitTriggered() && downTimer.isDone(0.25)) {
           setHatchState(HatchState.STOW);
           if (Superstructure.getInstance().getRobotState() == RobotState.TELEOP_DRIVE) {
             Drive.getInstance().setOpenLoop(new DriveSignal(-0.4, -0.4));
@@ -74,7 +73,7 @@ public class HatchArm extends Subsystem {
   }
 
   public boolean isHatchTriggeredTimer() {
-    return autoTimer.isDone() && mSpearLimitTriggered;
+    return downTimer.isDone() && mSpearLimitTriggered;
   }
 
   public synchronized void setPancakeSolenoid(boolean state) {
@@ -132,25 +131,25 @@ public class HatchArm extends Subsystem {
     switch (state) {
       case PLACE:
         setPancakeSolenoid(true);
-        autoTimer.start(0.35);
-        downTimer.start(0.4);
         break;
       case STOW:
         setPancakeSolenoid(true);
-        autoTimer.reset();
         break;
       case INTAKE:
-        autoTimer.start(0.35);
         setPancakeSolenoid(false);
         break;
       default:
         Logger.logErrorWithTrace("Unknown Hatch State");
         break;
     }
+    if (state == HatchState.INTAKE || state == HatchState.PLACE && mHatchState != HatchState.INTAKE && mHatchState != HatchState.PLACE) {
+      downTimer.start(0.4);
+    } else {
+      downTimer.reset();
+    }
     Logger.logMarker("Set Hatch State to " + state.toString());
     mFirstSpearSolenoid.set(state.firstState);
     mSecondSpearSolenoid.set(state.secondState);
-    autoTimer.start(0.55);
   }
 
   public HatchState getHatchSpearState() {

@@ -97,7 +97,7 @@ public class Drive extends Subsystem {
       case VISION_DRIVE:
         break;
       case TURN_IN_PLACE:
-        updateTurnToHeading(timestamp);
+        updateTurnToHeading();
         break;
       case PATH_FOLLOWING:
         updatePathFollower();
@@ -193,7 +193,6 @@ public class Drive extends Subsystem {
       mCSVWriter.flush();
       mCSVWriter = null;
     }
-    zero();
   }
 
   @Override
@@ -544,15 +543,15 @@ public class Drive extends Subsystem {
    *
    * Is called periodically when the robot is auto-aiming towards the boiler.
    */
-  private synchronized void updateTurnToHeading(double timestamp) {
+  private synchronized void updateTurnToHeading() {
     final Rotation2d field_to_robot = RobotState.getInstance().getLatestFieldToVehicle().getValue().getRotation();
 
     // Figure out the rotation necessary to turn to face the goal.
     final Rotation2d robot_to_target = field_to_robot.inverse().rotateBy(mTargetHeading);
 
     // Check if we are on target
-    final double kGoalPosTolerance = 0.2; // degrees
-    final double kGoalVelTolerance = 5.0; // inches per second
+    final double kGoalPosTolerance = 0.5; // degrees
+    final double kGoalVelTolerance = 0.5; // inches per second
     if (Math.abs(robot_to_target.getDegrees()) < kGoalPosTolerance
         && Math.abs(mPeriodicIO.leftVel) < kGoalVelTolerance
         && Math.abs(mPeriodicIO.rightVel) < kGoalVelTolerance) {
