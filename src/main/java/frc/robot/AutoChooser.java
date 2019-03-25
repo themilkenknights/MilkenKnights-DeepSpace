@@ -89,20 +89,20 @@ public class AutoChooser {
 
   public static void loadPaths() {
     HashMap<String, PathContainer> robotPaths = new HashMap<>();
-
     robotPaths.put("CS-1", new PathContainer(new Waypoint[] {
         new Waypoint(204, -12, Pathfinder.d2r(0)),
-        new Waypoint(169, 24, Pathfinder.d2r(90)),
+        new Waypoint(195, -12, Pathfinder.d2r(0)),
+        new Waypoint(165, 22, Pathfinder.d2r(90)),
     }, defaultConfig));
 
     robotPaths.put("CS-2", new PathContainer(new Waypoint[] {
-        new Waypoint(169, 24, Pathfinder.d2r(90)),
-        new Waypoint(70, -136, Pathfinder.d2r(0)),
-        new Waypoint(35, -136, Pathfinder.d2r(0)),
+        new Waypoint(165, 22, Pathfinder.d2r(90)),
+        new Waypoint(77, -136, Pathfinder.d2r(0)),
+        new Waypoint(33, -136, Pathfinder.d2r(0)),
     }, defaultConfig));
 
     robotPaths.put("CS-3", new PathContainer(new Waypoint[] {
-        new Waypoint(20, -136, Pathfinder.d2r(4)),
+        new Waypoint(20, -136, Pathfinder.d2r(0)),
         new Waypoint(234, -70, Pathfinder.d2r(5)),
         new Waypoint(264, -94, Pathfinder.d2r(95)),
     }, defaultConfig));
