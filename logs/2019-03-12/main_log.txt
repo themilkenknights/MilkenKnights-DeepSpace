@@ -1,0 +1,1899 @@
+f1a36293-a3ad-4ab5-a337-81f757e43d38, Robot Init on Practice Robot, Tue Mar 12 14:45:55 PDT 2019
+f1a36293-a3ad-4ab5-a337-81f757e43d38, Disabled Init, Tue Mar 12 14:45:55 PDT 2019
+f1a36293-a3ad-4ab5-a337-81f757e43d38, Set Hatch Spear to STOW, Tue Mar 12 14:45:55 PDT 2019
+43b37dc8-b0e8-4c26-9af3-349b60ba6f2e, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:47:14 PDT 2019
+43b37dc8-b0e8-4c26-9af3-349b60ba6f2e, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:47:14 PDT 2019
+43b37dc8-b0e8-4c26-9af3-349b60ba6f2e, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:47:15 PDT 2019
+43b37dc8-b0e8-4c26-9af3-349b60ba6f2e, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:47:15 PDT 2019
+43b37dc8-b0e8-4c26-9af3-349b60ba6f2e, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:47:15 PDT 2019
+43b37dc8-b0e8-4c26-9af3-349b60ba6f2e, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:47:15 PDT 2019
+43b37dc8-b0e8-4c26-9af3-349b60ba6f2e, Robot Startup, Tue Mar 12 14:47:16 PDT 2019
+43b37dc8-b0e8-4c26-9af3-349b60ba6f2e, Robot Init on Practice Robot, Tue Mar 12 14:47:16 PDT 2019
+43b37dc8-b0e8-4c26-9af3-349b60ba6f2e, Disabled Init, Tue Mar 12 14:47:16 PDT 2019
+43b37dc8-b0e8-4c26-9af3-349b60ba6f2e, Set Hatch Spear to STOW, Tue Mar 12 14:47:16 PDT 2019
+f217eb5e-a045-42f5-a03d-528077d7c466, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:52:24 PDT 2019
+f217eb5e-a045-42f5-a03d-528077d7c466, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:52:25 PDT 2019
+f217eb5e-a045-42f5-a03d-528077d7c466, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:52:25 PDT 2019
+f217eb5e-a045-42f5-a03d-528077d7c466, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:52:25 PDT 2019
+f217eb5e-a045-42f5-a03d-528077d7c466, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:52:25 PDT 2019
+f217eb5e-a045-42f5-a03d-528077d7c466, SigNotUpdated Side: Right, Tue Mar 12 14:52:26 PDT 2019
+f217eb5e-a045-42f5-a03d-528077d7c466, Robot Startup, Tue Mar 12 14:52:26 PDT 2019
+f217eb5e-a045-42f5-a03d-528077d7c466, Robot Init on Practice Robot, Tue Mar 12 14:52:26 PDT 2019
+f217eb5e-a045-42f5-a03d-528077d7c466, Disabled Init, Tue Mar 12 14:52:26 PDT 2019
+f217eb5e-a045-42f5-a03d-528077d7c466, Set Hatch Spear to STOW, Tue Mar 12 14:52:26 PDT 2019
+ccf81096-c4d0-495a-907a-ac940b6daf97, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:53:27 PDT 2019
+ccf81096-c4d0-495a-907a-ac940b6daf97, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:53:28 PDT 2019
+ccf81096-c4d0-495a-907a-ac940b6daf97, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:53:28 PDT 2019
+ccf81096-c4d0-495a-907a-ac940b6daf97, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:53:28 PDT 2019
+ccf81096-c4d0-495a-907a-ac940b6daf97, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 14:53:28 PDT 2019
+ccf81096-c4d0-495a-907a-ac940b6daf97, SigNotUpdated Side: Right, Tue Mar 12 14:53:28 PDT 2019
+ccf81096-c4d0-495a-907a-ac940b6daf97, Robot Startup, Tue Mar 12 14:53:29 PDT 2019
+ccf81096-c4d0-495a-907a-ac940b6daf97, Robot Init on Practice Robot, Tue Mar 12 14:53:29 PDT 2019
+ccf81096-c4d0-495a-907a-ac940b6daf97, Disabled Init, Tue Mar 12 14:53:29 PDT 2019
+ccf81096-c4d0-495a-907a-ac940b6daf97, Set Hatch Spear to STOW, Tue Mar 12 14:53:29 PDT 2019
+dfd8a694-f72d-49b4-8a9d-0fe3a129c8c7, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:10:53 PDT 2019
+dfd8a694-f72d-49b4-8a9d-0fe3a129c8c7, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:10:53 PDT 2019
+dfd8a694-f72d-49b4-8a9d-0fe3a129c8c7, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:10:54 PDT 2019
+dfd8a694-f72d-49b4-8a9d-0fe3a129c8c7, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:10:54 PDT 2019
+dfd8a694-f72d-49b4-8a9d-0fe3a129c8c7, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:10:54 PDT 2019
+dfd8a694-f72d-49b4-8a9d-0fe3a129c8c7, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:10:54 PDT 2019
+dfd8a694-f72d-49b4-8a9d-0fe3a129c8c7, SigNotUpdated Side: Right, Tue Mar 12 15:10:55 PDT 2019
+dfd8a694-f72d-49b4-8a9d-0fe3a129c8c7, Robot Startup, Tue Mar 12 15:10:56 PDT 2019
+dfd8a694-f72d-49b4-8a9d-0fe3a129c8c7, Robot Init on Practice Robot, Tue Mar 12 15:10:56 PDT 2019
+dfd8a694-f72d-49b4-8a9d-0fe3a129c8c7, Disabled Init, Tue Mar 12 15:10:56 PDT 2019
+dfd8a694-f72d-49b4-8a9d-0fe3a129c8c7, Set Hatch Spear to STOW, Tue Mar 12 15:10:56 PDT 2019
+acb65f01-6c40-4ec7-aaa3-da64cb9ed8ba, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:20:05 PDT 2019
+acb65f01-6c40-4ec7-aaa3-da64cb9ed8ba, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:20:06 PDT 2019
+acb65f01-6c40-4ec7-aaa3-da64cb9ed8ba, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:20:06 PDT 2019
+acb65f01-6c40-4ec7-aaa3-da64cb9ed8ba, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:20:06 PDT 2019
+acb65f01-6c40-4ec7-aaa3-da64cb9ed8ba, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:20:06 PDT 2019
+acb65f01-6c40-4ec7-aaa3-da64cb9ed8ba, Robot Startup, Tue Mar 12 15:20:07 PDT 2019
+acb65f01-6c40-4ec7-aaa3-da64cb9ed8ba, Robot Init on Practice Robot, Tue Mar 12 15:20:07 PDT 2019
+acb65f01-6c40-4ec7-aaa3-da64cb9ed8ba, Disabled Init, Tue Mar 12 15:20:07 PDT 2019
+acb65f01-6c40-4ec7-aaa3-da64cb9ed8ba, Set Hatch Spear to STOW, Tue Mar 12 15:20:07 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:29:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:29:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:29:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:29:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:29:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:29:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:29:41 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, SigNotUpdated Side: Right, Tue Mar 12 15:29:41 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Robot Startup, Tue Mar 12 15:29:42 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Robot Init on Practice Robot, Tue Mar 12 15:29:42 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Disabled Init, Tue Mar 12 15:29:42 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Set Hatch Spear to STOW, Tue Mar 12 15:29:42 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Teleop Init, Tue Mar 12 15:40:31 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, SET HEADING: 0.0, Tue Mar 12 15:40:31 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Gyro offset: -120.10253906249999, Tue Mar 12 15:40:31 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, SET HEADING: 0.0, Tue Mar 12 15:40:31 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Gyro offset: -120.10253906249999, Tue Mar 12 15:40:31 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, SET HEADING: 0.0, Tue Mar 12 15:40:32 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Gyro offset: -120.10253906249999, Tue Mar 12 15:40:32 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Set Hatch Spear to STOW, Tue Mar 12 15:40:32 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:40:32 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Starting Teleop, Tue Mar 12 15:40:32 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Disabled Init, Tue Mar 12 15:40:35 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Stopping Loops, Tue Mar 12 15:40:35 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Set Hatch Spear to STOW, Tue Mar 12 15:40:35 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Teleop Init, Tue Mar 12 15:40:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, SigNotUpdated Side: Right, Tue Mar 12 15:40:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, SET HEADING: 0.0, Tue Mar 12 15:40:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Gyro offset: 42.4072265625, Tue Mar 12 15:40:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, SET HEADING: 0.0, Tue Mar 12 15:40:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Gyro offset: 42.4072265625, Tue Mar 12 15:40:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Set Hatch Spear to STOW, Tue Mar 12 15:40:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:40:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Starting Teleop, Tue Mar 12 15:40:40 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Disabled Init, Tue Mar 12 15:40:51 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Stopping Loops, Tue Mar 12 15:40:51 PDT 2019
+deb14cda-46ac-4c7e-b8c8-b03c11cfba92, Set Hatch Spear to STOW, Tue Mar 12 15:40:51 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:42:11 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:42:11 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:42:11 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:42:12 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Robot Startup, Tue Mar 12 15:42:13 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Robot Init on Practice Robot, Tue Mar 12 15:42:13 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Disabled Init, Tue Mar 12 15:42:13 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Set Hatch Spear to STOW, Tue Mar 12 15:42:13 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Teleop Init, Tue Mar 12 15:42:24 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, SigNotUpdated Side: Right, Tue Mar 12 15:42:24 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, SigNotUpdated Side: Right, Tue Mar 12 15:42:24 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, SET HEADING: 0.0, Tue Mar 12 15:42:24 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Gyro offset: 92.81250000000001, Tue Mar 12 15:42:24 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, SET HEADING: 0.0, Tue Mar 12 15:42:24 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Gyro offset: 92.81250000000001, Tue Mar 12 15:42:24 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, SET HEADING: 0.0, Tue Mar 12 15:42:24 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Gyro offset: 92.81250000000001, Tue Mar 12 15:42:24 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Set Hatch Spear to STOW, Tue Mar 12 15:42:24 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:42:24 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Starting Teleop, Tue Mar 12 15:42:24 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:30 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Open Loop, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:42:31 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Disabled Init, Tue Mar 12 15:42:35 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Stopping Loops, Tue Mar 12 15:42:35 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Set Hatch Spear to STOW, Tue Mar 12 15:42:35 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Teleop Init, Tue Mar 12 15:42:36 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, SET HEADING: 0.0, Tue Mar 12 15:42:36 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Gyro offset: 0.0, Tue Mar 12 15:42:36 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, SET HEADING: 0.0, Tue Mar 12 15:42:36 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Gyro offset: 0.0, Tue Mar 12 15:42:36 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Set Hatch Spear to STOW, Tue Mar 12 15:42:36 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:42:36 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Starting Teleop, Tue Mar 12 15:42:36 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Disabled Init, Tue Mar 12 15:42:39 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Stopping Loops, Tue Mar 12 15:42:39 PDT 2019
+1ddd69cd-7a8f-4237-a842-6b43e5c501c8, Set Hatch Spear to STOW, Tue Mar 12 15:42:39 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:43:10 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:43:10 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:43:10 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:43:11 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, SigNotUpdated Side: Right, Tue Mar 12 15:43:11 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Robot Startup, Tue Mar 12 15:43:12 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Robot Init on Practice Robot, Tue Mar 12 15:43:12 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Disabled Init, Tue Mar 12 15:43:12 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Set Hatch Spear to STOW, Tue Mar 12 15:43:12 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Teleop Init, Tue Mar 12 15:43:12 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, SET HEADING: 0.0, Tue Mar 12 15:43:12 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Gyro offset: -0.3076171875, Tue Mar 12 15:43:12 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, SET HEADING: 0.0, Tue Mar 12 15:43:12 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Gyro offset: -0.3076171875, Tue Mar 12 15:43:12 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, SET HEADING: 0.0, Tue Mar 12 15:43:12 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Gyro offset: -0.3076171875, Tue Mar 12 15:43:12 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Set Hatch Spear to STOW, Tue Mar 12 15:43:12 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:43:13 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Starting Teleop, Tue Mar 12 15:43:13 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Disabled Init, Tue Mar 12 15:43:15 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Stopping Loops, Tue Mar 12 15:43:15 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Set Hatch Spear to STOW, Tue Mar 12 15:43:15 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Teleop Init, Tue Mar 12 15:43:33 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, SigNotUpdated Side: Right, Tue Mar 12 15:43:33 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, SET HEADING: 0.0, Tue Mar 12 15:43:33 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Gyro offset: -0.1318359375, Tue Mar 12 15:43:33 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, SET HEADING: 0.0, Tue Mar 12 15:43:33 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Gyro offset: -0.1318359375, Tue Mar 12 15:43:33 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Set Hatch Spear to STOW, Tue Mar 12 15:43:33 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:43:33 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Starting Teleop, Tue Mar 12 15:43:33 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Disabled Init, Tue Mar 12 15:43:45 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Stopping Loops, Tue Mar 12 15:43:45 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Set Hatch Spear to STOW, Tue Mar 12 15:43:45 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Teleop Init, Tue Mar 12 15:44:07 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, SET HEADING: 0.0, Tue Mar 12 15:44:07 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Gyro offset: -0.1318359375, Tue Mar 12 15:44:07 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, SET HEADING: 0.0, Tue Mar 12 15:44:07 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Gyro offset: -0.1318359375, Tue Mar 12 15:44:07 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Set Hatch Spear to STOW, Tue Mar 12 15:44:07 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:44:07 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Starting Teleop, Tue Mar 12 15:44:07 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Disabled Init, Tue Mar 12 15:44:09 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Stopping Loops, Tue Mar 12 15:44:09 PDT 2019
+464e13dd-cef1-43ef-a01e-dc84c5282be5, Set Hatch Spear to STOW, Tue Mar 12 15:44:09 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:45:03 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:45:03 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:45:03 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:45:03 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, SigNotUpdated Side: Right, Tue Mar 12 15:45:03 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Robot Startup, Tue Mar 12 15:45:04 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Robot Init on Practice Robot, Tue Mar 12 15:45:04 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Disabled Init, Tue Mar 12 15:45:04 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Set Hatch Spear to STOW, Tue Mar 12 15:45:04 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Teleop Init, Tue Mar 12 15:45:05 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, SigNotUpdated Side: Right, Tue Mar 12 15:45:05 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, SET HEADING: 0.0, Tue Mar 12 15:45:05 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Gyro offset: -0.263671875, Tue Mar 12 15:45:05 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, SET HEADING: 0.0, Tue Mar 12 15:45:05 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Gyro offset: -0.263671875, Tue Mar 12 15:45:05 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, SET HEADING: 0.0, Tue Mar 12 15:45:05 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Gyro offset: 0.0, Tue Mar 12 15:45:05 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Set Hatch Spear to STOW, Tue Mar 12 15:45:05 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:45:05 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Starting Teleop, Tue Mar 12 15:45:05 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Disabled Init, Tue Mar 12 15:45:10 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Stopping Loops, Tue Mar 12 15:45:10 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Set Hatch Spear to STOW, Tue Mar 12 15:45:10 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Teleop Init, Tue Mar 12 15:46:22 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, SigNotUpdated Side: Right, Tue Mar 12 15:46:22 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, SET HEADING: 0.0, Tue Mar 12 15:46:22 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Gyro offset: -0.2197265625, Tue Mar 12 15:46:22 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, SET HEADING: 0.0, Tue Mar 12 15:46:22 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Gyro offset: -0.2197265625, Tue Mar 12 15:46:22 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Set Hatch Spear to STOW, Tue Mar 12 15:46:22 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:46:22 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Starting Teleop, Tue Mar 12 15:46:22 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:32 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:33 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:33 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:33 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:33 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:33 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:33 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:33 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:33 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:33 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Open Loop, Tue Mar 12 15:46:33 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Switching to Cargo Arm Motion Magic, Tue Mar 12 15:46:33 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Disabled Init, Tue Mar 12 15:46:37 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Stopping Loops, Tue Mar 12 15:46:37 PDT 2019
+ac509cce-2738-42f3-9039-94ecc702f9e5, Set Hatch Spear to STOW, Tue Mar 12 15:46:37 PDT 2019
+80a5b1ad-12f2-412c-b319-343afd4ffb74, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:46:55 PDT 2019
+80a5b1ad-12f2-412c-b319-343afd4ffb74, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:46:56 PDT 2019
+80a5b1ad-12f2-412c-b319-343afd4ffb74, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:46:56 PDT 2019
+80a5b1ad-12f2-412c-b319-343afd4ffb74, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:46:56 PDT 2019
+80a5b1ad-12f2-412c-b319-343afd4ffb74, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:46:56 PDT 2019
+80a5b1ad-12f2-412c-b319-343afd4ffb74, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:46:56 PDT 2019
+80a5b1ad-12f2-412c-b319-343afd4ffb74, SigNotUpdated Side: Right, Tue Mar 12 15:46:57 PDT 2019
+80a5b1ad-12f2-412c-b319-343afd4ffb74, Robot Startup, Tue Mar 12 15:46:57 PDT 2019
+80a5b1ad-12f2-412c-b319-343afd4ffb74, Robot Init on Practice Robot, Tue Mar 12 15:46:57 PDT 2019
+80a5b1ad-12f2-412c-b319-343afd4ffb74, Disabled Init, Tue Mar 12 15:46:57 PDT 2019
+80a5b1ad-12f2-412c-b319-343afd4ffb74, Set Hatch Spear to STOW, Tue Mar 12 15:46:58 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:47:39 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:47:39 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:47:39 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:47:39 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, SigNotUpdated Side: Right, Tue Mar 12 15:47:40 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, Robot Startup, Tue Mar 12 15:47:40 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, Robot Init on Practice Robot, Tue Mar 12 15:47:40 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, Disabled Init, Tue Mar 12 15:47:40 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, Set Hatch Spear to STOW, Tue Mar 12 15:47:40 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, Teleop Init, Tue Mar 12 15:47:42 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, SigNotUpdated Side: Right, Tue Mar 12 15:47:42 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, SET HEADING: 0.0, Tue Mar 12 15:47:42 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, Gyro offset: -0.5712890625, Tue Mar 12 15:47:42 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, SET HEADING: 0.0, Tue Mar 12 15:47:42 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, Gyro offset: -0.5712890625, Tue Mar 12 15:47:42 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, SET HEADING: 0.0, Tue Mar 12 15:47:42 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, Gyro offset: -0.5712890625, Tue Mar 12 15:47:42 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, Set Hatch Spear to STOW, Tue Mar 12 15:47:42 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:47:42 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, Starting Teleop, Tue Mar 12 15:47:42 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, Disabled Init, Tue Mar 12 15:47:53 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, Stopping Loops, Tue Mar 12 15:47:53 PDT 2019
+26226c34-8b75-4611-8949-453bd43a56fa, Set Hatch Spear to STOW, Tue Mar 12 15:47:53 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:49:29 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:49:29 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:49:29 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:49:29 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:49:29 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:49:29 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:49:29 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, Robot Startup, Tue Mar 12 15:49:31 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, Robot Init on Practice Robot, Tue Mar 12 15:49:31 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, Disabled Init, Tue Mar 12 15:49:31 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, Set Hatch Spear to STOW, Tue Mar 12 15:49:31 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, Teleop Init, Tue Mar 12 15:49:31 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, SET HEADING: 0.0, Tue Mar 12 15:49:31 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, Gyro offset: -0.52734375, Tue Mar 12 15:49:31 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, SET HEADING: 0.0, Tue Mar 12 15:49:31 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, Gyro offset: -0.52734375, Tue Mar 12 15:49:31 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, SET HEADING: 0.0, Tue Mar 12 15:49:31 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, Gyro offset: -0.52734375, Tue Mar 12 15:49:31 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, Set Hatch Spear to STOW, Tue Mar 12 15:49:31 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:49:31 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, Starting Teleop, Tue Mar 12 15:49:31 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, Disabled Init, Tue Mar 12 15:49:39 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, Stopping Loops, Tue Mar 12 15:49:39 PDT 2019
+c5841885-fac1-47d3-8906-2370e54b087a, Set Hatch Spear to STOW, Tue Mar 12 15:49:39 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:50:25 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:50:25 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:50:25 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:50:25 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:50:25 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:50:26 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:50:26 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, Robot Startup, Tue Mar 12 15:50:27 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, Robot Init on Practice Robot, Tue Mar 12 15:50:27 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, Disabled Init, Tue Mar 12 15:50:27 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, Set Hatch Spear to STOW, Tue Mar 12 15:50:27 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, Teleop Init, Tue Mar 12 15:50:28 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, SigNotUpdated Side: Right, Tue Mar 12 15:50:28 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, SET HEADING: 0.0, Tue Mar 12 15:50:28 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, Gyro offset: -0.3076171875, Tue Mar 12 15:50:28 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, SET HEADING: 0.0, Tue Mar 12 15:50:28 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, Gyro offset: -0.263671875, Tue Mar 12 15:50:28 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, SET HEADING: 0.0, Tue Mar 12 15:50:28 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, Gyro offset: -0.263671875, Tue Mar 12 15:50:28 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, Set Hatch Spear to STOW, Tue Mar 12 15:50:28 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:50:28 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, Starting Teleop, Tue Mar 12 15:50:28 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, Disabled Init, Tue Mar 12 15:50:32 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, Stopping Loops, Tue Mar 12 15:50:32 PDT 2019
+e08593f7-ea2a-4b46-9de8-3434584e51be, Set Hatch Spear to STOW, Tue Mar 12 15:50:32 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:51:13 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:51:13 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:51:13 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:51:13 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:51:13 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, Robot Startup, Tue Mar 12 15:51:15 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, Robot Init on Practice Robot, Tue Mar 12 15:51:15 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, Disabled Init, Tue Mar 12 15:51:15 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, Set Hatch Spear to STOW, Tue Mar 12 15:51:15 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, Teleop Init, Tue Mar 12 15:51:15 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, SET HEADING: 0.0, Tue Mar 12 15:51:16 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, Gyro offset: -0.0439453125, Tue Mar 12 15:51:16 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, SET HEADING: 0.0, Tue Mar 12 15:51:16 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, Gyro offset: -0.0439453125, Tue Mar 12 15:51:16 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, SET HEADING: 0.0, Tue Mar 12 15:51:16 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, Gyro offset: -0.0439453125, Tue Mar 12 15:51:16 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, Set Hatch Spear to STOW, Tue Mar 12 15:51:16 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:51:16 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, Starting Teleop, Tue Mar 12 15:51:16 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, Disabled Init, Tue Mar 12 15:51:19 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, Stopping Loops, Tue Mar 12 15:51:19 PDT 2019
+67e1d91d-f1c0-460a-958b-8c27c3ff121f, Set Hatch Spear to STOW, Tue Mar 12 15:51:19 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:51:57 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:51:57 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:51:57 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:51:58 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, SigNotUpdated Side: Right, Tue Mar 12 15:51:58 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Robot Startup, Tue Mar 12 15:51:59 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Robot Init on Practice Robot, Tue Mar 12 15:51:59 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Disabled Init, Tue Mar 12 15:51:59 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Set Hatch Spear to STOW, Tue Mar 12 15:51:59 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Teleop Init, Tue Mar 12 15:52:00 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, SigNotUpdated Side: Right, Tue Mar 12 15:52:00 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, SET HEADING: 0.0, Tue Mar 12 15:52:00 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Gyro offset: -0.087890625, Tue Mar 12 15:52:00 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, SET HEADING: 0.0, Tue Mar 12 15:52:00 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Gyro offset: -0.087890625, Tue Mar 12 15:52:00 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, SET HEADING: 0.0, Tue Mar 12 15:52:00 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Gyro offset: -0.087890625, Tue Mar 12 15:52:00 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Set Hatch Spear to STOW, Tue Mar 12 15:52:00 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:52:00 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Starting Teleop, Tue Mar 12 15:52:00 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Disabled Init, Tue Mar 12 15:52:05 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Stopping Loops, Tue Mar 12 15:52:05 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Set Hatch Spear to STOW, Tue Mar 12 15:52:05 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Teleop Init, Tue Mar 12 15:52:07 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, SET HEADING: 0.0, Tue Mar 12 15:52:07 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Gyro offset: -0.0439453125, Tue Mar 12 15:52:07 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, SET HEADING: 0.0, Tue Mar 12 15:52:07 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Gyro offset: -0.0439453125, Tue Mar 12 15:52:07 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Set Hatch Spear to STOW, Tue Mar 12 15:52:07 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:52:07 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Starting Teleop, Tue Mar 12 15:52:07 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Disabled Init, Tue Mar 12 15:52:09 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Stopping Loops, Tue Mar 12 15:52:09 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Set Hatch Spear to STOW, Tue Mar 12 15:52:09 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Teleop Init, Tue Mar 12 15:52:14 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, SET HEADING: 0.0, Tue Mar 12 15:52:14 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Gyro offset: 0.0, Tue Mar 12 15:52:14 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, SET HEADING: 0.0, Tue Mar 12 15:52:14 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Gyro offset: 0.0, Tue Mar 12 15:52:14 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Set Hatch Spear to STOW, Tue Mar 12 15:52:14 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:52:14 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Starting Teleop, Tue Mar 12 15:52:14 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Disabled Init, Tue Mar 12 15:52:18 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Stopping Loops, Tue Mar 12 15:52:18 PDT 2019
+37a08092-4cf6-4e24-9ae9-a180f52441ea, Set Hatch Spear to STOW, Tue Mar 12 15:52:18 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:53:05 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:53:05 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:53:05 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:53:05 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, SigNotUpdated Side: Right, Tue Mar 12 15:53:06 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, SigNotUpdated Side: Right, Tue Mar 12 15:53:06 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, SigNotUpdated Side: Right, Tue Mar 12 15:53:06 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, Robot Startup, Tue Mar 12 15:53:06 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, Robot Init on Practice Robot, Tue Mar 12 15:53:06 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, Disabled Init, Tue Mar 12 15:53:06 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, Set Hatch Spear to STOW, Tue Mar 12 15:53:06 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, Teleop Init, Tue Mar 12 15:53:07 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, SET HEADING: 0.0, Tue Mar 12 15:53:07 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, Gyro offset: -0.3515625, Tue Mar 12 15:53:07 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, SET HEADING: 0.0, Tue Mar 12 15:53:07 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, Gyro offset: -0.3515625, Tue Mar 12 15:53:07 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, SET HEADING: 0.0, Tue Mar 12 15:53:07 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, Gyro offset: -0.3515625, Tue Mar 12 15:53:07 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, Set Hatch Spear to STOW, Tue Mar 12 15:53:07 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:53:07 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, Starting Teleop, Tue Mar 12 15:53:07 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, Disabled Init, Tue Mar 12 15:53:18 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, Stopping Loops, Tue Mar 12 15:53:18 PDT 2019
+9d91f7d1-8630-45ba-8480-d4b0f543df1c, Set Hatch Spear to STOW, Tue Mar 12 15:53:18 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:54:02 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:54:03 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:54:03 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:54:03 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:54:03 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, SigNotUpdated Side: Right, Tue Mar 12 15:54:04 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, Robot Startup, Tue Mar 12 15:54:04 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, Robot Init on Practice Robot, Tue Mar 12 15:54:04 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, Disabled Init, Tue Mar 12 15:54:04 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, Set Hatch Spear to STOW, Tue Mar 12 15:54:04 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, Teleop Init, Tue Mar 12 15:54:05 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, SET HEADING: 0.0, Tue Mar 12 15:54:05 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, Gyro offset: -0.1318359375, Tue Mar 12 15:54:05 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, SET HEADING: 0.0, Tue Mar 12 15:54:05 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, Gyro offset: 0.0, Tue Mar 12 15:54:05 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, SET HEADING: 0.0, Tue Mar 12 15:54:05 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, Gyro offset: 0.0, Tue Mar 12 15:54:05 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, Set Hatch Spear to STOW, Tue Mar 12 15:54:05 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:54:05 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, Starting Teleop, Tue Mar 12 15:54:05 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, Disabled Init, Tue Mar 12 15:54:13 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, Stopping Loops, Tue Mar 12 15:54:13 PDT 2019
+0314bf8f-18a2-474d-becf-471e33080770, Set Hatch Spear to STOW, Tue Mar 12 15:54:13 PDT 2019
+5c25e5f4-062e-468e-9e99-d391995fa771, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:54:57 PDT 2019
+5c25e5f4-062e-468e-9e99-d391995fa771, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:54:57 PDT 2019
+5c25e5f4-062e-468e-9e99-d391995fa771, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:54:57 PDT 2019
+5c25e5f4-062e-468e-9e99-d391995fa771, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:54:57 PDT 2019
+5c25e5f4-062e-468e-9e99-d391995fa771, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:54:57 PDT 2019
+5c25e5f4-062e-468e-9e99-d391995fa771, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:54:58 PDT 2019
+5c25e5f4-062e-468e-9e99-d391995fa771, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:54:58 PDT 2019
+5c25e5f4-062e-468e-9e99-d391995fa771, Robot Startup, Tue Mar 12 15:54:59 PDT 2019
+5c25e5f4-062e-468e-9e99-d391995fa771, Robot Init on Practice Robot, Tue Mar 12 15:54:59 PDT 2019
+5c25e5f4-062e-468e-9e99-d391995fa771, Disabled Init, Tue Mar 12 15:55:00 PDT 2019
+5c25e5f4-062e-468e-9e99-d391995fa771, Set Hatch Spear to STOW, Tue Mar 12 15:55:00 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:55:10 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:55:10 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:55:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:55:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:55:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 15:55:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SigNotUpdated Side: Right, Tue Mar 12 15:55:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Robot Startup, Tue Mar 12 15:55:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Robot Init on Practice Robot, Tue Mar 12 15:55:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Disabled Init, Tue Mar 12 15:55:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 15:55:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Teleop Init, Tue Mar 12 15:55:23 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 15:55:23 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: -0.9228515625, Tue Mar 12 15:55:23 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 15:55:23 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: -0.9228515625, Tue Mar 12 15:55:23 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 15:55:23 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: -0.9228515625, Tue Mar 12 15:55:23 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 15:55:23 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:55:23 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Starting Teleop, Tue Mar 12 15:55:23 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Disabled Init, Tue Mar 12 15:56:01 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Stopping Loops, Tue Mar 12 15:56:01 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 15:56:01 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Teleop Init, Tue Mar 12 15:56:40 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 15:56:40 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: 52.6025390625, Tue Mar 12 15:56:40 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 15:56:40 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: 52.6025390625, Tue Mar 12 15:56:40 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 15:56:40 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 15:56:40 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Starting Teleop, Tue Mar 12 15:56:40 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:56:43 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:56:43 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:56:43 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:56:43 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:56:55 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:56:55 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:57:06 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:57:06 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:57:07 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:57:07 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 15:57:07 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 15:57:21 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:57:21 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:57:24 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:57:24 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:57:33 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:57:33 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 15:57:38 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:57:41 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:57:41 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 15:57:41 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 15:57:41 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 15:58:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:58:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:58:19 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:58:19 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:58:19 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:58:19 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:58:23 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:58:23 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 15:58:33 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 15:58:44 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:58:44 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:58:50 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:58:50 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:59:01 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:59:01 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:59:01 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:59:01 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 15:59:10 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 15:59:22 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:59:22 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:59:56 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:59:56 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 15:59:57 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 15:59:57 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:00:03 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:00:03 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:00:18 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:00:18 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:00:29 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:00:29 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:00:33 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:00:43 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:00:43 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:00:47 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:00:47 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:00:47 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:00:47 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:01:13 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:01:13 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:01:14 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:01:14 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:01:15 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:01:15 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:01:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:01:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:01:43 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:01:43 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:01:49 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:01:55 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:01:55 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:02:01 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:02:01 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:02:03 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:02:03 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:02:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:02:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:02:30 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:02:30 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:02:46 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:02:46 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:03:02 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:03:02 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:03:13 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:03:13 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:03:22 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:03:22 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:03:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:03:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:03:30 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:03:36 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:03:36 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:03:39 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:03:39 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:03:43 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:03:47 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:03:47 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:03:49 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:03:49 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Disabled Init, Tue Mar 12 16:04:00 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Stopping Loops, Tue Mar 12 16:04:00 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:04:00 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Teleop Init, Tue Mar 12 16:04:36 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 16:04:36 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: -42.80273437499999, Tue Mar 12 16:04:36 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 16:04:36 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: -42.80273437499999, Tue Mar 12 16:04:36 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:04:36 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 16:04:36 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Starting Teleop, Tue Mar 12 16:04:36 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:04:37 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:04:37 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:04:42 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:04:42 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:04:47 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:04:51 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:04:51 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:04:54 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:04:54 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:04:58 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:05:06 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:05:06 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:05:08 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:05:08 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:05:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:05:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:05:15 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:05:15 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:05:16 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:05:16 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:05:19 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:05:31 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:05:31 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:05:36 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:05:36 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:05:36 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:05:36 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:05:37 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:05:37 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:05:46 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:05:46 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:05:48 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:05:54 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:05:54 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:05:58 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:05:58 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:06:02 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:06:02 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:06:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:06:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:06:06 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:06:06 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:06:09 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:06:16 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:06:16 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:06:19 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:06:19 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:06:20 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:06:20 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:06:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:06:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:06:28 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:06:28 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:06:30 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:06:30 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:07:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:07:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:07:14 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:07:20 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:07:21 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:07:24 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:07:24 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:07:28 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:07:35 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:07:35 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:07:38 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:07:38 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:07:42 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:07:49 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:07:49 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:07:53 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:07:53 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:07:53 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:07:53 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:07:54 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:07:54 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:07:56 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:07:56 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:07:58 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:08:07 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:08:07 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:08:09 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:08:09 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Disabled Init, Tue Mar 12 16:08:16 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Stopping Loops, Tue Mar 12 16:08:16 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:08:16 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Teleop Init, Tue Mar 12 16:09:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 16:09:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: -114.43359375000006, Tue Mar 12 16:09:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 16:09:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: -114.43359375000006, Tue Mar 12 16:09:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:09:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 16:09:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Starting Teleop, Tue Mar 12 16:09:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:09:52 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:09:52 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:09:55 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:09:55 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:09:56 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:09:56 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:09:56 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:09:56 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:10:00 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:10:08 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:10:08 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:10:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:10:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:10:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:10:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:10:13 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:10:13 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:10:15 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:10:22 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:10:22 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:10:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:10:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:10:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:10:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:10:30 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:10:39 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:10:39 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:11:01 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:01 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:11:01 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:01 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:11:13 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:13 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:11:13 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:13 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:11:14 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:14 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:11:14 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:14 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:11:21 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:21 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:11:22 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:22 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:11:22 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:22 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:11:29 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:29 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:11:32 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:11:37 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:37 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:11:40 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:40 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:11:44 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:44 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:11:46 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:11:52 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:52 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:11:56 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:11:56 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:11:59 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:11:59 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:12:04 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:12:04 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Disabled Init, Tue Mar 12 16:12:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Stopping Loops, Tue Mar 12 16:12:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:12:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Teleop Init, Tue Mar 12 16:12:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 16:12:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: 76.81640625, Tue Mar 12 16:12:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 16:12:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: 76.81640625, Tue Mar 12 16:12:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:12:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 16:12:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Starting Teleop, Tue Mar 12 16:12:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:12:22 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:12:22 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:12:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:12:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:12:37 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:12:37 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:12:38 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:12:38 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:12:43 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:12:43 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:12:44 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:12:44 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:12:46 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:12:46 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Disabled Init, Tue Mar 12 16:12:53 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Stopping Loops, Tue Mar 12 16:12:53 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:12:53 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Teleop Init, Tue Mar 12 16:14:57 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 16:14:57 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: -56.7333984375, Tue Mar 12 16:14:57 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 16:14:57 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: -56.7333984375, Tue Mar 12 16:14:57 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:14:57 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 16:14:57 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Starting Teleop, Tue Mar 12 16:14:57 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Disabled Init, Tue Mar 12 16:14:58 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Stopping Loops, Tue Mar 12 16:14:58 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:14:58 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Teleop Init, Tue Mar 12 16:16:08 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SigNotUpdated Side: Right, Tue Mar 12 16:16:08 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 16:16:08 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: -0.9667968750000001, Tue Mar 12 16:16:08 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 16:16:08 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: -0.9667968750000001, Tue Mar 12 16:16:08 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:16:08 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 16:16:08 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Starting Teleop, Tue Mar 12 16:16:08 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:16:48 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:16:48 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:16:53 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:16:53 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:16:53 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:16:53 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:16:55 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:16:55 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:16:59 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:17:16 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:17:16 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:17:21 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:17:21 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:17:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:17:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:17:34 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:17:44 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:17:44 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:17:47 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:17:47 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:17:51 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:17:51 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:17:54 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:18:09 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:18:09 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:18:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:18:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:18:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:18:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:18:59 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:18:59 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:19:31 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:19:31 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:19:44 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:20:03 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:20:03 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:20:10 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:20:10 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:20:10 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:20:10 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:20:12 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:20:25 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:20:25 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:20:30 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:20:30 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:20:37 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:20:37 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:22:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:22:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:22:10 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:22:10 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:22:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:22:11 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:22:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:22:27 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:22:35 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:22:35 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:22:44 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:22:44 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:22:45 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:22:45 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:22:48 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:22:48 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:22:52 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:22:59 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:22:59 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:23:03 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:23:03 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:23:08 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:23:15 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:23:16 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:23:18 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:23:18 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:23:25 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:23:25 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:23:28 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:23:28 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:23:28 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:23:28 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:23:31 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Disabled Init, Tue Mar 12 16:23:37 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Stopping Loops, Tue Mar 12 16:23:37 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:23:37 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Teleop Init, Tue Mar 12 16:24:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 16:24:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: 63.01757812499991, Tue Mar 12 16:24:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, SET HEADING: 0.0, Tue Mar 12 16:24:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Gyro offset: 63.01757812499991, Tue Mar 12 16:24:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:24:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 16:24:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Starting Teleop, Tue Mar 12 16:24:05 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:24:23 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:24:23 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:24:26 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:24:26 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:24:26 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:24:26 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:24:30 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:24:45 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:24:45 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 16:24:54 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to PLACE, Tue Mar 12 16:24:54 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 16:24:56 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:24:56 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Disabled Init, Tue Mar 12 16:25:30 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Stopping Loops, Tue Mar 12 16:25:30 PDT 2019
+603c423c-1bef-44e0-8359-15e7d5cd5eab, Set Hatch Spear to STOW, Tue Mar 12 16:25:30 PDT 2019
+437cd8e9-7db9-42f4-9cd9-5b5b9b9ceeaf, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:26:02 PDT 2019
+437cd8e9-7db9-42f4-9cd9-5b5b9b9ceeaf, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:26:02 PDT 2019
+437cd8e9-7db9-42f4-9cd9-5b5b9b9ceeaf, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:26:02 PDT 2019
+437cd8e9-7db9-42f4-9cd9-5b5b9b9ceeaf, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:26:03 PDT 2019
+437cd8e9-7db9-42f4-9cd9-5b5b9b9ceeaf, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:26:03 PDT 2019
+437cd8e9-7db9-42f4-9cd9-5b5b9b9ceeaf, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:26:03 PDT 2019
+437cd8e9-7db9-42f4-9cd9-5b5b9b9ceeaf, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:26:03 PDT 2019
+437cd8e9-7db9-42f4-9cd9-5b5b9b9ceeaf, SigNotUpdated Side: Right, Tue Mar 12 16:26:03 PDT 2019
+437cd8e9-7db9-42f4-9cd9-5b5b9b9ceeaf, Robot Startup, Tue Mar 12 16:26:04 PDT 2019
+437cd8e9-7db9-42f4-9cd9-5b5b9b9ceeaf, Robot Init on Practice Robot, Tue Mar 12 16:26:04 PDT 2019
+437cd8e9-7db9-42f4-9cd9-5b5b9b9ceeaf, Disabled Init, Tue Mar 12 16:26:04 PDT 2019
+437cd8e9-7db9-42f4-9cd9-5b5b9b9ceeaf, Set Hatch Spear to STOW, Tue Mar 12 16:26:04 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Teleop Init, Tue Mar 12 16:37:18 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, SET HEADING: 0.0, Tue Mar 12 16:37:19 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Gyro offset: -0.9667968750000001, Tue Mar 12 16:37:19 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, SET HEADING: 0.0, Tue Mar 12 16:37:19 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Gyro offset: -0.9667968750000001, Tue Mar 12 16:37:19 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, SET HEADING: 0.0, Tue Mar 12 16:37:19 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Gyro offset: -0.9667968750000001, Tue Mar 12 16:37:19 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Set Hatch Spear to STOW, Tue Mar 12 16:37:19 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 16:37:19 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Starting Teleop, Tue Mar 12 16:37:19 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Disabled Init, Tue Mar 12 16:37:22 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Stopping Loops, Tue Mar 12 16:37:22 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Set Hatch Spear to STOW, Tue Mar 12 16:37:22 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Teleop Init, Tue Mar 12 16:37:23 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, SET HEADING: 0.0, Tue Mar 12 16:37:23 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Gyro offset: 0.0, Tue Mar 12 16:37:23 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, SET HEADING: 0.0, Tue Mar 12 16:37:23 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Gyro offset: 0.0, Tue Mar 12 16:37:23 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Set Hatch Spear to STOW, Tue Mar 12 16:37:23 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 16:37:23 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Starting Teleop, Tue Mar 12 16:37:23 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Disabled Init, Tue Mar 12 16:37:26 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Stopping Loops, Tue Mar 12 16:37:26 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Set Hatch Spear to STOW, Tue Mar 12 16:37:26 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Teleop Init, Tue Mar 12 16:38:08 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, SigNotUpdated Side: Right, Tue Mar 12 16:38:08 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, SET HEADING: 0.0, Tue Mar 12 16:38:08 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Gyro offset: -0.2197265625, Tue Mar 12 16:38:08 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, SET HEADING: 0.0, Tue Mar 12 16:38:08 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Gyro offset: -0.2197265625, Tue Mar 12 16:38:08 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Set Hatch Spear to STOW, Tue Mar 12 16:38:08 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 16:38:08 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Starting Teleop, Tue Mar 12 16:38:08 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Disabled Init, Tue Mar 12 16:38:09 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Stopping Loops, Tue Mar 12 16:38:09 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Set Hatch Spear to STOW, Tue Mar 12 16:38:09 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Teleop Init, Tue Mar 12 16:38:10 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, SigNotUpdated Side: Right, Tue Mar 12 16:38:10 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, SET HEADING: 0.0, Tue Mar 12 16:38:10 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Gyro offset: 0.0, Tue Mar 12 16:38:10 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, SET HEADING: 0.0, Tue Mar 12 16:38:10 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Gyro offset: 0.0, Tue Mar 12 16:38:10 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Set Hatch Spear to STOW, Tue Mar 12 16:38:10 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 16:38:10 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Starting Teleop, Tue Mar 12 16:38:10 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Disabled Init, Tue Mar 12 16:38:10 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Stopping Loops, Tue Mar 12 16:38:10 PDT 2019
+b2a2cda4-1b9f-42d6-891e-95f972963070, Set Hatch Spear to STOW, Tue Mar 12 16:38:10 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:38:30 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:38:30 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:38:30 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:38:30 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, SigNotUpdated Side: Right, Tue Mar 12 16:38:31 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, Robot Startup, Tue Mar 12 16:38:32 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, Robot Init on Practice Robot, Tue Mar 12 16:38:32 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, Disabled Init, Tue Mar 12 16:38:33 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, Set Hatch Spear to STOW, Tue Mar 12 16:38:33 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, Teleop Init, Tue Mar 12 16:38:38 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, SET HEADING: 0.0, Tue Mar 12 16:38:38 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, Gyro offset: -0.17578124999999997, Tue Mar 12 16:38:38 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, SET HEADING: 0.0, Tue Mar 12 16:38:38 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, Gyro offset: 0.0, Tue Mar 12 16:38:38 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, SET HEADING: 0.0, Tue Mar 12 16:38:38 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, Gyro offset: 0.0, Tue Mar 12 16:38:38 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, Set Hatch Spear to STOW, Tue Mar 12 16:38:38 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 16:38:39 PDT 2019
+eac5445c-5c31-459a-874c-bc187743040e, Starting Teleop, Tue Mar 12 16:38:39 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:38:51 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:38:52 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:38:52 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:38:52 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SigNotUpdated Side: Cargo_Intake, Tue Mar 12 16:38:52 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SigNotUpdated Side: Right, Tue Mar 12 16:38:53 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Robot Startup, Tue Mar 12 16:38:53 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Robot Init on Practice Robot, Tue Mar 12 16:38:53 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Disabled Init, Tue Mar 12 16:38:53 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 16:38:54 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Teleop Init, Tue Mar 12 16:39:36 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 16:39:36 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: -0.703125, Tue Mar 12 16:39:36 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 16:39:36 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: -0.703125, Tue Mar 12 16:39:36 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 16:39:36 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: -0.703125, Tue Mar 12 16:39:36 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 16:39:36 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 16:39:36 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Starting Teleop, Tue Mar 12 16:39:36 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Tue Mar 12 16:39:54 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Tue Mar 12 16:39:54 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Disabled Init, Tue Mar 12 16:48:33 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Stopping Loops, Tue Mar 12 16:48:33 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 16:48:33 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Teleop Init, Tue Mar 12 16:50:16 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 16:50:16 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: -27.50976562500048, Tue Mar 12 16:50:16 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 16:50:16 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: -27.50976562500048, Tue Mar 12 16:50:16 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 16:50:16 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 16:50:16 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Starting Teleop, Tue Mar 12 16:50:16 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Disabled Init, Tue Mar 12 16:53:37 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Stopping Loops, Tue Mar 12 16:53:37 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 16:53:37 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Teleop Init, Tue Mar 12 17:06:26 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SigNotUpdated Side: Right, Tue Mar 12 17:06:26 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 17:06:26 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: 144.58007812499994, Tue Mar 12 17:06:26 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 17:06:26 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: 144.58007812499994, Tue Mar 12 17:06:26 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:06:26 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:06:26 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Starting Teleop, Tue Mar 12 17:06:26 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Disabled Init, Tue Mar 12 17:07:40 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Stopping Loops, Tue Mar 12 17:07:40 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:07:40 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Teleop Init, Tue Mar 12 17:07:57 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 17:07:57 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: -144.9755859375, Tue Mar 12 17:07:57 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 17:07:57 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: -144.9755859375, Tue Mar 12 17:07:57 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:07:57 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:07:57 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Starting Teleop, Tue Mar 12 17:07:57 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Switching to Hatch Arm Open Loop, Tue Mar 12 17:07:57 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Disabled Init, Tue Mar 12 17:10:59 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Stopping Loops, Tue Mar 12 17:10:59 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:10:59 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Teleop Init, Tue Mar 12 17:11:25 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SigNotUpdated Side: Right, Tue Mar 12 17:11:25 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 17:11:25 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: -155.5224609375001, Tue Mar 12 17:11:25 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 17:11:25 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: -155.5224609375001, Tue Mar 12 17:11:25 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:11:25 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:11:25 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Starting Teleop, Tue Mar 12 17:11:25 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Disabled Init, Tue Mar 12 17:15:53 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Stopping Loops, Tue Mar 12 17:15:53 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:15:53 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Teleop Init, Tue Mar 12 17:15:54 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 17:15:55 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: -79.9804687499999, Tue Mar 12 17:15:55 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 17:15:55 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: -79.9804687499999, Tue Mar 12 17:15:55 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:15:55 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:15:55 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Starting Teleop, Tue Mar 12 17:15:55 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Disabled Init, Tue Mar 12 17:17:17 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Stopping Loops, Tue Mar 12 17:17:17 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:17:17 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Teleop Init, Tue Mar 12 17:18:37 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SigNotUpdated Side: Right, Tue Mar 12 17:18:37 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 17:18:37 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: 55.1513671875, Tue Mar 12 17:18:37 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 17:18:37 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: 55.1513671875, Tue Mar 12 17:18:37 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:18:37 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:18:37 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Starting Teleop, Tue Mar 12 17:18:37 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Disabled Init, Tue Mar 12 17:18:51 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Stopping Loops, Tue Mar 12 17:18:51 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:18:51 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Teleop Init, Tue Mar 12 17:18:54 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SigNotUpdated Side: Right, Tue Mar 12 17:18:54 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 17:18:54 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: -6.3720703125, Tue Mar 12 17:18:54 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, SET HEADING: 0.0, Tue Mar 12 17:18:54 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Gyro offset: -6.3720703125, Tue Mar 12 17:18:54 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:18:54 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:18:54 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Starting Teleop, Tue Mar 12 17:18:54 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Switching to Cargo Arm Open Loop, Tue Mar 12 17:19:41 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Switching to Cargo Arm Motion Magic, Tue Mar 12 17:19:52 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:21:06 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:21:06 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:21:11 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:21:11 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:21:17 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:21:17 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:21:17 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Switching to Hatch Arm Motion Magic, Tue Mar 12 17:21:17 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:21:27 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:21:27 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:21:52 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:21:52 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:21:54 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:22:07 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:22:07 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:22:13 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:22:13 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:22:21 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:22:21 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:22:23 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:22:37 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:22:37 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:22:45 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:22:45 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:22:49 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:22:49 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:22:52 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:23:05 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:23:05 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:23:08 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:23:08 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:23:09 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:23:09 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:23:12 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:23:12 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:23:19 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:23:19 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:23:28 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:23:28 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:23:30 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:23:30 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:23:33 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:23:33 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:23:44 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:23:44 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:23:45 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:23:45 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:23:47 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:23:47 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:23:51 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:23:51 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:23:56 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:23:56 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:24:30 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:24:30 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:24:32 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:24:42 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:24:42 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:25:04 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to PLACE, Tue Mar 12 17:25:04 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:25:05 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:25:05 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Disabled Init, Tue Mar 12 17:25:39 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Stopping Loops, Tue Mar 12 17:25:39 PDT 2019
+1d0adb46-5627-4cca-9c7b-a2ccf0f5f6cd, Set Hatch Spear to STOW, Tue Mar 12 17:25:39 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:27:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:27:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 0.0, Tue Mar 12 17:27:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:27:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 0.0, Tue Mar 12 17:27:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:27:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 0.0, Tue Mar 12 17:27:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:27:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:27:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:27:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:27:44 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:27:44 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:27:44 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:27:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:27:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 0.0, Tue Mar 12 17:27:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:27:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 0.0, Tue Mar 12 17:27:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:27:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:27:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:27:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:27:47 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:27:47 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:27:47 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:27:53 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SigNotUpdated Side: Right, Tue Mar 12 17:27:53 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:27:53 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 0.0, Tue Mar 12 17:27:53 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:27:53 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 0.0, Tue Mar 12 17:27:53 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:27:53 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:27:53 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:27:53 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:27:53 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:27:53 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:27:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:27:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:27:55 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:27:55 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:27:55 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:27:55 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:28:15 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:28:15 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:28:22 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:28:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:28:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:28:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:28:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SigNotUpdated Side: Right, Tue Mar 12 17:28:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:28:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -59.72167968749999, Tue Mar 12 17:28:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:28:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -59.72167968749999, Tue Mar 12 17:28:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:28:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:28:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:28:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:29:03 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:29:03 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:29:05 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:29:05 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:29:08 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:29:08 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:29:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:29:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:29:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:29:27 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:29:27 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:29:34 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:29:34 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:29:35 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:29:35 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:29:35 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:29:35 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:29:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:29:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:29:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:29:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:29:48 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:29:59 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:29:59 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:30:01 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:30:01 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:30:06 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:30:06 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:30:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:30:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:30:26 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:30:27 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:30:29 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:30:29 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:30:29 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:31:26 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:31:26 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 88.9892578125, Tue Mar 12 17:31:26 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:31:26 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 88.9892578125, Tue Mar 12 17:31:26 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:31:26 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:31:26 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:31:26 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:31:31 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:31:31 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:31:32 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:31:32 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:31:34 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:31:48 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:31:48 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:32:05 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:32:05 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:32:09 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:32:09 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:32:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:32:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:32:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:32:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:32:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:32:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:32:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:32:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:32:23 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:32:31 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:32:31 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:32:33 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:32:33 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:32:40 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:32:40 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:32:44 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:32:44 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:32:44 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:32:44 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:32:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:32:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:32:49 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:33:02 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:33:02 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:33:05 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:33:05 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:33:06 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:33:06 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:33:06 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:33:06 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:33:06 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:33:06 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:33:10 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:33:17 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:33:17 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:33:27 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:33:27 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:34:37 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:34:37 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:34:37 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:35:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:35:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 42.36328124999994, Tue Mar 12 17:35:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:35:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 42.36328124999994, Tue Mar 12 17:35:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:35:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:35:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:35:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:35:12 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:35:12 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:35:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:35:41 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:35:41 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:35:47 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:35:47 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:35:48 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:35:48 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:35:51 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:35:58 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:35:58 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:36:00 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:36:00 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:36:03 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:36:03 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:36:06 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:36:06 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:36:07 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:36:07 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:36:10 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:36:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:36:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:36:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:36:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:36:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:36:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:36:23 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:36:23 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:36:24 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:36:24 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:36:30 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:36:30 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:36:31 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:36:31 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:36:35 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:36:35 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:36:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:36:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:36:55 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:36:55 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:37:01 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:37:01 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:37:03 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:37:03 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:37:03 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:37:03 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:37:08 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:37:15 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:37:15 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:37:17 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:37:17 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:37:18 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:37:18 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:37:22 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:37:22 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:37:22 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:37:22 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:37:28 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:37:28 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:38:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:38:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:38:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:38:50 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:38:50 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -105.73242187499994, Tue Mar 12 17:38:50 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:38:50 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -105.73242187499994, Tue Mar 12 17:38:50 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:38:50 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:38:50 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:38:50 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:38:55 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:38:55 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:39:02 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:39:08 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:39:08 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:39:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:39:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:39:17 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:39:17 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:39:17 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:39:51 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:39:52 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 71.93847656250001, Tue Mar 12 17:39:52 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:39:52 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 71.93847656250001, Tue Mar 12 17:39:52 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:39:52 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:39:52 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:39:52 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:39:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:39:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:40:05 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:40:13 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:40:13 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:40:14 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:40:14 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:40:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:40:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:40:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:40:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:40:27 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:40:27 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:40:31 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:40:31 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:40:31 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:40:31 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:40:31 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:40:31 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:40:32 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:40:32 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:40:34 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:40:43 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:40:43 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:40:47 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:40:47 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:40:48 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:40:48 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:40:50 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:40:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:40:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:41:02 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:41:02 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:41:03 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:41:03 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:41:05 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:41:05 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:41:06 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:41:06 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:41:07 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:41:07 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:41:07 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:41:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SigNotUpdated Side: Right, Tue Mar 12 17:41:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:41:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -160.26855468749997, Tue Mar 12 17:41:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:41:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -160.26855468749997, Tue Mar 12 17:41:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:41:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:41:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:41:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:41:22 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:41:22 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:41:30 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:41:30 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:41:33 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:41:41 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:41:41 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:41:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:41:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:41:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:41:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:41:48 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:41:48 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:41:48 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:41:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:41:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:41:56 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:41:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:41:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:41:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:41:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:41:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:42:00 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:42:08 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:42:08 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:42:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:42:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:42:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:42:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:42:24 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:42:24 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:42:24 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:42:39 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SigNotUpdated Side: Right, Tue Mar 12 17:42:39 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:42:39 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -150.82031249999997, Tue Mar 12 17:42:39 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:42:39 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -150.82031249999997, Tue Mar 12 17:42:39 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:42:39 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:42:39 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:42:39 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:42:40 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:42:40 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:42:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:42:50 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:42:50 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:42:56 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:42:56 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:42:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:42:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:42:59 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:43:07 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:43:07 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:43:10 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:43:10 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:43:10 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:43:10 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:43:17 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:43:24 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:43:24 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:43:26 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:43:26 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:43:26 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:43:26 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:43:27 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:43:27 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:43:30 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:43:35 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:43:35 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:43:41 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:43:41 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:43:41 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:43:41 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:43:46 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:43:46 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:43:46 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:44:19 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:44:19 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -44.999999999999986, Tue Mar 12 17:44:19 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:44:19 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -44.999999999999986, Tue Mar 12 17:44:19 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:44:19 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:44:19 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:44:19 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:44:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:44:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:44:24 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:44:30 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:44:30 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:44:34 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:44:34 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:44:34 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:44:34 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:44:34 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:44:34 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:44:34 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:44:34 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:44:37 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:44:44 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:44:44 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:44:48 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:44:48 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:44:49 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:44:49 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:44:49 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:44:49 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:44:52 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:45:04 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:45:04 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:45:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:45:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:45:14 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:45:14 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:45:14 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:45:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:45:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -116.27929687500001, Tue Mar 12 17:45:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:45:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -116.27929687500001, Tue Mar 12 17:45:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:45:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:45:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:45:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:45:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:45:21 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:45:27 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:45:33 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:45:33 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:45:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:45:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:45:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:45:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:45:37 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:45:37 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:45:37 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:45:37 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:45:41 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:45:41 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:45:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:45:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:45:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:46:12 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:46:12 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 166.06933593749997, Tue Mar 12 17:46:12 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:46:12 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: 166.06933593749997, Tue Mar 12 17:46:12 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:46:12 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:46:12 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:46:12 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:46:13 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:46:13 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:46:17 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:46:23 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:46:23 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:46:29 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:46:29 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:46:30 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:46:30 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:46:30 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:46:30 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:46:34 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:46:41 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:46:41 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:46:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:46:45 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:46:47 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:46:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:46:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:46:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:46:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:46:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:46:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:46:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:46:57 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:47:01 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:47:01 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:47:02 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:47:08 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:47:08 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:47:13 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:47:13 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:47:13 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:48:09 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:48:09 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -5.712890625, Tue Mar 12 17:48:09 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:48:09 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -5.712890625, Tue Mar 12 17:48:09 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:48:09 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:48:09 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:48:09 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:48:22 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:48:22 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:48:26 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:48:37 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:48:37 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:48:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:48:42 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:48:43 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:48:43 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:48:47 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:48:55 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:48:55 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:48:58 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:48:58 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:48:59 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:48:59 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:49:02 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:49:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:49:11 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:49:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:49:16 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:49:17 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:49:17 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:49:19 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:49:19 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:49:19 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Teleop Init, Tue Mar 12 17:50:04 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:50:04 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -23.33496093750003, Tue Mar 12 17:50:04 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, SET HEADING: 0.0, Tue Mar 12 17:50:04 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Gyro offset: -23.33496093750003, Tue Mar 12 17:50:04 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:50:04 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Switching to Robot State:TELEOP_DRIVE, Tue Mar 12 17:50:04 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Starting Teleop, Tue Mar 12 17:50:04 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:50:07 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:50:07 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:50:13 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:50:13 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:50:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:50:20 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:50:30 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:50:30 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:50:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:50:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:50:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:50:36 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:50:41 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:50:49 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:50:49 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:50:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:50:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:50:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:50:54 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:50:58 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Tue Mar 12 17:51:05 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:51:05 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:51:09 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:51:09 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Tue Mar 12 17:51:09 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to PLACE, Tue Mar 12 17:51:09 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Disabled Init, Tue Mar 12 17:51:10 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Stopping Loops, Tue Mar 12 17:51:10 PDT 2019
+420a8118-a85e-4711-af29-5882ec8c4b38, Set Hatch Spear to STOW, Tue Mar 12 17:51:10 PDT 2019

@@ -1,5 +1,6 @@
 package frc.robot.auto.actions;
 
+import frc.robot.Robot;
 import frc.robot.lib.util.MkTimer;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;
@@ -16,7 +17,7 @@ public class VisionDrive implements Action {
   @Override
   public boolean isFinished() {
     return expirationTimer.isDone() || ((mGoal == VisionGoal.INTAKE_HATCH
-        || mGoal == VisionGoal.PLACE_HATCH) && (HatchArm.getInstance().isHatchLimitTriggered())) || (mGoal == VisionGoal.PLACE_CARGO
+        || mGoal == VisionGoal.PLACE_HATCH) && (HatchArm.getInstance().isHatchTriggeredTimer())) || (mGoal == VisionGoal.PLACE_CARGO
         && Drive.getInstance().isDriveStateFinished());
   }
 

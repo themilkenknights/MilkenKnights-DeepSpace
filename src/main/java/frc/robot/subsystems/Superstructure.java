@@ -14,6 +14,7 @@ import frc.robot.Constants.MISC;
 import frc.robot.Input;
 import frc.robot.Robot;
 import frc.robot.auto.modes.ClimbLevel2Mode;
+import frc.robot.auto.modes.FrontSideCargshipAuto;
 import frc.robot.auto.modes.HatchIntakeVisionPigeon;
 import frc.robot.auto.modes.HatchOuttakeVisionPigeon;
 import frc.robot.auto.modes.VisionCargoOuttake;
@@ -104,7 +105,7 @@ public class Superstructure extends Subsystem {
     mRearClimbSolenoid.set(state.state);
   }
 
-  public RobotState getRobotState() {
+  public synchronized RobotState getRobotState() {
     return mRobotState;
   }
 
@@ -119,6 +120,7 @@ public class Superstructure extends Subsystem {
         Drive.getInstance().setOpenLoop(DriveSignal.BRAKE);
         break;
       case PATH_FOLLOWING:
+        AutoChooser.startAuto(new FrontSideCargshipAuto());
         break;
       case HATCH_VISION_INTAKE:
         startVisionHatchIntake();

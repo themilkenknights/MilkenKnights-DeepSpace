@@ -1,0 +1,10 @@
+c9e49ea5-21e9-4f67-93d2-a4fb94ad1f6f, Exception, Sun Mar 10 12:17:47 PDT 2019, VideoException [edu.wpi.cscore.VideoException: invalid handle]
+	at edu.wpi.cscore.CameraServerJNI.setSourceConnectionStrategy(Native Method)
+	at edu.wpi.cscore.VideoSource.setConnectionStrategy(VideoSource.java:166)
+	at frc.robot.subsystems.Vision.configHatchStream(Vision.java:102)
+	at frc.robot.Input.updateControlInput(Input.java:232)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:40)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:11)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+

@@ -1,0 +1,556 @@
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Robot Startup, Wed Mar 20 17:19:34 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Robot Init on Practice Robot, Wed Mar 20 17:19:34 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Disabled Init, Wed Mar 20 17:19:34 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.0, Wed Mar 20 17:19:34 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Teleop Init, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, SET HEADING: 0.0, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Gyro offset: -37.79296875000001, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, SET HEADING: 0.0, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Gyro offset: -37.79296875000001, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, SET HEADING: 0.0, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Gyro offset: -37.79296875000001, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Starting Teleop, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.0, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.05511811003088951, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.10236220806837082, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.14960630238056183, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.19685038924217224, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.27559053897857666, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.3385826647281647, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.36220473051071167, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.4173228442668915, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.4409448802471161, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.4566929042339325, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.4803149700164795, Wed Mar 20 17:20:39 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.4881889820098877, Wed Mar 20 17:20:40 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.4803149700164795, Wed Mar 20 17:20:40 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.5039370059967041, Wed Mar 20 17:20:40 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.4960629940032959, Wed Mar 20 17:20:40 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.4881889820098877, Wed Mar 20 17:20:40 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.4173228442668915, Wed Mar 20 17:20:40 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.24409449100494385, Wed Mar 20 17:20:40 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.007874015718698502, Wed Mar 20 17:20:40 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.0, Wed Mar 20 17:20:40 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:20:41 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:20:41 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.25, Wed Mar 20 17:20:41 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 1.25, Wed Mar 20 17:20:41 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.4349803436279297, Wed Mar 20 17:20:41 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.25, Wed Mar 20 17:20:41 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.75, Wed Mar 20 17:20:41 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.30773707885742185, Wed Mar 20 17:20:41 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.25, Wed Mar 20 17:20:41 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 1.25, Wed Mar 20 17:20:41 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.3123505798339844, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 1.25, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.25, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.75, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.28831813354492186, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.25, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.75, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 1.25, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.37538119812011717, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 1.25, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.4235475646972656, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 1.25, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.4769939575195313, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.75, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.4712976501464844, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.75, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.36642971496582033, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.75, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.34542584838867185, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 1.25, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.43541013793945316, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 1.25, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.49640739746093754, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 1.25, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.4983659332275391, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: -0.75, Wed Mar 20 17:20:42 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.27207115783691405, Wed Mar 20 17:20:43 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.25, Wed Mar 20 17:20:43 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 1.25, Wed Mar 20 17:20:43 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Disabled Init, Wed Mar 20 17:20:43 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Stopping Loops, Wed Mar 20 17:20:43 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 0.0, Wed Mar 20 17:20:43 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, Test: 1.25, Wed Mar 20 17:20:43 PDT 2019
+dc11d17b-dde7-44be-bcf6-d53d9bf198d6, AUTO MODE DONE!!!!, Wed Mar 20 17:20:43 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Robot Startup, Wed Mar 20 17:21:57 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Robot Init on Practice Robot, Wed Mar 20 17:21:57 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Disabled Init, Wed Mar 20 17:21:57 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 0.0, Wed Mar 20 17:21:57 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Teleop Init, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, SET HEADING: 0.0, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Gyro offset: -22.763671875, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, SET HEADING: 0.0, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Gyro offset: -22.763671875, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, SET HEADING: 0.0, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Gyro offset: -22.763671875, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Starting Teleop, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.26771652698516846, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.32283464074134827, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.33070865273475647, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.36220473051071167, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.3779527544975281, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.3858267664909363, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.3937007784843445, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.4173228442668915, Wed Mar 20 17:22:00 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.3779527544975281, Wed Mar 20 17:22:01 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.33070865273475647, Wed Mar 20 17:22:01 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.25984251499176025, Wed Mar 20 17:22:01 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.21259842813014984, Wed Mar 20 17:22:01 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.07086614519357681, Wed Mar 20 17:22:01 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -1.6585640285326089E-6, Wed Mar 20 17:22:01 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 0.25, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.75, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 0.20611506042480468, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.75, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 0.20162955932617188, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 1.25, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 0.25, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 1.25, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.75, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 0.2404478057861328, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.75, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 0.1976880889892578, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.75, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 1.25, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 0.25405070190429685, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 1.25, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 0.2665611572265625, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 1.25, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.75, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 0.24946022338867188, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.75, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 0.07028516845703123, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: -0.75, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 0.25, Wed Mar 20 17:22:02 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Disabled Init, Wed Mar 20 17:22:03 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Stopping Loops, Wed Mar 20 17:22:03 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 0.25, Wed Mar 20 17:22:03 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, Test: 0.0, Wed Mar 20 17:22:03 PDT 2019
+0a11a75a-51e9-4fcd-915e-48bc8cea0dd0, AUTO MODE DONE!!!!, Wed Mar 20 17:22:03 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Robot Startup, Wed Mar 20 17:23:28 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Robot Init on Practice Robot, Wed Mar 20 17:23:28 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Disabled Init, Wed Mar 20 17:23:28 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.0, Wed Mar 20 17:23:28 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Teleop Init, Wed Mar 20 17:24:54 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, SET HEADING: 0.0, Wed Mar 20 17:24:54 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Gyro offset: 1.3623046875, Wed Mar 20 17:24:54 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, SET HEADING: 0.0, Wed Mar 20 17:24:54 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Gyro offset: 1.3623046875, Wed Mar 20 17:24:54 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, SET HEADING: 0.0, Wed Mar 20 17:24:54 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Gyro offset: 1.3623046875, Wed Mar 20 17:24:54 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:24:54 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Starting Teleop, Wed Mar 20 17:24:54 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -2.073205035665761E-7, Wed Mar 20 17:24:54 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.007874015718698502, Wed Mar 20 17:24:54 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.04724409431219101, Wed Mar 20 17:24:54 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.11023622006177902, Wed Mar 20 17:24:54 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.16535432636737823, Wed Mar 20 17:24:55 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.22834645211696625, Wed Mar 20 17:24:55 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.27559053897857666, Wed Mar 20 17:24:55 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.32283464074134827, Wed Mar 20 17:24:55 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.31496062874794006, Wed Mar 20 17:24:55 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.32283464074134827, Wed Mar 20 17:24:55 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.31496062874794006, Wed Mar 20 17:24:55 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.30708661675453186, Wed Mar 20 17:24:55 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.31496062874794006, Wed Mar 20 17:24:55 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.27559053897857666, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.26771652698516846, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.25984251499176025, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.25196850299835205, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.24409449100494385, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.21259842813014984, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.17322835326194763, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.023622047156095505, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -2.073205035665761E-7, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -1.3268512228260871E-5, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -2.591506294582201E-5, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -2.759435902471128E-4, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.0032393828682277517, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.016483431277067768, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.059603815493376365, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.11854316877282185, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.20116287729014523, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.21360252214514694, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.2073205035665761, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.10221709375796112, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -7.111093272333561E-5, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -1.6585640285326089E-6, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -2.591506294582201E-5, Wed Mar 20 17:24:56 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -5.688874617866849E-4, Wed Mar 20 17:24:57 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.018892080887504246, Wed Mar 20 17:24:57 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.10221709375796112, Wed Mar 20 17:24:57 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.2200101769488791, Wed Mar 20 17:24:57 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.21360252214514694, Wed Mar 20 17:24:57 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -3.582498301630435E-4, Wed Mar 20 17:24:57 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -5.597653596297555E-6, Wed Mar 20 17:24:57 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, [Joystick] 0	 [Button]1	 Pressed ( Hatch Vision Place Button ), Wed Mar 20 17:24:57 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Switching to Robot State:HATCH_VISION_OUTTAKE, Wed Mar 20 17:24:57 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, SET HEADING: 0.0, Wed Mar 20 17:24:58 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Gyro offset: -6.152343750000001, Wed Mar 20 17:24:58 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, SET HEADING: 0.0, Wed Mar 20 17:24:58 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Gyro offset: -6.152343750000001, Wed Mar 20 17:24:58 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Began Path: Vision path, Wed Mar 20 17:24:58 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 3.3980407714842564E-4, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.0159001647949219, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.0955189666748047, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.03719356384277345, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.061689907836914054, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.06229975280761718, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -8.070648193359564E-4, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:00 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.05676228027343755, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.003995675659179687, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.07653839416503905, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.07693165283203124, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.008017294311523426, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.05614205017089846, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.012462881469726544, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.15218281860351562, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.1584428009033203, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.053581372070312494, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.04496959533691405, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.0, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:01 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.1917241455078125, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.18576483154296874, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.0, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.31274596557617185, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.3201042694091797, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.0, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.29932837524414063, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.0, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.32762410583496093, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.0, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.38995904541015625, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.41905655822753907, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.0, Wed Mar 20 17:25:02 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 1.25, Wed Mar 20 17:25:03 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:03 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Disabled Init, Wed Mar 20 17:25:03 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Stopping Loops, Wed Mar 20 17:25:03 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: -0.75, Wed Mar 20 17:25:03 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Test: 0.0, Wed Mar 20 17:25:03 PDT 2019
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, AUTO MODE DONE!!!!, Wed Mar 20 17:25:03 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, Robot Startup, Wed Mar 20 17:26:13 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, Robot Init on Practice Robot, Wed Mar 20 17:26:14 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, Disabled Init, Wed Mar 20 17:26:14 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, Teleop Init, Wed Mar 20 17:26:14 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, SET HEADING: 0.0, Wed Mar 20 17:26:14 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, Gyro offset: -24.3896484375, Wed Mar 20 17:26:14 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, SET HEADING: 0.0, Wed Mar 20 17:26:14 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, Gyro offset: -24.3896484375, Wed Mar 20 17:26:14 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, SET HEADING: 0.0, Wed Mar 20 17:26:14 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, Gyro offset: -24.3896484375, Wed Mar 20 17:26:14 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:26:14 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, Starting Teleop, Wed Mar 20 17:26:14 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:26:19 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:26:19 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, Disabled Init, Wed Mar 20 17:26:21 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, Stopping Loops, Wed Mar 20 17:26:21 PDT 2019
+79430319-75a7-408b-8009-777607a5faff, AUTO MODE DONE!!!!, Wed Mar 20 17:26:21 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, Robot Startup, Wed Mar 20 17:27:22 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, Robot Init on Practice Robot, Wed Mar 20 17:27:22 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, Disabled Init, Wed Mar 20 17:27:22 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, Teleop Init, Wed Mar 20 17:27:22 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, SET HEADING: 0.0, Wed Mar 20 17:27:23 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, Gyro offset: -29.5751953125, Wed Mar 20 17:27:23 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, SET HEADING: 0.0, Wed Mar 20 17:27:23 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, Gyro offset: -29.5751953125, Wed Mar 20 17:27:23 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, SET HEADING: 0.0, Wed Mar 20 17:27:23 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, Gyro offset: -29.5751953125, Wed Mar 20 17:27:23 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:27:23 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, Starting Teleop, Wed Mar 20 17:27:23 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:27:26 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:27:26 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, Disabled Init, Wed Mar 20 17:27:28 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, Stopping Loops, Wed Mar 20 17:27:28 PDT 2019
+b339687d-92a9-4cf8-84c9-6c9254a36996, AUTO MODE DONE!!!!, Wed Mar 20 17:27:28 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, Robot Startup, Wed Mar 20 17:28:49 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, Robot Init on Practice Robot, Wed Mar 20 17:28:49 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, Disabled Init, Wed Mar 20 17:28:49 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, Teleop Init, Wed Mar 20 17:28:52 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, SET HEADING: 0.0, Wed Mar 20 17:28:53 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, Gyro offset: -21.0498046875, Wed Mar 20 17:28:53 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, SET HEADING: 0.0, Wed Mar 20 17:28:53 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, Gyro offset: -21.0498046875, Wed Mar 20 17:28:53 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, SET HEADING: 0.0, Wed Mar 20 17:28:53 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, Gyro offset: -21.0498046875, Wed Mar 20 17:28:53 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:28:53 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, Starting Teleop, Wed Mar 20 17:28:53 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:28:57 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:28:57 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, Auto mode done, Wed Mar 20 17:29:00 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, Disabled Init, Wed Mar 20 17:29:01 PDT 2019
+b34f24c1-92d9-4b53-9f8d-9e74f54c437f, Stopping Loops, Wed Mar 20 17:29:01 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, Robot Startup, Wed Mar 20 17:32:37 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, Robot Init on Practice Robot, Wed Mar 20 17:32:37 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, Disabled Init, Wed Mar 20 17:32:37 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, Teleop Init, Wed Mar 20 17:32:39 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, SET HEADING: 0.0, Wed Mar 20 17:32:39 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, Gyro offset: -22.8076171875, Wed Mar 20 17:32:39 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, SET HEADING: 0.0, Wed Mar 20 17:32:39 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, Gyro offset: -22.8076171875, Wed Mar 20 17:32:39 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, SET HEADING: 0.0, Wed Mar 20 17:32:39 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, Gyro offset: -22.8076171875, Wed Mar 20 17:32:39 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:32:39 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, Starting Teleop, Wed Mar 20 17:32:39 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:32:41 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:32:41 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, Disabled Init, Wed Mar 20 17:32:43 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, Stopping Loops, Wed Mar 20 17:32:43 PDT 2019
+397a9730-26d0-47c7-875a-f92da6becef6, AUTO MODE DONE!!!!, Wed Mar 20 17:32:43 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, Robot Startup, Wed Mar 20 17:33:17 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, Robot Init on Practice Robot, Wed Mar 20 17:33:17 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, Disabled Init, Wed Mar 20 17:33:17 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, Teleop Init, Wed Mar 20 17:33:28 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, SET HEADING: 0.0, Wed Mar 20 17:33:28 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, Gyro offset: -20.6103515625, Wed Mar 20 17:33:28 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, SET HEADING: 0.0, Wed Mar 20 17:33:28 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, Gyro offset: -20.6103515625, Wed Mar 20 17:33:28 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, SET HEADING: 0.0, Wed Mar 20 17:33:28 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, Gyro offset: -20.6103515625, Wed Mar 20 17:33:28 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:33:28 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, Starting Teleop, Wed Mar 20 17:33:28 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:33:29 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:33:29 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, Disabled Init, Wed Mar 20 17:33:32 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, Stopping Loops, Wed Mar 20 17:33:32 PDT 2019
+c439e62f-84d6-46ff-80b6-ef581840dbef, AUTO MODE DONE!!!!, Wed Mar 20 17:33:32 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Robot Startup, Wed Mar 20 17:35:16 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Robot Init on Practice Robot, Wed Mar 20 17:35:16 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Disabled Init, Wed Mar 20 17:35:16 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Teleop Init, Wed Mar 20 17:35:17 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, SET HEADING: 0.0, Wed Mar 20 17:35:17 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Gyro offset: -24.5654296875, Wed Mar 20 17:35:17 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, SET HEADING: 0.0, Wed Mar 20 17:35:17 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Gyro offset: -24.5654296875, Wed Mar 20 17:35:17 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, SET HEADING: 0.0, Wed Mar 20 17:35:17 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Gyro offset: -24.5654296875, Wed Mar 20 17:35:17 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:35:17 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Starting Teleop, Wed Mar 20 17:35:17 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:35:20 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:35:20 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Set Hatch State to PLACE, Wed Mar 20 17:35:22 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Auto mode done, Wed Mar 20 17:35:23 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, [Joystick] 1	 [Button]9	 Pressed ( Stop Auto Button ), Wed Mar 20 17:35:26 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:35:26 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:35:28 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:35:28 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Set Hatch State to PLACE, Wed Mar 20 17:35:29 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Set Hatch State to PLACE, Wed Mar 20 17:35:31 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Auto mode done, Wed Mar 20 17:35:31 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Disabled Init, Wed Mar 20 17:35:31 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Stopping Loops, Wed Mar 20 17:35:31 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Teleop Init, Wed Mar 20 17:35:34 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, SET HEADING: 0.0, Wed Mar 20 17:35:34 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Gyro offset: -25.048828125, Wed Mar 20 17:35:34 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, SET HEADING: 0.0, Wed Mar 20 17:35:34 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Gyro offset: -25.004882812499996, Wed Mar 20 17:35:34 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:35:34 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Starting Teleop, Wed Mar 20 17:35:34 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Disabled Init, Wed Mar 20 17:35:37 PDT 2019
+eb182c3f-f6fd-492b-8955-d67a9bd0cbfa, Stopping Loops, Wed Mar 20 17:35:37 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, SigNotUpdated Side: Cargo_Intake, Wed Mar 20 17:37:23 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, Robot Startup, Wed Mar 20 17:37:24 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, Robot Init on Practice Robot, Wed Mar 20 17:37:24 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, Disabled Init, Wed Mar 20 17:37:24 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, Teleop Init, Wed Mar 20 17:37:35 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, SET HEADING: 0.0, Wed Mar 20 17:37:35 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, Gyro offset: -23.115234375, Wed Mar 20 17:37:35 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, SET HEADING: 0.0, Wed Mar 20 17:37:35 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, Gyro offset: -23.115234375, Wed Mar 20 17:37:35 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, SET HEADING: 0.0, Wed Mar 20 17:37:35 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, Gyro offset: -23.115234375, Wed Mar 20 17:37:35 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:37:35 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, Starting Teleop, Wed Mar 20 17:37:35 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:37:38 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:37:38 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, Disabled Init, Wed Mar 20 17:37:39 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, Stopping Loops, Wed Mar 20 17:37:39 PDT 2019
+d277ee9b-afe6-4354-8413-bc176be20fbb, AUTO MODE DONE!!!!, Wed Mar 20 17:37:39 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, Robot Startup, Wed Mar 20 17:38:17 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, Robot Init on Practice Robot, Wed Mar 20 17:38:17 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, Disabled Init, Wed Mar 20 17:38:17 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, Teleop Init, Wed Mar 20 17:38:17 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, SET HEADING: 0.0, Wed Mar 20 17:38:18 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, Gyro offset: -24.8291015625, Wed Mar 20 17:38:18 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, SET HEADING: 0.0, Wed Mar 20 17:38:18 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, Gyro offset: -24.8291015625, Wed Mar 20 17:38:18 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, SET HEADING: 0.0, Wed Mar 20 17:38:18 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, Gyro offset: -24.8291015625, Wed Mar 20 17:38:18 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:38:18 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, Starting Teleop, Wed Mar 20 17:38:18 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:38:19 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:38:19 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, Disabled Init, Wed Mar 20 17:38:21 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, Stopping Loops, Wed Mar 20 17:38:21 PDT 2019
+4bda3692-ef72-456f-a27e-a377f7fc2099, AUTO MODE DONE!!!!, Wed Mar 20 17:38:21 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, Robot Startup, Wed Mar 20 17:39:08 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, Robot Init on Practice Robot, Wed Mar 20 17:39:09 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, Disabled Init, Wed Mar 20 17:39:09 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, Teleop Init, Wed Mar 20 17:39:32 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, SET HEADING: 0.0, Wed Mar 20 17:39:33 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, Gyro offset: -27.1142578125, Wed Mar 20 17:39:33 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, SET HEADING: 0.0, Wed Mar 20 17:39:33 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, Gyro offset: -27.1142578125, Wed Mar 20 17:39:33 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, SET HEADING: 0.0, Wed Mar 20 17:39:33 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, Gyro offset: -27.1142578125, Wed Mar 20 17:39:33 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:39:33 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, Starting Teleop, Wed Mar 20 17:39:33 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:39:33 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:39:33 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, Auto mode done, Wed Mar 20 17:39:36 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, Disabled Init, Wed Mar 20 17:39:37 PDT 2019
+76a30b01-8db5-4903-91c2-b59e5a7b6557, Stopping Loops, Wed Mar 20 17:39:37 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, Robot Startup, Wed Mar 20 17:40:41 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, Robot Init on Practice Robot, Wed Mar 20 17:40:41 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, Disabled Init, Wed Mar 20 17:40:41 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, Teleop Init, Wed Mar 20 17:40:42 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, SET HEADING: 0.0, Wed Mar 20 17:40:42 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, Gyro offset: -21.3134765625, Wed Mar 20 17:40:42 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, SET HEADING: 0.0, Wed Mar 20 17:40:42 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, Gyro offset: -21.3134765625, Wed Mar 20 17:40:42 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, SET HEADING: 0.0, Wed Mar 20 17:40:42 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, Gyro offset: -21.3134765625, Wed Mar 20 17:40:42 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:40:42 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, Starting Teleop, Wed Mar 20 17:40:42 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:40:44 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:40:44 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, Auto mode done, Wed Mar 20 17:40:47 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, Disabled Init, Wed Mar 20 17:40:47 PDT 2019
+2c6f410f-22e2-42fd-b0e3-087589653cbd, Stopping Loops, Wed Mar 20 17:40:47 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Robot Startup, Wed Mar 20 17:41:43 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Robot Init on Practice Robot, Wed Mar 20 17:41:43 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Disabled Init, Wed Mar 20 17:41:43 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Teleop Init, Wed Mar 20 17:41:45 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, SET HEADING: 0.0, Wed Mar 20 17:41:45 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Gyro offset: -21.3134765625, Wed Mar 20 17:41:45 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, SET HEADING: 0.0, Wed Mar 20 17:41:45 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Gyro offset: -21.3134765625, Wed Mar 20 17:41:45 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, SET HEADING: 0.0, Wed Mar 20 17:41:45 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Gyro offset: -21.3134765625, Wed Mar 20 17:41:45 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:41:45 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Starting Teleop, Wed Mar 20 17:41:45 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:41:47 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:41:47 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Disabled Init, Wed Mar 20 17:41:48 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Stopping Loops, Wed Mar 20 17:41:48 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, AUTO MODE DONE!!!!, Wed Mar 20 17:41:48 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Teleop Init, Wed Mar 20 17:43:09 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, SET HEADING: 0.0, Wed Mar 20 17:43:09 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Gyro offset: -25.2685546875, Wed Mar 20 17:43:09 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, SET HEADING: 0.0, Wed Mar 20 17:43:09 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Gyro offset: -25.2685546875, Wed Mar 20 17:43:09 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:43:09 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Starting Teleop, Wed Mar 20 17:43:09 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:43:10 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:43:10 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Disabled Init, Wed Mar 20 17:43:13 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Stopping Loops, Wed Mar 20 17:43:13 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, AUTO MODE DONE!!!!, Wed Mar 20 17:43:13 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Teleop Init, Wed Mar 20 17:43:27 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, SET HEADING: 0.0, Wed Mar 20 17:43:27 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Gyro offset: -21.8408203125, Wed Mar 20 17:43:27 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, SET HEADING: 0.0, Wed Mar 20 17:43:27 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Gyro offset: -21.8408203125, Wed Mar 20 17:43:27 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:43:27 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Starting Teleop, Wed Mar 20 17:43:27 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:43:31 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:43:31 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Set Hatch State to PLACE, Wed Mar 20 17:43:32 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Auto mode done, Wed Mar 20 17:43:34 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Wed Mar 20 17:43:34 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Set Hatch State to STOW, Wed Mar 20 17:43:34 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, [Joystick] 1	 [Button]9	 Pressed ( Stop Auto Button ), Wed Mar 20 17:43:37 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:43:37 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:43:40 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:43:40 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Set Hatch State to PLACE, Wed Mar 20 17:43:41 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Disabled Init, Wed Mar 20 17:43:42 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Stopping Loops, Wed Mar 20 17:43:42 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, AUTO MODE DONE!!!!, Wed Mar 20 17:43:42 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Teleop Init, Wed Mar 20 17:43:55 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, SET HEADING: 0.0, Wed Mar 20 17:43:55 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Gyro offset: -31.157226562499993, Wed Mar 20 17:43:55 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, SET HEADING: 0.0, Wed Mar 20 17:43:55 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Gyro offset: -31.157226562499993, Wed Mar 20 17:43:55 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:43:55 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Starting Teleop, Wed Mar 20 17:43:55 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, [Joystick] 1	 [Button]9	 Pressed ( Stop Auto Button ), Wed Mar 20 17:43:57 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:43:57 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Wed Mar 20 17:43:58 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Set Hatch State to STOW, Wed Mar 20 17:43:58 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:44:01 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:44:01 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Disabled Init, Wed Mar 20 17:44:02 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, Stopping Loops, Wed Mar 20 17:44:02 PDT 2019
+cccafb77-8ad3-420b-a200-e799e2fbdb85, AUTO MODE DONE!!!!, Wed Mar 20 17:44:02 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, Robot Startup, Wed Mar 20 17:44:27 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, Robot Init on Practice Robot, Wed Mar 20 17:44:28 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, Disabled Init, Wed Mar 20 17:44:28 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, Teleop Init, Wed Mar 20 17:44:29 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, SET HEADING: 0.0, Wed Mar 20 17:44:29 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, Gyro offset: -23.5986328125, Wed Mar 20 17:44:29 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, SET HEADING: 0.0, Wed Mar 20 17:44:29 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, Gyro offset: -23.5986328125, Wed Mar 20 17:44:29 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, SET HEADING: 0.0, Wed Mar 20 17:44:29 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, Gyro offset: -23.5986328125, Wed Mar 20 17:44:29 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, Switching to Robot State:TELEOP_DRIVE, Wed Mar 20 17:44:29 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, Starting Teleop, Wed Mar 20 17:44:29 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, [Joystick] 0	 [Button]10	 Pressed ( Toggle Velocity Setpoint Button ), Wed Mar 20 17:44:35 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, Switching to Robot State:SIMPLE_PLACE, Wed Mar 20 17:44:35 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, Set Hatch State to PLACE, Wed Mar 20 17:44:36 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, Disabled Init, Wed Mar 20 17:44:38 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, Stopping Loops, Wed Mar 20 17:44:38 PDT 2019
+7ba4c4e3-dc21-4329-8e41-e03b96fa3466, AUTO MODE DONE!!!!, Wed Mar 20 17:44:38 PDT 2019
+abfdbf20-590f-4993-9738-03e1300a7a5e, Robot Startup, Wed Mar 20 17:45:13 PDT 2019
+abfdbf20-590f-4993-9738-03e1300a7a5e, Robot Init on Practice Robot, Wed Mar 20 17:45:13 PDT 2019
+abfdbf20-590f-4993-9738-03e1300a7a5e, Disabled Init, Wed Mar 20 17:45:13 PDT 2019

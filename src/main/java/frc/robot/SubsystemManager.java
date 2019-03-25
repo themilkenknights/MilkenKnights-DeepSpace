@@ -3,10 +3,12 @@ package frc.robot;
 import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.Constants.GENERAL;
+import frc.robot.lib.geometry.RobotState;
 import frc.robot.lib.util.CrashTrackingRunnable;
 import frc.robot.lib.util.DeltaTime;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.Subsystem;
+import frc.robot.subsystems.Superstructure;
 import frc.robot.subsystems.Vision;
 import java.util.List;
 
@@ -41,6 +43,9 @@ public class SubsystemManager {
             if (count == i) {
               subsystem.outputTelemetry(now);
               subsystem.safetyCheck(now);
+            }
+            if(count == 3){
+              RobotState.getInstance().outputToSmartDashboard();
             }
             i++;
           }

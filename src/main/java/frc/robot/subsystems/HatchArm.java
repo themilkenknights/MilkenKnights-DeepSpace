@@ -134,12 +134,15 @@ public class HatchArm extends Subsystem {
     switch (state) {
       case PLACE:
         setPancakeSolenoid(true);
+        autoTimer.start(0.35);
         downTimer.start(0.4);
         break;
       case STOW:
         setPancakeSolenoid(true);
+        autoTimer.reset();
         break;
       case INTAKE:
+        autoTimer.start(0.35);
         setPancakeSolenoid(false);
         break;
       default:
@@ -148,7 +151,7 @@ public class HatchArm extends Subsystem {
     }
     Logger.logMarker("Set Hatch State to " + state.toString());
     mSpearSolenoid.set(state.state);
-    autoTimer.start(0.35);
+    autoTimer.start(0.55);
   }
 
   public HatchState getHatchSpearState() {

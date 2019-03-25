@@ -1,0 +1,735 @@
+1e8ea3b2-9c35-4327-8d98-b32a50a1afdb, Robot Init on Practice Robot, Sun Mar 24 10:52:47 PDT 2019
+1e8ea3b2-9c35-4327-8d98-b32a50a1afdb, CAN_MSG_NOT_FOUND Side: Cargo_Arm, Sun Mar 24 10:52:47 PDT 2019
+1e8ea3b2-9c35-4327-8d98-b32a50a1afdb, CAN_MSG_NOT_FOUND Side: Cargo_Intake, Sun Mar 24 10:52:47 PDT 2019
+1e8ea3b2-9c35-4327-8d98-b32a50a1afdb, CAN_MSG_NOT_FOUND Side: Left, Sun Mar 24 10:52:47 PDT 2019
+1e8ea3b2-9c35-4327-8d98-b32a50a1afdb, Disabled Init, Sun Mar 24 10:52:48 PDT 2019
+1e8ea3b2-9c35-4327-8d98-b32a50a1afdb, SigNotUpdated Side: Left, Sun Mar 24 10:52:48 PDT 2019
+1e8ea3b2-9c35-4327-8d98-b32a50a1afdb, Set Pancake State to: true, Sun Mar 24 10:52:48 PDT 2019
+1e8ea3b2-9c35-4327-8d98-b32a50a1afdb, STOW ENABLE, Sun Mar 24 10:52:48 PDT 2019
+1e8ea3b2-9c35-4327-8d98-b32a50a1afdb, Set Hatch State to STOW, Sun Mar 24 10:52:48 PDT 2019
+1e8ea3b2-9c35-4327-8d98-b32a50a1afdb, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 10:52:48 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, SigNotUpdated Side: Cargo_Arm, Sun Mar 24 10:55:57 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, SigNotUpdated Side: Cargo_Arm, Sun Mar 24 10:55:58 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, SigNotUpdated Side: Cargo_Intake, Sun Mar 24 10:55:59 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, SigNotUpdated Side: Cargo_Intake, Sun Mar 24 10:56:00 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, SigNotUpdated Side: Left, Sun Mar 24 10:56:00 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, SigNotUpdated Side: Left, Sun Mar 24 10:56:01 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, Robot Startup, Sun Mar 24 10:56:02 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, Robot Init on Practice Robot, Sun Mar 24 10:56:02 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, CAN_MSG_NOT_FOUND Side: Cargo_Arm, Sun Mar 24 10:56:02 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, CAN_MSG_NOT_FOUND Side: Cargo_Intake, Sun Mar 24 10:56:02 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, CAN_MSG_NOT_FOUND Side: Left, Sun Mar 24 10:56:02 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, CAN_MSG_NOT_FOUND Side: Left, Sun Mar 24 10:56:02 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, Disabled Init, Sun Mar 24 10:56:02 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, SigNotUpdated Side: Left, Sun Mar 24 10:56:02 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, Set Pancake State to: true, Sun Mar 24 10:56:03 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, Set Hatch State to STOW, Sun Mar 24 10:56:03 PDT 2019
+e2dc98a8-09e4-4a54-97a0-cd529876348a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 10:56:03 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Robot Startup, Sun Mar 24 11:36:40 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Robot Init on Practice Robot, Sun Mar 24 11:36:40 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Disabled Init, Sun Mar 24 11:36:42 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Set Pancake State to: true, Sun Mar 24 11:36:42 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Set Hatch State to STOW, Sun Mar 24 11:36:42 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:36:42 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Teleop Init, Sun Mar 24 11:36:43 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:36:43 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Starting Teleop, Sun Mar 24 11:36:43 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Disabled Init, Sun Mar 24 11:36:47 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Stopping Loops, Sun Mar 24 11:36:47 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Set Pancake State to: true, Sun Mar 24 11:36:47 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Set Hatch State to STOW, Sun Mar 24 11:36:47 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:36:47 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Auto Init, Sun Mar 24 11:36:49 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:36:49 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Starting Sandstorm (Auto), Sun Mar 24 11:36:49 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 11:36:49 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 11:36:49 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Began Path: CS-1R, Sun Mar 24 11:36:49 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to Velocity, Sun Mar 24 11:36:50 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Disabled Init, Sun Mar 24 11:36:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Stopping Loops, Sun Mar 24 11:36:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to open loop, Sun Mar 24 11:36:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Invalid Drive State, Sun Mar 24 11:36:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Set Pancake State to: true, Sun Mar 24 11:36:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Set Hatch State to STOW, Sun Mar 24 11:36:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to open loop, Sun Mar 24 11:36:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, AUTO MODE DONE!!!!, Sun Mar 24 11:36:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:36:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Teleop Init, Sun Mar 24 11:37:46 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:37:46 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Starting Teleop, Sun Mar 24 11:37:46 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Disabled Init, Sun Mar 24 11:37:49 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Stopping Loops, Sun Mar 24 11:37:49 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Set Pancake State to: true, Sun Mar 24 11:37:49 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Set Hatch State to STOW, Sun Mar 24 11:37:49 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:37:49 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Auto Init, Sun Mar 24 11:37:50 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:37:50 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Starting Sandstorm (Auto), Sun Mar 24 11:37:50 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 11:37:50 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 11:37:50 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Began Path: CS-1R, Sun Mar 24 11:37:50 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to Velocity, Sun Mar 24 11:37:50 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Disabled Init, Sun Mar 24 11:37:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Stopping Loops, Sun Mar 24 11:37:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to open loop, Sun Mar 24 11:37:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Invalid Drive State, Sun Mar 24 11:37:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Set Pancake State to: true, Sun Mar 24 11:37:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Set Hatch State to STOW, Sun Mar 24 11:37:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to open loop, Sun Mar 24 11:37:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:37:51 PDT 2019
+897f4e36-dd9e-4f81-8590-6d6af842ae0a, AUTO MODE DONE!!!!, Sun Mar 24 11:37:51 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Robot Startup, Sun Mar 24 11:39:25 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Robot Init on Practice Robot, Sun Mar 24 11:39:25 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Disabled Init, Sun Mar 24 11:39:26 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Set Pancake State to: true, Sun Mar 24 11:39:27 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Set Hatch State to STOW, Sun Mar 24 11:39:27 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:39:27 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Auto Init, Sun Mar 24 11:39:29 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:39:30 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Starting Sandstorm (Auto), Sun Mar 24 11:39:30 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 11:39:30 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 11:39:30 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Began Path: CS-1R, Sun Mar 24 11:39:30 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Switching to Velocity, Sun Mar 24 11:39:30 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Disabled Init, Sun Mar 24 11:39:32 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Stopping Loops, Sun Mar 24 11:39:32 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Switching to open loop, Sun Mar 24 11:39:32 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Set Pancake State to: true, Sun Mar 24 11:39:32 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Set Hatch State to STOW, Sun Mar 24 11:39:32 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Switching to open loop, Sun Mar 24 11:39:32 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:39:32 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, AUTO MODE DONE!!!!, Sun Mar 24 11:39:32 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Teleop Init, Sun Mar 24 11:40:22 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:40:22 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Starting Teleop, Sun Mar 24 11:40:22 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Disabled Init, Sun Mar 24 11:40:27 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Stopping Loops, Sun Mar 24 11:40:27 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Set Pancake State to: true, Sun Mar 24 11:40:27 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Set Hatch State to STOW, Sun Mar 24 11:40:27 PDT 2019
+3c09d3d8-9ef9-4964-8f6b-5d99c986f385, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:40:27 PDT 2019
+d16e5962-9cf9-4293-90b1-220b0b764418, Robot Startup, Sun Mar 24 11:40:43 PDT 2019
+d16e5962-9cf9-4293-90b1-220b0b764418, Robot Init on Practice Robot, Sun Mar 24 11:40:43 PDT 2019
+d16e5962-9cf9-4293-90b1-220b0b764418, Disabled Init, Sun Mar 24 11:40:48 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Robot Startup, Sun Mar 24 11:40:58 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Robot Init on Practice Robot, Sun Mar 24 11:40:58 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Disabled Init, Sun Mar 24 11:41:02 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Set Pancake State to: true, Sun Mar 24 11:41:02 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Set Hatch State to STOW, Sun Mar 24 11:41:02 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:41:02 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Auto Init, Sun Mar 24 11:41:03 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:41:03 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Starting Sandstorm (Auto), Sun Mar 24 11:41:03 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 11:41:04 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 11:41:04 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Began Path: CS-1R, Sun Mar 24 11:41:04 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Switching to Velocity, Sun Mar 24 11:41:04 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Disabled Init, Sun Mar 24 11:41:09 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Stopping Loops, Sun Mar 24 11:41:09 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Switching to open loop, Sun Mar 24 11:41:09 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Auto mode done, Sun Mar 24 11:41:09 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:41:09 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Teleop Init, Sun Mar 24 11:41:12 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:41:12 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Starting Teleop, Sun Mar 24 11:41:12 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Disabled Init, Sun Mar 24 11:41:20 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Stopping Loops, Sun Mar 24 11:41:20 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Set Pancake State to: true, Sun Mar 24 11:41:20 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Set Hatch State to STOW, Sun Mar 24 11:41:20 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:41:20 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Auto Init, Sun Mar 24 11:41:23 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:41:23 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Starting Sandstorm (Auto), Sun Mar 24 11:41:23 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 11:41:23 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 11:41:23 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Began Path: CS-1R, Sun Mar 24 11:41:23 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Switching to Velocity, Sun Mar 24 11:41:23 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Auto mode done, Sun Mar 24 11:41:32 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Disabled Init, Sun Mar 24 11:41:34 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Stopping Loops, Sun Mar 24 11:41:34 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:41:34 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Teleop Init, Sun Mar 24 11:41:38 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:41:38 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Starting Teleop, Sun Mar 24 11:41:38 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Disabled Init, Sun Mar 24 11:41:57 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Stopping Loops, Sun Mar 24 11:41:57 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Set Pancake State to: true, Sun Mar 24 11:41:57 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Set Hatch State to STOW, Sun Mar 24 11:41:57 PDT 2019
+b3597af9-aca9-4313-9992-b37a721fb31f, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:41:57 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Robot Startup, Sun Mar 24 11:42:26 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Robot Init on Practice Robot, Sun Mar 24 11:42:26 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Disabled Init, Sun Mar 24 11:42:28 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Set Pancake State to: true, Sun Mar 24 11:42:28 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Set Hatch State to STOW, Sun Mar 24 11:42:28 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:42:28 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Auto Init, Sun Mar 24 11:43:51 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:43:51 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Starting Sandstorm (Auto), Sun Mar 24 11:43:51 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 11:43:52 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 11:43:52 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Began Path: CS-1R, Sun Mar 24 11:43:52 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Switching to Velocity, Sun Mar 24 11:43:52 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Auto mode done, Sun Mar 24 11:43:56 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Disabled Init, Sun Mar 24 11:43:59 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Stopping Loops, Sun Mar 24 11:43:59 PDT 2019
+0110b982-4cab-4c5c-93be-f5fb4c6fb163, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:43:59 PDT 2019
+55e0ed24-afae-491c-8da9-126bec30a995, Robot Startup, Sun Mar 24 11:45:07 PDT 2019
+55e0ed24-afae-491c-8da9-126bec30a995, Robot Init on Practice Robot, Sun Mar 24 11:45:07 PDT 2019
+55e0ed24-afae-491c-8da9-126bec30a995, Disabled Init, Sun Mar 24 11:45:08 PDT 2019
+55e0ed24-afae-491c-8da9-126bec30a995, Set Pancake State to: true, Sun Mar 24 11:45:09 PDT 2019
+55e0ed24-afae-491c-8da9-126bec30a995, Set Hatch State to STOW, Sun Mar 24 11:45:09 PDT 2019
+55e0ed24-afae-491c-8da9-126bec30a995, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:45:09 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Robot Startup, Sun Mar 24 11:45:22 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Robot Init on Practice Robot, Sun Mar 24 11:45:22 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Disabled Init, Sun Mar 24 11:45:23 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Set Pancake State to: true, Sun Mar 24 11:45:24 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Set Hatch State to STOW, Sun Mar 24 11:45:24 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:45:24 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Teleop Init, Sun Mar 24 11:45:24 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:45:24 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Starting Teleop, Sun Mar 24 11:45:24 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Disabled Init, Sun Mar 24 11:45:40 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Stopping Loops, Sun Mar 24 11:45:40 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Set Pancake State to: true, Sun Mar 24 11:45:40 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Set Hatch State to STOW, Sun Mar 24 11:45:40 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:45:40 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Auto Init, Sun Mar 24 11:46:09 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:46:09 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Starting Sandstorm (Auto), Sun Mar 24 11:46:09 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 11:46:10 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 11:46:10 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Began Path: CS-1R, Sun Mar 24 11:46:10 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Switching to Velocity, Sun Mar 24 11:46:10 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Switching to open loop, Sun Mar 24 11:46:10 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Set Pancake State to: true, Sun Mar 24 11:46:10 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Set Hatch State to STOW, Sun Mar 24 11:46:10 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Auto mode done, Sun Mar 24 11:46:15 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Disabled Init, Sun Mar 24 11:46:18 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Stopping Loops, Sun Mar 24 11:46:18 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Switching to open loop, Sun Mar 24 11:46:18 PDT 2019
+dddeef9f-dfaf-4bd6-82fb-d99c43d60569, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:46:18 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Robot Startup, Sun Mar 24 11:49:01 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Robot Init on Practice Robot, Sun Mar 24 11:49:01 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Disabled Init, Sun Mar 24 11:49:03 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Set Pancake State to: true, Sun Mar 24 11:49:03 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Set Hatch State to STOW, Sun Mar 24 11:49:03 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:49:03 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Teleop Init, Sun Mar 24 11:49:08 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:49:08 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Starting Teleop, Sun Mar 24 11:49:08 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Disabled Init, Sun Mar 24 11:49:15 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Stopping Loops, Sun Mar 24 11:49:15 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Set Pancake State to: true, Sun Mar 24 11:49:15 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Set Hatch State to STOW, Sun Mar 24 11:49:15 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:49:15 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Auto Init, Sun Mar 24 11:49:54 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:49:54 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Starting Sandstorm (Auto), Sun Mar 24 11:49:54 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 11:49:55 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 11:49:55 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Began Path: CS-1R, Sun Mar 24 11:49:55 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Switching to Velocity, Sun Mar 24 11:49:55 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Switching to open loop, Sun Mar 24 11:49:55 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Set Pancake State to: true, Sun Mar 24 11:49:55 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Set Hatch State to STOW, Sun Mar 24 11:49:55 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Disabled Init, Sun Mar 24 11:49:59 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Stopping Loops, Sun Mar 24 11:49:59 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Switching to open loop, Sun Mar 24 11:49:59 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:49:59 PDT 2019
+3fff8016-823b-4802-8c87-2febf3f1a852, AUTO MODE DONE!!!!, Sun Mar 24 11:49:59 PDT 2019
+cf56e77b-47cb-4132-ae68-3b39148996fc, Robot Startup, Sun Mar 24 11:50:55 PDT 2019
+cf56e77b-47cb-4132-ae68-3b39148996fc, Robot Init on Practice Robot, Sun Mar 24 11:50:55 PDT 2019
+cf56e77b-47cb-4132-ae68-3b39148996fc, Disabled Init, Sun Mar 24 11:50:57 PDT 2019
+cf56e77b-47cb-4132-ae68-3b39148996fc, Set Pancake State to: true, Sun Mar 24 11:50:57 PDT 2019
+cf56e77b-47cb-4132-ae68-3b39148996fc, Set Hatch State to STOW, Sun Mar 24 11:50:57 PDT 2019
+cf56e77b-47cb-4132-ae68-3b39148996fc, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:50:57 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Robot Startup, Sun Mar 24 11:51:56 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Robot Init on Practice Robot, Sun Mar 24 11:51:57 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Disabled Init, Sun Mar 24 11:51:58 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Set Pancake State to: true, Sun Mar 24 11:51:59 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Set Hatch State to STOW, Sun Mar 24 11:51:59 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:51:59 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Auto Init, Sun Mar 24 11:52:01 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:52:01 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Starting Sandstorm (Auto), Sun Mar 24 11:52:01 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 11:52:02 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Time: 3.63, Sun Mar 24 11:52:02 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 11:52:02 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Began Path: CS-1R, Sun Mar 24 11:52:02 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Velocity, Sun Mar 24 11:52:02 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Disabled Init, Sun Mar 24 11:52:03 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Stopping Loops, Sun Mar 24 11:52:03 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to open loop, Sun Mar 24 11:52:03 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Set Pancake State to: true, Sun Mar 24 11:52:03 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Set Hatch State to STOW, Sun Mar 24 11:52:03 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to open loop, Sun Mar 24 11:52:03 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, AUTO MODE DONE!!!!, Sun Mar 24 11:52:03 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:52:03 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Auto Init, Sun Mar 24 11:52:05 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:52:05 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Starting Sandstorm (Auto), Sun Mar 24 11:52:05 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 11:52:05 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Time: 3.63, Sun Mar 24 11:52:05 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 11:52:05 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Began Path: CS-1R, Sun Mar 24 11:52:05 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Velocity, Sun Mar 24 11:52:05 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Disabled Init, Sun Mar 24 11:52:06 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Stopping Loops, Sun Mar 24 11:52:06 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to open loop, Sun Mar 24 11:52:06 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Set Pancake State to: true, Sun Mar 24 11:52:06 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Set Hatch State to STOW, Sun Mar 24 11:52:06 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to open loop, Sun Mar 24 11:52:07 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, AUTO MODE DONE!!!!, Sun Mar 24 11:52:07 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:52:07 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Teleop Init, Sun Mar 24 11:52:08 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:52:08 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Starting Teleop, Sun Mar 24 11:52:08 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Disabled Init, Sun Mar 24 11:52:12 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Stopping Loops, Sun Mar 24 11:52:12 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Set Pancake State to: true, Sun Mar 24 11:52:12 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Set Hatch State to STOW, Sun Mar 24 11:52:12 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:52:12 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Auto Init, Sun Mar 24 11:52:14 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:52:14 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Starting Sandstorm (Auto), Sun Mar 24 11:52:14 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 11:52:14 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Time: 3.63, Sun Mar 24 11:52:14 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 11:52:14 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Began Path: CS-1R, Sun Mar 24 11:52:14 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Velocity, Sun Mar 24 11:52:14 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to open loop, Sun Mar 24 11:52:14 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Set Pancake State to: true, Sun Mar 24 11:52:14 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Set Hatch State to STOW, Sun Mar 24 11:52:14 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Disabled Init, Sun Mar 24 11:52:17 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Stopping Loops, Sun Mar 24 11:52:17 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to open loop, Sun Mar 24 11:52:17 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:52:17 PDT 2019
+786869d7-9228-404c-93ae-28ca6d28b15a, AUTO MODE DONE!!!!, Sun Mar 24 11:52:17 PDT 2019
+d2f17086-9c8a-4d1e-a3d3-3686571dff90, Robot Startup, Sun Mar 24 11:53:30 PDT 2019
+d2f17086-9c8a-4d1e-a3d3-3686571dff90, Robot Init on Practice Robot, Sun Mar 24 11:53:30 PDT 2019
+d2f17086-9c8a-4d1e-a3d3-3686571dff90, Disabled Init, Sun Mar 24 11:53:32 PDT 2019
+d2f17086-9c8a-4d1e-a3d3-3686571dff90, Set Pancake State to: true, Sun Mar 24 11:53:32 PDT 2019
+d2f17086-9c8a-4d1e-a3d3-3686571dff90, Set Hatch State to STOW, Sun Mar 24 11:53:32 PDT 2019
+d2f17086-9c8a-4d1e-a3d3-3686571dff90, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:53:32 PDT 2019
+3f4451e7-d8a0-4643-97f5-8589410379be, Teleop Init, Sun Mar 24 11:59:42 PDT 2019
+3f4451e7-d8a0-4643-97f5-8589410379be, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:59:42 PDT 2019
+3f4451e7-d8a0-4643-97f5-8589410379be, Starting Teleop, Sun Mar 24 11:59:42 PDT 2019
+3f4451e7-d8a0-4643-97f5-8589410379be, Disabled Init, Sun Mar 24 11:59:46 PDT 2019
+3f4451e7-d8a0-4643-97f5-8589410379be, Stopping Loops, Sun Mar 24 11:59:46 PDT 2019
+3f4451e7-d8a0-4643-97f5-8589410379be, Set Pancake State to: true, Sun Mar 24 11:59:46 PDT 2019
+3f4451e7-d8a0-4643-97f5-8589410379be, Set Hatch State to STOW, Sun Mar 24 11:59:46 PDT 2019
+3f4451e7-d8a0-4643-97f5-8589410379be, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 11:59:46 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Robot Startup, Sun Mar 24 12:00:08 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Robot Init on Practice Robot, Sun Mar 24 12:00:08 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Disabled Init, Sun Mar 24 12:00:10 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Set Pancake State to: true, Sun Mar 24 12:00:11 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Set Hatch State to STOW, Sun Mar 24 12:00:11 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:00:11 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Auto Init, Sun Mar 24 12:00:27 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:00:27 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Starting Sandstorm (Auto), Sun Mar 24 12:00:27 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:00:27 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:00:27 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Began Path: CS-1R, Sun Mar 24 12:00:27 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Switching to Velocity, Sun Mar 24 12:00:27 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Disabled Init, Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Stopping Loops, Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Set Pancake State to: true, Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Set Hatch State to STOW, Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, AUTO MODE DONE!!!!, Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Teleop Init, Sun Mar 24 12:00:31 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:00:31 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Starting Teleop, Sun Mar 24 12:00:31 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Disabled Init, Sun Mar 24 12:00:34 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Stopping Loops, Sun Mar 24 12:00:34 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Set Pancake State to: true, Sun Mar 24 12:00:34 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Set Hatch State to STOW, Sun Mar 24 12:00:34 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:00:34 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Robot Startup, Sun Mar 24 12:01:30 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Robot Init on Practice Robot, Sun Mar 24 12:01:30 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Disabled Init, Sun Mar 24 12:01:32 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Set Pancake State to: true, Sun Mar 24 12:01:33 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Set Hatch State to STOW, Sun Mar 24 12:01:33 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:01:33 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Auto Init, Sun Mar 24 12:01:36 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:01:36 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Starting Sandstorm (Auto), Sun Mar 24 12:01:36 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:01:36 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:01:36 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Began Path: CS-1R, Sun Mar 24 12:01:36 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Velocity, Sun Mar 24 12:01:36 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Disabled Init, Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Stopping Loops, Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Set Pancake State to: true, Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Set Hatch State to STOW, Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, AUTO MODE DONE!!!!, Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Teleop Init, Sun Mar 24 12:01:40 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:01:40 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Starting Teleop, Sun Mar 24 12:01:40 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Disabled Init, Sun Mar 24 12:01:42 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Stopping Loops, Sun Mar 24 12:01:43 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Set Pancake State to: true, Sun Mar 24 12:01:43 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Set Hatch State to STOW, Sun Mar 24 12:01:43 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:01:43 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Auto Init, Sun Mar 24 12:01:43 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:01:43 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Starting Sandstorm (Auto), Sun Mar 24 12:01:43 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:01:43 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:01:43 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Began Path: CS-1R, Sun Mar 24 12:01:43 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Velocity, Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Disabled Init, Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Stopping Loops, Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Set Pancake State to: true, Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Set Hatch State to STOW, Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, AUTO MODE DONE!!!!, Sun Mar 24 12:01:45 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:01:45 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Auto Init, Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Starting Sandstorm (Auto), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Began Path: CS-1R, Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Velocity, Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Disabled Init, Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Stopping Loops, Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Set Pancake State to: true, Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Set Hatch State to STOW, Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, AUTO MODE DONE!!!!, Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Auto Init, Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Starting Sandstorm (Auto), Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Began Path: CS-1R, Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Velocity, Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Set Pancake State to: true, Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Set Hatch State to STOW, Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Disabled Init, Sun Mar 24 12:01:50 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Stopping Loops, Sun Mar 24 12:01:50 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:01:50 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, AUTO MODE DONE!!!!, Sun Mar 24 12:01:50 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Robot Startup, Sun Mar 24 12:04:51 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Robot Init on Practice Robot, Sun Mar 24 12:04:51 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Disabled Init, Sun Mar 24 12:04:53 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Set Pancake State to: true, Sun Mar 24 12:04:53 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Set Hatch State to STOW, Sun Mar 24 12:04:53 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:04:53 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Teleop Init, Sun Mar 24 12:05:01 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:05:01 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Starting Teleop, Sun Mar 24 12:05:01 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Disabled Init, Sun Mar 24 12:05:05 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Stopping Loops, Sun Mar 24 12:05:05 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Set Pancake State to: true, Sun Mar 24 12:05:05 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Set Hatch State to STOW, Sun Mar 24 12:05:05 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:05:05 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Auto Init, Sun Mar 24 12:05:13 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:05:13 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Starting Sandstorm (Auto), Sun Mar 24 12:05:13 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Began Path: CS-1R, Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Switching to Velocity, Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Set Pancake State to: true, Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Set Hatch State to STOW, Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Disabled Init, Sun Mar 24 12:05:16 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Stopping Loops, Sun Mar 24 12:05:16 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:05:17 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, AUTO MODE DONE!!!!, Sun Mar 24 12:05:17 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Teleop Init, Sun Mar 24 12:05:42 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:05:42 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Starting Teleop, Sun Mar 24 12:05:42 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Disabled Init, Sun Mar 24 12:05:44 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Stopping Loops, Sun Mar 24 12:05:44 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Set Pancake State to: true, Sun Mar 24 12:05:44 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Set Hatch State to STOW, Sun Mar 24 12:05:44 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:05:44 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Robot Startup, Sun Mar 24 12:06:47 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Robot Init on Practice Robot, Sun Mar 24 12:06:47 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Disabled Init, Sun Mar 24 12:06:49 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Set Pancake State to: true, Sun Mar 24 12:06:49 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Set Hatch State to STOW, Sun Mar 24 12:06:49 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:06:49 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Auto Init, Sun Mar 24 12:06:50 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:06:50 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Starting Sandstorm (Auto), Sun Mar 24 12:06:50 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:06:51 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:06:51 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Velocity, Sun Mar 24 12:06:51 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Disabled Init, Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Stopping Loops, Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Set Pancake State to: true, Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Set Hatch State to STOW, Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, AUTO MODE DONE!!!!, Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Teleop Init, Sun Mar 24 12:06:54 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:06:54 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Starting Teleop, Sun Mar 24 12:06:54 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Disabled Init, Sun Mar 24 12:06:56 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Stopping Loops, Sun Mar 24 12:06:56 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Set Pancake State to: true, Sun Mar 24 12:06:57 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Set Hatch State to STOW, Sun Mar 24 12:06:57 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:06:57 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Auto Init, Sun Mar 24 12:06:58 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:06:58 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Starting Sandstorm (Auto), Sun Mar 24 12:06:58 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:06:58 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:06:58 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Velocity, Sun Mar 24 12:06:58 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Disabled Init, Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Stopping Loops, Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Set Pancake State to: true, Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Set Hatch State to STOW, Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, AUTO MODE DONE!!!!, Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Auto Init, Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Starting Sandstorm (Auto), Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Velocity, Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Set Pancake State to: true, Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Set Hatch State to STOW, Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Disabled Init, Sun Mar 24 12:07:03 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Stopping Loops, Sun Mar 24 12:07:03 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:07:03 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, AUTO MODE DONE!!!!, Sun Mar 24 12:07:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Robot Startup, Sun Mar 24 12:08:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Robot Init on Practice Robot, Sun Mar 24 12:08:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:08:26 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:08:26 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:08:26 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:26 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Teleop Init, Sun Mar 24 12:08:27 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:27 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Teleop, Sun Mar 24 12:08:27 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:08:29 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:08:29 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:08:29 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:08:29 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:29 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Auto Init, Sun Mar 24 12:08:31 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:31 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Sandstorm (Auto), Sun Mar 24 12:08:31 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:08:32 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:08:32 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Velocity, Sun Mar 24 12:08:32 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, AUTO MODE DONE!!!!, Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Teleop Init, Sun Mar 24 12:08:36 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:36 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Teleop, Sun Mar 24 12:08:36 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:08:39 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:08:39 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:08:39 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:08:39 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:39 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Auto Init, Sun Mar 24 12:08:40 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:40 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Sandstorm (Auto), Sun Mar 24 12:08:40 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:08:40 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:08:40 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Velocity, Sun Mar 24 12:08:40 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, AUTO MODE DONE!!!!, Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Auto Init, Sun Mar 24 12:08:42 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:42 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Sandstorm (Auto), Sun Mar 24 12:08:42 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:08:42 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:08:42 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Velocity, Sun Mar 24 12:08:42 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, AUTO MODE DONE!!!!, Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Teleop Init, Sun Mar 24 12:08:45 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:45 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Teleop, Sun Mar 24 12:08:45 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:08:47 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:08:47 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:08:47 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:08:47 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:47 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Auto Init, Sun Mar 24 12:08:48 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:48 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Sandstorm (Auto), Sun Mar 24 12:08:48 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:08:48 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:08:48 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Velocity, Sun Mar 24 12:08:48 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, AUTO MODE DONE!!!!, Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Auto Init, Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Sandstorm (Auto), Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:08:51 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:08:51 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Velocity, Sun Mar 24 12:08:51 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, AUTO MODE DONE!!!!, Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Teleop Init, Sun Mar 24 12:08:53 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:53 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Teleop, Sun Mar 24 12:08:53 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:08:56 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:08:56 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:08:56 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:08:56 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:56 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Auto Init, Sun Mar 24 12:08:58 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:58 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Sandstorm (Auto), Sun Mar 24 12:08:58 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:08:58 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:08:58 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Velocity, Sun Mar 24 12:08:58 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, AUTO MODE DONE!!!!, Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Auto Init, Sun Mar 24 12:09:00 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:00 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Sandstorm (Auto), Sun Mar 24 12:09:00 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:09:00 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:09:00 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Velocity, Sun Mar 24 12:09:00 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, AUTO MODE DONE!!!!, Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Auto Init, Sun Mar 24 12:09:02 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:02 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Sandstorm (Auto), Sun Mar 24 12:09:02 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:09:02 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:09:02 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Velocity, Sun Mar 24 12:09:02 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, AUTO MODE DONE!!!!, Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Teleop Init, Sun Mar 24 12:09:05 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:05 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Teleop, Sun Mar 24 12:09:05 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:09:08 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:09:08 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:09:08 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:09:08 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:08 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Auto Init, Sun Mar 24 12:09:09 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:09 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Sandstorm (Auto), Sun Mar 24 12:09:09 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Velocity, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, AUTO MODE DONE!!!!, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Auto Init, Sun Mar 24 12:09:11 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:11 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Sandstorm (Auto), Sun Mar 24 12:09:11 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:09:11 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:09:11 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Velocity, Sun Mar 24 12:09:11 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, AUTO MODE DONE!!!!, Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Auto Init, Sun Mar 24 12:09:13 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:13 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Sandstorm (Auto), Sun Mar 24 12:09:13 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:09:13 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:09:13 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Velocity, Sun Mar 24 12:09:13 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, AUTO MODE DONE!!!!, Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Teleop Init, Sun Mar 24 12:09:16 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:16 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Teleop, Sun Mar 24 12:09:16 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:09:19 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:09:19 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:09:19 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:09:19 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:19 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Auto Init, Sun Mar 24 12:09:21 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:21 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Sandstorm (Auto), Sun Mar 24 12:09:21 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:09:21 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:09:21 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Velocity, Sun Mar 24 12:09:21 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, AUTO MODE DONE!!!!, Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Auto Init, Sun Mar 24 12:09:23 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:23 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Sandstorm (Auto), Sun Mar 24 12:09:23 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:09:23 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:09:23 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Velocity, Sun Mar 24 12:09:23 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, AUTO MODE DONE!!!!, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Auto Init, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Sandstorm (Auto), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Alliance: Blue Match Number: 0 Match Type: None, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:PATH_FOLLOWING, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Velocity, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, AUTO MODE DONE!!!!, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Teleop Init, Sun Mar 24 12:09:27 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:27 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Starting Teleop, Sun Mar 24 12:09:27 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Disabled Init, Sun Mar 24 12:09:29 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Stopping Loops, Sun Mar 24 12:09:29 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Pancake State to: true, Sun Mar 24 12:09:29 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Set Hatch State to STOW, Sun Mar 24 12:09:29 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:29 PDT 2019
+0ce3942f-f257-481b-954d-ed82fa4c6486, Robot Startup, Sun Mar 24 12:09:37 PDT 2019
+0ce3942f-f257-481b-954d-ed82fa4c6486, Robot Init on Practice Robot, Sun Mar 24 12:09:37 PDT 2019
+0ce3942f-f257-481b-954d-ed82fa4c6486, Disabled Init, Sun Mar 24 12:09:39 PDT 2019
+0ce3942f-f257-481b-954d-ed82fa4c6486, Set Pancake State to: true, Sun Mar 24 12:09:39 PDT 2019
+0ce3942f-f257-481b-954d-ed82fa4c6486, Set Hatch State to STOW, Sun Mar 24 12:09:39 PDT 2019
+0ce3942f-f257-481b-954d-ed82fa4c6486, Switching to Robot State:TELEOP_DRIVE, Sun Mar 24 12:09:39 PDT 2019

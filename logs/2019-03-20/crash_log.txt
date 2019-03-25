@@ -1,0 +1,11 @@
+595fb796-0e5f-47fe-bdda-d9cec5722bfb, Exception, Wed Mar 20 17:24:58 PDT 2019, java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jaci.pathfinder.Trajectory.get(Trajectory.java:105)
+	at frc.robot.subsystems.Drive.setDrivePath(Drive.java:427)
+	at frc.robot.auto.actions.DrivePathVision.start(DrivePathVision.java:45)
+	at frc.robot.auto.AutoModeBase.runAction(AutoModeBase.java:39)
+	at frc.robot.auto.modes.HatchOuttakeVisionPigeon.routine(HatchOuttakeVisionPigeon.java:12)
+	at frc.robot.auto.AutoModeBase.run(AutoModeBase.java:19)
+	at frc.robot.auto.AutoModeExecutor$1.runCrashTracked(AutoModeExecutor.java:35)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at java.base/java.lang.Thread.run(Unknown Source)
+

@@ -2,10 +2,12 @@ package frc.robot.auto.actions;
 
 import frc.robot.AutoChooser;
 import frc.robot.lib.math.trajectory.Path;
+import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.Drive;
 
 public class DrivePathAction implements Action {
   private final Path path;
+  private int loopCounter = 0;
 
   public DrivePathAction(Path path, boolean dir) {
     this.path = path.copyPath();
@@ -19,7 +21,12 @@ public class DrivePathAction implements Action {
   }
 
   @Override public boolean isFinished() {
-    return Drive.getInstance().isDriveStateFinished();
+    if(loopCounter < 10){
+      loopCounter++;
+      return false;
+    } else{
+      return Drive.getInstance().isDriveStateFinished();
+    }
   }
 
   @Override public void update() {

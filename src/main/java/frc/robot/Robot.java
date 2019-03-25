@@ -2,6 +2,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import frc.robot.auto.modes.FrontSideCargshipAuto;
 import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;
@@ -15,6 +16,7 @@ public class Robot extends TimedRobot {
   private final SubsystemManager mSubsystemManager =
       new SubsystemManager(
           Arrays.asList(CargoArm.getInstance(), Drive.getInstance(), HatchArm.getInstance(), Superstructure.getInstance(), Vision.getInstance()));
+  private boolean hasBeenRun = false;
 
   public Robot() {
     super(Constants.GENERAL.kMainLoopDt);
@@ -41,6 +43,7 @@ public class Robot extends TimedRobot {
       mMatchState = MatchState.DISABLED;
       mSubsystemManager.stop();
       Superstructure.getInstance().setRobotState(Superstructure.RobotState.TELEOP_DRIVE);
+      Input.rumbleDriverController(0.0, 0.0);
     } catch (Throwable t) {
       Logger.logThrowableCrash(t);
       throw t;
@@ -54,7 +57,7 @@ public class Robot extends TimedRobot {
       mMatchState = MatchState.AUTO;
       mSubsystemManager.startAuto();
       AutoChooser.updateGameData();
-      // AutoChooser.startAuto(new FrontSideCargshipAuto());
+      Superstructure.getInstance().setRobotState(Superstructure.RobotState.PATH_FOLLOWING);
     } catch (Throwable t) {
       Logger.logThrowableCrash(t);
       throw t;

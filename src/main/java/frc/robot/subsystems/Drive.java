@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.Constants.MISC;
+import frc.robot.Robot;
 import frc.robot.auto.actions.VisionDrive;
 import frc.robot.lib.drivers.CT;
 import frc.robot.lib.drivers.MkTalon;
@@ -51,6 +52,7 @@ public class Drive extends Subsystem {
   private VisionDrive.VisionGoal mGoal;
   private MkTimer placeCargoTimer = new MkTimer();
   private Rotation2d mTargetHeading = new Rotation2d();
+  private double startDist = 0.0;
 
   private Drive() {
     ShuffleboardTab mDriveTab = Shuffleboard.getTab("Drive");
@@ -122,9 +124,9 @@ public class Drive extends Subsystem {
           mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
       mLeftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward,
-          mPeriodicIO.brake_mode);
+          NeutralMode.Brake);
       mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward,
-          mPeriodicIO.brake_mode);
+          NeutralMode.Brake);
     } else if (mDriveControlState == DriveControlState.VISION_DRIVE) {
       mLeftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
       mRightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
@@ -217,9 +219,8 @@ public class Drive extends Subsystem {
    */
   public synchronized void setOpenLoop(DriveSignal signal) {
     if (mDriveControlState != DriveControlState.OPEN_LOOP) {
-      Logger.logMarker("Switching to open loop");
+      Logger.logMarker("Switching to Open Loop");
       clearOutput();
-
       mDriveControlState = DriveControlState.OPEN_LOOP;
     }
     mPeriodicIO.left_demand = signal.getLeft();
@@ -231,7 +232,11 @@ public class Drive extends Subsystem {
     setHeading(Rotation2d.identity());
     mLeftDrive.zeroEncoder();
     mRightDrive.zeroEncoder();
-    mPeriodicIO = new PeriodicIO();
+    clearOutput();
+    mPeriodicIO.leftPos = 0.0;
+    mPeriodicIO.rightPos = 0.0;
+    mPeriodicIO.leftVel = 0.0;
+    mPeriodicIO.rightVel = 0.0;
     left_encoder_prev_distance_ = 0;
     right_encoder_prev_distance_ = 0;
     if (mCSVWriter == null && MISC.kDriveCSVLogging) {
@@ -313,10 +318,13 @@ public class Drive extends Subsystem {
       case INTAKE_HATCH:
         break;
       case PLACE_HATCH:
-        if (target.isValidTarget() && target.getDistance() < 28.0 && !mLowered) {
+        if (target.isValidTarget() && target.getDistance() < 26.0 && !mLowered && Robot.mMatchState == Robot.MatchState.AUTO) {
           HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
           mLowered = true;
-        }
+        } else if(target.isValidTarget() && target.getDistance() < 23.0 && !mLowered && Robot.mMatchState != Robot.MatchState.AUTO) {
+            HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
+            mLowered = true;
+          }
         break;
       case PLACE_CARGO:
         if (target.getDistance() < 26.0 && !placeCargoTimer.hasBeenSet()) {
@@ -336,16 +344,48 @@ public class Drive extends Subsystem {
       //double skew = ((target.getSkew() * Math.pow(dist, 3)) / 5.0e4) * 0.5 + ((Math.sin(Math.toRadians(target.getYaw())) * dist) / 2.0);
       visionTurn = mVisionAssist.calculate(target.getYaw());
     }
-    //double speed = 0.325;
-    double speed =
-        3.74091e-12 * Math.pow(dist, 7) - 1.69478e-9 * Math.pow(dist, 6) + 3.14753e-7 * Math.pow(dist, 5) - 0.0000308813 * Math.pow(dist, 4)
-            + 0.0017188 * Math.pow(dist, 3) - 0.0540482 * Math.pow(dist, 2) + 0.89485 * dist - 5.81563;
+    double speed = 0.325;
+   if(Robot.mMatchState == Robot.MatchState.AUTO && mGoal == VisionDrive.VisionGoal.INTAKE_HATCH){
+    /* speed = 0.45;
+     if (dist < 20.0) {
+       speed = 0.19;
+     } else if (dist > 110) {
+       speed = 0.75;
+     } */
+       speed = 0.5;
+       if (dist < 20.0) {
+         speed = 0.175;
+       } else if (dist > 110) {
+         speed = 0.7;
+       }
+   }
+   else{
+   /*  speed =
+         3.74091e-12 * Math.pow(dist, 7) - 1.69478e-9 * Math.pow(dist, 6) + 3.14753e-7 * Math.pow(dist, 5) - 0.0000308813 * Math.pow(dist, 4)
+             + 0.0017188 * Math.pow(dist, 3) - 0.0540482 * Math.pow(dist, 2) + 0.89485 * dist - 5.81563;
+*/
     //https://www.wolframalpha.com/input/?i=interpolating+polynomial+calculator&assumption=%7B%22F%22,+%22InterpolatingPolynomialCalculator%22,+%22data2%22%7D+-%3E%22%7B%7B110,0.75%7D,%7B100,0.7%7D,%7B90,0.65%7D,%7B70,0.5%7D,%7B50,+0.45%7D,%7B40,+0.35%7D,%7B30,+0.275%7D,%7B20,+0.175%7D%7D%22
+   speed = 0.3;
     if (dist < 20.0) {
       speed = 0.175;
     } else if (dist > 110) {
       speed = 0.75;
+    } else if(dist > 90){
+      speed = 0.675;
+    } else if(dist > 70){
+      speed = 0.575;
+    } else if(dist > 50){
+      speed = 0.5;
+    } else if(dist > 30){
+      speed = 0.45;
     }
+   }
+
+   if(dist > 27.5 && startDist < 35.0){
+     speed = 0.35;
+   } else if(startDist < 35.0 && dist > 20){
+    speed = 0.25;
+   }
     /*if (20.0 > dist) {
       speed = 0.175;
     } else if (90 < dist) {
@@ -356,6 +396,9 @@ public class Drive extends Subsystem {
       speed = 0.4;
     }*/
     //System.out.println(speed);
+    if(!target.isValidTarget()){
+      speed = 0.1;
+    }
     mPeriodicIO.left_demand = speed - visionTurn;
     mPeriodicIO.right_demand = speed + visionTurn;
     lastDist = dist;
@@ -364,14 +407,16 @@ public class Drive extends Subsystem {
   public synchronized void setVisionDrive(VisionDrive.VisionGoal mGoal) {
     if (mGoal == VisionDrive.VisionGoal.INTAKE_HATCH) {
       HatchArm.getInstance().setHatchState(HatchArm.HatchState.INTAKE);
-    } else {
+    } else if(Robot.mMatchState != Robot.MatchState.AUTO){
       HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
     }
+    mVisionAssist.reset();
     this.mGoal = mGoal;
     mLowered = false;
     clearOutput();
     mDriveControlState = DriveControlState.VISION_DRIVE;
     placeCargoTimer.reset();
+    startDist = Vision.getInstance().getLimelightTarget().getDistance();
   }
 
   /**
@@ -414,9 +459,9 @@ public class Drive extends Subsystem {
    * @param ang_tol Robot Angle Tolerance for Path Follower (Degrees)
    */
   public synchronized void setDrivePath(Path path, double dist_tol, double ang_tol) {
-    Superstructure.getInstance().setRobotState(Superstructure.RobotState.PATH_FOLLOWING);
-    Logger.logMarker("Began Path: " + path.getName());
-    double offset = lastAngle - Pathfinder.boundHalfDegrees(Pathfinder.r2d(path.getLeftWheelTrajectory().get(0).heading));
+    zero();
+    Logger.logError("Began Path: " + path.getName());
+    double offset = 0.0 - Pathfinder.boundHalfDegrees(Pathfinder.r2d(path.getLeftWheelTrajectory().get(0).heading));
     for (Trajectory.Segment segment : path.getLeftWheelTrajectory().segments) {
       segment.heading = Pathfinder.boundHalfDegrees(Pathfinder.r2d(segment.heading) + offset);
     }
@@ -426,7 +471,6 @@ public class Drive extends Subsystem {
     pathFollower = new PathFollower(path, dist_tol, ang_tol);
     pathFinished = false;
     setVelocity(DriveSignal.BRAKE, DriveSignal.BRAKE);
-    zero();
   }
 
   public synchronized void cancelPath() {
@@ -465,6 +509,7 @@ public class Drive extends Subsystem {
       mTargetHeading = heading;
       mIsOnTarget = false;
     }
+    mDriveControlState = DriveControlState.TURN_IN_PLACE;
   }
 
   /**
@@ -479,7 +524,7 @@ public class Drive extends Subsystem {
     final Rotation2d robot_to_target = field_to_robot.inverse().rotateBy(mTargetHeading);
 
     // Check if we are on target
-    final double kGoalPosTolerance = 0.75; // degrees
+    final double kGoalPosTolerance = 0.2; // degrees
     final double kGoalVelTolerance = 5.0; // inches per second
     if (Math.abs(robot_to_target.getDegrees()) < kGoalPosTolerance
         && Math.abs(mPeriodicIO.leftVel) < kGoalVelTolerance
@@ -503,10 +548,10 @@ public class Drive extends Subsystem {
     } else if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
       if (pathFinished) {
         lastAngle = pathFollower.getEndHeading();
-        mDriveControlState = DriveControlState.OPEN_LOOP;
         pathFollower = null;
         leftStatus = TrajectoryStatus.NEUTRAL;
         rightStatus = TrajectoryStatus.NEUTRAL;
+        setOpenLoop(DriveSignal.BRAKE);
         return true;
       } else {
         return false;
@@ -520,6 +565,8 @@ public class Drive extends Subsystem {
         Logger.logError("Invalid Vision Drive Goal");
         return true;
       }
+    } else if (mDriveControlState == DriveControlState.OPEN_LOOP) {
+      return true;
     } else {
       Logger.logError("Invalid Drive State");
       return true;

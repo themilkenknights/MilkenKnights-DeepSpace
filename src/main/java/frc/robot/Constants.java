@@ -34,7 +34,7 @@ public final class Constants {
     public static final double kTicksPerRev = 4096.0;
     public static final double kMotorSafetyTimer = 0.05;
     public static final double kMainLoopDt = 0.02;
-    public static final double kFastLooperDt = 0.01;
+    public static final double kFastLooperDt = 0.005;
     public static final double kThrottleDeadband = 0.0;
     public static final double kWheelDeadband = 0.003;
     public static final double kOperatorDeadband = 0.01;
@@ -77,7 +77,7 @@ public final class Constants {
     // Measured params
     public static final double kEffectiveDriveWheelTrackWidthInches = 33.75;
     // Effective Wheelbase
-    public static final double kDriveWheelTrackWidthInches = 22.45;
+    public static final double kDriveWheelTrackWidthInches = 22.97;
     public static final double kWheelDiameter = 5.9575;
     public static final double kCircumference = kWheelDiameter * GENERAL.PI;
     public static final double kTrackScrubFactor = 0.95;
@@ -92,12 +92,12 @@ public final class Constants {
     public static final double DRIVE_FOLLOWER_ANG = -1.25;
     public static final double PATH_DT = 0.01;
 
-    public static final double kVisionP = 0.01465;
+    public static final double kVisionP = 0.00780;
     public static final double kVisionI = 0.0;
-    public static final double kVisionD = 295.0;//285
+    public static final double kVisionD = 387.0;//285
 
     public static final String[] autoNames = {
-        "CS-1", "CS-2", "CS-3", "CS-4"};
+        "CS-1"/*, "CS-2", "CS-3", "CS-4"*/};
   }
 
   public static class TEST {
@@ -181,7 +181,7 @@ public final class Constants {
         tal.forwardLimitSwitchNormal = LimitSwitchNormal.Disabled;
         tal.reverseLimitSwitchNormal = LimitSwitchNormal.Disabled;
         if (loc == TalonLoc.Left || loc == TalonLoc.Right) {
-          tal.motionCurveStrength = 4;
+          tal.motionCurveStrength = 0;
           tal.velocityMeasurementPeriod = VelocityMeasPeriod.Period_25Ms;
           tal.velocityMeasurementWindow = 16;
           // General Velocity/Motion Magic
@@ -198,8 +198,8 @@ public final class Constants {
           tal.slot1.allowableClosedloopError = 15;
           tal.slot1.maxIntegralAccumulator = 10000;
           tal.slot1.integralZone = 150;
-          tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.9);
-          tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.4);
+          tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 1.0);
+          tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.75);
           tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
             /*
             tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.SensorSum;

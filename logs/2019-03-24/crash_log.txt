@@ -1,0 +1,664 @@
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Switching to Open Loop, Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:92), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, Switching to Open Loop, Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:92), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:00:29 PDT 2019
+1ea87ae7-286b-4575-ac99-189cfeec09ac, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:00:29 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Open Loop, Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:92), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Open Loop, Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:92), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:01:38 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Open Loop, Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:92), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Open Loop, Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:92), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:01:44 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:01:45 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:01:45 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Open Loop, Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:92), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Open Loop, Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:92), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:01:46 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Open Loop, Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:92), Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Input.setTeleopDrive(Input.java:233), Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Input.updateControlInput(Input.java:121), Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:37), Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10), Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118), Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, java.base/java.lang.Thread.run(Unknown Source), Sun Mar 24 12:01:47 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, Switching to Open Loop, Sun Mar 24 12:01:50 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:01:50 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:92), Sun Mar 24 12:01:50 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:01:50 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:01:50 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:01:50 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:01:50 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:01:50 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:01:50 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:01:50 PDT 2019
+5b2ee282-8c89-4b82-a808-c8a7e3504710, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:01:50 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, 
+, Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Switching to Open Loop, Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, frc.robot.Input.setTeleopDrive(Input.java:233), Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, frc.robot.Input.updateControlInput(Input.java:121), Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:37), Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10), Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118), Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, java.base/java.lang.Thread.run(Unknown Source), Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, 
+, Sun Mar 24 12:05:14 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, Switching to Open Loop, Sun Mar 24 12:05:16 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:05:16 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:05:16 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:05:16 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:05:16 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:05:16 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:05:16 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:05:16 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:05:16 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:05:16 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:05:16 PDT 2019
+a927cb3e-ea43-44ee-86d8-f4bba2be8612, 
+, Sun Mar 24 12:05:16 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Began Path: CS-1R, Sun Mar 24 12:06:51 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, 
+, Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Open Loop, Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, 
+, Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Open Loop, Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, 
+, Sun Mar 24 12:06:52 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Began Path: CS-1R, Sun Mar 24 12:06:58 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, 
+, Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Open Loop, Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, 
+, Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Open Loop, Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, 
+, Sun Mar 24 12:06:59 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Began Path: CS-1R, Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, 
+, Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Open Loop, Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.Input.setTeleopDrive(Input.java:233), Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.Input.updateControlInput(Input.java:121), Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:37), Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10), Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118), Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, java.base/java.lang.Thread.run(Unknown Source), Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, 
+, Sun Mar 24 12:07:00 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, Switching to Open Loop, Sun Mar 24 12:07:03 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:07:03 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:07:03 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:07:03 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:07:03 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:07:03 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:07:03 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:07:03 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:07:03 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:07:03 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:07:03 PDT 2019
+a3b74540-8946-4646-920f-eaf095520e41, 
+, Sun Mar 24 12:07:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Began Path: CS-1R, Sun Mar 24 12:08:32 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: PATH_FOLLOWING Structure: PATH_FOLLOWING, Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: VISION_DRIVE Structure: TELEOP_DRIVE, Sun Mar 24 12:08:33 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Began Path: CS-1R, Sun Mar 24 12:08:40 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: PATH_FOLLOWING Structure: PATH_FOLLOWING, Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: VISION_DRIVE Structure: TELEOP_DRIVE, Sun Mar 24 12:08:41 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Began Path: CS-1R, Sun Mar 24 12:08:42 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: PATH_FOLLOWING Structure: PATH_FOLLOWING, Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: VISION_DRIVE Structure: TELEOP_DRIVE, Sun Mar 24 12:08:43 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Began Path: CS-1R, Sun Mar 24 12:08:48 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:49 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: PATH_FOLLOWING Structure: PATH_FOLLOWING, Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: VISION_DRIVE Structure: TELEOP_DRIVE, Sun Mar 24 12:08:50 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Began Path: CS-1R, Sun Mar 24 12:08:51 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: PATH_FOLLOWING Structure: PATH_FOLLOWING, Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: VISION_DRIVE Structure: TELEOP_DRIVE, Sun Mar 24 12:08:52 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Began Path: CS-1R, Sun Mar 24 12:08:58 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: PATH_FOLLOWING Structure: PATH_FOLLOWING, Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: VISION_DRIVE Structure: TELEOP_DRIVE, Sun Mar 24 12:08:59 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Began Path: CS-1R, Sun Mar 24 12:09:00 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: PATH_FOLLOWING Structure: PATH_FOLLOWING, Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: VISION_DRIVE Structure: TELEOP_DRIVE, Sun Mar 24 12:09:01 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Began Path: CS-1R, Sun Mar 24 12:09:02 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: PATH_FOLLOWING Structure: PATH_FOLLOWING, Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: VISION_DRIVE Structure: TELEOP_DRIVE, Sun Mar 24 12:09:03 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Began Path: CS-1R, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: PATH_FOLLOWING Structure: PATH_FOLLOWING, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: VISION_DRIVE Structure: TELEOP_DRIVE, Sun Mar 24 12:09:10 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Began Path: CS-1R, Sun Mar 24 12:09:11 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: PATH_FOLLOWING Structure: PATH_FOLLOWING, Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: VISION_DRIVE Structure: TELEOP_DRIVE, Sun Mar 24 12:09:12 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Began Path: CS-1R, Sun Mar 24 12:09:13 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: PATH_FOLLOWING Structure: PATH_FOLLOWING, Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: VISION_DRIVE Structure: TELEOP_DRIVE, Sun Mar 24 12:09:14 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Began Path: CS-1R, Sun Mar 24 12:09:21 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: PATH_FOLLOWING Structure: PATH_FOLLOWING, Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: VISION_DRIVE Structure: TELEOP_DRIVE, Sun Mar 24 12:09:22 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Began Path: CS-1R, Sun Mar 24 12:09:23 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: PATH_FOLLOWING Structure: PATH_FOLLOWING, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: VISION_DRIVE Structure: TELEOP_DRIVE, Sun Mar 24 12:09:24 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Began Path: CS-1R, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.onStop(Drive.java:189), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.SubsystemManager.stop(SubsystemManager.java:130), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:44), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: PATH_FOLLOWING Structure: PATH_FOLLOWING, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Switching to Open Loop, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, java.base/java.lang.Thread.getStackTrace(Unknown Source), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.lib.util.Logger.logErrorWithTrace(Logger.java:93), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Drive.setOpenLoop(Drive.java:220), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.subsystems.Superstructure.setRobotState(Superstructure.java:119), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Robot.disabledInit(Robot.java:45), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.IterativeRobotBase.loopFunc(IterativeRobotBase.java:206), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:81), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:263), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, frc.robot.Main.main(Main.java:26), Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, 
+, Sun Mar 24 12:09:25 PDT 2019
+fd1ba6cb-8125-434a-831e-32cb3362478b, Drive: VISION_DRIVE Structure: TELEOP_DRIVE, Sun Mar 24 12:09:25 PDT 2019

@@ -1,6 +1,7 @@
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
 import jaci.pathfinder.Waypoint;
+import jaci.pathfinder.modifiers.TankModifier;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
@@ -66,11 +67,8 @@ public class PathGenerator {
         File leftPathFile = new File("src/main/deploy/" + container.getKey() + "L.csv").getAbsoluteFile();
         File rightPathFile = new File("src/main/deploy/" + container.getKey() + "R.csv").getAbsoluteFile();
 
-        Trajectory leftTraj = Pathfinder.generate(traj.getPoints(), traj.getConfig());
-        Trajectory rightTraj = Pathfinder.generate(traj.getRightPoints(), traj.getConfig());
-
-        Pathfinder.writeToCSV(leftPathFile, leftTraj);
-        Pathfinder.writeToCSV(rightPathFile, rightTraj);
+        Trajectory leftTraj = Pathfinder.generate(traj.getLeftPoints(), traj.getConfig());
+        Trajectory rightTraj = Pathfinder.generate(traj.getPoints(), traj.getConfig());
 
         System.out.println("Path: " + container.getKey() + " Time: " + leftTraj.length() * 0.01 + " Sec");
         if (container.getKey().charAt(0) == 'C') {
@@ -173,7 +171,7 @@ public class PathGenerator {
       return bothSides;
     }
 
-    public Waypoint[] getRightPoints() {
+    public Waypoint[] getLeftPoints() {
       Waypoint[] waypoints = new Waypoint[points.length];
       for (int i = 0; i < waypoints.length; i++) {
         waypoints[i] = new Waypoint(points[i].x, points[i].y, points[i].angle);

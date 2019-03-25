@@ -1,0 +1,10 @@
+331f6809-451e-461b-ac46-84eb333b73ca, Exception, Sat Mar 23 16:39:12 PDT 2019, java.lang.NullPointerException
+	at com.ctre.phoenix.motorcontrol.can.BaseMotorController.setNeutralMode(BaseMotorController.java:226)
+	at frc.robot.lib.drivers.MkTalon.set(MkTalon.java:239)
+	at frc.robot.lib.drivers.MkTalon.set(MkTalon.java:225)
+	at frc.robot.subsystems.Drive.writePeriodicOutputs(Drive.java:116)
+	at frc.robot.SubsystemManager$1.runCrashTracked(SubsystemManager.java:40)
+	at frc.robot.lib.util.CrashTrackingRunnable.run(CrashTrackingRunnable.java:10)
+	at edu.wpi.first.wpilibj.Notifier.lambda$new$0(Notifier.java:118)
+	at java.base/java.lang.Thread.run(Unknown Source)
+

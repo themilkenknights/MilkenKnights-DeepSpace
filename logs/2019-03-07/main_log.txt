@@ -1,0 +1,453 @@
+76acd2be-460a-40dc-858f-e0e836a04871, Robot Init on Practice Robot, Thu Mar 07 16:49:00 PST 2019
+76acd2be-460a-40dc-858f-e0e836a04871, Disabled Init, Thu Mar 07 16:49:00 PST 2019
+76acd2be-460a-40dc-858f-e0e836a04871, Set Hatch Spear to STOW, Thu Mar 07 16:49:01 PST 2019
+de3fc759-c3e5-4c06-81f6-87bf129799f9, SigNotUpdated, Thu Mar 07 16:49:19 PST 2019
+de3fc759-c3e5-4c06-81f6-87bf129799f9, SigNotUpdated, Thu Mar 07 16:49:20 PST 2019
+de3fc759-c3e5-4c06-81f6-87bf129799f9, SigNotUpdated, Thu Mar 07 16:49:20 PST 2019
+de3fc759-c3e5-4c06-81f6-87bf129799f9, SigNotUpdated, Thu Mar 07 16:49:20 PST 2019
+de3fc759-c3e5-4c06-81f6-87bf129799f9, SigNotUpdated, Thu Mar 07 16:49:20 PST 2019
+de3fc759-c3e5-4c06-81f6-87bf129799f9, Robot Startup, Thu Mar 07 16:49:21 PST 2019
+de3fc759-c3e5-4c06-81f6-87bf129799f9, Robot Init on Practice Robot, Thu Mar 07 16:49:21 PST 2019
+de3fc759-c3e5-4c06-81f6-87bf129799f9, Disabled Init, Thu Mar 07 16:49:21 PST 2019
+de3fc759-c3e5-4c06-81f6-87bf129799f9, Set Hatch Spear to STOW, Thu Mar 07 16:49:21 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, SigNotUpdated, Thu Mar 07 16:51:06 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, SigNotUpdated, Thu Mar 07 16:51:06 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, SigNotUpdated, Thu Mar 07 16:51:07 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, SigNotUpdated, Thu Mar 07 16:51:07 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, SigNotUpdated, Thu Mar 07 16:51:07 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, SigNotUpdated, Thu Mar 07 16:51:07 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, Robot Startup, Thu Mar 07 16:51:08 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, Robot Init on Practice Robot, Thu Mar 07 16:51:08 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, Disabled Init, Thu Mar 07 16:51:08 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, Set Hatch Spear to STOW, Thu Mar 07 16:51:08 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, Teleop Init, Thu Mar 07 16:51:48 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, SET HEADING: 0.0, Thu Mar 07 16:51:48 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, Gyro offset: 0.0, Thu Mar 07 16:51:48 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, SET HEADING: 0.0, Thu Mar 07 16:51:48 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, Gyro offset: 0.0, Thu Mar 07 16:51:48 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, SET HEADING: 0.0, Thu Mar 07 16:51:48 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, Gyro offset: 0.0, Thu Mar 07 16:51:48 PST 2019
+7bb23d05-a9e3-48d1-a056-3366a1e8f968, Set Hatch Spear to STOW, Thu Mar 07 16:51:48 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, SigNotUpdated, Thu Mar 07 16:51:54 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, SigNotUpdated, Thu Mar 07 16:51:55 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, SigNotUpdated, Thu Mar 07 16:51:55 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, SigNotUpdated, Thu Mar 07 16:51:55 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, SigNotUpdated, Thu Mar 07 16:51:55 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, SigNotUpdated, Thu Mar 07 16:51:55 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, SigNotUpdated, Thu Mar 07 16:51:55 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, Robot Startup, Thu Mar 07 16:51:57 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, Robot Init on Practice Robot, Thu Mar 07 16:51:57 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, Disabled Init, Thu Mar 07 16:51:57 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, Set Hatch Spear to STOW, Thu Mar 07 16:51:57 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, Teleop Init, Thu Mar 07 16:53:34 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, SET HEADING: 0.0, Thu Mar 07 16:53:34 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, Gyro offset: -0.263671875, Thu Mar 07 16:53:34 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, SET HEADING: 0.0, Thu Mar 07 16:53:34 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, Gyro offset: 0.0, Thu Mar 07 16:53:34 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, SET HEADING: 0.0, Thu Mar 07 16:53:34 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, Gyro offset: 0.0, Thu Mar 07 16:53:34 PST 2019
+f07fe92d-9774-42a7-b0c9-1da1a2891080, Set Hatch Spear to STOW, Thu Mar 07 16:53:34 PST 2019
+46bd76b2-e2a3-4153-a1b1-e10bc9d05561, SigNotUpdated, Thu Mar 07 16:53:40 PST 2019
+46bd76b2-e2a3-4153-a1b1-e10bc9d05561, SigNotUpdated, Thu Mar 07 16:53:41 PST 2019
+46bd76b2-e2a3-4153-a1b1-e10bc9d05561, SigNotUpdated, Thu Mar 07 16:53:41 PST 2019
+46bd76b2-e2a3-4153-a1b1-e10bc9d05561, SigNotUpdated, Thu Mar 07 16:53:41 PST 2019
+46bd76b2-e2a3-4153-a1b1-e10bc9d05561, SigNotUpdated, Thu Mar 07 16:53:41 PST 2019
+46bd76b2-e2a3-4153-a1b1-e10bc9d05561, SigNotUpdated, Thu Mar 07 16:53:41 PST 2019
+46bd76b2-e2a3-4153-a1b1-e10bc9d05561, Robot Startup, Thu Mar 07 16:53:42 PST 2019
+46bd76b2-e2a3-4153-a1b1-e10bc9d05561, Robot Init on Practice Robot, Thu Mar 07 16:53:42 PST 2019
+46bd76b2-e2a3-4153-a1b1-e10bc9d05561, Disabled Init, Thu Mar 07 16:53:42 PST 2019
+46bd76b2-e2a3-4153-a1b1-e10bc9d05561, Set Hatch Spear to STOW, Thu Mar 07 16:53:43 PST 2019
+7efebd74-1c33-490f-b08b-72b1f83cb141, SigNotUpdated, Thu Mar 07 16:54:58 PST 2019
+7efebd74-1c33-490f-b08b-72b1f83cb141, SigNotUpdated, Thu Mar 07 16:54:58 PST 2019
+7efebd74-1c33-490f-b08b-72b1f83cb141, SigNotUpdated, Thu Mar 07 16:54:58 PST 2019
+7efebd74-1c33-490f-b08b-72b1f83cb141, SigNotUpdated, Thu Mar 07 16:54:59 PST 2019
+7efebd74-1c33-490f-b08b-72b1f83cb141, SigNotUpdated, Thu Mar 07 16:54:59 PST 2019
+7efebd74-1c33-490f-b08b-72b1f83cb141, SigNotUpdated, Thu Mar 07 16:54:59 PST 2019
+7efebd74-1c33-490f-b08b-72b1f83cb141, SigNotUpdated, Thu Mar 07 16:54:59 PST 2019
+7efebd74-1c33-490f-b08b-72b1f83cb141, Robot Startup, Thu Mar 07 16:55:00 PST 2019
+7efebd74-1c33-490f-b08b-72b1f83cb141, Robot Init on Practice Robot, Thu Mar 07 16:55:00 PST 2019
+7efebd74-1c33-490f-b08b-72b1f83cb141, Disabled Init, Thu Mar 07 16:55:01 PST 2019
+7efebd74-1c33-490f-b08b-72b1f83cb141, Set Hatch Spear to STOW, Thu Mar 07 16:55:01 PST 2019
+53ee7e48-995b-4ab1-a428-f088c2889957, SigNotUpdated, Thu Mar 07 16:55:15 PST 2019
+53ee7e48-995b-4ab1-a428-f088c2889957, SigNotUpdated, Thu Mar 07 16:55:16 PST 2019
+53ee7e48-995b-4ab1-a428-f088c2889957, SigNotUpdated, Thu Mar 07 16:55:16 PST 2019
+53ee7e48-995b-4ab1-a428-f088c2889957, SigNotUpdated, Thu Mar 07 16:55:16 PST 2019
+53ee7e48-995b-4ab1-a428-f088c2889957, SigNotUpdated, Thu Mar 07 16:55:16 PST 2019
+53ee7e48-995b-4ab1-a428-f088c2889957, SigNotUpdated, Thu Mar 07 16:55:16 PST 2019
+53ee7e48-995b-4ab1-a428-f088c2889957, SigNotUpdated, Thu Mar 07 16:55:17 PST 2019
+53ee7e48-995b-4ab1-a428-f088c2889957, Robot Startup, Thu Mar 07 16:55:18 PST 2019
+53ee7e48-995b-4ab1-a428-f088c2889957, Robot Init on Practice Robot, Thu Mar 07 16:55:18 PST 2019
+53ee7e48-995b-4ab1-a428-f088c2889957, Disabled Init, Thu Mar 07 16:55:18 PST 2019
+53ee7e48-995b-4ab1-a428-f088c2889957, Set Hatch Spear to STOW, Thu Mar 07 16:55:18 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, SigNotUpdated, Thu Mar 07 16:56:08 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, SigNotUpdated, Thu Mar 07 16:56:09 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, SigNotUpdated, Thu Mar 07 16:56:09 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, SigNotUpdated, Thu Mar 07 16:56:09 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, SigNotUpdated, Thu Mar 07 16:56:09 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, Robot Startup, Thu Mar 07 16:56:10 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, Robot Init on Practice Robot, Thu Mar 07 16:56:10 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, Disabled Init, Thu Mar 07 16:56:10 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, Set Hatch Spear to STOW, Thu Mar 07 16:56:11 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, Teleop Init, Thu Mar 07 16:56:17 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, SET HEADING: 0.0, Thu Mar 07 16:56:17 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, Gyro offset: 0.0, Thu Mar 07 16:56:17 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, SET HEADING: 0.0, Thu Mar 07 16:56:17 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, Gyro offset: 0.0, Thu Mar 07 16:56:17 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, SET HEADING: 0.0, Thu Mar 07 16:56:17 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, Gyro offset: 0.0, Thu Mar 07 16:56:17 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, Set Hatch Spear to STOW, Thu Mar 07 16:56:17 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 16:56:17 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, Starting Teleop, Thu Mar 07 16:56:17 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349,  UnderVoltage:0 ForwardLimitSwitch:0 ReverseLimitSwitch:0 ForwardSoftLimit:0 ReverseSoftLimit:0 ResetDuringEn:0 SensorOverflow:0 SensorOutOfPhase:0 HardwareESDReset:0 RemoteLossOfSignal:1, Thu Mar 07 16:56:17 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, Disabled Init, Thu Mar 07 16:56:47 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, Stopping Loops, Thu Mar 07 16:56:47 PST 2019
+8392ee51-f1d4-43bf-85a1-f2c7056cf349, Set Hatch Spear to STOW, Thu Mar 07 16:56:47 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, SigNotUpdated, Thu Mar 07 16:57:32 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, SigNotUpdated, Thu Mar 07 16:57:32 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, SigNotUpdated, Thu Mar 07 16:57:33 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, SigNotUpdated, Thu Mar 07 16:57:33 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, SigNotUpdated, Thu Mar 07 16:57:33 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, Robot Startup, Thu Mar 07 16:57:34 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, Robot Init on Practice Robot, Thu Mar 07 16:57:34 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, Disabled Init, Thu Mar 07 16:57:34 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, Set Hatch Spear to STOW, Thu Mar 07 16:57:35 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, Teleop Init, Thu Mar 07 16:57:38 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, SET HEADING: 0.0, Thu Mar 07 16:57:38 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, Gyro offset: 0.0, Thu Mar 07 16:57:38 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, SET HEADING: 0.0, Thu Mar 07 16:57:38 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, Gyro offset: 0.0, Thu Mar 07 16:57:38 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, SET HEADING: 0.0, Thu Mar 07 16:57:38 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, Gyro offset: 0.0, Thu Mar 07 16:57:38 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, Set Hatch Spear to STOW, Thu Mar 07 16:57:38 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 16:57:38 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, Starting Teleop, Thu Mar 07 16:57:38 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, Disabled Init, Thu Mar 07 16:58:09 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, Stopping Loops, Thu Mar 07 16:58:09 PST 2019
+1e2df2f1-3f8c-4171-bbd1-a3e7056217b8, Set Hatch Spear to STOW, Thu Mar 07 16:58:09 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, SigNotUpdated, Thu Mar 07 16:59:09 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, SigNotUpdated, Thu Mar 07 16:59:09 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, SigNotUpdated, Thu Mar 07 16:59:10 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, SigNotUpdated, Thu Mar 07 16:59:10 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, SigNotUpdated, Thu Mar 07 16:59:10 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, SigNotUpdated, Thu Mar 07 16:59:10 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, Robot Startup, Thu Mar 07 16:59:11 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, Robot Init on Practice Robot, Thu Mar 07 16:59:11 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, Disabled Init, Thu Mar 07 16:59:11 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, Set Hatch Spear to STOW, Thu Mar 07 16:59:12 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, Teleop Init, Thu Mar 07 17:03:03 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, SET HEADING: 0.0, Thu Mar 07 17:03:03 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, Gyro offset: 0.0, Thu Mar 07 17:03:03 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, SET HEADING: 0.0, Thu Mar 07 17:03:03 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, Gyro offset: 0.0, Thu Mar 07 17:03:03 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, SET HEADING: 0.0, Thu Mar 07 17:03:03 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, Gyro offset: 0.0, Thu Mar 07 17:03:03 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, Set Hatch Spear to STOW, Thu Mar 07 17:03:03 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 17:03:03 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, Starting Teleop, Thu Mar 07 17:03:03 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, Disabled Init, Thu Mar 07 17:03:05 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, Stopping Loops, Thu Mar 07 17:03:05 PST 2019
+2aab4ca8-a3d7-462a-8187-061c56c4cc26, Set Hatch Spear to STOW, Thu Mar 07 17:03:05 PST 2019
+848e0731-5226-4960-ba17-59ebaad89eaf, SigNotUpdated, Thu Mar 07 17:04:44 PST 2019
+848e0731-5226-4960-ba17-59ebaad89eaf, SigNotUpdated, Thu Mar 07 17:04:45 PST 2019
+848e0731-5226-4960-ba17-59ebaad89eaf, SigNotUpdated, Thu Mar 07 17:04:45 PST 2019
+848e0731-5226-4960-ba17-59ebaad89eaf, SigNotUpdated, Thu Mar 07 17:04:45 PST 2019
+848e0731-5226-4960-ba17-59ebaad89eaf, SigNotUpdated, Thu Mar 07 17:04:45 PST 2019
+848e0731-5226-4960-ba17-59ebaad89eaf, Robot Startup, Thu Mar 07 17:04:46 PST 2019
+848e0731-5226-4960-ba17-59ebaad89eaf, Robot Init on Practice Robot, Thu Mar 07 17:04:46 PST 2019
+848e0731-5226-4960-ba17-59ebaad89eaf, Disabled Init, Thu Mar 07 17:04:46 PST 2019
+848e0731-5226-4960-ba17-59ebaad89eaf, Set Hatch Spear to STOW, Thu Mar 07 17:04:46 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, SigNotUpdated, Thu Mar 07 17:10:52 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, SigNotUpdated, Thu Mar 07 17:10:52 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, SigNotUpdated, Thu Mar 07 17:10:52 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, SigNotUpdated, Thu Mar 07 17:10:52 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, SigNotUpdated, Thu Mar 07 17:10:52 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, Robot Startup, Thu Mar 07 17:10:53 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, Robot Init on Practice Robot, Thu Mar 07 17:10:53 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, Disabled Init, Thu Mar 07 17:10:53 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, Set Hatch Spear to STOW, Thu Mar 07 17:10:54 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, Teleop Init, Thu Mar 07 17:11:13 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, SET HEADING: 0.0, Thu Mar 07 17:11:13 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, Gyro offset: 0.0, Thu Mar 07 17:11:13 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, SET HEADING: 0.0, Thu Mar 07 17:11:13 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, Gyro offset: 0.0, Thu Mar 07 17:11:13 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, SET HEADING: 0.0, Thu Mar 07 17:11:13 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, Gyro offset: 0.0, Thu Mar 07 17:11:13 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, Set Hatch Spear to STOW, Thu Mar 07 17:11:13 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 17:11:13 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, Starting Teleop, Thu Mar 07 17:11:13 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, Disabled Init, Thu Mar 07 17:11:48 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, Stopping Loops, Thu Mar 07 17:11:48 PST 2019
+7fa65c3a-b004-49af-90db-a7c470c40d71, Set Hatch Spear to STOW, Thu Mar 07 17:11:48 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, SigNotUpdated, Thu Mar 07 17:12:24 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, SigNotUpdated, Thu Mar 07 17:12:25 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, SigNotUpdated, Thu Mar 07 17:12:25 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, SigNotUpdated, Thu Mar 07 17:12:25 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, Robot Startup, Thu Mar 07 17:12:26 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, Robot Init on Practice Robot, Thu Mar 07 17:12:26 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, Disabled Init, Thu Mar 07 17:12:26 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, Set Hatch Spear to STOW, Thu Mar 07 17:12:26 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, Teleop Init, Thu Mar 07 17:12:30 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, SET HEADING: 0.0, Thu Mar 07 17:12:31 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, Gyro offset: 0.17578124999999997, Thu Mar 07 17:12:31 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, SET HEADING: 0.0, Thu Mar 07 17:12:31 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, Gyro offset: 0.0, Thu Mar 07 17:12:31 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, SET HEADING: 0.0, Thu Mar 07 17:12:31 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, Gyro offset: 0.0, Thu Mar 07 17:12:31 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, Set Hatch Spear to STOW, Thu Mar 07 17:12:31 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 17:12:31 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, Starting Teleop, Thu Mar 07 17:12:31 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, Disabled Init, Thu Mar 07 17:12:39 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, Stopping Loops, Thu Mar 07 17:12:39 PST 2019
+2696a8bd-8936-4b38-bc5c-f066d2417398, Set Hatch Spear to STOW, Thu Mar 07 17:12:39 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, SigNotUpdated, Thu Mar 07 17:13:03 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, SigNotUpdated, Thu Mar 07 17:13:03 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, SigNotUpdated, Thu Mar 07 17:13:03 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, SigNotUpdated, Thu Mar 07 17:13:03 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, SigNotUpdated, Thu Mar 07 17:13:03 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, SigNotUpdated, Thu Mar 07 17:13:03 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Robot Startup, Thu Mar 07 17:13:05 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Robot Init on Practice Robot, Thu Mar 07 17:13:05 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Disabled Init, Thu Mar 07 17:13:05 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Set Hatch Spear to STOW, Thu Mar 07 17:13:05 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Teleop Init, Thu Mar 07 17:13:06 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, SET HEADING: 0.0, Thu Mar 07 17:13:06 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Gyro offset: 0.0, Thu Mar 07 17:13:06 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, SET HEADING: 0.0, Thu Mar 07 17:13:06 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Gyro offset: 0.0, Thu Mar 07 17:13:06 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, SET HEADING: 0.0, Thu Mar 07 17:13:06 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Gyro offset: 0.0, Thu Mar 07 17:13:06 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Set Hatch Spear to STOW, Thu Mar 07 17:13:06 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 17:13:06 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Starting Teleop, Thu Mar 07 17:13:06 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Disabled Init, Thu Mar 07 17:13:29 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Stopping Loops, Thu Mar 07 17:13:29 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Set Hatch Spear to STOW, Thu Mar 07 17:13:29 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Teleop Init, Thu Mar 07 17:16:15 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, SET HEADING: 0.0, Thu Mar 07 17:16:15 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Gyro offset: -0.52734375, Thu Mar 07 17:16:15 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, SET HEADING: 0.0, Thu Mar 07 17:16:15 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Gyro offset: -0.52734375, Thu Mar 07 17:16:15 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Set Hatch Spear to STOW, Thu Mar 07 17:16:15 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 17:16:15 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Starting Teleop, Thu Mar 07 17:16:15 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Disabled Init, Thu Mar 07 17:16:23 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Stopping Loops, Thu Mar 07 17:16:23 PST 2019
+3027b458-416b-47b0-bb86-debab6a2e27d, Set Hatch Spear to STOW, Thu Mar 07 17:16:23 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, SigNotUpdated, Thu Mar 07 17:16:38 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, SigNotUpdated, Thu Mar 07 17:16:39 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, SigNotUpdated, Thu Mar 07 17:16:39 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, SigNotUpdated, Thu Mar 07 17:16:39 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, Robot Startup, Thu Mar 07 17:16:40 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, Robot Init on Practice Robot, Thu Mar 07 17:16:40 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, Disabled Init, Thu Mar 07 17:16:40 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, Set Hatch Spear to STOW, Thu Mar 07 17:16:40 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, Teleop Init, Thu Mar 07 17:16:45 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, SET HEADING: 0.0, Thu Mar 07 17:16:45 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, Gyro offset: 0.0, Thu Mar 07 17:16:45 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, SET HEADING: 0.0, Thu Mar 07 17:16:45 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, Gyro offset: 0.0, Thu Mar 07 17:16:45 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, SET HEADING: 0.0, Thu Mar 07 17:16:45 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, Gyro offset: 0.0, Thu Mar 07 17:16:45 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, Set Hatch Spear to STOW, Thu Mar 07 17:16:45 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 17:16:45 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, Starting Teleop, Thu Mar 07 17:16:45 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, Disabled Init, Thu Mar 07 17:17:08 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, Stopping Loops, Thu Mar 07 17:17:08 PST 2019
+47b1063e-99d3-488e-8119-ff6d67026618, Set Hatch Spear to STOW, Thu Mar 07 17:17:08 PST 2019
+198fea4c-56cc-4bc9-b44f-c584fa02eca5, SigNotUpdated, Thu Mar 07 17:17:33 PST 2019
+198fea4c-56cc-4bc9-b44f-c584fa02eca5, SigNotUpdated, Thu Mar 07 17:17:33 PST 2019
+198fea4c-56cc-4bc9-b44f-c584fa02eca5, SigNotUpdated, Thu Mar 07 17:17:34 PST 2019
+198fea4c-56cc-4bc9-b44f-c584fa02eca5, SigNotUpdated, Thu Mar 07 17:17:34 PST 2019
+198fea4c-56cc-4bc9-b44f-c584fa02eca5, SigNotUpdated, Thu Mar 07 17:17:34 PST 2019
+198fea4c-56cc-4bc9-b44f-c584fa02eca5, SigNotUpdated, Thu Mar 07 17:17:34 PST 2019
+198fea4c-56cc-4bc9-b44f-c584fa02eca5, Robot Startup, Thu Mar 07 17:17:35 PST 2019
+198fea4c-56cc-4bc9-b44f-c584fa02eca5, Robot Init on Practice Robot, Thu Mar 07 17:17:35 PST 2019
+198fea4c-56cc-4bc9-b44f-c584fa02eca5, Disabled Init, Thu Mar 07 17:17:35 PST 2019
+198fea4c-56cc-4bc9-b44f-c584fa02eca5, Set Hatch Spear to STOW, Thu Mar 07 17:17:35 PST 2019
+9cdbf5a9-31e9-451e-b473-25ddbb0347b7, SigNotUpdated, Thu Mar 07 17:18:32 PST 2019
+9cdbf5a9-31e9-451e-b473-25ddbb0347b7, SigNotUpdated, Thu Mar 07 17:18:32 PST 2019
+9cdbf5a9-31e9-451e-b473-25ddbb0347b7, SigNotUpdated, Thu Mar 07 17:18:32 PST 2019
+9cdbf5a9-31e9-451e-b473-25ddbb0347b7, SigNotUpdated, Thu Mar 07 17:18:32 PST 2019
+9cdbf5a9-31e9-451e-b473-25ddbb0347b7, SigNotUpdated, Thu Mar 07 17:18:32 PST 2019
+9cdbf5a9-31e9-451e-b473-25ddbb0347b7, Robot Startup, Thu Mar 07 17:18:33 PST 2019
+9cdbf5a9-31e9-451e-b473-25ddbb0347b7, Robot Init on Practice Robot, Thu Mar 07 17:18:33 PST 2019
+9cdbf5a9-31e9-451e-b473-25ddbb0347b7, Disabled Init, Thu Mar 07 17:18:34 PST 2019
+9cdbf5a9-31e9-451e-b473-25ddbb0347b7, Set Hatch Spear to STOW, Thu Mar 07 17:18:34 PST 2019
+f99e1124-a873-4dc2-ba37-655dccc70bc6, SigNotUpdated, Thu Mar 07 17:19:06 PST 2019
+f99e1124-a873-4dc2-ba37-655dccc70bc6, SigNotUpdated, Thu Mar 07 17:19:06 PST 2019
+f99e1124-a873-4dc2-ba37-655dccc70bc6, SigNotUpdated, Thu Mar 07 17:19:07 PST 2019
+f99e1124-a873-4dc2-ba37-655dccc70bc6, Robot Startup, Thu Mar 07 17:19:08 PST 2019
+f99e1124-a873-4dc2-ba37-655dccc70bc6, Robot Init on Practice Robot, Thu Mar 07 17:19:08 PST 2019
+f99e1124-a873-4dc2-ba37-655dccc70bc6, Disabled Init, Thu Mar 07 17:19:08 PST 2019
+f99e1124-a873-4dc2-ba37-655dccc70bc6, Set Hatch Spear to STOW, Thu Mar 07 17:19:08 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, SigNotUpdated, Thu Mar 07 17:19:20 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, SigNotUpdated, Thu Mar 07 17:19:20 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, SigNotUpdated, Thu Mar 07 17:19:20 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, SigNotUpdated, Thu Mar 07 17:19:20 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, SigNotUpdated, Thu Mar 07 17:19:20 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, Robot Startup, Thu Mar 07 17:19:21 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, Robot Init on Practice Robot, Thu Mar 07 17:19:21 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, Disabled Init, Thu Mar 07 17:19:22 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, Set Hatch Spear to STOW, Thu Mar 07 17:19:22 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, Teleop Init, Thu Mar 07 17:19:28 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, SET HEADING: 0.0, Thu Mar 07 17:19:28 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, Gyro offset: -0.8789062499999999, Thu Mar 07 17:19:28 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, SET HEADING: 0.0, Thu Mar 07 17:19:28 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, Gyro offset: 0.0, Thu Mar 07 17:19:28 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, SET HEADING: 0.0, Thu Mar 07 17:19:28 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, Gyro offset: 0.0, Thu Mar 07 17:19:28 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, Set Hatch Spear to STOW, Thu Mar 07 17:19:28 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 17:19:28 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, Starting Teleop, Thu Mar 07 17:19:28 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, Disabled Init, Thu Mar 07 17:19:51 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, Stopping Loops, Thu Mar 07 17:19:51 PST 2019
+2478bdc0-7ece-49d6-bcf3-26d08f4f554d, Set Hatch Spear to STOW, Thu Mar 07 17:19:51 PST 2019
+6f39c515-057a-4020-b042-2a1a49554904, SigNotUpdated, Thu Mar 07 17:38:32 PST 2019
+6f39c515-057a-4020-b042-2a1a49554904, SigNotUpdated, Thu Mar 07 17:38:33 PST 2019
+6f39c515-057a-4020-b042-2a1a49554904, SigNotUpdated, Thu Mar 07 17:38:33 PST 2019
+6f39c515-057a-4020-b042-2a1a49554904, SigNotUpdated, Thu Mar 07 17:38:33 PST 2019
+6f39c515-057a-4020-b042-2a1a49554904, SigNotUpdated, Thu Mar 07 17:38:33 PST 2019
+6f39c515-057a-4020-b042-2a1a49554904, SigNotUpdated, Thu Mar 07 17:38:33 PST 2019
+6f39c515-057a-4020-b042-2a1a49554904, SigNotUpdated, Thu Mar 07 17:38:33 PST 2019
+6f39c515-057a-4020-b042-2a1a49554904, Robot Startup, Thu Mar 07 17:38:35 PST 2019
+6f39c515-057a-4020-b042-2a1a49554904, Robot Init on Practice Robot, Thu Mar 07 17:38:35 PST 2019
+6f39c515-057a-4020-b042-2a1a49554904, Disabled Init, Thu Mar 07 17:38:35 PST 2019
+6f39c515-057a-4020-b042-2a1a49554904, Set Hatch Spear to STOW, Thu Mar 07 17:38:35 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SigNotUpdated, Thu Mar 07 17:39:19 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SigNotUpdated, Thu Mar 07 17:39:20 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SigNotUpdated, Thu Mar 07 17:39:20 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SigNotUpdated, Thu Mar 07 17:39:21 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SigNotUpdated, Thu Mar 07 17:39:21 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SigNotUpdated, Thu Mar 07 17:39:21 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SigNotUpdated, Thu Mar 07 17:39:21 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Robot Startup, Thu Mar 07 17:39:22 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Robot Init on Practice Robot, Thu Mar 07 17:39:22 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Disabled Init, Thu Mar 07 17:39:22 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Set Hatch Spear to STOW, Thu Mar 07 17:39:23 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Teleop Init, Thu Mar 07 17:39:42 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SET HEADING: 0.0, Thu Mar 07 17:39:42 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Gyro offset: 0.0, Thu Mar 07 17:39:42 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SET HEADING: 0.0, Thu Mar 07 17:39:42 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Gyro offset: 0.0, Thu Mar 07 17:39:42 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SET HEADING: 0.0, Thu Mar 07 17:39:42 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Gyro offset: 0.0, Thu Mar 07 17:39:42 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Set Hatch Spear to STOW, Thu Mar 07 17:39:42 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 17:39:42 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Starting Teleop, Thu Mar 07 17:39:42 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:39:44 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:39:46 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:39:47 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:39:51 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:39:51 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:00 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:05 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:07 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:08 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:10 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:10 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:11 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:13 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:14 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:14 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:15 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:16 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:17 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:18 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:25 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:25 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:28 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:40:30 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Disabled Init, Thu Mar 07 17:40:43 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Stopping Loops, Thu Mar 07 17:40:43 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Set Hatch Spear to STOW, Thu Mar 07 17:40:43 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Teleop Init, Thu Mar 07 17:40:59 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SET HEADING: 0.0, Thu Mar 07 17:40:59 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Gyro offset: 1.0546875, Thu Mar 07 17:40:59 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SET HEADING: 0.0, Thu Mar 07 17:40:59 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Gyro offset: 1.0546875, Thu Mar 07 17:40:59 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Set Hatch Spear to STOW, Thu Mar 07 17:40:59 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 17:40:59 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Starting Teleop, Thu Mar 07 17:40:59 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:41:00 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:41:07 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:41:07 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Disabled Init, Thu Mar 07 17:41:19 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Stopping Loops, Thu Mar 07 17:41:19 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Set Hatch Spear to STOW, Thu Mar 07 17:41:19 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Teleop Init, Thu Mar 07 17:42:01 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SET HEADING: 0.0, Thu Mar 07 17:42:01 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Gyro offset: -0.263671875, Thu Mar 07 17:42:01 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SET HEADING: 0.0, Thu Mar 07 17:42:01 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Gyro offset: -0.263671875, Thu Mar 07 17:42:01 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Set Hatch Spear to STOW, Thu Mar 07 17:42:01 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 17:42:01 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Starting Teleop, Thu Mar 07 17:42:01 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Thu Mar 07 17:42:07 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Set Hatch Spear to PLACE, Thu Mar 07 17:42:07 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]4	 Pressed ( Hatch Spear HP Intake Button ), Thu Mar 07 17:42:08 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Set Hatch Spear to PLACE, Thu Mar 07 17:42:08 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]3	 Pressed ( Hatch Spear Toggle (Place/Stow) Button ), Thu Mar 07 17:42:09 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Set Hatch Spear to STOW, Thu Mar 07 17:42:09 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Disabled Init, Thu Mar 07 17:42:10 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Stopping Loops, Thu Mar 07 17:42:10 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Set Hatch Spear to STOW, Thu Mar 07 17:42:10 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Teleop Init, Thu Mar 07 17:42:18 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SET HEADING: 0.0, Thu Mar 07 17:42:18 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Gyro offset: 0.0, Thu Mar 07 17:42:18 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SET HEADING: 0.0, Thu Mar 07 17:42:18 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Gyro offset: 0.0, Thu Mar 07 17:42:18 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Set Hatch Spear to STOW, Thu Mar 07 17:42:18 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 17:42:18 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Starting Teleop, Thu Mar 07 17:42:18 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:42:19 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:42:20 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Disabled Init, Thu Mar 07 17:42:22 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Stopping Loops, Thu Mar 07 17:42:22 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Set Hatch Spear to STOW, Thu Mar 07 17:42:22 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Teleop Init, Thu Mar 07 17:42:39 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SET HEADING: 0.0, Thu Mar 07 17:42:39 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Gyro offset: -0.1318359375, Thu Mar 07 17:42:39 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, SET HEADING: 0.0, Thu Mar 07 17:42:39 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Gyro offset: -0.1318359375, Thu Mar 07 17:42:39 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Set Hatch Spear to STOW, Thu Mar 07 17:42:39 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 17:42:39 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Starting Teleop, Thu Mar 07 17:42:39 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:42:40 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:43:01 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:43:18 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:43:39 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Disabled Init, Thu Mar 07 17:43:57 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Stopping Loops, Thu Mar 07 17:43:57 PST 2019
+fc0fc212-07d5-4ef9-a00d-9f837423fabb, Set Hatch Spear to STOW, Thu Mar 07 17:43:57 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, SigNotUpdated, Thu Mar 07 17:45:07 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, SigNotUpdated, Thu Mar 07 17:45:07 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, SigNotUpdated, Thu Mar 07 17:45:07 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, SigNotUpdated, Thu Mar 07 17:45:07 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, Robot Startup, Thu Mar 07 17:45:09 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, Robot Init on Practice Robot, Thu Mar 07 17:45:09 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, Disabled Init, Thu Mar 07 17:45:09 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, Set Hatch Spear to STOW, Thu Mar 07 17:45:10 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, Teleop Init, Thu Mar 07 17:45:20 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, SET HEADING: 0.0, Thu Mar 07 17:45:20 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, Gyro offset: 0.0, Thu Mar 07 17:45:20 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, SET HEADING: 0.0, Thu Mar 07 17:45:20 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, Gyro offset: 0.0, Thu Mar 07 17:45:20 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, SET HEADING: 0.0, Thu Mar 07 17:45:20 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, Gyro offset: 0.0, Thu Mar 07 17:45:20 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, Set Hatch Spear to STOW, Thu Mar 07 17:45:20 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, Switching to Robot State:TELEOP_DRIVE, Thu Mar 07 17:45:20 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, Starting Teleop, Thu Mar 07 17:45:20 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:45:22 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:45:36 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:45:47 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:45:57 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:45:58 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:45:58 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:46:23 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:46:44 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:46:58 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:47:14 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, [Joystick] 1	 [Button]7	 Pressed ( Toggle Vision Button ), Thu Mar 07 17:47:26 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, Disabled Init, Thu Mar 07 17:47:41 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, Stopping Loops, Thu Mar 07 17:47:41 PST 2019
+b29d5a86-f4a6-425b-ac1e-b8ba78ef1e18, Set Hatch Spear to STOW, Thu Mar 07 17:47:41 PST 2019

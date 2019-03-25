@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
@@ -82,12 +83,17 @@ public class Logger {
   }
 
   public static synchronized void logError(String mark) {
-    logMarker(mark, null);
+    logCrashMarker(mark, null);
     DriverStation.reportError(mark, false);
   }
 
   public static synchronized void logErrorWithTrace(String mark) {
-    logMarker(mark, null);
+    logCrashMarker("\n", null);
+    logCrashMarker(mark, null);
+    for (StackTraceElement ste : Thread.currentThread().getStackTrace()) {
+      logCrashMarker(ste.toString(), null);
+    }
+    logCrashMarker("\n", null);
     DriverStation.reportError(mark, true);
   }
 

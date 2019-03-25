@@ -5,6 +5,7 @@ import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.GENERAL;
 import frc.robot.lib.drivers.MkJoystick;
 import frc.robot.lib.drivers.MkJoystickButton;
+import frc.robot.lib.geometry.Rotation2d;
 import frc.robot.lib.math.DriveHelper;
 import frc.robot.lib.math.MkMath;
 import frc.robot.lib.util.DriveSignal;
@@ -75,6 +76,7 @@ public class Input {
     // Disable Auto Mode and set robot state to teleop drive for manual control
     if (cancelAutoTrigger.update(mOperatorJoystick.getTriggerPressed())) {
       mStructure.setRobotState(RobotState.TELEOP_DRIVE);
+      mHatch.retractPancakeActuator();
     }
 
     // Re-seed absolute values to relative encoder and disable soft limit for arms
@@ -212,16 +214,17 @@ public class Input {
     double turn = (-mDriverJoystick.getRawAxis(0));
     DriveSignal controlSig = DriveHelper.cheesyDrive(forward, turn, true);
     if (isManualVisionMode) {
-      double visionTurn = 0.0;
+     double visionTurn = 0.0;
       LimelightTarget target = mVision.getLimelightTarget();
       if (target.isValidTarget()) {
        /* if (target.getDistance() < 35.0 & !hasBeenTriggered) {
           mHatch.setHatchState(HatchState.PLACE);
           hasBeenTriggered = true;
         }*/
-        if (mHatch.getHatchSpearState() != HatchState.PLACE) {
+         if (mHatch.getHatchSpearState() != HatchState.PLACE) {
           visionTurn = mVisionAssist.calculate(Vision.getInstance().getLimelightTarget().getYaw());
         }
+
       }
       if (HatchArm.getInstance().isHatchTriggeredTimer()) {
         isManualVisionMode = false;
@@ -229,6 +232,14 @@ public class Input {
       } else {
         mDrive.setOpenLoop(new DriveSignal(controlSig.getLeft() - visionTurn, controlSig.getRight() + visionTurn));
       }
+
+      /* if(mDriverJoystick.getPOV() == 90){
+         mDrive.setWantTurnToHeading(Rotation2d.fromDegrees(90));
+       } else if(mDriverJoystick.getPOV() == 180){
+         mDrive.setWantTurnToHeading(Rotation2d.fromDegrees(-90));
+       } else if(mDriverJoystick.getPOV() == 0){
+         mDrive.setWantTurnToHeading(Rotation2d.fromDegrees(0));
+       } */
     } else {
       mDrive.setOpenLoop(controlSig);
     }
