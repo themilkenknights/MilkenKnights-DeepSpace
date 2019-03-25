@@ -145,14 +145,9 @@ class PathContainer {
   Trajectory.Config config;
   boolean first;
 
-  public PathContainer(Waypoint[] points, Trajectory.Config config, boolean first, boolean bothSides) {
+  public PathContainer(Waypoint[] points, Trajectory.Config config) {
     this.points = points;
     this.config = config;
-    this.first = first;
-  }
-
-  public PathContainer(Waypoint[] points, Trajectory.Config config) {
-    this(points, config, false, true);
   }
 
   public Waypoint[] getPoints() {
@@ -164,16 +159,9 @@ class PathContainer {
     for (int i = 0; i < waypoints.length; i++) {
       waypoints[i] = new Waypoint(points[i].x, points[i].y, points[i].angle);
     }
-    if (first) {
-      for (int i = 1; i < waypoints.length; i++) {
-        waypoints[i].y *= -1.0;
-        waypoints[i].angle *= -1.0;
-      }
-    } else {
-      for (Waypoint waypoint : waypoints) {
-        waypoint.y *= -1.0;
-        waypoint.angle *= -1.0;
-      }
+    for (Waypoint waypoint : waypoints) {
+      waypoint.y *= -1.0;
+      waypoint.angle *= -1.0;
     }
     return waypoints;
   }
