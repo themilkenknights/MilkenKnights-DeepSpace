@@ -30,7 +30,6 @@ public class AutoChooser {
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_LOW,
       0.01, 80, 50, 700);
   public static final Map<String, Path> autoPaths = new HashMap<>();
-  public static final HashMap<String, OtherPath> robotPaths = new HashMap<>();
   public static MatchData matchData = MatchData.defaultMatch;
   public static AutoPosition mAutoPosition = AutoPosition.RIGHT;
   private static AutoModeExecutor mAutoModeExecuter;
@@ -84,34 +83,36 @@ public class AutoChooser {
   }
 
   public static void loadPaths() {
-    robotPaths.put("CS-1", new OtherPath(new Waypoint[] {
-        new Waypoint(68 ,-47 ,Pathfinder.d2r(0)),
-        new Waypoint(236 + 4 ,-102 - 12 ,Pathfinder.d2r(0)),
-        new Waypoint(256 + 4 ,-78 - 12 ,Pathfinder.d2r(90)),
+    HashMap<String, PathContainer> robotPaths = new HashMap<>();
+
+    robotPaths.put("CS-1", new PathContainer(new Waypoint[] {
+        new Waypoint(68, -47, Pathfinder.d2r(0)),
+        new Waypoint(236 + 4, -102 - 12, Pathfinder.d2r(0)),
+        new Waypoint(256 + 4, -78 - 12, Pathfinder.d2r(90)),
     }, veryFastConfig));
 
-    robotPaths.put("CS-2", new OtherPath(new Waypoint[] {
-        new Waypoint(261 ,-46 ,Pathfinder.d2r(90)),
-        new Waypoint(261 ,-48 ,Pathfinder.d2r(90)),
-        new Waypoint(271 ,-70 ,Pathfinder.d2r(135)),
+    robotPaths.put("CS-2", new PathContainer(new Waypoint[] {
+        new Waypoint(261, -46, Pathfinder.d2r(90)),
+        new Waypoint(261, -48, Pathfinder.d2r(90)),
+        new Waypoint(271, -70, Pathfinder.d2r(135)),
     }, veryFastConfig));
 
-    robotPaths.put("CS-3", new OtherPath(new Waypoint[] {
-        new Waypoint(271 ,-70 ,Pathfinder.d2r(135)),
-        new Waypoint(243 ,-60 - 14 ,Pathfinder.d2r(180)),
-        new Waypoint(23 ,-135 - 14,Pathfinder.d2r(180)),
+    robotPaths.put("CS-3", new PathContainer(new Waypoint[] {
+        new Waypoint(20, -136, Pathfinder.d2r(0)),
+        new Waypoint(234, -67, Pathfinder.d2r(0)),
+        new Waypoint(261, -89, Pathfinder.d2r(90)),
     }, fastConfig));
 
-    robotPaths.put("CS-4", new OtherPath(new Waypoint[] {
-        new Waypoint(20 ,-136 ,Pathfinder.d2r(10)),
-        new Waypoint(260 ,-59 - 30 ,Pathfinder.d2r(5)),
-        new Waypoint(285 ,-79 - 30 ,Pathfinder.d2r(95)),
+    robotPaths.put("CS-4", new PathContainer(new Waypoint[] {
+        new Waypoint(20, -136, Pathfinder.d2r(10)),
+        new Waypoint(260, -59 - 30, Pathfinder.d2r(5)),
+        new Waypoint(285, -79 - 30, Pathfinder.d2r(95)),
     }, veryFastConfig));
 
     double tiL = 0;
     double tiR = 0;
-    for (Map.Entry<String, OtherPath> container : robotPaths.entrySet()) {
-      OtherPath traj = container.getValue();
+    for (Map.Entry<String, PathContainer> container : robotPaths.entrySet()) {
+      PathContainer traj = container.getValue();
       Trajectory leftTraj = Pathfinder.generate(traj.getPoints(), traj.getConfig());
       Trajectory rightTraj = Pathfinder.generate(traj.getRightPoints(), traj.getConfig());
 
@@ -126,10 +127,10 @@ public class AutoChooser {
       autoPaths.put(container.getKey() + "L", new Path(container.getKey() + "L", new Path.Pair(leftl, rightl)));
       autoPaths.put(container.getKey() + "R", new Path(container.getKey() + "R", new Path.Pair(leftr, rightr)));
 
-        System.out.println("Path: " + container.getKey() + " Time: " + leftTraj.length() * 0.01 + " Sec");
-        if (container.getKey().charAt(0) == 'C') {
-          tiL += leftTraj.length() * 0.01;
-          tiR += rightTraj.length() * 0.01;
+      //System.out.println("Path: " + container.getKey() + " Time: " + leftTraj.length() * 0.01 + " Sec");
+      if (container.getKey().charAt(0) == 'C') {
+        tiL += leftTraj.length() * 0.01;
+        tiR += rightTraj.length() * 0.01;
       }
     }
     System.out.println("Left: " + tiL + " Right: " + tiR);
@@ -140,48 +141,24 @@ public class AutoChooser {
   }
 }
 
-class OtherPath {
+class PathContainer {
 
   Waypoint[] points;
   Trajectory.Config config;
   boolean first;
-  boolean bothSides;
 
-  public OtherPath(Waypoint[] points, Trajectory.Config config, boolean first, boolean bothSides) {
+  public PathContainer(Waypoint[] points, Trajectory.Config config, boolean first, boolean bothSides) {
     this.points = points;
     this.config = config;
     this.first = first;
-    this.bothSides = bothSides;
   }
 
-  public OtherPath(Waypoint[] points, Trajectory.Config config, boolean first) {
-    this(points, config, first, true);
-  }
-
-  public OtherPath(Waypoint[] points, Trajectory.Config config) {
+  public PathContainer(Waypoint[] points, Trajectory.Config config) {
     this(points, config, false, true);
-  }
-
-  public void setOffset(double x, double y) {
-    if (first) {
-      for (int i = 1; i < points.length; i++) {
-        points[i].x = points[i].x + x;
-        points[i].y = points[i].y + y;
-      }
-    } else {
-      for (Waypoint waypoint : points) {
-        waypoint.x = waypoint.x + x;
-        waypoint.y = waypoint.y + y;
-      }
-    }
   }
 
   public Waypoint[] getPoints() {
     return points;
-  }
-
-  public boolean isBothSides() {
-    return bothSides;
   }
 
   public Waypoint[] getRightPoints() {

@@ -42,17 +42,16 @@ public class Drive extends Subsystem {
   private DriveControlState mDriveControlState = DriveControlState.OPEN_LOOP;
   private Rotation2d mGyroOffset = Rotation2d.identity();
   private ReflectingCSVWriter<PeriodicIO> mCSVWriter;
-  private NetworkTableEntry mState, mStatus, mFusedHeading, mGyroHeading, mAvgDist;
+  private NetworkTableEntry mState, mStatus, mFusedHeading, mGyroHeading;
   private PigeonIMU mPigeon;
   private PathFollower pathFollower;
   private TrajectoryStatus leftStatus;
   private TrajectoryStatus rightStatus;
-  private double lastAngle, lastDist, left_encoder_prev_distance_, right_encoder_prev_distance_;
+  private double startDist, lastDist, left_encoder_prev_distance_, right_encoder_prev_distance_;
   private boolean pathFinished, mLowered, mIsOnTarget;
   private VisionDrive.VisionGoal mGoal;
   private MkTimer placeCargoTimer = new MkTimer();
   private Rotation2d mTargetHeading = new Rotation2d();
-  private double startDist = 0.0;
 
   private Drive() {
     ShuffleboardTab mDriveTab = Shuffleboard.getTab("Drive");
@@ -60,7 +59,6 @@ public class Drive extends Subsystem {
     mStatus = mDriveTab.add("Status", false).getEntry();
     mFusedHeading = mDriveTab.add("Fused Heading", 0.0).getEntry();
     mGyroHeading = mDriveTab.add("Gyro Heading", 0.0).getEntry();
-    mAvgDist = mDriveTab.add("Avg Dist", 0.0).getEntry();
     mPeriodicIO = new PeriodicIO();
     mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left, mDriveTab);
     mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right, mDriveTab);
@@ -263,10 +261,8 @@ public class Drive extends Subsystem {
    */
   public synchronized void setHeading(Rotation2d heading) {
     System.out.println("SET HEADING: " + heading.getDegrees());
-
     mGyroOffset = heading.rotateBy(Rotation2d.fromDegrees(mPigeon.getFusedHeading()).inverse());
     System.out.println("Gyro offset: " + mGyroOffset.getDegrees());
-
     mPeriodicIO.gyro_heading = heading;
   }
 
@@ -321,10 +317,10 @@ public class Drive extends Subsystem {
         if (target.isValidTarget() && target.getDistance() < 26.0 && !mLowered && Robot.mMatchState == Robot.MatchState.AUTO) {
           HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
           mLowered = true;
-        } else if(target.isValidTarget() && target.getDistance() < 23.0 && !mLowered && Robot.mMatchState != Robot.MatchState.AUTO) {
-            HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
-            mLowered = true;
-          }
+        } else if (target.isValidTarget() && target.getDistance() < 23.0 && !mLowered && Robot.mMatchState != Robot.MatchState.AUTO) {
+          HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
+          mLowered = true;
+        }
         break;
       case PLACE_CARGO:
         if (target.getDistance() < 26.0 && !placeCargoTimer.hasBeenSet()) {
@@ -341,62 +337,42 @@ public class Drive extends Subsystem {
     double visionTurn = 0.0;
     double dist = target.getDistance();
     if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE && ((lastDist - target.getDistance()) > -2.0)) {
-      //double skew = ((target.getSkew() * Math.pow(dist, 3)) / 5.0e4) * 0.5 + ((Math.sin(Math.toRadians(target.getYaw())) * dist) / 2.0);
       visionTurn = mVisionAssist.calculate(target.getYaw());
     }
     double speed = 0.325;
-   if(Robot.mMatchState == Robot.MatchState.AUTO && mGoal == VisionDrive.VisionGoal.INTAKE_HATCH){
-    /* speed = 0.45;
-     if (dist < 20.0) {
-       speed = 0.19;
-     } else if (dist > 110) {
-       speed = 0.75;
-     } */
-       speed = 0.5;
-       if (dist < 20.0) {
-         speed = 0.175;
-       } else if (dist > 110) {
-         speed = 0.7;
-       }
-   }
-   else{
-   /*  speed =
-         3.74091e-12 * Math.pow(dist, 7) - 1.69478e-9 * Math.pow(dist, 6) + 3.14753e-7 * Math.pow(dist, 5) - 0.0000308813 * Math.pow(dist, 4)
-             + 0.0017188 * Math.pow(dist, 3) - 0.0540482 * Math.pow(dist, 2) + 0.89485 * dist - 5.81563;
-*/
-    //https://www.wolframalpha.com/input/?i=interpolating+polynomial+calculator&assumption=%7B%22F%22,+%22InterpolatingPolynomialCalculator%22,+%22data2%22%7D+-%3E%22%7B%7B110,0.75%7D,%7B100,0.7%7D,%7B90,0.65%7D,%7B70,0.5%7D,%7B50,+0.45%7D,%7B40,+0.35%7D,%7B30,+0.275%7D,%7B20,+0.175%7D%7D%22
-   speed = 0.3;
-    if (dist < 20.0) {
-      speed = 0.175;
-    } else if (dist > 110) {
-      speed = 0.75;
-    } else if(dist > 90){
-      speed = 0.675;
-    } else if(dist > 70){
-      speed = 0.575;
-    } else if(dist > 50){
+    if (Robot.mMatchState == Robot.MatchState.AUTO && mGoal == VisionDrive.VisionGoal.INTAKE_HATCH) {
       speed = 0.5;
-    } else if(dist > 30){
-      speed = 0.45;
+      if (dist < 20.0) {
+        speed = 0.175;
+      } else if (dist > 110) {
+        speed = 0.7;
+      }
+    } else {
+      speed = 0.3;
+      if (dist < 20.0) {
+        speed = 0.175;
+      } else if (dist > 140) {
+        speed = 0.85;
+      } else if (dist > 110) {
+        speed = 0.75;
+      } else if (dist > 90) {
+        speed = 0.675;
+      } else if (dist > 70) {
+        speed = 0.575;
+      } else if (dist > 50) {
+        speed = 0.5;
+      } else if (dist > 30) {
+        speed = 0.45;
+      }
     }
-   }
 
-   if(dist > 27.5 && startDist < 35.0){
-     speed = 0.35;
-   } else if(startDist < 35.0 && dist > 20){
-    speed = 0.25;
-   }
-    /*if (20.0 > dist) {
-      speed = 0.175;
-    } else if (90 < dist) {
-      speed = 0.65;
-    } else if (70.0 < dist) {
-      speed = 0.50;
-    } else if (50 < dist) {
-      speed = 0.4;
-    }*/
-    //System.out.println(speed);
-    if(!target.isValidTarget()){
+    if (dist > 27.5 && startDist < 35.0) {
+      speed = 0.35;
+    } else if (startDist < 35.0 && dist > 20) {
+      speed = 0.25;
+    }
+
+    if (!target.isValidTarget()) {
       speed = 0.1;
     }
     mPeriodicIO.left_demand = speed - visionTurn;
@@ -407,7 +383,7 @@ public class Drive extends Subsystem {
   public synchronized void setVisionDrive(VisionDrive.VisionGoal mGoal) {
     if (mGoal == VisionDrive.VisionGoal.INTAKE_HATCH) {
       HatchArm.getInstance().setHatchState(HatchArm.HatchState.INTAKE);
-    } else if(Robot.mMatchState != Robot.MatchState.AUTO){
+    } else if (Robot.mMatchState != Robot.MatchState.AUTO) {
       HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
     }
     mVisionAssist.reset();
@@ -547,7 +523,6 @@ public class Drive extends Subsystem {
       return mIsOnTarget;
     } else if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
       if (pathFinished) {
-        lastAngle = pathFollower.getEndHeading();
         pathFollower = null;
         leftStatus = TrajectoryStatus.NEUTRAL;
         rightStatus = TrajectoryStatus.NEUTRAL;
