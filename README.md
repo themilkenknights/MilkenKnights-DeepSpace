@@ -81,4 +81,5 @@
 
 ## Current Paths
 
-- [CS-1](./path_visualizer/index.html?%5B%7B%22position%22:%7B%22x%22:204,%22y%22:150%7D,%22theta%22:0,%22comment%22:%22%22%7D,%7B%22position%22:%7B%22x%22:180,%22y%22:181%7D,%22theta%22:1.5707499999936907,%22comment%22:%22%22%7D,%7B%22position%22:%7B%22x%22:70,%22y%22:26%7D,%22theta%22:0,%22comment%22:%22%22%7D,%7B%22position%22:%7B%22x%22:32,%22y%22:26%7D,%22theta%22:0,%22comment%22:%22%22%7D%5D)
+- [1](https://themilkenknights.github.io/MilkenKnights-DeepSpace/path_visualizer/index.html?%5B%7B%22position%22:%7B%22x%22:204,%22y%22:150%7D,%22theta%22:0,%22comment%22:%22%22%7D,%7B%22position%22:%7B%22x%22:180,%22y%22:181%7D,%22theta%22:1.5707499999936907,%22comment%22:%22%22%7D,%7B%22position%22:%7B%22x%22:70,%22y%22:26%7D,%22theta%22:0,%22comment%22:%22%22%7D,%7B%22position%22:%7B%22x%22:32,%22y%22:26%7D,%22theta%22:0,%22comment%22:%22%22%7D%5D)
+- [2](https://themilkenknights.github.io/MilkenKnights-DeepSpace/path_visualizer/index.html?%5B%7B%22position%22:%7B%22x%22:20,%22y%22:26%7D,%22theta%22:0,%22comment%22:%22%22%7D,%7B%22position%22:%7B%22x%22:234,%22y%22:100%7D,%22theta%22:0.08726388888853838,%22comment%22:%22%22%7D,%7B%22position%22:%7B%22x%22:264,%22y%22:76%7D,%22theta%22:1.6580138888822291,%22comment%22:%22%22%7D%5D)
