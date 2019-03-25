@@ -29,7 +29,7 @@ public class PathFollower {
   }
 
   public double getTimeLeft() {
-    return (lFollower.timeLeft() + rFollower.timeLeft()) / 2.0;
+    return (lFollower.timeLeft());
   }
 
   public double getEndHeading() {
