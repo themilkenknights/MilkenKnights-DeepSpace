@@ -37,7 +37,7 @@ public class VisionDrive implements Action {
   @Override
   public void start() {
     Drive.getInstance().cancelPath();
-    expirationTimer.start(5.0);
+    expirationTimer.start(4.0);
     Drive.getInstance().setVisionDrive(mGoal);
   }
 

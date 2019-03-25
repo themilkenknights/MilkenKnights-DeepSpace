@@ -21,9 +21,9 @@ public class FrontSideCargshipAuto extends AutoModeBase {
     runAction(new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH));
     runAction(new ParallelAction(Arrays.asList(
         new DrivePathAction(2, true),
-        new DelayAction(1.0, new SetHatchArmState(HatchArm.HatchState.INTAKE)),
-        new DelayAction(getTime(2) - 0.05, new DrivePathAction(3, false)),
-        new DelayAction(getTime(2) + getTime(3) - 1.4, new VisionDrive(VisionDrive.VisionGoal.INTAKE_HATCH))
+        new DelayAction(3.0, new SetHatchArmState(HatchArm.HatchState.INTAKE)),
+        new DelayAction(getTime(2) - 0.025, new DrivePathAction(3, false)),
+        new DelayAction(getTime(2) + getTime(3) - 0.01, new VisionDrive(VisionDrive.VisionGoal.INTAKE_HATCH))
     )));
 
     runAction(new ParallelAction(Arrays.asList(

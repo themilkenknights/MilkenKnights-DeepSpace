@@ -16,19 +16,19 @@ public class PathGenerator {
   static {
     robotPaths.put("CS-1", new PathContainer(new Waypoint[] {
         new Waypoint(204, -12, Pathfinder.d2r(0)),
-        new Waypoint(175, 19, Pathfinder.d2r(90)),
+        new Waypoint(169, 24, Pathfinder.d2r(90)),
     }, defaultConfig));
 
     robotPaths.put("CS-2", new PathContainer(new Waypoint[] {
-        new Waypoint(175, 19, Pathfinder.d2r(90)),
+        new Waypoint(169, 24, Pathfinder.d2r(90)),
         new Waypoint(70, -136, Pathfinder.d2r(0)),
-        new Waypoint(32, -136, Pathfinder.d2r(0)),
+        new Waypoint(35, -136, Pathfinder.d2r(0)),
     }, defaultConfig));
 
     robotPaths.put("CS-3", new PathContainer(new Waypoint[] {
-        new Waypoint(20, -136, Pathfinder.d2r(0)),
-        new Waypoint(234, -62, Pathfinder.d2r(5)),
-        new Waypoint(264, -86, Pathfinder.d2r(95)),
+        new Waypoint(20, -136, Pathfinder.d2r(4)),
+        new Waypoint(234, -70, Pathfinder.d2r(5)),
+        new Waypoint(264, -94, Pathfinder.d2r(95)),
     }, defaultConfig));
   }
 

@@ -15,7 +15,7 @@ import frc.robot.lib.vision.LimelightTarget;
 public class Vision extends Subsystem {
   private LimeLight mLimeLight;
   private NetworkTableEntry mLLX, mDist, mArea, mLED, mSkew, mValid;
-  private boolean isVision = true;
+  private boolean isVision = false;
   private UsbCamera hatchCam;
 
   private Vision() {
@@ -44,7 +44,6 @@ public class Vision extends Subsystem {
     mLED.setBoolean(mLimeLight.getLEDMode() != LedMode.kforceOff);
     mSkew.setDouble(getLimelightTarget().getSkew());
     mValid.setBoolean(getLimelightTarget().isValidTarget());
-    // System.out.println(getLimelightTarget().getCamTran()[4]);
   }
 
   public void teleopInit(double timestamp) {
@@ -57,12 +56,12 @@ public class Vision extends Subsystem {
 
   @Override
   public void onStop(double timestamp) {
-    //disableLED();
+    disableLED();
   }
 
   @Override
   public void onRestart(double timestamp) {
-    // disableLED();
+    disableLED();
   }
 
   @Override
@@ -73,11 +72,13 @@ public class Vision extends Subsystem {
   public void disableLED() {
     mLimeLight.setStream(StreamType.kPiPMain);
     mLimeLight.setPipeline(1);
+    isVision = false;
   }
 
   public void enableLED() {
     mLimeLight.setStream(StreamType.kStandard);
     mLimeLight.setPipeline(0);
+    isVision = true;
   }
 
   public synchronized LimelightTarget getLimelightTarget() {

@@ -20,9 +20,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AutoChooser {
-  public static final Trajectory.Config veryFastConfig = new Trajectory.Config(
+
+  public static final Trajectory.Config defaultConfig = new Trajectory.Config(
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_FAST,
-      0.01, 130, 110, 5000);
+      0.01, 100, 95, 1500);
 
   public static final Map<String, Path> autoPaths = new HashMap<>();
   public static MatchData matchData = MatchData.defaultMatch;
@@ -91,20 +92,20 @@ public class AutoChooser {
 
     robotPaths.put("CS-1", new PathContainer(new Waypoint[] {
         new Waypoint(204, -12, Pathfinder.d2r(0)),
-        new Waypoint(175, 19, Pathfinder.d2r(90)),
-    }, veryFastConfig));
+        new Waypoint(169, 24, Pathfinder.d2r(90)),
+    }, defaultConfig));
 
     robotPaths.put("CS-2", new PathContainer(new Waypoint[] {
-        new Waypoint(175, 19, Pathfinder.d2r(90)),
+        new Waypoint(169, 24, Pathfinder.d2r(90)),
         new Waypoint(70, -136, Pathfinder.d2r(0)),
-        new Waypoint(32, -136, Pathfinder.d2r(0)),
-    }, veryFastConfig));
+        new Waypoint(35, -136, Pathfinder.d2r(0)),
+    }, defaultConfig));
 
     robotPaths.put("CS-3", new PathContainer(new Waypoint[] {
-        new Waypoint(20, -136, Pathfinder.d2r(0)),
-        new Waypoint(234, -62, Pathfinder.d2r(5)),
-        new Waypoint(264, -86, Pathfinder.d2r(95)),
-    }, veryFastConfig));
+        new Waypoint(20, -136, Pathfinder.d2r(4)),
+        new Waypoint(234, -70, Pathfinder.d2r(5)),
+        new Waypoint(264, -94, Pathfinder.d2r(95)),
+    }, defaultConfig));
 
     double tiL = 0;
     double tiR = 0;

@@ -143,7 +143,7 @@ public class Superstructure extends Subsystem {
 
   private void startVisionHatchOuttake() {
     Vision.getInstance().updateLimelight();
-    if (!Vision.getInstance().getLimelightTarget().isValidTarget() && Vision.getInstance().getLimelightTarget().getDistance() < 140.0) {
+    if (!Vision.getInstance().getLimelightTarget().isValidTarget() && Vision.getInstance().getLimelightTarget().getDistance() < 170.0) {
       setRobotState(RobotState.TELEOP_DRIVE);
       Logger.logMarker("Limelight target not valid");
     } else {
@@ -153,7 +153,7 @@ public class Superstructure extends Subsystem {
 
   private void startVisionHatchIntake() {
     Vision.getInstance().updateLimelight();
-    if (!Vision.getInstance().getLimelightTarget().isValidTarget() && Vision.getInstance().getLimelightTarget().getDistance() < 140.0) {
+    if (!Vision.getInstance().getLimelightTarget().isValidTarget() && Vision.getInstance().getLimelightTarget().getDistance() < 170.0) {
       setRobotState(RobotState.TELEOP_DRIVE);
       Logger.logMarker("Limelight target not valid");
     } else {
@@ -165,7 +165,7 @@ public class Superstructure extends Subsystem {
     mHatch.setHatchState(HatchState.STOW);
     CargoArm.getInstance().setArmState(CargoArmState.REVERSE_CARGOSHIP);
     Vision.getInstance().updateLimelight();
-    if (!Vision.getInstance().getLimelightTarget().isValidTarget()) {
+    if (!Vision.getInstance().getLimelightTarget().isValidTarget() && Vision.getInstance().getLimelightTarget().getDistance() < 170.0) {
       setRobotState(RobotState.TELEOP_DRIVE);
       Logger.logMarker("Limelight target not valid");
     } else {

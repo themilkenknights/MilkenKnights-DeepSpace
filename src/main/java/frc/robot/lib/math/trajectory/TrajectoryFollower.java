@@ -51,8 +51,8 @@ public class TrajectoryFollower {
     double currentTime = Timer.getFPGATimestamp();
     current_segment = (int) (customRound(currentTime - Dt) / Constants.DRIVE.PATH_DT);
     if (current_segment < profile_.length()) {
-      // Trajectory.Segment segment = interpolateSegments(current_segment);
-      Trajectory.Segment segment = profile_.get(current_segment);
+      Trajectory.Segment segment = interpolateSegments(current_segment);
+      //Trajectory.Segment segment = profile_.get(current_segment);
       double error = segment.position - dist;
       double angError = segment.heading - heading;
       if (angError > 180) {
@@ -105,8 +105,8 @@ public class TrajectoryFollower {
     Trajectory.Segment firstSeg = profile_.get(currentSeg - 1);
     Trajectory.Segment lastSeg = profile_.get(currentSeg);
     double pos, vel, acc, jerk, heading, dt, x, y;
-    double firstTime = firstSeg.dt * (currentSeg - 1);
-    double lastTime = firstSeg.dt * (currentSeg);
+    double firstTime = customRound(Timer.getFPGATimestamp() - Dt) - Constants.DRIVE.PATH_DT;
+    double lastTime =  customRound(Timer.getFPGATimestamp() - Dt);
     double currentTime = Timer.getFPGATimestamp() - Dt;
     pos = ((currentTime - firstTime) * ((lastSeg.position - firstSeg.position) / (lastTime - firstTime))) + firstSeg.position;
     vel = ((currentTime - firstTime) * ((lastSeg.velocity - firstSeg.velocity) / (lastTime - firstTime))) + firstSeg.velocity;
