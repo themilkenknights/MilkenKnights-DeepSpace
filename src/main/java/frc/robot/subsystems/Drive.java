@@ -247,7 +247,7 @@ public class Drive extends Subsystem {
   /**
    * Zero all pigeon values
    */
-  public void zeroPigeon() {
+  private synchronized void zeroPigeon() {
     CT.RE(mPigeon.setFusedHeading(0, 0));
     CT.RE(mPigeon.setYaw(0, 0));
     CT.RE(mPigeon.setAccumZAngle(0, 0));
