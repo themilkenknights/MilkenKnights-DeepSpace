@@ -96,7 +96,7 @@ public class AutoChooser {
     }, defaultConfig));
 
     robotPaths.put("CS-2", new PathContainer(new Waypoint[] {
-        new Waypoint(165 ,22 ,Pathfinder.d2r(90)),
+        new Waypoint(165, 22, Pathfinder.d2r(90)),
         new Waypoint(65, -136, Pathfinder.d2r(0)),
     }, defaultConfig));
 

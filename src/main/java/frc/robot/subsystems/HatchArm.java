@@ -8,7 +8,6 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.MISC;
 import frc.robot.Input;
-import frc.robot.Robot;
 import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
@@ -26,7 +25,7 @@ public class HatchArm extends Subsystem {
   private NetworkTableEntry mPancakeTab;
   private MkTimer downTimer = new MkTimer();
   private boolean pancakeState;
-  private boolean hasBeenRumbled = false;
+  private boolean hasBeenRumbled;
 
   private HatchArm() {
     ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
@@ -61,7 +60,7 @@ public class HatchArm extends Subsystem {
         if (mSpearLimitTriggered && downTimer.isDone(0.25) && !hasBeenRumbled) {
           hasBeenRumbled = true;
           Logger.logMarker("INTAKE LIMIT TRIGGERED");
-          if(Superstructure.getInstance().getRobotState() != RobotState.CARGOSHIP_AUTO){
+          if (Superstructure.getInstance().getRobotState() != RobotState.CARGOSHIP_AUTO) {
             setHatchState(HatchState.STOW);
           }
           Input.rumbleDriverController(0.25, 0.25);
@@ -85,11 +84,7 @@ public class HatchArm extends Subsystem {
     if(hasBeenRumbled || (downTimer.isDone(0.2) && mSpearLimitTriggered)){
         Logger.logMarker("!!!! Rumble: " + hasBeenRumbled + " downTime: " + downTimer.isDone(0.4) + " Spear: " + mSpearLimitTriggered);
     }*/
-    if(downTimer.isDone(0.4) && mSpearLimitTriggered){
-      return true;
-    } else {
-      return false;
-    }
+    return downTimer.isDone(0.4) && mSpearLimitTriggered;
   }
 
   public synchronized void setPancakeSolenoid(boolean state) {
@@ -106,7 +101,6 @@ public class HatchArm extends Subsystem {
 
   @Override
   public void teleopInit(double timestamp) {
-
 
   }
 

@@ -328,10 +328,10 @@ public class Drive extends Subsystem {
           } else if (avgVel > 30.0 && isPastVision.isDone(0.065)) {
             HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
             hasBeenLowered.start(1.0);
-          } else if(avgVel > 10 && isPastVision.isDone(0.375)) {
+          } else if (avgVel > 10 && isPastVision.isDone(0.375)) {
             HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
             hasBeenLowered.start(1.0);
-          } else if(isPastVision.isDone(0.5)){
+          } else if (isPastVision.isDone(0.5)) {
             HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
             hasBeenLowered.start(1.0);
           }
@@ -589,13 +589,13 @@ public class Drive extends Subsystem {
       if (mGoal == VisionDrive.VisionGoal.PLACE_CARGO) {
         return placeCargoTimer.isDone(1.25);
       } else {
-        if(Superstructure.getInstance().getRobotState() == Superstructure.RobotState.CARGOSHIP_AUTO){
-          if(mGoal == VisionDrive.VisionGoal.PLACE_HATCH){
+        if (Superstructure.getInstance().getRobotState() == Superstructure.RobotState.CARGOSHIP_AUTO) {
+          if (mGoal == VisionDrive.VisionGoal.PLACE_HATCH) {
             return hasBeenLowered.isDone(timeToVision);
-          } else{
+          } else {
             return isPastVision.isDone(timeToVision);
           }
-        } else{
+        } else {
           return isPastVision.isDone(timeToVision);
         }
       }

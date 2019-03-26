@@ -18,7 +18,7 @@ public class FrontSideCargshipAuto extends AutoModeBase {
   @Override
   protected void routine() throws AutoModeEndedException {
 
-   runAction(new OpenLoopDrive(0.35, 0.35, 0.5));
+    runAction(new OpenLoopDrive(0.35, 0.35, 0.5));
     runAction(new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH, 0.5));
 
     runAction(new ParallelAction(Arrays.asList(

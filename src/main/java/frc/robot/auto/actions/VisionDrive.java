@@ -1,11 +1,9 @@
 package frc.robot.auto.actions;
 
 import frc.robot.lib.util.Logger;
-import frc.robot.lib.util.MkTimer;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
-import frc.robot.subsystems.Superstructure;
 
 public class VisionDrive implements Action {
   private VisionGoal mGoal;
@@ -24,10 +22,10 @@ public class VisionDrive implements Action {
   public boolean isFinished() {
     if (((mGoal != VisionGoal.PLACE_CARGO) && (HatchArm.getInstance().isHatchTriggeredTimer())) || Drive.getInstance()
         .isDriveStateFinished()) {
-        if (mGoal == VisionGoal.INTAKE_HATCH) {
-          HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
-        }
-        return true;
+      if (mGoal == VisionGoal.INTAKE_HATCH) {
+        HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
+      }
+      return true;
     } else {
       return false;
     }

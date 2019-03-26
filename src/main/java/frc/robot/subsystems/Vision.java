@@ -71,15 +71,15 @@ public class Vision extends Subsystem {
 
   public void disableLED() {
     //if(isVision) {
-      mLimeLight.setStream(StreamType.kPiPMain);
-      //mLimeLight.setPipeline(1);
-      mLimeLight.setPipeline(0);
-      isVision = false;
+    mLimeLight.setStream(StreamType.kPiPMain);
+    //mLimeLight.setPipeline(1);
+    mLimeLight.setPipeline(0);
+    isVision = false;
     //}
   }
 
   public void enableLED() {
-    if(!isVision) {
+    if (!isVision) {
       mLimeLight.setStream(StreamType.kPiPMain);
       mLimeLight.setPipeline(0);
       isVision = true;
