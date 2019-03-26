@@ -320,14 +320,10 @@ public class Drive extends Subsystem {
       if (mGoal == VisionDrive.VisionGoal.PLACE_CARGO) {
         return placeCargoTimer.isDone(1.25);
       } else {
-        if (Superstructure.getInstance().getRobotState() == Superstructure.RobotState.CARGOSHIP_AUTO) {
-          if (mGoal == VisionDrive.VisionGoal.PLACE_HATCH) {
-            return hasBeenLowered.isDone(timeToVision);
-          } else {
-            return isPastVision.isDone(timeToVision);
-          }
+        if (mGoal == VisionDrive.VisionGoal.PLACE_HATCH) {
+          return hasBeenLowered.isDone(timeToVision) || HatchArm.getInstance().isHatchTriggeredTimer(0.35);
         } else {
-          return isPastVision.isDone(timeToVision);
+          return isPastVision.isDone(timeToVision) || HatchArm.getInstance().isHatchTriggeredTimer(0.1);
         }
       }
     } else if (mDriveControlState == DriveControlState.OPEN_LOOP) {
@@ -349,16 +345,23 @@ public class Drive extends Subsystem {
    */
   public synchronized void updateVisionDrive() {
     LimelightTarget target = Vision.getInstance().getLimelightTarget();
+    double visionTurn = 0.0;
+    double dist = target.getDistance();
+
+    if (dist < 26.0 && !isPastVision.hasBeenSet() && target.isValidTarget()) {
+      isPastVision.start(1.0);
+    }
+
     switch (mGoal) {
       case INTAKE_HATCH:
         break;
       case PLACE_HATCH:
         if (isPastVision.hasBeenSet() && !hasBeenLowered.hasBeenSet()) {
           double avgVel = (mPeriodicIO.leftVel + mPeriodicIO.rightVel) / 2.0;
-          if (avgVel > 50.0 && isPastVision.isDone(0.035)) {
+          if (avgVel > 50.0 && isPastVision.isDone(0.02)) {
             HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
             hasBeenLowered.start(1.0);
-          } else if (avgVel > 30.0 && isPastVision.isDone(0.065)) {
+          } else if (avgVel > 30.0 && isPastVision.isDone(0.025)) {
             HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
             hasBeenLowered.start(1.0);
           } else if (avgVel > 10 && isPastVision.isDone(0.375)) {
@@ -380,13 +383,6 @@ public class Drive extends Subsystem {
       default:
         Logger.logErrorWithTrace("Unknown Vision Goal");
         break;
-    }
-
-    double visionTurn = 0.0;
-    double dist = target.getDistance();
-
-    if (dist < 26.0 && !isPastVision.hasBeenSet() && target.isValidTarget()) {
-      isPastVision.start(1.0);
     }
 
     if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE) {

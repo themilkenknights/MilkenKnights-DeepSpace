@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants.CAN;
 import frc.robot.Constants.MISC;
 import frc.robot.Input;
@@ -17,7 +18,7 @@ import frc.robot.subsystems.Superstructure.RobotState;
 public class HatchArm extends Subsystem {
   private HatchState mHatchState;
   private Solenoid mFirstSpearSolenoid;
-  private Solenoid mSecondSpearSolenoid;
+  //private Solenoid mSecondSpearSolenoid;
   private Solenoid mPancakeSolenoid;
   private boolean mSpearLimitTriggered;
   private NetworkTableEntry mLimitTriggered;
@@ -33,7 +34,7 @@ public class HatchArm extends Subsystem {
     mLimitTriggered = mHatchArmTab.add("Spear Limit", false).getEntry();
     mPancakeTab = mHatchArmTab.add("Pancake", false).getEntry();
     mFirstSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kFirstHatchArmChannel);
-    mSecondSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kSecondHatchArmChannel);
+    //mSecondSpearSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kSecondHatchArmChannel);
     mPancakeSolenoid = new Solenoid(CAN.kPneumaticsControlModuleID, MISC.kHatchPancakeChannel);
     mHatchState = HatchState.STOW;
   }
@@ -79,12 +80,8 @@ public class HatchArm extends Subsystem {
     setPancakeSolenoid(false);
   }
 
-  public synchronized boolean isHatchTriggeredTimer() {
-    /*Logger.logMarker("Rumble: " + hasBeenRumbled);
-    if(hasBeenRumbled || (downTimer.isDone(0.2) && mSpearLimitTriggered)){
-        Logger.logMarker("!!!! Rumble: " + hasBeenRumbled + " downTime: " + downTimer.isDone(0.4) + " Spear: " + mSpearLimitTriggered);
-    }*/
-    return downTimer.isDone(0.4) && mSpearLimitTriggered;
+  public synchronized boolean isHatchTriggeredTimer(double time) {
+    return downTimer.isDone(time) && mSpearLimitTriggered;
   }
 
   public synchronized void setPancakeSolenoid(boolean state) {
@@ -97,6 +94,8 @@ public class HatchArm extends Subsystem {
     mLimitTriggered.setBoolean(isHatchLimitTriggered());
     mSpearStateTab.setString(mHatchState.toString());
     mPancakeTab.setBoolean(pancakeState);
+    SmartDashboard.putBoolean("Down Timer", downTimer.isDone());
+    SmartDashboard.putBoolean("Is Hatch Limit Timer Triggered", isHatchTriggeredTimer(0.3));
   }
 
   @Override
@@ -158,7 +157,7 @@ public class HatchArm extends Subsystem {
     hasBeenRumbled = false;
     Logger.logMarker("Set Hatch State to " + state.toString());
     mFirstSpearSolenoid.set(state.firstState);
-    mSecondSpearSolenoid.set(state.secondState);
+    //mSecondSpearSolenoid.set(state.secondState);
   }
 
   public HatchState getHatchSpearState() {

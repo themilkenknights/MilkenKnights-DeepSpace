@@ -20,11 +20,7 @@ public class VisionDrive implements Action {
 
   @Override
   public boolean isFinished() {
-    if (((mGoal != VisionGoal.PLACE_CARGO) && (HatchArm.getInstance().isHatchTriggeredTimer())) || Drive.getInstance()
-        .isDriveStateFinished()) {
-      if (mGoal == VisionGoal.INTAKE_HATCH) {
-        HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
-      }
+    if (Drive.getInstance().isDriveStateFinished()) {
       return true;
     } else {
       return false;

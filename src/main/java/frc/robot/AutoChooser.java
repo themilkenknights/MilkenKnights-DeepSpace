@@ -23,15 +23,18 @@ public class AutoChooser {
 
   public static final Trajectory.Config defaultConfig = new Trajectory.Config(
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_FAST,
-      0.01, 120, 106, 1500);
+      0.01, 115, 106, 1500);
 
   public static final Map<String, Path> autoPaths = new HashMap<>();
   public static MatchData matchData = MatchData.defaultMatch;
   public static AutoPosition mAutoPosition = AutoPosition.RIGHT;
+  public static STARTING mStart = STARTING.START_STRAIGHT;
   private static AutoModeExecutor mAutoModeExecuter;
   private static SendableChooser<AutoPosition> positionChooser = new SendableChooser<>();
+  private static SendableChooser<STARTING> straightChooser = new SendableChooser<>();
   private static ShuffleboardTab mTab = Shuffleboard.getTab("General");
   private static ComplexWidget positionChooserTab = mTab.add("Position", positionChooser).withWidget(BuiltInWidgets.kSplitButtonChooser);
+  private static ComplexWidget straightChooserTab = mTab.add("Position", straightChooser).withWidget(BuiltInWidgets.kSplitButtonChooser);
 
   public synchronized static void startAuto(AutoModeBase base) {
     if (mAutoModeExecuter != null) {
@@ -48,6 +51,7 @@ public class AutoChooser {
     matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
     matchData.matchType = DriverStation.getInstance().getMatchType();
     mAutoPosition = positionChooser.getSelected();
+    mStart = straightChooser.getSelected();
     Logger.logMarker(
         "Alliance: " + matchData.alliance.toString() + " Match Number: " + matchData.matchNumber + " Match Type: " + matchData.matchType.toString());
   }
@@ -75,6 +79,8 @@ public class AutoChooser {
     positionChooser.setDefaultOption("Nothing", AutoPosition.NOTHING);
     positionChooser.addOption("Left", AutoPosition.LEFT);
     positionChooser.addOption("Right", AutoPosition.RIGHT);
+    straightChooser.setDefaultOption("Straight", STARTING.START_STRAIGHT);
+    straightChooser.addOption("Side", STARTING.START_SIDE);
     loadPaths();
   }
 
@@ -89,18 +95,24 @@ public class AutoChooser {
 
   public static void loadPaths() {
     HashMap<String, PathContainer> robotPaths = new HashMap<>();
+
     robotPaths.put("CS-1", new PathContainer(new Waypoint[] {
+        new Waypoint(68, -48, Pathfinder.d2r(0)),
+        new Waypoint(160, -11, Pathfinder.d2r(0)),
+    }, defaultConfig));
+
+    robotPaths.put("CS-2", new PathContainer(new Waypoint[] {
         new Waypoint(204, -12, Pathfinder.d2r(0)),
         new Waypoint(195, -12, Pathfinder.d2r(0)),
         new Waypoint(165, 22, Pathfinder.d2r(99)),
     }, defaultConfig));
 
-    robotPaths.put("CS-2", new PathContainer(new Waypoint[] {
+    robotPaths.put("CS-3", new PathContainer(new Waypoint[] {
         new Waypoint(165, 22, Pathfinder.d2r(90)),
         new Waypoint(65, -136, Pathfinder.d2r(0)),
     }, defaultConfig));
 
-    robotPaths.put("CS-3", new PathContainer(new Waypoint[] {
+    robotPaths.put("CS-4", new PathContainer(new Waypoint[] {
         new Waypoint(20, -136, Pathfinder.d2r(0)),
         new Waypoint(234, -70 - 8, Pathfinder.d2r(5)),
         new Waypoint(264, -90 - 8, Pathfinder.d2r(95)),
@@ -135,6 +147,10 @@ public class AutoChooser {
 
   public enum AutoPosition {
     LEFT, NOTHING, RIGHT
+  }
+
+  public enum STARTING {
+    START_STRAIGHT, START_SIDE
   }
 }
 
