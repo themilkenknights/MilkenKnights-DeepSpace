@@ -23,7 +23,7 @@ public class AutoChooser {
 
   public static final Trajectory.Config defaultConfig = new Trajectory.Config(
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_FAST,
-      0.01, 100, 95, 1500);
+      0.01, 120, 106, 1500);
 
   public static final Map<String, Path> autoPaths = new HashMap<>();
   public static MatchData matchData = MatchData.defaultMatch;
@@ -92,27 +92,26 @@ public class AutoChooser {
     robotPaths.put("CS-1", new PathContainer(new Waypoint[] {
         new Waypoint(204, -12, Pathfinder.d2r(0)),
         new Waypoint(195, -12, Pathfinder.d2r(0)),
-        new Waypoint(165, 22, Pathfinder.d2r(90)),
+        new Waypoint(165, 22, Pathfinder.d2r(99)),
     }, defaultConfig));
 
     robotPaths.put("CS-2", new PathContainer(new Waypoint[] {
-        new Waypoint(165, 22, Pathfinder.d2r(90)),
-        new Waypoint(77, -136, Pathfinder.d2r(0)),
-        new Waypoint(33, -136, Pathfinder.d2r(0)),
+        new Waypoint(165 ,22 ,Pathfinder.d2r(90)),
+        new Waypoint(65, -136, Pathfinder.d2r(0)),
     }, defaultConfig));
 
     robotPaths.put("CS-3", new PathContainer(new Waypoint[] {
         new Waypoint(20, -136, Pathfinder.d2r(0)),
-        new Waypoint(234, -70, Pathfinder.d2r(5)),
-        new Waypoint(264, -94, Pathfinder.d2r(95)),
+        new Waypoint(234, -70 - 8, Pathfinder.d2r(5)),
+        new Waypoint(264, -90 - 8, Pathfinder.d2r(95)),
     }, defaultConfig));
 
     double tiL = 0;
     double tiR = 0;
     for (Map.Entry<String, PathContainer> container : robotPaths.entrySet()) {
       PathContainer traj = container.getValue();
-      Trajectory leftTraj = Pathfinder.generate(traj.getPoints(), traj.getConfig());
-      Trajectory rightTraj = Pathfinder.generate(traj.getRightPoints(), traj.getConfig());
+      Trajectory leftTraj = Pathfinder.generate(traj.getLeftPoints(), traj.getConfig());
+      Trajectory rightTraj = Pathfinder.generate(traj.getPoints(), traj.getConfig());
 
       TankModifier lmodifier = new TankModifier(leftTraj).modify(Constants.DRIVE.kEffectiveDriveWheelTrackWidthInches);
       Trajectory leftl = lmodifier.getLeftTrajectory();
@@ -154,7 +153,7 @@ class PathContainer {
     return points;
   }
 
-  public Waypoint[] getRightPoints() {
+  public Waypoint[] getLeftPoints() {
     Waypoint[] waypoints = new Waypoint[points.length];
     for (int i = 0; i < waypoints.length; i++) {
       waypoints[i] = new Waypoint(points[i].x, points[i].y, points[i].angle);

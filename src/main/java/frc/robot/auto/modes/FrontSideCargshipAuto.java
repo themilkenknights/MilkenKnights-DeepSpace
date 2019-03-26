@@ -18,17 +18,19 @@ public class FrontSideCargshipAuto extends AutoModeBase {
   @Override
   protected void routine() throws AutoModeEndedException {
 
-    runAction(new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH));
+   runAction(new OpenLoopDrive(0.35, 0.35, 0.5));
+    runAction(new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH, 0.5));
+
     runAction(new ParallelAction(Arrays.asList(
-        new DrivePathAction(2, true),
-        new DelayAction(getTime(2) + 0.5, new SetHatchArmState(HatchArm.HatchState.INTAKE)),
-        new DelayAction(getTime(2) - 0.025, new DrivePathAction(3, false)),
-        new DelayAction(getTime(2) + getTime(3) - 0.01, new VisionDrive(VisionDrive.VisionGoal.INTAKE_HATCH))
+        new DrivePathAction(1, true),
+        new DelayAction(getTime(1) + 0.5, new SetHatchArmState(HatchArm.HatchState.INTAKE)),
+        new DelayAction(getTime(1) - 0.1, new DrivePathAction(2, false)),
+        new DelayAction(getTime(1) + getTime(2) - 0.39, new VisionDrive(VisionDrive.VisionGoal.INTAKE_HATCH, 0.9))
     )));
 
     runAction(new ParallelAction(Arrays.asList(
-        new DrivePathAction(4, true),
-        new DelayAction(getTime(1) - 0.1, new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH)))));
+        new DrivePathAction(3, true),
+        new DelayAction(getTime(3) - 0.175, new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH, 0.5)))));
 
     runAction(new OpenLoopDrive(-0.5, -0.5, 0.5));
     runAction(new SetSuperstructure(Superstructure.RobotState.TELEOP_DRIVE));

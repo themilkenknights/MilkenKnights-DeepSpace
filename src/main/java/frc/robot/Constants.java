@@ -34,7 +34,7 @@ public final class Constants {
     public static final double kTicksPerRev = 4096.0;
     public static final double kMotorSafetyTimer = 0.05;
     public static final double kMainLoopDt = 0.02;
-    public static final double kFastLooperDt = 0.005;
+    public static final double kFastLooperDt = 0.01;
     public static final double kThrottleDeadband = 0.0;
     public static final double kWheelDeadband = 0.003;
     public static final double kOperatorDeadband = 0.01;
@@ -92,9 +92,9 @@ public final class Constants {
     public static final double DRIVE_FOLLOWER_ANG = -1.25;
     public static final double PATH_DT = 0.01;
 
-    public static final double kVisionP = 0.00780;
+    public static final double kVisionP = 0.0087;
     public static final double kVisionI = 0.0;
-    public static final double kVisionD = 387.0;//285
+    public static final double kVisionD = 435.0;//285
   }
 
   public static class TEST {
@@ -138,9 +138,9 @@ public final class Constants {
     public static final boolean kDriveCSVLogging = false;
     public static final boolean kErrorLogging = true;
     public static final int kFirstHatchArmChannel = 0;
-    public static final int kSecondHatchArmChannel = 5;
+    public static final int kSecondHatchArmChannel = 1;
     public static final int kFrontClimbSolenoidChannel = 2;
-    public static final int kRearClimbSolenoidChannel = 1;
+    public static final int kRearClimbSolenoidChannel = 4;//1
     public static final int kHatchPancakeChannel = 3;
   }
 

@@ -1,23 +1,36 @@
 package frc.robot.auto.actions;
 
+import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MkTimer;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.HatchArm;
+import frc.robot.subsystems.Superstructure;
 
 public class VisionDrive implements Action {
-  private MkTimer expirationTimer = new MkTimer();
   private VisionGoal mGoal;
+  private double maxTime;
 
   public VisionDrive(VisionGoal mGoal) {
+    this(mGoal, 2.0);
+  }
+
+  public VisionDrive(VisionGoal mGoal, double maxTime) {
     this.mGoal = mGoal;
+    this.maxTime = maxTime;
   }
 
   @Override
   public boolean isFinished() {
-    return expirationTimer.isDone() || ((mGoal == VisionGoal.INTAKE_HATCH
-        || mGoal == VisionGoal.PLACE_HATCH) && (HatchArm.getInstance().isHatchTriggeredTimer())) || (mGoal == VisionGoal.PLACE_CARGO
-        && Drive.getInstance().isDriveStateFinished());
+    if (((mGoal != VisionGoal.PLACE_CARGO) && (HatchArm.getInstance().isHatchTriggeredTimer())) || Drive.getInstance()
+        .isDriveStateFinished()) {
+        if (mGoal == VisionGoal.INTAKE_HATCH) {
+          HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
+        }
+        return true;
+    } else {
+      return false;
+    }
   }
 
   @Override
@@ -28,6 +41,7 @@ public class VisionDrive implements Action {
   @Override
   public void done() {
     if (mGoal == VisionGoal.INTAKE_HATCH) {
+      Logger.logMarker("End Vision Drive Intake, Stowing Hatch");
       HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
     } else if (mGoal == VisionGoal.PLACE_CARGO) {
       CargoArm.getInstance().setArmState(CargoArm.CargoArmState.REVERSE_CARGOSHIP);
@@ -37,8 +51,7 @@ public class VisionDrive implements Action {
   @Override
   public void start() {
     Drive.getInstance().cancelPath();
-    expirationTimer.start(4.0);
-    Drive.getInstance().setVisionDrive(mGoal);
+    Drive.getInstance().setVisionDrive(mGoal, maxTime);
   }
 
   public enum VisionGoal {

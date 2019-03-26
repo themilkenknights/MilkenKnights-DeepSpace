@@ -70,15 +70,20 @@ public class Vision extends Subsystem {
   }
 
   public void disableLED() {
-    mLimeLight.setStream(StreamType.kPiPMain);
-    mLimeLight.setPipeline(1);
-    isVision = false;
+    //if(isVision) {
+      mLimeLight.setStream(StreamType.kPiPMain);
+      //mLimeLight.setPipeline(1);
+      mLimeLight.setPipeline(0);
+      isVision = false;
+    //}
   }
 
   public void enableLED() {
-    mLimeLight.setStream(StreamType.kStandard);
-    mLimeLight.setPipeline(0);
-    isVision = true;
+    if(!isVision) {
+      mLimeLight.setStream(StreamType.kPiPMain);
+      mLimeLight.setPipeline(0);
+      isVision = true;
+    }
   }
 
   public synchronized LimelightTarget getLimelightTarget() {

@@ -2,6 +2,7 @@ package frc.robot.auto.actions;
 
 import frc.robot.AutoChooser;
 import frc.robot.lib.math.trajectory.Path;
+import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.Drive;
 
 public class DrivePathAction implements Action {
@@ -37,6 +38,7 @@ public class DrivePathAction implements Action {
   }
 
   @Override public void start() {
+    Logger.logMarker("Starting Path");
     Drive.getInstance().setDrivePath(path, 1.0, 1.0);
   }
 }
