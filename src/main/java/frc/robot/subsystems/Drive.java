@@ -47,8 +47,8 @@ public class Drive extends Subsystem {
   private PathFollower pathFollower;
   private TrajectoryStatus leftStatus;
   private TrajectoryStatus rightStatus;
-  private double startDist, lastDist, left_encoder_prev_distance_, right_encoder_prev_distance_, timeToVision;
-  private boolean pathFinished, mIsOnTarget, lastValid;
+  private double startDist, left_encoder_prev_distance_, right_encoder_prev_distance_, timeToVision;
+  private boolean pathFinished, mIsOnTarget;
   private VisionDrive.VisionGoal mGoal;
   private MkTimer placeCargoTimer = new MkTimer();
   private Rotation2d mTargetHeading = new Rotation2d();
@@ -309,10 +309,43 @@ public class Drive extends Subsystem {
     mPeriodicIO.brake_mode = signal.getBrakeMode();
   }
 
+  public synchronized boolean isDriveStateFinished() {
+    if (mDriveControlState == DriveControlState.TURN_IN_PLACE) {
+      return mIsOnTarget;
+    } else if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
+      return pathFinished;
+    } else if (mDriveControlState == DriveControlState.MOTION_MAGIC) {
+      return Math.abs(mPeriodicIO.left_demand - mPeriodicIO.leftPos) < 0.25 && Math.abs(mPeriodicIO.right_demand - mPeriodicIO.rightPos) < 0.25;
+    } else if (mDriveControlState == DriveControlState.VISION_DRIVE) {
+      if (mGoal == VisionDrive.VisionGoal.PLACE_CARGO) {
+        return placeCargoTimer.isDone(1.25);
+      } else {
+        if (Superstructure.getInstance().getRobotState() == Superstructure.RobotState.CARGOSHIP_AUTO) {
+          if (mGoal == VisionDrive.VisionGoal.PLACE_HATCH) {
+            return hasBeenLowered.isDone(timeToVision);
+          } else {
+            return isPastVision.isDone(timeToVision);
+          }
+        } else {
+          return isPastVision.isDone(timeToVision);
+        }
+      }
+    } else if (mDriveControlState == DriveControlState.OPEN_LOOP) {
+      return true;
+    } else {
+      Logger.logError("Invalid Drive State");
+      return true;
+    }
+  }
+
   /**
    * Primary method that controls vision driving. Takes in the latest limelight target and controls the hatch arm, cargo rollers, based on distance
    * and the desired vision goal. The speed varies based on distance and goal, and the robot should turn toward the target while driving. Note that
    * vision cannot be used when the hatch arm is down as it obscures the target.
+   *
+   * If someone actually understands this method please contact the author...
+   *
+   * @author Alexander Swerdlow
    */
   public synchronized void updateVisionDrive() {
     LimelightTarget target = Vision.getInstance().getLimelightTarget();
@@ -444,7 +477,6 @@ public class Drive extends Subsystem {
     this.mGoal = mGoal;
     hasBeenLowered.reset();
     isPastVision.reset();
-    lastValid = false;
     clearOutput();
     mDriveControlState = DriveControlState.VISION_DRIVE;
     placeCargoTimer.reset();
@@ -576,35 +608,6 @@ public class Drive extends Subsystem {
         .inverseKinematics(new Twist2d(0, 0, robot_to_target.getRadians()));
     mPeriodicIO.left_demand = MkMath.InchesToNativeUnits(wheel_delta.left + mPeriodicIO.leftPos);
     mPeriodicIO.right_demand = MkMath.InchesToNativeUnits(wheel_delta.right + mPeriodicIO.rightPos);
-  }
-
-  public synchronized boolean isDriveStateFinished() {
-    if (mDriveControlState == DriveControlState.TURN_IN_PLACE) {
-      return mIsOnTarget;
-    } else if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
-      return pathFinished;
-    } else if (mDriveControlState == DriveControlState.MOTION_MAGIC) {
-      return Math.abs(mPeriodicIO.left_demand - mPeriodicIO.leftPos) < 0.25 && Math.abs(mPeriodicIO.right_demand - mPeriodicIO.rightPos) < 0.25;
-    } else if (mDriveControlState == DriveControlState.VISION_DRIVE) {
-      if (mGoal == VisionDrive.VisionGoal.PLACE_CARGO) {
-        return placeCargoTimer.isDone(1.25);
-      } else {
-        if (Superstructure.getInstance().getRobotState() == Superstructure.RobotState.CARGOSHIP_AUTO) {
-          if (mGoal == VisionDrive.VisionGoal.PLACE_HATCH) {
-            return hasBeenLowered.isDone(timeToVision);
-          } else {
-            return isPastVision.isDone(timeToVision);
-          }
-        } else {
-          return isPastVision.isDone(timeToVision);
-        }
-      }
-    } else if (mDriveControlState == DriveControlState.OPEN_LOOP) {
-      return true;
-    } else {
-      Logger.logError("Invalid Drive State");
-      return true;
-    }
   }
 
   /**
