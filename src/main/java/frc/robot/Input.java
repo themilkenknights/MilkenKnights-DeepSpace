@@ -224,7 +224,7 @@ public class Input {
           visionTurn = mVisionAssist.calculate(Vision.getInstance().getLimelightTarget().getYaw());
         }
       }
-      if (HatchArm.getInstance().isHatchTriggeredTimer()) {
+      if (HatchArm.getInstance().isHatchTriggeredTimer(0.3)) {
         isManualVisionMode = false;
         mDrive.setOpenLoop(DriveSignal.BRAKE);
       } else {

@@ -31,10 +31,8 @@ public class AutoChooser {
   public static STARTING mStart = STARTING.START_STRAIGHT;
   private static AutoModeExecutor mAutoModeExecuter;
   private static SendableChooser<AutoPosition> positionChooser = new SendableChooser<>();
-  private static SendableChooser<STARTING> straightChooser = new SendableChooser<>();
   private static ShuffleboardTab mTab = Shuffleboard.getTab("General");
   private static ComplexWidget positionChooserTab = mTab.add("Position", positionChooser).withWidget(BuiltInWidgets.kSplitButtonChooser);
-  private static ComplexWidget straightChooserTab = mTab.add("Position", straightChooser).withWidget(BuiltInWidgets.kSplitButtonChooser);
 
   public synchronized static void startAuto(AutoModeBase base) {
     if (mAutoModeExecuter != null) {
@@ -51,7 +49,6 @@ public class AutoChooser {
     matchData.matchNumber = DriverStation.getInstance().getMatchNumber();
     matchData.matchType = DriverStation.getInstance().getMatchType();
     mAutoPosition = positionChooser.getSelected();
-    mStart = straightChooser.getSelected();
     Logger.logMarker(
         "Alliance: " + matchData.alliance.toString() + " Match Number: " + matchData.matchNumber + " Match Type: " + matchData.matchType.toString());
   }
@@ -79,8 +76,6 @@ public class AutoChooser {
     positionChooser.setDefaultOption("Nothing", AutoPosition.NOTHING);
     positionChooser.addOption("Left", AutoPosition.LEFT);
     positionChooser.addOption("Right", AutoPosition.RIGHT);
-    straightChooser.setDefaultOption("Straight", STARTING.START_STRAIGHT);
-    straightChooser.addOption("Side", STARTING.START_SIDE);
     loadPaths();
   }
 

@@ -17,16 +17,10 @@ import java.util.Arrays;
 public class FrontSideCargshipAuto extends AutoModeBase {
   @Override
   protected void routine() throws AutoModeEndedException {
-
-    if (AutoChooser.mStart == AutoChooser.STARTING.START_SIDE) {
-      runAction(new ParallelAction(Arrays.asList(
-          new DrivePathAction(1, false),
-          new DelayAction(getTime(2) + getTime(3) - 0.4, new VisionDrive(VisionDrive.VisionGoal.INTAKE_HATCH, 0.8))
-      )));
-    } else {
-      runAction(new OpenLoopDrive(0.35, 0.35, 0.5));
-      runAction(new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH, 0.5));
-    }
+    runAction(new ParallelAction(Arrays.asList(
+        new DrivePathAction(1, false),
+        new DelayAction(getTime(1) - 0.1, new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH, 0.8))
+    )));
 
     runAction(new ParallelAction(Arrays.asList(
         new DrivePathAction(2, true),
