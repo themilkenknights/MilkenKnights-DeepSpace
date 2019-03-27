@@ -27,6 +27,7 @@ public class HatchArm extends Subsystem {
   private MkTimer downTimer = new MkTimer();
   private boolean pancakeState;
   private boolean hasBeenRumbled;
+  private boolean hasAutoRun;
 
   private HatchArm() {
     ShuffleboardTab mHatchArmTab = Shuffleboard.getTab("Hatch Arm");
@@ -105,13 +106,18 @@ public class HatchArm extends Subsystem {
 
   @Override
   public void autonomousInit(double timestamp) {
-
+    hasAutoRun = true;
   }
 
   @Override
   public void onStop(double timestamp) {
     hasBeenRumbled = false;
     downTimer.reset();
+    if(hasAutoRun){
+      hasAutoRun = false;
+    } else{
+      setHatchState(HatchState.STOW);
+    }
   }
 
   @Override

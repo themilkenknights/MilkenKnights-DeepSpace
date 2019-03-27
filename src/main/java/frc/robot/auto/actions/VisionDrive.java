@@ -1,5 +1,6 @@
 package frc.robot.auto.actions;
 
+import frc.robot.lib.util.DriveSignal;
 import frc.robot.lib.util.Logger;
 import frc.robot.subsystems.CargoArm;
 import frc.robot.subsystems.Drive;
@@ -39,6 +40,7 @@ public class VisionDrive implements Action {
       HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
     } else if (mGoal == VisionGoal.PLACE_CARGO) {
       CargoArm.getInstance().setArmState(CargoArm.CargoArmState.REVERSE_CARGOSHIP);
+      Drive.getInstance().setOpenLoop(DriveSignal.BRAKE);
     }
   }
 

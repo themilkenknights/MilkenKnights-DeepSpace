@@ -54,6 +54,7 @@ public class Drive extends Subsystem {
   private Rotation2d mTargetHeading = new Rotation2d();
   private MkTimer isPastVision = new MkTimer();
   private MkTimer hasBeenLowered = new MkTimer();
+  private double desiredAngle;
 
   private Drive() {
     ShuffleboardTab mDriveTab = Shuffleboard.getTab("Drive");
@@ -128,8 +129,8 @@ public class Drive extends Subsystem {
       mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward,
           NeutralMode.Brake);
     } else if (mDriveControlState == DriveControlState.VISION_DRIVE) {
-      mLeftDrive.set(ControlMode.PercentOutput, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
-      mRightDrive.set(ControlMode.PercentOutput, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
+      mLeftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand * Constants.DRIVE.kMaxNativeVel, mPeriodicIO.brake_mode);
+      mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand * Constants.DRIVE.kMaxNativeVel, mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.TURN_IN_PLACE) {
       mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward,
           mPeriodicIO.brake_mode);
@@ -318,12 +319,17 @@ public class Drive extends Subsystem {
       return Math.abs(mPeriodicIO.left_demand - mPeriodicIO.leftPos) < 0.25 && Math.abs(mPeriodicIO.right_demand - mPeriodicIO.rightPos) < 0.25;
     } else if (mDriveControlState == DriveControlState.VISION_DRIVE) {
       if (mGoal == VisionDrive.VisionGoal.PLACE_CARGO) {
-        return placeCargoTimer.isDone(1.25);
+        return placeCargoTimer.isDone(0.7);
       } else {
         if (mGoal == VisionDrive.VisionGoal.PLACE_HATCH) {
+          if (hasBeenLowered.isDone(timeToVision)) {
+            Logger.logMarker("PLACE TIMER DONE");
+          } else if (HatchArm.getInstance().isHatchTriggeredTimer(0.35)) {
+            Logger.logMarker("LIMIT TIMER TRIGGERED");
+          }
           return hasBeenLowered.isDone(timeToVision) || HatchArm.getInstance().isHatchTriggeredTimer(0.35);
         } else {
-          return isPastVision.isDone(timeToVision) || HatchArm.getInstance().isHatchTriggeredTimer(0.1);
+          return isPastVision.isDone(timeToVision) || HatchArm.getInstance().isHatchLimitTriggered();
         }
       }
     } else if (mDriveControlState == DriveControlState.OPEN_LOOP) {
@@ -350,6 +356,7 @@ public class Drive extends Subsystem {
 
     if (dist < 26.0 && !isPastVision.hasBeenSet() && target.isValidTarget()) {
       isPastVision.start(1.0);
+      desiredAngle = getHeadingDeg() - target.getYaw();
     }
 
     switch (mGoal) {
@@ -358,10 +365,10 @@ public class Drive extends Subsystem {
       case PLACE_HATCH:
         if (isPastVision.hasBeenSet() && !hasBeenLowered.hasBeenSet()) {
           double avgVel = (mPeriodicIO.leftVel + mPeriodicIO.rightVel) / 2.0;
-          if (avgVel > 50.0 && isPastVision.isDone(0.02)) {
+          if (avgVel > 50.0 && isPastVision.hasBeenSet()) {
             HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
             hasBeenLowered.start(1.0);
-          } else if (avgVel > 30.0 && isPastVision.isDone(0.025)) {
+          } else if (avgVel > 30.0 && isPastVision.isDone(0.01)) {
             HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
             hasBeenLowered.start(1.0);
           } else if (avgVel > 10 && isPastVision.isDone(0.375)) {
@@ -374,10 +381,8 @@ public class Drive extends Subsystem {
         }
         break;
       case PLACE_CARGO:
-        if (target.getDistance() < 26.0 && !placeCargoTimer.hasBeenSet()) {
+        if (target.getDistance() < 26.0 && !placeCargoTimer.hasBeenSet() && target.isValidTarget()) {
           placeCargoTimer.start(0.675);
-        } else if (placeCargoTimer.isDone()) {
-          CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut);
         }
         break;
       default:
@@ -385,34 +390,33 @@ public class Drive extends Subsystem {
         break;
     }
 
-    if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE) {
+    if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE && !isPastVision.hasBeenSet()) {
       visionTurn = mVisionAssist.calculate(target.getYaw());
+    } else {
+      visionTurn = mVisionAssist.calculate(getHeadingDeg() - desiredAngle);
     }
 
     double speed = 0.0;
     if (mGoal == VisionDrive.VisionGoal.INTAKE_HATCH) {
-      if (dist < 20.0) {
-        speed = 0.175;
-      } else if (dist > 140) {
+      speed = 0.2;
+      if (dist > 140) {
         speed = 0.85;
       } else if (dist > 110) {
         speed = 0.8;
       } else if (dist > 90) {
-        speed = 0.7;
+        speed = 0.75;
       } else if (dist > 70) {
-        speed = 0.685;
+        speed = 0.7;
       } else if (dist > 50) {
-        speed = 0.65;
+        speed = 0.675;
       } else if (dist > 30) {
-        speed = 0.525;
-      } else if (dist > 25) {
-        speed = 0.23;
-      } else if (dist > 20) {
-        speed = 0.2;
-      } else if (dist > 10) {
+        speed = 0.65;
+      } else if(dist > 25){
+        speed = 0.55;
+      }else if (dist > 20) {
+        speed = 0.485;
+      }else if (dist < 20.0) {
         speed = 0.19;
-      } else {
-        speed = 0.175;
       }
     } else {
       if (dist < 20.0) {
@@ -473,6 +477,7 @@ public class Drive extends Subsystem {
     this.mGoal = mGoal;
     hasBeenLowered.reset();
     isPastVision.reset();
+    desiredAngle = 0.0;
     clearOutput();
     mDriveControlState = DriveControlState.VISION_DRIVE;
     placeCargoTimer.reset();

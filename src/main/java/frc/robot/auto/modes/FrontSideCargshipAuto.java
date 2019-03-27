@@ -9,6 +9,7 @@ import frc.robot.auto.actions.OpenLoopDrive;
 import frc.robot.auto.actions.ParallelAction;
 import frc.robot.auto.actions.SetHatchArmState;
 import frc.robot.auto.actions.SetSuperstructure;
+import frc.robot.auto.actions.TurnInPlace;
 import frc.robot.auto.actions.VisionDrive;
 import frc.robot.subsystems.HatchArm;
 import frc.robot.subsystems.Superstructure;
@@ -19,7 +20,7 @@ public class FrontSideCargshipAuto extends AutoModeBase {
   protected void routine() throws AutoModeEndedException {
     runAction(new ParallelAction(Arrays.asList(
         new DrivePathAction(1, false),
-        new DelayAction(getTime(1) - 0.1, new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH, 0.8))
+        new DelayAction(getTime(1) - 0.05, new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH, 0.8))
     )));
 
     runAction(new ParallelAction(Arrays.asList(
@@ -33,7 +34,7 @@ public class FrontSideCargshipAuto extends AutoModeBase {
         new DrivePathAction(4, true),
         new DelayAction(getTime(4) - 0.175, new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH, 0.5)))));
 
-    runAction(new OpenLoopDrive(-0.5, -0.5, 0.5));
+    runAction(new OpenLoopDrive(-0.5, -0.5, 0.4));
     runAction(new SetSuperstructure(Superstructure.RobotState.TELEOP_DRIVE));
   }
 
