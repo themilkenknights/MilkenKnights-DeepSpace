@@ -37,7 +37,8 @@ import jaci.pathfinder.Trajectory;
 
 public class Drive extends Subsystem {
   private static SynchronousPIDF mVisionAssist = new SynchronousPIDF(Constants.DRIVE.kVisionP, Constants.DRIVE.kVisionI, Constants.DRIVE.kVisionD);
-  private final MkTalon mLeftDrive, mRightDrive;
+  private final MkTalon mLeftDrive;
+  private final MkTalon mRightDrive;
   public PeriodicIO mPeriodicIO;
   private DriveControlState mDriveControlState = DriveControlState.OPEN_LOOP;
   private Rotation2d mGyroOffset = Rotation2d.identity();
@@ -45,16 +46,15 @@ public class Drive extends Subsystem {
   private NetworkTableEntry mState, mStatus, mFusedHeading, mGyroHeading;
   private PigeonIMU mPigeon;
   private PathFollower pathFollower;
-  private TrajectoryStatus leftStatus;
-  private TrajectoryStatus rightStatus;
-  private double startDist, left_encoder_prev_distance_, right_encoder_prev_distance_, timeToVision;
+  private TrajectoryStatus mLeftStatus;
+  private TrajectoryStatus mRightStatus;
+  private double left_encoder_prev_distance_, right_encoder_prev_distance_, mVisionStartDist, mTimeToVision, mDesiredVisionAngle;
   private boolean pathFinished, mIsOnTarget;
   private VisionDrive.VisionGoal mGoal;
-  private MkTimer placeCargoTimer = new MkTimer();
   private Rotation2d mTargetHeading = new Rotation2d();
+  private MkTimer placeCargoTimer = new MkTimer();
   private MkTimer isPastVision = new MkTimer();
   private MkTimer hasBeenLowered = new MkTimer();
-  private double desiredAngle;
 
   private Drive() {
     ShuffleboardTab mDriveTab = Shuffleboard.getTab("Drive");
@@ -66,8 +66,8 @@ public class Drive extends Subsystem {
     mLeftDrive = new MkTalon(Constants.CAN.kDriveLeftMasterTalonID, Constants.CAN.kDriveLeftSlaveVictorID, TalonLoc.Left, mDriveTab);
     mRightDrive = new MkTalon(Constants.CAN.kDriveRightMasterTalonID, Constants.CAN.kDriveRightSlaveVictorID, TalonLoc.Right, mDriveTab);
     mPigeon = CargoArm.getInstance().getPigeon();
-    leftStatus = TrajectoryStatus.NEUTRAL;
-    rightStatus = TrajectoryStatus.NEUTRAL;
+    mLeftStatus = TrajectoryStatus.NEUTRAL;
+    mRightStatus = TrajectoryStatus.NEUTRAL;
   }
 
   public static Drive getInstance() {
@@ -129,8 +129,8 @@ public class Drive extends Subsystem {
       mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.right_feedforward,
           NeutralMode.Brake);
     } else if (mDriveControlState == DriveControlState.VISION_DRIVE) {
-      mLeftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand * Constants.DRIVE.kMaxNativeVel, mPeriodicIO.brake_mode);
-      mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand * Constants.DRIVE.kMaxNativeVel, mPeriodicIO.brake_mode);
+      mLeftDrive.set(ControlMode.Velocity, mPeriodicIO.left_demand, mPeriodicIO.brake_mode);
+      mRightDrive.set(ControlMode.Velocity, mPeriodicIO.right_demand, mPeriodicIO.brake_mode);
     } else if (mDriveControlState == DriveControlState.TURN_IN_PLACE) {
       mLeftDrive.set(ControlMode.MotionMagic, mPeriodicIO.left_demand, DemandType.ArbitraryFeedForward, mPeriodicIO.left_feedforward,
           mPeriodicIO.brake_mode);
@@ -153,16 +153,16 @@ public class Drive extends Subsystem {
     }
     if (mCSVWriter != null && MISC.kDriveCSVLogging) {
       if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
-        mPeriodicIO.leftDesiredPos = leftStatus.getSeg().position;
-        mPeriodicIO.rightDesiredPos = rightStatus.getSeg().position;
-        mPeriodicIO.desiredHeading = leftStatus.getSeg().heading;
-        mPeriodicIO.headingError = leftStatus.getAngError();
-        mPeriodicIO.leftVelError = leftStatus.getVelError();
-        mPeriodicIO.leftPosError = leftStatus.getPosError();
-        mPeriodicIO.rightVelError = rightStatus.getVelError();
-        mPeriodicIO.rightPosError = rightStatus.getPosError();
-        mPeriodicIO.desiredX = (leftStatus.getSeg().x + rightStatus.getSeg().x) / 2;
-        mPeriodicIO.desiredY = (leftStatus.getSeg().y + rightStatus.getSeg().y) / 2;
+        mPeriodicIO.leftDesiredPos = mLeftStatus.getSeg().position;
+        mPeriodicIO.rightDesiredPos = mRightStatus.getSeg().position;
+        mPeriodicIO.desiredHeading = mLeftStatus.getSeg().heading;
+        mPeriodicIO.headingError = mLeftStatus.getAngError();
+        mPeriodicIO.leftVelError = mLeftStatus.getVelError();
+        mPeriodicIO.leftPosError = mLeftStatus.getPosError();
+        mPeriodicIO.rightVelError = mRightStatus.getVelError();
+        mPeriodicIO.rightPosError = mRightStatus.getPosError();
+        mPeriodicIO.desiredX = (mLeftStatus.getSeg().x + mRightStatus.getSeg().x) / 2;
+        mPeriodicIO.desiredY = (mLeftStatus.getSeg().y + mRightStatus.getSeg().y) / 2;
       }
       mCSVWriter.add(mPeriodicIO);
       mCSVWriter.write();
@@ -322,14 +322,14 @@ public class Drive extends Subsystem {
         return placeCargoTimer.isDone(0.7);
       } else {
         if (mGoal == VisionDrive.VisionGoal.PLACE_HATCH) {
-          if (hasBeenLowered.isDone(timeToVision)) {
+          if (hasBeenLowered.isDone(mTimeToVision)) {
             Logger.logMarker("PLACE TIMER DONE");
           } else if (HatchArm.getInstance().isHatchTriggeredTimer(0.35)) {
             Logger.logMarker("LIMIT TIMER TRIGGERED");
           }
-          return hasBeenLowered.isDone(timeToVision) || HatchArm.getInstance().isHatchTriggeredTimer(0.35);
+          return hasBeenLowered.isDone(mTimeToVision) || HatchArm.getInstance().isHatchTriggeredTimer(0.35);
         } else {
-          return isPastVision.isDone(timeToVision) || HatchArm.getInstance().isHatchLimitTriggered();
+          return isPastVision.isDone(mTimeToVision) || HatchArm.getInstance().isHatchLimitTriggered();
         }
       }
     } else if (mDriveControlState == DriveControlState.OPEN_LOOP) {
@@ -356,7 +356,6 @@ public class Drive extends Subsystem {
 
     if (dist < 26.0 && !isPastVision.hasBeenSet() && target.isValidTarget()) {
       isPastVision.start(1.0);
-      desiredAngle = getHeadingDeg() - target.getYaw();
     }
 
     switch (mGoal) {
@@ -390,10 +389,11 @@ public class Drive extends Subsystem {
         break;
     }
 
-    if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE && !isPastVision.hasBeenSet()) {
+    if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE && !isPastVision.hasBeenSet() && target.isValidTarget()) {
       visionTurn = mVisionAssist.calculate(target.getYaw());
+      mDesiredVisionAngle = getHeadingDeg() - target.getYaw();
     } else {
-      visionTurn = mVisionAssist.calculate(getHeadingDeg() - desiredAngle);
+      visionTurn = mVisionAssist.calculate(getHeadingDeg() - mDesiredVisionAngle);
     }
 
     double speed = 0.0;
@@ -411,11 +411,11 @@ public class Drive extends Subsystem {
         speed = 0.675;
       } else if (dist > 30) {
         speed = 0.65;
-      } else if(dist > 25){
+      } else if (dist > 25) {
         speed = 0.55;
-      }else if (dist > 20) {
+      } else if (dist > 20) {
         speed = 0.485;
-      }else if (dist < 20.0) {
+      } else if (dist < 20.0) {
         speed = 0.19;
       }
     } else {
@@ -441,9 +441,9 @@ public class Drive extends Subsystem {
         speed = 0.125;
       }
 
-      if (dist > 27.5 && startDist < 35.0) {
+      if (dist > 27.5 && mVisionStartDist < 35.0) {
         speed = 0.4;
-      } else if (startDist < 35.0 && dist > 20) {
+      } else if (mVisionStartDist < 35.0 && dist > 20) {
         speed = 0.3;
       }
 
@@ -458,12 +458,8 @@ public class Drive extends Subsystem {
       }
     }
 
-    if (!target.isValidTarget() && !isPastVision.hasBeenSet()) {
-      speed = 0.15;
-    }
-
-    mPeriodicIO.left_demand = speed - visionTurn;
-    mPeriodicIO.right_demand = speed + visionTurn;
+    mPeriodicIO.left_demand = (speed - visionTurn) * Constants.DRIVE.kMaxNativeVel;
+    mPeriodicIO.right_demand = (speed + visionTurn) * Constants.DRIVE.kMaxNativeVel;
   }
 
   public synchronized void setVisionDrive(VisionDrive.VisionGoal mGoal, double cancelTime) {
@@ -472,16 +468,16 @@ public class Drive extends Subsystem {
     } else if (Robot.mMatchState != Robot.MatchState.AUTO) {
       HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
     }
-    timeToVision = cancelTime;
+    mTimeToVision = cancelTime;
     mVisionAssist.reset();
     this.mGoal = mGoal;
     hasBeenLowered.reset();
     isPastVision.reset();
-    desiredAngle = 0.0;
     clearOutput();
     mDriveControlState = DriveControlState.VISION_DRIVE;
     placeCargoTimer.reset();
-    startDist = Vision.getInstance().getLimelightTarget().getDistance();
+    mVisionStartDist = Vision.getInstance().getLimelightTarget().getDistance();
+    mDesiredVisionAngle = getHeadingDeg() - Vision.getInstance().getLimelightTarget().getYaw();
   }
 
   /**
@@ -541,8 +537,8 @@ public class Drive extends Subsystem {
   public synchronized void cancelPath() {
     pathFinished = true;
     pathFollower = null;
-    leftStatus = TrajectoryStatus.NEUTRAL;
-    rightStatus = TrajectoryStatus.NEUTRAL;
+    mLeftStatus = TrajectoryStatus.NEUTRAL;
+    mRightStatus = TrajectoryStatus.NEUTRAL;
     setOpenLoop(DriveSignal.BRAKE);
   }
 
@@ -557,8 +553,8 @@ public class Drive extends Subsystem {
   private synchronized void updatePathFollower() {
     TrajectoryStatus leftUpdate = pathFollower.getLeftVelocity(mPeriodicIO.leftPos, mPeriodicIO.leftVel, getHeadingDeg());
     TrajectoryStatus rightUpdate = pathFollower.getRightVelocity(mPeriodicIO.rightPos, mPeriodicIO.rightVel, getHeadingDeg());
-    leftStatus = leftUpdate;
-    rightStatus = rightUpdate;
+    mLeftStatus = leftUpdate;
+    mRightStatus = rightUpdate;
     double turn = 0.0;
   /*  LimelightTarget target = Vision.getInstance().getLimelightTarget();
    if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE && target.isValidTarget() && pathFollower.getTimeLeft() < 0.2) {

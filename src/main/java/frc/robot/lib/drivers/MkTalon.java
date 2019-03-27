@@ -119,19 +119,17 @@ public class MkTalon {
     }
     switch (mSide) {
       case Right:
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_Targets, 50, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_12_Feedback1, 50, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 50, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_14_Turn_PIDF1, 50, kShort));
-        masterTalon.selectProfileSlot(CONFIG.kDistanceSlot, CONFIG.kPIDPrimary);
-        masterTalon.selectProfileSlot(CONFIG.kTurningSlot, CONFIG.kPIDAuxilliaryTurn);
         //Falls Through
       case Left:
         CTRE(masterTalon.setControlFramePeriod(ControlFrame.Control_3_General, 5));
         CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 10, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 5, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 50, kShort));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 50, kShort));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 3, kShort));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 100, kShort));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 100, kShort));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_Targets, 1000, kShort));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_12_Feedback1, 1000, kShort));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 1000, kShort));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_14_Turn_PIDF1, 1000, kShort));
         zeroEncoder();
         break;
       case Cargo_Arm:
@@ -152,7 +150,7 @@ public class MkTalon {
         CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 1000, kLong));
         CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_10_MotionMagic, 1000, kLong));
         CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_13_Base_PIDF0, 1000, kLong));
-        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_11_UartGadgeteer, 10, kLong));
+        CTRE(masterTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_11_UartGadgeteer, 20, kLong));
         break;
       default:
         Logger.logError("Unknown Side");
@@ -166,7 +164,7 @@ public class MkTalon {
       slaveTalon.enableVoltageCompensation(true);
       slaveTalon.setNeutralMode(NeutralMode.Brake);
       CTRE(slaveTalon.setControlFramePeriod(ControlFrame.Control_3_General, 20));
-      CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 5, kShort));
+      CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 3, kShort));
       CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 1000, kShort));
       CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_3_Quadrature, 1000, kShort));
       CTRE(slaveTalon.setStatusFramePeriod(StatusFrameEnhanced.Status_8_PulseWidth, 1000, kShort));
@@ -193,8 +191,8 @@ public class MkTalon {
       mPigeon = new PigeonIMU(masterTalon);
       CTRE(mPigeon.configFactoryDefault(kLong));
       CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_1_General, 10, kLong));
-      CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_9_SixDeg_YPR, 5, kLong));
-      CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_6_SensorFusion, 5, kLong));
+      CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_9_SixDeg_YPR, 6, kLong));
+      CTRE(mPigeon.setStatusFramePeriod(PigeonIMU_StatusFrame.CondStatus_6_SensorFusion, 3, kLong));
     }
     motorSafetyTimer.start(motorTimer);
   }

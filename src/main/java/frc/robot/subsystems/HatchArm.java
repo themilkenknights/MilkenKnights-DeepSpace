@@ -113,9 +113,9 @@ public class HatchArm extends Subsystem {
   public void onStop(double timestamp) {
     hasBeenRumbled = false;
     downTimer.reset();
-    if(hasAutoRun){
+    if (hasAutoRun) {
       hasAutoRun = false;
-    } else{
+    } else {
       setHatchState(HatchState.STOW);
     }
   }

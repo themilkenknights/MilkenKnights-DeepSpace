@@ -28,7 +28,6 @@ public class AutoChooser {
   public static final Map<String, Path> autoPaths = new HashMap<>();
   public static MatchData matchData = MatchData.defaultMatch;
   public static AutoPosition mAutoPosition = AutoPosition.RIGHT;
-  public static STARTING mStart = STARTING.START_STRAIGHT;
   private static AutoModeExecutor mAutoModeExecuter;
   private static SendableChooser<AutoPosition> positionChooser = new SendableChooser<>();
   private static ShuffleboardTab mTab = Shuffleboard.getTab("General");
@@ -142,10 +141,6 @@ public class AutoChooser {
 
   public enum AutoPosition {
     LEFT, NOTHING, RIGHT
-  }
-
-  public enum STARTING {
-    START_STRAIGHT, START_SIDE
   }
 }
 
