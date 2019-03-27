@@ -9,7 +9,6 @@ import frc.robot.auto.actions.OpenLoopDrive;
 import frc.robot.auto.actions.ParallelAction;
 import frc.robot.auto.actions.SetHatchArmState;
 import frc.robot.auto.actions.SetSuperstructure;
-import frc.robot.auto.actions.TurnInPlace;
 import frc.robot.auto.actions.VisionDrive;
 import frc.robot.subsystems.HatchArm;
 import frc.robot.subsystems.Superstructure;

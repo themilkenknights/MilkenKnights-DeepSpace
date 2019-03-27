@@ -21,11 +21,7 @@ public class VisionDrive implements Action {
 
   @Override
   public boolean isFinished() {
-    if (Drive.getInstance().isDriveStateFinished()) {
-      return true;
-    } else {
-      return false;
-    }
+    return Drive.getInstance().isDriveStateFinished();
   }
 
   @Override

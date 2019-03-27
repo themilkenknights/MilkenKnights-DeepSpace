@@ -411,11 +411,11 @@ public class Drive extends Subsystem {
         speed = 0.675;
       } else if (dist > 30) {
         speed = 0.65;
-      } else if(dist > 25){
+      } else if (dist > 25) {
         speed = 0.55;
-      }else if (dist > 20) {
+      } else if (dist > 20) {
         speed = 0.485;
-      }else if (dist < 20.0) {
+      } else if (dist < 20.0) {
         speed = 0.19;
       }
     } else {

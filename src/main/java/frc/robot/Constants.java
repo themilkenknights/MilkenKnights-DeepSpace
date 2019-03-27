@@ -95,7 +95,6 @@ public final class Constants {
     public static final double kVisionP = 0.0076; //0.0087
     public static final double kVisionI = 0.0;
     public static final double kVisionD = 590.0; //430
-
   }
 
   public static class TEST {
