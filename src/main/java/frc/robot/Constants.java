@@ -26,7 +26,7 @@ import java.util.Map;
  * +X is Hatch Arm/Battery Forward -X is Hatch Arm/Battery Forward +Y is Left (Hatch Arm/Battery Forward) -Y is Right (Hatch Arm/Battery Forward)
  */
 public final class Constants {
-  public static final boolean kIsPracticeBot = true;
+  public static final boolean kIsPracticeBot = false;
 
   public static class GENERAL {
     public static final double PI = 3.14159265359;

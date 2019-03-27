@@ -45,10 +45,10 @@ public class Input {
   private static final MkJoystickButton mSpearIntake = mOperatorJoystick.getButton(4, "Hatch Spear HP Intake");
   private static final MkJoystickButton mIntakeRollerIn = mOperatorJoystick.getButton(5, "Intake Roller In");
   private static final MkJoystickButton mIntakeRollerOut = mOperatorJoystick.getButton(6, "Intake Roller Out Fast");
-  private static final MkJoystickButton toggleVision = mOperatorJoystick.getButton(7, "Toggle Vision");
-  private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick.getButton(8, "Zero Arm Encoders && Disable Soft Limit");
-  private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(10, "Defense Mode - Stow All");
-  private static final MkJoystickButton mRetractPancake = mOperatorJoystick.getButton(9, "Retract Pancake Actuator");
+  private static final MkJoystickButton toggleVision = mOperatorJoystick.getButton(11, "Toggle Vision");
+  private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick.getButton(10, "Zero Arm Encoders && Disable Soft Limit");
+  private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(9, "Defense Mode - Stow All");
+  private static final MkJoystickButton mRetractPancake = mOperatorJoystick.getButton(12, "Retract Pancake Actuator");
 
   private static final LatchedBoolean cancelAutoTrigger = new LatchedBoolean();
   private static boolean isManualVisionMode;
@@ -216,10 +216,6 @@ public class Input {
       double visionTurn = 0.0;
       LimelightTarget target = mVision.getLimelightTarget();
       if (target.isValidTarget()) {
-       /* if (target.getDistance() < 35.0 & !hasBeenTriggered) {
-          mHatch.setHatchState(HatchState.PLACE);
-          hasBeenTriggered = true;
-        }*/
         if (mHatch.getHatchSpearState() != HatchState.PLACE) {
           visionTurn = mVisionAssist.calculate(Vision.getInstance().getLimelightTarget().getYaw());
         }
@@ -230,14 +226,6 @@ public class Input {
       } else {
         mDrive.setOpenLoop(new DriveSignal(controlSig.getLeft() - visionTurn, controlSig.getRight() + visionTurn));
       }
-
-      /* if(mDriverJoystick.getPOV() == 90){
-         mDrive.setWantTurnToHeading(Rotation2d.fromDegrees(90));
-       } else if(mDriverJoystick.getPOV() == 180){
-         mDrive.setWantTurnToHeading(Rotation2d.fromDegrees(-90));
-       } else if(mDriverJoystick.getPOV() == 0){
-         mDrive.setWantTurnToHeading(Rotation2d.fromDegrees(0));
-       } */
     } else {
       mDrive.setOpenLoop(controlSig);
     }
