@@ -102,14 +102,14 @@ public class AutoChooser {
     }, defaultConfig));
 
     robotPaths.put("CS-3", new PathContainer(new Waypoint[] {
-        new Waypoint(170, 17, Pathfinder.d2r(90)),
+        new Waypoint(170, 18, Pathfinder.d2r(90)),
         new Waypoint(65, -136 + 9, Pathfinder.d2r(0)),
     }, defaultConfig));
 
     robotPaths.put("CS-4", new PathContainer(new Waypoint[] {
-        new Waypoint(20, -136, Pathfinder.d2r(5)),
-        new Waypoint(234, -70, Pathfinder.d2r(5)),
-        new Waypoint(264, -90, Pathfinder.d2r(95)),
+        new Waypoint(20, -136, Pathfinder.d2r(3)),
+        new Waypoint(232, -70, Pathfinder.d2r(5)),
+        new Waypoint(262, -90, Pathfinder.d2r(95)),
     }, defaultConfig));
 
     double tiL = 0;
