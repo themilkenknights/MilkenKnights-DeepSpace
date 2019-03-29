@@ -25,7 +25,6 @@ public class AutoChooser {
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_FAST,
       0.01, 115, 106, 1500);
 
-
   public static final Trajectory.Config slowConfig = new Trajectory.Config(
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_FAST,
       0.01, 105, 103, 1500);

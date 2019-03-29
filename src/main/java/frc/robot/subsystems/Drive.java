@@ -390,21 +390,21 @@ public class Drive extends Subsystem {
         if (target.getDistance() < 26.0 && !placeCargoTimer.hasBeenSet() && target.isValidTarget()) {
           placeCargoTimer.start(0.675);
         }
-        if(mVisionStartDist > 35 || mVisionStartAngle > 12.0){
-        if(placeCargoTimer.isDone(0.4) && avgVel > 40){
-          CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.15);
-        } else if(placeCargoTimer.isDone(0.4) && avgVel > 30){
-          CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.075);
-        }else if(placeCargoTimer.isDone(0.4) && avgVel > 20){
-          CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.05);
-        } else if(placeCargoTimer.isDone(0.4) && avgVel < 20){
-          CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut);
-        }}
-        else{
-          if(placeCargoTimer.isDone(0.6) && target.getYaw() < 5.0){
+        if (mVisionStartDist > 35 || mVisionStartAngle > 12.0) {
+          if (placeCargoTimer.isDone(0.4) && avgVel > 40) {
+            CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.15);
+          } else if (placeCargoTimer.isDone(0.4) && avgVel > 30) {
+            CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.075);
+          } else if (placeCargoTimer.isDone(0.4) && avgVel > 20) {
+            CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.05);
+          } else if (placeCargoTimer.isDone(0.4) && avgVel < 20) {
             CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut);
-          } else if(placeCargoTimer.isDone(0.7)){
-          CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut);
+          }
+        } else {
+          if (placeCargoTimer.isDone(0.6) && target.getYaw() < 5.0) {
+            CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut);
+          } else if (placeCargoTimer.isDone(0.7)) {
+            CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut);
           }
         }
         break;
@@ -433,7 +433,7 @@ public class Drive extends Subsystem {
         speed = 0.7;
       } else if (dist > 50) {
         speed = 0.675;
-      } else if(dist > 40){
+      } else if (dist > 40) {
         speed = 0.6;
       } else if (dist > 30) {
         speed = 0.55;
@@ -445,13 +445,13 @@ public class Drive extends Subsystem {
         speed = 0.2;
       }
 
-      if(isPastVision.isDone(0.5)){
+      if (isPastVision.isDone(0.5)) {
         speed = 0.05;
-      } else if(isPastVision.isDone(0.3)){
+      } else if (isPastVision.isDone(0.3)) {
         speed = 0.09;
-      } else if(isPastVision.isDone(0.2)){
+      } else if (isPastVision.isDone(0.2)) {
         speed = 0.2;
-      } else if(isPastVision.isDone(0.075)){
+      } else if (isPastVision.isDone(0.075)) {
         speed = 0.25;
       }
     } else {
@@ -498,7 +498,7 @@ public class Drive extends Subsystem {
     mPeriodicIO.right_demand = (speed + visionTurn) * Constants.DRIVE.kMaxNativeVel;
   }
 
-  public synchronized void changeMotionMagicAccel(int accel){
+  public synchronized void changeMotionMagicAccel(int accel) {
     mLeftDrive.masterTalon.configMotionAcceleration(accel);
     mRightDrive.masterTalon.configMotionAcceleration(accel);
   }
