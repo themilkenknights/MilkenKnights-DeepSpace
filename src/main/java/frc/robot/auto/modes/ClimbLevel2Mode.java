@@ -6,14 +6,10 @@ import frc.robot.auto.actions.ActuateFrontSolenoids;
 import frc.robot.auto.actions.ActuateRearSolenoids;
 import frc.robot.auto.actions.CargoArmSetpoint;
 import frc.robot.auto.actions.ChangeMotionMagicAccel;
-import frc.robot.auto.actions.DelayAction;
 import frc.robot.auto.actions.MotionMagicBlind;
-import frc.robot.auto.actions.ParallelAction;
-import frc.robot.auto.actions.WaitAction;
 import frc.robot.auto.actions.WaitForAngle;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Superstructure.ClimbState;
-import java.util.Arrays;
 
 /**
  * Actuates Front Pnuematic Cylinders (Hatch Side) and waits until a certain pitch Drives forward, retracts front, extends back actuators, and waits
