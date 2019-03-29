@@ -5,11 +5,15 @@ import frc.robot.auto.AutoModeEndedException;
 import frc.robot.auto.actions.ActuateFrontSolenoids;
 import frc.robot.auto.actions.ActuateRearSolenoids;
 import frc.robot.auto.actions.CargoArmSetpoint;
+import frc.robot.auto.actions.ChangeMotionMagicAccel;
+import frc.robot.auto.actions.DelayAction;
 import frc.robot.auto.actions.MotionMagicBlind;
+import frc.robot.auto.actions.ParallelAction;
 import frc.robot.auto.actions.WaitAction;
 import frc.robot.auto.actions.WaitForAngle;
 import frc.robot.subsystems.CargoArm.CargoArmState;
 import frc.robot.subsystems.Superstructure.ClimbState;
+import java.util.Arrays;
 
 /**
  * Actuates Front Pnuematic Cylinders (Hatch Side) and waits until a certain pitch Drives forward, retracts front, extends back actuators, and waits
@@ -21,14 +25,14 @@ public class ClimbLevel2Mode extends AutoModeBase {
     runAction(new CargoArmSetpoint(CargoArmState.INTAKE));
     runAction(new ActuateFrontSolenoids(ClimbState.LOWERED));
     runAction(new WaitForAngle(15, true));
-    runAction(new MotionMagicBlind(13));
+    runAction(new MotionMagicBlind(12.8));
     runAction(new CargoArmSetpoint(CargoArmState.REVERSE_CARGOSHIP));
     runAction(new ActuateRearSolenoids(ClimbState.LOWERED));
     runAction(new ActuateFrontSolenoids(ClimbState.RETRACTED));
     runAction(new WaitForAngle(5.0, false));
-    runAction(new MotionMagicBlind(12));
+    runAction(new MotionMagicBlind(12.3));
     runAction(new ActuateRearSolenoids(ClimbState.RETRACTED));
-    runAction(new WaitAction(1.0));
-    runAction(new MotionMagicBlind(14));
+    runAction(new ChangeMotionMagicAccel());
+    runAction(new MotionMagicBlind(20));
   }
 }

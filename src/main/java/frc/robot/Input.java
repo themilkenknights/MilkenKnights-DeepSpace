@@ -1,6 +1,7 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID.RumbleType;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants.CARGO_ARM;
 import frc.robot.Constants.GENERAL;
 import frc.robot.lib.drivers.MkJoystick;
@@ -31,13 +32,13 @@ public class Input {
   private static final MkJoystick mOperatorJoystick = new MkJoystick(1);
 
   //Driver Controls
-  private static final MkJoystickButton mToggleManualVision = mDriverJoystick.getButton(10, "Toggle Velocity Setpoint");
+  private static final MkJoystickButton mToggleManualVision = mDriverJoystick.getButton(5, "Toggle Vision");
   private static final MkJoystickButton mHatchVisionPlace = mDriverJoystick.getButton(1, "Hatch Vision Place");
   private static final MkJoystickButton mCargoVisionOuttake = mDriverJoystick.getButton(3, "Vision Cargo Outtake");
   private static final MkJoystickButton mHatchVisionIntake = mDriverJoystick.getButton(2, "Vision Hatch Intake");
   private static final MkJoystickButton mAutoClimb = mDriverJoystick.getButton(4, "Automated Climb");
-  private static final MkJoystickButton mFrontClimb = mDriverJoystick.getButton(5, "Climb Front");
-  private static final MkJoystickButton mRearClimb = mDriverJoystick.getButton(6, "Climb Rear");
+  private static final MkJoystickButton mFrontClimb = mOperatorJoystick.getButton(7, "Climb Front");
+  private static final MkJoystickButton mRearClimb = mOperatorJoystick.getButton(8, "Climb Rear");
 
   //Operator Controls
   private static final MkJoystickButton mCargoArmManual = mOperatorJoystick.getButton(2, "Cargo Arm Manual Mode");
@@ -119,6 +120,7 @@ public class Input {
 
     // GTA Style driving: Right and Left Triggers are added (with left being negative) to get a throttle value
     if (currentRobotState == RobotState.TELEOP_DRIVE) {
+      SmartDashboard.putBoolean("Vision Assist", isManualVisionMode);
       setTeleopDrive();
       if (isOperatorJoystickConnected) {
         if (mCargoVisionOuttake.isPressed()) {
@@ -216,16 +218,16 @@ public class Input {
       double visionTurn = 0.0;
       LimelightTarget target = mVision.getLimelightTarget();
       if (target.isValidTarget()) {
-        if (mHatch.getHatchSpearState() != HatchState.PLACE) {
+        if (mHatch.getHatchSpearState() != HatchState.PLACE && target.getDistance() < 80.0) {
           visionTurn = mVisionAssist.calculate(Vision.getInstance().getLimelightTarget().getYaw());
         }
       }
-      if (HatchArm.getInstance().isHatchTriggeredTimer(0.3)) {
+      /*if (HatchArm.getInstance().isHatchTriggeredTimer(0.3)) {
         isManualVisionMode = false;
         mDrive.setOpenLoop(DriveSignal.BRAKE);
-      } else {
+      } else {*/
         mDrive.setOpenLoop(new DriveSignal(controlSig.getLeft() - visionTurn, controlSig.getRight() + visionTurn));
-      }
+     // }
     } else {
       mDrive.setOpenLoop(controlSig);
     }

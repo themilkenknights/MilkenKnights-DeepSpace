@@ -92,7 +92,7 @@ public final class Constants {
     public static final double DRIVE_FOLLOWER_ANG = -1.25;
     public static final double PATH_DT = 0.01;
 
-    public static final double kVisionP = 0.0076; //0.0087
+    public static final double kVisionP = 0.0070; //0.0087
     public static final double kVisionI = 0.0;
     public static final double kVisionD = 590.0; //430
   }
@@ -138,9 +138,8 @@ public final class Constants {
     public static final boolean kDriveCSVLogging = false;
     public static final boolean kErrorLogging = true;
     public static final int kFirstHatchArmChannel = 0;
-    public static final int kSecondHatchArmChannel = 1;
     public static final int kFrontClimbSolenoidChannel = 2;
-    public static final int kRearClimbSolenoidChannel = 4;//1
+    public static final int kRearClimbSolenoidChannel = 1;
     public static final int kHatchPancakeChannel = 3;
   }
 
@@ -182,8 +181,8 @@ public final class Constants {
           tal.slot0.kF = 1023.0 / DRIVE.kMaxNativeVel;
           tal.slot0.closedLoopPeakOutput = 1.0;
           tal.slot0.allowableClosedloopError = 100;
-          tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 1.0);
-          tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.75);
+          tal.motionCruiseVelocity = (int) (DRIVE.kMaxNativeVel * 0.8);
+          tal.motionAcceleration = (int) (tal.motionCruiseVelocity * 0.5);
           tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;
         } else if (loc == TalonLoc.Cargo_Arm) {
           tal.primaryPID.selectedFeedbackSensor = FeedbackDevice.CTRE_MagEncoder_Relative;

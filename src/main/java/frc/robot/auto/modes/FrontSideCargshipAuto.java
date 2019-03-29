@@ -19,14 +19,14 @@ public class FrontSideCargshipAuto extends AutoModeBase {
   protected void routine() throws AutoModeEndedException {
     runAction(new ParallelAction(Arrays.asList(
         new DrivePathAction(1, false),
-        new DelayAction(getTime(1) - 0.05, new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH, 0.8))
+        new DelayAction(getTime(1) - 0.05, new VisionDrive(VisionDrive.VisionGoal.PLACE_HATCH, 0.65))
     )));
 
     runAction(new ParallelAction(Arrays.asList(
         new DrivePathAction(2, true),
         new DelayAction(getTime(2) + 0.5, new SetHatchArmState(HatchArm.HatchState.INTAKE)),
         new DelayAction(getTime(2) - 0.1, new DrivePathAction(3, false)),
-        new DelayAction(getTime(2) + getTime(3) - 0.4, new VisionDrive(VisionDrive.VisionGoal.INTAKE_HATCH, 0.8))
+        new DelayAction(getTime(2) + getTime(3) - 0.7, new VisionDrive(VisionDrive.VisionGoal.INTAKE_HATCH, 0.8))
     )));
 
     runAction(new ParallelAction(Arrays.asList(

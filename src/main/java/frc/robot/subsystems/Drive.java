@@ -48,7 +48,7 @@ public class Drive extends Subsystem {
   private PathFollower pathFollower;
   private TrajectoryStatus mLeftStatus;
   private TrajectoryStatus mRightStatus;
-  private double left_encoder_prev_distance_, right_encoder_prev_distance_, mVisionStartDist, mTimeToVision, mDesiredVisionAngle;
+  private double left_encoder_prev_distance_, right_encoder_prev_distance_, mVisionStartDist, mTimeToVision, mDesiredVisionAngle, mVisionStartAngle;
   private boolean pathFinished, mIsOnTarget;
   private VisionDrive.VisionGoal mGoal;
   private Rotation2d mTargetHeading = new Rotation2d();
@@ -316,18 +316,24 @@ public class Drive extends Subsystem {
     } else if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
       return pathFinished;
     } else if (mDriveControlState == DriveControlState.MOTION_MAGIC) {
-      return Math.abs(mPeriodicIO.left_demand - mPeriodicIO.leftPos) < 0.25 && Math.abs(mPeriodicIO.right_demand - mPeriodicIO.rightPos) < 0.25;
+      System.out.println(mPeriodicIO.left_demand);
+      if (Math.abs(MkMath.nativeUnitsToInches(mPeriodicIO.left_demand) - mPeriodicIO.leftPos) < 0.5
+          && Math.abs(MkMath.nativeUnitsToInches(mPeriodicIO.right_demand) - mPeriodicIO.rightPos) < 0.5) {
+        Logger.logMarker("Motion Magic Done");
+      }
+      return Math.abs(MkMath.nativeUnitsToInches(mPeriodicIO.left_demand) - mPeriodicIO.leftPos) < 0.7
+          && Math.abs(MkMath.nativeUnitsToInches(mPeriodicIO.right_demand) - mPeriodicIO.rightPos) < 0.7;
     } else if (mDriveControlState == DriveControlState.VISION_DRIVE) {
       if (mGoal == VisionDrive.VisionGoal.PLACE_CARGO) {
-        return placeCargoTimer.isDone(0.7);
+        return placeCargoTimer.isDone(0.6);
       } else {
         if (mGoal == VisionDrive.VisionGoal.PLACE_HATCH) {
           if (hasBeenLowered.isDone(mTimeToVision)) {
             Logger.logMarker("PLACE TIMER DONE");
-          } else if (HatchArm.getInstance().isHatchTriggeredTimer(0.35)) {
+          } else if (HatchArm.getInstance().isHatchTriggeredTimer(0.3)) {
             Logger.logMarker("LIMIT TIMER TRIGGERED");
           }
-          return hasBeenLowered.isDone(mTimeToVision) || HatchArm.getInstance().isHatchTriggeredTimer(0.35);
+          return hasBeenLowered.isDone(mTimeToVision) || HatchArm.getInstance().isHatchTriggeredTimer(0.3);
         } else {
           return isPastVision.isDone(mTimeToVision) || HatchArm.getInstance().isHatchLimitTriggered();
         }
@@ -367,7 +373,7 @@ public class Drive extends Subsystem {
           if (avgVel > 50.0 && isPastVision.hasBeenSet()) {
             HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
             hasBeenLowered.start(1.0);
-          } else if (avgVel > 30.0 && isPastVision.isDone(0.01)) {
+          } else if (avgVel > 30.0 && isPastVision.hasBeenSet()) {
             HatchArm.getInstance().setHatchState(HatchArm.HatchState.PLACE);
             hasBeenLowered.start(1.0);
           } else if (avgVel > 10 && isPastVision.isDone(0.375)) {
@@ -380,8 +386,26 @@ public class Drive extends Subsystem {
         }
         break;
       case PLACE_CARGO:
+        double avgVel = (mPeriodicIO.leftVel + mPeriodicIO.rightVel) / 2.0;
         if (target.getDistance() < 26.0 && !placeCargoTimer.hasBeenSet() && target.isValidTarget()) {
           placeCargoTimer.start(0.675);
+        }
+        if(mVisionStartDist > 35 || mVisionStartAngle > 12.0){
+        if(placeCargoTimer.isDone(0.4) && avgVel > 40){
+          CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.15);
+        } else if(placeCargoTimer.isDone(0.4) && avgVel > 30){
+          CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.075);
+        }else if(placeCargoTimer.isDone(0.4) && avgVel > 20){
+          CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.05);
+        } else if(placeCargoTimer.isDone(0.4) && avgVel < 20){
+          CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut);
+        }}
+        else{
+          if(placeCargoTimer.isDone(0.6) && target.getYaw() < 5.0){
+            CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut);
+          } else if(placeCargoTimer.isDone(0.7)){
+          CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut);
+          }
         }
         break;
       default:
@@ -409,14 +433,26 @@ public class Drive extends Subsystem {
         speed = 0.7;
       } else if (dist > 50) {
         speed = 0.675;
+      } else if(dist > 40){
+        speed = 0.6;
       } else if (dist > 30) {
-        speed = 0.65;
-      } else if (dist > 25) {
         speed = 0.55;
+      } else if (dist > 25) {
+        speed = 0.4;
       } else if (dist > 20) {
-        speed = 0.485;
+        speed = 0.33;
       } else if (dist < 20.0) {
-        speed = 0.19;
+        speed = 0.2;
+      }
+
+      if(isPastVision.isDone(0.5)){
+        speed = 0.05;
+      } else if(isPastVision.isDone(0.3)){
+        speed = 0.09;
+      } else if(isPastVision.isDone(0.2)){
+        speed = 0.2;
+      } else if(isPastVision.isDone(0.075)){
+        speed = 0.25;
       }
     } else {
       if (dist < 20.0) {
@@ -462,6 +498,11 @@ public class Drive extends Subsystem {
     mPeriodicIO.right_demand = (speed + visionTurn) * Constants.DRIVE.kMaxNativeVel;
   }
 
+  public synchronized void changeMotionMagicAccel(int accel){
+    mLeftDrive.masterTalon.configMotionAcceleration(accel);
+    mRightDrive.masterTalon.configMotionAcceleration(accel);
+  }
+
   public synchronized void setVisionDrive(VisionDrive.VisionGoal mGoal, double cancelTime) {
     if (mGoal == VisionDrive.VisionGoal.INTAKE_HATCH) {
       HatchArm.getInstance().setHatchState(HatchArm.HatchState.INTAKE);
@@ -477,6 +518,7 @@ public class Drive extends Subsystem {
     mDriveControlState = DriveControlState.VISION_DRIVE;
     placeCargoTimer.reset();
     mVisionStartDist = Vision.getInstance().getLimelightTarget().getDistance();
+    mVisionStartAngle = Vision.getInstance().getLimelightTarget().getYaw();
     mDesiredVisionAngle = getHeadingDeg() - Vision.getInstance().getLimelightTarget().getYaw();
   }
 

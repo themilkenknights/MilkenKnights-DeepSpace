@@ -43,6 +43,7 @@ public class VisionDrive implements Action {
   @Override
   public void start() {
     Drive.getInstance().cancelPath();
+    Logger.logMarker("Starting Vision Drive");
     Drive.getInstance().setVisionDrive(mGoal, maxTime);
   }
 

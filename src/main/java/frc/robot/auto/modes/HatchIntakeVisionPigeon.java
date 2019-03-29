@@ -15,7 +15,7 @@ public class HatchIntakeVisionPigeon extends AutoModeBase {
   protected void routine() throws AutoModeEndedException {
     runAction(new VisionDrive(VisionDrive.VisionGoal.INTAKE_HATCH));
     runAction(new WaitAction(0.25));
-    runAction(new OpenLoopDrive(-0.5, -0.5, 0.5));
+    runAction(new OpenLoopDrive(-0.75, -0.75, 0.5));
     runAction(new SetHatchArmState(HatchArm.HatchState.STOW));
     runAction(new SetSuperstructure(Superstructure.RobotState.TELEOP_DRIVE));
   }

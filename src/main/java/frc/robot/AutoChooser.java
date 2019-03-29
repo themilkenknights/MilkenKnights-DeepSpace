@@ -25,6 +25,11 @@ public class AutoChooser {
       Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_FAST,
       0.01, 115, 106, 1500);
 
+
+  public static final Trajectory.Config slowConfig = new Trajectory.Config(
+      Trajectory.FitMethod.HERMITE_QUINTIC, Trajectory.Config.SAMPLES_FAST,
+      0.01, 105, 103, 1500);
+
   public static final Map<String, Path> autoPaths = new HashMap<>();
   public static MatchData matchData = MatchData.defaultMatch;
   public static AutoPosition mAutoPosition = AutoPosition.RIGHT;
@@ -103,11 +108,11 @@ public class AutoChooser {
 
     robotPaths.put("CS-3", new PathContainer(new Waypoint[] {
         new Waypoint(170, 18, Pathfinder.d2r(90)),
-        new Waypoint(65, -136 + 9, Pathfinder.d2r(0)),
-    }, defaultConfig));
+        new Waypoint(67, -136 - 14, Pathfinder.d2r(0)),
+    }, slowConfig));
 
     robotPaths.put("CS-4", new PathContainer(new Waypoint[] {
-        new Waypoint(20, -136, Pathfinder.d2r(3)),
+        new Waypoint(20, -136, Pathfinder.d2r(16)),
         new Waypoint(232, -70, Pathfinder.d2r(5)),
         new Waypoint(262, -90, Pathfinder.d2r(95)),
     }, defaultConfig));

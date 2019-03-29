@@ -1,7 +1,7 @@
 {
   "tabPane": [
     {
-      "title": "Tab 5",
+      "title": "Dash",
       "autoPopulate": false,
       "autoPopulatePrefix": "",
       "widgetPane": {
@@ -10,10 +10,10 @@
         "hgap": 16.0,
         "vgap": 16.0,
         "tiles": {
-          "3,0": {
+          "5,0": {
             "size": [
-              6,
-              3
+              4,
+              4
             ],
             "content": {
               "_type": "Camera Stream",
@@ -31,8 +31,8 @@
           },
           "0,0": {
             "size": [
-              3,
-              3
+              5,
+              4
             ],
             "content": {
               "_type": "Camera Stream",
@@ -47,52 +47,15 @@
               "imageWidth": 0,
               "imageHeight": 0
             }
-          },
-          "1,3": {
-            "size": [
-              1,
-              1
-            ],
-            "content": {
-              "_type": "Boolean Box",
-              "_source0": "network_table:///Shuffleboard/Hatch Arm/Pancake",
-              "_title": "/Shuffleboard/Hatch Arm/Pancake",
-              "Colors/Color when true": "#7CFC00FF",
-              "Colors/Color when false": "#8B0000FF"
-            }
-          },
-          "2,3": {
-            "size": [
-              1,
-              1
-            ],
-            "content": {
-              "_type": "Boolean Box",
-              "_source0": "network_table:///Shuffleboard/Hatch Arm/Spear Limit",
-              "_title": "/Shuffleboard/Hatch Arm/Spear Limit",
-              "Colors/Color when true": "#7CFC00FF",
-              "Colors/Color when false": "#8B0000FF"
-            }
-          },
-          "3,3": {
-            "size": [
-              1,
-              1
-            ],
-            "content": {
-              "_type": "Text View",
-              "_source0": "network_table:///Shuffleboard/Hatch Arm/Spear State",
-              "_title": "/Shuffleboard/Hatch Arm/Spear State"
-            }
           }
         }
       }
     }
   ],
   "windowGeometry": {
-    "x": -8.0,
-    "y": -8.0,
-    "width": 1382.0,
-    "height": 744.0
+    "x": -7.0,
+    "y": 2.0,
+    "width": 1378.0,
+    "height": 733.0
   }
 }
