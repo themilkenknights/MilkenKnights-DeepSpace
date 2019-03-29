@@ -25,7 +25,6 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     try {
       Logger.logRobotInit();
-      Shuffleboard.startRecording();
       mSubsystemManager.init();
       AutoChooser.loadAutos();
     } catch (Throwable t) {
@@ -37,6 +36,7 @@ public class Robot extends TimedRobot {
   @Override
   public void disabledInit() {
     try {
+      Shuffleboard.startRecording();
       Logger.logDisabledInit();
       mMatchState = MatchState.DISABLED;
       mSubsystemManager.stop();
@@ -51,6 +51,7 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousInit() {
     try {
+      Shuffleboard.startRecording();
       Logger.logAutoInit();
       mMatchState = MatchState.AUTO;
       mSubsystemManager.startAuto();
@@ -65,6 +66,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopInit() {
     try {
+      Shuffleboard.startRecording();
       Logger.logTeleopInit();
       mMatchState = MatchState.TELEOP;
       mSubsystemManager.startTeleop();

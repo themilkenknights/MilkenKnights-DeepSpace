@@ -509,6 +509,7 @@ public class Drive extends Subsystem {
     } else if (Robot.mMatchState != Robot.MatchState.AUTO) {
       HatchArm.getInstance().setHatchState(HatchArm.HatchState.STOW);
     }
+    setHeading(Rotation2d.identity());
     mTimeToVision = cancelTime;
     mVisionAssist.reset();
     this.mGoal = mGoal;
