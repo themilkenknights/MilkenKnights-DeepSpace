@@ -226,8 +226,8 @@ public class Input {
         isManualVisionMode = false;
         mDrive.setOpenLoop(DriveSignal.BRAKE);
       } else {*/
-        mDrive.setOpenLoop(new DriveSignal(controlSig.getLeft() - visionTurn, controlSig.getRight() + visionTurn));
-     // }
+      mDrive.setOpenLoop(new DriveSignal(controlSig.getLeft() - visionTurn, controlSig.getRight() + visionTurn));
+      // }
     } else {
       mDrive.setOpenLoop(controlSig);
     }
