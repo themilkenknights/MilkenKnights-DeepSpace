@@ -52,6 +52,7 @@ public class SubsystemManager {
           int i = 0;
           for (Subsystem subsystem : mAllSubsystems) {
             if (count == i) {
+              subsystem.readPeriodicInputs(now);
               subsystem.outputTelemetry(now);
             }
             i++;

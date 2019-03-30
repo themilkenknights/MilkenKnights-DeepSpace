@@ -32,7 +32,9 @@ public class Input {
   private static final MkJoystick mOperatorJoystick = new MkJoystick(1);
 
   //Driver Controls
-  private static final MkJoystickButton mToggleManualVision = mDriverJoystick.getButton(5, "Toggle Vision");
+  private static final MkJoystickButton mToggleManualVision = mDriverJoystick.getButton(5, "Toggle Vision On");
+  private static final MkJoystickButton mToggleManualVisionOff = mDriverJoystick.getButton(6, "Toggle Vision Off");
+
   private static final MkJoystickButton mHatchVisionPlace = mDriverJoystick.getButton(1, "Hatch Vision Place");
   private static final MkJoystickButton mCargoVisionOuttake = mDriverJoystick.getButton(3, "Vision Cargo Outtake");
   private static final MkJoystickButton mHatchVisionIntake = mDriverJoystick.getButton(2, "Vision Hatch Intake");
@@ -46,7 +48,7 @@ public class Input {
   private static final MkJoystickButton mSpearIntake = mOperatorJoystick.getButton(4, "Hatch Spear HP Intake");
   private static final MkJoystickButton mIntakeRollerIn = mOperatorJoystick.getButton(5, "Intake Roller In");
   private static final MkJoystickButton mIntakeRollerOut = mOperatorJoystick.getButton(6, "Intake Roller Out Fast");
-  private static final MkJoystickButton toggleVision = mOperatorJoystick.getButton(11, "Toggle Vision");
+  private static final MkJoystickButton frontCargoshipOuttake = mOperatorJoystick.getButton(11, "Front Cargoship Outtake");
   private static final MkJoystickButton mZeroArmToggleLimit = mOperatorJoystick.getButton(10, "Zero Arm Encoders && Disable Soft Limit");
   private static final MkJoystickButton mStowAllButton = mOperatorJoystick.getButton(9, "Defense Mode - Stow All");
   private static final MkJoystickButton mRetractPancake = mOperatorJoystick.getButton(12, "Retract Pancake Actuator");
@@ -64,8 +66,7 @@ public class Input {
   public static void updateControlInput() {
 
     // Joystick isn't connected if throttle is equal to zero. Used to ensure robot doesn't move when Joystick unplugged.
-    boolean isOperatorJoystickConnected = mOperatorJoystick.getRawAxis(3) != -1.0;
-
+    boolean isOperatorJoystickConnected = mOperatorJoystick.getRawAxis(3) != 0.0;
     // Stop rumble after timer is finished
     if (rumbleTimer.isDone()) {
       mDriverJoystick.setRumble(RumbleType.kLeftRumble, 0.0);
@@ -86,14 +87,17 @@ public class Input {
     }
 
     if (mToggleManualVision.isPressed()) {
-      isManualVisionMode = !isManualVisionMode;
+      isManualVisionMode = true;
+      mVisionAssist.reset();
+    } else if (mToggleManualVisionOff.isPressed()) {
+      isManualVisionMode = false;
       mVisionAssist.reset();
     }
 
     // Toggle Limelight LEDs
-    if (toggleVision.isPressed()) {
+   /* if (toggleVision.isPressed()) {
       mVision.toggleVision();
-    }
+    } */
 
     // Move arms in open loop while held. This switches the arm to open loop control mode.
     if (mCargoArmManual.isHeld()) {
@@ -163,6 +167,8 @@ public class Input {
               Logger.logError("Unexpected Cargo Arm State");
               break;
           }
+        } else if (frontCargoshipOuttake.isHeld()) {
+          mCargo.setIntakeRollers(CARGO_ARM.kFrontCargoShipIntakeRollerOut);
         } else {
           mCargo.setIntakeRollers(0.0);
         }

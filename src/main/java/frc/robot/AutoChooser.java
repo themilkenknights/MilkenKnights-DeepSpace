@@ -11,6 +11,7 @@ import frc.robot.auto.AutoModeExecutor;
 import frc.robot.lib.math.trajectory.Path;
 import frc.robot.lib.util.Logger;
 import frc.robot.lib.util.MatchData;
+import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.Superstructure;
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
@@ -76,15 +77,40 @@ public class AutoChooser {
   Initialize Smart Dashboard Chooser
    */
   public static void loadAutos() {
-    positionChooser.setDefaultOption("Nothing", AutoPosition.NOTHING);
-    positionChooser.addOption("Left", AutoPosition.LEFT);
+    positionChooser.addOption("Nothing", AutoPosition.NOTHING);
+    positionChooser.setDefaultOption("Left", AutoPosition.LEFT);
     positionChooser.addOption("Right", AutoPosition.RIGHT);
     loadPaths();
   }
 
   public static Path getPath(String name) {
     try {
-      return autoPaths.get(name);
+      if (name.equals("CS-4L") || name.equals("C4-4R")) {
+        PathContainer traj = new PathContainer(new Waypoint[] {
+            new Waypoint(20, -136, Pathfinder.d2r(Drive.getInstance().getPathAngle())),
+            new Waypoint(232 - 3, -70, Pathfinder.d2r(7)),
+            new Waypoint(262 - 3, -90, Pathfinder.d2r(97)),
+        }, defaultConfig);
+
+        Trajectory leftTraj = Pathfinder.generate(traj.getLeftPoints(), traj.getConfig());
+        Trajectory rightTraj = Pathfinder.generate(traj.getPoints(), traj.getConfig());
+
+        TankModifier lmodifier = new TankModifier(leftTraj).modify(Constants.DRIVE.kEffectiveDriveWheelTrackWidthInches);
+        Trajectory leftl = lmodifier.getLeftTrajectory();
+        Trajectory rightl = lmodifier.getRightTrajectory();
+
+        TankModifier rmodifier = new TankModifier(rightTraj).modify(Constants.DRIVE.kEffectiveDriveWheelTrackWidthInches);
+        Trajectory leftr = rmodifier.getLeftTrajectory();
+        Trajectory rightr = rmodifier.getRightTrajectory();
+
+        if (name.equals("CS-4L")) {
+          return new Path("CS-4L", new Path.Pair(leftl, rightl));
+        } else {
+          return new Path("CS-4R", new Path.Pair(leftr, rightr));
+        }
+      } else {
+        return autoPaths.get(name);
+      }
     } catch (NullPointerException e) {
       Logger.logErrorWithTrace("Failed to get path");
       return new Path();
@@ -96,7 +122,7 @@ public class AutoChooser {
 
     robotPaths.put("CS-1", new PathContainer(new Waypoint[] {
         new Waypoint(68, -48, Pathfinder.d2r(0)),
-        new Waypoint(155, -15, Pathfinder.d2r(0)),
+        new Waypoint(155, -17, Pathfinder.d2r(0)),
     }, defaultConfig));
 
     robotPaths.put("CS-2", new PathContainer(new Waypoint[] {
@@ -107,14 +133,8 @@ public class AutoChooser {
 
     robotPaths.put("CS-3", new PathContainer(new Waypoint[] {
         new Waypoint(170, 18, Pathfinder.d2r(90)),
-        new Waypoint(67, -136 - 13, Pathfinder.d2r(0)),
+        new Waypoint(67, -136 - 8, Pathfinder.d2r(0)),
     }, slowConfig));
-
-    robotPaths.put("CS-4", new PathContainer(new Waypoint[] {
-        new Waypoint(20, -136, Pathfinder.d2r(5)),
-        new Waypoint(232, -70, Pathfinder.d2r(5)),
-        new Waypoint(262, -90, Pathfinder.d2r(95)),
-    }, defaultConfig));
 
     double tiL = 0;
     double tiR = 0;

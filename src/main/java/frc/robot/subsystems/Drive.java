@@ -151,6 +151,7 @@ public class Drive extends Subsystem {
     if (getHeading() != null) {
       mGyroHeading.setDouble(getHeadingDeg());
     }
+    SmartDashboard.putNumber("Path Angle", getPathAngle());
     if (mCSVWriter != null && MISC.kDriveCSVLogging) {
       if (mDriveControlState == DriveControlState.PATH_FOLLOWING) {
         mPeriodicIO.leftDesiredPos = mLeftStatus.getSeg().position;
@@ -249,9 +250,9 @@ public class Drive extends Subsystem {
    * Zero all pigeon values
    */
   private synchronized void zeroPigeon() {
-    CT.RE(mPigeon.setFusedHeading(0, 0));
-    CT.RE(mPigeon.setYaw(0, 0));
-    CT.RE(mPigeon.setAccumZAngle(0, 0));
+    CT.RE(mPigeon.setFusedHeading(0, 50));
+    CT.RE(mPigeon.setYaw(0, 50));
+    CT.RE(mPigeon.setAccumZAngle(0, 50));
   }
 
   private synchronized Rotation2d getHeading() {
@@ -330,10 +331,11 @@ public class Drive extends Subsystem {
         if (mGoal == VisionDrive.VisionGoal.PLACE_HATCH) {
           if (hasBeenLowered.isDone(mTimeToVision)) {
             Logger.logMarker("PLACE TIMER DONE");
-          } else if (HatchArm.getInstance().isHatchTriggeredTimer(0.3)) {
+          } else if (HatchArm.getInstance().isHatchTriggeredTimer(0.35)) {
             Logger.logMarker("LIMIT TIMER TRIGGERED");
           }
-          return hasBeenLowered.isDone(mTimeToVision) || HatchArm.getInstance().isHatchTriggeredTimer(0.3);
+          return hasBeenLowered.isDone(mTimeToVision) || ((HatchArm.getInstance().isHatchTriggeredTimer(0.3)
+              && Robot.mMatchState != Robot.MatchState.AUTO) || (HatchArm.getInstance().isHatchTriggeredTimer(0.35)));
         } else {
           return isPastVision.isDone(mTimeToVision) || HatchArm.getInstance().isHatchLimitTriggered();
         }
@@ -392,12 +394,12 @@ public class Drive extends Subsystem {
         }
         if (mVisionStartDist > 35 || mVisionStartAngle > 12.0) {
           if (placeCargoTimer.isDone(0.4) && avgVel > 40) {
-            CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.15);
+            CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.135);
           } else if (placeCargoTimer.isDone(0.4) && avgVel > 30) {
-            CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.075);
-          } else if (placeCargoTimer.isDone(0.4) && avgVel > 20) {
-            CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.05);
-          } else if (placeCargoTimer.isDone(0.4) && avgVel < 20) {
+            CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.055);
+          } else if (placeCargoTimer.isDone(0.4) && avgVel > 9.0) {
+            CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut - 0.025);
+          } else if (placeCargoTimer.isDone(0.5)) {
             CargoArm.getInstance().setIntakeRollers(Constants.CARGO_ARM.kCargoShipIntakeRollerOut);
           }
         } else {
@@ -440,19 +442,19 @@ public class Drive extends Subsystem {
       } else if (dist > 25) {
         speed = 0.4;
       } else if (dist > 20) {
-        speed = 0.33;
+        speed = 0.34;
       } else if (dist < 20.0) {
         speed = 0.2;
       }
 
       if (isPastVision.isDone(0.5)) {
-        speed = 0.05;
+        speed = 0.06;
       } else if (isPastVision.isDone(0.3)) {
-        speed = 0.09;
+        speed = 0.1;
       } else if (isPastVision.isDone(0.2)) {
         speed = 0.2;
       } else if (isPastVision.isDone(0.075)) {
-        speed = 0.25;
+        speed = 0.3;
       }
     } else {
       if (dist < 20.0) {
@@ -468,19 +470,19 @@ public class Drive extends Subsystem {
       } else if (dist > 50) {
         speed = 0.5;
       } else if (dist > 30) {
-        speed = 0.45;
+        speed = 0.4;
       } else if (dist > 20) {
-        speed = 0.3;
+        speed = 0.28;
       } else if (dist > 10) {
         speed = 0.225;
       } else {
         speed = 0.125;
       }
 
-      if (dist > 27.5 && mVisionStartDist < 35.0) {
-        speed = 0.4;
-      } else if (mVisionStartDist < 35.0 && dist > 20) {
-        speed = 0.3;
+      if (mVisionStartDist < 30.0 && dist > 20) {
+        speed = 0.25;
+      } else if (mVisionStartDist < 40.0 && dist > 30) {
+        speed = 0.335;
       }
 
       if (isPastVision.hasBeenSet()) {
@@ -521,6 +523,10 @@ public class Drive extends Subsystem {
     mVisionStartDist = Vision.getInstance().getLimelightTarget().getDistance();
     mVisionStartAngle = Vision.getInstance().getLimelightTarget().getYaw();
     mDesiredVisionAngle = getHeadingDeg() - Vision.getInstance().getLimelightTarget().getYaw();
+  }
+
+  public double getPathAngle() {
+    return 180.0 - Math.abs(mPeriodicIO.fusedHeading);
   }
 
   /**
@@ -564,7 +570,7 @@ public class Drive extends Subsystem {
    */
   public synchronized void setDrivePath(Path path, double dist_tol, double ang_tol) {
     zero();
-    Logger.logError("Began Path: " + path.getName());
+    Logger.logMarker("Began Path: " + path.getName());
     double offset = 0.0 - Pathfinder.boundHalfDegrees(Pathfinder.r2d(path.getLeftWheelTrajectory().get(0).heading));
     for (Trajectory.Segment segment : path.getLeftWheelTrajectory().segments) {
       segment.heading = Pathfinder.boundHalfDegrees(Pathfinder.r2d(segment.heading) + offset);

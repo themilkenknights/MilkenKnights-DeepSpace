@@ -17,6 +17,7 @@ public class Vision extends Subsystem {
   private NetworkTableEntry mLLX, mDist, mArea, mLED, mSkew, mValid;
   private boolean isVision;
   private UsbCamera hatchCam;
+  private int i = 0;
 
   private Vision() {
     hatchCam = CameraServer.getInstance().startAutomaticCapture(0);
@@ -71,9 +72,8 @@ public class Vision extends Subsystem {
 
   public void disableLED() {
     //  if(isVision) {
-    mLimeLight.setStream(StreamType.kPiPMain);
     mLimeLight.setPipeline(1);
-    //   isVision = false;
+       isVision = false;
     // }
   }
 
@@ -81,6 +81,7 @@ public class Vision extends Subsystem {
     // if (!isVision) {
     ///  mLimeLight.setStream(StreamType.kStandard);
     mLimeLight.setPipeline(0);
+    isVision = true;
     //  isVision = true;
     // }
   }
@@ -99,6 +100,11 @@ public class Vision extends Subsystem {
 
   public synchronized void updateLimelight() {
     mLimeLight.getUpdate();
+    if (i == 100) {
+      i = 0;
+      mLimeLight.setStream(StreamType.kPiPMain);
+    }
+    i++;
   }
 
   private static class InstanceHolder {

@@ -7,8 +7,11 @@ import frc.robot.auto.actions.ActuateRearSolenoids;
 import frc.robot.auto.actions.CargoArmSetpoint;
 import frc.robot.auto.actions.ChangeMotionMagicAccel;
 import frc.robot.auto.actions.MotionMagicBlind;
+import frc.robot.auto.actions.SetHatchArmState;
+import frc.robot.auto.actions.WaitAction;
 import frc.robot.auto.actions.WaitForAngle;
 import frc.robot.subsystems.CargoArm.CargoArmState;
+import frc.robot.subsystems.HatchArm;
 import frc.robot.subsystems.Superstructure.ClimbState;
 
 /**
@@ -25,10 +28,13 @@ public class ClimbLevel2Mode extends AutoModeBase {
     runAction(new CargoArmSetpoint(CargoArmState.REVERSE_CARGOSHIP));
     runAction(new ActuateRearSolenoids(ClimbState.LOWERED));
     runAction(new ActuateFrontSolenoids(ClimbState.RETRACTED));
+    runAction(new SetHatchArmState(HatchArm.HatchState.PLACE));
     runAction(new WaitForAngle(5.0, false));
-    runAction(new MotionMagicBlind(12.3));
+    runAction(new MotionMagicBlind(12.75));
     runAction(new ActuateRearSolenoids(ClimbState.RETRACTED));
     runAction(new ChangeMotionMagicAccel());
+    runAction(new WaitAction(0.9));
     runAction(new MotionMagicBlind(20));
+    runAction(new SetHatchArmState(HatchArm.HatchState.STOW));
   }
 }

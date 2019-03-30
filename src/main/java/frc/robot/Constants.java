@@ -92,7 +92,7 @@ public final class Constants {
     public static final double DRIVE_FOLLOWER_ANG = -1.25;
     public static final double PATH_DT = 0.01;
 
-    public static final double kVisionP = 0.0070; //0.0087
+    public static final double kVisionP = 0.00688; //0.0087
     public static final double kVisionI = 0.0;
     public static final double kVisionD = 590.0; //430
   }
@@ -123,6 +123,7 @@ public final class Constants {
     public static final double kMaxSafeCurrent = 80;
     public static final double kIntakeRollerInSpeed = -0.40;
     public static final double kCargoShipIntakeRollerOut = 0.5;
+    public static final double kFrontCargoShipIntakeRollerOut = 0.44;
     public static final double kRocketLevelOneOutSpeed = 0.3;
     public static final double kRocketLevelTwoOutSpeed = 0.70;
     public static final double kDefaultIntakeRollerOutSpeed = 0.3;
@@ -195,7 +196,7 @@ public final class Constants {
         if (loc == TalonLoc.Cargo_Arm) {
           tal.reverseLimitSwitchDeviceID = CAN.kRightCargoIntakeTalonID;
           tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(195);
-          tal.reverseSoftLimitThreshold = (int) 14.0;
+          tal.reverseSoftLimitThreshold = (int)  MkMath.degreesToNativeUnits(14.0);
           tal.motionCruiseVelocity = (int) (CARGO_ARM.kMaxRawVel);
           tal.motionAcceleration = (int) (CARGO_ARM.kMaxRawVel * 10);
           tal.slot0.kP = (39.0 * ((0.1 * 1023.0) / (1600)));
