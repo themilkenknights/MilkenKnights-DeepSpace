@@ -196,7 +196,7 @@ public final class Constants {
         if (loc == TalonLoc.Cargo_Arm) {
           tal.reverseLimitSwitchDeviceID = CAN.kRightCargoIntakeTalonID;
           tal.forwardSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(195);
-          tal.reverseSoftLimitThreshold = (int)  MkMath.degreesToNativeUnits(14.0);
+          tal.reverseSoftLimitThreshold = (int) MkMath.degreesToNativeUnits(14.0);
           tal.motionCruiseVelocity = (int) (CARGO_ARM.kMaxRawVel);
           tal.motionAcceleration = (int) (CARGO_ARM.kMaxRawVel * 10);
           tal.slot0.kP = (39.0 * ((0.1 * 1023.0) / (1600)));

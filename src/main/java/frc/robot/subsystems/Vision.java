@@ -73,7 +73,7 @@ public class Vision extends Subsystem {
   public void disableLED() {
     //  if(isVision) {
     mLimeLight.setPipeline(1);
-       isVision = false;
+    isVision = false;
     // }
   }
 
@@ -100,7 +100,7 @@ public class Vision extends Subsystem {
 
   public synchronized void updateLimelight() {
     mLimeLight.getUpdate();
-    if (i == 100) {
+    if (i == 200) {
       i = 0;
       mLimeLight.setStream(StreamType.kPiPMain);
     }
