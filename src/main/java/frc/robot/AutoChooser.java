@@ -85,7 +85,7 @@ public class AutoChooser {
 
   public static Path getPath(String name) {
     try {
-      if (name.equals("CS-4L") || name.equals("C4-4R")) {
+      if (name.equals("CS-4L") || name.equals("CS-4R")) {
         PathContainer traj = new PathContainer(new Waypoint[] {
             new Waypoint(20, -136, Pathfinder.d2r(Drive.getInstance().getPathAngle())),
             new Waypoint(232 - 3, -70, Pathfinder.d2r(7)),
