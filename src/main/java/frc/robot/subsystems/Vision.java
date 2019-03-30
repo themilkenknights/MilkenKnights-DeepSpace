@@ -17,7 +17,7 @@ public class Vision extends Subsystem {
   private NetworkTableEntry mLLX, mDist, mArea, mLED, mSkew, mValid;
   private boolean isVision;
   private UsbCamera hatchCam;
-  private int i = 0;
+  private int i;
 
   private Vision() {
     hatchCam = CameraServer.getInstance().startAutomaticCapture(0);

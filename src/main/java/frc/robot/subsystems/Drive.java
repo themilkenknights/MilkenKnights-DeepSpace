@@ -359,7 +359,7 @@ public class Drive extends Subsystem {
    */
   public synchronized void updateVisionDrive() {
     LimelightTarget target = Vision.getInstance().getLimelightTarget();
-    double visionTurn = 0.0;
+    double visionTurn;
     double dist = target.getDistance();
 
     if (dist < 26.0 && !isPastVision.hasBeenSet() && target.isValidTarget()) {
@@ -422,7 +422,7 @@ public class Drive extends Subsystem {
       visionTurn = mVisionAssist.calculate(getHeadingDeg() - mDesiredVisionAngle);
     }
 
-    double speed = 0.0;
+    double speed;
     if (mGoal == VisionDrive.VisionGoal.INTAKE_HATCH) {
       speed = 0.2;
       if (dist > 140) {
@@ -443,8 +443,6 @@ public class Drive extends Subsystem {
         speed = 0.4;
       } else if (dist > 20) {
         speed = 0.34;
-      } else if (dist < 20.0) {
-        speed = 0.2;
       }
 
       if (isPastVision.isDone(0.5)) {
@@ -604,14 +602,9 @@ public class Drive extends Subsystem {
     TrajectoryStatus rightUpdate = pathFollower.getRightVelocity(mPeriodicIO.rightPos, mPeriodicIO.rightVel, getHeadingDeg());
     mLeftStatus = leftUpdate;
     mRightStatus = rightUpdate;
-    double turn = 0.0;
-  /*  LimelightTarget target = Vision.getInstance().getLimelightTarget();
-   if (HatchArm.getInstance().getHatchSpearState() != HatchArm.HatchState.PLACE && target.isValidTarget() && pathFollower.getTimeLeft() < 0.2) {
-      turn = mVisionAssist.calculate(target.getYaw());
-    } */
     setVelocity(
         new DriveSignal(MkMath.InchesPerSecToUnitsPer100Ms(leftUpdate.getOutput()), MkMath.InchesPerSecToUnitsPer100Ms(rightUpdate.getOutput())),
-        new DriveSignal(leftUpdate.getArbFeed() - turn, rightUpdate.getArbFeed() + turn));
+        new DriveSignal(leftUpdate.getArbFeed(), rightUpdate.getArbFeed()));
     pathFinished = pathFollower.getFinished();
   }
 
