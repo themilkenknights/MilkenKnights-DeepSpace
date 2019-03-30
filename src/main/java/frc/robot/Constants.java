@@ -86,7 +86,6 @@ public final class Constants {
     public static final double kMaxNativeVel = 3370.0;
     public static final double kGoalPosTolerance = 1.5;
     // Vision Tuning
-    public static final byte kNavXUpdateRate = (byte) 200;
     public static final double DRIVE_FOLLOWER_P = 1;
     public static final double DRIVE_FOLLOWER_A = 0.00125;
     public static final double DRIVE_FOLLOWER_ANG = -1.25;
@@ -94,7 +93,7 @@ public final class Constants {
 
     public static final double kVisionP = 0.00688; //0.0087
     public static final double kVisionI = 0.0;
-    public static final double kVisionD = 590.0; //430
+    public static final double kVisionD = 590.000666; //430
   }
 
   public static class TEST {

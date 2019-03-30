@@ -136,6 +136,12 @@ public class AutoChooser {
         new Waypoint(67, -136 - 8, Pathfinder.d2r(0)),
     }, slowConfig));
 
+    robotPaths.put("CS-4", new PathContainer(new Waypoint[] {
+        new Waypoint(20, -136, Pathfinder.d2r(Drive.getInstance().getPathAngle())),
+        new Waypoint(232 - 3, -70, Pathfinder.d2r(7)),
+        new Waypoint(262 - 3, -90, Pathfinder.d2r(97)),
+    }, defaultConfig));
+
     double tiL = 0;
     double tiR = 0;
     for (Map.Entry<String, PathContainer> container : robotPaths.entrySet()) {

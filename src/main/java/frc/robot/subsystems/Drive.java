@@ -334,8 +334,8 @@ public class Drive extends Subsystem {
           } else if (HatchArm.getInstance().isHatchTriggeredTimer(0.35)) {
             Logger.logMarker("LIMIT TIMER TRIGGERED");
           }
-          return hasBeenLowered.isDone(mTimeToVision) || ((HatchArm.getInstance().isHatchTriggeredTimer(0.3)
-              && Robot.mMatchState != Robot.MatchState.AUTO) || (HatchArm.getInstance().isHatchTriggeredTimer(0.35)));
+          return hasBeenLowered.isDone(mTimeToVision) || ((HatchArm.getInstance().isHatchTriggeredTimer(0.35)
+              && Robot.mMatchState != Robot.MatchState.AUTO) || (HatchArm.getInstance().isHatchTriggeredTimer(0.3)));
         } else {
           return isPastVision.isDone(mTimeToVision) || HatchArm.getInstance().isHatchLimitTriggered();
         }
@@ -432,11 +432,11 @@ public class Drive extends Subsystem {
       } else if (dist > 90) {
         speed = 0.75;
       } else if (dist > 70) {
-        speed = 0.7;
+        speed = 0.64;
       } else if (dist > 50) {
-        speed = 0.675;
+        speed = 0.61;
       } else if (dist > 40) {
-        speed = 0.6;
+        speed = 0.59;
       } else if (dist > 30) {
         speed = 0.55;
       } else if (dist > 25) {
@@ -446,13 +446,13 @@ public class Drive extends Subsystem {
       }
 
       if (isPastVision.isDone(0.5)) {
-        speed = 0.06;
+        speed = 0.05;
       } else if (isPastVision.isDone(0.3)) {
-        speed = 0.1;
+        speed = 0.13;
       } else if (isPastVision.isDone(0.2)) {
-        speed = 0.2;
+        speed = 0.28;
       } else if (isPastVision.isDone(0.075)) {
-        speed = 0.3;
+        speed = 0.32;
       }
     } else {
       if (dist < 20.0) {
