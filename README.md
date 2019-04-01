@@ -102,6 +102,7 @@
   - Microsoft Lifecam on the cargo arm side connected to the Limelight
 - Misc
   - Pigeon IMU connected to Talon SRX over ribbon cable
+  - Four Actuators connected to two single solenoids (left/right linked) for Level 2 Climb
 
 ## Current Paths
 
