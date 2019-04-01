@@ -83,6 +83,26 @@
 
 - CTRE Phoenix & WPILIB are updated
 
+## Robot Hardware
+
+- Drive
+  - Two CIM Motors on each side
+  - One SRX Mag Encoder on each side
+- Spear Arm
+  - Single Solenoid to stow/lower the spear
+  - Single Solenoid to retract/extend pancake actuator
+  - REV Magnetic Limit Switch connected to CTRE Breakout board
+- Cargo Arm
+  - Two 775 pro motors
+  - SRX Mag Encoder
+  - REV Magnetic Limit Switch connected to CTRE Breakout board
+- Vision
+  - Fisheye camera connected to the Rio on the hatch side
+  - Limelight V1 on the hatch side
+  - Microsoft Lifecam on the cargo arm side connected to the Limelight
+- Misc
+  - Pigeon IMU connected to Talon SRX over ribbon cable
+
 ## Current Paths
 
 - [1](https://themilkenknights.github.io/MilkenKnights-DeepSpace/path_visualizer/index.html?%5B%7B%22position%22:%7B%22x%22:68,%22y%22:114%7D,%22theta%22:0,%22comment%22:%22%22%7D,%7B%22position%22:%7B%22x%22:155,%22y%22:150%7D,%22theta%22:0,%22comment%22:%22%22%7D%5D)
