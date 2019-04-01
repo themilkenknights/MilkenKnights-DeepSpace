@@ -17,11 +17,15 @@
 
 - A Vision Hatch Outtake
 
-- B Vision Cargo Outtake
+- B Vision HP Intake
 
-- X Vision HP Intake
+- X Vision Cargo Outtake
 
 - Y Auto Climb
+
+- Left Bumper Vision Auto-aim On
+
+- Right Bumper Vision Auto-aim Off
 
 ## Operator Button Map
 
@@ -37,17 +41,17 @@
 
 - 6 Roller Outtake
 
-- 7 Unmapped
+- 7 Toggle Front Climb Actuators
 
-- 8 Zero Arms
+- 8 Toggle Rear Climb Actuators
 
-- 9 Stop Auto Action
+- 9 Defense Mode
 
-- 10 Defense Mode
+- 10 Zero Cargo Arm & Disable Soft Limits
 
-- 11 Ground Intake Toggle (Stowed/Ground Setpoints)
+- 11 Front Cargoship Roller Outtake
 
-- 12 Ground Intake Transfer Hatch
+- 12 Retract Spear Pancake Actuator
 
 - POV UP Cargo Rocket Level One
 
